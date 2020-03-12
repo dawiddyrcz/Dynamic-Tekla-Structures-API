@@ -21,6 +21,8 @@ namespace CodeGenerator
             {
                 GenerateAPICode();
             }
+
+            Console.ReadKey();
         }
 
         private static string GetProjectDirectory()
@@ -31,15 +33,40 @@ namespace CodeGenerator
             return projectFolder.FullName;
         }
 
+        private static Assembly LoadAssembly(string fileName)
+        {
+            string filePath = Path.Combine(GetProjectDirectory(), fileName);
+            return Assembly.LoadFile(filePath);
+        }
+
+        private static Assembly LoadTeklaStructures() => LoadAssembly("Tekla.Structures.dll");
+
+        private static Assembly LoadTeklaStructuresModel() => LoadAssembly("Tekla.Structures.Model.dll");
+
         private static void GenerateAPICode()
         {
             Console.WriteLine("Generate API code");
+
+            var ts = LoadTeklaStructures();
+
+            foreach (var type in ts.GetTypes().Where(t => t.IsPublic))
+            {
+                Console.WriteLine(type.Name);
+            }
+
+            var tsm = LoadTeklaStructuresModel();
+
+            foreach (var type in tsm.GetTypes().Where(t => t.IsPublic))
+            {
+                Console.WriteLine(type.Name);
+
+                if (type.Name.Equals("Beam"))
+                {
+                    new ClassGenerator().SaveToFile(type);
+                }
+            }
         }
 
-        private static Assembly LoadTeklaStructuresModel()
-        {
-            throw new NotImplementedException();
-
-        }
+        
     }
 }

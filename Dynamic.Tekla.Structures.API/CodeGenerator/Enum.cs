@@ -26,6 +26,7 @@ namespace Dynamic.Tekla.Structures
         {
             var ss = SomeEnum.Value1;
             ss.GetSomething();
+
         }
     }
 }

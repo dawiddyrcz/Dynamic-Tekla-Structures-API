@@ -63,15 +63,34 @@ namespace CodeGenerator
 
             var tsm = LoadTeklaStructuresModel();
 
-            foreach (var type in tsm.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
-            {
-                Console.WriteLine(type.Name);
+            //foreach (var type in tsm.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
+            //{
+            //    Console.WriteLine(type.Name);
 
-                if (type.IsClass)
+            //    if (type.IsClass)
+            //    {
+            //        if (type.Name.EndsWith("Beam"))
+            //            classGenerator.SaveToFile(type);
+            //    }
+            //}
+
+            var enums = tsm.GetTypes().Where(t => t.IsEnum);
+
+            foreach (var type in enums)
+            {
+                Console.WriteLine(type.FullName);
+
+                foreach (var eV in type.GetEnumValues())
                 {
-                    if (type.Name.EndsWith("Beam"))
-                        classGenerator.SaveToFile(type);
+                    Console.WriteLine(eV);
                 }
+
+                
+               ///dynamic instance = Activator.CreateInstance(type);
+                dynamic instance = Enum.Parse(type, "LINEWIDTH2");
+
+
+                break;
             }
         }
 

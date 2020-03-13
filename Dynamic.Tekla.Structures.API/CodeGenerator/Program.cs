@@ -59,6 +59,8 @@ namespace CodeGenerator
             //        classGenerator.SaveToFile(type);
             //}
 
+            //TODO sort namespaces: Internal Render
+
             var tsm = LoadTeklaStructuresModel();
 
             foreach (var type in tsm.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))

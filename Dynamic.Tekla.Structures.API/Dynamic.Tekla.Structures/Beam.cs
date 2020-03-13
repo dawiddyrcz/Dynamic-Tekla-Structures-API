@@ -40,82 +40,190 @@ namespace Dynamic.Tekla.Structures.Model
         public Beam(dynamic tsObject)
         {
             this.beam = tsObject;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(tsObject);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(tsObject);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(tsObject);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(tsObject);
-			this.Type = new Dynamic.Tekla.Structures.Model.BeamTypeEnum(tsObject);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(tsObject);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(tsObject);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(tsObject);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(tsObject);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(tsObject);
-			this.Name = tsObject.Name;
-			this.Class = tsObject.Class;
-			this.Finish = tsObject.Finish;
-			this.CastUnitType = new Dynamic.Tekla.Structures.Model.CastUnitTypeEnum(tsObject);
-			this.PourPhase = tsObject.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(tsObject);
-			this.ModificationTime = tsObject.ModificationTime;
-			this.IsUpToDate = tsObject.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(tsObject);
+			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.StartPoint);
+			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.EndPoint);
+			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.StartPointOffset);
+			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.EndPointOffset);
+			this.Type = new Dynamic.Tekla.Structures.Model.BeamTypeEnum(beam.Type);
+			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(beam.Profile);
+			this.Material = new Dynamic.Tekla.Structures.Model.Material(beam.Material);
+			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(beam.DeformingData);
+			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.PartNumber);
+			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.AssemblyNumber);
+			this.Name = beam.Name;
+			this.Class = beam.Class;
+			this.Finish = beam.Finish;
+			this.CastUnitType = new Dynamic.Tekla.Structures.Model.CastUnitTypeEnum(beam.CastUnitType);
+			this.PourPhase = beam.PourPhase;
+			this.Position = new Dynamic.Tekla.Structures.Model.Position(beam.Position);
+			this.ModificationTime = beam.ModificationTime;
+			this.IsUpToDate = beam.IsUpToDate;
+			this.Identifier = new Dynamic.Tekla.Structures.Identifier(beam.Identifier);
 
         }
 
 
-		public void Insert() => beam.Insert();
-		public void Select() => beam.Select();
-		public void Modify() => beam.Modify();
-		public void Delete() => beam.Delete();
-		public void GetSolid() => beam.GetSolid();
-		public void GetSolid() => beam.GetSolid();
-		public void GetSolid() => beam.GetSolid();
-		public void GetAssembly() => beam.GetAssembly();
-		public void GetPartMark() => beam.GetPartMark();
-		public void GetCenterLine() => beam.GetCenterLine();
-		public void GetReferenceLine() => beam.GetReferenceLine();
-		public void GetComponents() => beam.GetComponents();
-		public void GetBooleans() => beam.GetBooleans();
-		public void GetBolts() => beam.GetBolts();
-		public void GetWelds() => beam.GetWelds();
-		public void GetReinforcements() => beam.GetReinforcements();
-		public void GetSurfaceTreatments() => beam.GetSurfaceTreatments();
-		public void GetSurfaceObjects() => beam.GetSurfaceObjects();
-		public void GetPours() => beam.GetPours();
-		public void CompareTo() => beam.CompareTo();
-		public void GetDSTVCoordinateSystem() => beam.GetDSTVCoordinateSystem();
-		public void GetChildren() => beam.GetChildren();
-		public void GetFatherComponent() => beam.GetFatherComponent();
-		public void GetHierarchicObjects() => beam.GetHierarchicObjects();
-		public void GetAllUserProperties() => beam.GetAllUserProperties();
-		public void GetIntegerUserProperties() => beam.GetIntegerUserProperties();
-		public void GetDoubleUserProperties() => beam.GetDoubleUserProperties();
-		public void GetStringUserProperties() => beam.GetStringUserProperties();
-		public void GetAllReportProperties() => beam.GetAllReportProperties();
-		public void GetIntegerReportProperties() => beam.GetIntegerReportProperties();
-		public void GetDoubleReportProperties() => beam.GetDoubleReportProperties();
-		public void GetStringReportProperties() => beam.GetStringReportProperties();
-		public void GetUserProperty() => beam.GetUserProperty();
-		public void GetReportProperty() => beam.GetReportProperty();
-		public void GetUserProperty() => beam.GetUserProperty();
-		public void GetReportProperty() => beam.GetReportProperty();
-		public void GetUserProperty() => beam.GetUserProperty();
-		public void GetReportProperty() => beam.GetReportProperty();
-		public void GetDynamicStringProperty() => beam.GetDynamicStringProperty();
-		public void SetDynamicStringProperty() => beam.SetDynamicStringProperty();
-		public void SetUserProperty() => beam.SetUserProperty();
-		public void SetUserProperty() => beam.SetUserProperty();
-		public void SetUserProperty() => beam.SetUserProperty();
-		public void GetCoordinateSystem() => beam.GetCoordinateSystem();
-		public void SetPhase() => beam.SetPhase();
-		public void GetPhase() => beam.GetPhase();
-		public void SetLabel() => beam.SetLabel();
-		public void CompareTo() => beam.CompareTo();
-		public void Equals() => beam.Equals();
-		public void Equals() => beam.Equals();
-		public void GetHashCode() => beam.GetHashCode();
-		public void GetType() => beam.GetType();
-		public void ToString() => beam.ToString();
+        public dynamic GetTSObject() => beam;
+
+		public System.Boolean Insert()
+			 => beam.Insert();
+
+		public System.Boolean Select()
+			 => beam.Select();
+
+		public System.Boolean Modify()
+			 => beam.Modify();
+
+		public System.Boolean Delete()
+			 => beam.Delete();
+
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
+			 => new Dynamic.Tekla.Structures.Model.Solid(beam.GetSolid());
+
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+			 => new Dynamic.Tekla.Structures.Model.Solid(beam.GetSolid(solidCreationType.GetTSObject()));
+
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
+			 => new Dynamic.Tekla.Structures.Model.Solid(beam.GetSolid(formingStates.GetTSObject()));
+
+		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+			 => new Dynamic.Tekla.Structures.Model.Assembly(beam.GetAssembly());
+
+		public System.String GetPartMark()
+			 => beam.GetPartMark();
+
+		public System.Collections.ArrayList GetCenterLine(System.Boolean withCutsFittings)
+			 => beam.GetCenterLine(withCutsFittings);
+
+		public System.Collections.ArrayList GetReferenceLine(System.Boolean withCutsFittings)
+			 => beam.GetReferenceLine(withCutsFittings);
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetComponents());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetBooleans());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetBolts());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetWelds());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetReinforcements());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetSurfaceTreatments());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetSurfaceObjects());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetPours());
+
+		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
+			 => beam.CompareTo(partToCompare.GetTSObject());
+
+		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
+			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(beam.GetDSTVCoordinateSystem());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetChildren());
+
+		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
+			 => new Dynamic.Tekla.Structures.Model.BaseComponent(beam.GetFatherComponent());
+
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
+			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(beam.GetHierarchicObjects());
+
+		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
+			 => beam.GetAllUserProperties(ref values);
+
+		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
+			 => beam.GetIntegerUserProperties(ref values);
+
+		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
+			 => beam.GetDoubleUserProperties(ref values);
+
+		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
+			 => beam.GetStringUserProperties(ref values);
+
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
+			 => beam.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
+			 => beam.GetIntegerReportProperties(names, ref values);
+
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
+			 => beam.GetDoubleReportProperties(names, ref values);
+
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
+			 => beam.GetStringReportProperties(names, ref values);
+
+		public System.Boolean GetUserProperty(System.String name, ref System.String value)
+			 => beam.GetUserProperty(name, ref value);
+
+		public System.Boolean GetReportProperty(System.String name, ref System.String value)
+			 => beam.GetReportProperty(name, ref value);
+
+		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
+			 => beam.GetUserProperty(name, ref value);
+
+		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
+			 => beam.GetReportProperty(name, ref value);
+
+		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
+			 => beam.GetUserProperty(name, ref value);
+
+		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
+			 => beam.GetReportProperty(name, ref value);
+
+		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
+			 => beam.GetDynamicStringProperty(name, ref value);
+
+		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
+			 => beam.SetDynamicStringProperty(name, value);
+
+		public System.Boolean SetUserProperty(System.String name, System.String value)
+			 => beam.SetUserProperty(name, value);
+
+		public System.Boolean SetUserProperty(System.String name, System.Double value)
+			 => beam.SetUserProperty(name, value);
+
+		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
+			 => beam.SetUserProperty(name, value);
+
+		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
+			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(beam.GetCoordinateSystem());
+
+		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => beam.SetPhase(phase.GetTSObject());
+
+		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
+			 => beam.GetPhase(ref phase.GetTSObject());
+
+		public System.Boolean SetLabel(System.String label)
+			 => beam.SetLabel(label);
+
+		public System.Int32 CompareTo(System.Object obj)
+			 => beam.CompareTo(obj);
+
+		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
+			 => beam.Equals(other.GetTSObject());
+
+		public System.Boolean Equals(System.Object obj)
+			 => beam.Equals(obj);
+
+		public System.Int32 GetHashCode()
+			 => beam.GetHashCode();
+
+		public System.Type GetType()
+			 => beam.GetType();
+
+		public System.String ToString()
+			 => beam.ToString();
+
 
 
     }

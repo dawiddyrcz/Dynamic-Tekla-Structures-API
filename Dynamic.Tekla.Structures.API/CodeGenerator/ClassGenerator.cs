@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeGenerator
 {
@@ -16,39 +14,180 @@ namespace CodeGenerator
 
         public void SaveToFile(Type type)
         {
-            string fileName = type.Name + ".cs";
+            if (!type.IsClass) return;
 
-            string classText = text;
+            string fileName = Path.Combine(Path.GetDirectoryName(Program.GetProjectDirectory())
+                , "Dynamic.Tekla.Structures",
+                type.Name + ".cs");
 
-            text = text.Replace("$classname", type.Name);
-            text = text.Replace("$dproperty", type.Name.ToLower());
-            text = text.Replace("$namespace", type.Namespace);
+            string classText = String.Copy(text);
+            
+            classText = AddProperties(type, classText);
+            classText = AddMethods(type, classText);
+            classText = AddConstructor2(type, classText);
 
-            File.WriteAllText(fileName, text);
+
+
+            classText = classText.Replace("$classname", type.Name);
+            classText = classText.Replace("$dfield", type.Name.ToLower());
+            classText = classText.Replace("$namespace", type.Namespace);
+
+            //TODO father class
+            classText = classText.Replace("$fatherClass", "");
+
+            //$constructor2
+
+            File.WriteAllText(fileName, classText);
+        }
+
+        private string AddMethods(Type type, string classText)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var method in type.GetMethods().Where(m => m.IsPublic))
+            {
+                var name = method.Name;
+
+                if (name.Contains("get_") || name.Contains("set_")) continue;
+
+                //if (method.ReturnType == (typeof(void))) //Not working
+                {
+                    sb.Append("\t\t");
+                    sb.Append("public ");
+                    sb.Append("void ");
+                    sb.Append(name);
+                    sb.Append("() => $dfield.");
+                    sb.Append(name);
+                    sb.Append("();\n");
+
+                    
+                }
+                //TODO other method types
+
+                //sb.Append(method.ReturnType.FullName.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures."));
+            }
+
+            classText = classText.Replace("$dmethods", sb.ToString());
+            return classText;
+        }
+
+        private string AddProperties(Type type, string classText)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var property in type.GetProperties())
+            {
+                sb.Append("\t\tpublic ");
+
+                if (property.PropertyType.Namespace.Contains("Tekla.Structures"))
+                {
+                    sb.Append("Dynamic.");
+                }
+
+                sb.Append(property.PropertyType.Namespace);
+                sb.Append(".");
+
+                if (property.PropertyType.IsGenericType)
+                {
+                    sb.Append(
+                        property.PropertyType.Name.Replace("`1", "").Replace("`2", "") + "<"
+                        );
+
+                    int i = 0;
+                    foreach (var generictype in property.PropertyType.GetGenericArguments())
+                    {
+                        if (i != 0)
+                        {
+                            sb.Append(", ");
+
+                        }
+                        sb.Append(property.PropertyType.GetGenericArguments()[0]);
+                        i++;
+
+                    }
+
+                    sb.Replace("+", ".");
+                    sb.Append(">");
+                }
+                else
+                    sb.Append(property.PropertyType.Name);
+
+                sb.Append(" ");
+                sb.Append(property.Name);
+                sb.Append(" {get; set; }\n");
+
+            }
+
+            classText = classText.Replace("$dproperties", sb.ToString());
+            return classText;
+        }
+
+        private string AddConstructor2(Type type, string classText)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var property in type.GetProperties())
+            {
+                if (property.PropertyType.Namespace.Contains("Tekla.Structures"))
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append("this.");
+                    sb.Append(property.Name);
+                    sb.Append(" = new Dynamic.");
+                    sb.Append(property.PropertyType.Namespace);
+                    sb.Append(".");
+                    sb.Append(property.PropertyType.Name);
+                    sb.Append("(tsObject);\n");
+                }
+                else
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append("this.");
+                    sb.Append(property.Name);
+                    sb.Append(" = tsObject.");
+                    sb.Append(property.Name);
+                    sb.Append(";\n");
+
+                }
+            }
+
+            classText = classText.Replace("$constructor2", sb.ToString());
+            return classText;
         }
 
 
-        private string text = @"
 
-using System;
+        private readonly string text = @"
+//Generated by script in project CodeGenerator
+//Copyright Dawid Dyrcz 2020 see license file
+
+
 
 namespace Dynamic.$namespace
 {
-    public class $classname
+    public sealed class $classname $fatherClass
     {
-        
-        dynamic $dproperty;
+
+$dproperties        
+
+        dynamic $dfield;
         
         public $classname()
         {
-            this.$dproperty = new $namespace.$classname();
+            this.$dfield =  new $namespace.$classname();
         }
+
+        public $classname(dynamic tsObject)
+        {
+            this.$dfield = tsObject;
+$constructor2
+        }
+
+
+$dmethods
 
     }
 }
-
-
-
 
             ";
     }

@@ -25,7 +25,7 @@ namespace CodeGenerator
             Console.ReadKey();
         }
 
-        private static string GetProjectDirectory()
+        public static string GetProjectDirectory()
         {
             var debugFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName;
             var binFolder = Directory.GetParent(debugFolder);
@@ -47,22 +47,28 @@ namespace CodeGenerator
         {
             Console.WriteLine("Generate API code");
 
+            var classGenerator = new ClassGenerator();
+
             var ts = LoadTeklaStructures();
 
-            foreach (var type in ts.GetTypes().Where(t => t.IsPublic))
-            {
-                Console.WriteLine(type.Name);
-            }
+            //foreach (var type in ts.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
+            //{
+            //    Console.WriteLine(type.Name);
+
+            //    if (type.IsClass)
+            //        classGenerator.SaveToFile(type);
+            //}
 
             var tsm = LoadTeklaStructuresModel();
 
-            foreach (var type in tsm.GetTypes().Where(t => t.IsPublic))
+            foreach (var type in tsm.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
             {
                 Console.WriteLine(type.Name);
 
-                if (type.Name.Equals("Beam"))
+                if (type.IsClass)
                 {
-                    new ClassGenerator().SaveToFile(type);
+                    if (type.Name.EndsWith("Beam"))
+                        classGenerator.SaveToFile(type);
                 }
             }
         }

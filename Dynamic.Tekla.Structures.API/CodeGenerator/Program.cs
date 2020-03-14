@@ -25,7 +25,7 @@ namespace CodeGenerator
             string a = "asdf";
             if (a.Equals("asdf", StringComparison.InvariantCulture))
 
-            Console.ReadKey();
+                Console.ReadKey();
         }
 
         public static string GetProjectDirectory()
@@ -55,61 +55,49 @@ namespace CodeGenerator
 
             var ts = LoadTeklaStructures();
 
-            //foreach (var type in ts.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
-            //{
-            //    Console.WriteLine(type.Name);
+            var tsTypes = ts.GetTypes().Where(
+                t => t.IsPublic
+                && t.Namespace.StartsWith("Tekla.Structures")
+                &&!t.Namespace.Contains("Internal"));
 
-            //    if (type.IsClass)
-            //        classGenerator.SaveToFile(type);
-            //}
+            foreach (var type in tsTypes)
+            {
+                Console.WriteLine(type.Name);
 
-            //TODO sort namespaces: Internal Render
+                if (type.IsClass)
+                {
+                    classGenerator.SaveToFile(type);
+                }
+                else if (type.IsEnum)
+                {
+                    enumGenerator.SaveToFile(type);
+                }
+            }
+
 
             var tsm = LoadTeklaStructuresModel();
             var tsmTypes = tsm.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
-            && !t.Namespace.Contains("Internal"));
+                && !t.Namespace.Contains("Internal"));
 
 
             foreach (var type in tsmTypes)
             {
                 Console.WriteLine(type.Name);
 
-                //if (type.IsClass)
-                //{
-                //    if (type.Name.EndsWith("Beam"))
-                //        classGenerator.SaveToFile(type);
-                //}
-
-                if (type.IsEnum)
+                if (type.IsClass)
                 {
-
+                    classGenerator.SaveToFile(type);
+                }
+                else if (type.IsEnum)
+                {
                     enumGenerator.SaveToFile(type);
-                    break;
                 }
             }
-
-            var enums = tsm.GetTypes().Where(t => t.IsEnum);
-
-            //foreach (var type in enums)
-            //{
-            //    Console.WriteLine(type.FullName);
-
-            //    foreach (var eV in type.GetEnumValues())
-            //    {
-            //        Console.WriteLine(eV);
-            //    }
-
-                
-            //   ///dynamic instance = Activator.CreateInstance(type);
-            //    dynamic instance = Enum.Parse(type, "LINEWIDTH2");
-
-
-            //    break;
-            //}
+            
         }
 
-        
+
     }
 }

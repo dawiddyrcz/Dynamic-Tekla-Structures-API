@@ -26,10 +26,14 @@ namespace CodeGenerator
             classText = AddMethods(type, classText);
             classText = AddConstructor(type, classText);
 
-
-
+            
             classText = classText.Replace("$classname", type.Name);
-            classText = classText.Replace("$dfield", type.Name.ToLower());
+            
+            if (type.Name.ToLower().Equals("object", StringComparison.InvariantCulture))
+                classText = classText.Replace("$dfield", "@object");
+            else
+                classText = classText.Replace("$dfield", type.Name.ToLower());
+
             classText = classText.Replace("$namespace", type.Namespace);
 
             //TODO father class
@@ -55,7 +59,7 @@ namespace CodeGenerator
                 
                 if (IsTeklaType(method.ReturnType))
                 {
-                    sb.Append(GetTypeFullName(method.ReturnType));
+                    sb.Append(GetTypeFullName(method.ReturnType).Replace("System.Void", "void"));
                     sb.Append(" ");
                     sb.Append(name);
                     sb.Append("(");
@@ -93,7 +97,7 @@ namespace CodeGenerator
                 }
                 else
                 {
-                    sb.Append(GetTypeFullName(method.ReturnType));
+                    sb.Append(GetTypeFullName(method.ReturnType).Replace("System.Void", "void"));
                     sb.Append(" ");
                     sb.Append(name);
                     sb.Append("(");
@@ -173,30 +177,28 @@ namespace CodeGenerator
             sb.Append(type.Namespace);
             sb.Append(".");
 
+            string typeName = type.Name.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
+            typeName = typeName.Replace("[", "").Replace("]", "");
+
             if (type.IsGenericType)
             {
-                sb.Append(
-                    type.Name.Replace("`1", "").Replace("`2", "") + "<"
-                    );
+                sb.Append(typeName);
+                sb.Append("<");
 
                 int i = 0;
                 foreach (var generictype in type.GetGenericArguments())
                 {
                     if (i != 0)
-                    {
                         sb.Append(", ");
-
-                    }
-                    sb.Append(type.GetGenericArguments()[0]);
+                    sb.Append(GetTypeFullName(generictype));
                     i++;
-
                 }
 
                 sb.Replace("+", ".");
                 sb.Append(">");
             }
             else
-                sb.Append(type.Name);
+                sb.Append(typeName);
 
             sb.Replace("&", "");
 
@@ -214,13 +216,28 @@ namespace CodeGenerator
                     sb.Append("\t\t\t");
                     sb.Append("this.");
                     sb.Append(property.Name);
-                    sb.Append(" = new Dynamic.");
-                    sb.Append(property.PropertyType.Namespace);
-                    sb.Append(".");
-                    sb.Append(property.PropertyType.Name);
-                    sb.Append("($dfield.");
-                    sb.Append(property.Name);
-                    sb.Append(");\n");
+                    sb.Append(" = ");
+
+                    if (property.PropertyType.IsEnum)
+                    {
+                        sb.Append("Dynamic.");
+                        sb.Append(property.PropertyType.Namespace);
+                        sb.Append(".");
+                        sb.Append(property.PropertyType.Name);
+                        sb.Append("_.FromTSObject($dfield.");
+                        sb.Append(property.Name);
+                        sb.Append(");\n");
+                    }
+                    else
+                    {
+                        sb.Append("new Dynamic.");
+                        sb.Append(property.PropertyType.Namespace);
+                        sb.Append(".");
+                        sb.Append(property.PropertyType.Name);
+                        sb.Append("($dfield.");
+                        sb.Append(property.Name);
+                        sb.Append(");\n");
+                    }
                 }
                 else
                 {

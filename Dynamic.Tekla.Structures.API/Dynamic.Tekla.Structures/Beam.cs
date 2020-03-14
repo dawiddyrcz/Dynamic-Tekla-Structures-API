@@ -44,7 +44,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.EndPoint);
 			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.StartPointOffset);
 			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.EndPointOffset);
-			this.Type = new Dynamic.Tekla.Structures.Model.BeamTypeEnum(beam.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(beam.Type);
 			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(beam.Profile);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(beam.Material);
 			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(beam.DeformingData);
@@ -53,7 +53,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = beam.Name;
 			this.Class = beam.Class;
 			this.Finish = beam.Finish;
-			this.CastUnitType = new Dynamic.Tekla.Structures.Model.CastUnitTypeEnum(beam.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
 			this.PourPhase = beam.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(beam.Position);
 			this.ModificationTime = beam.ModificationTime;

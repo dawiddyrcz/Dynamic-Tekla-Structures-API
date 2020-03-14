@@ -22,6 +22,9 @@ namespace CodeGenerator
                 GenerateAPICode();
             }
 
+            string a = "asdf";
+            if (a.Equals("asdf", StringComparison.InvariantCulture))
+
             Console.ReadKey();
         }
 
@@ -48,6 +51,7 @@ namespace CodeGenerator
             Console.WriteLine("Generate API code");
 
             var classGenerator = new ClassGenerator();
+            var enumGenerator = new EnumGenerator();
 
             var ts = LoadTeklaStructures();
 
@@ -62,36 +66,48 @@ namespace CodeGenerator
             //TODO sort namespaces: Internal Render
 
             var tsm = LoadTeklaStructuresModel();
+            var tsmTypes = tsm.GetTypes().Where(
+                t => t.IsPublic
+                && t.Namespace.StartsWith("Tekla.Structures")
+            && !t.Namespace.Contains("Internal"));
 
-            //foreach (var type in tsm.GetTypes().Where(t => t.IsPublic && !t.Namespace.Contains("Internal")))
-            //{
-            //    Console.WriteLine(type.Name);
 
-            //    if (type.IsClass)
-            //    {
-            //        if (type.Name.EndsWith("Beam"))
-            //            classGenerator.SaveToFile(type);
-            //    }
-            //}
+            foreach (var type in tsmTypes)
+            {
+                Console.WriteLine(type.Name);
+
+                //if (type.IsClass)
+                //{
+                //    if (type.Name.EndsWith("Beam"))
+                //        classGenerator.SaveToFile(type);
+                //}
+
+                if (type.IsEnum)
+                {
+
+                    enumGenerator.SaveToFile(type);
+                    break;
+                }
+            }
 
             var enums = tsm.GetTypes().Where(t => t.IsEnum);
 
-            foreach (var type in enums)
-            {
-                Console.WriteLine(type.FullName);
+            //foreach (var type in enums)
+            //{
+            //    Console.WriteLine(type.FullName);
 
-                foreach (var eV in type.GetEnumValues())
-                {
-                    Console.WriteLine(eV);
-                }
+            //    foreach (var eV in type.GetEnumValues())
+            //    {
+            //        Console.WriteLine(eV);
+            //    }
 
                 
-               ///dynamic instance = Activator.CreateInstance(type);
-                dynamic instance = Enum.Parse(type, "LINEWIDTH2");
+            //   ///dynamic instance = Activator.CreateInstance(type);
+            //    dynamic instance = Enum.Parse(type, "LINEWIDTH2");
 
 
-                break;
-            }
+            //    break;
+            //}
         }
 
         

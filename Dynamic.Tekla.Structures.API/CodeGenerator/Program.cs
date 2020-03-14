@@ -14,7 +14,7 @@ namespace CodeGenerator
         {
             Console.WriteLine("Project directory: " + GetProjectDirectory());
 
-            Console.WriteLine("Do you want to generate API codes?\ny - yes\nn - no");
+            Console.WriteLine("Do you want to generate API codes?\ny - yes\nn - no\nt - show all types");
             var input = Console.ReadLine();
 
             if (input.Equals("y", StringComparison.InvariantCulture))
@@ -22,10 +22,66 @@ namespace CodeGenerator
                 GenerateAPICode();
             }
 
+            if (input.Equals("t", StringComparison.InvariantCulture))
+            {
+                ShowAllTypes();
+            }
+
             string a = "asdf";
             if (a.Equals("asdf", StringComparison.InvariantCulture))
 
                 Console.ReadKey();
+        }
+
+        private static void ShowAllTypes()
+        {
+            Console.WriteLine("Shows all types");
+
+            var sb = new StringBuilder();
+
+            var ts = LoadTeklaStructures();
+
+            var tsTypes = ts.GetTypes().Where(
+                t => t.IsPublic
+                && t.Namespace.StartsWith("Tekla.Structures")
+                && !t.Namespace.Contains("Internal"));
+
+            foreach (var type in tsTypes)
+            {
+                Console.WriteLine(type.Name);
+                sb.AppendLine(type.Name);
+
+                foreach (var nestedType in type.GetNestedTypes())
+                {
+                    Console.WriteLine(nestedType.Name);
+                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.Namespace);
+
+                }
+            }
+
+
+            var tsm = LoadTeklaStructuresModel();
+            var tsmTypes = tsm.GetTypes().Where(
+                t => t.IsPublic
+                && t.Namespace.StartsWith("Tekla.Structures")
+                && !t.Namespace.Contains("Internal"));
+
+
+            foreach (var type in tsmTypes)
+            {
+                Console.WriteLine(type.Name);
+                sb.AppendLine(type.Name);
+
+                foreach (var nestedType in type.GetNestedTypes())
+                {
+                    Console.WriteLine(nestedType.Name);
+                    sb.AppendLine("\t" + nestedType.Name + "\t"+nestedType.Namespace);
+                }
+
+            }
+
+            File.WriteAllText("..\\..\\types.txt", sb.ToString());
+
         }
 
         public static string GetProjectDirectory()

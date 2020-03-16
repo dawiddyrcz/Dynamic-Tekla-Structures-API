@@ -7,14 +7,54 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class SpiralBeamDataException 
     {
 
-		public System.String Message {get; set; }
-		public System.Collections.IDictionary Data {get; set; }
-		public System.Exception InnerException {get; set; }
-		public System.Reflection.MethodBase TargetSite {get; set; }
-		public System.String StackTrace {get; set; }
-		public System.String HelpLink {get; set; }
-		public System.String Source {get; set; }
-		public System.Int32 HResult {get; set; }
+		public System.String Message
+		{
+			get => spiralbeamdataexception.Message;
+			set { spiralbeamdataexception.Message = value; }
+		}
+
+		public System.Collections.IDictionary Data
+		{
+			get => spiralbeamdataexception.Data;
+			set { spiralbeamdataexception.Data = value; }
+		}
+
+		public System.Exception InnerException
+		{
+			get => spiralbeamdataexception.InnerException;
+			set { spiralbeamdataexception.InnerException = value; }
+		}
+
+		public System.Reflection.MethodBase TargetSite
+		{
+			get => spiralbeamdataexception.TargetSite;
+			set { spiralbeamdataexception.TargetSite = value; }
+		}
+
+		public System.String StackTrace
+		{
+			get => spiralbeamdataexception.StackTrace;
+			set { spiralbeamdataexception.StackTrace = value; }
+		}
+
+		public System.String HelpLink
+		{
+			get => spiralbeamdataexception.HelpLink;
+			set { spiralbeamdataexception.HelpLink = value; }
+		}
+
+		public System.String Source
+		{
+			get => spiralbeamdataexception.Source;
+			set { spiralbeamdataexception.Source = value; }
+		}
+
+		public System.Int32 HResult
+		{
+			get => spiralbeamdataexception.HResult;
+			set { spiralbeamdataexception.HResult = value; }
+		}
+
         
 
         dynamic spiralbeamdataexception;
@@ -61,6 +101,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Type GetType()
 			 => spiralbeamdataexception.GetType();
+
+
 
 
 

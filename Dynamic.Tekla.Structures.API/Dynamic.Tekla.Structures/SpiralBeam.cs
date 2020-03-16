@@ -7,30 +7,150 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class SpiralBeam 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Point RotationAxisBasePoint {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Point RotationAxisUpPoint {get; set; }
-		public System.Double TotalRise {get; set; }
-		public System.Double RotationAngle {get; set; }
-		public System.Double TwistAngleStart {get; set; }
-		public System.Double TwistAngleEnd {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Point RotationCenterPoint {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxisDirection {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint {get; set; }
-		public Dynamic.Tekla.Structures.Model.Profile Profile {get; set; }
-		public Dynamic.Tekla.Structures.Model.Material Material {get; set; }
-		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData {get; set; }
-		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber {get; set; }
-		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber {get; set; }
-		public System.String Name {get; set; }
-		public System.String Class {get; set; }
-		public System.String Finish {get; set; }
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType {get; set; }
-		public System.Int32 PourPhase {get; set; }
-		public Dynamic.Tekla.Structures.Model.Position Position {get; set; }
-		public System.Nullable<System.DateTime> ModificationTime {get; set; }
-		public System.Boolean IsUpToDate {get; set; }
-		public Dynamic.Tekla.Structures.Identifier Identifier {get; set; }
+		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.StartPoint.GetTSObject());
+			set { spiralbeam.StartPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point RotationAxisBasePoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationAxisBasePoint.GetTSObject());
+			set { spiralbeam.RotationAxisBasePoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point RotationAxisUpPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationAxisUpPoint.GetTSObject());
+			set { spiralbeam.RotationAxisUpPoint = value.GetTSObject(); }
+		}
+
+		public System.Double TotalRise
+		{
+			get => spiralbeam.TotalRise;
+			set { spiralbeam.TotalRise = value; }
+		}
+
+		public System.Double RotationAngle
+		{
+			get => spiralbeam.RotationAngle;
+			set { spiralbeam.RotationAngle = value; }
+		}
+
+		public System.Double TwistAngleStart
+		{
+			get => spiralbeam.TwistAngleStart;
+			set { spiralbeam.TwistAngleStart = value; }
+		}
+
+		public System.Double TwistAngleEnd
+		{
+			get => spiralbeam.TwistAngleEnd;
+			set { spiralbeam.TwistAngleEnd = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point RotationCenterPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationCenterPoint.GetTSObject());
+			set { spiralbeam.RotationCenterPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxisDirection
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(spiralbeam.RotationAxisDirection.GetTSObject());
+			set { spiralbeam.RotationAxisDirection = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.EndPoint.GetTSObject());
+			set { spiralbeam.EndPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Profile Profile
+		{
+			get => new Dynamic.Tekla.Structures.Model.Profile(spiralbeam.Profile.GetTSObject());
+			set { spiralbeam.Profile = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Material Material
+		{
+			get => new Dynamic.Tekla.Structures.Model.Material(spiralbeam.Material.GetTSObject());
+			set { spiralbeam.Material = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
+		{
+			get => new Dynamic.Tekla.Structures.Model.DeformingData(spiralbeam.DeformingData.GetTSObject());
+			set { spiralbeam.DeformingData = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
+		{
+			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(spiralbeam.PartNumber.GetTSObject());
+			set { spiralbeam.PartNumber = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
+		{
+			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(spiralbeam.AssemblyNumber.GetTSObject());
+			set { spiralbeam.AssemblyNumber = value.GetTSObject(); }
+		}
+
+		public System.String Name
+		{
+			get => spiralbeam.Name;
+			set { spiralbeam.Name = value; }
+		}
+
+		public System.String Class
+		{
+			get => spiralbeam.Class;
+			set { spiralbeam.Class = value; }
+		}
+
+		public System.String Finish
+		{
+			get => spiralbeam.Finish;
+			set { spiralbeam.Finish = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		{
+			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
+			set { spiralbeam.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+		}
+
+		public System.Int32 PourPhase
+		{
+			get => spiralbeam.PourPhase;
+			set { spiralbeam.PourPhase = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Position Position
+		{
+			get => new Dynamic.Tekla.Structures.Model.Position(spiralbeam.Position.GetTSObject());
+			set { spiralbeam.Position = value.GetTSObject(); }
+		}
+
+		public System.Nullable<System.DateTime> ModificationTime
+		{
+			get => spiralbeam.ModificationTime;
+			set { spiralbeam.ModificationTime = value; }
+		}
+
+		public System.Boolean IsUpToDate
+		{
+			get => spiralbeam.IsUpToDate;
+			set { spiralbeam.IsUpToDate = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Identifier Identifier
+		{
+			get => new Dynamic.Tekla.Structures.Identifier(spiralbeam.Identifier.GetTSObject());
+			set { spiralbeam.Identifier = value.GetTSObject(); }
+		}
+
         
 
         dynamic spiralbeam;
@@ -231,6 +351,58 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String ToString()
 			 => spiralbeam.ToString();
+
+
+
+
+    public enum ErrorStatus
+    {
+			DataMissing,
+			DefinitionPointsTooClose,
+			DefinitionPointsCannotBeAligned,
+			ZeroTotalRiseWithMore360Degrees        
+    }
+
+    public static class ErrorStatus_
+    {
+        public static dynamic GetTSObject(ErrorStatus dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ErrorStatus");
+
+            switch (dynEnum)
+            {
+				case ErrorStatus.DataMissing:
+					return System.Enum.Parse(tsType, "DataMissing");
+				case ErrorStatus.DefinitionPointsTooClose:
+					return System.Enum.Parse(tsType, "DefinitionPointsTooClose");
+				case ErrorStatus.DefinitionPointsCannotBeAligned:
+					return System.Enum.Parse(tsType, "DefinitionPointsCannotBeAligned");
+				case ErrorStatus.ZeroTotalRiseWithMore360Degrees:
+					return System.Enum.Parse(tsType, "ZeroTotalRiseWithMore360Degrees");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ErrorStatus FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("DataMissing", System.StringComparison.InvariantCulture))
+				return ErrorStatus.DataMissing;
+			else if (tsEnumValue.Equals("DefinitionPointsTooClose", System.StringComparison.InvariantCulture))
+				return ErrorStatus.DefinitionPointsTooClose;
+			else if (tsEnumValue.Equals("DefinitionPointsCannotBeAligned", System.StringComparison.InvariantCulture))
+				return ErrorStatus.DefinitionPointsCannotBeAligned;
+			else if (tsEnumValue.Equals("ZeroTotalRiseWithMore360Degrees", System.StringComparison.InvariantCulture))
+				return ErrorStatus.ZeroTotalRiseWithMore360Degrees;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
 
 
 

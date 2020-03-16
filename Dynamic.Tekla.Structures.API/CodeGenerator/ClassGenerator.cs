@@ -12,10 +12,6 @@ namespace CodeGenerator
         {
             if (!type.IsClass) return string.Empty;
 
-            //string fileName = Path.Combine(Path.GetDirectoryName(Program.GetProjectDirectory())
-            //    , "Dynamic.Tekla.Structures",
-            //    type.Name + ".cs");
-
             string outputText = String.Copy(text);
             
             outputText = AddProperties(type, outputText);
@@ -33,8 +29,18 @@ namespace CodeGenerator
             //TODO father class
             outputText = outputText.Replace("$fatherClass", "");
 
-            //$constructor2
+            var nestedTypeGenerator = new TypeGenerator();
+            var nestedTypeText = new StringBuilder(1000);
+            var nestedTypes = type.GetNestedTypes()
+                ;
 
+            foreach (var nestedType in nestedTypes)
+            {
+                nestedTypeText.AppendLine(nestedTypeGenerator.GetTextFromType(nestedType));
+            }
+
+            outputText = outputText.Replace("$nestedTypes", nestedTypeText.ToString());
+            
             return outputText;
         }
         
@@ -146,13 +152,44 @@ namespace CodeGenerator
 
             foreach (var property in type.GetProperties())
             {
-                sb.Append("\t\tpublic ");
-                
-                sb.Append(GetTypeFullName(property.PropertyType));
-
-                sb.Append(" ");
-                sb.Append(property.Name);
-                sb.Append(" {get; set; }\n");
+                if (IsTeklaType(property.PropertyType))
+                {
+                    if (property.PropertyType.IsEnum)
+                    {
+                        sb.Append("\t\tpublic ");
+                        sb.Append(GetTypeFullName(property.PropertyType));
+                        sb.Append(" ");
+                        sb.Append(property.Name);
+                        sb.Append("\n\t\t{" +
+                            "\n\t\t\tget => " + GetTypeFullName(property.PropertyType) + "_.FromTSObject($dfield." +
+                            "" + property.Name + ");" +
+                            "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.FromTSObject(value); }" +
+                            "\n\t\t}\n\n");
+                    }
+                    else
+                    {
+                        sb.Append("\t\tpublic ");
+                        sb.Append(GetTypeFullName(property.PropertyType));
+                        sb.Append(" ");
+                        sb.Append(property.Name);
+                        sb.Append("\n\t\t{" +
+                            "\n\t\t\tget => new " + GetTypeFullName(property.PropertyType) + "($dfield." +
+                            "" + property.Name + ".GetTSObject());" +
+                            "\n\t\t\tset { $dfield." + property.Name + " = value.GetTSObject(); }" +
+                            "\n\t\t}\n\n");
+                    }
+                }
+                else
+                {
+                    sb.Append("\t\tpublic ");
+                    sb.Append(GetTypeFullName(property.PropertyType));
+                    sb.Append(" ");
+                    sb.Append(property.Name);
+                    sb.Append("\n\t\t{" +
+                        "\n\t\t\tget => $dfield." + property.Name + ";" +
+                        "\n\t\t\tset { $dfield." + property.Name + " = value; }" +
+                        "\n\t\t}\n\n");
+                }
 
             }
 
@@ -275,6 +312,8 @@ $constructor2
         public dynamic GetTSObject() => $dfield;
 
 $dmethods
+
+$nestedTypes
 
     }
 ";

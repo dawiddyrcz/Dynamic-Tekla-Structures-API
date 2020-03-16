@@ -85,7 +85,7 @@ $enumValues
 
     public static class $classname_
     {
-        public static dynamic GetTSObject(this $classname dynEnum)
+        public static dynamic GetTSObject($classname dynEnum)
         {
             var tsType = TSActivator.CreateInstance(""$namespace.$classname"");
 

@@ -7,25 +7,120 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class Beam 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint {get; set; }
-		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint {get; set; }
-		public Dynamic.Tekla.Structures.Model.Offset StartPointOffset {get; set; }
-		public Dynamic.Tekla.Structures.Model.Offset EndPointOffset {get; set; }
-		public Dynamic.Tekla.Structures.Model.BeamTypeEnum Type {get; set; }
-		public Dynamic.Tekla.Structures.Model.Profile Profile {get; set; }
-		public Dynamic.Tekla.Structures.Model.Material Material {get; set; }
-		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData {get; set; }
-		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber {get; set; }
-		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber {get; set; }
-		public System.String Name {get; set; }
-		public System.String Class {get; set; }
-		public System.String Finish {get; set; }
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType {get; set; }
-		public System.Int32 PourPhase {get; set; }
-		public Dynamic.Tekla.Structures.Model.Position Position {get; set; }
-		public System.Nullable<System.DateTime> ModificationTime {get; set; }
-		public System.Boolean IsUpToDate {get; set; }
-		public Dynamic.Tekla.Structures.Identifier Identifier {get; set; }
+		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(beam.StartPoint.GetTSObject());
+			set { beam.StartPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(beam.EndPoint.GetTSObject());
+			set { beam.EndPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Offset StartPointOffset
+		{
+			get => new Dynamic.Tekla.Structures.Model.Offset(beam.StartPointOffset.GetTSObject());
+			set { beam.StartPointOffset = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Offset EndPointOffset
+		{
+			get => new Dynamic.Tekla.Structures.Model.Offset(beam.EndPointOffset.GetTSObject());
+			set { beam.EndPointOffset = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.BeamTypeEnum Type
+		{
+			get => Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(beam.Type);
+			set { beam.Type = Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(value); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Profile Profile
+		{
+			get => new Dynamic.Tekla.Structures.Model.Profile(beam.Profile.GetTSObject());
+			set { beam.Profile = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Material Material
+		{
+			get => new Dynamic.Tekla.Structures.Model.Material(beam.Material.GetTSObject());
+			set { beam.Material = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
+		{
+			get => new Dynamic.Tekla.Structures.Model.DeformingData(beam.DeformingData.GetTSObject());
+			set { beam.DeformingData = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
+		{
+			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.PartNumber.GetTSObject());
+			set { beam.PartNumber = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
+		{
+			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.AssemblyNumber.GetTSObject());
+			set { beam.AssemblyNumber = value.GetTSObject(); }
+		}
+
+		public System.String Name
+		{
+			get => beam.Name;
+			set { beam.Name = value; }
+		}
+
+		public System.String Class
+		{
+			get => beam.Class;
+			set { beam.Class = value; }
+		}
+
+		public System.String Finish
+		{
+			get => beam.Finish;
+			set { beam.Finish = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		{
+			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
+			set { beam.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+		}
+
+		public System.Int32 PourPhase
+		{
+			get => beam.PourPhase;
+			set { beam.PourPhase = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Model.Position Position
+		{
+			get => new Dynamic.Tekla.Structures.Model.Position(beam.Position.GetTSObject());
+			set { beam.Position = value.GetTSObject(); }
+		}
+
+		public System.Nullable<System.DateTime> ModificationTime
+		{
+			get => beam.ModificationTime;
+			set { beam.ModificationTime = value; }
+		}
+
+		public System.Boolean IsUpToDate
+		{
+			get => beam.IsUpToDate;
+			set { beam.IsUpToDate = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Identifier Identifier
+		{
+			get => new Dynamic.Tekla.Structures.Identifier(beam.Identifier.GetTSObject());
+			set { beam.Identifier = value.GetTSObject(); }
+		}
+
         
 
         dynamic beam;
@@ -221,6 +316,63 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String ToString()
 			 => beam.ToString();
+
+
+
+
+    public enum BeamTypeEnum
+    {
+			BEAM,
+			PANEL,
+			STRIP_FOOTING,
+			PAD_FOOTING,
+			COLUMN        
+    }
+
+    public static class BeamTypeEnum_
+    {
+        public static dynamic GetTSObject(BeamTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BeamTypeEnum");
+
+            switch (dynEnum)
+            {
+				case BeamTypeEnum.BEAM:
+					return System.Enum.Parse(tsType, "BEAM");
+				case BeamTypeEnum.PANEL:
+					return System.Enum.Parse(tsType, "PANEL");
+				case BeamTypeEnum.STRIP_FOOTING:
+					return System.Enum.Parse(tsType, "STRIP_FOOTING");
+				case BeamTypeEnum.PAD_FOOTING:
+					return System.Enum.Parse(tsType, "PAD_FOOTING");
+				case BeamTypeEnum.COLUMN:
+					return System.Enum.Parse(tsType, "COLUMN");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static BeamTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BEAM", System.StringComparison.InvariantCulture))
+				return BeamTypeEnum.BEAM;
+			else if (tsEnumValue.Equals("PANEL", System.StringComparison.InvariantCulture))
+				return BeamTypeEnum.PANEL;
+			else if (tsEnumValue.Equals("STRIP_FOOTING", System.StringComparison.InvariantCulture))
+				return BeamTypeEnum.STRIP_FOOTING;
+			else if (tsEnumValue.Equals("PAD_FOOTING", System.StringComparison.InvariantCulture))
+				return BeamTypeEnum.PAD_FOOTING;
+			else if (tsEnumValue.Equals("COLUMN", System.StringComparison.InvariantCulture))
+				return BeamTypeEnum.COLUMN;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
 
 
 

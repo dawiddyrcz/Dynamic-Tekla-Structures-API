@@ -27,10 +27,7 @@ namespace CodeGenerator
                 ShowAllTypes();
             }
 
-            string a = "asdf";
-            if (a.Equals("asdf", StringComparison.InvariantCulture))
-
-                Console.ReadKey();
+           
         }
 
         private static void ShowAllTypes()
@@ -107,14 +104,16 @@ namespace CodeGenerator
         private static void GenerateAPICode()
         {
             Console.WriteLine("Generate API code");
-            var generator = new TypeGenerator();
+            var generator = new FileGenerator();
 
             var allTypes = GetTypesFromDll();
 
             foreach (var type in allTypes)
             {
                 if (type.Name.Contains("Beam"))
+                {
                     generator.SaveToFile(type);
+                }
             }
         }
 

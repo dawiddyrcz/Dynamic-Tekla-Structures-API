@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FileGenerator.cs" />
     <Compile Include="TypeGenerator.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Enum.cs" />

@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class PolyBeam 
     {
 
-		public Dynamic.Tekla.Structures.Model.PolyBeamTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
-			set { polybeam.Type = Dynamic.Tekla.Structures.Model.PolyBeamTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
+			set { polybeam.Type = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
@@ -67,10 +67,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { polybeam.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
-			set { polybeam.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
+			set { polybeam.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { polybeam.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => polybeam.ModificationTime;
 			set { polybeam.ModificationTime = value; }
@@ -115,7 +115,7 @@ namespace Dynamic.Tekla.Structures.Model
         public PolyBeam(dynamic tsObject)
         {
             this.polybeam = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
 			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(polybeam.Contour);
 			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(polybeam.Profile);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(polybeam.Material);
@@ -125,7 +125,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = polybeam.Name;
 			this.Class = polybeam.Class;
 			this.Finish = polybeam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
 			this.PourPhase = polybeam.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(polybeam.Position);
 			this.ModificationTime = polybeam.ModificationTime;
@@ -158,7 +158,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(polybeam.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(polybeam.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

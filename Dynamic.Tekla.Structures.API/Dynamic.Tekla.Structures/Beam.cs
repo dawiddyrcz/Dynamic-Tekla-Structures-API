@@ -31,10 +31,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { beam.EndPointOffset = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BeamTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(beam.Type);
-			set { beam.Type = Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.FromTSObject(beam.Type);
+			set { beam.Type = Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
@@ -85,10 +85,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { beam.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
-			set { beam.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
+			set { beam.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -103,7 +103,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { beam.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => beam.ModificationTime;
 			set { beam.ModificationTime = value; }
@@ -137,7 +137,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.EndPoint);
 			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.StartPointOffset);
 			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.EndPointOffset);
-			this.Type = Dynamic.Tekla.Structures.Model.BeamTypeEnum_.FromTSObject(beam.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.FromTSObject(beam.Type);
 			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(beam.Profile);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(beam.Material);
 			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(beam.DeformingData);
@@ -146,7 +146,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = beam.Name;
 			this.Class = beam.Class;
 			this.Finish = beam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
 			this.PourPhase = beam.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(beam.Position);
 			this.ModificationTime = beam.ModificationTime;
@@ -173,7 +173,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(beam.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(beam.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

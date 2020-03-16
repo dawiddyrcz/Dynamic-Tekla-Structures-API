@@ -7,31 +7,31 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarHookDataNullable 
     {
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarHookShapeEnum> Shape
+		public System.NullableTekla.Structures.Model.RebarHookData.RebarHookShapeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum> Shape
 		{
 			get => rebarhookdatanullable.Shape;
 			set { rebarhookdatanullable.Shape = value; }
 		}
 
-		public System.Nullable<System.Double> Angle
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> Angle
 		{
 			get => rebarhookdatanullable.Angle;
 			set { rebarhookdatanullable.Angle = value; }
 		}
 
-		public System.Nullable<System.Double> Radius
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> Radius
 		{
 			get => rebarhookdatanullable.Radius;
 			set { rebarhookdatanullable.Radius = value; }
 		}
 
-		public System.Nullable<System.Double> Length
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> Length
 		{
 			get => rebarhookdatanullable.Length;
 			set { rebarhookdatanullable.Length = value; }
 		}
 
-		public System.Nullable<System.Double> Rotation
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> Rotation
 		{
 			get => rebarhookdatanullable.Rotation;
 			set { rebarhookdatanullable.Rotation = value; }

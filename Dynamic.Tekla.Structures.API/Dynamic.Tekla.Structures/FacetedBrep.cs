@@ -7,13 +7,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public sealed class FacetedBrep 
     {
 
-		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
+		public System.Collections.Generic.ICollectionTekla.Structures.Geometry3d.FacetedBrepFace, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
 		{
 			get => facetedbrep.Faces;
 			set { facetedbrep.Faces = value; }
 		}
 
-		public System.Collections.Generic.IDictionary<System.Int32, System.Int32> InnerWires
+		public System.Collections.Generic.IDictionarySystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Int32, System.Int32> InnerWires
 		{
 			get => facetedbrep.InnerWires;
 			set { facetedbrep.InnerWires = value; }
@@ -25,13 +25,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { facetedbrep.OuterWires = value; }
 		}
 
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.IndirectPolymeshEdge, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
 		{
 			get => facetedbrep.GetEdges;
 			set { facetedbrep.GetEdges = value; }
 		}
 
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => facetedbrep.Vertices;
 			set { facetedbrep.Vertices = value; }

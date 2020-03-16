@@ -13,13 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarthreadingdatanullable.ThreadingType = value; }
 		}
 
-		public System.Nullable<System.Double> Length
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> Length
 		{
 			get => rebarthreadingdatanullable.Length;
 			set { rebarthreadingdatanullable.Length = value; }
 		}
 
-		public System.Nullable<System.Double> ExtraFabricationLength
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> ExtraFabricationLength
 		{
 			get => rebarthreadingdatanullable.ExtraFabricationLength;
 			set { rebarthreadingdatanullable.ExtraFabricationLength = value; }

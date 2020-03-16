@@ -13,10 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { changedata.Object = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ChangeTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ChangeTypeEnum_.FromTSObject(changedata.Type);
-			set { changedata.Type = Dynamic.Tekla.Structures.Model.ChangeTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(changedata.Type);
+			set { changedata.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(value); }
 		}
 
         
@@ -32,7 +32,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.changedata = tsObject;
 			this.Object = new Dynamic.Tekla.Structures.Model.ModelObject(changedata.Object);
-			this.Type = Dynamic.Tekla.Structures.Model.ChangeTypeEnum_.FromTSObject(changedata.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(changedata.Type);
 
         }
 

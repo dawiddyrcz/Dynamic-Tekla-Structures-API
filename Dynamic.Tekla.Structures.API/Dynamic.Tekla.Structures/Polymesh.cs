@@ -41,7 +41,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
 			 => polymesh.CompareFingerprints(fingerprint1, fingerprint2);
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.FacetedBrep> Convert(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymesh_t input)
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.FacetedBrep, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.FacetedBrep> Convert(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymesh_t input)
 			 => polymesh.Convert(ref input.GetTSObject());
 
 		public void ToStruct(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymesh_t output)
@@ -50,13 +50,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public void FromStruct(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymesh_t input)
 			 => polymesh.FromStruct(ref input.GetTSObject());
 
-		public System.Boolean Validate(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep, Dynamic.Tekla.Structures.Model.PolymeshCheckerFlags checkCriteria, ref System.Collections.Generic.List invalidInfo)
+		public System.Boolean Validate(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep, Dynamic.Tekla.Structures.Model.Polymesh.PolymeshCheckerFlags checkCriteria, ref System.Collections.Generic.ListSystem.Collections.Generic.KeyValuePairSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,Tekla.Structures.Model.Polymesh.PolymeshHealthCheckEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 invalidInfo)
 			 => polymesh.Validate(brep.GetTSObject(), checkCriteria.GetTSObject(), ref invalidInfo);
 
 		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, ref Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
 			 => polymesh.GetSolidBrep(inBrep.GetTSObject(), ref outBrep.GetTSObject());
 
-		public System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, Dynamic.Tekla.Structures.Model.PolymeshHealthCheckEnum>> ConvertInvalidInfoFromStruct(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymeshValidateInvalidInfo_t input)
+		public System.Collections.Generic.ListSystem.Collections.Generic.KeyValuePairSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,Tekla.Structures.Model.Polymesh.PolymeshHealthCheckEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Collections.Generic.KeyValuePairSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,Tekla.Structures.Model.Polymesh.PolymeshHealthCheckEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<System.Int32, Dynamic.Tekla.Structures.Model.Polymesh.PolymeshHealthCheckEnum>> ConvertInvalidInfoFromStruct(ref Dynamic.Tekla.Structures.ModelInternal.dotPolymeshValidateInvalidInfo_t input)
 			 => polymesh.ConvertInvalidInfoFromStruct(ref input.GetTSObject());
 
 		public System.Boolean Equals(System.Object obj)

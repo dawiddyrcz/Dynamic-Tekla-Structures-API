@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Solid
     public sealed class Edge 
     {
 
-		public Dynamic.Tekla.Structures.Solid.EdgeTypeEnum Type
+		public Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Solid.EdgeTypeEnum_.FromTSObject(edge.Type);
-			set { edge.Type = Dynamic.Tekla.Structures.Solid.EdgeTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(edge.Type);
+			set { edge.Type = Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Solid
         public Edge(dynamic tsObject)
         {
             this.edge = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Solid.EdgeTypeEnum_.FromTSObject(edge.Type);
+			this.Type = Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(edge.Type);
 			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(edge.StartPoint);
 			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(edge.EndPoint);
 

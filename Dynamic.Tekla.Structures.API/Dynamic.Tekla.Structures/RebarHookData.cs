@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarHookData 
     {
 
-		public Dynamic.Tekla.Structures.Model.RebarHookShapeEnum Shape
+		public Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum Shape
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
-			set { rebarhookdata.Shape = Dynamic.Tekla.Structures.Model.RebarHookShapeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
+			set { rebarhookdata.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double Angle
@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarHookData(dynamic tsObject)
         {
             this.rebarhookdata = tsObject;
-			this.Shape = Dynamic.Tekla.Structures.Model.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
+			this.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
 			this.Angle = rebarhookdata.Angle;
 			this.Radius = rebarhookdata.Radius;
 			this.Length = rebarhookdata.Length;

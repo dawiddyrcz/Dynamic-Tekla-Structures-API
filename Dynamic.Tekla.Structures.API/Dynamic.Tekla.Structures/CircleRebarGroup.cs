@@ -13,10 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { circlerebargroup.Polygon = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CircleRebarGroupStirrupTypeEnum StirrupType
+		public Dynamic.Tekla.Structures.Model.CircleRebarGroup.CircleRebarGroupStirrupTypeEnum StirrupType
 		{
-			get => Dynamic.Tekla.Structures.Model.CircleRebarGroupStirrupTypeEnum_.FromTSObject(circlerebargroup.StirrupType);
-			set { circlerebargroup.StirrupType = Dynamic.Tekla.Structures.Model.CircleRebarGroupStirrupTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.CircleRebarGroup.CircleRebarGroupStirrupTypeEnum_.FromTSObject(circlerebargroup.StirrupType);
+			set { circlerebargroup.StirrupType = Dynamic.Tekla.Structures.Model.CircleRebarGroup.CircleRebarGroupStirrupTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.String Size
@@ -55,16 +55,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { circlerebargroup.EndFromPlaneOffset = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ExcludeTypeEnum ExcludeType
+		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum ExcludeType
 		{
-			get => Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(circlerebargroup.ExcludeType);
-			set { circlerebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(circlerebargroup.ExcludeType);
+			set { circlerebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum SpacingType
+		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum SpacingType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(circlerebargroup.SpacingType);
-			set { circlerebargroup.SpacingType = Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(circlerebargroup.SpacingType);
+			set { circlerebargroup.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Collections.ArrayList Spacings
@@ -121,10 +121,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { circlerebargroup.OnPlaneOffsets = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum StartPointOffsetType
+		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.StartPointOffsetType);
-			set { circlerebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.StartPointOffsetType);
+			set { circlerebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
@@ -133,10 +133,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { circlerebargroup.StartPointOffsetValue = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum EndPointOffsetType
+		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.EndPointOffsetType);
-			set { circlerebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.EndPointOffsetType);
+			set { circlerebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
@@ -157,7 +157,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { circlerebargroup.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => circlerebargroup.ModificationTime;
 			set { circlerebargroup.ModificationTime = value; }
@@ -188,15 +188,15 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.circlerebargroup = tsObject;
 			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(circlerebargroup.Polygon);
-			this.StirrupType = Dynamic.Tekla.Structures.Model.CircleRebarGroupStirrupTypeEnum_.FromTSObject(circlerebargroup.StirrupType);
+			this.StirrupType = Dynamic.Tekla.Structures.Model.CircleRebarGroup.CircleRebarGroupStirrupTypeEnum_.FromTSObject(circlerebargroup.StirrupType);
 			this.Size = circlerebargroup.Size;
 			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(circlerebargroup.StartHook);
 			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(circlerebargroup.EndHook);
 			this.FromPlaneOffset = circlerebargroup.FromPlaneOffset;
 			this.StartFromPlaneOffset = circlerebargroup.StartFromPlaneOffset;
 			this.EndFromPlaneOffset = circlerebargroup.EndFromPlaneOffset;
-			this.ExcludeType = Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(circlerebargroup.ExcludeType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(circlerebargroup.SpacingType);
+			this.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(circlerebargroup.ExcludeType);
+			this.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(circlerebargroup.SpacingType);
 			this.Spacings = circlerebargroup.Spacings;
 			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(circlerebargroup.StartPoint);
 			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(circlerebargroup.EndPoint);
@@ -206,9 +206,9 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Class = circlerebargroup.Class;
 			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(circlerebargroup.NumberingSeries);
 			this.OnPlaneOffsets = circlerebargroup.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.StartPointOffsetType);
+			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.StartPointOffsetType);
 			this.StartPointOffsetValue = circlerebargroup.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.EndPointOffsetType);
+			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.EndPointOffsetType);
 			this.EndPointOffsetValue = circlerebargroup.EndPointOffsetValue;
 			this.RadiusValues = circlerebargroup.RadiusValues;
 			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(circlerebargroup.InputPointDeformingState);
@@ -233,7 +233,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Delete()
 			 => circlerebargroup.Delete();
 
-		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.RebarGeometryOptionEnum options)
+		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 			 => circlerebargroup.GetRebarGeometries(options.GetTSObject());
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)

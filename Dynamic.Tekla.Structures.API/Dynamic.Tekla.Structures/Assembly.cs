@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { assembly.AssemblyNumber = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => assembly.ModificationTime;
 			set { assembly.ModificationTime = value; }
@@ -99,8 +99,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetSubAssemblies()
 			 => assembly.GetSubAssemblies();
 
-		public Dynamic.Tekla.Structures.Model.AssemblyTypeEnum GetAssemblyType()
-			 => new Dynamic.Tekla.Structures.Model.AssemblyTypeEnum(assembly.GetAssemblyType());
+		public Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum GetAssemblyType()
+			 => new Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum(assembly.GetAssemblyType());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
 			 => new Dynamic.Tekla.Structures.Model.PourObject(assembly.GetFatherPour());

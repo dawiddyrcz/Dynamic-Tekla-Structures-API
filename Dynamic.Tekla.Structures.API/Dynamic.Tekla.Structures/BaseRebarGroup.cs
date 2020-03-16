@@ -43,16 +43,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { baserebargroup.EndFromPlaneOffset = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ExcludeTypeEnum ExcludeType
+		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum ExcludeType
 		{
-			get => Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(baserebargroup.ExcludeType);
-			set { baserebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(baserebargroup.ExcludeType);
+			set { baserebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum SpacingType
+		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum SpacingType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(baserebargroup.SpacingType);
-			set { baserebargroup.SpacingType = Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(baserebargroup.SpacingType);
+			set { baserebargroup.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Collections.ArrayList Spacings
@@ -109,10 +109,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { baserebargroup.OnPlaneOffsets = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum StartPointOffsetType
+		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.StartPointOffsetType);
-			set { baserebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.StartPointOffsetType);
+			set { baserebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
@@ -121,10 +121,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { baserebargroup.StartPointOffsetValue = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum EndPointOffsetType
+		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.EndPointOffsetType);
-			set { baserebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.EndPointOffsetType);
+			set { baserebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
@@ -145,7 +145,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { baserebargroup.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => baserebargroup.ModificationTime;
 			set { baserebargroup.ModificationTime = value; }
@@ -181,8 +181,8 @@ namespace Dynamic.Tekla.Structures.Model
 			this.FromPlaneOffset = baserebargroup.FromPlaneOffset;
 			this.StartFromPlaneOffset = baserebargroup.StartFromPlaneOffset;
 			this.EndFromPlaneOffset = baserebargroup.EndFromPlaneOffset;
-			this.ExcludeType = Dynamic.Tekla.Structures.Model.ExcludeTypeEnum_.FromTSObject(baserebargroup.ExcludeType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.RebarGroupSpacingTypeEnum_.FromTSObject(baserebargroup.SpacingType);
+			this.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(baserebargroup.ExcludeType);
+			this.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(baserebargroup.SpacingType);
 			this.Spacings = baserebargroup.Spacings;
 			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(baserebargroup.StartPoint);
 			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(baserebargroup.EndPoint);
@@ -192,9 +192,9 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Class = baserebargroup.Class;
 			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(baserebargroup.NumberingSeries);
 			this.OnPlaneOffsets = baserebargroup.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.StartPointOffsetType);
+			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.StartPointOffsetType);
 			this.StartPointOffsetValue = baserebargroup.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.EndPointOffsetType);
+			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(baserebargroup.EndPointOffsetType);
 			this.EndPointOffsetValue = baserebargroup.EndPointOffsetValue;
 			this.RadiusValues = baserebargroup.RadiusValues;
 			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(baserebargroup.InputPointDeformingState);
@@ -207,7 +207,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => baserebargroup;
 
-		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.RebarGeometryOptionEnum options)
+		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 			 => baserebargroup.GetRebarGeometries(options.GetTSObject());
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)

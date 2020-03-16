@@ -31,10 +31,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadpoint.FatherId = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadSpanningEnum Spanning
+		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(loadpoint.Spanning);
-			set { loadpoint.Spanning = Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadpoint.Spanning);
+			set { loadpoint.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
@@ -67,16 +67,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadpoint.CreateFixedSupportConditionsAutomatically = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadAttachmentEnum LoadAttachment
+		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(loadpoint.LoadAttachment);
-			set { loadpoint.LoadAttachment = Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadpoint.LoadAttachment);
+			set { loadpoint.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadPartNamesEnum PartNames
+		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(loadpoint.PartNames);
-			set { loadpoint.PartNames = Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadpoint.PartNames);
+			set { loadpoint.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -109,7 +109,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadpoint.Group = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => loadpoint.ModificationTime;
 			set { loadpoint.ModificationTime = value; }
@@ -143,14 +143,14 @@ namespace Dynamic.Tekla.Structures.Model
 			this.P = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.P);
 			this.Moment = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.Moment);
 			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadpoint.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(loadpoint.Spanning);
+			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadpoint.Spanning);
 			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.PrimaryAxisDirection);
 			this.AutomaticPrimaryAxisWeight = loadpoint.AutomaticPrimaryAxisWeight;
 			this.Weight = loadpoint.Weight;
 			this.LoadDispersionAngle = loadpoint.LoadDispersionAngle;
 			this.CreateFixedSupportConditionsAutomatically = loadpoint.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(loadpoint.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(loadpoint.PartNames);
+			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadpoint.LoadAttachment);
+			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadpoint.PartNames);
 			this.PartFilter = loadpoint.PartFilter;
 			this.BoundingBoxDx = loadpoint.BoundingBoxDx;
 			this.BoundingBoxDy = loadpoint.BoundingBoxDy;

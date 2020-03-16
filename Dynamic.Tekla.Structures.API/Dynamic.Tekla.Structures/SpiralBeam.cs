@@ -115,10 +115,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { spiralbeam.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
-			set { spiralbeam.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
+			set { spiralbeam.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -133,7 +133,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { spiralbeam.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => spiralbeam.ModificationTime;
 			set { spiralbeam.ModificationTime = value; }
@@ -181,7 +181,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = spiralbeam.Name;
 			this.Class = spiralbeam.Class;
 			this.Finish = spiralbeam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
 			this.PourPhase = spiralbeam.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(spiralbeam.Position);
 			this.ModificationTime = spiralbeam.ModificationTime;
@@ -208,7 +208,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(spiralbeam.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(spiralbeam.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

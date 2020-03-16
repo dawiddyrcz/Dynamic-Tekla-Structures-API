@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarpropertiesnullable.Name = value; }
 		}
 
-		public System.Nullable<System.Int32> Class
+		public System.NullableSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Int32> Class
 		{
 			get => rebarpropertiesnullable.Class;
 			set { rebarpropertiesnullable.Class = value; }
@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarpropertiesnullable.NumberingSeries = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.Double> BendingRadius
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> BendingRadius
 		{
 			get => rebarpropertiesnullable.BendingRadius;
 			set { rebarpropertiesnullable.BendingRadius = value; }

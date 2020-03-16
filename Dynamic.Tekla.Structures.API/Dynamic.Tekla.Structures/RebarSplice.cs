@@ -19,10 +19,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarsplice.RebarGroup2 = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarSpliceTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
-			set { rebarsplice.Type = Dynamic.Tekla.Structures.Model.RebarSpliceTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
+			set { rebarsplice.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double LapLength
@@ -43,13 +43,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarsplice.Clearance = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarSpliceBarPositionsEnum BarPositions
+		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum BarPositions
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
-			set { rebarsplice.BarPositions = Dynamic.Tekla.Structures.Model.RebarSpliceBarPositionsEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
+			set { rebarsplice.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => rebarsplice.ModificationTime;
 			set { rebarsplice.ModificationTime = value; }
@@ -81,11 +81,11 @@ namespace Dynamic.Tekla.Structures.Model
             this.rebarsplice = tsObject;
 			this.RebarGroup1 = new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup1);
 			this.RebarGroup2 = new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup2);
-			this.Type = Dynamic.Tekla.Structures.Model.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
 			this.LapLength = rebarsplice.LapLength;
 			this.Offset = rebarsplice.Offset;
 			this.Clearance = rebarsplice.Clearance;
-			this.BarPositions = Dynamic.Tekla.Structures.Model.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
+			this.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
 			this.ModificationTime = rebarsplice.ModificationTime;
 			this.IsUpToDate = rebarsplice.IsUpToDate;
 			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarsplice.Identifier);

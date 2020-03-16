@@ -13,16 +13,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadgroup.GroupName = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadGroupType GroupType
+		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType GroupType
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroupType_.FromTSObject(loadgroup.GroupType);
-			set { loadgroup.GroupType = Dynamic.Tekla.Structures.Model.LoadGroupType_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(loadgroup.GroupType);
+			set { loadgroup.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadGroupDirection Direction
+		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection Direction
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
-			set { loadgroup.Direction = Dynamic.Tekla.Structures.Model.LoadGroupDirection_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
+			set { loadgroup.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(value); }
 		}
 
 		public System.Int32 Compatible
@@ -37,13 +37,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadgroup.Incompatible = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.Colors Color
+		public Dynamic.Tekla.Structures.Model.LoadGroup.Colors Color
 		{
-			get => Dynamic.Tekla.Structures.Model.Colors_.FromTSObject(loadgroup.Color);
-			set { loadgroup.Color = Dynamic.Tekla.Structures.Model.Colors_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(loadgroup.Color);
+			set { loadgroup.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => loadgroup.ModificationTime;
 			set { loadgroup.ModificationTime = value; }
@@ -74,11 +74,11 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.loadgroup = tsObject;
 			this.GroupName = loadgroup.GroupName;
-			this.GroupType = Dynamic.Tekla.Structures.Model.LoadGroupType_.FromTSObject(loadgroup.GroupType);
-			this.Direction = Dynamic.Tekla.Structures.Model.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
+			this.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(loadgroup.GroupType);
+			this.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
 			this.Compatible = loadgroup.Compatible;
 			this.Incompatible = loadgroup.Incompatible;
-			this.Color = Dynamic.Tekla.Structures.Model.Colors_.FromTSObject(loadgroup.Color);
+			this.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(loadgroup.Color);
 			this.ModificationTime = loadgroup.ModificationTime;
 			this.IsUpToDate = loadgroup.IsUpToDate;
 			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadgroup.Identifier);

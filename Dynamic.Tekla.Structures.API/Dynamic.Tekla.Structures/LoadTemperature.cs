@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class LoadTemperature 
     {
 
-		public Dynamic.Tekla.Structures.Model.LoadSpanningEnum Spanning
+		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
-			set { loadtemperature.Spanning = Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
+			set { loadtemperature.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
@@ -85,16 +85,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadtemperature.FatherId = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadAttachmentEnum LoadAttachment
+		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
-			set { loadtemperature.LoadAttachment = Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
+			set { loadtemperature.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoadPartNamesEnum PartNames
+		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
-			set { loadtemperature.PartNames = Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
+			set { loadtemperature.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -127,7 +127,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadtemperature.Group = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => loadtemperature.ModificationTime;
 			set { loadtemperature.ModificationTime = value; }
@@ -157,7 +157,7 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadTemperature(dynamic tsObject)
         {
             this.loadtemperature = tsObject;
-			this.Spanning = Dynamic.Tekla.Structures.Model.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
+			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
 			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadtemperature.PrimaryAxisDirection);
 			this.AutomaticPrimaryAxisWeight = loadtemperature.AutomaticPrimaryAxisWeight;
 			this.Weight = loadtemperature.Weight;
@@ -170,8 +170,8 @@ namespace Dynamic.Tekla.Structures.Model
 			this.TemperatureDifferentialSideToSide = loadtemperature.TemperatureDifferentialSideToSide;
 			this.InitialAxialElongation = loadtemperature.InitialAxialElongation;
 			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadtemperature.FatherId);
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
+			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
+			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
 			this.PartFilter = loadtemperature.PartFilter;
 			this.BoundingBoxDx = loadtemperature.BoundingBoxDx;
 			this.BoundingBoxDy = loadtemperature.BoundingBoxDy;

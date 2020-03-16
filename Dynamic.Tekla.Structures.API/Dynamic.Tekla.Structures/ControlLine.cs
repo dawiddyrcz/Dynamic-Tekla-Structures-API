@@ -25,10 +25,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { controlline.Extension = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ControlLineColorEnum Color
+		public Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlLineColorEnum_.FromTSObject(controlline.Color);
-			set { controlline.Color = Dynamic.Tekla.Structures.Model.ControlLineColorEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(controlline.Color);
+			set { controlline.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { controlline.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => controlline.ModificationTime;
 			set { controlline.ModificationTime = value; }
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Line = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(controlline.Line);
 			this.IsMagnetic = controlline.IsMagnetic;
 			this.Extension = controlline.Extension;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlLineColorEnum_.FromTSObject(controlline.Color);
+			this.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(controlline.Color);
 			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlline.LineType);
 			this.ModificationTime = controlline.ModificationTime;
 			this.IsUpToDate = controlline.IsUpToDate;

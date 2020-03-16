@@ -49,13 +49,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { cylindricalsurface.RotationAxis = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
 			get => cylindricalsurface.LateralBoundary1;
 			set { cylindricalsurface.LateralBoundary1 = value; }
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
 			get => cylindricalsurface.LateralBoundary2;
 			set { cylindricalsurface.LateralBoundary2 = value; }

@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class BooleanPart 
     {
 
-		public Dynamic.Tekla.Structures.Model.BooleanTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
-			set { booleanpart.Type = Dynamic.Tekla.Structures.Model.BooleanTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
+			set { booleanpart.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part OperativePart
@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { booleanpart.Father = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => booleanpart.ModificationTime;
 			set { booleanpart.ModificationTime = value; }
@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Model
         public BooleanPart(dynamic tsObject)
         {
             this.booleanpart = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
 			this.OperativePart = new Dynamic.Tekla.Structures.Model.Part(booleanpart.OperativePart);
 			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(booleanpart.Father);
 			this.ModificationTime = booleanpart.ModificationTime;

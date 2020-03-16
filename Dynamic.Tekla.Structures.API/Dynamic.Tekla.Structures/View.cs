@@ -55,22 +55,22 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			set { view.ViewDepthDown = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.UI.ViewProjectionType ViewProjection
+		public Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType ViewProjection
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.ViewProjectionType_.FromTSObject(view.ViewProjection);
-			set { view.ViewProjection = Dynamic.Tekla.Structures.Model.UI.ViewProjectionType_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(view.ViewProjection);
+			set { view.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.UI.DisplayOrientationType DisplayType
+		public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.DisplayOrientationType_.FromTSObject(view.DisplayType);
-			set { view.DisplayType = Dynamic.Tekla.Structures.Model.UI.DisplayOrientationType_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(view.DisplayType);
+			set { view.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.UI.ViewRenderingType ViewRendering
+		public Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType ViewRendering
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.ViewRenderingType_.FromTSObject(view.ViewRendering);
-			set { view.ViewRendering = Dynamic.Tekla.Structures.Model.UI.ViewRenderingType_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(view.ViewRendering);
+			set { view.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(value); }
 		}
 
 		public System.String ViewFilter
@@ -111,9 +111,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			this.WorkArea = new Dynamic.Tekla.Structures.Geometry3d.AABB(view.WorkArea);
 			this.ViewDepthUp = view.ViewDepthUp;
 			this.ViewDepthDown = view.ViewDepthDown;
-			this.ViewProjection = Dynamic.Tekla.Structures.Model.UI.ViewProjectionType_.FromTSObject(view.ViewProjection);
-			this.DisplayType = Dynamic.Tekla.Structures.Model.UI.DisplayOrientationType_.FromTSObject(view.DisplayType);
-			this.ViewRendering = Dynamic.Tekla.Structures.Model.UI.ViewRenderingType_.FromTSObject(view.ViewRendering);
+			this.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(view.ViewProjection);
+			this.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(view.DisplayType);
+			this.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(view.ViewRendering);
 			this.ViewFilter = view.ViewFilter;
 			this.SharedView = view.SharedView;
 			this.VisibilitySettings = new Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings(view.VisibilitySettings);

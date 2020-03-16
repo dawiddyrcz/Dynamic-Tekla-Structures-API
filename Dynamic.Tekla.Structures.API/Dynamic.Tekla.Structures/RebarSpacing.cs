@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarSpacing 
     {
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
+		public System.Collections.Generic.ListTekla.Structures.Model.RebarSpacingZone, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
 		{
 			get => rebarspacing.Zones;
 			set { rebarspacing.Zones = value; }
@@ -25,16 +25,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarspacing.EndOffset = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.OffsetEnum StartOffsetType
+		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum StartOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
-			set { rebarspacing.StartOffsetType = Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
+			set { rebarspacing.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.OffsetEnum EndOffsetType
+		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum EndOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
-			set { rebarspacing.EndOffsetType = Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
+			set { rebarspacing.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(value); }
 		}
 
 		public System.Boolean StartOffsetIsAutomatic
@@ -70,8 +70,8 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Zones = rebarspacing.Zones;
 			this.StartOffset = rebarspacing.StartOffset;
 			this.EndOffset = rebarspacing.EndOffset;
-			this.StartOffsetType = Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
-			this.EndOffsetType = Dynamic.Tekla.Structures.Model.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
+			this.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
+			this.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
 			this.StartOffsetIsAutomatic = rebarspacing.StartOffsetIsAutomatic;
 			this.EndOffsetIsAutomatic = rebarspacing.EndOffsetIsAutomatic;
 			this.InheritFromPrimary = rebarspacing.InheritFromPrimary;

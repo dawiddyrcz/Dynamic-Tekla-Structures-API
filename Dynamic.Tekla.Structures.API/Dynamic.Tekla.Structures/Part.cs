@@ -55,10 +55,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { part.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
-			set { part.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
+			set { part.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -73,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { part.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => part.ModificationTime;
 			set { part.ModificationTime = value; }
@@ -111,7 +111,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = part.Name;
 			this.Class = part.Class;
 			this.Finish = part.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
 			this.PourPhase = part.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(part.Position);
 			this.ModificationTime = part.ModificationTime;
@@ -126,7 +126,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

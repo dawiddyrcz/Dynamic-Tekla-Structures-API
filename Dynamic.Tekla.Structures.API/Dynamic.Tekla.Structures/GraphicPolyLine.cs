@@ -25,10 +25,10 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			set { graphicpolyline.Width = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.UI.LineType Type
+		public Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType Type
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.LineType_.FromTSObject(graphicpolyline.Type);
-			set { graphicpolyline.Type = Dynamic.Tekla.Structures.Model.UI.LineType_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(graphicpolyline.Type);
+			set { graphicpolyline.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(value); }
 		}
 
         
@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			this.PolyLine = new Dynamic.Tekla.Structures.Geometry3d.PolyLine(graphicpolyline.PolyLine);
 			this.Color = new Dynamic.Tekla.Structures.Model.UI.Color(graphicpolyline.Color);
 			this.Width = graphicpolyline.Width;
-			this.Type = Dynamic.Tekla.Structures.Model.UI.LineType_.FromTSObject(graphicpolyline.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(graphicpolyline.Type);
 
         }
 

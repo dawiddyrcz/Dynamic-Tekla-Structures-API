@@ -25,10 +25,10 @@ namespace Dynamic.Tekla.Structures
 			set { componentoptions.BoltEdgeDistanceFactor = value; }
 		}
 
-		public Dynamic.Tekla.Structures.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
+		public Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
 		{
-			get => Dynamic.Tekla.Structures.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
-			set { componentoptions.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.BoltEdgeDistanceReferenceEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
+			set { componentoptions.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(value); }
 		}
 
 		public System.String BoltStandard
@@ -112,7 +112,7 @@ namespace Dynamic.Tekla.Structures
 			this.PlateProfileName = componentoptions.PlateProfileName;
 			this.FoldedPlateProfileName = componentoptions.FoldedPlateProfileName;
 			this.BoltEdgeDistanceFactor = componentoptions.BoltEdgeDistanceFactor;
-			this.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
+			this.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
 			this.BoltStandard = componentoptions.BoltStandard;
 			this.BoltSize = componentoptions.BoltSize;
 			this.PartMaterial = componentoptions.PartMaterial;

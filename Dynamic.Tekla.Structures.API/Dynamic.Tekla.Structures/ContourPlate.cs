@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class ContourPlate 
     {
 
-		public Dynamic.Tekla.Structures.Model.ContourPlateTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
-			set { contourplate.Type = Dynamic.Tekla.Structures.Model.ContourPlateTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
+			set { contourplate.Type = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
@@ -67,10 +67,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { contourplate.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
-			set { contourplate.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
+			set { contourplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { contourplate.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => contourplate.ModificationTime;
 			set { contourplate.ModificationTime = value; }
@@ -115,7 +115,7 @@ namespace Dynamic.Tekla.Structures.Model
         public ContourPlate(dynamic tsObject)
         {
             this.contourplate = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
 			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(contourplate.Contour);
 			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(contourplate.Profile);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(contourplate.Material);
@@ -125,7 +125,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = contourplate.Name;
 			this.Class = contourplate.Class;
 			this.Finish = contourplate.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
 			this.PourPhase = contourplate.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(contourplate.Position);
 			this.ModificationTime = contourplate.ModificationTime;
@@ -155,7 +155,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(contourplate.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(contourplate.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

@@ -31,10 +31,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { referencemodel.Scale = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.VisibilityEnum Visibility
+		public Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum Visibility
 		{
-			get => Dynamic.Tekla.Structures.Model.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
-			set { referencemodel.Visibility = Dynamic.Tekla.Structures.Model.VisibilityEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
+			set { referencemodel.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(value); }
 		}
 
 		public System.Guid BasePointGuid
@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { referencemodel.VersionGUID = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => referencemodel.ModificationTime;
 			set { referencemodel.ModificationTime = value; }
@@ -101,7 +101,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.ActiveFilePath = referencemodel.ActiveFilePath;
 			this.Position = new Dynamic.Tekla.Structures.Geometry3d.Point(referencemodel.Position);
 			this.Scale = referencemodel.Scale;
-			this.Visibility = Dynamic.Tekla.Structures.Model.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
+			this.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
 			this.BasePointGuid = referencemodel.BasePointGuid;
 			this.Rotation = referencemodel.Rotation;
 			this.ProjectGUID = referencemodel.ProjectGUID;
@@ -122,20 +122,20 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RefreshFile()
 			 => referencemodel.RefreshFile();
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.Revision> GetRevisions()
+		public System.Collections.Generic.ListTekla.Structures.Model.ReferenceModel.Revision, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
 			 => referencemodel.GetRevisions();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
 			 => new Dynamic.Tekla.Structures.Model.ReferenceModelObject(referencemodel.GetReferenceModelObjectByExternalGuid(externalGuid));
 
-		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.Revision revision)
+		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
 			 => referencemodel.SetAsCurrentRevision(revision.GetTSObject());
 
 		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
 			 => referencemodel.SetAsCurrentRevision(modelId, revisionId);
 
-		public Dynamic.Tekla.Structures.Model.Revision GetCurrentRevision()
-			 => new Dynamic.Tekla.Structures.Model.Revision(referencemodel.GetCurrentRevision());
+		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
+			 => new Dynamic.Tekla.Structures.Model.ReferenceModel.Revision(referencemodel.GetCurrentRevision());
 
 		public System.Boolean Insert()
 			 => referencemodel.Insert();

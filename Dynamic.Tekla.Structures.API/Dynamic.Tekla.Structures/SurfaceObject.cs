@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { surfaceobject.Father = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => surfaceobject.ModificationTime;
 			set { surfaceobject.ModificationTime = value; }

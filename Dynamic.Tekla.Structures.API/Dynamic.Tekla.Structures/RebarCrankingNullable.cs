@@ -7,43 +7,43 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarCrankingNullable 
     {
 
-		public System.Nullable<System.Double> CrankRotation
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> CrankRotation
 		{
 			get => rebarcrankingnullable.CrankRotation;
 			set { rebarcrankingnullable.CrankRotation = value; }
 		}
 
-		public System.Nullable<System.Double> CrankStraightLength
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> CrankStraightLength
 		{
 			get => rebarcrankingnullable.CrankStraightLength;
 			set { rebarcrankingnullable.CrankStraightLength = value; }
 		}
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.CrankedLengthTypeEnum> CrankedLengthType
+		public System.NullableTekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum> CrankedLengthType
 		{
 			get => rebarcrankingnullable.CrankedLengthType;
 			set { rebarcrankingnullable.CrankedLengthType = value; }
 		}
 
-		public System.Nullable<System.Double> CrankedRatio
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> CrankedRatio
 		{
 			get => rebarcrankingnullable.CrankedRatio;
 			set { rebarcrankingnullable.CrankedRatio = value; }
 		}
 
-		public System.Nullable<System.Double> CrankedDistance
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> CrankedDistance
 		{
 			get => rebarcrankingnullable.CrankedDistance;
 			set { rebarcrankingnullable.CrankedDistance = value; }
 		}
 
-		public System.Nullable<System.Double> CrankedOffset
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> CrankedOffset
 		{
 			get => rebarcrankingnullable.CrankedOffset;
 			set { rebarcrankingnullable.CrankedOffset = value; }
 		}
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.EndCrankingTypeEnum> CrankingType
+		public System.NullableTekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum> CrankingType
 		{
 			get => rebarcrankingnullable.CrankingType;
 			set { rebarcrankingnullable.CrankingType = value; }

@@ -25,16 +25,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { edgechamfer.SecondEnd = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum FirstChamferEndType
+		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum FirstChamferEndType
 		{
-			get => Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
-			set { edgechamfer.FirstChamferEndType = Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
+			set { edgechamfer.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum SecondChamferEndType
+		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum SecondChamferEndType
 		{
-			get => Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
-			set { edgechamfer.SecondChamferEndType = Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
+			set { edgechamfer.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double SecondBevelDimension
@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { edgechamfer.Father = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => edgechamfer.ModificationTime;
 			set { edgechamfer.ModificationTime = value; }
@@ -94,8 +94,8 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Chamfer = new Dynamic.Tekla.Structures.Model.Chamfer(edgechamfer.Chamfer);
 			this.FirstEnd = new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.FirstEnd);
 			this.SecondEnd = new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.SecondEnd);
-			this.FirstChamferEndType = Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
-			this.SecondChamferEndType = Dynamic.Tekla.Structures.Model.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
+			this.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
+			this.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
 			this.SecondBevelDimension = edgechamfer.SecondBevelDimension;
 			this.FirstBevelDimension = edgechamfer.FirstBevelDimension;
 			this.Name = edgechamfer.Name;

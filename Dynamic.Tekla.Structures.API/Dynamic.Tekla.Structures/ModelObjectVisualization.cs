@@ -28,19 +28,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryStateForAll(color.GetTSObject());
 
-		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.Color color)
+		public System.Boolean SetTemporaryState(System.Collections.Generic.ListTekla.Structures.Model.ModelObject, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryState(modelObjects, color.GetTSObject());
 
 		public System.Boolean SetTransparencyForAll(Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
 			 => modelobjectvisualization.SetTransparencyForAll(transparency.GetTSObject());
 
-		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
+		public System.Boolean SetTransparency(System.Collections.Generic.ListTekla.Structures.Model.ModelObject, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
 			 => modelobjectvisualization.SetTransparency(modelObjects, transparency.GetTSObject());
 
-		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
+		public System.Boolean SetTransparency(System.Collections.Generic.ListTekla.Structures.Identifier, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
 			 => modelobjectvisualization.SetTransparency(identifiers, transparency.GetTSObject());
 
-		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.Color color)
+		public System.Boolean SetTemporaryState(System.Collections.Generic.ListTekla.Structures.Identifier, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryState(identifiers, color.GetTSObject());
 
 		public System.Boolean GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject modelObject, ref Dynamic.Tekla.Structures.Model.UI.Color color)

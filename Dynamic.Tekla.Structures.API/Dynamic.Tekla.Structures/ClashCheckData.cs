@@ -19,10 +19,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { clashcheckdata.Object2 = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ClashTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
-			set { clashcheckdata.Type = Dynamic.Tekla.Structures.Model.ClashTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
+			set { clashcheckdata.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double Overlap
@@ -45,7 +45,7 @@ namespace Dynamic.Tekla.Structures.Model
             this.clashcheckdata = tsObject;
 			this.Object1 = new Dynamic.Tekla.Structures.Model.ModelObject(clashcheckdata.Object1);
 			this.Object2 = new Dynamic.Tekla.Structures.Model.ModelObject(clashcheckdata.Object2);
-			this.Type = Dynamic.Tekla.Structures.Model.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
 			this.Overlap = clashcheckdata.Overlap;
 
         }

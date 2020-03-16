@@ -31,16 +31,16 @@ namespace Dynamic.Tekla.Structures.Model
 			set { boltcircle.BoltStandard = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BoltTypeEnum BoltType
+		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum BoltType
 		{
-			get => Dynamic.Tekla.Structures.Model.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
-			set { boltcircle.BoltType = Dynamic.Tekla.Structures.Model.BoltTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
+			set { boltcircle.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BoltThreadInMaterialEnum ThreadInMaterial
+		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum ThreadInMaterial
 		{
-			get => Dynamic.Tekla.Structures.Model.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
-			set { boltcircle.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltThreadInMaterialEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
+			set { boltcircle.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(value); }
 		}
 
 		public System.Double Length
@@ -67,10 +67,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { boltcircle.Tolerance = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BoltHoleTypeEnum HoleType
+		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum HoleType
 		{
-			get => Dynamic.Tekla.Structures.Model.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
-			set { boltcircle.HoleType = Dynamic.Tekla.Structures.Model.BoltHoleTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
+			set { boltcircle.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double SlottedHoleX
@@ -85,10 +85,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { boltcircle.SlottedHoleY = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BoltRotateSlotsEnum RotateSlots
+		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum RotateSlots
 		{
-			get => Dynamic.Tekla.Structures.Model.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
-			set { boltcircle.RotateSlots = Dynamic.Tekla.Structures.Model.BoltRotateSlotsEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
+			set { boltcircle.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
@@ -217,7 +217,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { boltcircle.BoltPositions = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => boltcircle.ModificationTime;
 			set { boltcircle.ModificationTime = value; }
@@ -251,16 +251,16 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Diameter = boltcircle.Diameter;
 			this.BoltSize = boltcircle.BoltSize;
 			this.BoltStandard = boltcircle.BoltStandard;
-			this.BoltType = Dynamic.Tekla.Structures.Model.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
-			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
+			this.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
+			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
 			this.Length = boltcircle.Length;
 			this.CutLength = boltcircle.CutLength;
 			this.ExtraLength = boltcircle.ExtraLength;
 			this.Tolerance = boltcircle.Tolerance;
-			this.HoleType = Dynamic.Tekla.Structures.Model.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
+			this.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
 			this.SlottedHoleX = boltcircle.SlottedHoleX;
 			this.SlottedHoleY = boltcircle.SlottedHoleY;
-			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
+			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(boltcircle.Position);
 			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltcircle.StartPointOffset);
 			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltcircle.EndPointOffset);

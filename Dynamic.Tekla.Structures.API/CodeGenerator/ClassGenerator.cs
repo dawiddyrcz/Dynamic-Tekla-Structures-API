@@ -31,8 +31,7 @@ namespace CodeGenerator
 
             var nestedTypeGenerator = new TypeGenerator();
             var nestedTypeText = new StringBuilder(1000);
-            var nestedTypes = type.GetNestedTypes()
-                ;
+            var nestedTypes = type.GetNestedTypes();
 
             foreach (var nestedType in nestedTypes)
             {
@@ -205,11 +204,8 @@ namespace CodeGenerator
             {
                 sb.Append("Dynamic.");
             }
-
-            sb.Append(type.Namespace);
-            sb.Append(".");
-
-            string typeName = type.Name.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
+            
+            string typeName = type.FullName.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
             typeName = typeName.Replace("[", "").Replace("]", "");
 
             if (type.IsGenericType)
@@ -233,6 +229,7 @@ namespace CodeGenerator
                 sb.Append(typeName);
 
             sb.Replace("&", "");
+            sb.Replace("+", ".");
 
             return sb.ToString();
         }
@@ -252,20 +249,15 @@ namespace CodeGenerator
 
                     if (property.PropertyType.IsEnum)
                     {
-                        sb.Append("Dynamic.");
-                        sb.Append(property.PropertyType.Namespace);
-                        sb.Append(".");
-                        sb.Append(property.PropertyType.Name);
+                        sb.Append(GetTypeFullName(property.PropertyType));
                         sb.Append("_.FromTSObject($dfield.");
                         sb.Append(property.Name);
                         sb.Append(");\n");
                     }
                     else
                     {
-                        sb.Append("new Dynamic.");
-                        sb.Append(property.PropertyType.Namespace);
-                        sb.Append(".");
-                        sb.Append(property.PropertyType.Name);
+                        sb.Append("new ");
+                        sb.Append(GetTypeFullName(property.PropertyType));
                         sb.Append("($dfield.");
                         sb.Append(property.Name);
                         sb.Append(");\n");

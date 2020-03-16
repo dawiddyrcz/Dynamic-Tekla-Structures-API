@@ -13,10 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { controlcircle.Extension = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.ControlCircleColorEnum Color
+		public Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
-			set { controlcircle.Color = Dynamic.Tekla.Structures.Model.ControlCircleColorEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
+			set { controlcircle.Color = Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { controlcircle.Point3 = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => controlcircle.ModificationTime;
 			set { controlcircle.ModificationTime = value; }
@@ -74,7 +74,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlcircle = tsObject;
 			this.Extension = controlcircle.Extension;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
+			this.Color = Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
 			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlcircle.LineType);
 			this.Point1 = new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point1);
 			this.Point2 = new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point2);

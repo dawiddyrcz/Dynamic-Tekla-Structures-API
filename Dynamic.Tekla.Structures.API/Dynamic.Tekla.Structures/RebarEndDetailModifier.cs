@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarenddetailmodifier.RebarCranking = value.GetTSObject(); }
 		}
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.EndTypeEnum> EndType
+		public System.NullableTekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType
 		{
 			get => rebarenddetailmodifier.EndType;
 			set { rebarenddetailmodifier.EndType = value; }
@@ -49,10 +49,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarenddetailmodifier.Curve = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BarsAffectedEnum BarsAffected
+		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
-			get => Dynamic.Tekla.Structures.Model.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
-			set { rebarenddetailmodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BarsAffectedEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
+			set { rebarenddetailmodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarenddetailmodifier.FirstAffectedBar = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => rebarenddetailmodifier.ModificationTime;
 			set { rebarenddetailmodifier.ModificationTime = value; }
@@ -98,7 +98,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.EndType = rebarenddetailmodifier.EndType;
 			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(rebarenddetailmodifier.Father);
 			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(rebarenddetailmodifier.Curve);
-			this.BarsAffected = Dynamic.Tekla.Structures.Model.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
+			this.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
 			this.FirstAffectedBar = rebarenddetailmodifier.FirstAffectedBar;
 			this.ModificationTime = rebarenddetailmodifier.ModificationTime;
 			this.IsUpToDate = rebarenddetailmodifier.IsUpToDate;
@@ -109,7 +109,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarenddetailmodifier;
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.AffectedRebarEnum whichEnd)
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarenddetailmodifier.GetAffectedBars(whichEnd.GetTSObject()));
 
 		public System.Boolean Insert()

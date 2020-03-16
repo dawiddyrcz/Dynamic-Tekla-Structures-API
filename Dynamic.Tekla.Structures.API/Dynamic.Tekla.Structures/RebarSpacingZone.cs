@@ -25,22 +25,22 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarspacingzone.Length = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.SpacingEnum NumberOfSpacesType
+		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum NumberOfSpacesType
 		{
-			get => Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
-			set { rebarspacingzone.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
+			set { rebarspacingzone.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.SpacingEnum SpacingType
+		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum SpacingType
 		{
-			get => Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
-			set { rebarspacingzone.SpacingType = Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
+			set { rebarspacingzone.SpacingType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LengthEnum LengthType
+		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum LengthType
 		{
-			get => Dynamic.Tekla.Structures.Model.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
-			set { rebarspacingzone.LengthType = Dynamic.Tekla.Structures.Model.LengthEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
+			set { rebarspacingzone.LengthType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(value); }
 		}
 
         
@@ -58,9 +58,9 @@ namespace Dynamic.Tekla.Structures.Model
 			this.NumberOfSpaces = rebarspacingzone.NumberOfSpaces;
 			this.Spacing = rebarspacingzone.Spacing;
 			this.Length = rebarspacingzone.Length;
-			this.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
-			this.LengthType = Dynamic.Tekla.Structures.Model.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
+			this.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
+			this.SpacingType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
+			this.LengthType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
 
         }
 

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { pourunit.Name = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => pourunit.ModificationTime;
 			set { pourunit.ModificationTime = value; }

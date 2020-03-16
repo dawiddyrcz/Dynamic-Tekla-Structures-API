@@ -7,13 +7,13 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarLengthAdjustmentDataNullable 
     {
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.LengthAdjustmentTypeEnum> AdjustmentType
+		public System.NullableTekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum> AdjustmentType
 		{
 			get => rebarlengthadjustmentdatanullable.AdjustmentType;
 			set { rebarlengthadjustmentdatanullable.AdjustmentType = value; }
 		}
 
-		public System.Nullable<System.Double> AdjustmentLength
+		public System.NullableSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double> AdjustmentLength
 		{
 			get => rebarlengthadjustmentdatanullable.AdjustmentLength;
 			set { rebarlengthadjustmentdatanullable.AdjustmentLength = value; }

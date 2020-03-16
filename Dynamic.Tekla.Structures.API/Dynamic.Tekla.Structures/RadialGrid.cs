@@ -115,7 +115,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { radialgrid.Origin = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => radialgrid.ModificationTime;
 			set { radialgrid.ModificationTime = value; }

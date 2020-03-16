@@ -25,22 +25,22 @@ namespace Dynamic.Tekla.Structures.Model
 			set { position.RotationOffset = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.PlaneEnum Plane
+		public Dynamic.Tekla.Structures.Model.Position.PlaneEnum Plane
 		{
-			get => Dynamic.Tekla.Structures.Model.PlaneEnum_.FromTSObject(position.Plane);
-			set { position.Plane = Dynamic.Tekla.Structures.Model.PlaneEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(position.Plane);
+			set { position.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.DepthEnum Depth
+		public Dynamic.Tekla.Structures.Model.Position.DepthEnum Depth
 		{
-			get => Dynamic.Tekla.Structures.Model.DepthEnum_.FromTSObject(position.Depth);
-			set { position.Depth = Dynamic.Tekla.Structures.Model.DepthEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(position.Depth);
+			set { position.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RotationEnum Rotation
+		public Dynamic.Tekla.Structures.Model.Position.RotationEnum Rotation
 		{
-			get => Dynamic.Tekla.Structures.Model.RotationEnum_.FromTSObject(position.Rotation);
-			set { position.Rotation = Dynamic.Tekla.Structures.Model.RotationEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(position.Rotation);
+			set { position.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(value); }
 		}
 
         
@@ -58,9 +58,9 @@ namespace Dynamic.Tekla.Structures.Model
 			this.PlaneOffset = position.PlaneOffset;
 			this.DepthOffset = position.DepthOffset;
 			this.RotationOffset = position.RotationOffset;
-			this.Plane = Dynamic.Tekla.Structures.Model.PlaneEnum_.FromTSObject(position.Plane);
-			this.Depth = Dynamic.Tekla.Structures.Model.DepthEnum_.FromTSObject(position.Depth);
-			this.Rotation = Dynamic.Tekla.Structures.Model.RotationEnum_.FromTSObject(position.Rotation);
+			this.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(position.Plane);
+			this.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(position.Depth);
+			this.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(position.Rotation);
 
         }
 

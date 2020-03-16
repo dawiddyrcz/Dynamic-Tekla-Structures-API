@@ -31,13 +31,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { taskdependency.Secondary = value.GetTSObject(); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.DependencyTypeEnum DependencyType
+		public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
 		{
-			get => Dynamic.Tekla.Structures.Model.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
-			set { taskdependency.DependencyType = Dynamic.Tekla.Structures.Model.DependencyTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
+			set { taskdependency.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(value); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => taskdependency.ModificationTime;
 			set { taskdependency.ModificationTime = value; }
@@ -71,7 +71,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Local = taskdependency.Local;
 			this.Primary = new Dynamic.Tekla.Structures.Model.Task(taskdependency.Primary);
 			this.Secondary = new Dynamic.Tekla.Structures.Model.Task(taskdependency.Secondary);
-			this.DependencyType = Dynamic.Tekla.Structures.Model.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
+			this.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
 			this.ModificationTime = taskdependency.ModificationTime;
 			this.IsUpToDate = taskdependency.IsUpToDate;
 			this.Identifier = new Dynamic.Tekla.Structures.Identifier(taskdependency.Identifier);

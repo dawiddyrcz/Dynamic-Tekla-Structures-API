@@ -7,16 +7,16 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class SurfaceTreatment 
     {
 
-		public Dynamic.Tekla.Structures.Model.SurfaceTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
-			set { surfacetreatment.Type = Dynamic.Tekla.Structures.Model.SurfaceTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
+			set { surfacetreatment.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.SurfaceColorEnum Color
+		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
-			set { surfacetreatment.Color = Dynamic.Tekla.Structures.Model.SurfaceColorEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
+			set { surfacetreatment.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { surfacetreatment.TypeName = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => surfacetreatment.ModificationTime;
 			set { surfacetreatment.ModificationTime = value; }
@@ -115,8 +115,8 @@ namespace Dynamic.Tekla.Structures.Model
         public SurfaceTreatment(dynamic tsObject)
         {
             this.surfacetreatment = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
-			this.Color = Dynamic.Tekla.Structures.Model.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
+			this.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
+			this.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(surfacetreatment.Material);
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(surfacetreatment.Position);
 			this.Polygon = new Dynamic.Tekla.Structures.Model.Contour(surfacetreatment.Polygon);

@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { controlarc.Geometry = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => controlarc.ModificationTime;
 			set { controlarc.ModificationTime = value; }

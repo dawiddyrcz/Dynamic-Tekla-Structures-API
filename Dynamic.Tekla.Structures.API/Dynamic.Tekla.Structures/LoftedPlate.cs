@@ -7,16 +7,16 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class LoftedPlate 
     {
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.ICurve, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
 		{
 			get => loftedplate.BaseCurves;
 			set { loftedplate.BaseCurves = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.LoftedPlateFaceTypeEnum FaceType
+		public Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum FaceType
 		{
-			get => Dynamic.Tekla.Structures.Model.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
-			set { loftedplate.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlateFaceTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
+			set { loftedplate.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
@@ -67,10 +67,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loftedplate.Finish = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CastUnitTypeEnum CastUnitType
+		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
-			get => Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
-			set { loftedplate.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
+			set { loftedplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loftedplate.Position = value.GetTSObject(); }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => loftedplate.ModificationTime;
 			set { loftedplate.ModificationTime = value; }
@@ -116,7 +116,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.loftedplate = tsObject;
 			this.BaseCurves = loftedplate.BaseCurves;
-			this.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
+			this.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
 			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(loftedplate.Profile);
 			this.Material = new Dynamic.Tekla.Structures.Model.Material(loftedplate.Material);
 			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(loftedplate.DeformingData);
@@ -125,7 +125,7 @@ namespace Dynamic.Tekla.Structures.Model
 			this.Name = loftedplate.Name;
 			this.Class = loftedplate.Class;
 			this.Finish = loftedplate.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
+			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
 			this.PourPhase = loftedplate.PourPhase;
 			this.Position = new Dynamic.Tekla.Structures.Model.Position(loftedplate.Position);
 			this.ModificationTime = loftedplate.ModificationTime;
@@ -152,7 +152,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(loftedplate.GetSolid());
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.SolidCreationTypeEnum solidCreationType)
+		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
 			 => new Dynamic.Tekla.Structures.Model.Solid(loftedplate.GetSolid(solidCreationType.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)

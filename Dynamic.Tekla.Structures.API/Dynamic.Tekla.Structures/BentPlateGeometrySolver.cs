@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => bentplategeometrysolver;
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Model.BendShape bendShape)
+		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.AddLeg(geometry.GetTSObject(), polygon.GetTSObject(), bendShape.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon)
@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, System.Double largestRadius, System.Double halfAperture)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.AddLeg(geometry.GetTSObject(), polygon.GetTSObject(), largestRadius, halfAperture));
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, Dynamic.Tekla.Structures.Model.BendShape bendShape)
+		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.AddLeg(geometry.GetTSObject(), segment1.GetTSObject(), polygon.GetTSObject(), segment2.GetTSObject(), bendShape.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2)
@@ -52,7 +52,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection legSection)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.RemoveLeg(geometry.GetTSObject(), legSection.GetTSObject()));
 
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
+		public System.Collections.Generic.IListTekla.Structures.Model.ConnectiveGeometry, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
 			 => bentplategeometrysolver.Split(geometry.GetTSObject(), geometrySection.GetTSObject());
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection bendSection, Dynamic.Tekla.Structures.Model.BendSurface surface)

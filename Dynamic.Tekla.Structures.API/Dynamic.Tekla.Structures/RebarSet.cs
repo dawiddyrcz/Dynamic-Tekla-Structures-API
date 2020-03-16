@@ -13,13 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarset.RebarProperties = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
+		public System.Collections.Generic.ListTekla.Structures.Model.RebarLegFace, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
 		{
 			get => rebarset.LegFaces;
 			set { rebarset.LegFaces = value; }
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarGuideline> Guidelines
+		public System.Collections.Generic.ListTekla.Structures.Model.RebarGuideline, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarGuideline> Guidelines
 		{
 			get => rebarset.Guidelines;
 			set { rebarset.Guidelines = value; }
@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarset.LayerOrderNumber = value; }
 		}
 
-		public System.Nullable<System.DateTime> ModificationTime
+		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
 		{
 			get => rebarset.ModificationTime;
 			set { rebarset.ModificationTime = value; }

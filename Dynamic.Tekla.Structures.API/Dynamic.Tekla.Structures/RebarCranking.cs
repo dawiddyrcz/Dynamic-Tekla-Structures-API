@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarCranking 
     {
 
-		public Dynamic.Tekla.Structures.Model.CrankSideEnum CrankSide
+		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum CrankSide
 		{
-			get => Dynamic.Tekla.Structures.Model.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
-			set { rebarcranking.CrankSide = Dynamic.Tekla.Structures.Model.CrankSideEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
+			set { rebarcranking.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(value); }
 		}
 
 		public System.Double CrankRotation
@@ -25,10 +25,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarcranking.CrankStraightLength = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CrankedLengthTypeEnum CrankedLengthType
+		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum CrankedLengthType
 		{
-			get => Dynamic.Tekla.Structures.Model.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
-			set { rebarcranking.CrankedLengthType = Dynamic.Tekla.Structures.Model.CrankedLengthTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
+			set { rebarcranking.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double CrankedRatio
@@ -49,10 +49,10 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarcranking.CrankedOffset = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.CrankingTypeEnum CrankingType
+		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum CrankingType
 		{
-			get => Dynamic.Tekla.Structures.Model.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
-			set { rebarcranking.CrankingType = Dynamic.Tekla.Structures.Model.CrankingTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
+			set { rebarcranking.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(value); }
 		}
 
         
@@ -67,14 +67,14 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarCranking(dynamic tsObject)
         {
             this.rebarcranking = tsObject;
-			this.CrankSide = Dynamic.Tekla.Structures.Model.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
+			this.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
 			this.CrankRotation = rebarcranking.CrankRotation;
 			this.CrankStraightLength = rebarcranking.CrankStraightLength;
-			this.CrankedLengthType = Dynamic.Tekla.Structures.Model.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
+			this.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
 			this.CrankedRatio = rebarcranking.CrankedRatio;
 			this.CrankedDistance = rebarcranking.CrankedDistance;
 			this.CrankedOffset = rebarcranking.CrankedOffset;
-			this.CrankingType = Dynamic.Tekla.Structures.Model.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
+			this.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
 
         }
 

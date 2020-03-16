@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures
     public sealed class ModuleManager 
     {
 
-		public Dynamic.Tekla.Structures.ProgramConfigurationEnum Configuration
+		public Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
 		{
-			get => Dynamic.Tekla.Structures.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
-			set { modulemanager.Configuration = Dynamic.Tekla.Structures.ProgramConfigurationEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
+			set { modulemanager.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(value); }
 		}
 
 		public System.Boolean MultimaterialModeling
@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures
         public ModuleManager(dynamic tsObject)
         {
             this.modulemanager = tsObject;
-			this.Configuration = Dynamic.Tekla.Structures.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
+			this.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
 			this.MultimaterialModeling = modulemanager.MultimaterialModeling;
 			this.LoadModeling = modulemanager.LoadModeling;
 			this.SteelDetailing = modulemanager.SteelDetailing;

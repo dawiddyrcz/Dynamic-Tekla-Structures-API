@@ -7,10 +7,10 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class Chamfer 
     {
 
-		public Dynamic.Tekla.Structures.Model.ChamferTypeEnum Type
+		public Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ChamferTypeEnum_.FromTSObject(chamfer.Type);
-			set { chamfer.Type = Dynamic.Tekla.Structures.Model.ChamferTypeEnum_.FromTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(chamfer.Type);
+			set { chamfer.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(value); }
 		}
 
 		public System.Double X
@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         public Chamfer(dynamic tsObject)
         {
             this.chamfer = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.ChamferTypeEnum_.FromTSObject(chamfer.Type);
+			this.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(chamfer.Type);
 			this.X = chamfer.X;
 			this.Y = chamfer.Y;
 			this.DZ1 = chamfer.DZ1;

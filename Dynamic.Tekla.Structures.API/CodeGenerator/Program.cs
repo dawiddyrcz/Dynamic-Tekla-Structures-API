@@ -110,7 +110,7 @@ namespace CodeGenerator
 
             foreach (var type in allTypes)
             {
-                if (type.Name.Contains("Beam"))
+                //if (type.Name.Contains("Beam"))
                 {
                     generator.SaveToFile(type);
                 }

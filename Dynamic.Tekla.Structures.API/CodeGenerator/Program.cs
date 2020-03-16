@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -51,11 +51,13 @@ namespace CodeGenerator
                 Console.WriteLine(type.Name);
                 sb.AppendLine(type.Name);
 
+                Console.WriteLine(type.Name);
+                sb.AppendLine(type.Name + "\t" + type.IsNested);
+
                 foreach (var nestedType in type.GetNestedTypes())
                 {
                     Console.WriteLine(nestedType.Name);
-                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.Namespace);
-
+                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.IsNested);
                 }
             }
 
@@ -70,12 +72,12 @@ namespace CodeGenerator
             foreach (var type in tsmTypes)
             {
                 Console.WriteLine(type.Name);
-                sb.AppendLine(type.Name);
+                sb.AppendLine(type.Name + "\t" +type.IsNested);
 
                 foreach (var nestedType in type.GetNestedTypes())
                 {
                     Console.WriteLine(nestedType.Name);
-                    sb.AppendLine("\t" + nestedType.Name + "\t"+nestedType.Namespace);
+                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.IsNested);
                 }
 
             }
@@ -105,31 +107,24 @@ namespace CodeGenerator
         private static void GenerateAPICode()
         {
             Console.WriteLine("Generate API code");
+            var generator = new TypeGenerator();
 
-            var classGenerator = new ClassGenerator();
-            var enumGenerator = new EnumGenerator();
+            var allTypes = GetTypesFromDll();
 
+            foreach (var type in allTypes)
+            {
+                if (type.Name.Contains("Beam"))
+                    generator.SaveToFile(type);
+            }
+        }
+
+        private static List<Type> GetTypesFromDll()
+        {
             var ts = LoadTeklaStructures();
-
             var tsTypes = ts.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
-                &&!t.Namespace.Contains("Internal"));
-
-            foreach (var type in tsTypes)
-            {
-                Console.WriteLine(type.Name);
-
-                if (type.IsClass)
-                {
-                    classGenerator.SaveToFile(type);
-                }
-                else if (type.IsEnum)
-                {
-                    enumGenerator.SaveToFile(type);
-                }
-            }
-
+                && !t.Namespace.Contains("Internal"));
 
             var tsm = LoadTeklaStructuresModel();
             var tsmTypes = tsm.GetTypes().Where(
@@ -137,23 +132,11 @@ namespace CodeGenerator
                 && t.Namespace.StartsWith("Tekla.Structures")
                 && !t.Namespace.Contains("Internal"));
 
+            var output = new List<Type>();
+            output.AddRange(tsTypes);
+            output.AddRange(tsmTypes);
 
-            foreach (var type in tsmTypes)
-            {
-                Console.WriteLine(type.Name);
-
-                if (type.IsClass)
-                {
-                    classGenerator.SaveToFile(type);
-                }
-                else if (type.IsEnum)
-                {
-                    enumGenerator.SaveToFile(type);
-                }
-            }
-            
+            return output;
         }
-
-
     }
 }

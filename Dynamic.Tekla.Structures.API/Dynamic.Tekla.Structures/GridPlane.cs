@@ -230,21 +230,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => gridplane.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => gridplane.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => gridplane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => gridplane.GetHashCode();
-
-		public System.Type GetType()
-			 => gridplane.GetType();
-
-		public System.String ToString()
-			 => gridplane.ToString();
-
 
 
 

@@ -45,18 +45,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
 			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(polygonnode.Clone());
 
-		public System.Boolean Equals(System.Object obj)
-			 => polygonnode.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polygonnode.GetHashCode();
-
-		public System.Type GetType()
-			 => polygonnode.GetType();
-
-		public System.String ToString()
-			 => polygonnode.ToString();
-
 
 
 

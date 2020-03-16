@@ -279,21 +279,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => loadtemperature.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => loadtemperature.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => loadtemperature.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loadtemperature.GetHashCode();
-
-		public System.Type GetType()
-			 => loadtemperature.GetType();
-
-		public System.String ToString()
-			 => loadtemperature.ToString();
-
 
 
 

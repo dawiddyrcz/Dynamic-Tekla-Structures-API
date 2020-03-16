@@ -37,18 +37,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects, System.Boolean ShowDimensions)
 			 => modelobjectselector.Select(ModelObjects, ShowDimensions);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelobjectselector.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modelobjectselector.GetHashCode();
-
-		public System.Type GetType()
-			 => modelobjectselector.GetType();
-
-		public System.String ToString()
-			 => modelobjectselector.ToString();
-
 
 
 

@@ -42,18 +42,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(geometricplane.GetNormal());
 
-		public System.Boolean Equals(System.Object obj)
-			 => geometricplane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => geometricplane.GetHashCode();
-
-		public System.Type GetType()
-			 => geometricplane.GetType();
-
-		public System.String ToString()
-			 => geometricplane.ToString();
-
 
 
 

@@ -67,18 +67,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => modelinfo;
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelinfo.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modelinfo.GetHashCode();
-
-		public System.Type GetType()
-			 => modelinfo.GetType();
-
-		public System.String ToString()
-			 => modelinfo.ToString();
-
 
 
 

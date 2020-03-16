@@ -188,21 +188,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => pourobject.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => pourobject.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => pourobject.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => pourobject.GetHashCode();
-
-		public System.Type GetType()
-			 => pourobject.GetType();
-
-		public System.String ToString()
-			 => pourobject.ToString();
-
 
 
 

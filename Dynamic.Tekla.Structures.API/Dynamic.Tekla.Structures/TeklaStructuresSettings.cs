@@ -55,18 +55,6 @@ namespace Dynamic.Tekla.Structures
 		public System.Boolean IsPourEnabled()
 			 => teklastructuressettings.IsPourEnabled();
 
-		public System.Boolean Equals(System.Object obj)
-			 => teklastructuressettings.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => teklastructuressettings.GetHashCode();
-
-		public System.Type GetType()
-			 => teklastructuressettings.GetType();
-
-		public System.String ToString()
-			 => teklastructuressettings.ToString();
-
 
 
 
@@ -117,26 +105,14 @@ namespace Dynamic.Tekla.Structures
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => invalidpathcallback.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => invalidpathcallback.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => invalidpathcallback.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => invalidpathcallback.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => invalidpathcallback.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => invalidpathcallback.Clone();
-
-		public System.Type GetType()
-			 => invalidpathcallback.GetType();
-
-		public System.String ToString()
-			 => invalidpathcallback.ToString();
 
 
 
@@ -165,18 +141,6 @@ namespace Dynamic.Tekla.Structures
 
 
         public dynamic GetTSObject() => tooloptionnames;
-
-		public System.Boolean Equals(System.Object obj)
-			 => tooloptionnames.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => tooloptionnames.GetHashCode();
-
-		public System.Type GetType()
-			 => tooloptionnames.GetType();
-
-		public System.String ToString()
-			 => tooloptionnames.ToString();
 
 
 

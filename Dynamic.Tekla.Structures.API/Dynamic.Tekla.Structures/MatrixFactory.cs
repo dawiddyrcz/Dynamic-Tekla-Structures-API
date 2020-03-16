@@ -37,18 +37,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix ByCoordinateSystems(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys1, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys2)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Matrix(matrixfactory.ByCoordinateSystems(CoordSys1.GetTSObject(), CoordSys2.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => matrixfactory.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => matrixfactory.GetHashCode();
-
-		public System.Type GetType()
-			 => matrixfactory.GetType();
-
-		public System.String ToString()
-			 => matrixfactory.ToString();
-
 
 
 

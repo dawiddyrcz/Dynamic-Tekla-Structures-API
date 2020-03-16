@@ -123,18 +123,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public dynamic GetTSObject() => ifc2x3_parametricobject_ushapeprofile;
 
-		public System.Boolean Equals(System.Object obj)
-			 => ifc2x3_parametricobject_ushapeprofile.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => ifc2x3_parametricobject_ushapeprofile.GetHashCode();
-
-		public System.Type GetType()
-			 => ifc2x3_parametricobject_ushapeprofile.GetType();
-
-		public System.String ToString()
-			 => ifc2x3_parametricobject_ushapeprofile.ToString();
-
 
 
 

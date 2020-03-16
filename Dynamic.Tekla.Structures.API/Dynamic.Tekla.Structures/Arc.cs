@@ -98,21 +98,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
 			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(arc.Clone());
 
-		public System.Boolean Equals(System.Object other)
-			 => arc.Equals(other);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Geometry3d.ICurve other)
-			 => arc.Equals(other.GetTSObject());
-
-		public System.Int32 GetHashCode()
-			 => arc.GetHashCode();
-
-		public System.Type GetType()
-			 => arc.GetType();
-
-		public System.String ToString()
-			 => arc.ToString();
-
 
 
 

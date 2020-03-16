@@ -173,21 +173,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => hierarchicobject.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => hierarchicobject.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => hierarchicobject.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => hierarchicobject.GetHashCode();
-
-		public System.Type GetType()
-			 => hierarchicobject.GetType();
-
-		public System.String ToString()
-			 => hierarchicobject.ToString();
-
 
 
 

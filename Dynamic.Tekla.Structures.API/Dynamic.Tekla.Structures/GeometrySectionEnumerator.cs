@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Reset()
 			 => geometrysectionenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => geometrysectionenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => geometrysectionenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => geometrysectionenumerator.GetType();
-
-		public System.String ToString()
-			 => geometrysectionenumerator.ToString();
-
 
 
 

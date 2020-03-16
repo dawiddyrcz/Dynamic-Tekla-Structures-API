@@ -60,18 +60,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => strandunbondingdata;
 
-		public System.Boolean Equals(System.Object obj)
-			 => strandunbondingdata.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => strandunbondingdata.GetHashCode();
-
-		public System.Type GetType()
-			 => strandunbondingdata.GetType();
-
-		public System.String ToString()
-			 => strandunbondingdata.ToString();
-
 
 
 

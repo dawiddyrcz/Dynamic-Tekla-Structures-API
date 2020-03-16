@@ -300,21 +300,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => loadline.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => loadline.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => loadline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loadline.GetHashCode();
-
-		public System.Type GetType()
-			 => loadline.GetType();
-
-		public System.String ToString()
-			 => loadline.ToString();
-
 
 
 

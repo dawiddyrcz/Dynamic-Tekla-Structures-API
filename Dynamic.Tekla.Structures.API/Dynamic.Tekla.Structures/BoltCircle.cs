@@ -405,21 +405,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => boltcircle.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => boltcircle.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => boltcircle.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => boltcircle.GetHashCode();
-
-		public System.Type GetType()
-			 => boltcircle.GetType();
-
-		public System.String ToString()
-			 => boltcircle.ToString();
-
 
 
 

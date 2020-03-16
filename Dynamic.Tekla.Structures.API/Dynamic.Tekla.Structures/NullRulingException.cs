@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => nullrulingexception.GetBaseException();
 
-		public System.String ToString()
-			 => nullrulingexception.ToString();
-
-		public System.Type GetType()
-			 => nullrulingexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => nullrulingexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => nullrulingexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => nullrulingexception.GetHashCode();
-
-		public System.Type GetType()
-			 => nullrulingexception.GetType();
 
 
 

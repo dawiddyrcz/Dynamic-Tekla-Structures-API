@@ -53,18 +53,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public dynamic GetTSObject() => graphicpolyline;
 
-		public System.Boolean Equals(System.Object obj)
-			 => graphicpolyline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => graphicpolyline.GetHashCode();
-
-		public System.Type GetType()
-			 => graphicpolyline.GetType();
-
-		public System.String ToString()
-			 => graphicpolyline.ToString();
-
 
 
 

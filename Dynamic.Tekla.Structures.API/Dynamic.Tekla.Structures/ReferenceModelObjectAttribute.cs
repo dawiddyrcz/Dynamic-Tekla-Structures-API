@@ -74,18 +74,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public dynamic GetTSObject() => referencemodelobjectattribute;
 
-		public System.Boolean Equals(System.Object obj)
-			 => referencemodelobjectattribute.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => referencemodelobjectattribute.GetHashCode();
-
-		public System.Type GetType()
-			 => referencemodelobjectattribute.GetType();
-
-		public System.String ToString()
-			 => referencemodelobjectattribute.ToString();
-
 
 
 

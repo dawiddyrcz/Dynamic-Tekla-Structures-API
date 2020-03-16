@@ -74,18 +74,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public dynamic GetTSObject() => parametricobject_customprofile;
 
-		public System.Boolean Equals(System.Object obj)
-			 => parametricobject_customprofile.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => parametricobject_customprofile.GetHashCode();
-
-		public System.Type GetType()
-			 => parametricobject_customprofile.GetType();
-
-		public System.String ToString()
-			 => parametricobject_customprofile.ToString();
-
 
 
 

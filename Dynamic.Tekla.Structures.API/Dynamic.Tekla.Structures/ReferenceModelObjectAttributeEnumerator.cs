@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public void Reset()
 			 => referencemodelobjectattributeenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => referencemodelobjectattributeenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => referencemodelobjectattributeenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => referencemodelobjectattributeenumerator.GetType();
-
-		public System.String ToString()
-			 => referencemodelobjectattributeenumerator.ToString();
-
 
 
 

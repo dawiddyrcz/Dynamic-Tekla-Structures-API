@@ -32,18 +32,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => polygon;
 
-		public System.Boolean Equals(System.Object obj)
-			 => polygon.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polygon.GetHashCode();
-
-		public System.Type GetType()
-			 => polygon.GetType();
-
-		public System.String ToString()
-			 => polygon.ToString();
-
 
 
 

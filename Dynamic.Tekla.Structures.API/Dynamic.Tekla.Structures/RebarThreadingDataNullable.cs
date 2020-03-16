@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarthreadingdatanullable;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarthreadingdatanullable.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarthreadingdatanullable.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarthreadingdatanullable.GetType();
-
-		public System.String ToString()
-			 => rebarthreadingdatanullable.ToString();
-
 
 
 

@@ -337,21 +337,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => spiralbeam.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => spiralbeam.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => spiralbeam.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => spiralbeam.GetHashCode();
-
-		public System.Type GetType()
-			 => spiralbeam.GetType();
-
-		public System.String ToString()
-			 => spiralbeam.ToString();
-
 
 
 

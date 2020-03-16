@@ -53,18 +53,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => deformingdata;
 
-		public System.Boolean Equals(System.Object obj)
-			 => deformingdata.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => deformingdata.GetHashCode();
-
-		public System.Type GetType()
-			 => deformingdata.GetType();
-
-		public System.String ToString()
-			 => deformingdata.ToString();
-
 
 
 

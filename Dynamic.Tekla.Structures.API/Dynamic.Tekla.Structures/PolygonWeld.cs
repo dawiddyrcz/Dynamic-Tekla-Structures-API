@@ -463,21 +463,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => polygonweld.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => polygonweld.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => polygonweld.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polygonweld.GetHashCode();
-
-		public System.Type GetType()
-			 => polygonweld.GetType();
-
-		public System.String ToString()
-			 => polygonweld.ToString();
-
 
 
 

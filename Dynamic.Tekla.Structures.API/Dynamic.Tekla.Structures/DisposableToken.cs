@@ -31,18 +31,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Dispose()
 			 => disposabletoken.Dispose();
 
-		public System.Boolean Equals(System.Object obj)
-			 => disposabletoken.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => disposabletoken.GetHashCode();
-
-		public System.Type GetType()
-			 => disposabletoken.GetType();
-
-		public System.String ToString()
-			 => disposabletoken.ToString();
-
 
 
 

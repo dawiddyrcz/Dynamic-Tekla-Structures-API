@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => assertion;
 
-		public System.String ToString()
-			 => assertion.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => assertion.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => assertion.GetHashCode();
-
-		public System.Type GetType()
-			 => assertion.GetType();
-
 
 
 

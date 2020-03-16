@@ -13,13 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarset.RebarProperties = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarLegFace<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
 		{
 			get => rebarset.LegFaces;
 			set { rebarset.LegFaces = value; }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarGuideline<Dynamic.Tekla.Structures.Model.RebarGuideline> Guidelines
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarGuideline> Guidelines
 		{
 			get => rebarset.Guidelines;
 			set { rebarset.Guidelines = value; }
@@ -175,21 +175,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarset.CompareTo(obj);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarset.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarset.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarset.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarset.GetType();
-
-		public System.String ToString()
-			 => rebarset.ToString();
 
 
 

@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => clashcheckoptions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashcheckoptions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => clashcheckoptions.GetHashCode();
-
-		public System.Type GetType()
-			 => clashcheckoptions.GetType();
-
-		public System.String ToString()
-			 => clashcheckoptions.ToString();
-
 
 
 

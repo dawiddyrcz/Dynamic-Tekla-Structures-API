@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
 			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(cylindricalsurfacenode.Clone());
 
-		public System.Boolean Equals(System.Object obj)
-			 => cylindricalsurfacenode.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => cylindricalsurfacenode.GetHashCode();
-
-		public System.Type GetType()
-			 => cylindricalsurfacenode.GetType();
-
-		public System.String ToString()
-			 => cylindricalsurfacenode.ToString();
-
 
 
 

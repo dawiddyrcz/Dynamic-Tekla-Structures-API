@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public void Reset()
 			 => edgeenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => edgeenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => edgeenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => edgeenumerator.GetType();
-
-		public System.String ToString()
-			 => edgeenumerator.ToString();
-
 
 
 

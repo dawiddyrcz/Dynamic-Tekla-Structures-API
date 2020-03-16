@@ -31,18 +31,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.EdgeEnumerator(shell.GetEdgeEnumerator());
 
-		public System.Boolean Equals(System.Object obj)
-			 => shell.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => shell.GetHashCode();
-
-		public System.Type GetType()
-			 => shell.GetType();
-
-		public System.String ToString()
-			 => shell.ToString();
-
 
 
 

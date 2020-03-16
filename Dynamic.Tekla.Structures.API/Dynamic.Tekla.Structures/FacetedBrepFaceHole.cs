@@ -19,13 +19,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { facetedbrepfacehole.IsReadOnly = value; }
 		}
 
-		public System.Collections.Generic.IListSystem.Int32<System.Int32> VerticeIndexes
+		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
 		{
 			get => facetedbrepfacehole.VerticeIndexes;
 			set { facetedbrepfacehole.VerticeIndexes = value; }
 		}
 
-		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => facetedbrepfacehole.Vertices;
 			set { facetedbrepfacehole.Vertices = value; }
@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
         public dynamic GetTSObject() => facetedbrepfacehole;
-
-		public System.Boolean Equals(System.Object obj)
-			 => facetedbrepfacehole.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => facetedbrepfacehole.GetHashCode();
-
-		public System.Type GetType()
-			 => facetedbrepfacehole.GetType();
-
-		public System.String ToString()
-			 => facetedbrepfacehole.ToString();
 
 
 

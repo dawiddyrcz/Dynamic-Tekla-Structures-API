@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => templatefilterexpressions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => templatefilterexpressions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => templatefilterexpressions.GetHashCode();
-
-		public System.Type GetType()
-			 => templatefilterexpressions.GetType();
-
-		public System.String ToString()
-			 => templatefilterexpressions.ToString();
-
 
 
 
@@ -60,18 +48,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customboolean;
-
-		public System.String ToString()
-			 => customboolean.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customboolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customboolean.GetHashCode();
-
-		public System.Type GetType()
-			 => customboolean.GetType();
 
 
 
@@ -101,18 +77,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customdatetime;
 
-		public System.String ToString()
-			 => customdatetime.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customdatetime.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customdatetime.GetHashCode();
-
-		public System.Type GetType()
-			 => customdatetime.GetType();
-
 
 
 
@@ -141,18 +105,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customnumber;
 
-		public System.String ToString()
-			 => customnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => customnumber.GetType();
-
 
 
 
@@ -180,18 +132,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customstring;
-
-		public System.String ToString()
-			 => customstring.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customstring.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customstring.GetHashCode();
-
-		public System.Type GetType()
-			 => customstring.GetType();
 
 
 

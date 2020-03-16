@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => offset;
 
-		public System.Boolean Equals(System.Object obj)
-			 => offset.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => offset.GetHashCode();
-
-		public System.Type GetType()
-			 => offset.GetType();
-
-		public System.String ToString()
-			 => offset.ToString();
-
 
 
 

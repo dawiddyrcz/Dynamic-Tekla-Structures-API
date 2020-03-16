@@ -73,18 +73,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Replace(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
 			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Replace(index, segment.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => polycurvegeometrybuilder.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polycurvegeometrybuilder.GetHashCode();
-
-		public System.Type GetType()
-			 => polycurvegeometrybuilder.GetType();
-
-		public System.String ToString()
-			 => polycurvegeometrybuilder.ToString();
-
 
 
 

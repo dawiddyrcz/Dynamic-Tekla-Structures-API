@@ -81,18 +81,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public dynamic GetTSObject() => parametricobject_objectboundingbox;
 
-		public System.Boolean Equals(System.Object obj)
-			 => parametricobject_objectboundingbox.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => parametricobject_objectboundingbox.GetHashCode();
-
-		public System.Type GetType()
-			 => parametricobject_objectboundingbox.GetType();
-
-		public System.String ToString()
-			 => parametricobject_objectboundingbox.ToString();
-
 
 
 

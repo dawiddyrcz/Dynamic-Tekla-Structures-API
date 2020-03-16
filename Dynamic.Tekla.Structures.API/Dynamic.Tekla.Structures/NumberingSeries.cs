@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => numberingseries;
 
-		public System.Boolean Equals(System.Object obj)
-			 => numberingseries.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => numberingseries.GetHashCode();
-
-		public System.Type GetType()
-			 => numberingseries.GetType();
-
-		public System.String ToString()
-			 => numberingseries.ToString();
-
 
 
 

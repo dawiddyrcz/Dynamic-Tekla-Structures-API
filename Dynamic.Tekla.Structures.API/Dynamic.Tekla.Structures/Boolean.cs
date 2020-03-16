@@ -146,21 +146,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => boolean.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => boolean.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => boolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => boolean.GetHashCode();
-
-		public System.Type GetType()
-			 => boolean.GetType();
-
-		public System.String ToString()
-			 => boolean.ToString();
-
 
 
 

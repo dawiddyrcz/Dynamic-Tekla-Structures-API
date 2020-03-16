@@ -39,7 +39,6 @@ namespace CodeGenerator
             {
                 nestedTypeText.AppendLine(nestedTypeGenerator.GetTextFromType(nestedType));
             }
-
             outputText = outputText.Replace("$nestedTypes", nestedTypeText.ToString());
             
             return outputText;
@@ -53,7 +52,9 @@ namespace CodeGenerator
             foreach (var method in type.GetMethods().Where(m => m.IsPublic))
             {
                 var name = method.Name;
-                
+                if (name.Equals("GetType")||name.Equals("Equals")||name.Equals("ToString") || name.Equals("GetHashCode")) continue;
+
+
                 if (name.Contains("get_") || name.Contains("set_")) continue;
                 
                 sb.Append("\t\t");
@@ -99,7 +100,10 @@ namespace CodeGenerator
                 }
                 else
                 {
-                    sb.Append(GetTypeFullName(method.ReturnType).Replace("System.Void", "void"));
+                    var typeFullName = GetTypeFullName(method.ReturnType);
+                    if (typeFullName.Contains("Tekla.Structures.ModelInternal")) return string.Empty;
+
+                    sb.Append(typeFullName.Replace("System.Void", "void"));
                     sb.Append(" ");
                     sb.Append(name);
                     sb.Append("(");
@@ -112,7 +116,11 @@ namespace CodeGenerator
 
                         if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
-                        sb.Append(GetTypeFullName(param.ParameterType));
+
+                        var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                        if (paramTypeFullName.Contains("Tekla.Structures.ModelInternal")) return string.Empty;
+
+                        sb.Append(paramTypeFullName);
                         sb.Append(" ");
                         sb.Append(paramName);
                         sb.Append(", ");
@@ -219,6 +227,10 @@ namespace CodeGenerator
             if (fullName.Contains(","))
             {
                 fullName = fullName.Split(',')[0];
+                if (type.IsGenericType && !fullName.Contains("System.Nullable"))
+                {
+                    fullName = fullName.Split('[')[0];
+                }
             }
 
             string typeName = fullName.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");

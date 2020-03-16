@@ -43,18 +43,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToObb(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment, Dynamic.Tekla.Structures.Geometry3d.OBB obb)
 			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(intersection.LineSegmentToObb(lineSegment.GetTSObject(), obb.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => intersection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => intersection.GetHashCode();
-
-		public System.Type GetType()
-			 => intersection.GetType();
-
-		public System.String ToString()
-			 => intersection.ToString();
-
 
 
 

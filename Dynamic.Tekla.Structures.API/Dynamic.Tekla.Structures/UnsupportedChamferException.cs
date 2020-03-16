@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => unsupportedchamferexception.GetBaseException();
 
-		public System.String ToString()
-			 => unsupportedchamferexception.ToString();
-
-		public System.Type GetType()
-			 => unsupportedchamferexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => unsupportedchamferexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => unsupportedchamferexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => unsupportedchamferexception.GetHashCode();
-
-		public System.Type GetType()
-			 => unsupportedchamferexception.GetType();
 
 
 

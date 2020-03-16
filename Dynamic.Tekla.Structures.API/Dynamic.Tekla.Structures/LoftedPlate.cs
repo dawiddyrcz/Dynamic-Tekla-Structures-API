@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class LoftedPlate 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.ICurve<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
 		{
 			get => loftedplate.BaseCurves;
 			set { loftedplate.BaseCurves = value; }
@@ -280,21 +280,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 CompareTo(System.Object obj)
 			 => loftedplate.CompareTo(obj);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => loftedplate.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => loftedplate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loftedplate.GetHashCode();
-
-		public System.Type GetType()
-			 => loftedplate.GetType();
-
-		public System.String ToString()
-			 => loftedplate.ToString();
 
 
 

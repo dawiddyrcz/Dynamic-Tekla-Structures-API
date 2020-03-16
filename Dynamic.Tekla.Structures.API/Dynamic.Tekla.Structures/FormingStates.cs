@@ -49,18 +49,6 @@ namespace Dynamic.Tekla.Structures.Forming
 		public System.Object Clone()
 			 => formingstates.Clone();
 
-		public System.Boolean Equals(System.Object obj)
-			 => formingstates.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => formingstates.GetHashCode();
-
-		public System.Type GetType()
-			 => formingstates.GetType();
-
-		public System.String ToString()
-			 => formingstates.ToString();
-
 
 
 

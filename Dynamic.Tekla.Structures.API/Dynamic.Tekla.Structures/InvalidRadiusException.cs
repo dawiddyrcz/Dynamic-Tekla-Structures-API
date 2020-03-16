@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => invalidradiusexception.GetBaseException();
 
-		public System.String ToString()
-			 => invalidradiusexception.ToString();
-
-		public System.Type GetType()
-			 => invalidradiusexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => invalidradiusexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => invalidradiusexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => invalidradiusexception.GetHashCode();
-
-		public System.Type GetType()
-			 => invalidradiusexception.GetType();
 
 
 

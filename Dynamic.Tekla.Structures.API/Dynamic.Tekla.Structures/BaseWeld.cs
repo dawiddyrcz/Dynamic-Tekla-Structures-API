@@ -453,21 +453,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => baseweld.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => baseweld.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => baseweld.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => baseweld.GetHashCode();
-
-		public System.Type GetType()
-			 => baseweld.GetType();
-
-		public System.String ToString()
-			 => baseweld.ToString();
-
 
 
 

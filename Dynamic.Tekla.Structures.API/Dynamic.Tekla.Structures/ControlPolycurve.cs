@@ -160,21 +160,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => controlpolycurve.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => controlpolycurve.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => controlpolycurve.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => controlpolycurve.GetHashCode();
-
-		public System.Type GetType()
-			 => controlpolycurve.GetType();
-
-		public System.String ToString()
-			 => controlpolycurve.ToString();
-
 
 
 

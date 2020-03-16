@@ -281,21 +281,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => bentplate.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => bentplate.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => bentplate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => bentplate.GetHashCode();
-
-		public System.Type GetType()
-			 => bentplate.GetType();
-
-		public System.String ToString()
-			 => bentplate.ToString();
-
 
 
 

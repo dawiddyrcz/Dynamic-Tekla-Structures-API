@@ -201,7 +201,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetDynamicStringProperty(System.String Name, System.String Value)
 			 => projectinfo.SetDynamicStringProperty(Name, Value);
 
-		public System.Collections.Generic.ListTekla.Structures.Model.BasePoint<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
 			 => projectinfo.GetBasePoints();
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
@@ -218,18 +218,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
 			 => new Dynamic.Tekla.Structures.Model.BasePoint(projectinfo.GetProjectBasePoint());
-
-		public System.Boolean Equals(System.Object obj)
-			 => projectinfo.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => projectinfo.GetHashCode();
-
-		public System.Type GetType()
-			 => projectinfo.GetType();
-
-		public System.String ToString()
-			 => projectinfo.ToString();
 
 
 

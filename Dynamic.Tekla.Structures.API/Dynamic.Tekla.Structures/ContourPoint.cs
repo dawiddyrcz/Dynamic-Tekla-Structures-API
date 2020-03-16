@@ -38,23 +38,11 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Zero()
 			 => contourpoint.Zero();
 
-		public System.String ToString()
-			 => contourpoint.ToString();
-
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
 			 => contourpoint.Translate(X, Y, Z);
 
-		public System.Boolean Equals(System.Object obj)
-			 => contourpoint.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => contourpoint.GetHashCode();
-
 		public System.Int32 CompareTo(System.Object obj)
 			 => contourpoint.CompareTo(obj);
-
-		public System.Type GetType()
-			 => contourpoint.GetType();
 
 
 

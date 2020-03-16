@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Reset()
 			 => polymeshenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => polymeshenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polymeshenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => polymeshenumerator.GetType();
-
-		public System.String ToString()
-			 => polymeshenumerator.ToString();
-
 
 
 

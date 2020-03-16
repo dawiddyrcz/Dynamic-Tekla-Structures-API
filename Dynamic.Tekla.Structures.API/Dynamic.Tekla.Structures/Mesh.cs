@@ -55,18 +55,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public void AddLine(System.Int32 Index1, System.Int32 Index2)
 			 => mesh.AddLine(Index1, Index2);
 
-		public System.Boolean Equals(System.Object obj)
-			 => mesh.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => mesh.GetHashCode();
-
-		public System.Type GetType()
-			 => mesh.GetType();
-
-		public System.String ToString()
-			 => mesh.ToString();
-
 
 
 

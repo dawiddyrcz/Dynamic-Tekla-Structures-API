@@ -46,23 +46,8 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => identifier;
 
-		public System.String ToString()
-			 => identifier.ToString();
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Identifier otherIdentifier)
-			 => identifier.Equals(otherIdentifier.GetTSObject());
-
-		public System.Boolean Equals(System.Object otherObject)
-			 => identifier.Equals(otherObject);
-
-		public System.Int32 GetHashCode()
-			 => identifier.GetHashCode();
-
 		public System.Boolean IsValid()
 			 => identifier.IsValid();
-
-		public System.Type GetType()
-			 => identifier.GetType();
 
 
 

@@ -216,21 +216,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => gridcylindricalsurface.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => gridcylindricalsurface.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => gridcylindricalsurface.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => gridcylindricalsurface.GetHashCode();
-
-		public System.Type GetType()
-			 => gridcylindricalsurface.GetType();
-
-		public System.String ToString()
-			 => gridcylindricalsurface.ToString();
-
 
 
 

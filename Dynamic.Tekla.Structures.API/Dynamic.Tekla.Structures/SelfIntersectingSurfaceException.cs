@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => selfintersectingsurfaceexception.GetBaseException();
 
-		public System.String ToString()
-			 => selfintersectingsurfaceexception.ToString();
-
-		public System.Type GetType()
-			 => selfintersectingsurfaceexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => selfintersectingsurfaceexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => selfintersectingsurfaceexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => selfintersectingsurfaceexception.GetHashCode();
-
-		public System.Type GetType()
-			 => selfintersectingsurfaceexception.GetType();
 
 
 

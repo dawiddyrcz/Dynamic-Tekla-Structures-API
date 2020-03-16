@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Collections.IEnumerator GetEnumerator()
 			 => clipplanecollection.GetEnumerator();
 
-		public System.Boolean Equals(System.Object obj)
-			 => clipplanecollection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => clipplanecollection.GetHashCode();
-
-		public System.Type GetType()
-			 => clipplanecollection.GetType();
-
-		public System.String ToString()
-			 => clipplanecollection.ToString();
-
 
 
 

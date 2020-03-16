@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.IEnumerator GetEnumerator()
 			 => phasecollection.GetEnumerator();
 
-		public System.Boolean Equals(System.Object obj)
-			 => phasecollection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => phasecollection.GetHashCode();
-
-		public System.Type GetType()
-			 => phasecollection.GetType();
-
-		public System.String ToString()
-			 => phasecollection.ToString();
-
 
 
 

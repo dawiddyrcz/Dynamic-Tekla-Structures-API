@@ -60,18 +60,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarlegface;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarlegface.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarlegface.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarlegface.GetType();
-
-		public System.String ToString()
-			 => rebarlegface.ToString();
-
 
 
 

@@ -272,21 +272,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => grid.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => grid.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => grid.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => grid.GetHashCode();
-
-		public System.Type GetType()
-			 => grid.GetType();
-
-		public System.String ToString()
-			 => grid.ToString();
-
 
 
 

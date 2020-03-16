@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => objectfilterexpressions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => objectfilterexpressions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => objectfilterexpressions.GetHashCode();
-
-		public System.Type GetType()
-			 => objectfilterexpressions.GetType();
-
-		public System.String ToString()
-			 => objectfilterexpressions.ToString();
-
 
 
 
@@ -60,18 +48,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customboolean;
-
-		public System.String ToString()
-			 => customboolean.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customboolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customboolean.GetHashCode();
-
-		public System.Type GetType()
-			 => customboolean.GetType();
 
 
 
@@ -101,18 +77,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customdatetime;
 
-		public System.String ToString()
-			 => customdatetime.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customdatetime.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customdatetime.GetHashCode();
-
-		public System.Type GetType()
-			 => customdatetime.GetType();
-
 
 
 
@@ -140,18 +104,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customnumber;
-
-		public System.String ToString()
-			 => customnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => customnumber.GetType();
 
 
 
@@ -181,18 +133,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customstring;
 
-		public System.String ToString()
-			 => customstring.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customstring.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customstring.GetHashCode();
-
-		public System.Type GetType()
-			 => customstring.GetType();
-
 
 
 
@@ -220,18 +160,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => guid;
-
-		public System.String ToString()
-			 => guid.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => guid.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => guid.GetHashCode();
-
-		public System.Type GetType()
-			 => guid.GetType();
 
 
 
@@ -261,18 +189,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => idnumber;
 
-		public System.String ToString()
-			 => idnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => idnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => idnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => idnumber.GetType();
-
 
 
 
@@ -300,18 +216,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => iscomponent;
-
-		public System.String ToString()
-			 => iscomponent.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => iscomponent.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => iscomponent.GetHashCode();
-
-		public System.Type GetType()
-			 => iscomponent.GetType();
 
 
 
@@ -341,18 +245,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => phase;
 
-		public System.String ToString()
-			 => phase.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => phase.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => phase.GetHashCode();
-
-		public System.Type GetType()
-			 => phase.GetType();
-
 
 
 
@@ -380,18 +272,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => type;
-
-		public System.String ToString()
-			 => type.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => type.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => type.GetHashCode();
-
-		public System.Type GetType()
-			 => type.GetType();
 
 
 

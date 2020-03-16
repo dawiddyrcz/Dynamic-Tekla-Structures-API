@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public dynamic GetTSObject() => coordinatesystem;
 
-		public System.Boolean Equals(System.Object obj)
-			 => coordinatesystem.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => coordinatesystem.GetHashCode();
-
-		public System.Type GetType()
-			 => coordinatesystem.GetType();
-
-		public System.String ToString()
-			 => coordinatesystem.ToString();
-
 
 
 

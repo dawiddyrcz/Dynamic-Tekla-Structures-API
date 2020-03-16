@@ -119,23 +119,8 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public System.Exception GetBaseException()
 			 => invalidfilterexpressionexception.GetBaseException();
 
-		public System.String ToString()
-			 => invalidfilterexpressionexception.ToString();
-
-		public System.Type GetType()
-			 => invalidfilterexpressionexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => invalidfilterexpressionexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => invalidfilterexpressionexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => invalidfilterexpressionexception.GetHashCode();
-
-		public System.Type GetType()
-			 => invalidfilterexpressionexception.GetType();
 
 
 

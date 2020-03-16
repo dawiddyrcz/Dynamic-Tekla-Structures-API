@@ -34,18 +34,6 @@ namespace Dynamic.Tekla.Structures
 		public System.Boolean ContainsVariable(System.String key)
 			 => teklastructuresvariables.ContainsVariable(key);
 
-		public System.Boolean Equals(System.Object obj)
-			 => teklastructuresvariables.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => teklastructuresvariables.GetHashCode();
-
-		public System.Type GetType()
-			 => teklastructuresvariables.GetType();
-
-		public System.String ToString()
-			 => teklastructuresvariables.ToString();
-
 
 
 

@@ -60,18 +60,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.AABB AABB)
 			 => new Dynamic.Tekla.Structures.Geometry3d.AABB(aabb.op_Addition(Point.GetTSObject(), AABB.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => aabb.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => aabb.GetHashCode();
-
-		public System.Type GetType()
-			 => aabb.GetType();
-
-		public System.String ToString()
-			 => aabb.ToString();
-
 
 
 

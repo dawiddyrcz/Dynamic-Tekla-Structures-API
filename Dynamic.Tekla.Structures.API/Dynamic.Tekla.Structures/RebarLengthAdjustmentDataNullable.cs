@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarlengthadjustmentdatanullable;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarlengthadjustmentdatanullable.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarlengthadjustmentdatanullable.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarlengthadjustmentdatanullable.GetType();
-
-		public System.String ToString()
-			 => rebarlengthadjustmentdatanullable.ToString();
-
 
 
 

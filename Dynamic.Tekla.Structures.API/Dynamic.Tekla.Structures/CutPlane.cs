@@ -153,21 +153,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => cutplane.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => cutplane.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => cutplane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => cutplane.GetHashCode();
-
-		public System.Type GetType()
-			 => cutplane.GetType();
-
-		public System.String ToString()
-			 => cutplane.ToString();
-
 
 
 

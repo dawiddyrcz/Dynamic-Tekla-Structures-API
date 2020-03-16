@@ -243,21 +243,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => seam.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => seam.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => seam.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => seam.GetHashCode();
-
-		public System.Type GetType()
-			 => seam.GetType();
-
-		public System.String ToString()
-			 => seam.ToString();
-
 
 
 

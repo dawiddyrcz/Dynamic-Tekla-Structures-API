@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
 			 => new Dynamic.Tekla.Structures.Model.ModelObject(model.SelectModelObject(ID.GetTSObject()));
 
-		public System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.ListSystem.String<System.String> Guids, System.Boolean SelectInstances)
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)
 			 => model.FetchModelObjects(Guids, SelectInstances);
 
 		public Dynamic.Tekla.Structures.Identifier GetIdentifierByGUID(System.String guid)
@@ -63,18 +63,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
 			 => new Dynamic.Tekla.Structures.Model.ClashCheckHandler(model.GetClashCheckHandler());
-
-		public System.Boolean Equals(System.Object obj)
-			 => model.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => model.GetHashCode();
-
-		public System.Type GetType()
-			 => model.GetType();
-
-		public System.String ToString()
-			 => model.ToString();
 
 
 

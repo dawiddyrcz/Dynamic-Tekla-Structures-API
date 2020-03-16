@@ -122,7 +122,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RefreshFile()
 			 => referencemodel.RefreshFile();
 
-		public System.Collections.Generic.ListTekla.Structures.Model.ReferenceModel.Revision<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
 			 => referencemodel.GetRevisions();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
@@ -229,21 +229,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 CompareTo(System.Object obj)
 			 => referencemodel.CompareTo(obj);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => referencemodel.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => referencemodel.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => referencemodel.GetHashCode();
-
-		public System.Type GetType()
-			 => referencemodel.GetType();
-
-		public System.String ToString()
-			 => referencemodel.ToString();
 
 
 

@@ -73,18 +73,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Modify()
 			 => viewcamera.Modify();
 
-		public System.Boolean Equals(System.Object obj)
-			 => viewcamera.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => viewcamera.GetHashCode();
-
-		public System.Type GetType()
-			 => viewcamera.GetType();
-
-		public System.String ToString()
-			 => viewcamera.ToString();
-
 
 
 

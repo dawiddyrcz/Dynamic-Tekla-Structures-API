@@ -230,21 +230,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => surfacetreatment.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => surfacetreatment.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => surfacetreatment.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => surfacetreatment.GetHashCode();
-
-		public System.Type GetType()
-			 => surfacetreatment.GetType();
-
-		public System.String ToString()
-			 => surfacetreatment.ToString();
-
 
 
 

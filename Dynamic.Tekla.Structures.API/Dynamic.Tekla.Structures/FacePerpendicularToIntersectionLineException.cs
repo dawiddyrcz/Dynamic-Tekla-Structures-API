@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => faceperpendiculartointersectionlineexception.GetBaseException();
 
-		public System.String ToString()
-			 => faceperpendiculartointersectionlineexception.ToString();
-
-		public System.Type GetType()
-			 => faceperpendiculartointersectionlineexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => faceperpendiculartointersectionlineexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => faceperpendiculartointersectionlineexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => faceperpendiculartointersectionlineexception.GetHashCode();
-
-		public System.Type GetType()
-			 => faceperpendiculartointersectionlineexception.GetType();
 
 
 

@@ -37,18 +37,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
 			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(projection.LineSegmentToPlane(LineSegment.GetTSObject(), Plane.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => projection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => projection.GetHashCode();
-
-		public System.Type GetType()
-			 => projection.GetType();
-
-		public System.String ToString()
-			 => projection.ToString();
-
 
 
 

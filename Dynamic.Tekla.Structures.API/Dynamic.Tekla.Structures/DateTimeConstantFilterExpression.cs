@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public dynamic GetTSObject() => datetimeconstantfilterexpression;
 
-		public System.String ToString()
-			 => datetimeconstantfilterexpression.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => datetimeconstantfilterexpression.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => datetimeconstantfilterexpression.GetHashCode();
-
-		public System.Type GetType()
-			 => datetimeconstantfilterexpression.GetType();
-
 
 
 

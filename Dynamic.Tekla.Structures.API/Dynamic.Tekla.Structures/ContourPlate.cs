@@ -284,21 +284,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => contourplate.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => contourplate.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => contourplate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => contourplate.GetHashCode();
-
-		public System.Type GetType()
-			 => contourplate.GetType();
-
-		public System.String ToString()
-			 => contourplate.ToString();
-
 
 
 

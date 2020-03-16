@@ -291,21 +291,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => singlerebar.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => singlerebar.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => singlerebar.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => singlerebar.GetHashCode();
-
-		public System.Type GetType()
-			 => singlerebar.GetType();
-
-		public System.String ToString()
-			 => singlerebar.ToString();
-
 
 
 

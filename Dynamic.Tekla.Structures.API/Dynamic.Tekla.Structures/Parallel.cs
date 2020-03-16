@@ -67,18 +67,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
 			 => parallel.LineSegmentToPlane(LineSegment.GetTSObject(), Plane.GetTSObject(), Tolerance);
 
-		public System.Boolean Equals(System.Object obj)
-			 => parallel.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => parallel.GetHashCode();
-
-		public System.Type GetType()
-			 => parallel.GetType();
-
-		public System.String ToString()
-			 => parallel.ToString();
-
 
 
 

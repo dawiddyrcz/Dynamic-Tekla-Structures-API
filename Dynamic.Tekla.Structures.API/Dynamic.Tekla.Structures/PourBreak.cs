@@ -146,21 +146,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => pourbreak.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => pourbreak.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => pourbreak.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => pourbreak.GetHashCode();
-
-		public System.Type GetType()
-			 => pourbreak.GetType();
-
-		public System.String ToString()
-			 => pourbreak.ToString();
-
 
 
 

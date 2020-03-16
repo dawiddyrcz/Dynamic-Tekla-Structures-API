@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public dynamic GetTSObject() => numericfilterexpression;
 
-		public System.String ToString()
-			 => numericfilterexpression.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => numericfilterexpression.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => numericfilterexpression.GetHashCode();
-
-		public System.Type GetType()
-			 => numericfilterexpression.GetType();
-
 
 
 

@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public void Reset()
 			 => faceenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => faceenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => faceenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => faceenumerator.GetType();
-
-		public System.String ToString()
-			 => faceenumerator.ToString();
-
 
 
 

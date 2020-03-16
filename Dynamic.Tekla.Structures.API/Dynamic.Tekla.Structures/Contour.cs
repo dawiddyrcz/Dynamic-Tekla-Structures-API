@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CalculatePolygon(ref Dynamic.Tekla.Structures.Model.Polygon polygon)
 			 => contour.CalculatePolygon(ref polygon.GetTSObject());
 
-		public System.Boolean Equals(System.Object obj)
-			 => contour.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => contour.GetHashCode();
-
-		public System.Type GetType()
-			 => contour.GetType();
-
-		public System.String ToString()
-			 => contour.ToString();
-
 
 
 

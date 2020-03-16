@@ -52,7 +52,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection legSection)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.RemoveLeg(geometry.GetTSObject(), legSection.GetTSObject()));
 
-		public System.Collections.Generic.IListTekla.Structures.Model.ConnectiveGeometry<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
+		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
 			 => bentplategeometrysolver.Split(geometry.GetTSObject(), geometrySection.GetTSObject());
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection bendSection, Dynamic.Tekla.Structures.Model.BendSurface surface)
@@ -78,18 +78,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetBendAngle(System.Double angle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToSetAngle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToMove, Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.SetBendAngle(angle, sectionToSetAngle.GetTSObject(), sectionToMove.GetTSObject(), geometry.GetTSObject()));
-
-		public System.Boolean Equals(System.Object obj)
-			 => bentplategeometrysolver.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => bentplategeometrysolver.GetHashCode();
-
-		public System.Type GetType()
-			 => bentplategeometrysolver.GetType();
-
-		public System.String ToString()
-			 => bentplategeometrysolver.ToString();
 
 
 

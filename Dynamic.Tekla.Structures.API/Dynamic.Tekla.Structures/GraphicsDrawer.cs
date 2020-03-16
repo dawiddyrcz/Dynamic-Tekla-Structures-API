@@ -49,18 +49,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public void RemoveTemporaryGraphicsObjects(System.Collections.IEnumerable GraphicObjectIDs)
 			 => graphicsdrawer.RemoveTemporaryGraphicsObjects(GraphicObjectIDs);
 
-		public System.Boolean Equals(System.Object obj)
-			 => graphicsdrawer.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => graphicsdrawer.GetHashCode();
-
-		public System.Type GetType()
-			 => graphicsdrawer.GetType();
-
-		public System.String ToString()
-			 => graphicsdrawer.ToString();
-
 
 
 

@@ -81,18 +81,6 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => modulemanager;
 
-		public System.Boolean Equals(System.Object obj)
-			 => modulemanager.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modulemanager.GetHashCode();
-
-		public System.Type GetType()
-			 => modulemanager.GetType();
-
-		public System.String ToString()
-			 => modulemanager.ToString();
-
 
 
 

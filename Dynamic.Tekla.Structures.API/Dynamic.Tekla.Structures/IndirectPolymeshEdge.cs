@@ -53,18 +53,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public dynamic GetTSObject() => indirectpolymeshedge;
 
-		public System.Boolean Equals(System.Object obj)
-			 => indirectpolymeshedge.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => indirectpolymeshedge.GetHashCode();
-
-		public System.Type GetType()
-			 => indirectpolymeshedge.GetType();
-
-		public System.String ToString()
-			 => indirectpolymeshedge.ToString();
-
 
 
 

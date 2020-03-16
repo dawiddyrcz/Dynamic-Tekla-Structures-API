@@ -28,18 +28,6 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
 			 => new Dynamic.Tekla.Structures.Model.ClashCheckHandler(clashchekerevent.GetClashCheckHandler());
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashchekerevent.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => clashchekerevent.GetHashCode();
-
-		public System.Type GetType()
-			 => clashchekerevent.GetType();
-
-		public System.String ToString()
-			 => clashchekerevent.ToString();
-
 
 
 
@@ -90,26 +78,14 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => clashcheckdonedelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashcheckdonedelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => clashcheckdonedelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => clashcheckdonedelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => clashcheckdonedelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => clashcheckdonedelegate.Clone();
-
-		public System.Type GetType()
-			 => clashcheckdonedelegate.GetType();
-
-		public System.String ToString()
-			 => clashcheckdonedelegate.ToString();
 
 
 
@@ -165,26 +141,14 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => clashdetecteddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashdetecteddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => clashdetecteddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => clashdetecteddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => clashdetecteddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => clashdetecteddelegate.Clone();
-
-		public System.Type GetType()
-			 => clashdetecteddelegate.GetType();
-
-		public System.String ToString()
-			 => clashdetecteddelegate.ToString();
 
 
 

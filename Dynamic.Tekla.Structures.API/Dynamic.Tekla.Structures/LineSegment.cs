@@ -56,32 +56,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
 			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(linesegment.Clone());
 
-		public System.Boolean Equals(System.Object o)
-			 => linesegment.Equals(o);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Geometry3d.ICurve other)
-			 => linesegment.Equals(other.GetTSObject());
-
 		public System.Double Length()
 			 => linesegment.Length();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(linesegment.GetDirectionVector());
 
-		public System.Int32 GetHashCode()
-			 => linesegment.GetHashCode();
-
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
 			 => linesegment.op_Equality(Segment1.GetTSObject(), Segment2.GetTSObject());
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
 			 => linesegment.op_Inequality(Segment1.GetTSObject(), Segment2.GetTSObject());
-
-		public System.Type GetType()
-			 => linesegment.GetType();
-
-		public System.String ToString()
-			 => linesegment.ToString();
 
 
 

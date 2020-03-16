@@ -35,18 +35,6 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public System.String CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType, System.String FullFileName)
 			 => filter.CreateFile(FilterExpressionFileType.GetTSObject(), FullFileName);
 
-		public System.String ToString()
-			 => filter.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => filter.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => filter.GetHashCode();
-
-		public System.Type GetType()
-			 => filter.GetType();
-
 
 
 

@@ -130,18 +130,6 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => componentoptions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => componentoptions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => componentoptions.GetHashCode();
-
-		public System.Type GetType()
-			 => componentoptions.GetType();
-
-		public System.String ToString()
-			 => componentoptions.ToString();
-
 
 
 

@@ -25,23 +25,11 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public dynamic GetTSObject() => guidconversion;
 
-		public System.Collections.Generic.DictionarySystem.Guid<System.Guid, System.Guid> GetGuidMapping()
+		public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
 			 => guidconversion.GetGuidMapping();
 
 		public System.Guid GetNewGuid(System.Guid oldGuid)
 			 => guidconversion.GetNewGuid(oldGuid);
-
-		public System.Boolean Equals(System.Object obj)
-			 => guidconversion.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => guidconversion.GetHashCode();
-
-		public System.Type GetType()
-			 => guidconversion.GetType();
-
-		public System.String ToString()
-			 => guidconversion.ToString();
 
 
 

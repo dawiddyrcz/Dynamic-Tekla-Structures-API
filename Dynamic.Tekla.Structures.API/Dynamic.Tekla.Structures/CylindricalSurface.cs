@@ -49,13 +49,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { cylindricalsurface.RotationAxis = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
 			get => cylindricalsurface.LateralBoundary1;
 			set { cylindricalsurface.LateralBoundary1 = value; }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
 			get => cylindricalsurface.LateralBoundary2;
 			set { cylindricalsurface.LateralBoundary2 = value; }
@@ -101,18 +101,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 
         public dynamic GetTSObject() => cylindricalsurface;
-
-		public System.Boolean Equals(System.Object obj)
-			 => cylindricalsurface.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => cylindricalsurface.GetHashCode();
-
-		public System.Type GetType()
-			 => cylindricalsurface.GetType();
-
-		public System.String ToString()
-			 => cylindricalsurface.ToString();
 
 
 

@@ -34,18 +34,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier ID1, Dynamic.Tekla.Structures.Identifier ID2)
 			 => clashcheckhandler.GetIntersectionBoundingBoxes(ID1.GetTSObject(), ID2.GetTSObject());
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashcheckhandler.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => clashcheckhandler.GetHashCode();
-
-		public System.Type GetType()
-			 => clashcheckhandler.GetType();
-
-		public System.String ToString()
-			 => clashcheckhandler.ToString();
-
 
 
 

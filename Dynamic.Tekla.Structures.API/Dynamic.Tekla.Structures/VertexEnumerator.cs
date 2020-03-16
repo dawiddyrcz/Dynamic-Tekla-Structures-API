@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public void Reset()
 			 => vertexenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => vertexenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => vertexenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => vertexenumerator.GetType();
-
-		public System.String ToString()
-			 => vertexenumerator.ToString();
-
 
 
 

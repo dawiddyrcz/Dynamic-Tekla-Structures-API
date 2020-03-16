@@ -58,26 +58,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(System.Double Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.op_Multiply(Multiplier, Vector.GetTSObject()));
 
-		public System.String ToString()
-			 => vector.ToString();
-
 		public void Zero()
 			 => vector.Zero();
 
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
 			 => vector.Translate(X, Y, Z);
 
-		public System.Boolean Equals(System.Object obj)
-			 => vector.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => vector.GetHashCode();
-
 		public System.Int32 CompareTo(System.Object obj)
 			 => vector.CompareTo(obj);
-
-		public System.Type GetType()
-			 => vector.GetType();
 
 
 

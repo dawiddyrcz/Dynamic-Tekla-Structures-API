@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => weldfilterexpressions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => weldfilterexpressions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => weldfilterexpressions.GetHashCode();
-
-		public System.Type GetType()
-			 => weldfilterexpressions.GetType();
-
-		public System.String ToString()
-			 => weldfilterexpressions.ToString();
-
 
 
 
@@ -60,18 +48,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customboolean;
-
-		public System.String ToString()
-			 => customboolean.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customboolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customboolean.GetHashCode();
-
-		public System.Type GetType()
-			 => customboolean.GetType();
 
 
 
@@ -101,18 +77,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customdatetime;
 
-		public System.String ToString()
-			 => customdatetime.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customdatetime.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customdatetime.GetHashCode();
-
-		public System.Type GetType()
-			 => customdatetime.GetType();
-
 
 
 
@@ -140,18 +104,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customnumber;
-
-		public System.String ToString()
-			 => customnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => customnumber.GetType();
 
 
 
@@ -181,18 +133,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customstring;
 
-		public System.String ToString()
-			 => customstring.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customstring.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customstring.GetHashCode();
-
-		public System.Type GetType()
-			 => customstring.GetType();
-
 
 
 
@@ -220,18 +160,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => phase;
-
-		public System.String ToString()
-			 => phase.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => phase.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => phase.GetHashCode();
-
-		public System.Type GetType()
-			 => phase.GetType();
 
 
 
@@ -261,18 +189,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => positionnumber;
 
-		public System.String ToString()
-			 => positionnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => positionnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => positionnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => positionnumber.GetType();
-
 
 
 
@@ -300,18 +216,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => referencetext;
-
-		public System.String ToString()
-			 => referencetext.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => referencetext.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => referencetext.GetHashCode();
-
-		public System.Type GetType()
-			 => referencetext.GetType();
 
 
 
@@ -341,18 +245,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => sizeaboveline;
 
-		public System.String ToString()
-			 => sizeaboveline.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => sizeaboveline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => sizeaboveline.GetHashCode();
-
-		public System.Type GetType()
-			 => sizeaboveline.GetType();
-
 
 
 
@@ -380,18 +272,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => sizebelowline;
-
-		public System.String ToString()
-			 => sizebelowline.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => sizebelowline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => sizebelowline.GetHashCode();
-
-		public System.Type GetType()
-			 => sizebelowline.GetType();
 
 
 
@@ -421,18 +301,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => typeaboveline;
 
-		public System.String ToString()
-			 => typeaboveline.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => typeaboveline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => typeaboveline.GetHashCode();
-
-		public System.Type GetType()
-			 => typeaboveline.GetType();
-
 
 
 
@@ -461,18 +329,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => typebelowline;
 
-		public System.String ToString()
-			 => typebelowline.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => typebelowline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => typebelowline.GetHashCode();
-
-		public System.Type GetType()
-			 => typebelowline.GetType();
-
 
 
 
@@ -500,18 +356,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => weldingsite;
-
-		public System.String ToString()
-			 => weldingsite.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => weldingsite.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => weldingsite.GetHashCode();
-
-		public System.Type GetType()
-			 => weldingsite.GetType();
 
 
 

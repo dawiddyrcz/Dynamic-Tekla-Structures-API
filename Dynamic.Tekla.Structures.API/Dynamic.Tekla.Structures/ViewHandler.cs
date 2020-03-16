@@ -61,18 +61,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean RedrawWorkplane()
 			 => viewhandler.RedrawWorkplane();
 
-		public System.Boolean Equals(System.Object obj)
-			 => viewhandler.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => viewhandler.GetHashCode();
-
-		public System.Type GetType()
-			 => viewhandler.GetType();
-
-		public System.String ToString()
-			 => viewhandler.ToString();
-
 
 
 

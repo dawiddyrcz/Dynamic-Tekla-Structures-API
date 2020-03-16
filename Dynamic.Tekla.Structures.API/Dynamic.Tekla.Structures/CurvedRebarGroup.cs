@@ -337,21 +337,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => curvedrebargroup.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => curvedrebargroup.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => curvedrebargroup.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => curvedrebargroup.GetHashCode();
-
-		public System.Type GetType()
-			 => curvedrebargroup.GetType();
-
-		public System.String ToString()
-			 => curvedrebargroup.ToString();
-
 
 
 

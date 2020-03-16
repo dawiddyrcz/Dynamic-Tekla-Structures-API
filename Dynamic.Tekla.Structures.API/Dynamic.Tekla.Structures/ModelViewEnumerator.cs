@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public void Reset()
 			 => modelviewenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelviewenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modelviewenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => modelviewenumerator.GetType();
-
-		public System.String ToString()
-			 => modelviewenumerator.ToString();
-
 
 
 

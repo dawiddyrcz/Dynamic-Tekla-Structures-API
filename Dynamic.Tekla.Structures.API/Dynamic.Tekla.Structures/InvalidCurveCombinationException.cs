@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => invalidcurvecombinationexception.GetBaseException();
 
-		public System.String ToString()
-			 => invalidcurvecombinationexception.ToString();
-
-		public System.Type GetType()
-			 => invalidcurvecombinationexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => invalidcurvecombinationexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => invalidcurvecombinationexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => invalidcurvecombinationexception.GetHashCode();
-
-		public System.Type GetType()
-			 => invalidcurvecombinationexception.GetType();
 
 
 

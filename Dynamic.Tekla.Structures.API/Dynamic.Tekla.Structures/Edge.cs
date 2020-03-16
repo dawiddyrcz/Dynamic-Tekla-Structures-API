@@ -49,18 +49,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public System.Object Clone()
 			 => edge.Clone();
 
-		public System.Boolean Equals(System.Object obj)
-			 => edge.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => edge.GetHashCode();
-
-		public System.Type GetType()
-			 => edge.GetType();
-
-		public System.String ToString()
-			 => edge.ToString();
-
 
 
 

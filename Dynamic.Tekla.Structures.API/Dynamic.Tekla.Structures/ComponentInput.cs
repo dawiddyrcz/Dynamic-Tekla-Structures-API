@@ -67,18 +67,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.IEnumerator GetEnumerator()
 			 => componentinput.GetEnumerator();
 
-		public System.Boolean Equals(System.Object obj)
-			 => componentinput.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => componentinput.GetHashCode();
-
-		public System.Type GetType()
-			 => componentinput.GetType();
-
-		public System.String ToString()
-			 => componentinput.ToString();
-
 
 
 

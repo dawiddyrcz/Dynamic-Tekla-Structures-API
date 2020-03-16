@@ -81,18 +81,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarcranking;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarcranking.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarcranking.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarcranking.GetType();
-
-		public System.String ToString()
-			 => rebarcranking.ToString();
-
 
 
 

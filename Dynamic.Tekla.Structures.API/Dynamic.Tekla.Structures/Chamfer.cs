@@ -60,18 +60,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => chamfer;
 
-		public System.Boolean Equals(System.Object obj)
-			 => chamfer.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => chamfer.GetHashCode();
-
-		public System.Type GetType()
-			 => chamfer.GetType();
-
-		public System.String ToString()
-			 => chamfer.ToString();
-
 
 
 

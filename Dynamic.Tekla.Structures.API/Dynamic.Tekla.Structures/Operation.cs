@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public System.Boolean IsNumberingUpToDateAll()
 			 => operation.IsNumberingUpToDateAll();
 
-		public System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject ObjectToCompare)
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject ObjectToCompare)
 			 => operation.GetSimilarNumberedObjects(ObjectToCompare.GetTSObject());
 
 		public System.Boolean CreateReportFromSelected(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
@@ -151,10 +151,10 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndTwoRadiuses(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double firstRadius, System.Double secondRadius)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateConicalBentPlateByPartsAndTwoRadiuses(part1.GetTSObject(), part2.GetTSObject(), firstRadius, secondRadius));
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
+		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2, bendShape.GetTSObject()));
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face2)
+		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2));
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
@@ -163,13 +163,13 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1.GetTSObject(), part2.GetTSObject(), face2.GetTSObject()));
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double radius)
+		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double radius)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2, radius));
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double radius)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1.GetTSObject(), part2.GetTSObject(), face2.GetTSObject(), radius));
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double largestRadius, System.Double halfAperture)
+		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double largestRadius, System.Double halfAperture)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateConicalBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2, largestRadius, halfAperture));
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double largestRadius, System.Double halfAperture)
@@ -178,10 +178,10 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public System.Boolean ExplodeBentPlate(Dynamic.Tekla.Structures.Model.BentPlate bentPlate)
 			 => operation.ExplodeBentPlate(bentPlate.GetTSObject());
 
-		public System.Boolean AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit inputPourUnit, System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeAdded)
+		public System.Boolean AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit inputPourUnit, System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeAdded)
 			 => operation.AddToPourUnit(inputPourUnit.GetTSObject(), objectsToBeAdded);
 
-		public System.Boolean RemoveFromPourUnit(System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved)
+		public System.Boolean RemoveFromPourUnit(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved)
 			 => operation.RemoveFromPourUnit(objectsToBeRemoved);
 
 		public System.Boolean CalculatePourUnits()
@@ -195,18 +195,6 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
 			 => operation.ObjectMatchesToFilter(ModelObject.GetTSObject(), FilterExpression.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => operation.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => operation.GetHashCode();
-
-		public System.Type GetType()
-			 => operation.GetType();
-
-		public System.String ToString()
-			 => operation.ToString();
 
 
 
@@ -343,18 +331,6 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public System.Boolean Canceled()
 			 => progressbar.Canceled();
-
-		public System.Boolean Equals(System.Object obj)
-			 => progressbar.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => progressbar.GetHashCode();
-
-		public System.Type GetType()
-			 => progressbar.GetType();
-
-		public System.String ToString()
-			 => progressbar.ToString();
 
 
 

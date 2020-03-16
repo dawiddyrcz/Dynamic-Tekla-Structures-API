@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public void Reset()
 			 => loopenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => loopenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loopenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => loopenumerator.GetType();
-
-		public System.String ToString()
-			 => loopenumerator.ToString();
-
 
 
 

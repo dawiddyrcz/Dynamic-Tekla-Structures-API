@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => pourunitfilterexpressions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => pourunitfilterexpressions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => pourunitfilterexpressions.GetHashCode();
-
-		public System.Type GetType()
-			 => pourunitfilterexpressions.GetType();
-
-		public System.String ToString()
-			 => pourunitfilterexpressions.ToString();
-
 
 
 
@@ -60,18 +48,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customboolean;
-
-		public System.String ToString()
-			 => customboolean.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customboolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customboolean.GetHashCode();
-
-		public System.Type GetType()
-			 => customboolean.GetType();
 
 
 
@@ -101,18 +77,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customdatetime;
 
-		public System.String ToString()
-			 => customdatetime.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customdatetime.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customdatetime.GetHashCode();
-
-		public System.Type GetType()
-			 => customdatetime.GetType();
-
 
 
 
@@ -140,18 +104,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customnumber;
-
-		public System.String ToString()
-			 => customnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => customnumber.GetType();
 
 
 
@@ -181,18 +133,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customstring;
 
-		public System.String ToString()
-			 => customstring.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customstring.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customstring.GetHashCode();
-
-		public System.Type GetType()
-			 => customstring.GetType();
-
 
 
 
@@ -221,18 +161,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => name;
 
-		public System.String ToString()
-			 => name.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => name.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => name.GetHashCode();
-
-		public System.Type GetType()
-			 => name.GetType();
-
 
 
 
@@ -260,18 +188,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => guid;
-
-		public System.String ToString()
-			 => guid.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => guid.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => guid.GetHashCode();
-
-		public System.Type GetType()
-			 => guid.GetType();
 
 
 

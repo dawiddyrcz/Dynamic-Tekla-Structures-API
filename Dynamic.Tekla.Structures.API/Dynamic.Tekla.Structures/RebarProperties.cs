@@ -67,18 +67,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarproperties;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarproperties.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarproperties.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarproperties.GetType();
-
-		public System.String ToString()
-			 => rebarproperties.ToString();
-
 
 
 

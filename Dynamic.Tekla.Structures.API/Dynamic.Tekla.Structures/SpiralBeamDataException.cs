@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => spiralbeamdataexception.GetBaseException();
 
-		public System.String ToString()
-			 => spiralbeamdataexception.ToString();
-
-		public System.Type GetType()
-			 => spiralbeamdataexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => spiralbeamdataexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => spiralbeamdataexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => spiralbeamdataexception.GetHashCode();
-
-		public System.Type GetType()
-			 => spiralbeamdataexception.GetType();
 
 
 

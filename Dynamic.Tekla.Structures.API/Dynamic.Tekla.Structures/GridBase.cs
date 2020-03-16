@@ -174,21 +174,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => gridbase.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => gridbase.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => gridbase.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => gridbase.GetHashCode();
-
-		public System.Type GetType()
-			 => gridbase.GetType();
-
-		public System.String ToString()
-			 => gridbase.ToString();
-
 
 
 

@@ -160,21 +160,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => controlplane.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => controlplane.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => controlplane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => controlplane.GetHashCode();
-
-		public System.Type GetType()
-			 => controlplane.GetType();
-
-		public System.String ToString()
-			 => controlplane.ToString();
-
 
 
 

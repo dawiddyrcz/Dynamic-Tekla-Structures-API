@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         public dynamic GetTSObject() => modificationstamp;
 
-		public System.Boolean Equals(System.Object obj)
-			 => modificationstamp.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modificationstamp.GetHashCode();
-
-		public System.Type GetType()
-			 => modificationstamp.GetType();
-
-		public System.String ToString()
-			 => modificationstamp.ToString();
-
 
 
 

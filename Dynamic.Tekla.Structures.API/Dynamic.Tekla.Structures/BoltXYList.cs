@@ -409,21 +409,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => boltxylist.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => boltxylist.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => boltxylist.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => boltxylist.GetHashCode();
-
-		public System.Type GetType()
-			 => boltxylist.GetType();
-
-		public System.String ToString()
-			 => boltxylist.ToString();
-
 
 
 

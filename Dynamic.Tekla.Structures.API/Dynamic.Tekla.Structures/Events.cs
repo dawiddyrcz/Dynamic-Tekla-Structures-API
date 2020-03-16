@@ -187,18 +187,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Runtime.Remoting.ObjRef CreateObjRef(System.Type requestedType)
 			 => events.CreateObjRef(requestedType);
 
-		public System.Boolean Equals(System.Object obj)
-			 => events.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => events.GetHashCode();
-
-		public System.Type GetType()
-			 => events.GetType();
-
-		public System.String ToString()
-			 => events.ToString();
-
 
 
 
@@ -249,26 +237,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => selectionchangedelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => selectionchangedelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => selectionchangedelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => selectionchangedelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => selectionchangedelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => selectionchangedelegate.Clone();
-
-		public System.Type GetType()
-			 => selectionchangedelegate.GetType();
-
-		public System.String ToString()
-			 => selectionchangedelegate.ToString();
 
 
 
@@ -324,26 +300,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => commandstatuschangedelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => commandstatuschangedelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => commandstatuschangedelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => commandstatuschangedelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => commandstatuschangedelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => commandstatuschangedelegate.Clone();
-
-		public System.Type GetType()
-			 => commandstatuschangedelegate.GetType();
-
-		public System.String ToString()
-			 => commandstatuschangedelegate.ToString();
 
 
 
@@ -399,26 +363,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => trackeventdelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => trackeventdelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => trackeventdelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => trackeventdelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => trackeventdelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => trackeventdelegate.Clone();
-
-		public System.Type GetType()
-			 => trackeventdelegate.GetType();
-
-		public System.String ToString()
-			 => trackeventdelegate.ToString();
 
 
 
@@ -474,26 +426,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelsavedelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelsavedelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelsavedelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelsavedelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelsavedelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelsavedelegate.Clone();
-
-		public System.Type GetType()
-			 => modelsavedelegate.GetType();
-
-		public System.String ToString()
-			 => modelsavedelegate.ToString();
 
 
 
@@ -549,26 +489,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelsaveasdelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelsaveasdelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelsaveasdelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelsaveasdelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelsaveasdelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelsaveasdelegate.Clone();
-
-		public System.Type GetType()
-			 => modelsaveasdelegate.GetType();
-
-		public System.String ToString()
-			 => modelsaveasdelegate.ToString();
 
 
 
@@ -624,26 +552,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelloaddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelloaddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelloaddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelloaddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelloaddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelloaddelegate.Clone();
-
-		public System.Type GetType()
-			 => modelloaddelegate.GetType();
-
-		public System.String ToString()
-			 => modelloaddelegate.ToString();
 
 
 
@@ -699,26 +615,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => numberingdelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => numberingdelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => numberingdelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => numberingdelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => numberingdelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => numberingdelegate.Clone();
-
-		public System.Type GetType()
-			 => numberingdelegate.GetType();
-
-		public System.String ToString()
-			 => numberingdelegate.ToString();
 
 
 
@@ -774,26 +678,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelchangeddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelchangeddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelchangeddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelchangeddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelchangeddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelchangeddelegate.Clone();
-
-		public System.Type GetType()
-			 => modelchangeddelegate.GetType();
-
-		public System.String ToString()
-			 => modelchangeddelegate.ToString();
 
 
 
@@ -837,10 +729,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => modelobjectnumbereddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
+		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
 			 => modelobjectnumbereddelegate.Invoke(Objects);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> Objects, System.AsyncCallback callback, System.Object @object)
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects, System.AsyncCallback callback, System.Object @object)
 			 => modelobjectnumbereddelegate.BeginInvoke(Objects, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
@@ -849,26 +741,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelobjectnumbereddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelobjectnumbereddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelobjectnumbereddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelobjectnumbereddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelobjectnumbereddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelobjectnumbereddelegate.Clone();
-
-		public System.Type GetType()
-			 => modelobjectnumbereddelegate.GetType();
-
-		public System.String ToString()
-			 => modelobjectnumbereddelegate.ToString();
 
 
 
@@ -912,10 +792,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => modelobjectchangeddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
+		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
 			 => modelobjectchangeddelegate.Invoke(Changes);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData<Dynamic.Tekla.Structures.Model.ChangeData> Changes, System.AsyncCallback callback, System.Object @object)
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes, System.AsyncCallback callback, System.Object @object)
 			 => modelobjectchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
@@ -924,26 +804,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => modelobjectchangeddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelobjectchangeddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => modelobjectchangeddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => modelobjectchangeddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => modelobjectchangeddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => modelobjectchangeddelegate.Clone();
-
-		public System.Type GetType()
-			 => modelobjectchangeddelegate.GetType();
-
-		public System.String ToString()
-			 => modelobjectchangeddelegate.ToString();
 
 
 
@@ -999,26 +867,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => teklastructuresexitdelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => teklastructuresexitdelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => teklastructuresexitdelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => teklastructuresexitdelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => teklastructuresexitdelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => teklastructuresexitdelegate.Clone();
-
-		public System.Type GetType()
-			 => teklastructuresexitdelegate.GetType();
-
-		public System.String ToString()
-			 => teklastructuresexitdelegate.ToString();
 
 
 
@@ -1074,26 +930,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => clashcheckdonedelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashcheckdonedelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => clashcheckdonedelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => clashcheckdonedelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => clashcheckdonedelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => clashcheckdonedelegate.Clone();
-
-		public System.Type GetType()
-			 => clashcheckdonedelegate.GetType();
-
-		public System.String ToString()
-			 => clashcheckdonedelegate.ToString();
 
 
 
@@ -1149,26 +993,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => clashdetecteddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => clashdetecteddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => clashdetecteddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => clashdetecteddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => clashdetecteddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => clashdetecteddelegate.Clone();
-
-		public System.Type GetType()
-			 => clashdetecteddelegate.GetType();
-
-		public System.String ToString()
-			 => clashdetecteddelegate.ToString();
 
 
 
@@ -1212,10 +1044,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => pointinputchangeddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
+		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
 			 => pointinputchangeddelegate.Invoke(Changes);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> Changes, System.AsyncCallback callback, System.Object @object)
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes, System.AsyncCallback callback, System.Object @object)
 			 => pointinputchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
@@ -1224,26 +1056,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => pointinputchangeddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => pointinputchangeddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => pointinputchangeddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => pointinputchangeddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => pointinputchangeddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => pointinputchangeddelegate.Clone();
-
-		public System.Type GetType()
-			 => pointinputchangeddelegate.GetType();
-
-		public System.String ToString()
-			 => pointinputchangeddelegate.ToString();
 
 
 
@@ -1299,26 +1119,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => interrupteddelegate.GetObjectData(info, context);
 
-		public System.Boolean Equals(System.Object obj)
-			 => interrupteddelegate.Equals(obj);
-
 		public System.Delegate GetInvocationList()
 			 => interrupteddelegate.GetInvocationList();
-
-		public System.Int32 GetHashCode()
-			 => interrupteddelegate.GetHashCode();
 
 		public System.Object DynamicInvoke(System.Object args)
 			 => interrupteddelegate.DynamicInvoke(args);
 
 		public System.Object Clone()
 			 => interrupteddelegate.Clone();
-
-		public System.Type GetType()
-			 => interrupteddelegate.GetType();
-
-		public System.String ToString()
-			 => interrupteddelegate.ToString();
 
 
 

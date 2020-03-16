@@ -166,10 +166,10 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType)
 			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(basepoint.GetCoordinateSystem(CoordsysType.GetTSObject()));
 
-		public System.TupleSystem.Boolean<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
+		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
 			 => basepoint.GetCompoundPlaneAngleLatitude();
 
-		public System.TupleSystem.Boolean<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
+		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
 			 => basepoint.GetCompoundPlaneAngleLongitude();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
@@ -183,18 +183,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(basepoint.ConvertFromBasePoint(basePoint.GetTSObject(), point.GetTSObject()));
-
-		public System.Boolean Equals(System.Object obj)
-			 => basepoint.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => basepoint.GetHashCode();
-
-		public System.Type GetType()
-			 => basepoint.GetType();
-
-		public System.String ToString()
-			 => basepoint.ToString();
 
 
 

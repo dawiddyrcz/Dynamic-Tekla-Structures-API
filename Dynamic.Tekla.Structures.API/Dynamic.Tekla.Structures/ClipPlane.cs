@@ -55,18 +55,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Modify()
 			 => clipplane.Modify();
 
-		public System.Boolean Equals(System.Object obj)
-			 => clipplane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => clipplane.GetHashCode();
-
-		public System.Type GetType()
-			 => clipplane.GetType();
-
-		public System.String ToString()
-			 => clipplane.ToString();
-
 
 
 

@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => facesatanobtuseangleexception.GetBaseException();
 
-		public System.String ToString()
-			 => facesatanobtuseangleexception.ToString();
-
-		public System.Type GetType()
-			 => facesatanobtuseangleexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => facesatanobtuseangleexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => facesatanobtuseangleexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => facesatanobtuseangleexception.GetHashCode();
-
-		public System.Type GetType()
-			 => facesatanobtuseangleexception.GetType();
 
 
 

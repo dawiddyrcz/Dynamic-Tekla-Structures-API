@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebargeometry;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebargeometry.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebargeometry.GetHashCode();
-
-		public System.Type GetType()
-			 => rebargeometry.GetType();
-
-		public System.String ToString()
-			 => rebargeometry.ToString();
-
 
 
 

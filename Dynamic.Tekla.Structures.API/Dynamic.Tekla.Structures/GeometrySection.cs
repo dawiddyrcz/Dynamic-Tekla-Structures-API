@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => geometrysection;
 
-		public System.Boolean Equals(System.Object obj)
-			 => geometrysection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => geometrysection.GetHashCode();
-
-		public System.Type GetType()
-			 => geometrysection.GetType();
-
-		public System.String ToString()
-			 => geometrysection.ToString();
-
 
 
 

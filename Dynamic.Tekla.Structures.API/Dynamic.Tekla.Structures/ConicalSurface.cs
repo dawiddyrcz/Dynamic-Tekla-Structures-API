@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class ConicalSurface 
     {
 
-		public System.TupleSystem.Double<System.Double, System.Double> Radiuses
+		public System.Tuple<System.Double, System.Double> Radiuses
 		{
 			get => conicalsurface.Radiuses;
 			set { conicalsurface.Radiuses = value; }
@@ -55,13 +55,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { conicalsurface.RotationAxis = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
 			get => conicalsurface.LateralBoundary1;
 			set { conicalsurface.LateralBoundary1 = value; }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
 			get => conicalsurface.LateralBoundary2;
 			set { conicalsurface.LateralBoundary2 = value; }
@@ -108,18 +108,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 
         public dynamic GetTSObject() => conicalsurface;
-
-		public System.Boolean Equals(System.Object obj)
-			 => conicalsurface.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => conicalsurface.GetHashCode();
-
-		public System.Type GetType()
-			 => conicalsurface.GetType();
-
-		public System.String ToString()
-			 => conicalsurface.ToString();
 
 
 

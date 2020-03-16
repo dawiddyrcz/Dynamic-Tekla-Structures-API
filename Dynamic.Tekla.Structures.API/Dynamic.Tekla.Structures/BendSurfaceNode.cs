@@ -45,18 +45,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
 			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(bendsurfacenode.Clone());
 
-		public System.Boolean Equals(System.Object obj)
-			 => bendsurfacenode.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => bendsurfacenode.GetHashCode();
-
-		public System.Type GetType()
-			 => bendsurfacenode.GetType();
-
-		public System.String ToString()
-			 => bendsurfacenode.ToString();
-
 
 
 

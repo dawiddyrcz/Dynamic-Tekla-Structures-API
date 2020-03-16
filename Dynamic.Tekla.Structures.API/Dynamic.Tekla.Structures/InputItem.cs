@@ -31,18 +31,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Object GetData()
 			 => inputitem.GetData();
 
-		public System.Boolean Equals(System.Object obj)
-			 => inputitem.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => inputitem.GetHashCode();
-
-		public System.Type GetType()
-			 => inputitem.GetType();
-
-		public System.String ToString()
-			 => inputitem.ToString();
-
 
 
 

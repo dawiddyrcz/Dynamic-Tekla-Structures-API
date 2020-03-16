@@ -89,15 +89,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Point ComputeVertices()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ComputeVertices());
 
-		public System.Boolean Equals(System.Object obj)
-			 => obb.Equals(obj);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Geometry3d.OBB other)
-			 => obb.Equals(other.GetTSObject());
-
-		public System.Int32 GetHashCode()
-			 => obb.GetHashCode();
-
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ClosestPointTo(point.GetTSObject()));
 
@@ -148,12 +139,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
 			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.ShortestSegmentTo(point.GetTSObject()));
-
-		public System.Type GetType()
-			 => obb.GetType();
-
-		public System.String ToString()
-			 => obb.ToString();
 
 
 

@@ -188,21 +188,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarsplice.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarsplice.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarsplice.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarsplice.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarsplice.GetType();
-
-		public System.String ToString()
-			 => rebarsplice.ToString();
-
 
 
 

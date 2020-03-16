@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => invalidfacepointsexception.GetBaseException();
 
-		public System.String ToString()
-			 => invalidfacepointsexception.ToString();
-
-		public System.Type GetType()
-			 => invalidfacepointsexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => invalidfacepointsexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => invalidfacepointsexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => invalidfacepointsexception.GetHashCode();
-
-		public System.Type GetType()
-			 => invalidfacepointsexception.GetType();
 
 
 

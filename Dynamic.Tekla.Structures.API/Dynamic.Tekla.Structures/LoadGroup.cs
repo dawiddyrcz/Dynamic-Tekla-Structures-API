@@ -181,21 +181,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => loadgroup.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => loadgroup.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => loadgroup.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loadgroup.GetHashCode();
-
-		public System.Type GetType()
-			 => loadgroup.GetType();
-
-		public System.String ToString()
-			 => loadgroup.ToString();
-
 
 
 

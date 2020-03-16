@@ -212,21 +212,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarsplitter.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarsplitter.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarsplitter.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarsplitter.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarsplitter.GetType();
-
-		public System.String ToString()
-			 => rebarsplitter.ToString();
-
 
 
 

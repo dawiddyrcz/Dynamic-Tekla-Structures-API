@@ -49,23 +49,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
 			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(polycurve.Clone());
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Geometry3d.ICurve other)
-			 => polycurve.Equals(other.GetTSObject());
-
-		public System.Collections.Generic.IEnumeratorTekla.Structures.Geometry3d.ICurve<Dynamic.Tekla.Structures.Geometry3d.ICurve> GetEnumerator()
+		public System.Collections.Generic.IEnumerator<Dynamic.Tekla.Structures.Geometry3d.ICurve> GetEnumerator()
 			 => polycurve.GetEnumerator();
-
-		public System.Boolean Equals(System.Object obj)
-			 => polycurve.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => polycurve.GetHashCode();
-
-		public System.Type GetType()
-			 => polycurve.GetType();
-
-		public System.String ToString()
-			 => polycurve.ToString();
 
 
 

@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => connectivegeometryexception.GetBaseException();
 
-		public System.String ToString()
-			 => connectivegeometryexception.ToString();
-
-		public System.Type GetType()
-			 => connectivegeometryexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => connectivegeometryexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => connectivegeometryexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => connectivegeometryexception.GetHashCode();
-
-		public System.Type GetType()
-			 => connectivegeometryexception.GetType();
 
 
 

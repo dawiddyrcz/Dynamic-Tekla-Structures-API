@@ -63,18 +63,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Solid.ShellEnumerator GetCutPart(Dynamic.Tekla.Structures.Model.Solid CuttingPart)
 			 => new Dynamic.Tekla.Structures.Solid.ShellEnumerator(solid.GetCutPart(CuttingPart.GetTSObject()));
 
-		public System.Boolean Equals(System.Object obj)
-			 => solid.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => solid.GetHashCode();
-
-		public System.Type GetType()
-			 => solid.GetType();
-
-		public System.String ToString()
-			 => solid.ToString();
-
 
 
 

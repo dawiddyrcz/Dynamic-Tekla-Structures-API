@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarSetAddition 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarLegFace<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
 		{
 			get => rebarsetaddition.LegFaces;
 			set { rebarsetaddition.LegFaces = value; }
@@ -152,21 +152,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarsetaddition.CompareTo(obj);
-
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarsetaddition.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarsetaddition.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarsetaddition.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarsetaddition.GetType();
-
-		public System.String ToString()
-			 => rebarsetaddition.ToString();
 
 
 

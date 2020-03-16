@@ -214,18 +214,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public dynamic GetTSObject() => viewvisibilitysettings;
 
-		public System.Boolean Equals(System.Object obj)
-			 => viewvisibilitysettings.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => viewvisibilitysettings.GetHashCode();
-
-		public System.Type GetType()
-			 => viewvisibilitysettings.GetType();
-
-		public System.String ToString()
-			 => viewvisibilitysettings.ToString();
-
 
 
 

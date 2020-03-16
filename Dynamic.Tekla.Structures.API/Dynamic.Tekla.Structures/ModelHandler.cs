@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean IsModelAutoSaved(System.String ModelFolder)
 			 => modelhandler.IsModelAutoSaved(ModelFolder);
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelhandler.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modelhandler.GetHashCode();
-
-		public System.Type GetType()
-			 => modelhandler.GetType();
-
-		public System.String ToString()
-			 => modelhandler.ToString();
-
 
 
 

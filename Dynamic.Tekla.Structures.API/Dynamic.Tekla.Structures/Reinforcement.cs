@@ -260,21 +260,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => reinforcement.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => reinforcement.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => reinforcement.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => reinforcement.GetHashCode();
-
-		public System.Type GetType()
-			 => reinforcement.GetType();
-
-		public System.String ToString()
-			 => reinforcement.ToString();
-
 
 
 

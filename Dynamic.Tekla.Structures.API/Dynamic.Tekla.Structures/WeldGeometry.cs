@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 
         public dynamic GetTSObject() => weldgeometry;
 
-		public System.Boolean Equals(System.Object obj)
-			 => weldgeometry.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => weldgeometry.GetHashCode();
-
-		public System.Type GetType()
-			 => weldgeometry.GetType();
-
-		public System.String ToString()
-			 => weldgeometry.ToString();
-
 
 
 

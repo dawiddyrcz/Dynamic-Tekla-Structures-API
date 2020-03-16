@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
 			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(conicalsurfacenode.Clone());
 
-		public System.Boolean Equals(System.Object obj)
-			 => conicalsurfacenode.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => conicalsurfacenode.GetHashCode();
-
-		public System.Type GetType()
-			 => conicalsurfacenode.GetType();
-
-		public System.String ToString()
-			 => conicalsurfacenode.ToString();
-
 
 
 

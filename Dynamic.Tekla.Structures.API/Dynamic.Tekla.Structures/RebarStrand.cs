@@ -302,21 +302,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarstrand.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarstrand.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarstrand.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarstrand.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarstrand.GetType();
-
-		public System.String ToString()
-			 => rebarstrand.ToString();
-
 
 
 

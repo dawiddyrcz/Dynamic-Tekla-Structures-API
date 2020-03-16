@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.String FormatProfileString(System.String profileString)
 			 => profile.FormatProfileString(profileString);
 
-		public System.Boolean Equals(System.Object obj)
-			 => profile.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => profile.GetHashCode();
-
-		public System.Type GetType()
-			 => profile.GetType();
-
-		public System.String ToString()
-			 => profile.ToString();
-
 
 
 

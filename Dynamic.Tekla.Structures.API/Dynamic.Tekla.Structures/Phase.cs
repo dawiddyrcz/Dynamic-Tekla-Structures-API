@@ -83,18 +83,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
 			 => phase.GetUserProperty(Name, ref Value);
 
-		public System.Boolean Equals(System.Object obj)
-			 => phase.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => phase.GetHashCode();
-
-		public System.Type GetType()
-			 => phase.GetType();
-
-		public System.String ToString()
-			 => phase.ToString();
-
 
 
 

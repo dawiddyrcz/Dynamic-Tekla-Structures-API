@@ -58,18 +58,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.IEnumerator GetEnumerator()
 			 => modelobjectenumerator.GetEnumerator();
 
-		public System.Boolean Equals(System.Object obj)
-			 => modelobjectenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => modelobjectenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => modelobjectenumerator.GetType();
-
-		public System.String ToString()
-			 => modelobjectenumerator.ToString();
-
 
 
 

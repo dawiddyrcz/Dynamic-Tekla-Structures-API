@@ -103,18 +103,6 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetLast()
 			 => new Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem(binaryfilterexpressioncollection.GetLast());
 
-		public System.String ToString()
-			 => binaryfilterexpressioncollection.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => binaryfilterexpressioncollection.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => binaryfilterexpressioncollection.GetHashCode();
-
-		public System.Type GetType()
-			 => binaryfilterexpressioncollection.GetType();
-
 
 
 

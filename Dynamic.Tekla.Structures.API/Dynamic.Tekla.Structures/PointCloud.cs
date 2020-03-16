@@ -93,26 +93,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Select()
 			 => pointcloud.Select();
 
-		public System.Boolean SetVisibility(System.Collections.Generic.ListTekla.Structures.Model.UI.View<Dynamic.Tekla.Structures.Model.UI.View> views, System.Boolean visible)
+		public System.Boolean SetVisibility(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> views, System.Boolean visible)
 			 => pointcloud.SetVisibility(views, visible);
 
-		public System.Collections.Generic.ListTekla.Structures.Model.UI.View<Dynamic.Tekla.Structures.Model.UI.View> GetVisibleInViews()
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> GetVisibleInViews()
 			 => pointcloud.GetVisibleInViews();
 
-		public System.Collections.Generic.ListTekla.Structures.Model.PointCloud<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
 			 => pointcloud.GetPointClouds();
-
-		public System.Boolean Equals(System.Object obj)
-			 => pointcloud.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => pointcloud.GetHashCode();
-
-		public System.Type GetType()
-			 => pointcloud.GetType();
-
-		public System.String ToString()
-			 => pointcloud.ToString();
 
 
 

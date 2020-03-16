@@ -38,18 +38,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public void Reset()
 			 => shellenumerator.Reset();
 
-		public System.Boolean Equals(System.Object obj)
-			 => shellenumerator.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => shellenumerator.GetHashCode();
-
-		public System.Type GetType()
-			 => shellenumerator.GetType();
-
-		public System.String ToString()
-			 => shellenumerator.ToString();
-
 
 
 

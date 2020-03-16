@@ -144,18 +144,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection GetClipPlanes()
 			 => new Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection(view.GetClipPlanes());
 
-		public System.Boolean Equals(System.Object obj)
-			 => view.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => view.GetHashCode();
-
-		public System.Type GetType()
-			 => view.GetType();
-
-		public System.String ToString()
-			 => view.ToString();
-
 
 
 

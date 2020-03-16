@@ -81,18 +81,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public dynamic GetTSObject() => ifc2x3_parametricobject_circleprofile;
 
-		public System.Boolean Equals(System.Object obj)
-			 => ifc2x3_parametricobject_circleprofile.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => ifc2x3_parametricobject_circleprofile.GetHashCode();
-
-		public System.Type GetType()
-			 => ifc2x3_parametricobject_circleprofile.GetType();
-
-		public System.String ToString()
-			 => ifc2x3_parametricobject_circleprofile.ToString();
-
 
 
 

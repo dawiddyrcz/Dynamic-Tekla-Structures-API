@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => loftedplateoperationexception.GetBaseException();
 
-		public System.String ToString()
-			 => loftedplateoperationexception.ToString();
-
-		public System.Type GetType()
-			 => loftedplateoperationexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => loftedplateoperationexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => loftedplateoperationexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loftedplateoperationexception.GetHashCode();
-
-		public System.Type GetType()
-			 => loftedplateoperationexception.GetType();
 
 
 

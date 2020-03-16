@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => facestooneareachotherexception.GetBaseException();
 
-		public System.String ToString()
-			 => facestooneareachotherexception.ToString();
-
-		public System.Type GetType()
-			 => facestooneareachotherexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => facestooneareachotherexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => facestooneareachotherexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => facestooneareachotherexception.GetHashCode();
-
-		public System.Type GetType()
-			 => facestooneareachotherexception.GetType();
 
 
 

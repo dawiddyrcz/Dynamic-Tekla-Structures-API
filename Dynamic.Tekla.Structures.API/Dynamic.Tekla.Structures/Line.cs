@@ -39,18 +39,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public dynamic GetTSObject() => line;
 
-		public System.Boolean Equals(System.Object obj)
-			 => line.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => line.GetHashCode();
-
-		public System.Type GetType()
-			 => line.GetType();
-
-		public System.String ToString()
-			 => line.ToString();
-
 
 
 

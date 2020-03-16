@@ -174,21 +174,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => taskdependency.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => taskdependency.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => taskdependency.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => taskdependency.GetHashCode();
-
-		public System.Type GetType()
-			 => taskdependency.GetType();
-
-		public System.String ToString()
-			 => taskdependency.ToString();
-
 
 
 

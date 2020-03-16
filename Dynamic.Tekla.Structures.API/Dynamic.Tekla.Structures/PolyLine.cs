@@ -32,26 +32,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public dynamic GetTSObject() => polyline;
 
-		public System.Boolean Equals(System.Object O)
-			 => polyline.Equals(O);
-
 		public System.Double Length()
 			 => polyline.Length();
-
-		public System.Int32 GetHashCode()
-			 => polyline.GetHashCode();
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 			 => polyline.op_Equality(PolyLine1.GetTSObject(), PolyLine2.GetTSObject());
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 			 => polyline.op_Inequality(PolyLine1.GetTSObject(), PolyLine2.GetTSObject());
-
-		public System.Type GetType()
-			 => polyline.GetType();
-
-		public System.String ToString()
-			 => polyline.ToString();
 
 
 

@@ -53,18 +53,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarlapping;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarlapping.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarlapping.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarlapping.GetType();
-
-		public System.String ToString()
-			 => rebarlapping.ToString();
-
 
 
 

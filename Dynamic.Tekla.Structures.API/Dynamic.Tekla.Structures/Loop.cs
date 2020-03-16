@@ -28,18 +28,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.VertexEnumerator(loop.GetVertexEnumerator());
 
-		public System.Boolean Equals(System.Object obj)
-			 => loop.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => loop.GetHashCode();
-
-		public System.Type GetType()
-			 => loop.GetType();
-
-		public System.String ToString()
-			 => loop.ToString();
-
 
 
 

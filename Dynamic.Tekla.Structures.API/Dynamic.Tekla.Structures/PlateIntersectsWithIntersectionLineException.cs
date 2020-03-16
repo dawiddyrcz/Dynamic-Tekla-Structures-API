@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => plateintersectswithintersectionlineexception.GetBaseException();
 
-		public System.String ToString()
-			 => plateintersectswithintersectionlineexception.ToString();
-
-		public System.Type GetType()
-			 => plateintersectswithintersectionlineexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => plateintersectswithintersectionlineexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => plateintersectswithintersectionlineexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => plateintersectswithintersectionlineexception.GetHashCode();
-
-		public System.Type GetType()
-			 => plateintersectswithintersectionlineexception.GetType();
 
 
 

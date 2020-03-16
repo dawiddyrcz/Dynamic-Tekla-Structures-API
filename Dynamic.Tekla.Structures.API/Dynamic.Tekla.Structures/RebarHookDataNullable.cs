@@ -60,18 +60,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarhookdatanullable;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarhookdatanullable.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarhookdatanullable.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarhookdatanullable.GetType();
-
-		public System.String ToString()
-			 => rebarhookdatanullable.ToString();
-
 
 
 

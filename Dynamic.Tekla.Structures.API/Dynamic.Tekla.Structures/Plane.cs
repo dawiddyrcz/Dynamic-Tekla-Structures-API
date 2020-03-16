@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => plane;
 
-		public System.Boolean Equals(System.Object obj)
-			 => plane.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => plane.GetHashCode();
-
-		public System.Type GetType()
-			 => plane.GetType();
-
-		public System.String ToString()
-			 => plane.ToString();
-
 
 
 

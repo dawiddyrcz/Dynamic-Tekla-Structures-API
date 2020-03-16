@@ -344,21 +344,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebargroup.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebargroup.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebargroup.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebargroup.GetHashCode();
-
-		public System.Type GetType()
-			 => rebargroup.GetType();
-
-		public System.String ToString()
-			 => rebargroup.ToString();
-
 
 
 

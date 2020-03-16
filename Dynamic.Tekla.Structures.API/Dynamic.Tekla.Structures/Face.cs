@@ -42,18 +42,6 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.LoopEnumerator(face.GetLoopEnumerator());
 
-		public System.Boolean Equals(System.Object obj)
-			 => face.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => face.GetHashCode();
-
-		public System.Type GetType()
-			 => face.GetType();
-
-		public System.String ToString()
-			 => face.ToString();
-
 
 
 

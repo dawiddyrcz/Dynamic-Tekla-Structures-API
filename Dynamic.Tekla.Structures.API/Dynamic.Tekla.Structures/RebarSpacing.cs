@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarSpacing 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarSpacingZone<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
+		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
 		{
 			get => rebarspacing.Zones;
 			set { rebarspacing.Zones = value; }
@@ -80,18 +80,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 
         public dynamic GetTSObject() => rebarspacing;
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarspacing.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarspacing.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarspacing.GetType();
-
-		public System.String ToString()
-			 => rebarspacing.ToString();
 
 
 

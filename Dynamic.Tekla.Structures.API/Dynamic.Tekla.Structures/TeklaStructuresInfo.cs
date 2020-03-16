@@ -49,18 +49,6 @@ namespace Dynamic.Tekla.Structures
 		public System.String GetCurrentUser()
 			 => teklastructuresinfo.GetCurrentUser();
 
-		public System.Boolean Equals(System.Object obj)
-			 => teklastructuresinfo.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => teklastructuresinfo.GetHashCode();
-
-		public System.Type GetType()
-			 => teklastructuresinfo.GetType();
-
-		public System.String ToString()
-			 => teklastructuresinfo.ToString();
-
 
 
 

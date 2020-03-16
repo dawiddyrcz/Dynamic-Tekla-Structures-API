@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Collections.IEnumerator GetEnumerator()
 			 => pickinput.GetEnumerator();
 
-		public System.Boolean Equals(System.Object obj)
-			 => pickinput.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => pickinput.GetHashCode();
-
-		public System.Type GetType()
-			 => pickinput.GetType();
-
-		public System.String ToString()
-			 => pickinput.ToString();
-
 
 
 

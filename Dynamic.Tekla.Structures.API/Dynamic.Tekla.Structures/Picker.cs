@@ -61,18 +61,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum Enum, System.String Prompt)
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(picker.PickObjects(Enum.GetTSObject(), Prompt));
 
-		public System.Boolean Equals(System.Object obj)
-			 => picker.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => picker.GetHashCode();
-
-		public System.Type GetType()
-			 => picker.GetType();
-
-		public System.String ToString()
-			 => picker.ToString();
-
 
 
 

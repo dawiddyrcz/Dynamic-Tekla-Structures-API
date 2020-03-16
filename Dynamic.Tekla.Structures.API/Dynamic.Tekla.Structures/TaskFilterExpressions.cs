@@ -25,18 +25,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => taskfilterexpressions;
 
-		public System.Boolean Equals(System.Object obj)
-			 => taskfilterexpressions.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => taskfilterexpressions.GetHashCode();
-
-		public System.Type GetType()
-			 => taskfilterexpressions.GetType();
-
-		public System.String ToString()
-			 => taskfilterexpressions.ToString();
-
 
 
 
@@ -60,18 +48,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customboolean;
-
-		public System.String ToString()
-			 => customboolean.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customboolean.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customboolean.GetHashCode();
-
-		public System.Type GetType()
-			 => customboolean.GetType();
 
 
 
@@ -101,18 +77,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customdatetime;
 
-		public System.String ToString()
-			 => customdatetime.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customdatetime.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customdatetime.GetHashCode();
-
-		public System.Type GetType()
-			 => customdatetime.GetType();
-
 
 
 
@@ -140,18 +104,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => customnumber;
-
-		public System.String ToString()
-			 => customnumber.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customnumber.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customnumber.GetHashCode();
-
-		public System.Type GetType()
-			 => customnumber.GetType();
 
 
 
@@ -181,18 +133,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => customstring;
 
-		public System.String ToString()
-			 => customstring.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => customstring.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => customstring.GetHashCode();
-
-		public System.Type GetType()
-			 => customstring.GetType();
-
 
 
 
@@ -220,18 +160,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => actualenddate;
-
-		public System.String ToString()
-			 => actualenddate.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => actualenddate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => actualenddate.GetHashCode();
-
-		public System.Type GetType()
-			 => actualenddate.GetType();
 
 
 
@@ -261,18 +189,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => actualstartdate;
 
-		public System.String ToString()
-			 => actualstartdate.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => actualstartdate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => actualstartdate.GetHashCode();
-
-		public System.Type GetType()
-			 => actualstartdate.GetType();
-
 
 
 
@@ -300,18 +216,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => completeness;
-
-		public System.String ToString()
-			 => completeness.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => completeness.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => completeness.GetHashCode();
-
-		public System.Type GetType()
-			 => completeness.GetType();
 
 
 
@@ -341,18 +245,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => critical;
 
-		public System.String ToString()
-			 => critical.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => critical.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => critical.GetHashCode();
-
-		public System.Type GetType()
-			 => critical.GetType();
-
 
 
 
@@ -380,18 +272,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => local;
-
-		public System.String ToString()
-			 => local.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => local.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => local.GetHashCode();
-
-		public System.Type GetType()
-			 => local.GetType();
 
 
 
@@ -421,18 +301,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => name;
 
-		public System.String ToString()
-			 => name.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => name.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => name.GetHashCode();
-
-		public System.Type GetType()
-			 => name.GetType();
-
 
 
 
@@ -461,18 +329,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public dynamic GetTSObject() => plannedenddate;
 
-		public System.String ToString()
-			 => plannedenddate.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => plannedenddate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => plannedenddate.GetHashCode();
-
-		public System.Type GetType()
-			 => plannedenddate.GetType();
-
 
 
 
@@ -500,18 +356,6 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
 
         public dynamic GetTSObject() => plannedstartdate;
-
-		public System.String ToString()
-			 => plannedstartdate.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => plannedstartdate.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => plannedstartdate.GetHashCode();
-
-		public System.Type GetType()
-			 => plannedstartdate.GetType();
 
 
 

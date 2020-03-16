@@ -46,18 +46,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarguideline;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarguideline.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarguideline.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarguideline.GetType();
-
-		public System.String ToString()
-			 => rebarguideline.ToString();
-
 
 
 

@@ -37,18 +37,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
 			 => distance.PointToPlane(Point.GetTSObject(), Plane.GetTSObject());
 
-		public System.Boolean Equals(System.Object obj)
-			 => distance.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => distance.GetHashCode();
-
-		public System.Type GetType()
-			 => distance.GetType();
-
-		public System.String ToString()
-			 => distance.ToString();
-
 
 
 

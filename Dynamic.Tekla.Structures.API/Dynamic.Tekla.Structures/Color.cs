@@ -53,18 +53,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public dynamic GetTSObject() => color;
 
-		public System.Boolean Equals(System.Object obj)
-			 => color.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => color.GetHashCode();
-
-		public System.Type GetType()
-			 => color.GetType();
-
-		public System.String ToString()
-			 => color.ToString();
-
 
 
 

@@ -471,21 +471,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => logicalweld.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => logicalweld.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => logicalweld.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => logicalweld.GetHashCode();
-
-		public System.Type GetType()
-			 => logicalweld.GetType();
-
-		public System.String ToString()
-			 => logicalweld.ToString();
-
 
 
 

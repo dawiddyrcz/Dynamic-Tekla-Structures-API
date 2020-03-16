@@ -205,21 +205,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 CompareTo(System.Object obj)
 			 => rebarenddetailmodifier.CompareTo(obj);
 
-		public System.Boolean Equals(Dynamic.Tekla.Structures.Model.ModelObject other)
-			 => rebarenddetailmodifier.Equals(other.GetTSObject());
-
-		public System.Boolean Equals(System.Object obj)
-			 => rebarenddetailmodifier.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarenddetailmodifier.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarenddetailmodifier.GetType();
-
-		public System.String ToString()
-			 => rebarenddetailmodifier.ToString();
-
 
 
 

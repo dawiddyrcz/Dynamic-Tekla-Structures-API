@@ -84,23 +84,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Exception GetBaseException()
 			 => undefinedcurvedirectionexception.GetBaseException();
 
-		public System.String ToString()
-			 => undefinedcurvedirectionexception.ToString();
-
-		public System.Type GetType()
-			 => undefinedcurvedirectionexception.GetType();
-
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
 			 => undefinedcurvedirectionexception.GetObjectData(info, context);
-
-		public System.Boolean Equals(System.Object obj)
-			 => undefinedcurvedirectionexception.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => undefinedcurvedirectionexception.GetHashCode();
-
-		public System.Type GetType()
-			 => undefinedcurvedirectionexception.GetType();
 
 
 

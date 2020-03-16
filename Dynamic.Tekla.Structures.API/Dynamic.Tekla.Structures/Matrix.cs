@@ -47,18 +47,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix A, Dynamic.Tekla.Structures.Geometry3d.Point p)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(matrix.op_Multiply(A.GetTSObject(), p.GetTSObject()));
 
-		public System.String ToString()
-			 => matrix.ToString();
-
-		public System.Boolean Equals(System.Object obj)
-			 => matrix.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => matrix.GetHashCode();
-
-		public System.Type GetType()
-			 => matrix.GetType();
-
 
 
 

@@ -67,18 +67,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarspacingzone;
 
-		public System.Boolean Equals(System.Object obj)
-			 => rebarspacingzone.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => rebarspacingzone.GetHashCode();
-
-		public System.Type GetType()
-			 => rebarspacingzone.GetType();
-
-		public System.String ToString()
-			 => rebarspacingzone.ToString();
-
 
 
 

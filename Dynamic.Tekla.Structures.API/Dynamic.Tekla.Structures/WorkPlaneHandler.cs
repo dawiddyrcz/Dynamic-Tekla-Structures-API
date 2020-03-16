@@ -31,18 +31,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane)
 			 => workplanehandler.SetCurrentTransformationPlane(TransformationPlane.GetTSObject());
 
-		public System.Boolean Equals(System.Object obj)
-			 => workplanehandler.Equals(obj);
-
-		public System.Int32 GetHashCode()
-			 => workplanehandler.GetHashCode();
-
-		public System.Type GetType()
-			 => workplanehandler.GetType();
-
-		public System.String ToString()
-			 => workplanehandler.ToString();
-
 
 
 

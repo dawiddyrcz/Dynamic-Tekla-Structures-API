@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { hierarchicdefinition.HierarchicChildren = value; }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => hierarchicdefinition.ModificationTime;
 			set { hierarchicdefinition.ModificationTime = value; }

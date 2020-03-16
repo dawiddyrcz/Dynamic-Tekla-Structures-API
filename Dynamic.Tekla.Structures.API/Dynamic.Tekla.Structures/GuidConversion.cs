@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public dynamic GetTSObject() => guidconversion;
 
-		public System.Collections.Generic.DictionarySystem.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Guid, System.Guid> GetGuidMapping()
+		public System.Collections.Generic.DictionarySystem.Guid<System.Guid, System.Guid> GetGuidMapping()
 			 => guidconversion.GetGuidMapping();
 
 		public System.Guid GetNewGuid(System.Guid oldGuid)

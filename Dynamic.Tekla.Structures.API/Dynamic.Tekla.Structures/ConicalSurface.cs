@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class ConicalSurface 
     {
 
-		public System.TupleSystem.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Double, System.Double> Radiuses
+		public System.TupleSystem.Double<System.Double, System.Double> Radiuses
 		{
 			get => conicalsurface.Radiuses;
 			set { conicalsurface.Radiuses = value; }
@@ -55,13 +55,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { conicalsurface.RotationAxis = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
 			get => conicalsurface.LateralBoundary1;
 			set { conicalsurface.LateralBoundary1 = value; }
 		}
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
 			get => conicalsurface.LateralBoundary2;
 			set { conicalsurface.LateralBoundary2 = value; }

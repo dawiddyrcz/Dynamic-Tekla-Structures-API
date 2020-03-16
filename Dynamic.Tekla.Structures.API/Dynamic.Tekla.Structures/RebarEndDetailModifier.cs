@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarenddetailmodifier.RebarCranking = value.GetTSObject(); }
 		}
 
-		public System.NullableTekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType
+		public Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum EndType
 		{
 			get => rebarenddetailmodifier.EndType;
 			set { rebarenddetailmodifier.EndType = value; }
@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarenddetailmodifier.FirstAffectedBar = value; }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => rebarenddetailmodifier.ModificationTime;
 			set { rebarenddetailmodifier.ModificationTime = value; }

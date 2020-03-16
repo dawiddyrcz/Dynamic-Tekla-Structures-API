@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures
     public sealed class TeklaStructuresFiles 
     {
 
-		public System.Collections.Generic.ListSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.String> PropertyFileDirectories
+		public System.Collections.Generic.ListSystem.String<System.String> PropertyFileDirectories
 		{
 			get => teklastructuresfiles.PropertyFileDirectories;
 			set { teklastructuresfiles.PropertyFileDirectories = value; }
@@ -32,13 +32,13 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => teklastructuresfiles;
 
-		public System.Collections.Generic.ListSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
+		public System.Collections.Generic.ListSystem.String<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
 			 => teklastructuresfiles.GetMultiDirectoryFileList(fileExtension, fullpath);
 
 		public System.IO.FileInfo GetAttributeFile(System.String fileName)
 			 => teklastructuresfiles.GetAttributeFile(fileName);
 
-		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.ListSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.String> searchDirectories, System.String fileName)
+		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.ListSystem.String<System.String> searchDirectories, System.String fileName)
 			 => teklastructuresfiles.GetAttributeFile(searchDirectories, fileName);
 
 		public System.Boolean Equals(System.Object obj)

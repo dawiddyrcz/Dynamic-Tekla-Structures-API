@@ -108,8 +108,8 @@ namespace Dynamic.Tekla.Structures
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 			 => invalidpathcallback.Invoke(advancedOption, invalidString, exceptionMessage);
 
-		public System.IAsyncResult BeginInvoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage, System.AsyncCallback callback, System.Object object)
-			 => invalidpathcallback.BeginInvoke(advancedOption, invalidString, exceptionMessage, callback, object);
+		public System.IAsyncResult BeginInvoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage, System.AsyncCallback callback, System.Object @object)
+			 => invalidpathcallback.BeginInvoke(advancedOption, invalidString, exceptionMessage, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => invalidpathcallback.EndInvoke(result);

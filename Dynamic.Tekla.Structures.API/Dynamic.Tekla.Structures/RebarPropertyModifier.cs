@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarpropertymodifier.RebarProperties = value.GetTSObject(); }
 		}
 
-		public System.NullableTekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType
+		public Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum GroupingType
 		{
 			get => rebarpropertymodifier.GroupingType;
 			set { rebarpropertymodifier.GroupingType = value; }
@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarpropertymodifier.FirstAffectedBar = value; }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => rebarpropertymodifier.ModificationTime;
 			set { rebarpropertymodifier.ModificationTime = value; }

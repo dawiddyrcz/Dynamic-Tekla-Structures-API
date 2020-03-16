@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarSpacing 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarSpacingZone, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
+		public System.Collections.Generic.ListTekla.Structures.Model.RebarSpacingZone<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
 		{
 			get => rebarspacing.Zones;
 			set { rebarspacing.Zones = value; }

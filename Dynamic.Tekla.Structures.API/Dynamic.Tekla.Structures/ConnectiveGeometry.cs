@@ -31,13 +31,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
 			 => new Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator(connectivegeometry.GetGeometryEnumerator());
 
-		public System.Collections.Generic.IListTekla.Structures.Model.GeometrySection, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.GeometrySection> GetNeighborSections(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
+		public System.Collections.Generic.IListTekla.Structures.Model.GeometrySection<Dynamic.Tekla.Structures.Model.GeometrySection> GetNeighborSections(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
 			 => connectivegeometry.GetNeighborSections(geometrySection.GetTSObject());
 
-		public System.Collections.Generic.IListTekla.Structures.Model.GeometrySection, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.GeometrySection> GetGeometryLegSections()
+		public System.Collections.Generic.IListTekla.Structures.Model.GeometrySection<Dynamic.Tekla.Structures.Model.GeometrySection> GetGeometryLegSections()
 			 => connectivegeometry.GetGeometryLegSections();
 
-		public System.Collections.Generic.IListTekla.Structures.Geometry3d.LineSegment, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.LineSegment> GetConnection(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection1, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection2)
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.LineSegment<Dynamic.Tekla.Structures.Geometry3d.LineSegment> GetConnection(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection1, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection2)
 			 => connectivegeometry.GetConnection(geometrySection1.GetTSObject(), geometrySection2.GetTSObject());
 
 		public System.Boolean Equals(System.Object obj)

@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public void Invoke(System.Int32 nClashes)
 			 => clashcheckdonedelegate.Invoke(nClashes);
 
-		public System.IAsyncResult BeginInvoke(System.Int32 nClashes, System.AsyncCallback callback, System.Object object)
-			 => clashcheckdonedelegate.BeginInvoke(nClashes, callback, object);
+		public System.IAsyncResult BeginInvoke(System.Int32 nClashes, System.AsyncCallback callback, System.Object @object)
+			 => clashcheckdonedelegate.BeginInvoke(nClashes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashcheckdonedelegate.EndInvoke(result);
@@ -156,8 +156,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
 			 => clashdetecteddelegate.Invoke(ClashData.GetTSObject());
 
-		public System.IAsyncResult BeginInvoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData, System.AsyncCallback callback, System.Object object)
-			 => clashdetecteddelegate.BeginInvoke(ClashData.GetTSObject(), callback, object);
+		public System.IAsyncResult BeginInvoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData, System.AsyncCallback callback, System.Object @object)
+			 => clashdetecteddelegate.BeginInvoke(ClashData.GetTSObject(), callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashdetecteddelegate.EndInvoke(result);

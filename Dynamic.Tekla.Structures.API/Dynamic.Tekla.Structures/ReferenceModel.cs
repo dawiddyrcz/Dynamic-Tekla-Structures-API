@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { referencemodel.VersionGUID = value; }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => referencemodel.ModificationTime;
 			set { referencemodel.ModificationTime = value; }
@@ -122,7 +122,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RefreshFile()
 			 => referencemodel.RefreshFile();
 
-		public System.Collections.Generic.ListTekla.Structures.Model.ReferenceModel.Revision, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
+		public System.Collections.Generic.ListTekla.Structures.Model.ReferenceModel.Revision<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
 			 => referencemodel.GetRevisions();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)

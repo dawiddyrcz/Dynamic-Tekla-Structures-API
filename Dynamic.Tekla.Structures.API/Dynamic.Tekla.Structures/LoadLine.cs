@@ -145,7 +145,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loadline.Group = value.GetTSObject(); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => loadline.ModificationTime;
 			set { loadline.ModificationTime = value; }

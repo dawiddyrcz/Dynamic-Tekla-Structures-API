@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { numberingseriesnullable.Prefix = value; }
 		}
 
-		public System.NullableSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Int32> StartNumber
+		public System.Int32 StartNumber
 		{
 			get => numberingseriesnullable.StartNumber;
 			set { numberingseriesnullable.StartNumber = value; }

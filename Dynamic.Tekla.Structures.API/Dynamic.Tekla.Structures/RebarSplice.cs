@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarsplice.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(value); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => rebarsplice.ModificationTime;
 			set { rebarsplice.ModificationTime = value; }

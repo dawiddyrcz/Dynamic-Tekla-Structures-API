@@ -283,7 +283,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { weld.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(value); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => weld.ModificationTime;
 			set { weld.ModificationTime = value; }

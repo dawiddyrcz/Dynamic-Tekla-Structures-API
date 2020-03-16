@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { baserebarmodifier.FirstAffectedBar = value; }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => baserebarmodifier.ModificationTime;
 			set { baserebarmodifier.ModificationTime = value; }

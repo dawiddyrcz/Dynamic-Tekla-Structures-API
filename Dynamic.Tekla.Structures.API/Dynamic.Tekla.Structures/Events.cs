@@ -240,8 +240,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => selectionchangedelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => selectionchangedelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => selectionchangedelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => selectionchangedelegate.EndInvoke(result);
@@ -315,8 +315,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status)
 			 => commandstatuschangedelegate.Invoke(TSCommand, TSCommandParam, Status);
 
-		public System.IAsyncResult BeginInvoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status, System.AsyncCallback callback, System.Object object)
-			 => commandstatuschangedelegate.BeginInvoke(TSCommand, TSCommandParam, Status, callback, object);
+		public System.IAsyncResult BeginInvoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status, System.AsyncCallback callback, System.Object @object)
+			 => commandstatuschangedelegate.BeginInvoke(TSCommand, TSCommandParam, Status, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => commandstatuschangedelegate.EndInvoke(result);
@@ -390,8 +390,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke(System.String Category, System.String Name, System.String Content)
 			 => trackeventdelegate.Invoke(Category, Name, Content);
 
-		public System.IAsyncResult BeginInvoke(System.String Category, System.String Name, System.String Content, System.AsyncCallback callback, System.Object object)
-			 => trackeventdelegate.BeginInvoke(Category, Name, Content, callback, object);
+		public System.IAsyncResult BeginInvoke(System.String Category, System.String Name, System.String Content, System.AsyncCallback callback, System.Object @object)
+			 => trackeventdelegate.BeginInvoke(Category, Name, Content, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => trackeventdelegate.EndInvoke(result);
@@ -465,8 +465,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => modelsavedelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => modelsavedelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => modelsavedelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelsavedelegate.EndInvoke(result);
@@ -540,8 +540,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => modelsaveasdelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => modelsaveasdelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => modelsaveasdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelsaveasdelegate.EndInvoke(result);
@@ -615,8 +615,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => modelloaddelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => modelloaddelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => modelloaddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelloaddelegate.EndInvoke(result);
@@ -690,8 +690,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => numberingdelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => numberingdelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => numberingdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => numberingdelegate.EndInvoke(result);
@@ -765,8 +765,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => modelchangeddelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => modelchangeddelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => modelchangeddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelchangeddelegate.EndInvoke(result);
@@ -837,11 +837,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => modelobjectnumbereddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
+		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
 			 => modelobjectnumbereddelegate.Invoke(Objects);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject> Objects, System.AsyncCallback callback, System.Object object)
-			 => modelobjectnumbereddelegate.BeginInvoke(Objects, callback, object);
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> Objects, System.AsyncCallback callback, System.Object @object)
+			 => modelobjectnumbereddelegate.BeginInvoke(Objects, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelobjectnumbereddelegate.EndInvoke(result);
@@ -912,11 +912,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => modelobjectchangeddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
+		public void Invoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
 			 => modelobjectchangeddelegate.Invoke(Changes);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ChangeData> Changes, System.AsyncCallback callback, System.Object object)
-			 => modelobjectchangeddelegate.BeginInvoke(Changes, callback, object);
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Model.ChangeData<Dynamic.Tekla.Structures.Model.ChangeData> Changes, System.AsyncCallback callback, System.Object @object)
+			 => modelobjectchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelobjectchangeddelegate.EndInvoke(result);
@@ -990,8 +990,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => teklastructuresexitdelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => teklastructuresexitdelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => teklastructuresexitdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => teklastructuresexitdelegate.EndInvoke(result);
@@ -1065,8 +1065,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke(System.Int32 NumbersOfClashes)
 			 => clashcheckdonedelegate.Invoke(NumbersOfClashes);
 
-		public System.IAsyncResult BeginInvoke(System.Int32 NumbersOfClashes, System.AsyncCallback callback, System.Object object)
-			 => clashcheckdonedelegate.BeginInvoke(NumbersOfClashes, callback, object);
+		public System.IAsyncResult BeginInvoke(System.Int32 NumbersOfClashes, System.AsyncCallback callback, System.Object @object)
+			 => clashcheckdonedelegate.BeginInvoke(NumbersOfClashes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashcheckdonedelegate.EndInvoke(result);
@@ -1140,8 +1140,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
 			 => clashdetecteddelegate.Invoke(ClashData.GetTSObject());
 
-		public System.IAsyncResult BeginInvoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData, System.AsyncCallback callback, System.Object object)
-			 => clashdetecteddelegate.BeginInvoke(ClashData.GetTSObject(), callback, object);
+		public System.IAsyncResult BeginInvoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData, System.AsyncCallback callback, System.Object @object)
+			 => clashdetecteddelegate.BeginInvoke(ClashData.GetTSObject(), callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashdetecteddelegate.EndInvoke(result);
@@ -1212,11 +1212,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => pointinputchangeddelegate;
 
-		public void Invoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
+		public void Invoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
 			 => pointinputchangeddelegate.Invoke(Changes);
 
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Point> Changes, System.AsyncCallback callback, System.Object object)
-			 => pointinputchangeddelegate.BeginInvoke(Changes, callback, object);
+		public System.IAsyncResult BeginInvoke(System.Collections.Generic.ListTekla.Structures.Geometry3d.Point<Dynamic.Tekla.Structures.Geometry3d.Point> Changes, System.AsyncCallback callback, System.Object @object)
+			 => pointinputchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => pointinputchangeddelegate.EndInvoke(result);
@@ -1290,8 +1290,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void Invoke()
 			 => interrupteddelegate.Invoke();
 
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object object)
-			 => interrupteddelegate.BeginInvoke(callback, object);
+		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
+			 => interrupteddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => interrupteddelegate.EndInvoke(result);

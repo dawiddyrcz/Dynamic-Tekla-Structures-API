@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
 			 => new Dynamic.Tekla.Structures.Model.ModelObject(model.SelectModelObject(ID.GetTSObject()));
 
-		public System.Collections.Generic.ListTekla.Structures.Model.ModelObject, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.ListSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.String> Guids, System.Boolean SelectInstances)
+		public System.Collections.Generic.ListTekla.Structures.Model.ModelObject<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.ListSystem.String<System.String> Guids, System.Boolean SelectInstances)
 			 => model.FetchModelObjects(Guids, SelectInstances);
 
 		public Dynamic.Tekla.Structures.Identifier GetIdentifierByGUID(System.String guid)

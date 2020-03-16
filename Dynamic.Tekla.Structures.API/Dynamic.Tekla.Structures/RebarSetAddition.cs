@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class RebarSetAddition 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Model.RebarLegFace, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
+		public System.Collections.Generic.ListTekla.Structures.Model.RebarLegFace<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
 		{
 			get => rebarsetaddition.LegFaces;
 			set { rebarsetaddition.LegFaces = value; }
@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { rebarsetaddition.Father = value.GetTSObject(); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => rebarsetaddition.ModificationTime;
 			set { rebarsetaddition.ModificationTime = value; }

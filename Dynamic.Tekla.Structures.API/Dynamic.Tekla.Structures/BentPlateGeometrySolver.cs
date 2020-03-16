@@ -52,7 +52,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection legSection)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.RemoveLeg(geometry.GetTSObject(), legSection.GetTSObject()));
 
-		public System.Collections.Generic.IListTekla.Structures.Model.ConnectiveGeometry, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
+		public System.Collections.Generic.IListTekla.Structures.Model.ConnectiveGeometry<Dynamic.Tekla.Structures.Model.ConnectiveGeometry> Split(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
 			 => bentplategeometrysolver.Split(geometry.GetTSObject(), geometrySection.GetTSObject());
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection bendSection, Dynamic.Tekla.Structures.Model.BendSurface surface)

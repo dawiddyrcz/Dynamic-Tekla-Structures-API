@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
 			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.TakeModifications(Name, PrevStamp.GetTSObject()));
 
-		public Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifications(System.String Name, System.Collections.Generic.IEnumerableTekla.Structures.Model.ModelObject.ModelObjectEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
+		public Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifications(System.String Name, System.Collections.Generic.IEnumerableTekla.Structures.Model.ModelObject.ModelObjectEnum<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
 			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.TakeModifications(Name, ObjectTypes, PrevStamp.GetTSObject()));
 
 		public void UpdateModificationStampToLatest(System.String modificationStampKey)
@@ -58,7 +58,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
 			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.GetModifications(Name, PrevStamp.GetTSObject()));
 
-		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, System.Collections.Generic.IEnumerableTekla.Structures.Model.ModelObject.ModelObjectEnum, Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
+		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, System.Collections.Generic.IEnumerableTekla.Structures.Model.ModelObject.ModelObjectEnum<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
 			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.GetModifications(Name, ObjectTypes, PrevStamp.GetTSObject()));
 
 		public System.Boolean Equals(System.Object obj)

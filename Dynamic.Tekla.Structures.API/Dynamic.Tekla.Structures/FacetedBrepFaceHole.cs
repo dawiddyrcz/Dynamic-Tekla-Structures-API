@@ -19,13 +19,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { facetedbrepfacehole.IsReadOnly = value; }
 		}
 
-		public System.Collections.Generic.IListSystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Int32> VerticeIndexes
+		public System.Collections.Generic.IListSystem.Int32<System.Int32> VerticeIndexes
 		{
 			get => facetedbrepfacehole.VerticeIndexes;
 			set { facetedbrepfacehole.VerticeIndexes = value; }
 		}
 
-		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => facetedbrepfacehole.Vertices;
 			set { facetedbrepfacehole.Vertices = value; }

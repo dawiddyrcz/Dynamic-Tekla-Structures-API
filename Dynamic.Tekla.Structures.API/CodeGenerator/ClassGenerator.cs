@@ -23,6 +23,8 @@ namespace CodeGenerator
             
             if (type.Name.ToLower().Equals("object", StringComparison.InvariantCulture))
                 outputText = outputText.Replace("$dfield", "@object");
+            else if (type.Name.ToLower().Equals("class", StringComparison.InvariantCulture))
+                outputText = outputText.Replace("$dfield", "@class");
             else
                 outputText = outputText.Replace("$dfield", type.Name.ToLower());
             
@@ -104,11 +106,15 @@ namespace CodeGenerator
 
                     foreach (var param in method.GetParameters())
                     {
+                        var paramName = param.Name;
+                        if (paramName.Equals("object", StringComparison.InvariantCulture))
+                            paramName = "@object";
+
                         if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
                         sb.Append(GetTypeFullName(param.ParameterType));
                         sb.Append(" ");
-                        sb.Append(param.Name);
+                        sb.Append(paramName);
                         sb.Append(", ");
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
@@ -120,10 +126,14 @@ namespace CodeGenerator
 
                     foreach (var param in method.GetParameters())
                     {
+                        var paramName = param.Name;
+                        if (paramName.Equals("object", StringComparison.InvariantCulture))
+                            paramName = "@object";
+
                         if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
                         
-                        sb.Append(param.Name);
+                        sb.Append(paramName);
                         if (IsTeklaType(param.ParameterType))
                             sb.Append(".GetTSObject()");
                         sb.Append(", ");
@@ -204,11 +214,17 @@ namespace CodeGenerator
             {
                 sb.Append("Dynamic.");
             }
-            
-            string typeName = type.FullName.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
+
+            var fullName = type.FullName;
+            if (fullName.Contains(","))
+            {
+                fullName = fullName.Split(',')[0];
+            }
+
+            string typeName = fullName.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
             typeName = typeName.Replace("[", "").Replace("]", "");
 
-            if (type.IsGenericType)
+            if (type.IsGenericType && !typeName.StartsWith("System.Nullable"))
             {
                 sb.Append(typeName);
                 sb.Append("<");
@@ -221,12 +237,14 @@ namespace CodeGenerator
                     sb.Append(GetTypeFullName(generictype));
                     i++;
                 }
-
-                sb.Replace("+", ".");
+                
                 sb.Append(">");
             }
             else
+            {
+                typeName = typeName.Replace("System.Nullable", "");
                 sb.Append(typeName);
+            }
 
             sb.Replace("&", "");
             sb.Replace("+", ".");

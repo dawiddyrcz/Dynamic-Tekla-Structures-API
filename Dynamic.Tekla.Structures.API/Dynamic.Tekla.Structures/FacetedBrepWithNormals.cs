@@ -13,13 +13,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { facetedbrepwithnormals.Normals = value.GetTSObject(); }
 		}
 
-		public System.Collections.Generic.ICollectionTekla.Structures.Geometry3d.FacetedBrepFace, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
+		public System.Collections.Generic.ICollectionTekla.Structures.Geometry3d.FacetedBrepFace<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
 		{
 			get => facetedbrepwithnormals.Faces;
 			set { facetedbrepwithnormals.Faces = value; }
 		}
 
-		public System.Collections.Generic.IDictionarySystem.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089,System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.Int32, System.Int32> InnerWires
+		public System.Collections.Generic.IDictionarySystem.Int32<System.Int32, System.Int32> InnerWires
 		{
 			get => facetedbrepwithnormals.InnerWires;
 			set { facetedbrepwithnormals.InnerWires = value; }
@@ -31,13 +31,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { facetedbrepwithnormals.OuterWires = value; }
 		}
 
-		public System.Collections.Generic.IListTekla.Structures.Geometry3d.IndirectPolymeshEdge, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.IndirectPolymeshEdge<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
 		{
 			get => facetedbrepwithnormals.GetEdges;
 			set { facetedbrepwithnormals.GetEdges = value; }
 		}
 
-		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+		public System.Collections.Generic.IListTekla.Structures.Geometry3d.Vector<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => facetedbrepwithnormals.Vertices;
 			set { facetedbrepwithnormals.Vertices = value; }

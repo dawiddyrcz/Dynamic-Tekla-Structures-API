@@ -7,7 +7,7 @@ namespace Dynamic.Tekla.Structures.Model
     public sealed class LoftedPlate 
     {
 
-		public System.Collections.Generic.ListTekla.Structures.Geometry3d.ICurve, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
+		public System.Collections.Generic.ListTekla.Structures.Geometry3d.ICurve<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
 		{
 			get => loftedplate.BaseCurves;
 			set { loftedplate.BaseCurves = value; }
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { loftedplate.Position = value.GetTSObject(); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => loftedplate.ModificationTime;
 			set { loftedplate.ModificationTime = value; }

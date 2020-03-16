@@ -205,33 +205,33 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        dynamic class;
+        dynamic @class;
         
         public Class()
         {
-            this.class =  new Tekla.Structures.Filtering.Categories.Class();
+            this.@class =  new Tekla.Structures.Filtering.Categories.Class();
         }
 
         public Class(dynamic tsObject)
         {
-            this.class = tsObject;
+            this.@class = tsObject;
 
         }
 
 
-        public dynamic GetTSObject() => class;
+        public dynamic GetTSObject() => @class;
 
 		public System.String ToString()
-			 => class.ToString();
+			 => @class.ToString();
 
 		public System.Boolean Equals(System.Object obj)
-			 => class.Equals(obj);
+			 => @class.Equals(obj);
 
 		public System.Int32 GetHashCode()
-			 => class.GetHashCode();
+			 => @class.GetHashCode();
 
 		public System.Type GetType()
-			 => class.GetType();
+			 => @class.GetType();
 
 
 

@@ -52,7 +52,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean Equals(Dynamic.Tekla.Structures.Geometry3d.ICurve other)
 			 => polycurve.Equals(other.GetTSObject());
 
-		public System.Collections.Generic.IEnumeratorTekla.Structures.Geometry3d.ICurve, Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114<Dynamic.Tekla.Structures.Geometry3d.ICurve> GetEnumerator()
+		public System.Collections.Generic.IEnumeratorTekla.Structures.Geometry3d.ICurve<Dynamic.Tekla.Structures.Geometry3d.ICurve> GetEnumerator()
 			 => polycurve.GetEnumerator();
 
 		public System.Boolean Equals(System.Object obj)

@@ -109,7 +109,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { singlerebar.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
 		}
 
-		public System.NullableSystem.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089<System.DateTime> ModificationTime
+		public System.DateTime ModificationTime
 		{
 			get => singlerebar.ModificationTime;
 			set { singlerebar.ModificationTime = value; }

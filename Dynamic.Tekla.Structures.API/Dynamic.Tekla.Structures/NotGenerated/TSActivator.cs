@@ -2,11 +2,20 @@
 
 namespace Dynamic.Tekla.Structures
 {
-    public class TSActivator
+    public static class TSActivator
     {
-        public static Type CreateInstance(string name)
+        public static dynamic CreateInstance(string typeName)
         {
-            throw new NotImplementedException();
+            if (typeName.Contains("Tekla.Structures.Model"))
+            {
+                string fileTS = @"E:\prog\sharp\Dynamic-Tekla-Structures-API\Dynamic.Tekla.Structures.API\CodeGenerator\Tekla.Structures.Model.dll";
+                return Activator.CreateInstanceFrom(fileTS, typeName).Unwrap();
+            }
+            else
+            {
+                string fileTS = @"E:\prog\sharp\Dynamic-Tekla-Structures-API\Dynamic.Tekla.Structures.API\CodeGenerator\Tekla.Structures.dll";
+                return Activator.CreateInstanceFrom(fileTS, typeName).Unwrap();
+            }
         }
     }
 }

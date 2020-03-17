@@ -9,19 +9,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(clipplane.Location.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(clipplane.Location);
 			set { clipplane.Location = value.GetTSObject(); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(clipplane.UpVector.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(clipplane.UpVector);
 			set { clipplane.UpVector = value.GetTSObject(); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.View(clipplane.View.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Model.UI.View(clipplane.View);
 			set { clipplane.View = value.GetTSObject(); }
 		}
 

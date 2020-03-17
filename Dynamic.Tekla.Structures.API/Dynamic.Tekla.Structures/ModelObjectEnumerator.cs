@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Current
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(modelobjectenumerator.Current.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Model.ModelObject(modelobjectenumerator.Current);
 			set { modelobjectenumerator.Current = value.GetTSObject(); }
 		}
 
@@ -37,9 +37,6 @@ namespace Dynamic.Tekla.Structures.Model
         public ModelObjectEnumerator(dynamic tsObject)
         {
             this.modelobjectenumerator = tsObject;
-			this.SelectInstances = modelobjectenumerator.SelectInstances;
-			this.AutoFetch = modelobjectenumerator.AutoFetch;
-			this.Current = new Dynamic.Tekla.Structures.Model.ModelObject(modelobjectenumerator.Current);
 
         }
 

@@ -55,12 +55,6 @@ namespace Dynamic.Tekla.Structures.Model
         public ModelInfo(dynamic tsObject)
         {
             this.modelinfo = tsObject;
-			this.NorthDirection = modelinfo.NorthDirection;
-			this.ModelPath = modelinfo.ModelPath;
-			this.ModelName = modelinfo.ModelName;
-			this.CurrentPhase = modelinfo.CurrentPhase;
-			this.SharedModel = modelinfo.SharedModel;
-			this.SingleUserModel = modelinfo.SingleUserModel;
 
         }
 

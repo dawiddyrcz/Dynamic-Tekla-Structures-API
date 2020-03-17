@@ -192,7 +192,7 @@ namespace CodeGenerator
                         sb.Append(property.Name);
                         sb.Append("\n\t\t{" +
                             "\n\t\t\tget => new " + GetTypeFullName(property.PropertyType) + "($dfield." +
-                            "" + property.Name + ".GetTSObject());" +
+                            "" + property.Name + ");" +
                             "\n\t\t\tset { $dfield." + property.Name + " = value.GetTSObject(); }" +
                             "\n\t\t}\n\n");
                     }

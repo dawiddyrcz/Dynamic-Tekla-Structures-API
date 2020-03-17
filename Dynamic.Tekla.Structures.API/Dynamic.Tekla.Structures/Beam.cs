@@ -39,13 +39,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(beam.Profile.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Model.Profile(beam.Profile);
 			set { beam.Profile = value.GetTSObject(); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(beam.Material.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Model.Material(beam.Material);
 			set { beam.Material = value.GetTSObject(); }
 		}
 
@@ -99,7 +99,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(beam.Position.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Model.Position(beam.Position);
 			set { beam.Position = value.GetTSObject(); }
 		}
 
@@ -117,7 +117,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(beam.Identifier.GetTSObject());
+			get => new Dynamic.Tekla.Structures.Identifier(beam.Identifier);
 			set { beam.Identifier = value.GetTSObject(); }
 		}
 

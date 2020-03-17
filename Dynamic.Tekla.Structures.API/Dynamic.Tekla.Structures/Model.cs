@@ -61,9 +61,6 @@ namespace Dynamic.Tekla.Structures.Model
 			 => new Dynamic.Tekla.Structures.Model.ClashCheckHandler(model.GetClashCheckHandler());
 
 
-
-
-
     }
 
 }

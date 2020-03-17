@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures
         
         public TeklaStructuresSettings()
         {
-            this.teklastructuressettings =  new Tekla.Structures.TeklaStructuresSettings();
+            this.teklastructuressettings =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings");
         }
 
         public TeklaStructuresSettings(dynamic tsObject)
@@ -25,26 +25,26 @@ namespace Dynamic.Tekla.Structures
 
         public dynamic GetTSObject() => teklastructuressettings;
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Boolean Value)
-			 => teklastructuressettings.GetAdvancedOption(VariableName, ref Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, System.Boolean Value)
+			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Int32 Value)
-			 => teklastructuressettings.GetAdvancedOption(VariableName, ref Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, System.Int32 Value)
+			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.String Value)
-			 => teklastructuressettings.GetAdvancedOption(VariableName, ref Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, System.String Value)
+			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Double Value)
-			 => teklastructuressettings.GetAdvancedOption(VariableName, ref Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, System.Double Value)
+			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
 
-		public System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ClashCheckOptions Options)
-			 => teklastructuressettings.GetOptions(ref Options.GetTSObject());
+		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
+			 => teklastructuressettings.GetOptions(Options.GetTSObject());
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
 			 => teklastructuressettings.SetOptions(Options.GetTSObject());
 
-		public System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ComponentOptions Options)
-			 => teklastructuressettings.GetOptions(ref Options.GetTSObject());
+		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
+			 => teklastructuressettings.GetOptions(Options.GetTSObject());
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
 			 => teklastructuressettings.SetOptions(Options.GetTSObject());
@@ -79,7 +79,7 @@ namespace Dynamic.Tekla.Structures
         
         public InvalidPathCallback()
         {
-            this.invalidpathcallback =  new Tekla.Structures.InvalidPathCallback();
+            this.invalidpathcallback =  TSActivator.CreateInstance("Tekla.Structures.InvalidPathCallback");
         }
 
         public InvalidPathCallback(dynamic tsObject)
@@ -95,9 +95,6 @@ namespace Dynamic.Tekla.Structures
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 			 => invalidpathcallback.Invoke(advancedOption, invalidString, exceptionMessage);
-
-		public System.IAsyncResult BeginInvoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage, System.AsyncCallback callback, System.Object @object)
-			 => invalidpathcallback.BeginInvoke(advancedOption, invalidString, exceptionMessage, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => invalidpathcallback.EndInvoke(result);
@@ -130,7 +127,7 @@ namespace Dynamic.Tekla.Structures
         
         public ToolOptionNames()
         {
-            this.tooloptionnames =  new Tekla.Structures.ToolOptionNames();
+            this.tooloptionnames =  TSActivator.CreateInstance("Tekla.Structures.ToolOptionNames");
         }
 
         public ToolOptionNames(dynamic tsObject)

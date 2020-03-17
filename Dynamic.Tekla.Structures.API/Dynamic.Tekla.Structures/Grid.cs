@@ -145,7 +145,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Grid()
         {
-            this.grid =  new Tekla.Structures.Model.Grid();
+            this.grid =  TSActivator.CreateInstance("Tekla.Structures.Model.Grid");
         }
 
         public Grid(dynamic tsObject)
@@ -200,50 +200,50 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(grid.GetHierarchicObjects());
 
-		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
-			 => grid.GetAllUserProperties(ref values);
+		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
+			 => grid.GetAllUserProperties(values);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
-			 => grid.GetIntegerUserProperties(ref values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
+			 => grid.GetIntegerUserProperties(values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
-			 => grid.GetDoubleUserProperties(ref values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
+			 => grid.GetDoubleUserProperties(values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
-			 => grid.GetStringUserProperties(ref values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
+			 => grid.GetStringUserProperties(values);
 
-		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
-			 => grid.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
+			 => grid.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
-		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => grid.GetIntegerReportProperties(names, ref values);
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => grid.GetIntegerReportProperties(names, values);
 
-		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => grid.GetDoubleReportProperties(names, ref values);
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => grid.GetDoubleReportProperties(names, values);
 
-		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => grid.GetStringReportProperties(names, ref values);
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => grid.GetStringReportProperties(names, values);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.String value)
-			 => grid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.String value)
+			 => grid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.String value)
-			 => grid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.String value)
+			 => grid.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
-			 => grid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Double value)
+			 => grid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
-			 => grid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Double value)
+			 => grid.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
-			 => grid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
+			 => grid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
-			 => grid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
+			 => grid.GetReportProperty(name, value);
 
-		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
-			 => grid.GetDynamicStringProperty(name, ref value);
+		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
+			 => grid.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
 			 => grid.SetDynamicStringProperty(name, value);
@@ -263,8 +263,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
 			 => grid.SetPhase(phase.GetTSObject());
 
-		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
-			 => grid.GetPhase(ref phase.GetTSObject());
+		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => grid.GetPhase(phase.GetTSObject());
 
 		public System.Boolean SetLabel(System.String label)
 			 => grid.SetLabel(label);

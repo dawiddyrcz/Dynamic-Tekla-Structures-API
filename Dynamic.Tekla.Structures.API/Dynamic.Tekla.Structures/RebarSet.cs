@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarSet()
         {
-            this.rebarset =  new Tekla.Structures.Model.RebarSet();
+            this.rebarset =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSet");
         }
 
         public RebarSet(dynamic tsObject)
@@ -104,50 +104,50 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarset.GetHierarchicObjects());
 
-		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
-			 => rebarset.GetAllUserProperties(ref values);
+		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
+			 => rebarset.GetAllUserProperties(values);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
-			 => rebarset.GetIntegerUserProperties(ref values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
+			 => rebarset.GetIntegerUserProperties(values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
-			 => rebarset.GetDoubleUserProperties(ref values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
+			 => rebarset.GetDoubleUserProperties(values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
-			 => rebarset.GetStringUserProperties(ref values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
+			 => rebarset.GetStringUserProperties(values);
 
-		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
-			 => rebarset.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
+			 => rebarset.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
-		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarset.GetIntegerReportProperties(names, ref values);
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarset.GetIntegerReportProperties(names, values);
 
-		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarset.GetDoubleReportProperties(names, ref values);
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarset.GetDoubleReportProperties(names, values);
 
-		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarset.GetStringReportProperties(names, ref values);
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarset.GetStringReportProperties(names, values);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.String value)
-			 => rebarset.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.String value)
+			 => rebarset.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.String value)
-			 => rebarset.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.String value)
+			 => rebarset.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
-			 => rebarset.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Double value)
+			 => rebarset.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
-			 => rebarset.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Double value)
+			 => rebarset.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
-			 => rebarset.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
+			 => rebarset.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
-			 => rebarset.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
+			 => rebarset.GetReportProperty(name, value);
 
-		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
-			 => rebarset.GetDynamicStringProperty(name, ref value);
+		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
+			 => rebarset.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
 			 => rebarset.SetDynamicStringProperty(name, value);
@@ -167,8 +167,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
 			 => rebarset.SetPhase(phase.GetTSObject());
 
-		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarset.GetPhase(ref phase.GetTSObject());
+		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => rebarset.GetPhase(phase.GetTSObject());
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarset.SetLabel(label);

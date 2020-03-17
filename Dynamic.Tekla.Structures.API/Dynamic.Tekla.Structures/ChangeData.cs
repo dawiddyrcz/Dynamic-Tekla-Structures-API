@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ChangeData()
         {
-            this.changedata =  new Tekla.Structures.Model.ChangeData();
+            this.changedata =  TSActivator.CreateInstance("Tekla.Structures.Model.ChangeData");
         }
 
         public ChangeData(dynamic tsObject)

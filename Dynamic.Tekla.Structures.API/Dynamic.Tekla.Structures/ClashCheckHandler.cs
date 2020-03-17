@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ClashCheckHandler()
         {
-            this.clashcheckhandler =  new Tekla.Structures.Model.ClashCheckHandler();
+            this.clashcheckhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckHandler");
         }
 
         public ClashCheckHandler(dynamic tsObject)

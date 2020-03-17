@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Model()
         {
-            this.model =  new Tekla.Structures.Model.Model();
+            this.model =  TSActivator.CreateInstance("Tekla.Structures.Model.Model");
         }
 
         public Model(dynamic tsObject)
@@ -36,11 +36,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.PhaseCollection GetPhases()
 			 => new Dynamic.Tekla.Structures.Model.PhaseCollection(model.GetPhases());
-
-		public Dynamic.Tekla.Structures.Model.ModelObjectSelector GetModelObjectSelector()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectSelector(model.GetModelObjectSelector());
-
-		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
+	public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
 			 => new Dynamic.Tekla.Structures.Model.ModelObject(model.SelectModelObject(ID.GetTSObject()));
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)

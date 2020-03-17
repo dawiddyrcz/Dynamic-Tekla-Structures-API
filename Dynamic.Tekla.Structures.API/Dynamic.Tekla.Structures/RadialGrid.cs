@@ -139,7 +139,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RadialGrid()
         {
-            this.radialgrid =  new Tekla.Structures.Model.RadialGrid();
+            this.radialgrid =  TSActivator.CreateInstance("Tekla.Structures.Model.RadialGrid");
         }
 
         public RadialGrid(dynamic tsObject)
@@ -193,50 +193,50 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(radialgrid.GetHierarchicObjects());
 
-		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
-			 => radialgrid.GetAllUserProperties(ref values);
+		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
+			 => radialgrid.GetAllUserProperties(values);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
-			 => radialgrid.GetIntegerUserProperties(ref values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
+			 => radialgrid.GetIntegerUserProperties(values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
-			 => radialgrid.GetDoubleUserProperties(ref values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
+			 => radialgrid.GetDoubleUserProperties(values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
-			 => radialgrid.GetStringUserProperties(ref values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
+			 => radialgrid.GetStringUserProperties(values);
 
-		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
-			 => radialgrid.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
+			 => radialgrid.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
-		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => radialgrid.GetIntegerReportProperties(names, ref values);
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => radialgrid.GetIntegerReportProperties(names, values);
 
-		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => radialgrid.GetDoubleReportProperties(names, ref values);
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => radialgrid.GetDoubleReportProperties(names, values);
 
-		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => radialgrid.GetStringReportProperties(names, ref values);
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => radialgrid.GetStringReportProperties(names, values);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.String value)
-			 => radialgrid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.String value)
+			 => radialgrid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.String value)
-			 => radialgrid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.String value)
+			 => radialgrid.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
-			 => radialgrid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Double value)
+			 => radialgrid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
-			 => radialgrid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Double value)
+			 => radialgrid.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
-			 => radialgrid.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
+			 => radialgrid.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
-			 => radialgrid.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
+			 => radialgrid.GetReportProperty(name, value);
 
-		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
-			 => radialgrid.GetDynamicStringProperty(name, ref value);
+		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
+			 => radialgrid.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
 			 => radialgrid.SetDynamicStringProperty(name, value);
@@ -256,8 +256,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
 			 => radialgrid.SetPhase(phase.GetTSObject());
 
-		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
-			 => radialgrid.GetPhase(ref phase.GetTSObject());
+		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => radialgrid.GetPhase(phase.GetTSObject());
 
 		public System.Boolean SetLabel(System.String label)
 			 => radialgrid.SetLabel(label);

@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Chamfer()
         {
-            this.chamfer =  new Tekla.Structures.Model.Chamfer();
+            this.chamfer =  TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer");
         }
 
         public Chamfer(dynamic tsObject)

@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public CoordinateSystem()
         {
-            this.coordinatesystem =  new Tekla.Structures.Geometry3d.CoordinateSystem();
+            this.coordinatesystem =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem");
         }
 
         public CoordinateSystem(dynamic tsObject)

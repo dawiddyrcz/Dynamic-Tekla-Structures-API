@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public Color()
         {
-            this.color =  new Tekla.Structures.Model.UI.Color();
+            this.color =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color");
         }
 
         public Color(dynamic tsObject)

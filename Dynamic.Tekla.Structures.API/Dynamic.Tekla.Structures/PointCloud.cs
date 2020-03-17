@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PointCloud()
         {
-            this.pointcloud =  new Tekla.Structures.Model.PointCloud();
+            this.pointcloud =  TSActivator.CreateInstance("Tekla.Structures.Model.PointCloud");
         }
 
         public PointCloud(dynamic tsObject)

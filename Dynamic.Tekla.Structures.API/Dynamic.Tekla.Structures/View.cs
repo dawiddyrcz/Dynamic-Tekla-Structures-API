@@ -97,7 +97,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public View()
         {
-            this.view =  new Tekla.Structures.Model.UI.View();
+            this.view =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.View");
         }
 
         public View(dynamic tsObject)

@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarEndDetailModifier()
         {
-            this.rebarenddetailmodifier =  new Tekla.Structures.Model.RebarEndDetailModifier();
+            this.rebarenddetailmodifier =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarEndDetailModifier");
         }
 
         public RebarEndDetailModifier(dynamic tsObject)
@@ -109,8 +109,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => rebarenddetailmodifier;
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarenddetailmodifier.GetAffectedBars(whichEnd.GetTSObject()));
 
 		public System.Boolean Insert()
 			 => rebarenddetailmodifier.Insert();
@@ -133,50 +131,50 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarenddetailmodifier.GetHierarchicObjects());
 
-		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetAllUserProperties(ref values);
+		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetAllUserProperties(values);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetIntegerUserProperties(ref values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetIntegerUserProperties(values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetDoubleUserProperties(ref values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetDoubleUserProperties(values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetStringUserProperties(ref values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetStringUserProperties(values);
 
-		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
-		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetIntegerReportProperties(names, ref values);
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetIntegerReportProperties(names, values);
 
-		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetDoubleReportProperties(names, ref values);
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetDoubleReportProperties(names, values);
 
-		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetStringReportProperties(names, ref values);
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => rebarenddetailmodifier.GetStringReportProperties(names, values);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.String value)
-			 => rebarenddetailmodifier.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.String value)
+			 => rebarenddetailmodifier.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.String value)
-			 => rebarenddetailmodifier.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.String value)
+			 => rebarenddetailmodifier.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
-			 => rebarenddetailmodifier.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Double value)
+			 => rebarenddetailmodifier.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
-			 => rebarenddetailmodifier.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Double value)
+			 => rebarenddetailmodifier.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
-			 => rebarenddetailmodifier.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
+			 => rebarenddetailmodifier.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
-			 => rebarenddetailmodifier.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
+			 => rebarenddetailmodifier.GetReportProperty(name, value);
 
-		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
-			 => rebarenddetailmodifier.GetDynamicStringProperty(name, ref value);
+		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
+			 => rebarenddetailmodifier.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
 			 => rebarenddetailmodifier.SetDynamicStringProperty(name, value);
@@ -196,8 +194,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
 			 => rebarenddetailmodifier.SetPhase(phase.GetTSObject());
 
-		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarenddetailmodifier.GetPhase(ref phase.GetTSObject());
+		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => rebarenddetailmodifier.GetPhase(phase.GetTSObject());
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarenddetailmodifier.SetLabel(label);

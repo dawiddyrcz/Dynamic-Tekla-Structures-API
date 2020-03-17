@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public LoadGroup()
         {
-            this.loadgroup =  new Tekla.Structures.Model.LoadGroup();
+            this.loadgroup =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup");
         }
 
         public LoadGroup(dynamic tsObject)
@@ -109,50 +109,50 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loadgroup.GetHierarchicObjects());
 
-		public System.Boolean GetAllUserProperties(ref System.Collections.Hashtable values)
-			 => loadgroup.GetAllUserProperties(ref values);
+		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
+			 => loadgroup.GetAllUserProperties(values);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable values)
-			 => loadgroup.GetIntegerUserProperties(ref values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
+			 => loadgroup.GetIntegerUserProperties(values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable values)
-			 => loadgroup.GetDoubleUserProperties(ref values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
+			 => loadgroup.GetDoubleUserProperties(values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable values)
-			 => loadgroup.GetStringUserProperties(ref values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
+			 => loadgroup.GetStringUserProperties(values);
 
-		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
-			 => loadgroup.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
+			 => loadgroup.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
-		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => loadgroup.GetIntegerReportProperties(names, ref values);
+		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => loadgroup.GetIntegerReportProperties(names, values);
 
-		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => loadgroup.GetDoubleReportProperties(names, ref values);
+		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => loadgroup.GetDoubleReportProperties(names, values);
 
-		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
-			 => loadgroup.GetStringReportProperties(names, ref values);
+		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
+			 => loadgroup.GetStringReportProperties(names, values);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.String value)
-			 => loadgroup.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.String value)
+			 => loadgroup.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.String value)
-			 => loadgroup.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.String value)
+			 => loadgroup.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Double value)
-			 => loadgroup.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Double value)
+			 => loadgroup.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Double value)
-			 => loadgroup.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Double value)
+			 => loadgroup.GetReportProperty(name, value);
 
-		public System.Boolean GetUserProperty(System.String name, ref System.Int32 value)
-			 => loadgroup.GetUserProperty(name, ref value);
+		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
+			 => loadgroup.GetUserProperty(name, value);
 
-		public System.Boolean GetReportProperty(System.String name, ref System.Int32 value)
-			 => loadgroup.GetReportProperty(name, ref value);
+		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
+			 => loadgroup.GetReportProperty(name, value);
 
-		public System.Boolean GetDynamicStringProperty(System.String name, ref System.String value)
-			 => loadgroup.GetDynamicStringProperty(name, ref value);
+		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
+			 => loadgroup.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
 			 => loadgroup.SetDynamicStringProperty(name, value);
@@ -172,8 +172,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
 			 => loadgroup.SetPhase(phase.GetTSObject());
 
-		public System.Boolean GetPhase(ref Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadgroup.GetPhase(ref phase.GetTSObject());
+		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
+			 => loadgroup.GetPhase(phase.GetTSObject());
 
 		public System.Boolean SetLabel(System.String label)
 			 => loadgroup.SetLabel(label);

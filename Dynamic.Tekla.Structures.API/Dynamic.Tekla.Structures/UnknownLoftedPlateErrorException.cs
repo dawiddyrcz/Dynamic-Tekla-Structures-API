@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public UnknownLoftedPlateErrorException()
         {
-            this.unknownloftedplateerrorexception =  new Tekla.Structures.Model.UnknownLoftedPlateErrorException();
+            this.unknownloftedplateerrorexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UnknownLoftedPlateErrorException");
         }
 
         public UnknownLoftedPlateErrorException(dynamic tsObject)

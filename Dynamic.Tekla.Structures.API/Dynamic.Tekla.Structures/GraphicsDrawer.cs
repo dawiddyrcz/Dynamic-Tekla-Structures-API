@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public GraphicsDrawer()
         {
-            this.graphicsdrawer =  new Tekla.Structures.Model.UI.GraphicsDrawer();
+            this.graphicsdrawer =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicsDrawer");
         }
 
         public GraphicsDrawer(dynamic tsObject)

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures
         
         public TeklaStructuresInfo()
         {
-            this.teklastructuresinfo =  new Tekla.Structures.TeklaStructuresInfo();
+            this.teklastructuresinfo =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresInfo");
         }
 
         public TeklaStructuresInfo(dynamic tsObject)

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public Loop()
         {
-            this.loop =  new Tekla.Structures.Solid.Loop();
+            this.loop =  TSActivator.CreateInstance("Tekla.Structures.Solid.Loop");
         }
 
         public Loop(dynamic tsObject)

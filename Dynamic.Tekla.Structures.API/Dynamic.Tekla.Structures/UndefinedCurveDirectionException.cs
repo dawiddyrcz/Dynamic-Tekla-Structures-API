@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public UndefinedCurveDirectionException()
         {
-            this.undefinedcurvedirectionexception =  new Tekla.Structures.Model.UndefinedCurveDirectionException();
+            this.undefinedcurvedirectionexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UndefinedCurveDirectionException");
         }
 
         public UndefinedCurveDirectionException(dynamic tsObject)

@@ -73,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public BendSurface()
         {
-            this.bendsurface =  new Tekla.Structures.Model.BendSurface();
+            this.bendsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface");
         }
 
         public BendSurface(dynamic tsObject)

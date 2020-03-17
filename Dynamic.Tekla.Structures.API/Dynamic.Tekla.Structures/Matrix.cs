@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Matrix()
         {
-            this.matrix =  new Tekla.Structures.Geometry3d.Matrix();
+            this.matrix =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix");
         }
 
         public Matrix(dynamic tsObject)

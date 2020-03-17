@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Object()
         {
-            this.@object =  new Tekla.Structures.Model.Object();
+            this.@object =  TSActivator.CreateInstance("Tekla.Structures.Model.Object");
         }
 
         public Object(dynamic tsObject)

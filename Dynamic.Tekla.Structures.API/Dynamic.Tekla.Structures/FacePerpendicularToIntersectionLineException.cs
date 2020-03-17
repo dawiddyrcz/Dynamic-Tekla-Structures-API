@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public FacePerpendicularToIntersectionLineException()
         {
-            this.faceperpendiculartointersectionlineexception =  new Tekla.Structures.Model.FacePerpendicularToIntersectionLineException();
+            this.faceperpendiculartointersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacePerpendicularToIntersectionLineException");
         }
 
         public FacePerpendicularToIntersectionLineException(dynamic tsObject)

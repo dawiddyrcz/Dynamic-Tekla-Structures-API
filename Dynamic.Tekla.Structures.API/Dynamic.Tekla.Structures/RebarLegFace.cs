@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarLegFace()
         {
-            this.rebarlegface =  new Tekla.Structures.Model.RebarLegFace();
+            this.rebarlegface =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace");
         }
 
         public RebarLegFace(dynamic tsObject)

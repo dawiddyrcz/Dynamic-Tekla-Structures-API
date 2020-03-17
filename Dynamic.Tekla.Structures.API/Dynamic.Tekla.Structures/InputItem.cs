@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InputItem()
         {
-            this.inputitem =  new Tekla.Structures.Model.InputItem();
+            this.inputitem =  TSActivator.CreateInstance("Tekla.Structures.Model.InputItem");
         }
 
         public InputItem(dynamic tsObject)
@@ -24,9 +24,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 
         public dynamic GetTSObject() => inputitem;
-
-		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-			 => new Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum(inputitem.GetInputType());
 
 		public System.Object GetData()
 			 => inputitem.GetData();

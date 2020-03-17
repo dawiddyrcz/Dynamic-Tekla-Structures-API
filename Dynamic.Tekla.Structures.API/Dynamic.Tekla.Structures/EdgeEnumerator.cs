@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public EdgeEnumerator()
         {
-            this.edgeenumerator =  new Tekla.Structures.Solid.EdgeEnumerator();
+            this.edgeenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.EdgeEnumerator");
         }
 
         public EdgeEnumerator(dynamic tsObject)

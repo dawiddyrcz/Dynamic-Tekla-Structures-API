@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Phase()
         {
-            this.phase =  new Tekla.Structures.Model.Phase();
+            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Model.Phase");
         }
 
         public Phase(dynamic tsObject)
@@ -74,14 +74,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
 			 => phase.SetUserProperty(Name, Value);
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
-			 => phase.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.String Value)
+			 => phase.GetUserProperty(Name, Value);
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
-			 => phase.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
+			 => phase.GetUserProperty(Name, Value);
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
-			 => phase.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
+			 => phase.GetUserProperty(Name, Value);
 
 
 

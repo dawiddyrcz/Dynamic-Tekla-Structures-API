@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
         
         public WeldGeometry()
         {
-            this.weldgeometry =  new Tekla.Structures.Model.Welding.WeldGeometry();
+            this.weldgeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.Welding.WeldGeometry");
         }
 
         public WeldGeometry(dynamic tsObject)

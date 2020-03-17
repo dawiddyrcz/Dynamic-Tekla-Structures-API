@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures
         
         public ModuleManager()
         {
-            this.modulemanager =  new Tekla.Structures.ModuleManager();
+            this.modulemanager =  TSActivator.CreateInstance("Tekla.Structures.ModuleManager");
         }
 
         public ModuleManager(dynamic tsObject)
@@ -96,11 +96,8 @@ namespace Dynamic.Tekla.Structures
 			CONFIGURATION_STEEL_DETAILING,
 			CONFIGURATION_FULL,
 			CONFIGURATION_PRIMARY,
-			CONFIGURATION_PRIMARY,
 			CONFIGURATION_EDUCATIONAL,
 			CONFIGURATION_DEVELOPER,
-			CONFIGURATION_CONSTRUCTION_VIEWER,
-			CONFIGURATION_CONSTRUCTION_VIEWER,
 			CONFIGURATION_CONSTRUCTION_VIEWER,
 			CONFIGURATION_PARTNER,
 			CONFIGURATION_EPM_MODELER        
@@ -134,16 +131,10 @@ namespace Dynamic.Tekla.Structures
 					return System.Enum.Parse(tsType, "CONFIGURATION_FULL");
 				case ProgramConfigurationEnum.CONFIGURATION_PRIMARY:
 					return System.Enum.Parse(tsType, "CONFIGURATION_PRIMARY");
-				case ProgramConfigurationEnum.CONFIGURATION_PRIMARY:
-					return System.Enum.Parse(tsType, "CONFIGURATION_PRIMARY");
 				case ProgramConfigurationEnum.CONFIGURATION_EDUCATIONAL:
 					return System.Enum.Parse(tsType, "CONFIGURATION_EDUCATIONAL");
 				case ProgramConfigurationEnum.CONFIGURATION_DEVELOPER:
 					return System.Enum.Parse(tsType, "CONFIGURATION_DEVELOPER");
-				case ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_VIEWER:
-					return System.Enum.Parse(tsType, "CONFIGURATION_CONSTRUCTION_VIEWER");
-				case ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_VIEWER:
-					return System.Enum.Parse(tsType, "CONFIGURATION_CONSTRUCTION_VIEWER");
 				case ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_VIEWER:
 					return System.Enum.Parse(tsType, "CONFIGURATION_CONSTRUCTION_VIEWER");
 				case ProgramConfigurationEnum.CONFIGURATION_PARTNER:

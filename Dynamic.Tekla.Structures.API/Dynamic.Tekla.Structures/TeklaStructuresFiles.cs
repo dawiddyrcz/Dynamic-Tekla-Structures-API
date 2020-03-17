@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures
         
         public TeklaStructuresFiles()
         {
-            this.teklastructuresfiles =  new Tekla.Structures.TeklaStructuresFiles();
+            this.teklastructuresfiles =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles");
         }
 
         public TeklaStructuresFiles(dynamic tsObject)

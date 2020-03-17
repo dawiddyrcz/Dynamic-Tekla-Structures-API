@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public DateTimeConstantFilterExpression()
         {
-            this.datetimeconstantfilterexpression =  new Tekla.Structures.Filtering.DateTimeConstantFilterExpression();
+            this.datetimeconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression");
         }
 
         public DateTimeConstantFilterExpression(dynamic tsObject)

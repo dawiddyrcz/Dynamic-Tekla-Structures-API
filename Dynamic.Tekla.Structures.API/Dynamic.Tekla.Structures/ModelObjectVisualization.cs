@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ModelObjectVisualization()
         {
-            this.modelobjectvisualization =  new Tekla.Structures.Model.UI.ModelObjectVisualization();
+            this.modelobjectvisualization =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectVisualization");
         }
 
         public ModelObjectVisualization(dynamic tsObject)
@@ -31,20 +31,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryState(modelObjects, color.GetTSObject());
 
-		public System.Boolean SetTransparencyForAll(Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => modelobjectvisualization.SetTransparencyForAll(transparency.GetTSObject());
-
-		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => modelobjectvisualization.SetTransparency(modelObjects, transparency.GetTSObject());
-
-		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => modelobjectvisualization.SetTransparency(identifiers, transparency.GetTSObject());
-
 		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryState(identifiers, color.GetTSObject());
 
-		public System.Boolean GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject modelObject, ref Dynamic.Tekla.Structures.Model.UI.Color color)
-			 => modelobjectvisualization.GetRepresentation(modelObject.GetTSObject(), ref color.GetTSObject());
+		public System.Boolean GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject modelObject, Dynamic.Tekla.Structures.Model.UI.Color color)
+			 => modelobjectvisualization.GetRepresentation(modelObject.GetTSObject(), color.GetTSObject());
 
 		public System.Boolean ClearAllTemporaryStates()
 			 => modelobjectvisualization.ClearAllTemporaryStates();

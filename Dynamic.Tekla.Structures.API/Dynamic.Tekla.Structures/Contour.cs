@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Contour()
         {
-            this.contour =  new Tekla.Structures.Model.Contour();
+            this.contour =  TSActivator.CreateInstance("Tekla.Structures.Model.Contour");
         }
 
         public Contour(dynamic tsObject)
@@ -35,8 +35,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
 			 => contour.AddContourPoint(Point.GetTSObject());
 
-		public System.Boolean CalculatePolygon(ref Dynamic.Tekla.Structures.Model.Polygon polygon)
-			 => contour.CalculatePolygon(ref polygon.GetTSObject());
+		public System.Boolean CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon polygon)
+			 => contour.CalculatePolygon(polygon.GetTSObject());
 
 
 

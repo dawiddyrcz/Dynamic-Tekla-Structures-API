@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public OBB()
         {
-            this.obb =  new Tekla.Structures.Geometry3d.OBB();
+            this.obb =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB");
         }
 
         public OBB(dynamic tsObject)

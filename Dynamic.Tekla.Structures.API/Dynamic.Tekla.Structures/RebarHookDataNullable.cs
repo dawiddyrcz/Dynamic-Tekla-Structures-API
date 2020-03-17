@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarHookDataNullable()
         {
-            this.rebarhookdatanullable =  new Tekla.Structures.Model.RebarHookDataNullable();
+            this.rebarhookdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookDataNullable");
         }
 
         public RebarHookDataNullable(dynamic tsObject)

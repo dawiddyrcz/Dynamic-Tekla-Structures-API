@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public NumericFilterExpression()
         {
-            this.numericfilterexpression =  new Tekla.Structures.Filtering.NumericFilterExpression();
+            this.numericfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.NumericFilterExpression");
         }
 
         public NumericFilterExpression(dynamic tsObject)

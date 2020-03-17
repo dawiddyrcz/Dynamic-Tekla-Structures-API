@@ -43,7 +43,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public StrandUnbondingData()
         {
-            this.strandunbondingdata =  new Tekla.Structures.Model.StrandUnbondingData();
+            this.strandunbondingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.StrandUnbondingData");
         }
 
         public StrandUnbondingData(dynamic tsObject)

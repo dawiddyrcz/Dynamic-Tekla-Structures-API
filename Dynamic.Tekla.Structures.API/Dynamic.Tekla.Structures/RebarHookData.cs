@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarHookData()
         {
-            this.rebarhookdata =  new Tekla.Structures.Model.RebarHookData();
+            this.rebarhookdata =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookData");
         }
 
         public RebarHookData(dynamic tsObject)

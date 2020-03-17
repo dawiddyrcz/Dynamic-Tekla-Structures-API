@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarCranking()
         {
-            this.rebarcranking =  new Tekla.Structures.Model.RebarCranking();
+            this.rebarcranking =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarCranking");
         }
 
         public RebarCranking(dynamic tsObject)

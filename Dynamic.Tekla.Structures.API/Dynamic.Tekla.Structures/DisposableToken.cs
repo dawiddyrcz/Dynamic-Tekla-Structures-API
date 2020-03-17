@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public DisposableToken()
         {
-            this.disposabletoken =  new Tekla.Structures.Model.DisposableToken();
+            this.disposabletoken =  TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken");
         }
 
         public DisposableToken(dynamic tsObject)

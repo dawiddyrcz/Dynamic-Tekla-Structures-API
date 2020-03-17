@@ -18,7 +18,7 @@ namespace CodeGenerator
             sb.Replace("$enumValues", GetEnumValues(type));
             sb.Replace("$switch1Values", GetSwitch1Values(type));
             sb.Replace("$switch2Values", GetSwitch2Values(type));
-
+            
             sb.Replace("$classname", type.Name);
 
             return sb.ToString();

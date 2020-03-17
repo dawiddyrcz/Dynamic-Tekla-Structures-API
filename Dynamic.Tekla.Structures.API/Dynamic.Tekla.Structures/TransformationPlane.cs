@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public TransformationPlane()
         {
-            this.transformationplane =  new Tekla.Structures.Model.TransformationPlane();
+            this.transformationplane =  TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane");
         }
 
         public TransformationPlane(dynamic tsObject)

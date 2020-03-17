@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures
         
         public Identifier()
         {
-            this.identifier =  new Tekla.Structures.Identifier();
+            this.identifier =  TSActivator.CreateInstance("Tekla.Structures.Identifier");
         }
 
         public Identifier(dynamic tsObject)

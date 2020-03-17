@@ -91,7 +91,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public InvalidFilterExpressionException()
         {
-            this.invalidfilterexpressionexception =  new Tekla.Structures.Filtering.InvalidFilterExpressionException();
+            this.invalidfilterexpressionexception =  TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException");
         }
 
         public InvalidFilterExpressionException(dynamic tsObject)

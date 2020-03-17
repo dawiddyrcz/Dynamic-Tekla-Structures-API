@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures
         
         public Assertion()
         {
-            this.assertion =  new Tekla.Structures.Assertion();
+            this.assertion =  TSActivator.CreateInstance("Tekla.Structures.Assertion");
         }
 
         public Assertion(dynamic tsObject)

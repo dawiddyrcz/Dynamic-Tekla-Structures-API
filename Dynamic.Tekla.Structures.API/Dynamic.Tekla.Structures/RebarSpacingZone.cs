@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarSpacingZone()
         {
-            this.rebarspacingzone =  new Tekla.Structures.Model.RebarSpacingZone();
+            this.rebarspacingzone =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacingZone");
         }
 
         public RebarSpacingZone(dynamic tsObject)

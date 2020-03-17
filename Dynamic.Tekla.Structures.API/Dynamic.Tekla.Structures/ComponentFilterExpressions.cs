@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public ComponentFilterExpressions()
         {
-            this.componentfilterexpressions =  new Tekla.Structures.Filtering.Categories.ComponentFilterExpressions();
+            this.componentfilterexpressions =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ComponentFilterExpressions");
         }
 
         public ComponentFilterExpressions(dynamic tsObject)
@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomBoolean()
         {
-            this.customboolean =  new Tekla.Structures.Filtering.Categories.CustomBoolean();
+            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomBoolean");
         }
 
         public CustomBoolean(dynamic tsObject)
@@ -65,7 +65,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomDateTime()
         {
-            this.customdatetime =  new Tekla.Structures.Filtering.Categories.CustomDateTime();
+            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomDateTime");
         }
 
         public CustomDateTime(dynamic tsObject)
@@ -93,7 +93,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomNumber()
         {
-            this.customnumber =  new Tekla.Structures.Filtering.Categories.CustomNumber();
+            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomNumber");
         }
 
         public CustomNumber(dynamic tsObject)
@@ -121,7 +121,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomString()
         {
-            this.customstring =  new Tekla.Structures.Filtering.Categories.CustomString();
+            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomString");
         }
 
         public CustomString(dynamic tsObject)
@@ -149,7 +149,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public ConnectionCode()
         {
-            this.connectioncode =  new Tekla.Structures.Filtering.Categories.ConnectionCode();
+            this.connectioncode =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConnectionCode");
         }
 
         public ConnectionCode(dynamic tsObject)
@@ -177,7 +177,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Name()
         {
-            this.name =  new Tekla.Structures.Filtering.Categories.Name();
+            this.name =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Name");
         }
 
         public Name(dynamic tsObject)
@@ -205,7 +205,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Phase()
         {
-            this.phase =  new Tekla.Structures.Filtering.Categories.Phase();
+            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Phase");
         }
 
         public Phase(dynamic tsObject)
@@ -233,7 +233,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public RunningNumber()
         {
-            this.runningnumber =  new Tekla.Structures.Filtering.Categories.RunningNumber();
+            this.runningnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.RunningNumber");
         }
 
         public RunningNumber(dynamic tsObject)

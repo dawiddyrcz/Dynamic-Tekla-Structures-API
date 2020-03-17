@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         
         public GuidConversion()
         {
-            this.guidconversion =  new Tekla.Structures.Model.Operations.GuidConversion();
+            this.guidconversion =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.GuidConversion");
         }
 
         public GuidConversion(dynamic tsObject)

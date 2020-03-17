@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public PolyLine()
         {
-            this.polyline =  new Tekla.Structures.Geometry3d.PolyLine();
+            this.polyline =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine");
         }
 
         public PolyLine(dynamic tsObject)

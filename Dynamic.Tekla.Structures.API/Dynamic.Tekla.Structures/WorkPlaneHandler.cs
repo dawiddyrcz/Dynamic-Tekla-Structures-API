@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public WorkPlaneHandler()
         {
-            this.workplanehandler =  new Tekla.Structures.Model.WorkPlaneHandler();
+            this.workplanehandler =  TSActivator.CreateInstance("Tekla.Structures.Model.WorkPlaneHandler");
         }
 
         public WorkPlaneHandler(dynamic tsObject)

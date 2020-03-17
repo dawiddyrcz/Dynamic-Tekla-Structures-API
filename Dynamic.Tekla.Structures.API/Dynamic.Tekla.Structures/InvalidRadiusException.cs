@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InvalidRadiusException()
         {
-            this.invalidradiusexception =  new Tekla.Structures.Model.InvalidRadiusException();
+            this.invalidradiusexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidRadiusException");
         }
 
         public InvalidRadiusException(dynamic tsObject)

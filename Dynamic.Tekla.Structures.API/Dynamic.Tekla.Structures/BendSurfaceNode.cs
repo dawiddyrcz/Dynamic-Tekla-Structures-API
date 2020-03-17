@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public BendSurfaceNode()
         {
-            this.bendsurfacenode =  new Tekla.Structures.Model.BendSurfaceNode();
+            this.bendsurfacenode =  TSActivator.CreateInstance("Tekla.Structures.Model.BendSurfaceNode");
         }
 
         public BendSurfaceNode(dynamic tsObject)
@@ -38,13 +38,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 
         public dynamic GetTSObject() => bendsurfacenode;
-
-		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => bendsurfacenode.AcceptVisitor(visitor.GetTSObject());
-
-		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
-			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(bendsurfacenode.Clone());
-
 
 
 

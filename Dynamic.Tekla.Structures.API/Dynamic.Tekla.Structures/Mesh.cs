@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public Mesh()
         {
-            this.mesh =  new Tekla.Structures.Model.UI.Mesh();
+            this.mesh =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.Mesh");
         }
 
         public Mesh(dynamic tsObject)

@@ -97,7 +97,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public IFC2X3_ParametricObject_UShapeProfile()
         {
-            this.ifc2x3_parametricobject_ushapeprofile =  new Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_UShapeProfile();
+            this.ifc2x3_parametricobject_ushapeprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_UShapeProfile");
         }
 
         public IFC2X3_ParametricObject_UShapeProfile(dynamic tsObject)

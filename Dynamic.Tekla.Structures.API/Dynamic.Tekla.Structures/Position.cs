@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Position()
         {
-            this.position =  new Tekla.Structures.Model.Position();
+            this.position =  TSActivator.CreateInstance("Tekla.Structures.Model.Position");
         }
 
         public Position(dynamic tsObject)

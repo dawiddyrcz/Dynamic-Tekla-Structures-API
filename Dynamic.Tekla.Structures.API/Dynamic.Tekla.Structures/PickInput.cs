@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public PickInput()
         {
-            this.pickinput =  new Tekla.Structures.Model.UI.PickInput();
+            this.pickinput =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickInput");
         }
 
         public PickInput(dynamic tsObject)
@@ -48,9 +48,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => pickinput.CopyTo(array, index);
-
-		public System.Collections.IEnumerator GetEnumerator()
-			 => pickinput.GetEnumerator();
 
 
 

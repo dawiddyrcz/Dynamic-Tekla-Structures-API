@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public NullRulingException()
         {
-            this.nullrulingexception =  new Tekla.Structures.Model.NullRulingException();
+            this.nullrulingexception =  TSActivator.CreateInstance("Tekla.Structures.Model.NullRulingException");
         }
 
         public NullRulingException(dynamic tsObject)

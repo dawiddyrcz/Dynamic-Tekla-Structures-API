@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarPropertiesNullable()
         {
-            this.rebarpropertiesnullable =  new Tekla.Structures.Model.RebarPropertiesNullable();
+            this.rebarpropertiesnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarPropertiesNullable");
         }
 
         public RebarPropertiesNullable(dynamic tsObject)

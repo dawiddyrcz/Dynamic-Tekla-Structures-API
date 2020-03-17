@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public GeometricPlane()
         {
-            this.geometricplane =  new Tekla.Structures.Geometry3d.GeometricPlane();
+            this.geometricplane =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane");
         }
 
         public GeometricPlane(dynamic tsObject)

@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures
         
         public ClashCheckOptions()
         {
-            this.clashcheckoptions =  new Tekla.Structures.ClashCheckOptions();
+            this.clashcheckoptions =  TSActivator.CreateInstance("Tekla.Structures.ClashCheckOptions");
         }
 
         public ClashCheckOptions(dynamic tsObject)

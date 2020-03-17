@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarThreadingDataNullable()
         {
-            this.rebarthreadingdatanullable =  new Tekla.Structures.Model.RebarThreadingDataNullable();
+            this.rebarthreadingdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarThreadingDataNullable");
         }
 
         public RebarThreadingDataNullable(dynamic tsObject)

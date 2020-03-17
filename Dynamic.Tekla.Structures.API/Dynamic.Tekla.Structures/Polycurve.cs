@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Polycurve()
         {
-            this.polycurve =  new Tekla.Structures.Geometry3d.Polycurve();
+            this.polycurve =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Polycurve");
         }
 
         public Polycurve(dynamic tsObject)
@@ -45,12 +45,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
         public dynamic GetTSObject() => polycurve;
-
-		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
-			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(polycurve.Clone());
-
-		public System.Collections.Generic.IEnumerator<Dynamic.Tekla.Structures.Geometry3d.ICurve> GetEnumerator()
-			 => polycurve.GetEnumerator();
 
 
 

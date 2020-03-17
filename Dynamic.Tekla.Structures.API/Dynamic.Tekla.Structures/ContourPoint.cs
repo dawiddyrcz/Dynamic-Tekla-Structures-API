@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ContourPoint()
         {
-            this.contourpoint =  new Tekla.Structures.Model.ContourPoint();
+            this.contourpoint =  TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint");
         }
 
         public ContourPoint(dynamic tsObject)

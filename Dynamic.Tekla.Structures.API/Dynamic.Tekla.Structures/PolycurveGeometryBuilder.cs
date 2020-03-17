@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public PolycurveGeometryBuilder()
         {
-            this.polycurvegeometrybuilder =  new Tekla.Structures.Geometry3d.PolycurveGeometryBuilder();
+            this.polycurvegeometrybuilder =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolycurveGeometryBuilder");
         }
 
         public PolycurveGeometryBuilder(dynamic tsObject)

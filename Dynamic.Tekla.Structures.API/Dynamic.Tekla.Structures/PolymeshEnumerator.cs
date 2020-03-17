@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PolymeshEnumerator()
         {
-            this.polymeshenumerator =  new Tekla.Structures.Model.PolymeshEnumerator();
+            this.polymeshenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.PolymeshEnumerator");
         }
 
         public PolymeshEnumerator(dynamic tsObject)

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ModelObjectSelector()
         {
-            this.modelobjectselector =  new Tekla.Structures.Model.UI.ModelObjectSelector();
+            this.modelobjectselector =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectSelector");
         }
 
         public ModelObjectSelector(dynamic tsObject)

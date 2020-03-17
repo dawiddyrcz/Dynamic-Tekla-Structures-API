@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public LoopEnumerator()
         {
-            this.loopenumerator =  new Tekla.Structures.Solid.LoopEnumerator();
+            this.loopenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.LoopEnumerator");
         }
 
         public LoopEnumerator(dynamic tsObject)

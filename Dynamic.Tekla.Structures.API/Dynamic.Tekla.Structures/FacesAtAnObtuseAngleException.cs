@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public FacesAtAnObtuseAngleException()
         {
-            this.facesatanobtuseangleexception =  new Tekla.Structures.Model.FacesAtAnObtuseAngleException();
+            this.facesatanobtuseangleexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacesAtAnObtuseAngleException");
         }
 
         public FacesAtAnObtuseAngleException(dynamic tsObject)

@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public FilterExpression()
         {
-            this.filterexpression =  new Tekla.Structures.Filtering.FilterExpression();
+            this.filterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.FilterExpression");
         }
 
         public FilterExpression(dynamic tsObject)

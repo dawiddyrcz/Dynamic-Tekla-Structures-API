@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Point()
         {
-            this.point =  new Tekla.Structures.Geometry3d.Point();
+            this.point =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Point");
         }
 
         public Point(dynamic tsObject)

@@ -121,7 +121,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public BasePoint()
         {
-            this.basepoint =  new Tekla.Structures.Model.BasePoint();
+            this.basepoint =  TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint");
         }
 
         public BasePoint(dynamic tsObject)
@@ -160,11 +160,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Delete()
 			 => basepoint.Delete();
 
-		public System.IDisposable SetAsCurrent()
-			 => basepoint.SetAsCurrent();
-
-		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType)
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(basepoint.GetCoordinateSystem(CoordsysType.GetTSObject()));
 
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
 			 => basepoint.GetCompoundPlaneAngleLatitude();

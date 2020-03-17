@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public Filter()
         {
-            this.filter =  new Tekla.Structures.Filtering.Filter();
+            this.filter =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Filter");
         }
 
         public Filter(dynamic tsObject)
@@ -32,8 +32,6 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public dynamic GetTSObject() => filter;
 
-		public System.String CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType, System.String FullFileName)
-			 => filter.CreateFile(FilterExpressionFileType.GetTSObject(), FullFileName);
 
 
 

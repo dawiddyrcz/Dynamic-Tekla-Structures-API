@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public Face()
         {
-            this.face =  new Tekla.Structures.Solid.Face();
+            this.face =  TSActivator.CreateInstance("Tekla.Structures.Solid.Face");
         }
 
         public Face(dynamic tsObject)

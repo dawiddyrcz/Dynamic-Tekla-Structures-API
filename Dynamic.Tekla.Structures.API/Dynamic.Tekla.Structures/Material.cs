@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Material()
         {
-            this.material =  new Tekla.Structures.Model.Material();
+            this.material =  TSActivator.CreateInstance("Tekla.Structures.Model.Material");
         }
 
         public Material(dynamic tsObject)

@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public ParametricObject_CustomProfile()
         {
-            this.parametricobject_customprofile =  new Tekla.Structures.Model.Collaboration.ParametricObject_CustomProfile();
+            this.parametricobject_customprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_CustomProfile");
         }
 
         public ParametricObject_CustomProfile(dynamic tsObject)

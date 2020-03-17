@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public AABB()
         {
-            this.aabb =  new Tekla.Structures.Geometry3d.AABB();
+            this.aabb =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB");
         }
 
         public AABB(dynamic tsObject)

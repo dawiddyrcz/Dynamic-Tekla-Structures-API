@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Intersection()
         {
-            this.intersection =  new Tekla.Structures.Geometry3d.Intersection();
+            this.intersection =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Intersection");
         }
 
         public Intersection(dynamic tsObject)

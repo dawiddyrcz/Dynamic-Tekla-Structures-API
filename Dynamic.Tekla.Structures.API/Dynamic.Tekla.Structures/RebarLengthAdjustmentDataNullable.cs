@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarLengthAdjustmentDataNullable()
         {
-            this.rebarlengthadjustmentdatanullable =  new Tekla.Structures.Model.RebarLengthAdjustmentDataNullable();
+            this.rebarlengthadjustmentdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLengthAdjustmentDataNullable");
         }
 
         public RebarLengthAdjustmentDataNullable(dynamic tsObject)

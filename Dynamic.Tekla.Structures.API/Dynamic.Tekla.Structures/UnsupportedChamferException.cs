@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public UnsupportedChamferException()
         {
-            this.unsupportedchamferexception =  new Tekla.Structures.Model.UnsupportedChamferException();
+            this.unsupportedchamferexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UnsupportedChamferException");
         }
 
         public UnsupportedChamferException(dynamic tsObject)

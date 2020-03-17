@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         
         public Operation()
         {
-            this.operation =  new Tekla.Structures.Model.Operations.Operation();
+            this.operation =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation");
         }
 
         public Operation(dynamic tsObject)
@@ -55,14 +55,9 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 			 => operation.CreateNCFilesFromAll(NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
 
-		public System.Boolean CreateNCFilesByPartId(System.String NCFileSettings, System.String DestinationFolder, Dynamic.Tekla.Structures.Identifier PartID, ref System.String DstvOutput, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
-			 => operation.CreateNCFilesByPartId(NCFileSettings, DestinationFolder, PartID.GetTSObject(), ref DstvOutput, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+		public System.Boolean CreateNCFilesByPartId(System.String NCFileSettings, System.String DestinationFolder, Dynamic.Tekla.Structures.Identifier PartID, System.String DstvOutput, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
+			 => operation.CreateNCFilesByPartId(NCFileSettings, DestinationFolder, PartID.GetTSObject(), DstvOutput, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
 
-		public System.Boolean CreateMISFileFromSelected(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
-			 => operation.CreateMISFileFromSelected(MISType.GetTSObject(), FileName);
-
-		public System.Boolean CreateMISFileFromAll(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
-			 => operation.CreateMISFileFromAll(MISType.GetTSObject(), FileName);
 
 		public System.Boolean RunMacro(System.String FileName)
 			 => operation.RunMacro(FileName);
@@ -133,11 +128,6 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public Dynamic.Tekla.Structures.Model.RebarGroup Group(System.Collections.IEnumerable RebarList)
 			 => new Dynamic.Tekla.Structures.Model.RebarGroup(operation.Group(RebarList));
 
-		public void ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum UnselectedMode)
-			 => operation.ShowOnlySelected(UnselectedMode.GetTSObject());
-
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByParts(part1.GetTSObject(), part2.GetTSObject(), bendShape.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByParts(part1.GetTSObject(), part2.GetTSObject()));
@@ -150,15 +140,9 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndTwoRadiuses(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double firstRadius, System.Double secondRadius)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateConicalBentPlateByPartsAndTwoRadiuses(part1.GetTSObject(), part2.GetTSObject(), firstRadius, secondRadius));
-
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2, bendShape.GetTSObject()));
-
+        
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1, part2.GetTSObject(), face2));
-
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1.GetTSObject(), part2.GetTSObject(), face2.GetTSObject(), bendShape.GetTSObject()));
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2)
 			 => new Dynamic.Tekla.Structures.Model.BentPlate(operation.CreateBentPlateByFaces(part1.GetTSObject(), face1.GetTSObject(), part2.GetTSObject(), face2.GetTSObject()));
@@ -308,7 +292,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         
         public ProgressBar()
         {
-            this.progressbar =  new Tekla.Structures.Model.Operations.ProgressBar();
+            this.progressbar =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.ProgressBar");
         }
 
         public ProgressBar(dynamic tsObject)

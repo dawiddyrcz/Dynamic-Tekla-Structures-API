@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public NumberingSeries()
         {
-            this.numberingseries =  new Tekla.Structures.Model.NumberingSeries();
+            this.numberingseries =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries");
         }
 
         public NumberingSeries(dynamic tsObject)

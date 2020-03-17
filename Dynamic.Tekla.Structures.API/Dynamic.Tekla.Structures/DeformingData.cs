@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public DeformingData()
         {
-            this.deformingdata =  new Tekla.Structures.Model.DeformingData();
+            this.deformingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.DeformingData");
         }
 
         public DeformingData(dynamic tsObject)

@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public ParametricObject_ObjectBoundingBox()
         {
-            this.parametricobject_objectboundingbox =  new Tekla.Structures.Model.Collaboration.ParametricObject_ObjectBoundingBox();
+            this.parametricobject_objectboundingbox =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_ObjectBoundingBox");
         }
 
         public ParametricObject_ObjectBoundingBox(dynamic tsObject)

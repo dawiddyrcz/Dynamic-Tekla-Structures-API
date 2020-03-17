@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InvalidFacePointsException()
         {
-            this.invalidfacepointsexception =  new Tekla.Structures.Model.InvalidFacePointsException();
+            this.invalidfacepointsexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidFacePointsException");
         }
 
         public InvalidFacePointsException(dynamic tsObject)

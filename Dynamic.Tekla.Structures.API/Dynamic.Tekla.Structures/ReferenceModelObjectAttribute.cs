@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public ReferenceModelObjectAttribute()
         {
-            this.referencemodelobjectattribute =  new Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute();
+            this.referencemodelobjectattribute =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute");
         }
 
         public ReferenceModelObjectAttribute(dynamic tsObject)

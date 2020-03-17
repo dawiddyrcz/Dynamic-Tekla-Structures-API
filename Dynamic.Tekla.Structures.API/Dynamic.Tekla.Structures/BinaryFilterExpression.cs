@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public BinaryFilterExpression()
         {
-            this.binaryfilterexpression =  new Tekla.Structures.Filtering.BinaryFilterExpression();
+            this.binaryfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpression");
         }
 
         public BinaryFilterExpression(dynamic tsObject)

@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PlateIntersectsWithIntersectionLineException()
         {
-            this.plateintersectswithintersectionlineexception =  new Tekla.Structures.Model.PlateIntersectsWithIntersectionLineException();
+            this.plateintersectswithintersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.PlateIntersectsWithIntersectionLineException");
         }
 
         public PlateIntersectsWithIntersectionLineException(dynamic tsObject)

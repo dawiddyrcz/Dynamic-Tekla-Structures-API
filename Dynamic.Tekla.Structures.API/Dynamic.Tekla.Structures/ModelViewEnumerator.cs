@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ModelViewEnumerator()
         {
-            this.modelviewenumerator =  new Tekla.Structures.Model.UI.ModelViewEnumerator();
+            this.modelviewenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelViewEnumerator");
         }
 
         public ModelViewEnumerator(dynamic tsObject)

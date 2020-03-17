@@ -18,7 +18,6 @@ namespace CodeGenerator
             outputText = AddMethods(type, outputText);
             outputText = AddConstructor(type, outputText);
 
-            
             outputText = outputText.Replace("$classname", type.Name);
             
             if (type.Name.ToLower().Equals("object", StringComparison.InvariantCulture))
@@ -51,6 +50,8 @@ namespace CodeGenerator
 
             foreach (var method in type.GetMethods().Where(m => m.IsPublic))
             {
+                if (method.ReturnType.IsInterface) continue;
+
                 var name = method.Name;
                 if (name.Equals("GetType")||name.Equals("Equals")||name.Equals("ToString") || name.Equals("GetHashCode")) continue;
 
@@ -114,7 +115,7 @@ namespace CodeGenerator
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
-                        if (param.ParameterType.IsByRef) sb.Append("ref ");
+                        //if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
 
                         var paramTypeFullName = GetTypeFullName(param.ParameterType);
@@ -138,7 +139,7 @@ namespace CodeGenerator
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
-                        if (param.ParameterType.IsByRef) sb.Append("ref ");
+                       // if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
                         
                         sb.Append(paramName);
@@ -321,7 +322,7 @@ $dproperties
         
         public $classname()
         {
-            this.$dfield =  new $namespace.$classname();
+            this.$dfield =  TSActivator.CreateInstance(""$namespace.$classname"");
         }
 
         public $classname(dynamic tsObject)

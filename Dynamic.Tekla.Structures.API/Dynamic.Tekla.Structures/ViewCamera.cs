@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ViewCamera()
         {
-            this.viewcamera =  new Tekla.Structures.Model.UI.ViewCamera();
+            this.viewcamera =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewCamera");
         }
 
         public ViewCamera(dynamic tsObject)

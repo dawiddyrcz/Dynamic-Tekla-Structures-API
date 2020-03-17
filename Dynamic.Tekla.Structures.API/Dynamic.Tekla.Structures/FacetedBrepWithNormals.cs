@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public FacetedBrepWithNormals()
         {
-            this.facetedbrepwithnormals =  new Tekla.Structures.Geometry3d.FacetedBrepWithNormals();
+            this.facetedbrepwithnormals =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals");
         }
 
         public FacetedBrepWithNormals(dynamic tsObject)

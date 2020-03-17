@@ -13,27 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 			set { geometrysection.Index = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
-		{
-			get => new Dynamic.Tekla.Structures.Model.IGeometryNode(geometrysection.GeometryNode.GetTSObject());
-			set { geometrysection.GeometryNode = value.GetTSObject(); }
-		}
-
-        
+	 
 
         dynamic geometrysection;
         
         public GeometrySection()
         {
-            this.geometrysection =  new Tekla.Structures.Model.GeometrySection();
+            this.geometrysection =  TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySection");
         }
 
         public GeometrySection(dynamic tsObject)
         {
             this.geometrysection = tsObject;
 			this.Index = geometrysection.Index;
-			this.GeometryNode = new Dynamic.Tekla.Structures.Model.IGeometryNode(geometrysection.GeometryNode);
-
+		
         }
 
 

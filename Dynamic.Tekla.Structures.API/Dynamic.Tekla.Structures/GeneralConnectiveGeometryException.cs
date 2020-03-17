@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public GeneralConnectiveGeometryException()
         {
-            this.generalconnectivegeometryexception =  new Tekla.Structures.Model.GeneralConnectiveGeometryException();
+            this.generalconnectivegeometryexception =  TSActivator.CreateInstance("Tekla.Structures.Model.GeneralConnectiveGeometryException");
         }
 
         public GeneralConnectiveGeometryException(dynamic tsObject)

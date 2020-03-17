@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public ShellEnumerator()
         {
-            this.shellenumerator =  new Tekla.Structures.Solid.ShellEnumerator();
+            this.shellenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.ShellEnumerator");
         }
 
         public ShellEnumerator(dynamic tsObject)

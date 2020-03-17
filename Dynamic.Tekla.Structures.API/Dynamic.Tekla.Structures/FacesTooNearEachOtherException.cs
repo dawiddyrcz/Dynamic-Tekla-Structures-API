@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public FacesTooNearEachOtherException()
         {
-            this.facestooneareachotherexception =  new Tekla.Structures.Model.FacesTooNearEachOtherException();
+            this.facestooneareachotherexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacesTooNearEachOtherException");
         }
 
         public FacesTooNearEachOtherException(dynamic tsObject)

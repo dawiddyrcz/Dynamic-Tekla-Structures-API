@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PolygonNode()
         {
-            this.polygonnode =  new Tekla.Structures.Model.PolygonNode();
+            this.polygonnode =  TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode");
         }
 
         public PolygonNode(dynamic tsObject)
@@ -39,12 +39,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public dynamic GetTSObject() => polygonnode;
 
-		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => polygonnode.AcceptVisitor(visitor.GetTSObject());
-
-		public Dynamic.Tekla.Structures.Model.IGeometryNode Clone()
-			 => new Dynamic.Tekla.Structures.Model.IGeometryNode(polygonnode.Clone());
-
+		
 
 
 

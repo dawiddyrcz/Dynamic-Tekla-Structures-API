@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarProperties()
         {
-            this.rebarproperties =  new Tekla.Structures.Model.RebarProperties();
+            this.rebarproperties =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarProperties");
         }
 
         public RebarProperties(dynamic tsObject)

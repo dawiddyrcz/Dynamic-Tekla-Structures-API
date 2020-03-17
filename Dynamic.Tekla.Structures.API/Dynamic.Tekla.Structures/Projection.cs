@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Projection()
         {
-            this.projection =  new Tekla.Structures.Geometry3d.Projection();
+            this.projection =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Projection");
         }
 
         public Projection(dynamic tsObject)

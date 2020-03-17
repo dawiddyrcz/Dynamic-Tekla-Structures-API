@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public Shell()
         {
-            this.shell =  new Tekla.Structures.Solid.Shell();
+            this.shell =  TSActivator.CreateInstance("Tekla.Structures.Solid.Shell");
         }
 
         public Shell(dynamic tsObject)

@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ClipPlaneCollection()
         {
-            this.clipplanecollection =  new Tekla.Structures.Model.UI.ClipPlaneCollection();
+            this.clipplanecollection =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlaneCollection");
         }
 
         public ClipPlaneCollection(dynamic tsObject)
@@ -48,9 +48,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => clipplanecollection.CopyTo(array, index);
-
-		public System.Collections.IEnumerator GetEnumerator()
-			 => clipplanecollection.GetEnumerator();
 
 
 

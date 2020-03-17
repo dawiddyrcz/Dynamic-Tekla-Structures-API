@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public IFC2X3_ParametricObject_CircleHollowProfile()
         {
-            this.ifc2x3_parametricobject_circlehollowprofile =  new Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_CircleHollowProfile();
+            this.ifc2x3_parametricobject_circlehollowprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_CircleHollowProfile");
         }
 
         public IFC2X3_ParametricObject_CircleHollowProfile(dynamic tsObject)

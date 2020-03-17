@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Profile()
         {
-            this.profile =  new Tekla.Structures.Model.Profile();
+            this.profile =  TSActivator.CreateInstance("Tekla.Structures.Model.Profile");
         }
 
         public Profile(dynamic tsObject)

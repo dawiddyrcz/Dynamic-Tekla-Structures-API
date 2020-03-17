@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarGeometry()
         {
-            this.rebargeometry =  new Tekla.Structures.Model.RebarGeometry();
+            this.rebargeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGeometry");
         }
 
         public RebarGeometry(dynamic tsObject)

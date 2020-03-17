@@ -103,7 +103,7 @@ namespace Dynamic.Tekla.Structures
         
         public ComponentOptions()
         {
-            this.componentoptions =  new Tekla.Structures.ComponentOptions();
+            this.componentoptions =  TSActivator.CreateInstance("Tekla.Structures.ComponentOptions");
         }
 
         public ComponentOptions(dynamic tsObject)

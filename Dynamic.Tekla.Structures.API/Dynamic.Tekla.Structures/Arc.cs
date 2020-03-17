@@ -73,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Arc()
         {
-            this.arc =  new Tekla.Structures.Geometry3d.Arc();
+            this.arc =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc");
         }
 
         public Arc(dynamic tsObject)
@@ -94,9 +94,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
         public dynamic GetTSObject() => arc;
-
-		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
-			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(arc.Clone());
 
 
 

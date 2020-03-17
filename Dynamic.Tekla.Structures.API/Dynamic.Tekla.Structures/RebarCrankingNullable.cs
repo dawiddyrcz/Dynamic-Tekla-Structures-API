@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarCrankingNullable()
         {
-            this.rebarcrankingnullable =  new Tekla.Structures.Model.RebarCrankingNullable();
+            this.rebarcrankingnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarCrankingNullable");
         }
 
         public RebarCrankingNullable(dynamic tsObject)

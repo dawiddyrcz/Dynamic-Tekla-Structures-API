@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelHandler()
         {
-            this.modelhandler =  new Tekla.Structures.Model.ModelHandler();
+            this.modelhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelHandler");
         }
 
         public ModelHandler(dynamic tsObject)

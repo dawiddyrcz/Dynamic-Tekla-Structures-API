@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public StringConstantFilterExpression()
         {
-            this.stringconstantfilterexpression =  new Tekla.Structures.Filtering.StringConstantFilterExpression();
+            this.stringconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression");
         }
 
         public StringConstantFilterExpression(dynamic tsObject)

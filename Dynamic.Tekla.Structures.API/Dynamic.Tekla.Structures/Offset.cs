@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Offset()
         {
-            this.offset =  new Tekla.Structures.Model.Offset();
+            this.offset =  TSActivator.CreateInstance("Tekla.Structures.Model.Offset");
         }
 
         public Offset(dynamic tsObject)

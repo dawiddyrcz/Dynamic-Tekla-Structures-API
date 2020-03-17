@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public MatrixFactory()
         {
-            this.matrixfactory =  new Tekla.Structures.Geometry3d.MatrixFactory();
+            this.matrixfactory =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.MatrixFactory");
         }
 
         public MatrixFactory(dynamic tsObject)

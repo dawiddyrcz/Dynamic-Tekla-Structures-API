@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Parallel()
         {
-            this.parallel =  new Tekla.Structures.Geometry3d.Parallel();
+            this.parallel =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Parallel");
         }
 
         public Parallel(dynamic tsObject)

@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarGuideline()
         {
-            this.rebarguideline =  new Tekla.Structures.Model.RebarGuideline();
+            this.rebarguideline =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGuideline");
         }
 
         public RebarGuideline(dynamic tsObject)

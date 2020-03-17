@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public Edge()
         {
-            this.edge =  new Tekla.Structures.Solid.Edge();
+            this.edge =  TSActivator.CreateInstance("Tekla.Structures.Solid.Edge");
         }
 
         public Edge(dynamic tsObject)

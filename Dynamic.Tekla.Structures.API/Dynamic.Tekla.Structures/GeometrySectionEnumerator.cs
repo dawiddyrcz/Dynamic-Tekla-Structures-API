@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public GeometrySectionEnumerator()
         {
-            this.geometrysectionenumerator =  new Tekla.Structures.Model.GeometrySectionEnumerator();
+            this.geometrysectionenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySectionEnumerator");
         }
 
         public GeometrySectionEnumerator(dynamic tsObject)

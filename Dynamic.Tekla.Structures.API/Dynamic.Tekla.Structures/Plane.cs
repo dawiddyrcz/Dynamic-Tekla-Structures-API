@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Plane()
         {
-            this.plane =  new Tekla.Structures.Model.Plane();
+            this.plane =  TSActivator.CreateInstance("Tekla.Structures.Model.Plane");
         }
 
         public Plane(dynamic tsObject)

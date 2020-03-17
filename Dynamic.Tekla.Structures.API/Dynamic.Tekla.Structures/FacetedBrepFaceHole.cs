@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public FacetedBrepFaceHole()
         {
-            this.facetedbrepfacehole =  new Tekla.Structures.Geometry3d.FacetedBrepFaceHole();
+            this.facetedbrepfacehole =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepFaceHole");
         }
 
         public FacetedBrepFaceHole(dynamic tsObject)

@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ConicalSurface()
         {
-            this.conicalsurface =  new Tekla.Structures.Model.ConicalSurface();
+            this.conicalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface");
         }
 
         public ConicalSurface(dynamic tsObject)

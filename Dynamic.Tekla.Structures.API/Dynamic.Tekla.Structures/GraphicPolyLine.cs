@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public GraphicPolyLine()
         {
-            this.graphicpolyline =  new Tekla.Structures.Model.UI.GraphicPolyLine();
+            this.graphicpolyline =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine");
         }
 
         public GraphicPolyLine(dynamic tsObject)

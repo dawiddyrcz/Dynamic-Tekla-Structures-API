@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public ReferenceModelObjectAttributeEnumerator()
         {
-            this.referencemodelobjectattributeenumerator =  new Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator();
+            this.referencemodelobjectattributeenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator");
         }
 
         public ReferenceModelObjectAttributeEnumerator(dynamic tsObject)

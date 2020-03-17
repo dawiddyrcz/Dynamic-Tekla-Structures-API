@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public SpiralBeamDataException()
         {
-            this.spiralbeamdataexception =  new Tekla.Structures.Model.SpiralBeamDataException();
+            this.spiralbeamdataexception =  TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException");
         }
 
         public SpiralBeamDataException(dynamic tsObject)

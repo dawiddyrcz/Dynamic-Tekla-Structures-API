@@ -79,7 +79,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public CylindricalSurface()
         {
-            this.cylindricalsurface =  new Tekla.Structures.Model.CylindricalSurface();
+            this.cylindricalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface");
         }
 
         public CylindricalSurface(dynamic tsObject)

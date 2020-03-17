@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ConnectiveGeometry()
         {
-            this.connectivegeometry =  new Tekla.Structures.Model.ConnectiveGeometry();
+            this.connectivegeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry");
         }
 
         public ConnectiveGeometry(dynamic tsObject)
@@ -30,15 +30,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
 			 => new Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator(connectivegeometry.GetGeometryEnumerator());
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.GeometrySection> GetNeighborSections(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection)
-			 => connectivegeometry.GetNeighborSections(geometrySection.GetTSObject());
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.GeometrySection> GetGeometryLegSections()
-			 => connectivegeometry.GetGeometryLegSections();
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.LineSegment> GetConnection(Dynamic.Tekla.Structures.Model.GeometrySection geometrySection1, Dynamic.Tekla.Structures.Model.GeometrySection geometrySection2)
-			 => connectivegeometry.GetConnection(geometrySection1.GetTSObject(), geometrySection2.GetTSObject());
 
 
 

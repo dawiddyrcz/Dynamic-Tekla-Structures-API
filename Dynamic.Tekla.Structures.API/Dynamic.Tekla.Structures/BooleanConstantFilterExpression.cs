@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering
         
         public BooleanConstantFilterExpression()
         {
-            this.booleanconstantfilterexpression =  new Tekla.Structures.Filtering.BooleanConstantFilterExpression();
+            this.booleanconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanConstantFilterExpression");
         }
 
         public BooleanConstantFilterExpression(dynamic tsObject)

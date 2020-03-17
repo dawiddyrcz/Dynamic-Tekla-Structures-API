@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public RebarLapping()
         {
-            this.rebarlapping =  new Tekla.Structures.Model.RebarLapping();
+            this.rebarlapping =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping");
         }
 
         public RebarLapping(dynamic tsObject)

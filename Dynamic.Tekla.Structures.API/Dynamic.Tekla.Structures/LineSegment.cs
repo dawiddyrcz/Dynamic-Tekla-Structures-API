@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public LineSegment()
         {
-            this.linesegment =  new Tekla.Structures.Geometry3d.LineSegment();
+            this.linesegment =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment");
         }
 
         public LineSegment(dynamic tsObject)
@@ -52,9 +52,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
         public dynamic GetTSObject() => linesegment;
-
-		public Dynamic.Tekla.Structures.Geometry3d.ICurve Clone()
-			 => new Dynamic.Tekla.Structures.Geometry3d.ICurve(linesegment.Clone());
 
 		public System.Double Length()
 			 => linesegment.Length();

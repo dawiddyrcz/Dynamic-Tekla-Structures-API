@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ClipPlane()
         {
-            this.clipplane =  new Tekla.Structures.Model.UI.ClipPlane();
+            this.clipplane =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlane");
         }
 
         public ClipPlane(dynamic tsObject)

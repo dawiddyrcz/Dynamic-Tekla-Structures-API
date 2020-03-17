@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public LoftedPlateOperationException()
         {
-            this.loftedplateoperationexception =  new Tekla.Structures.Model.LoftedPlateOperationException();
+            this.loftedplateoperationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException");
         }
 
         public LoftedPlateOperationException(dynamic tsObject)

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Vector()
         {
-            this.vector =  new Tekla.Structures.Geometry3d.Vector();
+            this.vector =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector");
         }
 
         public Vector(dynamic tsObject)

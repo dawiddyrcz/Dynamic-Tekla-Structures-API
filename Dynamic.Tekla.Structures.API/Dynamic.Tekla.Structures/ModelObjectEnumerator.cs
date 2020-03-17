@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelObjectEnumerator()
         {
-            this.modelobjectenumerator =  new Tekla.Structures.Model.ModelObjectEnumerator();
+            this.modelobjectenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectEnumerator");
         }
 
         public ModelObjectEnumerator(dynamic tsObject)
@@ -54,9 +54,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 GetSize()
 			 => modelobjectenumerator.GetSize();
-
-		public System.Collections.IEnumerator GetEnumerator()
-			 => modelobjectenumerator.GetEnumerator();
 
 
 

@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Line()
         {
-            this.line =  new Tekla.Structures.Geometry3d.Line();
+            this.line =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Line");
         }
 
         public Line(dynamic tsObject)

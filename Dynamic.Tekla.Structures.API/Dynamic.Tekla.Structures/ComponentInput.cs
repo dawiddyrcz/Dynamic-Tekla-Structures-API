@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ComponentInput()
         {
-            this.componentinput =  new Tekla.Structures.Model.ComponentInput();
+            this.componentinput =  TSActivator.CreateInstance("Tekla.Structures.Model.ComponentInput");
         }
 
         public ComponentInput(dynamic tsObject)
@@ -63,9 +63,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => componentinput.CopyTo(array, index);
-
-		public System.Collections.IEnumerator GetEnumerator()
-			 => componentinput.GetEnumerator();
 
 
 

@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public Distance()
         {
-            this.distance =  new Tekla.Structures.Geometry3d.Distance();
+            this.distance =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Distance");
         }
 
         public Distance(dynamic tsObject)

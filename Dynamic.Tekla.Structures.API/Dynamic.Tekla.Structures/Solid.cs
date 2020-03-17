@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Solid()
         {
-            this.solid =  new Tekla.Structures.Model.Solid();
+            this.solid =  TSActivator.CreateInstance("Tekla.Structures.Model.Solid");
         }
 
         public Solid(dynamic tsObject)
@@ -47,12 +47,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
 			 => solid.Intersect(point1.GetTSObject(), point2.GetTSObject(), point3.GetTSObject());
-
-		public System.Collections.IEnumerator IntersectAllFaces(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
-			 => solid.IntersectAllFaces(point1.GetTSObject(), point2.GetTSObject(), point3.GetTSObject());
-
-		public System.Collections.IEnumerator GetAllIntersectionPoints(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
-			 => solid.GetAllIntersectionPoints(point1.GetTSObject(), point2.GetTSObject(), point3.GetTSObject());
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.FaceEnumerator(solid.GetFaceEnumerator());

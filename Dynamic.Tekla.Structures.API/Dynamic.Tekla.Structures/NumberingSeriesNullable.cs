@@ -25,7 +25,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public NumberingSeriesNullable()
         {
-            this.numberingseriesnullable =  new Tekla.Structures.Model.NumberingSeriesNullable();
+            this.numberingseriesnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable");
         }
 
         public NumberingSeriesNullable(dynamic tsObject)

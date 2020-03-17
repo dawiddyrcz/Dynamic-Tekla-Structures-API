@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public ViewHandler()
         {
-            this.viewhandler =  new Tekla.Structures.Model.UI.ViewHandler();
+            this.viewhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewHandler");
         }
 
         public ViewHandler(dynamic tsObject)

@@ -133,7 +133,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ProjectInfo()
         {
-            this.projectinfo =  new Tekla.Structures.Model.ProjectInfo();
+            this.projectinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ProjectInfo");
         }
 
         public ProjectInfo(dynamic tsObject)
@@ -168,14 +168,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Modify()
 			 => projectinfo.Modify();
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
-			 => projectinfo.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.String Value)
+			 => projectinfo.GetUserProperty(Name, Value);
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
-			 => projectinfo.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
+			 => projectinfo.GetUserProperty(Name, Value);
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
-			 => projectinfo.GetUserProperty(Name, ref Value);
+		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
+			 => projectinfo.GetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
 			 => projectinfo.SetUserProperty(Name, Value);
@@ -186,17 +186,17 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
 			 => projectinfo.SetUserProperty(Name, Value);
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable Values)
-			 => projectinfo.GetIntegerUserProperties(ref Values);
+		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable Values)
+			 => projectinfo.GetIntegerUserProperties(Values);
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable Values)
-			 => projectinfo.GetDoubleUserProperties(ref Values);
+		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable Values)
+			 => projectinfo.GetDoubleUserProperties(Values);
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable Values)
-			 => projectinfo.GetStringUserProperties(ref Values);
+		public System.Boolean GetStringUserProperties(System.Collections.Hashtable Values)
+			 => projectinfo.GetStringUserProperties(Values);
 
-		public System.Boolean GetDynamicStringProperty(System.String Name, ref System.String Value)
-			 => projectinfo.GetDynamicStringProperty(Name, ref Value);
+		public System.Boolean GetDynamicStringProperty(System.String Name, System.String Value)
+			 => projectinfo.GetDynamicStringProperty(Name, Value);
 
 		public System.Boolean SetDynamicStringProperty(System.String Name, System.String Value)
 			 => projectinfo.SetDynamicStringProperty(Name, Value);

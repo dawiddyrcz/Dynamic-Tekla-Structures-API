@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelInfo()
         {
-            this.modelinfo =  new Tekla.Structures.Model.ModelInfo();
+            this.modelinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelInfo");
         }
 
         public ModelInfo(dynamic tsObject)

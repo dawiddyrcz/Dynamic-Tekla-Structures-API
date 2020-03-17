@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Events()
         {
-            this.events =  new Tekla.Structures.Model.Events();
+            this.events =  TSActivator.CreateInstance("Tekla.Structures.Model.Events");
         }
 
         public Events(dynamic tsObject)
@@ -211,7 +211,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public SelectionChangeDelegate()
         {
-            this.selectionchangedelegate =  new Tekla.Structures.Model.SelectionChangeDelegate();
+            this.selectionchangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.SelectionChangeDelegate");
         }
 
         public SelectionChangeDelegate(dynamic tsObject)
@@ -227,9 +227,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => selectionchangedelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => selectionchangedelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => selectionchangedelegate.EndInvoke(result);
@@ -274,7 +271,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public CommandStatusChangeDelegate()
         {
-            this.commandstatuschangedelegate =  new Tekla.Structures.Model.CommandStatusChangeDelegate();
+            this.commandstatuschangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.CommandStatusChangeDelegate");
         }
 
         public CommandStatusChangeDelegate(dynamic tsObject)
@@ -290,9 +287,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status)
 			 => commandstatuschangedelegate.Invoke(TSCommand, TSCommandParam, Status);
-
-		public System.IAsyncResult BeginInvoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status, System.AsyncCallback callback, System.Object @object)
-			 => commandstatuschangedelegate.BeginInvoke(TSCommand, TSCommandParam, Status, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => commandstatuschangedelegate.EndInvoke(result);
@@ -337,7 +331,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public TrackEventDelegate()
         {
-            this.trackeventdelegate =  new Tekla.Structures.Model.TrackEventDelegate();
+            this.trackeventdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TrackEventDelegate");
         }
 
         public TrackEventDelegate(dynamic tsObject)
@@ -353,9 +347,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.String Category, System.String Name, System.String Content)
 			 => trackeventdelegate.Invoke(Category, Name, Content);
-
-		public System.IAsyncResult BeginInvoke(System.String Category, System.String Name, System.String Content, System.AsyncCallback callback, System.Object @object)
-			 => trackeventdelegate.BeginInvoke(Category, Name, Content, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => trackeventdelegate.EndInvoke(result);
@@ -400,7 +391,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelSaveDelegate()
         {
-            this.modelsavedelegate =  new Tekla.Structures.Model.ModelSaveDelegate();
+            this.modelsavedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveDelegate");
         }
 
         public ModelSaveDelegate(dynamic tsObject)
@@ -416,9 +407,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => modelsavedelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => modelsavedelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelsavedelegate.EndInvoke(result);
@@ -463,7 +451,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelSaveAsDelegate()
         {
-            this.modelsaveasdelegate =  new Tekla.Structures.Model.ModelSaveAsDelegate();
+            this.modelsaveasdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveAsDelegate");
         }
 
         public ModelSaveAsDelegate(dynamic tsObject)
@@ -479,9 +467,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => modelsaveasdelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => modelsaveasdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelsaveasdelegate.EndInvoke(result);
@@ -526,7 +511,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelLoadDelegate()
         {
-            this.modelloaddelegate =  new Tekla.Structures.Model.ModelLoadDelegate();
+            this.modelloaddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelLoadDelegate");
         }
 
         public ModelLoadDelegate(dynamic tsObject)
@@ -542,9 +527,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => modelloaddelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => modelloaddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelloaddelegate.EndInvoke(result);
@@ -589,7 +571,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public NumberingDelegate()
         {
-            this.numberingdelegate =  new Tekla.Structures.Model.NumberingDelegate();
+            this.numberingdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingDelegate");
         }
 
         public NumberingDelegate(dynamic tsObject)
@@ -605,9 +587,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => numberingdelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => numberingdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => numberingdelegate.EndInvoke(result);
@@ -652,7 +631,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelChangedDelegate()
         {
-            this.modelchangeddelegate =  new Tekla.Structures.Model.ModelChangedDelegate();
+            this.modelchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelChangedDelegate");
         }
 
         public ModelChangedDelegate(dynamic tsObject)
@@ -668,9 +647,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => modelchangeddelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => modelchangeddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelchangeddelegate.EndInvoke(result);
@@ -715,7 +691,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelObjectNumberedDelegate()
         {
-            this.modelobjectnumbereddelegate =  new Tekla.Structures.Model.ModelObjectNumberedDelegate();
+            this.modelobjectnumbereddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectNumberedDelegate");
         }
 
         public ModelObjectNumberedDelegate(dynamic tsObject)
@@ -731,9 +707,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
 			 => modelobjectnumbereddelegate.Invoke(Objects);
-
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects, System.AsyncCallback callback, System.Object @object)
-			 => modelobjectnumbereddelegate.BeginInvoke(Objects, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelobjectnumbereddelegate.EndInvoke(result);
@@ -778,7 +751,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelObjectChangedDelegate()
         {
-            this.modelobjectchangeddelegate =  new Tekla.Structures.Model.ModelObjectChangedDelegate();
+            this.modelobjectchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectChangedDelegate");
         }
 
         public ModelObjectChangedDelegate(dynamic tsObject)
@@ -794,9 +767,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
 			 => modelobjectchangeddelegate.Invoke(Changes);
-
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes, System.AsyncCallback callback, System.Object @object)
-			 => modelobjectchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => modelobjectchangeddelegate.EndInvoke(result);
@@ -841,7 +811,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public TeklaStructuresExitDelegate()
         {
-            this.teklastructuresexitdelegate =  new Tekla.Structures.Model.TeklaStructuresExitDelegate();
+            this.teklastructuresexitdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TeklaStructuresExitDelegate");
         }
 
         public TeklaStructuresExitDelegate(dynamic tsObject)
@@ -857,9 +827,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => teklastructuresexitdelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => teklastructuresexitdelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => teklastructuresexitdelegate.EndInvoke(result);
@@ -904,7 +871,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ClashCheckDoneDelegate()
         {
-            this.clashcheckdonedelegate =  new Tekla.Structures.Model.ClashCheckDoneDelegate();
+            this.clashcheckdonedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckDoneDelegate");
         }
 
         public ClashCheckDoneDelegate(dynamic tsObject)
@@ -920,9 +887,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.Int32 NumbersOfClashes)
 			 => clashcheckdonedelegate.Invoke(NumbersOfClashes);
-
-		public System.IAsyncResult BeginInvoke(System.Int32 NumbersOfClashes, System.AsyncCallback callback, System.Object @object)
-			 => clashcheckdonedelegate.BeginInvoke(NumbersOfClashes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashcheckdonedelegate.EndInvoke(result);
@@ -967,7 +931,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ClashDetectedDelegate()
         {
-            this.clashdetecteddelegate =  new Tekla.Structures.Model.ClashDetectedDelegate();
+            this.clashdetecteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashDetectedDelegate");
         }
 
         public ClashDetectedDelegate(dynamic tsObject)
@@ -983,9 +947,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
 			 => clashdetecteddelegate.Invoke(ClashData.GetTSObject());
-
-		public System.IAsyncResult BeginInvoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData, System.AsyncCallback callback, System.Object @object)
-			 => clashdetecteddelegate.BeginInvoke(ClashData.GetTSObject(), callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashdetecteddelegate.EndInvoke(result);
@@ -1030,7 +991,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PointInputChangedDelegate()
         {
-            this.pointinputchangeddelegate =  new Tekla.Structures.Model.PointInputChangedDelegate();
+            this.pointinputchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.PointInputChangedDelegate");
         }
 
         public PointInputChangedDelegate(dynamic tsObject)
@@ -1046,9 +1007,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
 			 => pointinputchangeddelegate.Invoke(Changes);
-
-		public System.IAsyncResult BeginInvoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes, System.AsyncCallback callback, System.Object @object)
-			 => pointinputchangeddelegate.BeginInvoke(Changes, callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => pointinputchangeddelegate.EndInvoke(result);
@@ -1093,7 +1051,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InterruptedDelegate()
         {
-            this.interrupteddelegate =  new Tekla.Structures.Model.InterruptedDelegate();
+            this.interrupteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.InterruptedDelegate");
         }
 
         public InterruptedDelegate(dynamic tsObject)
@@ -1109,9 +1067,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Invoke()
 			 => interrupteddelegate.Invoke();
-
-		public System.IAsyncResult BeginInvoke(System.AsyncCallback callback, System.Object @object)
-			 => interrupteddelegate.BeginInvoke(callback, @object);
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => interrupteddelegate.EndInvoke(result);

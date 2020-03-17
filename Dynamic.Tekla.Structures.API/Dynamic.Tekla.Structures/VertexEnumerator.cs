@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public VertexEnumerator()
         {
-            this.vertexenumerator =  new Tekla.Structures.Solid.VertexEnumerator();
+            this.vertexenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.VertexEnumerator");
         }
 
         public VertexEnumerator(dynamic tsObject)

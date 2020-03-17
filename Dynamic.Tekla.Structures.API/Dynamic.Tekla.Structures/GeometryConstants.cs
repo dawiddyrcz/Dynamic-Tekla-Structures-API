@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public GeometryConstants()
         {
-            this.geometryconstants =  new Tekla.Structures.Geometry3d.GeometryConstants();
+            this.geometryconstants =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometryConstants");
         }
 
         public GeometryConstants(dynamic tsObject)

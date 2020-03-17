@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InvalidCurveCombinationException()
         {
-            this.invalidcurvecombinationexception =  new Tekla.Structures.Model.InvalidCurveCombinationException();
+            this.invalidcurvecombinationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidCurveCombinationException");
         }
 
         public InvalidCurveCombinationException(dynamic tsObject)

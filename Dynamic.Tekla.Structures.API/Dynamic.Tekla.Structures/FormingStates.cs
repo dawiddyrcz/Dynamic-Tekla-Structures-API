@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Forming
         
         public FormingStates()
         {
-            this.formingstates =  new Tekla.Structures.Forming.FormingStates();
+            this.formingstates =  TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates");
         }
 
         public FormingStates(dynamic tsObject)

@@ -9,6 +9,8 @@ namespace CodeGenerator
 
         public void SaveToFile(Type type)
         {
+            return;
+
             var generator = new TypeGenerator();
             string outputText = String.Copy(text);
 

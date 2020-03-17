@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
         
         public Picker()
         {
-            this.picker =  new Tekla.Structures.Model.UI.Picker();
+            this.picker =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.Picker");
         }
 
         public Picker(dynamic tsObject)
@@ -31,11 +31,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint(System.String Prompt)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(picker.PickPoint(Prompt));
 
-		public System.Collections.ArrayList PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum Enum)
-			 => picker.PickPoints(Enum.GetTSObject());
-
-		public System.Collections.ArrayList PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum Enum, System.String Prompt)
-			 => picker.PickPoints(Enum.GetTSObject(), Prompt);
 
 		public System.Collections.ArrayList PickLine()
 			 => picker.PickLine();
@@ -49,17 +44,6 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.PickInput PickFace(System.String Prompt)
 			 => new Dynamic.Tekla.Structures.Model.UI.PickInput(picker.PickFace(Prompt));
 
-		public Dynamic.Tekla.Structures.Model.ModelObject PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum Enum)
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(picker.PickObject(Enum.GetTSObject()));
-
-		public Dynamic.Tekla.Structures.Model.ModelObject PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum Enum, System.String Prompt)
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(picker.PickObject(Enum.GetTSObject(), Prompt));
-
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum Enum)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(picker.PickObjects(Enum.GetTSObject()));
-
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum Enum, System.String Prompt)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(picker.PickObjects(Enum.GetTSObject(), Prompt));
 
 
 

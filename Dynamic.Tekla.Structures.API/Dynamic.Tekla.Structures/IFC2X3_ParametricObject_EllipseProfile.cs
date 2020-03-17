@@ -67,7 +67,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         
         public IFC2X3_ParametricObject_EllipseProfile()
         {
-            this.ifc2x3_parametricobject_ellipseprofile =  new Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_EllipseProfile();
+            this.ifc2x3_parametricobject_ellipseprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_EllipseProfile");
         }
 
         public IFC2X3_ParametricObject_EllipseProfile(dynamic tsObject)

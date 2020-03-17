@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public Polygon()
         {
-            this.polygon =  new Tekla.Structures.Model.Polygon();
+            this.polygon =  TSActivator.CreateInstance("Tekla.Structures.Model.Polygon");
         }
 
         public Polygon(dynamic tsObject)

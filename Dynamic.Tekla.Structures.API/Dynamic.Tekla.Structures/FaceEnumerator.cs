@@ -19,7 +19,7 @@ namespace Dynamic.Tekla.Structures.Solid
         
         public FaceEnumerator()
         {
-            this.faceenumerator =  new Tekla.Structures.Solid.FaceEnumerator();
+            this.faceenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.FaceEnumerator");
         }
 
         public FaceEnumerator(dynamic tsObject)

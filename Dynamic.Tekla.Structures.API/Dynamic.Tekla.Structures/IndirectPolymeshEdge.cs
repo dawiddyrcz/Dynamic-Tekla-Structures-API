@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         
         public IndirectPolymeshEdge()
         {
-            this.indirectpolymeshedge =  new Tekla.Structures.Geometry3d.IndirectPolymeshEdge();
+            this.indirectpolymeshedge =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.IndirectPolymeshEdge");
         }
 
         public IndirectPolymeshEdge(dynamic tsObject)

@@ -31,7 +31,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PhaseCollection()
         {
-            this.phasecollection =  new Tekla.Structures.Model.PhaseCollection();
+            this.phasecollection =  TSActivator.CreateInstance("Tekla.Structures.Model.PhaseCollection");
         }
 
         public PhaseCollection(dynamic tsObject)
@@ -48,9 +48,6 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void CopyTo(System.Array Array, System.Int32 Index)
 			 => phasecollection.CopyTo(Array, Index);
-
-		public System.Collections.IEnumerator GetEnumerator()
-			 => phasecollection.GetEnumerator();
 
 
 

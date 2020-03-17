@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
         
         public SelfIntersectingSurfaceException()
         {
-            this.selfintersectingsurfaceexception =  new Tekla.Structures.Model.SelfIntersectingSurfaceException();
+            this.selfintersectingsurfaceexception =  TSActivator.CreateInstance("Tekla.Structures.Model.SelfIntersectingSurfaceException");
         }
 
         public SelfIntersectingSurfaceException(dynamic tsObject)

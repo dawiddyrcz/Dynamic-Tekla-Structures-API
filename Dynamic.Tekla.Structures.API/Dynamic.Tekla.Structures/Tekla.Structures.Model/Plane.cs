@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Plane(dynamic tsObject)
         {
             this.plane = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(plane.Origin);
-			this.AxisX = new Dynamic.Tekla.Structures.Geometry3d.Vector(plane.AxisX);
-			this.AxisY = new Dynamic.Tekla.Structures.Geometry3d.Vector(plane.AxisY);
-
         }
 
-
-        public dynamic GetTSObject() => plane;
+        internal dynamic GetTSObject() => plane;
 
 
 

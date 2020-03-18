@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public FacetedBrepFaceHole(dynamic tsObject)
         {
             this.facetedbrepfacehole = tsObject;
-			this.Count = facetedbrepfacehole.Count;
-			this.IsReadOnly = facetedbrepfacehole.IsReadOnly;
-			this.VerticeIndexes = facetedbrepfacehole.VerticeIndexes;
-			this.Vertices = facetedbrepfacehole.Vertices;
-
         }
 
-
-        public dynamic GetTSObject() => facetedbrepfacehole;
+        internal dynamic GetTSObject() => facetedbrepfacehole;
 
 
 

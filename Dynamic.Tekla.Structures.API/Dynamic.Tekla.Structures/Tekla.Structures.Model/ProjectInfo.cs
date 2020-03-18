@@ -139,31 +139,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ProjectInfo(dynamic tsObject)
         {
             this.projectinfo = tsObject;
-			this.Description = projectinfo.Description;
-			this.StartDate = projectinfo.StartDate;
-			this.EndDate = projectinfo.EndDate;
-			this.Object = projectinfo.Object;
-			this.Designer = projectinfo.Designer;
-			this.Location = projectinfo.Location;
-			this.Address = projectinfo.Address;
-			this.PostalBox = projectinfo.PostalBox;
-			this.Town = projectinfo.Town;
-			this.Region = projectinfo.Region;
-			this.PostalCode = projectinfo.PostalCode;
-			this.Country = projectinfo.Country;
-			this.Builder = projectinfo.Builder;
-			this.Name = projectinfo.Name;
-			this.ProjectNumber = projectinfo.ProjectNumber;
-			this.ModelSharingLocalPath = projectinfo.ModelSharingLocalPath;
-			this.ModelSharingServerPath = projectinfo.ModelSharingServerPath;
-			this.Info1 = projectinfo.Info1;
-			this.Info2 = projectinfo.Info2;
-			this.GUID = projectinfo.GUID;
-
         }
 
-
-        public dynamic GetTSObject() => projectinfo;
+        internal dynamic GetTSObject() => projectinfo;
 
 		public System.Boolean Modify()
 			 => projectinfo.Modify();

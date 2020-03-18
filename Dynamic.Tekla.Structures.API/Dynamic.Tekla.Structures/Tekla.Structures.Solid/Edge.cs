@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public Edge(dynamic tsObject)
         {
             this.edge = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(edge.Type);
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(edge.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(edge.EndPoint);
-
         }
 
-
-        public dynamic GetTSObject() => edge;
+        internal dynamic GetTSObject() => edge;
 
 		public System.Object Clone()
 			 => edge.Clone();

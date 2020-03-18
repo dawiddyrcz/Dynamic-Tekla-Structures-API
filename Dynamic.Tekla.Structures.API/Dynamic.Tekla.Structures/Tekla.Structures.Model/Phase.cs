@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Phase(dynamic tsObject)
         {
             this.phase = tsObject;
-			this.PhaseNumber = phase.PhaseNumber;
-			this.PhaseName = phase.PhaseName;
-			this.PhaseComment = phase.PhaseComment;
-			this.IsCurrentPhase = phase.IsCurrentPhase;
-
         }
 
-
-        public dynamic GetTSObject() => phase;
+        internal dynamic GetTSObject() => phase;
 
 		public System.Boolean Insert()
 			 => phase.Insert();

@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public NumberingSeries(dynamic tsObject)
         {
             this.numberingseries = tsObject;
-			this.Prefix = numberingseries.Prefix;
-			this.StartNumber = numberingseries.StartNumber;
-
         }
 
-
-        public dynamic GetTSObject() => numberingseries;
+        internal dynamic GetTSObject() => numberingseries;
 
 
 

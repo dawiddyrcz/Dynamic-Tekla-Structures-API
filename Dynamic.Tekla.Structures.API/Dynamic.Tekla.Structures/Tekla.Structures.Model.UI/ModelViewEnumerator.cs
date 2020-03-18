@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ModelViewEnumerator(dynamic tsObject)
         {
             this.modelviewenumerator = tsObject;
-			this.Current = new Dynamic.Tekla.Structures.Model.UI.View(modelviewenumerator.Current);
-			this.Count = modelviewenumerator.Count;
-			this.CurrentViewId = modelviewenumerator.CurrentViewId;
-
         }
 
-
-        public dynamic GetTSObject() => modelviewenumerator;
+        internal dynamic GetTSObject() => modelviewenumerator;
 
 		public System.Boolean MoveNext()
 			 => modelviewenumerator.MoveNext();

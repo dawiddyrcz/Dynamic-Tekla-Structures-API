@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_IShapeProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_ishapeprofile = tsObject;
-			this.OverallWidth = ifc2x3_parametricobject_ishapeprofile.OverallWidth;
-			this.OverallDepth = ifc2x3_parametricobject_ishapeprofile.OverallDepth;
-			this.WebThickness = ifc2x3_parametricobject_ishapeprofile.WebThickness;
-			this.FlangeThickness = ifc2x3_parametricobject_ishapeprofile.FlangeThickness;
-			this.FilletRadius = ifc2x3_parametricobject_ishapeprofile.FilletRadius;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_ishapeprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ishapeprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ishapeprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_ishapeprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_ishapeprofile.Name;
-			this.Description = ifc2x3_parametricobject_ishapeprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_ishapeprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_ishapeprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_ishapeprofile;
 
 
 

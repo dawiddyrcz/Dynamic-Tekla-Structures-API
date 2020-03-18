@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PourBreak(dynamic tsObject)
         {
             this.pourbreak = tsObject;
-			this.Polymesh = new Dynamic.Tekla.Structures.Geometry3d.FacetedBrep(pourbreak.Polymesh);
-			this.ModificationTime = pourbreak.ModificationTime;
-			this.IsUpToDate = pourbreak.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(pourbreak.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => pourbreak;
+        internal dynamic GetTSObject() => pourbreak;
 
 		public System.Boolean Insert()
 			 => pourbreak.Insert();

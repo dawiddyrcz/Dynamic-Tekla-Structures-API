@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ConicalSurfaceNode(dynamic tsObject)
         {
             this.conicalsurfacenode = tsObject;
-			this.Surface = new Dynamic.Tekla.Structures.Model.ConicalSurface(conicalsurfacenode.Surface);
-			this.IsAutomatic = conicalsurfacenode.IsAutomatic;
-			this.Surface = new Dynamic.Tekla.Structures.Model.BendSurface(conicalsurfacenode.Surface);
-
         }
 
-
-        public dynamic GetTSObject() => conicalsurfacenode;
+        internal dynamic GetTSObject() => conicalsurfacenode;
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
 			 => conicalsurfacenode.AcceptVisitor(visitor.GetTSObject());

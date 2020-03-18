@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ConnectiveGeometryException(dynamic tsObject)
         {
             this.connectivegeometryexception = tsObject;
-			this.Message = connectivegeometryexception.Message;
-			this.Data = connectivegeometryexception.Data;
-			this.InnerException = connectivegeometryexception.InnerException;
-			this.TargetSite = connectivegeometryexception.TargetSite;
-			this.StackTrace = connectivegeometryexception.StackTrace;
-			this.HelpLink = connectivegeometryexception.HelpLink;
-			this.Source = connectivegeometryexception.Source;
-			this.HResult = connectivegeometryexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => connectivegeometryexception;
+        internal dynamic GetTSObject() => connectivegeometryexception;
 
 		public System.Exception GetBaseException()
 			 => connectivegeometryexception.GetBaseException();

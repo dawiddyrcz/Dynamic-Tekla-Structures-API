@@ -41,7 +41,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic basecomponent;
         
-        public BaseComponent()
+        private BaseComponent()
         {
             this.basecomponent =  TSActivator.CreateInstance("Tekla.Structures.Model.BaseComponent");
         }
@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BaseComponent(dynamic tsObject)
         {
             this.basecomponent = tsObject;
-			this.Name = basecomponent.Name;
-			this.Number = basecomponent.Number;
-			this.ModificationTime = basecomponent.ModificationTime;
-			this.IsUpToDate = basecomponent.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(basecomponent.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => basecomponent;
+        internal dynamic GetTSObject() => basecomponent;
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 			 => basecomponent.SetAttribute(AttrName, StrValue);

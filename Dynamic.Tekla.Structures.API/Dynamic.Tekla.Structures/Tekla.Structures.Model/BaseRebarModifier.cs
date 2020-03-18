@@ -53,7 +53,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic baserebarmodifier;
         
-        public BaseRebarModifier()
+        private BaseRebarModifier()
         {
             this.baserebarmodifier =  TSActivator.CreateInstance("Tekla.Structures.Model.BaseRebarModifier");
         }
@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BaseRebarModifier(dynamic tsObject)
         {
             this.baserebarmodifier = tsObject;
-			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(baserebarmodifier.Father);
-			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(baserebarmodifier.Curve);
-			this.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(baserebarmodifier.BarsAffected);
-			this.FirstAffectedBar = baserebarmodifier.FirstAffectedBar;
-			this.ModificationTime = baserebarmodifier.ModificationTime;
-			this.IsUpToDate = baserebarmodifier.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(baserebarmodifier.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => baserebarmodifier;
+        internal dynamic GetTSObject() => baserebarmodifier;
 
 		public System.Boolean Insert()
 			 => baserebarmodifier.Insert();

@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Offset(dynamic tsObject)
         {
             this.offset = tsObject;
-			this.Dx = offset.Dx;
-			this.Dy = offset.Dy;
-			this.Dz = offset.Dz;
-
         }
 
-
-        public dynamic GetTSObject() => offset;
+        internal dynamic GetTSObject() => offset;
 
 
 

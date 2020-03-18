@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures
         public ClashCheckOptions(dynamic tsObject)
         {
             this.clashcheckoptions = tsObject;
-			this.BoltHeadDiameter = clashcheckoptions.BoltHeadDiameter;
-			this.NutThickness = clashcheckoptions.NutThickness;
-
         }
 
-
-        public dynamic GetTSObject() => clashcheckoptions;
+        internal dynamic GetTSObject() => clashcheckoptions;
 
 
 

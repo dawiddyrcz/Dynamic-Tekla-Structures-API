@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public CustomPart(dynamic tsObject)
         {
             this.custompart = tsObject;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(custompart.Position);
-			this.Name = custompart.Name;
-			this.Number = custompart.Number;
-			this.ModificationTime = custompart.ModificationTime;
-			this.IsUpToDate = custompart.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(custompart.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => custompart;
+        internal dynamic GetTSObject() => custompart;
 
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
 			 => custompart.SetInputPositions(StartPoint.GetTSObject(), EndPoint.GetTSObject());

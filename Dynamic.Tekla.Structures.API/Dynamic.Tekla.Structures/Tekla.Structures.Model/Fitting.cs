@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Fitting(dynamic tsObject)
         {
             this.fitting = tsObject;
-			this.Plane = new Dynamic.Tekla.Structures.Model.Plane(fitting.Plane);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(fitting.Father);
-			this.ModificationTime = fitting.ModificationTime;
-			this.IsUpToDate = fitting.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(fitting.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => fitting;
+        internal dynamic GetTSObject() => fitting;
 
 		public System.Boolean Insert()
 			 => fitting.Insert();

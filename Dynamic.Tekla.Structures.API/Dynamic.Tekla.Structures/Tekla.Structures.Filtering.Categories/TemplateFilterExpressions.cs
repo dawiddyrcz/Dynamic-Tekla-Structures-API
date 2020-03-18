@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public TemplateFilterExpressions(dynamic tsObject)
         {
             this.templatefilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => templatefilterexpressions;
+        internal dynamic GetTSObject() => templatefilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 

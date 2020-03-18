@@ -85,22 +85,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Seam(dynamic tsObject)
         {
             this.seam = tsObject;
-			this.UpVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(seam.UpVector);
-			this.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(seam.AutoDirectionType);
-			this.AutoPosition = seam.AutoPosition;
-			this.Code = seam.Code;
-			this.Class = seam.Class;
-			this.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(seam.Status);
-			this.Name = seam.Name;
-			this.Number = seam.Number;
-			this.ModificationTime = seam.ModificationTime;
-			this.IsUpToDate = seam.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(seam.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => seam;
+        internal dynamic GetTSObject() => seam;
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 			 => seam.SetPrimaryObject(M.GetTSObject());

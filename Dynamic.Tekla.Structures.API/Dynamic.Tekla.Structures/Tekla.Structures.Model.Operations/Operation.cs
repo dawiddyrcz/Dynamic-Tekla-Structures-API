@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         dynamic operation;
         
-        public Operation()
+        private Operation()
         {
             this.operation =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         public Operation(dynamic tsObject)
         {
             this.operation = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => operation;
+        internal dynamic GetTSObject() => operation;
 
 		public System.Boolean IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject InputModelObject)
 			 => operation.IsNumberingUpToDate(InputModelObject.GetTSObject());
@@ -314,11 +312,9 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         public ProgressBar(dynamic tsObject)
         {
             this.progressbar = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => progressbar;
+        internal dynamic GetTSObject() => progressbar;
 
 		public System.Boolean Display(System.Int32 SleepTime, System.String Title, System.String Message, System.String CancelButtonLabel, System.String ProgressLabel)
 			 => progressbar.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);

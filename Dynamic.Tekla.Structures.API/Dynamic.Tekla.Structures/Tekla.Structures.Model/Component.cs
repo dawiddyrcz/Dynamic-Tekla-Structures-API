@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Component(dynamic tsObject)
         {
             this.component = tsObject;
-			this.Name = component.Name;
-			this.Number = component.Number;
-			this.ModificationTime = component.ModificationTime;
-			this.IsUpToDate = component.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(component.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => component;
+        internal dynamic GetTSObject() => component;
 
 		public System.Boolean SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput I)
 			 => component.SetComponentInput(I.GetTSObject());

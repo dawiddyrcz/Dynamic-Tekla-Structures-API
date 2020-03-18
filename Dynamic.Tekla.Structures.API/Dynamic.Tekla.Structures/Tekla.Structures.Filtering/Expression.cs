@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         dynamic expression;
         
-        public Expression()
+        private Expression()
         {
             this.expression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Expression");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public Expression(dynamic tsObject)
         {
             this.expression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => expression;
+        internal dynamic GetTSObject() => expression;
 
 
 

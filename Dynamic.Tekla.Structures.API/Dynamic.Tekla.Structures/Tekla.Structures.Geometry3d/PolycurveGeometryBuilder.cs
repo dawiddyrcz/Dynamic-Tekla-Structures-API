@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public PolycurveGeometryBuilder(dynamic tsObject)
         {
             this.polycurvegeometrybuilder = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => polycurvegeometrybuilder;
+        internal dynamic GetTSObject() => polycurvegeometrybuilder;
 
 		public Dynamic.Tekla.Structures.Geometry3d.Polycurve GetPolycurve()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Polycurve(polycurvegeometrybuilder.GetPolycurve());

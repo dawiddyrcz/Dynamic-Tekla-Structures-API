@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public UnsupportedChamferException(dynamic tsObject)
         {
             this.unsupportedchamferexception = tsObject;
-			this.Message = unsupportedchamferexception.Message;
-			this.Data = unsupportedchamferexception.Data;
-			this.InnerException = unsupportedchamferexception.InnerException;
-			this.TargetSite = unsupportedchamferexception.TargetSite;
-			this.StackTrace = unsupportedchamferexception.StackTrace;
-			this.HelpLink = unsupportedchamferexception.HelpLink;
-			this.Source = unsupportedchamferexception.Source;
-			this.HResult = unsupportedchamferexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => unsupportedchamferexception;
+        internal dynamic GetTSObject() => unsupportedchamferexception;
 
 		public System.Exception GetBaseException()
 			 => unsupportedchamferexception.GetBaseException();

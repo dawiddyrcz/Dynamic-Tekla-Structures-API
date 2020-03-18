@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         dynamic parallel;
         
-        public Parallel()
+        private Parallel()
         {
             this.parallel =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Parallel");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Parallel(dynamic tsObject)
         {
             this.parallel = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => parallel;
+        internal dynamic GetTSObject() => parallel;
 
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
 			 => parallel.VectorToVector(Vector1.GetTSObject(), Vector2.GetTSObject());

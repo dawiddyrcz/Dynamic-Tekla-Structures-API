@@ -145,32 +145,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RadialGrid(dynamic tsObject)
         {
             this.radialgrid = tsObject;
-			this.IsMagnetic = radialgrid.IsMagnetic;
-			this.RadialCoordinates = radialgrid.RadialCoordinates;
-			this.AngularCoordinates = radialgrid.AngularCoordinates;
-			this.CoordinateZ = radialgrid.CoordinateZ;
-			this.RadialLabels = radialgrid.RadialLabels;
-			this.AngularLabels = radialgrid.AngularLabels;
-			this.LabelZ = radialgrid.LabelZ;
-			this.ArcStartExtension = radialgrid.ArcStartExtension;
-			this.AngularLinesStartExtension = radialgrid.AngularLinesStartExtension;
-			this.ExtensionBelowZ = radialgrid.ExtensionBelowZ;
-			this.ArcEndExtension = radialgrid.ArcEndExtension;
-			this.AngularLinesEndExtension = radialgrid.AngularLinesEndExtension;
-			this.ExtensionAboveZ = radialgrid.ExtensionAboveZ;
-			this.Color = radialgrid.Color;
-			this.Name = radialgrid.Name;
-			this.FontSize = radialgrid.FontSize;
-			this.FontColor = radialgrid.FontColor;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(radialgrid.Origin);
-			this.ModificationTime = radialgrid.ModificationTime;
-			this.IsUpToDate = radialgrid.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(radialgrid.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => radialgrid;
+        internal dynamic GetTSObject() => radialgrid;
 
 		public System.Boolean Insert()
 			 => radialgrid.Insert();

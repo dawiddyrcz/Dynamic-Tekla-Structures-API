@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Contour(dynamic tsObject)
         {
             this.contour = tsObject;
-			this.ContourPoints = contour.ContourPoints;
-
         }
 
-
-        public dynamic GetTSObject() => contour;
+        internal dynamic GetTSObject() => contour;
 
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
 			 => contour.AddContourPoint(Point.GetTSObject());

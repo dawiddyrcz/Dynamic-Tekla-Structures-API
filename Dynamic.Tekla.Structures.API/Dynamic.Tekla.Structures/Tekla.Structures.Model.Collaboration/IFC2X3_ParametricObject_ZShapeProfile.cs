@@ -97,24 +97,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_ZShapeProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_zshapeprofile = tsObject;
-			this.Depth = ifc2x3_parametricobject_zshapeprofile.Depth;
-			this.FlangeWidth = ifc2x3_parametricobject_zshapeprofile.FlangeWidth;
-			this.WebThickness = ifc2x3_parametricobject_zshapeprofile.WebThickness;
-			this.FlangeThickness = ifc2x3_parametricobject_zshapeprofile.FlangeThickness;
-			this.FilletRadius = ifc2x3_parametricobject_zshapeprofile.FilletRadius;
-			this.EdgeRadius = ifc2x3_parametricobject_zshapeprofile.EdgeRadius;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_zshapeprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_zshapeprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_zshapeprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_zshapeprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_zshapeprofile.Name;
-			this.Description = ifc2x3_parametricobject_zshapeprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_zshapeprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_zshapeprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_zshapeprofile;
 
 
 

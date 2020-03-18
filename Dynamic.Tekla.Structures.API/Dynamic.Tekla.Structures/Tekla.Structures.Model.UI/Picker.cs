@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public Picker(dynamic tsObject)
         {
             this.picker = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => picker;
+        internal dynamic GetTSObject() => picker;
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(picker.PickPoint());

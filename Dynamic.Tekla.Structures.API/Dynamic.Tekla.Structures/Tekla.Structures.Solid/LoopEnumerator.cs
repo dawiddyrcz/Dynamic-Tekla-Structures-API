@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public LoopEnumerator(dynamic tsObject)
         {
             this.loopenumerator = tsObject;
-			this.Current = new Dynamic.Tekla.Structures.Solid.Loop(loopenumerator.Current);
-
         }
 
-
-        public dynamic GetTSObject() => loopenumerator;
+        internal dynamic GetTSObject() => loopenumerator;
 
 		public System.Boolean MoveNext()
 			 => loopenumerator.MoveNext();

@@ -235,47 +235,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BoltArray(dynamic tsObject)
         {
             this.boltarray = tsObject;
-			this.BoltSize = boltarray.BoltSize;
-			this.BoltStandard = boltarray.BoltStandard;
-			this.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltarray.BoltType);
-			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltarray.ThreadInMaterial);
-			this.Length = boltarray.Length;
-			this.CutLength = boltarray.CutLength;
-			this.ExtraLength = boltarray.ExtraLength;
-			this.Tolerance = boltarray.Tolerance;
-			this.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltarray.HoleType);
-			this.SlottedHoleX = boltarray.SlottedHoleX;
-			this.SlottedHoleY = boltarray.SlottedHoleY;
-			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltarray.RotateSlots);
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(boltarray.Position);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltarray.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltarray.EndPointOffset);
-			this.Washer1 = boltarray.Washer1;
-			this.Washer2 = boltarray.Washer2;
-			this.Washer3 = boltarray.Washer3;
-			this.Nut1 = boltarray.Nut1;
-			this.Nut2 = boltarray.Nut2;
-			this.Bolt = boltarray.Bolt;
-			this.Hole1 = boltarray.Hole1;
-			this.Hole2 = boltarray.Hole2;
-			this.Hole3 = boltarray.Hole3;
-			this.Hole4 = boltarray.Hole4;
-			this.Hole5 = boltarray.Hole5;
-			this.PartToBoltTo = new Dynamic.Tekla.Structures.Model.Part(boltarray.PartToBoltTo);
-			this.PartToBeBolted = new Dynamic.Tekla.Structures.Model.Part(boltarray.PartToBeBolted);
-			this.OtherPartsToBolt = boltarray.OtherPartsToBolt;
-			this.FirstPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltarray.FirstPosition);
-			this.SecondPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltarray.SecondPosition);
-			this.ConnectAssemblies = boltarray.ConnectAssemblies;
-			this.BoltPositions = boltarray.BoltPositions;
-			this.ModificationTime = boltarray.ModificationTime;
-			this.IsUpToDate = boltarray.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(boltarray.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => boltarray;
+        internal dynamic GetTSObject() => boltarray;
 
 		public System.Boolean AddBoltDistX(System.Double DistX)
 			 => boltarray.AddBoltDistX(DistX);

@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSpacing(dynamic tsObject)
         {
             this.rebarspacing = tsObject;
-			this.Zones = rebarspacing.Zones;
-			this.StartOffset = rebarspacing.StartOffset;
-			this.EndOffset = rebarspacing.EndOffset;
-			this.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
-			this.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
-			this.StartOffsetIsAutomatic = rebarspacing.StartOffsetIsAutomatic;
-			this.EndOffsetIsAutomatic = rebarspacing.EndOffsetIsAutomatic;
-			this.InheritFromPrimary = rebarspacing.InheritFromPrimary;
-
         }
 
-
-        public dynamic GetTSObject() => rebarspacing;
+        internal dynamic GetTSObject() => rebarspacing;
 
 
 

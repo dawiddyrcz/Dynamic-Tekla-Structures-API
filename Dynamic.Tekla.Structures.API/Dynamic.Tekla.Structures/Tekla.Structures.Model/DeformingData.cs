@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public DeformingData(dynamic tsObject)
         {
             this.deformingdata = tsObject;
-			this.Angle = deformingdata.Angle;
-			this.Angle2 = deformingdata.Angle2;
-			this.Cambering = deformingdata.Cambering;
-			this.Shortening = deformingdata.Shortening;
-
         }
 
-
-        public dynamic GetTSObject() => deformingdata;
+        internal dynamic GetTSObject() => deformingdata;
 
 
 

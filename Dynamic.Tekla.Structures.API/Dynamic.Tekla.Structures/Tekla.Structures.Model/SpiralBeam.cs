@@ -163,35 +163,9 @@ namespace Dynamic.Tekla.Structures.Model
         public SpiralBeam(dynamic tsObject)
         {
             this.spiralbeam = tsObject;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.StartPoint);
-			this.RotationAxisBasePoint = new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationAxisBasePoint);
-			this.RotationAxisUpPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationAxisUpPoint);
-			this.TotalRise = spiralbeam.TotalRise;
-			this.RotationAngle = spiralbeam.RotationAngle;
-			this.TwistAngleStart = spiralbeam.TwistAngleStart;
-			this.TwistAngleEnd = spiralbeam.TwistAngleEnd;
-			this.RotationCenterPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.RotationCenterPoint);
-			this.RotationAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(spiralbeam.RotationAxisDirection);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(spiralbeam.EndPoint);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(spiralbeam.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(spiralbeam.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(spiralbeam.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(spiralbeam.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(spiralbeam.AssemblyNumber);
-			this.Name = spiralbeam.Name;
-			this.Class = spiralbeam.Class;
-			this.Finish = spiralbeam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(spiralbeam.CastUnitType);
-			this.PourPhase = spiralbeam.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(spiralbeam.Position);
-			this.ModificationTime = spiralbeam.ModificationTime;
-			this.IsUpToDate = spiralbeam.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(spiralbeam.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => spiralbeam;
+        internal dynamic GetTSObject() => spiralbeam;
 
 		public System.Boolean Insert()
 			 => spiralbeam.Insert();

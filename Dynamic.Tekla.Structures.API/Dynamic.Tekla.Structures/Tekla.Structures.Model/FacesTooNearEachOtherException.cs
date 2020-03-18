@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public FacesTooNearEachOtherException(dynamic tsObject)
         {
             this.facestooneareachotherexception = tsObject;
-			this.Message = facestooneareachotherexception.Message;
-			this.Data = facestooneareachotherexception.Data;
-			this.InnerException = facestooneareachotherexception.InnerException;
-			this.TargetSite = facestooneareachotherexception.TargetSite;
-			this.StackTrace = facestooneareachotherexception.StackTrace;
-			this.HelpLink = facestooneareachotherexception.HelpLink;
-			this.Source = facestooneareachotherexception.Source;
-			this.HResult = facestooneareachotherexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => facestooneareachotherexception;
+        internal dynamic GetTSObject() => facestooneareachotherexception;
 
 		public System.Exception GetBaseException()
 			 => facestooneareachotherexception.GetBaseException();

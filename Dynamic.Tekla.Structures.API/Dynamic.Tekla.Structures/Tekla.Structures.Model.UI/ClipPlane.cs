@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ClipPlane(dynamic tsObject)
         {
             this.clipplane = tsObject;
-			this.Location = new Dynamic.Tekla.Structures.Geometry3d.Point(clipplane.Location);
-			this.UpVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(clipplane.UpVector);
-			this.View = new Dynamic.Tekla.Structures.Model.UI.View(clipplane.View);
-
         }
 
-
-        public dynamic GetTSObject() => clipplane;
+        internal dynamic GetTSObject() => clipplane;
 
 		public System.Boolean Insert()
 			 => clipplane.Insert();

@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public BooleanConstantFilterExpression(dynamic tsObject)
         {
             this.booleanconstantfilterexpression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => booleanconstantfilterexpression;
+        internal dynamic GetTSObject() => booleanconstantfilterexpression;
 
 
 

@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Assembly(dynamic tsObject)
         {
             this.assembly = tsObject;
-			this.Name = assembly.Name;
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(assembly.AssemblyNumber);
-			this.ModificationTime = assembly.ModificationTime;
-			this.IsUpToDate = assembly.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(assembly.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => assembly;
+        internal dynamic GetTSObject() => assembly;
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetMainPart()
 			 => new Dynamic.Tekla.Structures.Model.ModelObject(assembly.GetMainPart());

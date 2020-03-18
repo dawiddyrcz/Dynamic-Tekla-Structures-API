@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ConicalSurface(dynamic tsObject)
         {
             this.conicalsurface = tsObject;
-			this.Radiuses = conicalsurface.Radiuses;
-			this.Apex = new Dynamic.Tekla.Structures.Geometry3d.Point(conicalsurface.Apex);
-			this.InwardCurved = conicalsurface.InwardCurved;
-			this.IntersectionLine = new Dynamic.Tekla.Structures.Geometry3d.Line(conicalsurface.IntersectionLine);
-			this.EndFaceNormal1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.EndFaceNormal1);
-			this.EndFaceNormal2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.EndFaceNormal2);
-			this.CenterLine = new Dynamic.Tekla.Structures.Geometry3d.Line(conicalsurface.CenterLine);
-			this.RotationAxis = new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.RotationAxis);
-			this.LateralBoundary1 = conicalsurface.LateralBoundary1;
-			this.LateralBoundary2 = conicalsurface.LateralBoundary2;
-			this.SideBoundary1 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(conicalsurface.SideBoundary1);
-			this.SideBoundary2 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(conicalsurface.SideBoundary2);
-
         }
 
-
-        public dynamic GetTSObject() => conicalsurface;
+        internal dynamic GetTSObject() => conicalsurface;
 
 
 

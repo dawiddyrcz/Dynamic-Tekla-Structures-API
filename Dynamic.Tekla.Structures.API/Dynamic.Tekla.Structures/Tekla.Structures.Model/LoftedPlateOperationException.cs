@@ -59,7 +59,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic loftedplateoperationexception;
         
-        public LoftedPlateOperationException()
+        private LoftedPlateOperationException()
         {
             this.loftedplateoperationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException");
         }
@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoftedPlateOperationException(dynamic tsObject)
         {
             this.loftedplateoperationexception = tsObject;
-			this.Message = loftedplateoperationexception.Message;
-			this.Data = loftedplateoperationexception.Data;
-			this.InnerException = loftedplateoperationexception.InnerException;
-			this.TargetSite = loftedplateoperationexception.TargetSite;
-			this.StackTrace = loftedplateoperationexception.StackTrace;
-			this.HelpLink = loftedplateoperationexception.HelpLink;
-			this.Source = loftedplateoperationexception.Source;
-			this.HResult = loftedplateoperationexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => loftedplateoperationexception;
+        internal dynamic GetTSObject() => loftedplateoperationexception;
 
 		public System.Exception GetBaseException()
 			 => loftedplateoperationexception.GetBaseException();

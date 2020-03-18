@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarThreadingDataNullable(dynamic tsObject)
         {
             this.rebarthreadingdatanullable = tsObject;
-			this.ThreadingType = rebarthreadingdatanullable.ThreadingType;
-			this.Length = rebarthreadingdatanullable.Length;
-			this.ExtraFabricationLength = rebarthreadingdatanullable.ExtraFabricationLength;
-
         }
 
-
-        public dynamic GetTSObject() => rebarthreadingdatanullable;
+        internal dynamic GetTSObject() => rebarthreadingdatanullable;
 
 
 

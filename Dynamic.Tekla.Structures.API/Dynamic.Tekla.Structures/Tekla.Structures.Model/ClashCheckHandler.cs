@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ClashCheckHandler(dynamic tsObject)
         {
             this.clashcheckhandler = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => clashcheckhandler;
+        internal dynamic GetTSObject() => clashcheckhandler;
 
 		public System.Boolean RunClashCheck()
 			 => clashcheckhandler.RunClashCheck();

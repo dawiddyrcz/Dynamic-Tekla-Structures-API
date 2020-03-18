@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures
 
         dynamic teklastructuresvariables;
         
-        public TeklaStructuresVariables()
+        private TeklaStructuresVariables()
         {
             this.teklastructuresvariables =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresVariables");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures
         public TeklaStructuresVariables(dynamic tsObject)
         {
             this.teklastructuresvariables = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => teklastructuresvariables;
+        internal dynamic GetTSObject() => teklastructuresvariables;
 
 		public void Add(System.String key)
 			 => teklastructuresvariables.Add(key);

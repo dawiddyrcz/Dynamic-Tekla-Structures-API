@@ -13,8 +13,6 @@ namespace TestConsoleApp
     {
         //TODO wyrzucic przypisywanie properties z konstruktora numer 2
         //TODO dodać takie same konstruktory jak są oryginalnie bo nie mogę zrobić noweg punktu
-        //TODO z properties wywalić .GetTSObject() z get - już usunięte tylko trzeba wygenerować ponownie
-        //TODO typy z tymi samymi nazwami sie nadpisują muszą być w osobnych folderach np. modelobjectselector
 
         static void Main(string[] args)
         {

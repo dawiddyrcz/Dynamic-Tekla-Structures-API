@@ -85,22 +85,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Connection(dynamic tsObject)
         {
             this.connection = tsObject;
-			this.Class = connection.Class;
-			this.UpVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(connection.UpVector);
-			this.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(connection.AutoDirectionType);
-			this.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(connection.PositionType);
-			this.Code = connection.Code;
-			this.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(connection.Status);
-			this.Name = connection.Name;
-			this.Number = connection.Number;
-			this.ModificationTime = connection.ModificationTime;
-			this.IsUpToDate = connection.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(connection.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => connection;
+        internal dynamic GetTSObject() => connection;
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 			 => connection.SetPrimaryObject(M.GetTSObject());

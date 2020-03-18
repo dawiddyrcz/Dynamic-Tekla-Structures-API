@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public Mesh(dynamic tsObject)
         {
             this.mesh = tsObject;
-			this.Points = mesh.Points;
-			this.Triangles = mesh.Triangles;
-			this.Lines = mesh.Lines;
-
         }
 
-
-        public dynamic GetTSObject() => mesh;
+        internal dynamic GetTSObject() => mesh;
 
 		public System.Int32 AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point)
 			 => mesh.AddPoint(Point.GetTSObject());

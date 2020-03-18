@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public Shell(dynamic tsObject)
         {
             this.shell = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => shell;
+        internal dynamic GetTSObject() => shell;
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.FaceEnumerator(shell.GetFaceEnumerator());

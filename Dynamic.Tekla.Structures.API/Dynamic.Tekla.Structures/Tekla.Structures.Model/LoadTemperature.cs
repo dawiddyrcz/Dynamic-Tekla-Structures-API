@@ -157,34 +157,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadTemperature(dynamic tsObject)
         {
             this.loadtemperature = tsObject;
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadtemperature.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = loadtemperature.AutomaticPrimaryAxisWeight;
-			this.Weight = loadtemperature.Weight;
-			this.LoadDispersionAngle = loadtemperature.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = loadtemperature.CreateFixedSupportConditionsAutomatically;
-			this.Position1 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadtemperature.Position1);
-			this.Position2 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadtemperature.Position2);
-			this.TemperatureChangeForAxialElongation = loadtemperature.TemperatureChangeForAxialElongation;
-			this.TemperatureDifferentialTopToBottom = loadtemperature.TemperatureDifferentialTopToBottom;
-			this.TemperatureDifferentialSideToSide = loadtemperature.TemperatureDifferentialSideToSide;
-			this.InitialAxialElongation = loadtemperature.InitialAxialElongation;
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadtemperature.FatherId);
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
-			this.PartFilter = loadtemperature.PartFilter;
-			this.BoundingBoxDx = loadtemperature.BoundingBoxDx;
-			this.BoundingBoxDy = loadtemperature.BoundingBoxDy;
-			this.BoundingBoxDz = loadtemperature.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(loadtemperature.Group);
-			this.ModificationTime = loadtemperature.ModificationTime;
-			this.IsUpToDate = loadtemperature.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadtemperature.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loadtemperature;
+        internal dynamic GetTSObject() => loadtemperature;
 
 		public System.Boolean Insert()
 			 => loadtemperature.Insert();

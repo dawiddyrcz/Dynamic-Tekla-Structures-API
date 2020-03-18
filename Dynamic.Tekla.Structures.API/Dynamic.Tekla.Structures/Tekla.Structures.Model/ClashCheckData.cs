@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ClashCheckData(dynamic tsObject)
         {
             this.clashcheckdata = tsObject;
-			this.Object1 = new Dynamic.Tekla.Structures.Model.ModelObject(clashcheckdata.Object1);
-			this.Object2 = new Dynamic.Tekla.Structures.Model.ModelObject(clashcheckdata.Object2);
-			this.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
-			this.Overlap = clashcheckdata.Overlap;
-
         }
 
-
-        public dynamic GetTSObject() => clashcheckdata;
+        internal dynamic GetTSObject() => clashcheckdata;
 
 
 

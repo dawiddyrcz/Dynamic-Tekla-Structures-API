@@ -97,24 +97,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ReferenceModel(dynamic tsObject)
         {
             this.referencemodel = tsObject;
-			this.Filename = referencemodel.Filename;
-			this.ActiveFilePath = referencemodel.ActiveFilePath;
-			this.Position = new Dynamic.Tekla.Structures.Geometry3d.Point(referencemodel.Position);
-			this.Scale = referencemodel.Scale;
-			this.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
-			this.BasePointGuid = referencemodel.BasePointGuid;
-			this.Rotation = referencemodel.Rotation;
-			this.ProjectGUID = referencemodel.ProjectGUID;
-			this.ModelGUID = referencemodel.ModelGUID;
-			this.VersionGUID = referencemodel.VersionGUID;
-			this.ModificationTime = referencemodel.ModificationTime;
-			this.IsUpToDate = referencemodel.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(referencemodel.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => referencemodel;
+        internal dynamic GetTSObject() => referencemodel;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodel.GetConvertedObjects());

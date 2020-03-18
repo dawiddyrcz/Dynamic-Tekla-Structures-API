@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_EllipseProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_ellipseprofile = tsObject;
-			this.SemiAxis1 = ifc2x3_parametricobject_ellipseprofile.SemiAxis1;
-			this.SemiAxis2 = ifc2x3_parametricobject_ellipseprofile.SemiAxis2;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_ellipseprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ellipseprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ellipseprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_ellipseprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_ellipseprofile.Name;
-			this.Description = ifc2x3_parametricobject_ellipseprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_ellipseprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_ellipseprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_ellipseprofile;
 
 
 

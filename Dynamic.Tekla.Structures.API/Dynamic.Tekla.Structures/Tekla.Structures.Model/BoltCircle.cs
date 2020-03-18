@@ -247,49 +247,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BoltCircle(dynamic tsObject)
         {
             this.boltcircle = tsObject;
-			this.NumberOfBolts = boltcircle.NumberOfBolts;
-			this.Diameter = boltcircle.Diameter;
-			this.BoltSize = boltcircle.BoltSize;
-			this.BoltStandard = boltcircle.BoltStandard;
-			this.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
-			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
-			this.Length = boltcircle.Length;
-			this.CutLength = boltcircle.CutLength;
-			this.ExtraLength = boltcircle.ExtraLength;
-			this.Tolerance = boltcircle.Tolerance;
-			this.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
-			this.SlottedHoleX = boltcircle.SlottedHoleX;
-			this.SlottedHoleY = boltcircle.SlottedHoleY;
-			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(boltcircle.Position);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltcircle.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltcircle.EndPointOffset);
-			this.Washer1 = boltcircle.Washer1;
-			this.Washer2 = boltcircle.Washer2;
-			this.Washer3 = boltcircle.Washer3;
-			this.Nut1 = boltcircle.Nut1;
-			this.Nut2 = boltcircle.Nut2;
-			this.Bolt = boltcircle.Bolt;
-			this.Hole1 = boltcircle.Hole1;
-			this.Hole2 = boltcircle.Hole2;
-			this.Hole3 = boltcircle.Hole3;
-			this.Hole4 = boltcircle.Hole4;
-			this.Hole5 = boltcircle.Hole5;
-			this.PartToBoltTo = new Dynamic.Tekla.Structures.Model.Part(boltcircle.PartToBoltTo);
-			this.PartToBeBolted = new Dynamic.Tekla.Structures.Model.Part(boltcircle.PartToBeBolted);
-			this.OtherPartsToBolt = boltcircle.OtherPartsToBolt;
-			this.FirstPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltcircle.FirstPosition);
-			this.SecondPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltcircle.SecondPosition);
-			this.ConnectAssemblies = boltcircle.ConnectAssemblies;
-			this.BoltPositions = boltcircle.BoltPositions;
-			this.ModificationTime = boltcircle.ModificationTime;
-			this.IsUpToDate = boltcircle.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(boltcircle.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => boltcircle;
+        internal dynamic GetTSObject() => boltcircle;
 
 		public System.Boolean Insert()
 			 => boltcircle.Insert();

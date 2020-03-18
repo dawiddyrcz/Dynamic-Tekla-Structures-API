@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures
         public Assertion(dynamic tsObject)
         {
             this.assertion = tsObject;
-			this.Message = assertion.Message;
-			this.DetailedMessage = assertion.DetailedMessage;
-			this.MethodName = assertion.MethodName;
-
         }
 
-
-        public dynamic GetTSObject() => assertion;
+        internal dynamic GetTSObject() => assertion;
 
 
 

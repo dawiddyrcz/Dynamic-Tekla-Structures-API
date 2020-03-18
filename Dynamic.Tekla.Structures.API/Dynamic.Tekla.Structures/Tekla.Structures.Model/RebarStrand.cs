@@ -151,33 +151,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarStrand(dynamic tsObject)
         {
             this.rebarstrand = tsObject;
-			this.Size = rebarstrand.Size;
-			this.PullPerStrand = rebarstrand.PullPerStrand;
-			this.Patterns = rebarstrand.Patterns;
-			this.Unbondings = rebarstrand.Unbondings;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebarstrand.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebarstrand.EndPoint);
-			this.OnPlaneOffsets = rebarstrand.OnPlaneOffsets;
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(rebarstrand.Father);
-			this.Grade = rebarstrand.Grade;
-			this.Name = rebarstrand.Name;
-			this.Class = rebarstrand.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(rebarstrand.NumberingSeries);
-			this.FromPlaneOffset = rebarstrand.FromPlaneOffset;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarstrand.StartPointOffsetType);
-			this.StartPointOffsetValue = rebarstrand.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarstrand.EndPointOffsetType);
-			this.EndPointOffsetValue = rebarstrand.EndPointOffsetValue;
-			this.RadiusValues = rebarstrand.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebarstrand.InputPointDeformingState);
-			this.ModificationTime = rebarstrand.ModificationTime;
-			this.IsUpToDate = rebarstrand.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarstrand.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarstrand;
+        internal dynamic GetTSObject() => rebarstrand;
 
 		public System.Boolean Insert()
 			 => rebarstrand.Insert();

@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures
         public ModuleManager(dynamic tsObject)
         {
             this.modulemanager = tsObject;
-			this.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
-			this.MultimaterialModeling = modulemanager.MultimaterialModeling;
-			this.LoadModeling = modulemanager.LoadModeling;
-			this.SteelDetailing = modulemanager.SteelDetailing;
-			this.ConcreteDetailing = modulemanager.ConcreteDetailing;
-			this.RebarModeling = modulemanager.RebarModeling;
-			this.AnalysisAndDesign = modulemanager.AnalysisAndDesign;
-			this.TaskManagement = modulemanager.TaskManagement;
-
         }
 
-
-        public dynamic GetTSObject() => modulemanager;
+        internal dynamic GetTSObject() => modulemanager;
 
 
 

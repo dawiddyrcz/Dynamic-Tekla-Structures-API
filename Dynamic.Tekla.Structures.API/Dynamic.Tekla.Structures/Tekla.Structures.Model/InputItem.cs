@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public InputItem(dynamic tsObject)
         {
             this.inputitem = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => inputitem;
+        internal dynamic GetTSObject() => inputitem;
 
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
 			 => new Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum(inputitem.GetInputType());

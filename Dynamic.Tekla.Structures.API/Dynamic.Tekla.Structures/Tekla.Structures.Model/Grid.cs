@@ -151,33 +151,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Grid(dynamic tsObject)
         {
             this.grid = tsObject;
-			this.CoordinateX = grid.CoordinateX;
-			this.CoordinateY = grid.CoordinateY;
-			this.CoordinateZ = grid.CoordinateZ;
-			this.LabelX = grid.LabelX;
-			this.LabelY = grid.LabelY;
-			this.LabelZ = grid.LabelZ;
-			this.ExtensionLeftX = grid.ExtensionLeftX;
-			this.ExtensionLeftY = grid.ExtensionLeftY;
-			this.ExtensionLeftZ = grid.ExtensionLeftZ;
-			this.ExtensionRightX = grid.ExtensionRightX;
-			this.ExtensionRightY = grid.ExtensionRightY;
-			this.ExtensionRightZ = grid.ExtensionRightZ;
-			this.ExtensionForMagneticArea = grid.ExtensionForMagneticArea;
-			this.Color = grid.Color;
-			this.IsMagnetic = grid.IsMagnetic;
-			this.Name = grid.Name;
-			this.FontSize = grid.FontSize;
-			this.FontColor = grid.FontColor;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(grid.Origin);
-			this.ModificationTime = grid.ModificationTime;
-			this.IsUpToDate = grid.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(grid.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => grid;
+        internal dynamic GetTSObject() => grid;
 
 		public System.Boolean Insert()
 			 => grid.Insert();

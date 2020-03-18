@@ -103,25 +103,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GridCylindricalSurface(dynamic tsObject)
         {
             this.gridcylindricalsurface = tsObject;
-			this.CylinderBase = new Dynamic.Tekla.Structures.Geometry3d.Arc(gridcylindricalsurface.CylinderBase);
-			this.CylinderHeight = gridcylindricalsurface.CylinderHeight;
-			this.Parent = new Dynamic.Tekla.Structures.Model.GridBase(gridcylindricalsurface.Parent);
-			this.Label = gridcylindricalsurface.Label;
-			this.IsMagnetic = gridcylindricalsurface.IsMagnetic;
-			this.ExtensionLeft = gridcylindricalsurface.ExtensionLeft;
-			this.ExtensionRight = gridcylindricalsurface.ExtensionRight;
-			this.ExtensionBelow = gridcylindricalsurface.ExtensionBelow;
-			this.ExtensionAbove = gridcylindricalsurface.ExtensionAbove;
-			this.DrawingVisibility = gridcylindricalsurface.DrawingVisibility;
-			this.IsManual = gridcylindricalsurface.IsManual;
-			this.ModificationTime = gridcylindricalsurface.ModificationTime;
-			this.IsUpToDate = gridcylindricalsurface.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(gridcylindricalsurface.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => gridcylindricalsurface;
+        internal dynamic GetTSObject() => gridcylindricalsurface;
 
 		public System.Boolean Modify()
 			 => gridcylindricalsurface.Modify();

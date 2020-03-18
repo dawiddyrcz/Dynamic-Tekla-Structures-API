@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarLegFace(dynamic tsObject)
         {
             this.rebarlegface = tsObject;
-			this.Id = rebarlegface.Id;
-			this.AdditonalOffset = rebarlegface.AdditonalOffset;
-			this.LayerOrderNumber = rebarlegface.LayerOrderNumber;
-			this.Reversed = rebarlegface.Reversed;
-			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(rebarlegface.Contour);
-
         }
 
-
-        public dynamic GetTSObject() => rebarlegface;
+        internal dynamic GetTSObject() => rebarlegface;
 
 
 

@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public FacetedBrepWithNormals(dynamic tsObject)
         {
             this.facetedbrepwithnormals = tsObject;
-			this.Normals = new Dynamic.Tekla.Structures.Geometry3d.Vector(facetedbrepwithnormals.Normals);
-			this.Faces = facetedbrepwithnormals.Faces;
-			this.InnerWires = facetedbrepwithnormals.InnerWires;
-			this.OuterWires = facetedbrepwithnormals.OuterWires;
-			this.GetEdges = facetedbrepwithnormals.GetEdges;
-			this.Vertices = facetedbrepwithnormals.Vertices;
-
         }
 
-
-        public dynamic GetTSObject() => facetedbrepwithnormals;
+        internal dynamic GetTSObject() => facetedbrepwithnormals;
 
 		public System.Boolean CheckForTwoManifold()
 			 => facetedbrepwithnormals.CheckForTwoManifold();

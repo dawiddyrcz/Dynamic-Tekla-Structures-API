@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarLapping(dynamic tsObject)
         {
             this.rebarlapping = tsObject;
-			this.LapLength = rebarlapping.LapLength;
-			this.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(rebarlapping.LapSide);
-			this.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(rebarlapping.LapPlacement);
-			this.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(rebarlapping.LappingType);
-
         }
 
-
-        public dynamic GetTSObject() => rebarlapping;
+        internal dynamic GetTSObject() => rebarlapping;
 
 
 

@@ -181,38 +181,9 @@ namespace Dynamic.Tekla.Structures.Model
         public CurvedRebarGroup(dynamic tsObject)
         {
             this.curvedrebargroup = tsObject;
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(curvedrebargroup.Polygon);
-			this.Size = curvedrebargroup.Size;
-			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(curvedrebargroup.StartHook);
-			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(curvedrebargroup.EndHook);
-			this.FromPlaneOffset = curvedrebargroup.FromPlaneOffset;
-			this.StartFromPlaneOffset = curvedrebargroup.StartFromPlaneOffset;
-			this.EndFromPlaneOffset = curvedrebargroup.EndFromPlaneOffset;
-			this.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(curvedrebargroup.ExcludeType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(curvedrebargroup.SpacingType);
-			this.Spacings = curvedrebargroup.Spacings;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(curvedrebargroup.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(curvedrebargroup.EndPoint);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(curvedrebargroup.Father);
-			this.Grade = curvedrebargroup.Grade;
-			this.Name = curvedrebargroup.Name;
-			this.Class = curvedrebargroup.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(curvedrebargroup.NumberingSeries);
-			this.OnPlaneOffsets = curvedrebargroup.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(curvedrebargroup.StartPointOffsetType);
-			this.StartPointOffsetValue = curvedrebargroup.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(curvedrebargroup.EndPointOffsetType);
-			this.EndPointOffsetValue = curvedrebargroup.EndPointOffsetValue;
-			this.RadiusValues = curvedrebargroup.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(curvedrebargroup.InputPointDeformingState);
-			this.ModificationTime = curvedrebargroup.ModificationTime;
-			this.IsUpToDate = curvedrebargroup.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(curvedrebargroup.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => curvedrebargroup;
+        internal dynamic GetTSObject() => curvedrebargroup;
 
 		public System.Boolean Insert()
 			 => curvedrebargroup.Insert();

@@ -97,24 +97,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public InvalidFilterExpressionException(dynamic tsObject)
         {
             this.invalidfilterexpressionexception = tsObject;
-			this.Expression = new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.Expression);
-			this.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType);
-			this.LeftExpression = new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.LeftExpression);
-			this.RightExpression = new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.RightExpression);
-			this.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(invalidfilterexpressionexception.OperatorType);
-			this.Message = invalidfilterexpressionexception.Message;
-			this.Data = invalidfilterexpressionexception.Data;
-			this.InnerException = invalidfilterexpressionexception.InnerException;
-			this.TargetSite = invalidfilterexpressionexception.TargetSite;
-			this.StackTrace = invalidfilterexpressionexception.StackTrace;
-			this.HelpLink = invalidfilterexpressionexception.HelpLink;
-			this.Source = invalidfilterexpressionexception.Source;
-			this.HResult = invalidfilterexpressionexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => invalidfilterexpressionexception;
+        internal dynamic GetTSObject() => invalidfilterexpressionexception;
 
 		public System.Exception GetBaseException()
 			 => invalidfilterexpressionexception.GetBaseException();

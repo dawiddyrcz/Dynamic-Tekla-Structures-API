@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoftedPlate(dynamic tsObject)
         {
             this.loftedplate = tsObject;
-			this.BaseCurves = loftedplate.BaseCurves;
-			this.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(loftedplate.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(loftedplate.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(loftedplate.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(loftedplate.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(loftedplate.AssemblyNumber);
-			this.Name = loftedplate.Name;
-			this.Class = loftedplate.Class;
-			this.Finish = loftedplate.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
-			this.PourPhase = loftedplate.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(loftedplate.Position);
-			this.ModificationTime = loftedplate.ModificationTime;
-			this.IsUpToDate = loftedplate.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loftedplate.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loftedplate;
+        internal dynamic GetTSObject() => loftedplate;
 
 		public System.Boolean Insert()
 			 => loftedplate.Insert();

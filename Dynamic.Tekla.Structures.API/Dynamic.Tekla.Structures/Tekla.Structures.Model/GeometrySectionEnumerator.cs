@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GeometrySectionEnumerator(dynamic tsObject)
         {
             this.geometrysectionenumerator = tsObject;
-			this.Current = new Dynamic.Tekla.Structures.Model.GeometrySection(geometrysectionenumerator.Current);
-
         }
 
-
-        public dynamic GetTSObject() => geometrysectionenumerator;
+        internal dynamic GetTSObject() => geometrysectionenumerator;
 
 		public System.Boolean MoveNext()
 			 => geometrysectionenumerator.MoveNext();

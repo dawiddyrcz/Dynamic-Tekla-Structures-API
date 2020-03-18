@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public GraphicPolyLine(dynamic tsObject)
         {
             this.graphicpolyline = tsObject;
-			this.PolyLine = new Dynamic.Tekla.Structures.Geometry3d.PolyLine(graphicpolyline.PolyLine);
-			this.Color = new Dynamic.Tekla.Structures.Model.UI.Color(graphicpolyline.Color);
-			this.Width = graphicpolyline.Width;
-			this.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(graphicpolyline.Type);
-
         }
 
-
-        public dynamic GetTSObject() => graphicpolyline;
+        internal dynamic GetTSObject() => graphicpolyline;
 
 
 

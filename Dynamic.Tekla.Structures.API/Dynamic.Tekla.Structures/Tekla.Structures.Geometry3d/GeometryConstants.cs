@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public GeometryConstants(dynamic tsObject)
         {
             this.geometryconstants = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => geometryconstants;
+        internal dynamic GetTSObject() => geometryconstants;
 
 
 

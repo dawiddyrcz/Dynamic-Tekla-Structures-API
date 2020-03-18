@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ChangeData(dynamic tsObject)
         {
             this.changedata = tsObject;
-			this.Object = new Dynamic.Tekla.Structures.Model.ModelObject(changedata.Object);
-			this.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(changedata.Type);
-
         }
 
-
-        public dynamic GetTSObject() => changedata;
+        internal dynamic GetTSObject() => changedata;
 
 
 

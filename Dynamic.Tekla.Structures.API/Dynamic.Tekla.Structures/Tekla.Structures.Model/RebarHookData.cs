@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarHookData(dynamic tsObject)
         {
             this.rebarhookdata = tsObject;
-			this.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
-			this.Angle = rebarhookdata.Angle;
-			this.Radius = rebarhookdata.Radius;
-			this.Length = rebarhookdata.Length;
-
         }
 
-
-        public dynamic GetTSObject() => rebarhookdata;
+        internal dynamic GetTSObject() => rebarhookdata;
 
 
 

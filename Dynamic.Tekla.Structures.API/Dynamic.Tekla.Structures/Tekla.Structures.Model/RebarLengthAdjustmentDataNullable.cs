@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarLengthAdjustmentDataNullable(dynamic tsObject)
         {
             this.rebarlengthadjustmentdatanullable = tsObject;
-			this.AdjustmentType = rebarlengthadjustmentdatanullable.AdjustmentType;
-			this.AdjustmentLength = rebarlengthadjustmentdatanullable.AdjustmentLength;
-
         }
 
-
-        public dynamic GetTSObject() => rebarlengthadjustmentdatanullable;
+        internal dynamic GetTSObject() => rebarlengthadjustmentdatanullable;
 
 
 

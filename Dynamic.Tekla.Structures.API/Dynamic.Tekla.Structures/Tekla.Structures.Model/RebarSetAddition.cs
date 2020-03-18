@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSetAddition(dynamic tsObject)
         {
             this.rebarsetaddition = tsObject;
-			this.LegFaces = rebarsetaddition.LegFaces;
-			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(rebarsetaddition.Father);
-			this.ModificationTime = rebarsetaddition.ModificationTime;
-			this.IsUpToDate = rebarsetaddition.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarsetaddition.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarsetaddition;
+        internal dynamic GetTSObject() => rebarsetaddition;
 
 		public System.Boolean Insert()
 			 => rebarsetaddition.Insert();

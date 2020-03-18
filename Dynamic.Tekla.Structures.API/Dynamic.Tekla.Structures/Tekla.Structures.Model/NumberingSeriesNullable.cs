@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public NumberingSeriesNullable(dynamic tsObject)
         {
             this.numberingseriesnullable = tsObject;
-			this.Prefix = numberingseriesnullable.Prefix;
-			this.StartNumber = numberingseriesnullable.StartNumber;
-
         }
 
-
-        public dynamic GetTSObject() => numberingseriesnullable;
+        internal dynamic GetTSObject() => numberingseriesnullable;
 
 
 

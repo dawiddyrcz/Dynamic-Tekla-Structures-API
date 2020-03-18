@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
         public EdgeChamfer(dynamic tsObject)
         {
             this.edgechamfer = tsObject;
-			this.Chamfer = new Dynamic.Tekla.Structures.Model.Chamfer(edgechamfer.Chamfer);
-			this.FirstEnd = new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.FirstEnd);
-			this.SecondEnd = new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.SecondEnd);
-			this.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
-			this.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
-			this.SecondBevelDimension = edgechamfer.SecondBevelDimension;
-			this.FirstBevelDimension = edgechamfer.FirstBevelDimension;
-			this.Name = edgechamfer.Name;
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(edgechamfer.Father);
-			this.ModificationTime = edgechamfer.ModificationTime;
-			this.IsUpToDate = edgechamfer.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(edgechamfer.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => edgechamfer;
+        internal dynamic GetTSObject() => edgechamfer;
 
 		public System.Boolean Insert()
 			 => edgechamfer.Insert();

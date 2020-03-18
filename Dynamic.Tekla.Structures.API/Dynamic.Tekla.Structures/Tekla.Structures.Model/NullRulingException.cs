@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public NullRulingException(dynamic tsObject)
         {
             this.nullrulingexception = tsObject;
-			this.Message = nullrulingexception.Message;
-			this.Data = nullrulingexception.Data;
-			this.InnerException = nullrulingexception.InnerException;
-			this.TargetSite = nullrulingexception.TargetSite;
-			this.StackTrace = nullrulingexception.StackTrace;
-			this.HelpLink = nullrulingexception.HelpLink;
-			this.Source = nullrulingexception.Source;
-			this.HResult = nullrulingexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => nullrulingexception;
+        internal dynamic GetTSObject() => nullrulingexception;
 
 		public System.Exception GetBaseException()
 			 => nullrulingexception.GetBaseException();

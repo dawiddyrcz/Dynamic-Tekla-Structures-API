@@ -139,31 +139,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadUniform(dynamic tsObject)
         {
             this.loaduniform = tsObject;
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(loaduniform.Polygon);
-			this.P1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loaduniform.P1);
-			this.DistanceA = loaduniform.DistanceA;
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loaduniform.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loaduniform.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loaduniform.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = loaduniform.AutomaticPrimaryAxisWeight;
-			this.Weight = loaduniform.Weight;
-			this.LoadDispersionAngle = loaduniform.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = loaduniform.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loaduniform.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loaduniform.PartNames);
-			this.PartFilter = loaduniform.PartFilter;
-			this.BoundingBoxDx = loaduniform.BoundingBoxDx;
-			this.BoundingBoxDy = loaduniform.BoundingBoxDy;
-			this.BoundingBoxDz = loaduniform.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(loaduniform.Group);
-			this.ModificationTime = loaduniform.ModificationTime;
-			this.IsUpToDate = loaduniform.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loaduniform.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loaduniform;
+        internal dynamic GetTSObject() => loaduniform;
 
 		public System.Boolean Insert()
 			 => loaduniform.Insert();

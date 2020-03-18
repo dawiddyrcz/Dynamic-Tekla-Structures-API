@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public AABB(dynamic tsObject)
         {
             this.aabb = tsObject;
-			this.MinPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(aabb.MinPoint);
-			this.MaxPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(aabb.MaxPoint);
-
         }
 
-
-        public dynamic GetTSObject() => aabb;
+        internal dynamic GetTSObject() => aabb;
 
 		public System.Boolean IsInside(Dynamic.Tekla.Structures.Geometry3d.Point Point)
 			 => aabb.IsInside(Point.GetTSObject());

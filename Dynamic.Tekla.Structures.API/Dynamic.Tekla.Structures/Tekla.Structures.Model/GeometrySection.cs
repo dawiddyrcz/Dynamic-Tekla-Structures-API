@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GeometrySection(dynamic tsObject)
         {
             this.geometrysection = tsObject;
-			this.Index = geometrysection.Index;
-			this.GeometryNode = new Dynamic.Tekla.Structures.Model.IGeometryNode(geometrysection.GeometryNode);
-
         }
 
-
-        public dynamic GetTSObject() => geometrysection;
+        internal dynamic GetTSObject() => geometrysection;
 
 
 

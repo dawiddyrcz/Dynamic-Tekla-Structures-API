@@ -127,29 +127,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BasePoint(dynamic tsObject)
         {
             this.basepoint = tsObject;
-			this.Id = basepoint.Id;
-			this.Guid = basepoint.Guid;
-			this.InitialGuid = basepoint.InitialGuid;
-			this.Name = basepoint.Name;
-			this.Description = basepoint.Description;
-			this.CoordinateSystem = basepoint.CoordinateSystem;
-			this.NorthSouth = basepoint.NorthSouth;
-			this.EastWest = basepoint.EastWest;
-			this.Elevation = basepoint.Elevation;
-			this.Latitude = basepoint.Latitude;
-			this.Longitude = basepoint.Longitude;
-			this.LocationInModelX = basepoint.LocationInModelX;
-			this.LocationInModelY = basepoint.LocationInModelY;
-			this.LocationInModelZ = basepoint.LocationInModelZ;
-			this.AngleToNorth = basepoint.AngleToNorth;
-			this.IsProjectBasePoint = basepoint.IsProjectBasePoint;
-			this.IsCurrentBasePoint = basepoint.IsCurrentBasePoint;
-			this.IsScopedCurrentBasePoint = basepoint.IsScopedCurrentBasePoint;
-
         }
 
-
-        public dynamic GetTSObject() => basepoint;
+        internal dynamic GetTSObject() => basepoint;
 
 		public System.Boolean Insert()
 			 => basepoint.Insert();

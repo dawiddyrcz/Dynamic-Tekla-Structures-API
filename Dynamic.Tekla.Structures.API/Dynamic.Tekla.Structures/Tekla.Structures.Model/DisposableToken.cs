@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public DisposableToken(dynamic tsObject)
         {
             this.disposabletoken = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => disposabletoken;
+        internal dynamic GetTSObject() => disposabletoken;
 
 		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
 			 => new Dynamic.Tekla.Structures.Model.DisposableToken(disposabletoken.op_Addition(a.GetTSObject(), b));

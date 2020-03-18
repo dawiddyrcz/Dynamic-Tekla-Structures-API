@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures
         public TeklaStructuresInfo(dynamic tsObject)
         {
             this.teklastructuresinfo = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => teklastructuresinfo;
+        internal dynamic GetTSObject() => teklastructuresinfo;
 
 		public System.String GetCurrentProgramVersion()
 			 => teklastructuresinfo.GetCurrentProgramVersion();

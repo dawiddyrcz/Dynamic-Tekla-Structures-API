@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BooleanPart(dynamic tsObject)
         {
             this.booleanpart = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
-			this.OperativePart = new Dynamic.Tekla.Structures.Model.Part(booleanpart.OperativePart);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(booleanpart.Father);
-			this.ModificationTime = booleanpart.ModificationTime;
-			this.IsUpToDate = booleanpart.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(booleanpart.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => booleanpart;
+        internal dynamic GetTSObject() => booleanpart;
 
 		public System.Boolean SetOperativePart(Dynamic.Tekla.Structures.Model.Part Part)
 			 => booleanpart.SetOperativePart(Part.GetTSObject());

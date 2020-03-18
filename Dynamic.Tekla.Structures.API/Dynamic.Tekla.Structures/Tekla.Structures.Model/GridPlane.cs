@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GridPlane(dynamic tsObject)
         {
             this.gridplane = tsObject;
-			this.Plane = new Dynamic.Tekla.Structures.Model.Plane(gridplane.Plane);
-			this.Father = new Dynamic.Tekla.Structures.Model.Grid(gridplane.Father);
-			this.Label = gridplane.Label;
-			this.IsMagnetic = gridplane.IsMagnetic;
-			this.ExtensionLeft = gridplane.ExtensionLeft;
-			this.ExtensionRight = gridplane.ExtensionRight;
-			this.ExtensionBelow = gridplane.ExtensionBelow;
-			this.ExtensionAbove = gridplane.ExtensionAbove;
-			this.DrawingVisibility = gridplane.DrawingVisibility;
-			this.Color = gridplane.Color;
-			this.ExtensionForMagneticArea = gridplane.ExtensionForMagneticArea;
-			this.Parent = new Dynamic.Tekla.Structures.Model.GridBase(gridplane.Parent);
-			this.IsManual = gridplane.IsManual;
-			this.ModificationTime = gridplane.ModificationTime;
-			this.IsUpToDate = gridplane.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(gridplane.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => gridplane;
+        internal dynamic GetTSObject() => gridplane;
 
 		public System.Boolean Insert()
 			 => gridplane.Insert();

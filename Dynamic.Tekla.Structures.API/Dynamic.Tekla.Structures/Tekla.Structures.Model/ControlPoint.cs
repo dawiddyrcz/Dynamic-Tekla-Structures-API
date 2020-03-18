@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlPoint(dynamic tsObject)
         {
             this.controlpoint = tsObject;
-			this.Point = new Dynamic.Tekla.Structures.Geometry3d.Point(controlpoint.Point);
-			this.ModificationTime = controlpoint.ModificationTime;
-			this.IsUpToDate = controlpoint.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlpoint.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlpoint;
+        internal dynamic GetTSObject() => controlpoint;
 
 		public System.Boolean Insert()
 			 => controlpoint.Insert();

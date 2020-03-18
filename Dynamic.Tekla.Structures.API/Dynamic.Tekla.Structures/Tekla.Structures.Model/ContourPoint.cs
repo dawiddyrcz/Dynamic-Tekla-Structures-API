@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ContourPoint(dynamic tsObject)
         {
             this.contourpoint = tsObject;
-			this.Chamfer = new Dynamic.Tekla.Structures.Model.Chamfer(contourpoint.Chamfer);
-
         }
 
-
-        public dynamic GetTSObject() => contourpoint;
+        internal dynamic GetTSObject() => contourpoint;
 
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
 			 => contourpoint.SetPoint(P.GetTSObject());

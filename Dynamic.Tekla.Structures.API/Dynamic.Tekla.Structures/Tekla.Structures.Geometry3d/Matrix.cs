@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Matrix(dynamic tsObject)
         {
             this.matrix = tsObject;
-			this.Item = matrix.Item;
-
         }
 
-
-        public dynamic GetTSObject() => matrix;
+        internal dynamic GetTSObject() => matrix;
 
 		public void Transpose()
 			 => matrix.Transpose();

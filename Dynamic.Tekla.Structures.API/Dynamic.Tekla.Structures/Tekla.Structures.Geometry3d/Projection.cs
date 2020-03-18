@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         dynamic projection;
         
-        public Projection()
+        private Projection()
         {
             this.projection =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Projection");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Projection(dynamic tsObject)
         {
             this.projection = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => projection;
+        internal dynamic GetTSObject() => projection;
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Point(projection.PointToLine(Point.GetTSObject(), Line.GetTSObject()));

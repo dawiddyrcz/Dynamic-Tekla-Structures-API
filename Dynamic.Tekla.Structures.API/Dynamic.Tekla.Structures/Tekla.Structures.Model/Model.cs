@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Model(dynamic tsObject)
         {
             this.model = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => model;
+        internal dynamic GetTSObject() => model;
 
 		public System.Boolean GetConnectionStatus()
 			 => model.GetConnectionStatus();

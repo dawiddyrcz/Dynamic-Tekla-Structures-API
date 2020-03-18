@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic @object;
         
-        public Object()
+        private Object()
         {
             this.@object =  TSActivator.CreateInstance("Tekla.Structures.Model.Object");
         }
@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Object(dynamic tsObject)
         {
             this.@object = tsObject;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(@object.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => @object;
+        internal dynamic GetTSObject() => @object;
 
 
 

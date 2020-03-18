@@ -235,47 +235,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BoltXYList(dynamic tsObject)
         {
             this.boltxylist = tsObject;
-			this.BoltSize = boltxylist.BoltSize;
-			this.BoltStandard = boltxylist.BoltStandard;
-			this.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltxylist.BoltType);
-			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltxylist.ThreadInMaterial);
-			this.Length = boltxylist.Length;
-			this.CutLength = boltxylist.CutLength;
-			this.ExtraLength = boltxylist.ExtraLength;
-			this.Tolerance = boltxylist.Tolerance;
-			this.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltxylist.HoleType);
-			this.SlottedHoleX = boltxylist.SlottedHoleX;
-			this.SlottedHoleY = boltxylist.SlottedHoleY;
-			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltxylist.RotateSlots);
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(boltxylist.Position);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltxylist.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltxylist.EndPointOffset);
-			this.Washer1 = boltxylist.Washer1;
-			this.Washer2 = boltxylist.Washer2;
-			this.Washer3 = boltxylist.Washer3;
-			this.Nut1 = boltxylist.Nut1;
-			this.Nut2 = boltxylist.Nut2;
-			this.Bolt = boltxylist.Bolt;
-			this.Hole1 = boltxylist.Hole1;
-			this.Hole2 = boltxylist.Hole2;
-			this.Hole3 = boltxylist.Hole3;
-			this.Hole4 = boltxylist.Hole4;
-			this.Hole5 = boltxylist.Hole5;
-			this.PartToBoltTo = new Dynamic.Tekla.Structures.Model.Part(boltxylist.PartToBoltTo);
-			this.PartToBeBolted = new Dynamic.Tekla.Structures.Model.Part(boltxylist.PartToBeBolted);
-			this.OtherPartsToBolt = boltxylist.OtherPartsToBolt;
-			this.FirstPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltxylist.FirstPosition);
-			this.SecondPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltxylist.SecondPosition);
-			this.ConnectAssemblies = boltxylist.ConnectAssemblies;
-			this.BoltPositions = boltxylist.BoltPositions;
-			this.ModificationTime = boltxylist.ModificationTime;
-			this.IsUpToDate = boltxylist.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(boltxylist.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => boltxylist;
+        internal dynamic GetTSObject() => boltxylist;
 
 		public System.Boolean AddBoltDistX(System.Double DistX)
 			 => boltxylist.AddBoltDistX(DistX);

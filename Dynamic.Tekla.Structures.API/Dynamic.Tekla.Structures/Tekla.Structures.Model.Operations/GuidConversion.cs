@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         public GuidConversion(dynamic tsObject)
         {
             this.guidconversion = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => guidconversion;
+        internal dynamic GetTSObject() => guidconversion;
 
 		public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
 			 => guidconversion.GetGuidMapping();

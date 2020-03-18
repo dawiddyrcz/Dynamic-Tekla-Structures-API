@@ -103,25 +103,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_UShapeProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_ushapeprofile = tsObject;
-			this.Depth = ifc2x3_parametricobject_ushapeprofile.Depth;
-			this.FlangeWidth = ifc2x3_parametricobject_ushapeprofile.FlangeWidth;
-			this.WebThickness = ifc2x3_parametricobject_ushapeprofile.WebThickness;
-			this.FlangeThickness = ifc2x3_parametricobject_ushapeprofile.FlangeThickness;
-			this.FilletRadius = ifc2x3_parametricobject_ushapeprofile.FilletRadius;
-			this.EdgeRadius = ifc2x3_parametricobject_ushapeprofile.EdgeRadius;
-			this.FlangeSlope = ifc2x3_parametricobject_ushapeprofile.FlangeSlope;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_ushapeprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ushapeprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ushapeprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_ushapeprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_ushapeprofile.Name;
-			this.Description = ifc2x3_parametricobject_ushapeprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_ushapeprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_ushapeprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_ushapeprofile;
 
 
 

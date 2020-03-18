@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlCircle(dynamic tsObject)
         {
             this.controlcircle = tsObject;
-			this.Extension = controlcircle.Extension;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
-			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlcircle.LineType);
-			this.Point1 = new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point1);
-			this.Point2 = new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point2);
-			this.Point3 = new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point3);
-			this.ModificationTime = controlcircle.ModificationTime;
-			this.IsUpToDate = controlcircle.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlcircle.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlcircle;
+        internal dynamic GetTSObject() => controlcircle;
 
 		public System.Boolean Insert()
 			 => controlcircle.Insert();

@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarCranking(dynamic tsObject)
         {
             this.rebarcranking = tsObject;
-			this.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
-			this.CrankRotation = rebarcranking.CrankRotation;
-			this.CrankStraightLength = rebarcranking.CrankStraightLength;
-			this.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
-			this.CrankedRatio = rebarcranking.CrankedRatio;
-			this.CrankedDistance = rebarcranking.CrankedDistance;
-			this.CrankedOffset = rebarcranking.CrankedOffset;
-			this.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
-
         }
 
-
-        public dynamic GetTSObject() => rebarcranking;
+        internal dynamic GetTSObject() => rebarcranking;
 
 
 

@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public GraphicsDrawer(dynamic tsObject)
         {
             this.graphicsdrawer = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => graphicsdrawer;
+        internal dynamic GetTSObject() => graphicsdrawer;
 
 		public System.Boolean DrawText(Dynamic.Tekla.Structures.Geometry3d.Point Location, System.String Text, Dynamic.Tekla.Structures.Model.UI.Color Color)
 			 => graphicsdrawer.DrawText(Location.GetTSObject(), Text, Color.GetTSObject());

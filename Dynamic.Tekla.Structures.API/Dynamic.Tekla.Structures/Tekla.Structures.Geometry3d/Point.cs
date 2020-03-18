@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Point(dynamic tsObject)
         {
             this.point = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => point;
+        internal dynamic GetTSObject() => point;
 
 		public void Zero()
 			 => point.Zero();

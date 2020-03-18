@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PourUnit(dynamic tsObject)
         {
             this.pourunit = tsObject;
-			this.Name = pourunit.Name;
-			this.ModificationTime = pourunit.ModificationTime;
-			this.IsUpToDate = pourunit.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(pourunit.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => pourunit;
+        internal dynamic GetTSObject() => pourunit;
 
 		public System.Boolean Insert()
 			 => pourunit.Insert();

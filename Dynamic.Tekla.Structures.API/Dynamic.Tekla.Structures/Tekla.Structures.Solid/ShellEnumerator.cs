@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public ShellEnumerator(dynamic tsObject)
         {
             this.shellenumerator = tsObject;
-			this.Current = shellenumerator.Current;
-
         }
 
-
-        public dynamic GetTSObject() => shellenumerator;
+        internal dynamic GetTSObject() => shellenumerator;
 
 		public System.Boolean MoveNext()
 			 => shellenumerator.MoveNext();

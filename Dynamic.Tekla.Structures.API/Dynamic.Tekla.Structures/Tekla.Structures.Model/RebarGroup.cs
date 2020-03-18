@@ -187,39 +187,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarGroup(dynamic tsObject)
         {
             this.rebargroup = tsObject;
-			this.Polygons = rebargroup.Polygons;
-			this.StirrupType = Dynamic.Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum_.FromTSObject(rebargroup.StirrupType);
-			this.Size = rebargroup.Size;
-			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(rebargroup.StartHook);
-			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(rebargroup.EndHook);
-			this.FromPlaneOffset = rebargroup.FromPlaneOffset;
-			this.StartFromPlaneOffset = rebargroup.StartFromPlaneOffset;
-			this.EndFromPlaneOffset = rebargroup.EndFromPlaneOffset;
-			this.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(rebargroup.ExcludeType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(rebargroup.SpacingType);
-			this.Spacings = rebargroup.Spacings;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebargroup.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebargroup.EndPoint);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(rebargroup.Father);
-			this.Grade = rebargroup.Grade;
-			this.Name = rebargroup.Name;
-			this.Class = rebargroup.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(rebargroup.NumberingSeries);
-			this.OnPlaneOffsets = rebargroup.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebargroup.StartPointOffsetType);
-			this.StartPointOffsetValue = rebargroup.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebargroup.EndPointOffsetType);
-			this.EndPointOffsetValue = rebargroup.EndPointOffsetValue;
-			this.RadiusValues = rebargroup.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebargroup.InputPointDeformingState);
-			this.ModificationTime = rebargroup.ModificationTime;
-			this.IsUpToDate = rebargroup.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebargroup.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebargroup;
+        internal dynamic GetTSObject() => rebargroup;
 
 		public System.Boolean Insert()
 			 => rebargroup.Insert();

@@ -139,31 +139,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadPoint(dynamic tsObject)
         {
             this.loadpoint = tsObject;
-			this.Position = new Dynamic.Tekla.Structures.Geometry3d.Point(loadpoint.Position);
-			this.P = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.P);
-			this.Moment = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.Moment);
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadpoint.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadpoint.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadpoint.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = loadpoint.AutomaticPrimaryAxisWeight;
-			this.Weight = loadpoint.Weight;
-			this.LoadDispersionAngle = loadpoint.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = loadpoint.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadpoint.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadpoint.PartNames);
-			this.PartFilter = loadpoint.PartFilter;
-			this.BoundingBoxDx = loadpoint.BoundingBoxDx;
-			this.BoundingBoxDy = loadpoint.BoundingBoxDy;
-			this.BoundingBoxDz = loadpoint.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(loadpoint.Group);
-			this.ModificationTime = loadpoint.ModificationTime;
-			this.IsUpToDate = loadpoint.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadpoint.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loadpoint;
+        internal dynamic GetTSObject() => loadpoint;
 
 		public System.Boolean Insert()
 			 => loadpoint.Insert();

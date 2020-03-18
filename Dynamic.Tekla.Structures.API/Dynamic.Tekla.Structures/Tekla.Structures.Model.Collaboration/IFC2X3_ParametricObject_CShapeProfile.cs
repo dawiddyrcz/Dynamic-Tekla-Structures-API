@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_CShapeProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_cshapeprofile = tsObject;
-			this.Depth = ifc2x3_parametricobject_cshapeprofile.Depth;
-			this.Width = ifc2x3_parametricobject_cshapeprofile.Width;
-			this.WallThickness = ifc2x3_parametricobject_cshapeprofile.WallThickness;
-			this.Girth = ifc2x3_parametricobject_cshapeprofile.Girth;
-			this.InternalFilletRadius = ifc2x3_parametricobject_cshapeprofile.InternalFilletRadius;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_cshapeprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_cshapeprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_cshapeprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_cshapeprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_cshapeprofile.Name;
-			this.Description = ifc2x3_parametricobject_cshapeprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_cshapeprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_cshapeprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_cshapeprofile;
 
 
 

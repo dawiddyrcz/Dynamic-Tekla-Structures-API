@@ -79,21 +79,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSplice(dynamic tsObject)
         {
             this.rebarsplice = tsObject;
-			this.RebarGroup1 = new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup1);
-			this.RebarGroup2 = new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup2);
-			this.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
-			this.LapLength = rebarsplice.LapLength;
-			this.Offset = rebarsplice.Offset;
-			this.Clearance = rebarsplice.Clearance;
-			this.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
-			this.ModificationTime = rebarsplice.ModificationTime;
-			this.IsUpToDate = rebarsplice.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarsplice.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarsplice;
+        internal dynamic GetTSObject() => rebarsplice;
 
 		public System.Boolean Insert()
 			 => rebarsplice.Insert();

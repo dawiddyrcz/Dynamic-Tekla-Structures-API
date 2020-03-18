@@ -113,7 +113,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic load;
         
-        public Load()
+        private Load()
         {
             this.load =  TSActivator.CreateInstance("Tekla.Structures.Model.Load");
         }
@@ -121,28 +121,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Load(dynamic tsObject)
         {
             this.load = tsObject;
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(load.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(load.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(load.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = load.AutomaticPrimaryAxisWeight;
-			this.Weight = load.Weight;
-			this.LoadDispersionAngle = load.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = load.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(load.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(load.PartNames);
-			this.PartFilter = load.PartFilter;
-			this.BoundingBoxDx = load.BoundingBoxDx;
-			this.BoundingBoxDy = load.BoundingBoxDy;
-			this.BoundingBoxDz = load.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(load.Group);
-			this.ModificationTime = load.ModificationTime;
-			this.IsUpToDate = load.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(load.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => load;
+        internal dynamic GetTSObject() => load;
 
 		public System.Boolean Insert()
 			 => load.Insert();

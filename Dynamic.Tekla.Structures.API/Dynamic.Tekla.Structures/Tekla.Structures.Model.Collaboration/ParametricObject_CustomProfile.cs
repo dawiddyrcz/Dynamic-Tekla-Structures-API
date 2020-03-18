@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public ParametricObject_CustomProfile(dynamic tsObject)
         {
             this.parametricobject_customprofile = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(parametricobject_customprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_customprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_customprofile.Extrusion);
-			this.ProfileName = parametricobject_customprofile.ProfileName;
-			this.Name = parametricobject_customprofile.Name;
-			this.Description = parametricobject_customprofile.Description;
-			this.ObjectType = parametricobject_customprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => parametricobject_customprofile;
+        internal dynamic GetTSObject() => parametricobject_customprofile;
 
 
 

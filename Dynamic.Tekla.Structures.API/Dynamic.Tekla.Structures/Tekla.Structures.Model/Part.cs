@@ -95,7 +95,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic part;
         
-        public Part()
+        private Part()
         {
             this.part =  TSActivator.CreateInstance("Tekla.Structures.Model.Part");
         }
@@ -103,25 +103,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Part(dynamic tsObject)
         {
             this.part = tsObject;
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(part.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(part.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(part.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(part.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(part.AssemblyNumber);
-			this.Name = part.Name;
-			this.Class = part.Class;
-			this.Finish = part.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
-			this.PourPhase = part.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(part.Position);
-			this.ModificationTime = part.ModificationTime;
-			this.IsUpToDate = part.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(part.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => part;
+        internal dynamic GetTSObject() => part;
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid());

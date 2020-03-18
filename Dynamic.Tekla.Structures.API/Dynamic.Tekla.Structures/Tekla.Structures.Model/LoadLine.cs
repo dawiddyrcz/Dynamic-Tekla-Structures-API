@@ -175,37 +175,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadLine(dynamic tsObject)
         {
             this.loadline = tsObject;
-			this.Position1 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadline.Position1);
-			this.Position2 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadline.Position2);
-			this.P1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.P1);
-			this.P2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.P2);
-			this.Torsion1 = loadline.Torsion1;
-			this.Torsion2 = loadline.Torsion2;
-			this.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(loadline.LoadForm);
-			this.DistanceA = loadline.DistanceA;
-			this.DistanceB = loadline.DistanceB;
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadline.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadline.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = loadline.AutomaticPrimaryAxisWeight;
-			this.Weight = loadline.Weight;
-			this.LoadDispersionAngle = loadline.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = loadline.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadline.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadline.PartNames);
-			this.PartFilter = loadline.PartFilter;
-			this.BoundingBoxDx = loadline.BoundingBoxDx;
-			this.BoundingBoxDy = loadline.BoundingBoxDy;
-			this.BoundingBoxDz = loadline.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(loadline.Group);
-			this.ModificationTime = loadline.ModificationTime;
-			this.IsUpToDate = loadline.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadline.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loadline;
+        internal dynamic GetTSObject() => loadline;
 
 		public System.Boolean Insert()
 			 => loadline.Insert();

@@ -139,31 +139,9 @@ namespace Dynamic.Tekla.Structures.Model
         public SingleRebar(dynamic tsObject)
         {
             this.singlerebar = tsObject;
-			this.Size = singlerebar.Size;
-			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(singlerebar.StartHook);
-			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(singlerebar.EndHook);
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(singlerebar.Polygon);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(singlerebar.Father);
-			this.Grade = singlerebar.Grade;
-			this.Name = singlerebar.Name;
-			this.Class = singlerebar.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(singlerebar.NumberingSeries);
-			this.OnPlaneOffsets = singlerebar.OnPlaneOffsets;
-			this.FromPlaneOffset = singlerebar.FromPlaneOffset;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(singlerebar.StartPointOffsetType);
-			this.StartPointOffsetValue = singlerebar.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(singlerebar.EndPointOffsetType);
-			this.EndPointOffsetValue = singlerebar.EndPointOffsetValue;
-			this.RadiusValues = singlerebar.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(singlerebar.InputPointDeformingState);
-			this.ModificationTime = singlerebar.ModificationTime;
-			this.IsUpToDate = singlerebar.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(singlerebar.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => singlerebar;
+        internal dynamic GetTSObject() => singlerebar;
 
 		public System.Boolean Insert()
 			 => singlerebar.Insert();

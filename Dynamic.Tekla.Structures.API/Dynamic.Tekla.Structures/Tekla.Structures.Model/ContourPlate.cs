@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ContourPlate(dynamic tsObject)
         {
             this.contourplate = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
-			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(contourplate.Contour);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(contourplate.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(contourplate.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(contourplate.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(contourplate.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(contourplate.AssemblyNumber);
-			this.Name = contourplate.Name;
-			this.Class = contourplate.Class;
-			this.Finish = contourplate.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
-			this.PourPhase = contourplate.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(contourplate.Position);
-			this.ModificationTime = contourplate.ModificationTime;
-			this.IsUpToDate = contourplate.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(contourplate.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => contourplate;
+        internal dynamic GetTSObject() => contourplate;
 
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
 			 => contourplate.AddContourPoint(contourPoint.GetTSObject());

@@ -79,21 +79,9 @@ namespace Dynamic.Tekla.Structures.Model
         public HierarchicDefinition(dynamic tsObject)
         {
             this.hierarchicdefinition = tsObject;
-			this.Name = hierarchicdefinition.Name;
-			this.CustomType = hierarchicdefinition.CustomType;
-			this.HierarchyType = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.FromTSObject(hierarchicdefinition.HierarchyType);
-			this.Father = new Dynamic.Tekla.Structures.Model.HierarchicDefinition(hierarchicdefinition.Father);
-			this.HierarchyIdentifier = hierarchicdefinition.HierarchyIdentifier;
-			this.Drawable = hierarchicdefinition.Drawable;
-			this.HierarchicChildren = hierarchicdefinition.HierarchicChildren;
-			this.ModificationTime = hierarchicdefinition.ModificationTime;
-			this.IsUpToDate = hierarchicdefinition.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(hierarchicdefinition.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => hierarchicdefinition;
+        internal dynamic GetTSObject() => hierarchicdefinition;
 
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
 			 => hierarchicdefinition.AddObjects(Objects);

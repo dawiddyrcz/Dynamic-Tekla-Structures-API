@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ReferenceModelObject(dynamic tsObject)
         {
             this.referencemodelobject = tsObject;
-			this.ModificationTime = referencemodelobject.ModificationTime;
-			this.IsUpToDate = referencemodelobject.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(referencemodelobject.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => referencemodelobject;
+        internal dynamic GetTSObject() => referencemodelobject;
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
 			 => new Dynamic.Tekla.Structures.Model.ReferenceModel(referencemodelobject.GetReferenceModel());

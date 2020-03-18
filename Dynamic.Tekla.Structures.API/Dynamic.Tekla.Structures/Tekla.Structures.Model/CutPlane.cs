@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public CutPlane(dynamic tsObject)
         {
             this.cutplane = tsObject;
-			this.Plane = new Dynamic.Tekla.Structures.Model.Plane(cutplane.Plane);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(cutplane.Father);
-			this.ModificationTime = cutplane.ModificationTime;
-			this.IsUpToDate = cutplane.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(cutplane.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => cutplane;
+        internal dynamic GetTSObject() => cutplane;
 
 		public System.Boolean Insert()
 			 => cutplane.Insert();

@@ -307,59 +307,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PolygonWeld(dynamic tsObject)
         {
             this.polygonweld = tsObject;
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(polygonweld.Polygon);
-			this.MainObject = new Dynamic.Tekla.Structures.Model.ModelObject(polygonweld.MainObject);
-			this.SecondaryObject = new Dynamic.Tekla.Structures.Model.ModelObject(polygonweld.SecondaryObject);
-			this.SizeAbove = polygonweld.SizeAbove;
-			this.AdditionalSizeAbove = polygonweld.AdditionalSizeAbove;
-			this.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(polygonweld.TypeAbove);
-			this.AngleAbove = polygonweld.AngleAbove;
-			this.LengthAbove = polygonweld.LengthAbove;
-			this.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(polygonweld.ContourAbove);
-			this.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(polygonweld.FinishAbove);
-			this.PitchAbove = polygonweld.PitchAbove;
-			this.SizeBelow = polygonweld.SizeBelow;
-			this.AdditionalSizeBelow = polygonweld.AdditionalSizeBelow;
-			this.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(polygonweld.TypeBelow);
-			this.AngleBelow = polygonweld.AngleBelow;
-			this.LengthBelow = polygonweld.LengthBelow;
-			this.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(polygonweld.ContourBelow);
-			this.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(polygonweld.FinishBelow);
-			this.PitchBelow = polygonweld.PitchBelow;
-			this.ShopWeld = polygonweld.ShopWeld;
-			this.AroundWeld = polygonweld.AroundWeld;
-			this.StitchWeld = polygonweld.StitchWeld;
-			this.RootOpeningAbove = polygonweld.RootOpeningAbove;
-			this.RootFaceAbove = polygonweld.RootFaceAbove;
-			this.EffectiveThroatAbove = polygonweld.EffectiveThroatAbove;
-			this.IncrementAmountAbove = polygonweld.IncrementAmountAbove;
-			this.RootOpeningBelow = polygonweld.RootOpeningBelow;
-			this.RootFaceBelow = polygonweld.RootFaceBelow;
-			this.EffectiveThroatBelow = polygonweld.EffectiveThroatBelow;
-			this.IncrementAmountBelow = polygonweld.IncrementAmountBelow;
-			this.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(polygonweld.ElectrodeClassification);
-			this.ElectrodeStrength = polygonweld.ElectrodeStrength;
-			this.ElectrodeCoefficient = polygonweld.ElectrodeCoefficient;
-			this.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(polygonweld.ProcessType);
-			this.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(polygonweld.NDTInspection);
-			this.ConnectAssemblies = polygonweld.ConnectAssemblies;
-			this.ReferenceText = polygonweld.ReferenceText;
-			this.PrefixAboveLine = polygonweld.PrefixAboveLine;
-			this.PrefixBelowLine = polygonweld.PrefixBelowLine;
-			this.Standard = polygonweld.Standard;
-			this.WeldNumber = polygonweld.WeldNumber;
-			this.WeldNumberPrefix = polygonweld.WeldNumberPrefix;
-			this.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(polygonweld.IntermittentType);
-			this.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(polygonweld.Placement);
-			this.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(polygonweld.Preparation);
-			this.ModificationTime = polygonweld.ModificationTime;
-			this.IsUpToDate = polygonweld.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(polygonweld.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => polygonweld;
+        internal dynamic GetTSObject() => polygonweld;
 
 		public System.Boolean Insert()
 			 => polygonweld.Insert();

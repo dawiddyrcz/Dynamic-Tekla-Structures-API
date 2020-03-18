@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model.Welding
         public WeldGeometry(dynamic tsObject)
         {
             this.weldgeometry = tsObject;
-			this.Position = Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(weldgeometry.Position);
-			this.Polygons = weldgeometry.Polygons;
-
         }
 
-
-        public dynamic GetTSObject() => weldgeometry;
+        internal dynamic GetTSObject() => weldgeometry;
 
 
 

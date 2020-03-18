@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Solid(dynamic tsObject)
         {
             this.solid = tsObject;
-			this.MinimumPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(solid.MinimumPoint);
-			this.MaximumPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(solid.MaximumPoint);
-
         }
 
-
-        public dynamic GetTSObject() => solid;
+        internal dynamic GetTSObject() => solid;
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment line)
 			 => solid.Intersect(line.GetTSObject());

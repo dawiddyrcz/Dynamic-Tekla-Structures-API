@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public SelfIntersectingSurfaceException(dynamic tsObject)
         {
             this.selfintersectingsurfaceexception = tsObject;
-			this.Message = selfintersectingsurfaceexception.Message;
-			this.Data = selfintersectingsurfaceexception.Data;
-			this.InnerException = selfintersectingsurfaceexception.InnerException;
-			this.TargetSite = selfintersectingsurfaceexception.TargetSite;
-			this.StackTrace = selfintersectingsurfaceexception.StackTrace;
-			this.HelpLink = selfintersectingsurfaceexception.HelpLink;
-			this.Source = selfintersectingsurfaceexception.Source;
-			this.HResult = selfintersectingsurfaceexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => selfintersectingsurfaceexception;
+        internal dynamic GetTSObject() => selfintersectingsurfaceexception;
 
 		public System.Exception GetBaseException()
 			 => selfintersectingsurfaceexception.GetBaseException();

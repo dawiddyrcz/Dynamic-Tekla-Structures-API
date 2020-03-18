@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public IndirectPolymeshEdge(dynamic tsObject)
         {
             this.indirectpolymeshedge = tsObject;
-			this.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(indirectpolymeshedge.EdgeType);
-			this.StartPoint = indirectpolymeshedge.StartPoint;
-			this.EndPoint = indirectpolymeshedge.EndPoint;
-			this.ShellIndex = indirectpolymeshedge.ShellIndex;
-
         }
 
-
-        public dynamic GetTSObject() => indirectpolymeshedge;
+        internal dynamic GetTSObject() => indirectpolymeshedge;
 
 
 

@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public Color(dynamic tsObject)
         {
             this.color = tsObject;
-			this.Red = color.Red;
-			this.Green = color.Green;
-			this.Blue = color.Blue;
-			this.Transparency = color.Transparency;
-
         }
 
-
-        public dynamic GetTSObject() => color;
+        internal dynamic GetTSObject() => color;
 
 
 

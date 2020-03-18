@@ -181,38 +181,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ViewVisibilitySettings(dynamic tsObject)
         {
             this.viewvisibilitysettings = tsObject;
-			this.PointsVisible = viewvisibilitysettings.PointsVisible;
-			this.PartsVisible = viewvisibilitysettings.PartsVisible;
-			this.BoltsVisible = viewvisibilitysettings.BoltsVisible;
-			this.BoltHolesVisible = viewvisibilitysettings.BoltHolesVisible;
-			this.WeldsVisible = viewvisibilitysettings.WeldsVisible;
-			this.ConstructionPlanesVisible = viewvisibilitysettings.ConstructionPlanesVisible;
-			this.RebarsVisible = viewvisibilitysettings.RebarsVisible;
-			this.SurfaceTreatmentsVisible = viewvisibilitysettings.SurfaceTreatmentsVisible;
-			this.PoursVisible = viewvisibilitysettings.PoursVisible;
-			this.PourBreaksVisible = viewvisibilitysettings.PourBreaksVisible;
-			this.LoadsVisible = viewvisibilitysettings.LoadsVisible;
-			this.CutsVisible = viewvisibilitysettings.CutsVisible;
-			this.FittingsVisible = viewvisibilitysettings.FittingsVisible;
-			this.ComponentsVisible = viewvisibilitysettings.ComponentsVisible;
-			this.GridsVisible = viewvisibilitysettings.GridsVisible;
-			this.ConstructionLinesVisible = viewvisibilitysettings.ConstructionLinesVisible;
-			this.ReferenceObjectsVisible = viewvisibilitysettings.ReferenceObjectsVisible;
-			this.PointsVisibleInComponents = viewvisibilitysettings.PointsVisibleInComponents;
-			this.PartsVisibleInComponents = viewvisibilitysettings.PartsVisibleInComponents;
-			this.BoltsVisibleInComponents = viewvisibilitysettings.BoltsVisibleInComponents;
-			this.BoltHolesVisibleInComponents = viewvisibilitysettings.BoltHolesVisibleInComponents;
-			this.WeldsVisibleInComponents = viewvisibilitysettings.WeldsVisibleInComponents;
-			this.ConstructionPlanesVisibleInComponents = viewvisibilitysettings.ConstructionPlanesVisibleInComponents;
-			this.RebarsVisibleInComponents = viewvisibilitysettings.RebarsVisibleInComponents;
-			this.CutsVisibleInComponents = viewvisibilitysettings.CutsVisibleInComponents;
-			this.FittingsVisibleInComponents = viewvisibilitysettings.FittingsVisibleInComponents;
-			this.ComponentsVisibleInComponents = viewvisibilitysettings.ComponentsVisibleInComponents;
-
         }
 
-
-        public dynamic GetTSObject() => viewvisibilitysettings;
+        internal dynamic GetTSObject() => viewvisibilitysettings;
 
 
 

@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic modelobject;
         
-        public ModelObject()
+        private ModelObject()
         {
             this.modelobject =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObject");
         }
@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ModelObject(dynamic tsObject)
         {
             this.modelobject = tsObject;
-			this.ModificationTime = modelobject.ModificationTime;
-			this.IsUpToDate = modelobject.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(modelobject.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => modelobject;
+        internal dynamic GetTSObject() => modelobject;
 
 		public System.Boolean Insert()
 			 => modelobject.Insert();

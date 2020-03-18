@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_CircleHollowProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_circlehollowprofile = tsObject;
-			this.Radius = ifc2x3_parametricobject_circlehollowprofile.Radius;
-			this.WallThickness = ifc2x3_parametricobject_circlehollowprofile.WallThickness;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_circlehollowprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_circlehollowprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_circlehollowprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_circlehollowprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_circlehollowprofile.Name;
-			this.Description = ifc2x3_parametricobject_circlehollowprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_circlehollowprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_circlehollowprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_circlehollowprofile;
 
 
 

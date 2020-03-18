@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public Face(dynamic tsObject)
         {
             this.face = tsObject;
-			this.Normal = new Dynamic.Tekla.Structures.Geometry3d.Vector(face.Normal);
-			this.OriginPartId = new Dynamic.Tekla.Structures.Identifier(face.OriginPartId);
-
         }
 
-
-        public dynamic GetTSObject() => face;
+        internal dynamic GetTSObject() => face;
 
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.LoopEnumerator(face.GetLoopEnumerator());

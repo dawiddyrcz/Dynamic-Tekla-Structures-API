@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ClipPlaneCollection(dynamic tsObject)
         {
             this.clipplanecollection = tsObject;
-			this.Count = clipplanecollection.Count;
-			this.IsSynchronized = clipplanecollection.IsSynchronized;
-			this.SyncRoot = clipplanecollection.SyncRoot;
-
         }
 
-
-        public dynamic GetTSObject() => clipplanecollection;
+        internal dynamic GetTSObject() => clipplanecollection;
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => clipplanecollection.CopyTo(array, index);

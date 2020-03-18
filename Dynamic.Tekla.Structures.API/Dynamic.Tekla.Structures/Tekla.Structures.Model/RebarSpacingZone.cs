@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSpacingZone(dynamic tsObject)
         {
             this.rebarspacingzone = tsObject;
-			this.NumberOfSpaces = rebarspacingzone.NumberOfSpaces;
-			this.Spacing = rebarspacingzone.Spacing;
-			this.Length = rebarspacingzone.Length;
-			this.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
-			this.LengthType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
-
         }
 
-
-        public dynamic GetTSObject() => rebarspacingzone;
+        internal dynamic GetTSObject() => rebarspacingzone;
 
 
 

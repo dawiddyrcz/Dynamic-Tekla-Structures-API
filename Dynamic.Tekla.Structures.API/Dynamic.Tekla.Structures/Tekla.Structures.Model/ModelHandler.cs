@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ModelHandler(dynamic tsObject)
         {
             this.modelhandler = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => modelhandler;
+        internal dynamic GetTSObject() => modelhandler;
 
 		public System.Boolean CreateNewSingleUserModel(System.String ModelName, System.String ModelFolder, System.String Template)
 			 => modelhandler.CreateNewSingleUserModel(ModelName, ModelFolder, Template);

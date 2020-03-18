@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Vector(dynamic tsObject)
         {
             this.vector = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => vector;
+        internal dynamic GetTSObject() => vector;
 
 		public System.Double Normalize()
 			 => vector.Normalize();

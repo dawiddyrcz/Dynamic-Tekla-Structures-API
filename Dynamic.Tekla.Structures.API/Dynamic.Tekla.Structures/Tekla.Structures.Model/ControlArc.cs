@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlArc(dynamic tsObject)
         {
             this.controlarc = tsObject;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(controlarc.Color);
-			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlarc.LineType);
-			this.Geometry = new Dynamic.Tekla.Structures.Geometry3d.Arc(controlarc.Geometry);
-			this.ModificationTime = controlarc.ModificationTime;
-			this.IsUpToDate = controlarc.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlarc.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlarc;
+        internal dynamic GetTSObject() => controlarc;
 
 		public System.Boolean Delete()
 			 => controlarc.Delete();

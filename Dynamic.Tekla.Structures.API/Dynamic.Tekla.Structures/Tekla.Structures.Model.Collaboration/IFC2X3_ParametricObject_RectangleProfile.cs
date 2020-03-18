@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_RectangleProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_rectangleprofile = tsObject;
-			this.XDim = ifc2x3_parametricobject_rectangleprofile.XDim;
-			this.YDim = ifc2x3_parametricobject_rectangleprofile.YDim;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_rectangleprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectangleprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectangleprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_rectangleprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_rectangleprofile.Name;
-			this.Description = ifc2x3_parametricobject_rectangleprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_rectangleprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_rectangleprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_rectangleprofile;
 
 
 

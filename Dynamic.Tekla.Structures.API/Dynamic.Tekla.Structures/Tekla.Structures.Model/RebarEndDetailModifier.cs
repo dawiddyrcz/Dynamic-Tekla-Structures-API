@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarEndDetailModifier(dynamic tsObject)
         {
             this.rebarenddetailmodifier = tsObject;
-			this.RebarHook = new Dynamic.Tekla.Structures.Model.RebarHookDataNullable(rebarenddetailmodifier.RebarHook);
-			this.RebarThreading = new Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable(rebarenddetailmodifier.RebarThreading);
-			this.RebarLengthAdjustment = new Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable(rebarenddetailmodifier.RebarLengthAdjustment);
-			this.RebarCranking = new Dynamic.Tekla.Structures.Model.RebarCrankingNullable(rebarenddetailmodifier.RebarCranking);
-			this.EndType = rebarenddetailmodifier.EndType;
-			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(rebarenddetailmodifier.Father);
-			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(rebarenddetailmodifier.Curve);
-			this.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
-			this.FirstAffectedBar = rebarenddetailmodifier.FirstAffectedBar;
-			this.ModificationTime = rebarenddetailmodifier.ModificationTime;
-			this.IsUpToDate = rebarenddetailmodifier.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarenddetailmodifier.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarenddetailmodifier;
+        internal dynamic GetTSObject() => rebarenddetailmodifier;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarenddetailmodifier.GetAffectedBars(whichEnd.GetTSObject()));

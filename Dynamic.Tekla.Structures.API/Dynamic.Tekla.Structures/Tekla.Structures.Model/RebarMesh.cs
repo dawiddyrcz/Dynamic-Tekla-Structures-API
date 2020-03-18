@@ -247,49 +247,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarMesh(dynamic tsObject)
         {
             this.rebarmesh = tsObject;
-			this.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(rebarmesh.MeshType);
-			this.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(rebarmesh.LongitudinalSpacingMethod);
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(rebarmesh.Polygon);
-			this.LongitudinalDistances = rebarmesh.LongitudinalDistances;
-			this.CrossDistances = rebarmesh.CrossDistances;
-			this.FromPlaneOffset = rebarmesh.FromPlaneOffset;
-			this.StartFromPlaneOffset = rebarmesh.StartFromPlaneOffset;
-			this.EndFromPlaneOffset = rebarmesh.EndFromPlaneOffset;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebarmesh.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(rebarmesh.EndPoint);
-			this.LeftOverhangLongitudinal = rebarmesh.LeftOverhangLongitudinal;
-			this.LeftOverhangCross = rebarmesh.LeftOverhangCross;
-			this.RightOverhangLongitudinal = rebarmesh.RightOverhangLongitudinal;
-			this.RightOverhangCross = rebarmesh.RightOverhangCross;
-			this.LongitudinalSize = rebarmesh.LongitudinalSize;
-			this.CrossSize = rebarmesh.CrossSize;
-			this.Width = rebarmesh.Width;
-			this.Length = rebarmesh.Length;
-			this.CutByFatherPartCuts = rebarmesh.CutByFatherPartCuts;
-			this.CatalogName = rebarmesh.CatalogName;
-			this.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(rebarmesh.CrossBarLocation);
-			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(rebarmesh.StartHook);
-			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(rebarmesh.EndHook);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(rebarmesh.Father);
-			this.Grade = rebarmesh.Grade;
-			this.Name = rebarmesh.Name;
-			this.Class = rebarmesh.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(rebarmesh.NumberingSeries);
-			this.OnPlaneOffsets = rebarmesh.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.StartPointOffsetType);
-			this.StartPointOffsetValue = rebarmesh.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.EndPointOffsetType);
-			this.EndPointOffsetValue = rebarmesh.EndPointOffsetValue;
-			this.RadiusValues = rebarmesh.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebarmesh.InputPointDeformingState);
-			this.ModificationTime = rebarmesh.ModificationTime;
-			this.IsUpToDate = rebarmesh.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarmesh.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarmesh;
+        internal dynamic GetTSObject() => rebarmesh;
 
 		public System.Boolean Insert()
 			 => rebarmesh.Insert();

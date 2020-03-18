@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public ParametricObject_ObjectBoundingBox(dynamic tsObject)
         {
             this.parametricobject_objectboundingbox = tsObject;
-			this.yDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.yDir);
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(parametricobject_objectboundingbox.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.Extrusion);
-			this.ProfileName = parametricobject_objectboundingbox.ProfileName;
-			this.Name = parametricobject_objectboundingbox.Name;
-			this.Description = parametricobject_objectboundingbox.Description;
-			this.ObjectType = parametricobject_objectboundingbox.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => parametricobject_objectboundingbox;
+        internal dynamic GetTSObject() => parametricobject_objectboundingbox;
 
 
 

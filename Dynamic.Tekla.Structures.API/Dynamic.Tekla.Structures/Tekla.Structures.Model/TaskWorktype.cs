@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public TaskWorktype(dynamic tsObject)
         {
             this.taskworktype = tsObject;
-			this.Name = taskworktype.Name;
-			this.ModificationTime = taskworktype.ModificationTime;
-			this.IsUpToDate = taskworktype.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(taskworktype.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => taskworktype;
+        internal dynamic GetTSObject() => taskworktype;
 
 		public System.Boolean Insert()
 			 => taskworktype.Insert();

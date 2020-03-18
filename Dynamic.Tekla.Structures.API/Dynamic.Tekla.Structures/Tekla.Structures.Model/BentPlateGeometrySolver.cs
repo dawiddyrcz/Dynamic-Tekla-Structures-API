@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BentPlateGeometrySolver(dynamic tsObject)
         {
             this.bentplategeometrysolver = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => bentplategeometrysolver;
+        internal dynamic GetTSObject() => bentplategeometrysolver;
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 			 => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplategeometrysolver.AddLeg(geometry.GetTSObject(), polygon.GetTSObject(), bendShape.GetTSObject()));

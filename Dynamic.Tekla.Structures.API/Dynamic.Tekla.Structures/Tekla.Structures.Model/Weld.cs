@@ -313,60 +313,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Weld(dynamic tsObject)
         {
             this.weld = tsObject;
-			this.Position = Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.FromTSObject(weld.Position);
-			this.Direction = new Dynamic.Tekla.Structures.Geometry3d.Vector(weld.Direction);
-			this.MainObject = new Dynamic.Tekla.Structures.Model.ModelObject(weld.MainObject);
-			this.SecondaryObject = new Dynamic.Tekla.Structures.Model.ModelObject(weld.SecondaryObject);
-			this.SizeAbove = weld.SizeAbove;
-			this.AdditionalSizeAbove = weld.AdditionalSizeAbove;
-			this.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(weld.TypeAbove);
-			this.AngleAbove = weld.AngleAbove;
-			this.LengthAbove = weld.LengthAbove;
-			this.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(weld.ContourAbove);
-			this.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(weld.FinishAbove);
-			this.PitchAbove = weld.PitchAbove;
-			this.SizeBelow = weld.SizeBelow;
-			this.AdditionalSizeBelow = weld.AdditionalSizeBelow;
-			this.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(weld.TypeBelow);
-			this.AngleBelow = weld.AngleBelow;
-			this.LengthBelow = weld.LengthBelow;
-			this.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(weld.ContourBelow);
-			this.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(weld.FinishBelow);
-			this.PitchBelow = weld.PitchBelow;
-			this.ShopWeld = weld.ShopWeld;
-			this.AroundWeld = weld.AroundWeld;
-			this.StitchWeld = weld.StitchWeld;
-			this.RootOpeningAbove = weld.RootOpeningAbove;
-			this.RootFaceAbove = weld.RootFaceAbove;
-			this.EffectiveThroatAbove = weld.EffectiveThroatAbove;
-			this.IncrementAmountAbove = weld.IncrementAmountAbove;
-			this.RootOpeningBelow = weld.RootOpeningBelow;
-			this.RootFaceBelow = weld.RootFaceBelow;
-			this.EffectiveThroatBelow = weld.EffectiveThroatBelow;
-			this.IncrementAmountBelow = weld.IncrementAmountBelow;
-			this.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(weld.ElectrodeClassification);
-			this.ElectrodeStrength = weld.ElectrodeStrength;
-			this.ElectrodeCoefficient = weld.ElectrodeCoefficient;
-			this.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(weld.ProcessType);
-			this.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(weld.NDTInspection);
-			this.ConnectAssemblies = weld.ConnectAssemblies;
-			this.ReferenceText = weld.ReferenceText;
-			this.PrefixAboveLine = weld.PrefixAboveLine;
-			this.PrefixBelowLine = weld.PrefixBelowLine;
-			this.Standard = weld.Standard;
-			this.WeldNumber = weld.WeldNumber;
-			this.WeldNumberPrefix = weld.WeldNumberPrefix;
-			this.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(weld.IntermittentType);
-			this.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(weld.Placement);
-			this.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(weld.Preparation);
-			this.ModificationTime = weld.ModificationTime;
-			this.IsUpToDate = weld.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(weld.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => weld;
+        internal dynamic GetTSObject() => weld;
 
 		public System.Boolean Insert()
 			 => weld.Insert();

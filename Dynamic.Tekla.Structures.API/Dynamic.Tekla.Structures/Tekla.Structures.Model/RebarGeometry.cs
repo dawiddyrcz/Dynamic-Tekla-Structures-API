@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarGeometry(dynamic tsObject)
         {
             this.rebargeometry = tsObject;
-			this.Shape = new Dynamic.Tekla.Structures.Geometry3d.PolyLine(rebargeometry.Shape);
-			this.Diameter = rebargeometry.Diameter;
-			this.BendingRadiuses = rebargeometry.BendingRadiuses;
-
         }
 
-
-        public dynamic GetTSObject() => rebargeometry;
+        internal dynamic GetTSObject() => rebargeometry;
 
 
 

@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Position(dynamic tsObject)
         {
             this.position = tsObject;
-			this.PlaneOffset = position.PlaneOffset;
-			this.DepthOffset = position.DepthOffset;
-			this.RotationOffset = position.RotationOffset;
-			this.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(position.Plane);
-			this.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(position.Depth);
-			this.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(position.Rotation);
-
         }
 
-
-        public dynamic GetTSObject() => position;
+        internal dynamic GetTSObject() => position;
 
 
 

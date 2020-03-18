@@ -71,7 +71,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic bendsurface;
         
-        public BendSurface()
+        private BendSurface()
         {
             this.bendsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface");
         }
@@ -79,21 +79,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BendSurface(dynamic tsObject)
         {
             this.bendsurface = tsObject;
-			this.InwardCurved = bendsurface.InwardCurved;
-			this.IntersectionLine = new Dynamic.Tekla.Structures.Geometry3d.Line(bendsurface.IntersectionLine);
-			this.EndFaceNormal1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.EndFaceNormal1);
-			this.EndFaceNormal2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.EndFaceNormal2);
-			this.CenterLine = new Dynamic.Tekla.Structures.Geometry3d.Line(bendsurface.CenterLine);
-			this.RotationAxis = new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.RotationAxis);
-			this.LateralBoundary1 = bendsurface.LateralBoundary1;
-			this.LateralBoundary2 = bendsurface.LateralBoundary2;
-			this.SideBoundary1 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(bendsurface.SideBoundary1);
-			this.SideBoundary2 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(bendsurface.SideBoundary2);
-
         }
 
-
-        public dynamic GetTSObject() => bendsurface;
+        internal dynamic GetTSObject() => bendsurface;
 
 
 

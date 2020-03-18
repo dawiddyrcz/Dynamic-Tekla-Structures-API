@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PolygonNode(dynamic tsObject)
         {
             this.polygonnode = tsObject;
-			this.IsAutomatic = polygonnode.IsAutomatic;
-			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(polygonnode.Contour);
-
         }
 
-
-        public dynamic GetTSObject() => polygonnode;
+        internal dynamic GetTSObject() => polygonnode;
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
 			 => polygonnode.AcceptVisitor(visitor.GetTSObject());

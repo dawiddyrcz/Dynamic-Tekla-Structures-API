@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         dynamic modelhistory;
         
-        public ModelHistory()
+        private ModelHistory()
         {
             this.modelhistory =  TSActivator.CreateInstance("Tekla.Structures.Model.History.ModelHistory");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.History
         public ModelHistory(dynamic tsObject)
         {
             this.modelhistory = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => modelhistory;
+        internal dynamic GetTSObject() => modelhistory;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetModifiedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp)
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetModifiedObjects(ModStamp.GetTSObject()));

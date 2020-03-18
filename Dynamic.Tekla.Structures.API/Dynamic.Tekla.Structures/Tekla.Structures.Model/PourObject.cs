@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PourObject(dynamic tsObject)
         {
             this.pourobject = tsObject;
-			this.Class = pourobject.Class;
-			this.PourNumber = pourobject.PourNumber;
-			this.PourType = pourobject.PourType;
-			this.ConcreteMixture = pourobject.ConcreteMixture;
-			this.ModificationTime = pourobject.ModificationTime;
-			this.IsUpToDate = pourobject.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(pourobject.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => pourobject;
+        internal dynamic GetTSObject() => pourobject;
 
 		public System.Boolean Insert()
 			 => pourobject.Insert();

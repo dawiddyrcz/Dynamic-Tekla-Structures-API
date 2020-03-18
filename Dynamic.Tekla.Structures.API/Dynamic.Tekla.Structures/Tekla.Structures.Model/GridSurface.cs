@@ -83,7 +83,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic gridsurface;
         
-        public GridSurface()
+        private GridSurface()
         {
             this.gridsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface");
         }
@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GridSurface(dynamic tsObject)
         {
             this.gridsurface = tsObject;
-			this.Parent = new Dynamic.Tekla.Structures.Model.GridBase(gridsurface.Parent);
-			this.Label = gridsurface.Label;
-			this.IsMagnetic = gridsurface.IsMagnetic;
-			this.ExtensionLeft = gridsurface.ExtensionLeft;
-			this.ExtensionRight = gridsurface.ExtensionRight;
-			this.ExtensionBelow = gridsurface.ExtensionBelow;
-			this.ExtensionAbove = gridsurface.ExtensionAbove;
-			this.DrawingVisibility = gridsurface.DrawingVisibility;
-			this.IsManual = gridsurface.IsManual;
-			this.ModificationTime = gridsurface.ModificationTime;
-			this.IsUpToDate = gridsurface.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(gridsurface.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => gridsurface;
+        internal dynamic GetTSObject() => gridsurface;
 
 		public System.Boolean Insert()
 			 => gridsurface.Insert();

@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PolymeshEnumerator(dynamic tsObject)
         {
             this.polymeshenumerator = tsObject;
-			this.Current = polymeshenumerator.Current;
-
         }
 
-
-        public dynamic GetTSObject() => polymeshenumerator;
+        internal dynamic GetTSObject() => polymeshenumerator;
 
 		public System.Boolean MoveNext()
 			 => polymeshenumerator.MoveNext();

@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         dynamic modelobjectvisualization;
         
-        public ModelObjectVisualization()
+        private ModelObjectVisualization()
         {
             this.modelobjectvisualization =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectVisualization");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ModelObjectVisualization(dynamic tsObject)
         {
             this.modelobjectvisualization = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => modelobjectvisualization;
+        internal dynamic GetTSObject() => modelobjectvisualization;
 
 		public System.Boolean SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => modelobjectvisualization.SetTemporaryStateForAll(color.GetTSObject());

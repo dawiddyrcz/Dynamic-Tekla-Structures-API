@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ViewCamera(dynamic tsObject)
         {
             this.viewcamera = tsObject;
-			this.Location = new Dynamic.Tekla.Structures.Geometry3d.Point(viewcamera.Location);
-			this.DirectionVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(viewcamera.DirectionVector);
-			this.UpVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(viewcamera.UpVector);
-			this.FieldOfView = viewcamera.FieldOfView;
-			this.ZoomFactor = viewcamera.ZoomFactor;
-			this.View = new Dynamic.Tekla.Structures.Model.UI.View(viewcamera.View);
-
         }
 
-
-        public dynamic GetTSObject() => viewcamera;
+        internal dynamic GetTSObject() => viewcamera;
 
 		public System.Boolean Select()
 			 => viewcamera.Select();

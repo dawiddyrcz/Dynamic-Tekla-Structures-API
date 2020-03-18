@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public PickInput(dynamic tsObject)
         {
             this.pickinput = tsObject;
-			this.Count = pickinput.Count;
-			this.IsSynchronized = pickinput.IsSynchronized;
-			this.SyncRoot = pickinput.SyncRoot;
-
         }
 
-
-        public dynamic GetTSObject() => pickinput;
+        internal dynamic GetTSObject() => pickinput;
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => pickinput.CopyTo(array, index);

@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlPolycurve(dynamic tsObject)
         {
             this.controlpolycurve = tsObject;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(controlpolycurve.Color);
-			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlpolycurve.LineType);
-			this.Geometry = new Dynamic.Tekla.Structures.Geometry3d.Polycurve(controlpolycurve.Geometry);
-			this.ModificationTime = controlpolycurve.ModificationTime;
-			this.IsUpToDate = controlpolycurve.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlpolycurve.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlpolycurve;
+        internal dynamic GetTSObject() => controlpolycurve;
 
 		public System.Boolean Delete()
 			 => controlpolycurve.Delete();

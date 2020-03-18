@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public BinaryFilterExpressionCollection(dynamic tsObject)
         {
             this.binaryfilterexpressioncollection = tsObject;
-			this.IsSynchronized = binaryfilterexpressioncollection.IsSynchronized;
-			this.SyncRoot = binaryfilterexpressioncollection.SyncRoot;
-			this.Count = binaryfilterexpressioncollection.Count;
-			this.IsReadOnly = binaryfilterexpressioncollection.IsReadOnly;
-			this.Item = new Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem(binaryfilterexpressioncollection.Item);
-			this.IsEnable = binaryfilterexpressioncollection.IsEnable;
-
         }
 
-
-        public dynamic GetTSObject() => binaryfilterexpressioncollection;
+        internal dynamic GetTSObject() => binaryfilterexpressioncollection;
 
 		public System.Int32 IndexOf(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
 			 => binaryfilterexpressioncollection.IndexOf(Item.GetTSObject());

@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model
         public SurfaceObject(dynamic tsObject)
         {
             this.surfaceobject = tsObject;
-			this.Polymesh = new Dynamic.Tekla.Structures.Geometry3d.FacetedBrep(surfaceobject.Polymesh);
-			this.Class = surfaceobject.Class;
-			this.Name = surfaceobject.Name;
-			this.CreateHoles = surfaceobject.CreateHoles;
-			this.Type = surfaceobject.Type;
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(surfaceobject.Father);
-			this.ModificationTime = surfaceobject.ModificationTime;
-			this.IsUpToDate = surfaceobject.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(surfaceobject.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => surfaceobject;
+        internal dynamic GetTSObject() => surfaceobject;
 
 		public System.Boolean Insert()
 			 => surfaceobject.Insert();

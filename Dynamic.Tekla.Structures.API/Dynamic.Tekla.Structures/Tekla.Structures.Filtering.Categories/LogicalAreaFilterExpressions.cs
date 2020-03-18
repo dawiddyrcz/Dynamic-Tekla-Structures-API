@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public LogicalAreaFilterExpressions(dynamic tsObject)
         {
             this.logicalareafilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => logicalareafilterexpressions;
+        internal dynamic GetTSObject() => logicalareafilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 
@@ -155,11 +145,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Building(dynamic tsObject)
         {
             this.building = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => building;
+        internal dynamic GetTSObject() => building;
 
 
 
@@ -183,11 +171,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Section(dynamic tsObject)
         {
             this.section = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => section;
+        internal dynamic GetTSObject() => section;
 
 
 
@@ -211,11 +197,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Site(dynamic tsObject)
         {
             this.site = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => site;
+        internal dynamic GetTSObject() => site;
 
 
 
@@ -239,11 +223,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Story(dynamic tsObject)
         {
             this.story = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => story;
+        internal dynamic GetTSObject() => story;
 
 
 

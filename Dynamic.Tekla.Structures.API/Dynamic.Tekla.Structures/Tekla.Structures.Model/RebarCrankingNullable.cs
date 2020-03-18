@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarCrankingNullable(dynamic tsObject)
         {
             this.rebarcrankingnullable = tsObject;
-			this.CrankRotation = rebarcrankingnullable.CrankRotation;
-			this.CrankStraightLength = rebarcrankingnullable.CrankStraightLength;
-			this.CrankedLengthType = rebarcrankingnullable.CrankedLengthType;
-			this.CrankedRatio = rebarcrankingnullable.CrankedRatio;
-			this.CrankedDistance = rebarcrankingnullable.CrankedDistance;
-			this.CrankedOffset = rebarcrankingnullable.CrankedOffset;
-			this.CrankingType = rebarcrankingnullable.CrankingType;
-
         }
 
-
-        public dynamic GetTSObject() => rebarcrankingnullable;
+        internal dynamic GetTSObject() => rebarcrankingnullable;
 
 
 

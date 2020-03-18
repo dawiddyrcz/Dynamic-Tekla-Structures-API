@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Line(dynamic tsObject)
         {
             this.line = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(line.Origin);
-			this.Direction = new Dynamic.Tekla.Structures.Geometry3d.Vector(line.Direction);
-
         }
 
-
-        public dynamic GetTSObject() => line;
+        internal dynamic GetTSObject() => line;
 
 
 

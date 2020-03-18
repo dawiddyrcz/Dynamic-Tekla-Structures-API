@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlPlane(dynamic tsObject)
         {
             this.controlplane = tsObject;
-			this.Plane = new Dynamic.Tekla.Structures.Model.Plane(controlplane.Plane);
-			this.IsMagnetic = controlplane.IsMagnetic;
-			this.Name = controlplane.Name;
-			this.ModificationTime = controlplane.ModificationTime;
-			this.IsUpToDate = controlplane.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlplane.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlplane;
+        internal dynamic GetTSObject() => controlplane;
 
 		public System.Boolean Insert()
 			 => controlplane.Insert();

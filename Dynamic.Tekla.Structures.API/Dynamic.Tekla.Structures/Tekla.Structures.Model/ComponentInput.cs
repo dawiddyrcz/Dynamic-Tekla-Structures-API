@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ComponentInput(dynamic tsObject)
         {
             this.componentinput = tsObject;
-			this.Count = componentinput.Count;
-			this.IsSynchronized = componentinput.IsSynchronized;
-			this.SyncRoot = componentinput.SyncRoot;
-
         }
 
-
-        public dynamic GetTSObject() => componentinput;
+        internal dynamic GetTSObject() => componentinput;
 
 		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
 			 => componentinput.AddOneInputPosition(P.GetTSObject());

@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarPropertyModifier(dynamic tsObject)
         {
             this.rebarpropertymodifier = tsObject;
-			this.RebarProperties = new Dynamic.Tekla.Structures.Model.RebarPropertiesNullable(rebarpropertymodifier.RebarProperties);
-			this.GroupingType = rebarpropertymodifier.GroupingType;
-			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(rebarpropertymodifier.Father);
-			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(rebarpropertymodifier.Curve);
-			this.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarpropertymodifier.BarsAffected);
-			this.FirstAffectedBar = rebarpropertymodifier.FirstAffectedBar;
-			this.ModificationTime = rebarpropertymodifier.ModificationTime;
-			this.IsUpToDate = rebarpropertymodifier.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarpropertymodifier.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarpropertymodifier;
+        internal dynamic GetTSObject() => rebarpropertymodifier;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarpropertymodifier.GetAffectedBars());

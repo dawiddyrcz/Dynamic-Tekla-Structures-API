@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BentPlate(dynamic tsObject)
         {
             this.bentplate = tsObject;
-			this.Geometry = new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplate.Geometry);
-			this.Thickness = bentplate.Thickness;
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(bentplate.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(bentplate.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(bentplate.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(bentplate.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(bentplate.AssemblyNumber);
-			this.Name = bentplate.Name;
-			this.Class = bentplate.Class;
-			this.Finish = bentplate.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(bentplate.CastUnitType);
-			this.PourPhase = bentplate.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(bentplate.Position);
-			this.ModificationTime = bentplate.ModificationTime;
-			this.IsUpToDate = bentplate.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(bentplate.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => bentplate;
+        internal dynamic GetTSObject() => bentplate;
 
 		public System.Boolean Insert()
 			 => bentplate.Insert();

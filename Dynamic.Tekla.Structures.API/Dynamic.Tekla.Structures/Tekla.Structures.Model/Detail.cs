@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Detail(dynamic tsObject)
         {
             this.detail = tsObject;
-			this.Class = detail.Class;
-			this.UpVector = new Dynamic.Tekla.Structures.Geometry3d.Vector(detail.UpVector);
-			this.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(detail.AutoDirectionType);
-			this.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(detail.PositionType);
-			this.DetailType = Dynamic.Tekla.Structures.DetailTypeEnum_.FromTSObject(detail.DetailType);
-			this.Code = detail.Code;
-			this.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(detail.Status);
-			this.Name = detail.Name;
-			this.Number = detail.Number;
-			this.ModificationTime = detail.ModificationTime;
-			this.IsUpToDate = detail.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(detail.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => detail;
+        internal dynamic GetTSObject() => detail;
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 			 => detail.SetPrimaryObject(M.GetTSObject());

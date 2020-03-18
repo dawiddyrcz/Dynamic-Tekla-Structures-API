@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public DateTimeFilterExpression(dynamic tsObject)
         {
             this.datetimefilterexpression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => datetimefilterexpression;
+        internal dynamic GetTSObject() => datetimefilterexpression;
 
 
 

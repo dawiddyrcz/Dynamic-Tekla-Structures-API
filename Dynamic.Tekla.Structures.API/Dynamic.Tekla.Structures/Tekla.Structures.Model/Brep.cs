@@ -127,29 +127,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Brep(dynamic tsObject)
         {
             this.brep = tsObject;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(brep.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(brep.EndPoint);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(brep.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(brep.EndPointOffset);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(brep.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(brep.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(brep.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(brep.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(brep.AssemblyNumber);
-			this.Name = brep.Name;
-			this.Class = brep.Class;
-			this.Finish = brep.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(brep.CastUnitType);
-			this.PourPhase = brep.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(brep.Position);
-			this.ModificationTime = brep.ModificationTime;
-			this.IsUpToDate = brep.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(brep.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => brep;
+        internal dynamic GetTSObject() => brep;
 
 		public System.Boolean Insert()
 			 => brep.Insert();

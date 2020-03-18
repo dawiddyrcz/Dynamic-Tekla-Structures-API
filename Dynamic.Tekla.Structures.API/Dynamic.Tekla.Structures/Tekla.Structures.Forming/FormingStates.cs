@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Forming
         public FormingStates(dynamic tsObject)
         {
             this.formingstates = tsObject;
-			this.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(formingstates.Deforming);
-			this.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(formingstates.Folding);
-			this.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(formingstates.Wrapping);
-
         }
 
-
-        public dynamic GetTSObject() => formingstates;
+        internal dynamic GetTSObject() => formingstates;
 
 		public System.Object Clone()
 			 => formingstates.Clone();

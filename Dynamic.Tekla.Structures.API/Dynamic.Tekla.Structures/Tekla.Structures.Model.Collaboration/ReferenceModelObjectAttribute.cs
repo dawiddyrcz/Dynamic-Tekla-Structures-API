@@ -53,7 +53,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         dynamic referencemodelobjectattribute;
         
-        public ReferenceModelObjectAttribute()
+        private ReferenceModelObjectAttribute()
         {
             this.referencemodelobjectattribute =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute");
         }
@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public ReferenceModelObjectAttribute(dynamic tsObject)
         {
             this.referencemodelobjectattribute = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(referencemodelobjectattribute.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(referencemodelobjectattribute.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(referencemodelobjectattribute.Extrusion);
-			this.ProfileName = referencemodelobjectattribute.ProfileName;
-			this.Name = referencemodelobjectattribute.Name;
-			this.Description = referencemodelobjectattribute.Description;
-			this.ObjectType = referencemodelobjectattribute.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => referencemodelobjectattribute;
+        internal dynamic GetTSObject() => referencemodelobjectattribute;
 
 
 

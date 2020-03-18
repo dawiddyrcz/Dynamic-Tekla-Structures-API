@@ -35,7 +35,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic boolean;
         
-        public Boolean()
+        private Boolean()
         {
             this.boolean =  TSActivator.CreateInstance("Tekla.Structures.Model.Boolean");
         }
@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Boolean(dynamic tsObject)
         {
             this.boolean = tsObject;
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(boolean.Father);
-			this.ModificationTime = boolean.ModificationTime;
-			this.IsUpToDate = boolean.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(boolean.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => boolean;
+        internal dynamic GetTSObject() => boolean;
 
 		public System.Boolean Insert()
 			 => boolean.Insert();

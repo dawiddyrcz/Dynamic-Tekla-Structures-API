@@ -16,9 +16,12 @@ namespace CodeGenerator
             
             outputText = AddProperties(type, outputText);
             outputText = AddMethods(type, outputText);
-            outputText = AddConstructor(type, outputText);
 
             outputText = outputText.Replace("$classname", type.Name);
+
+            var accessor = "public";
+            if (type.IsAbstract) accessor = "private";
+            outputText = outputText.Replace("$firstConstructorAccessor", accessor);
             
             if (type.Name.ToLower().Equals("object", StringComparison.InvariantCulture))
                 outputText = outputText.Replace("$dfield", "@object");
@@ -265,52 +268,6 @@ namespace CodeGenerator
             return sb.ToString();
         }
 
-        private string AddConstructor(Type type, string classText)
-        {
-            var sb = new StringBuilder();
-
-            foreach (var property in type.GetProperties())
-            {
-                if (IsTeklaType(property.PropertyType))
-                {
-                    sb.Append("\t\t\t");
-                    sb.Append("this.");
-                    sb.Append(property.Name);
-                    sb.Append(" = ");
-
-                    if (property.PropertyType.IsEnum)
-                    {
-                        sb.Append(GetTypeFullName(property.PropertyType));
-                        sb.Append("_.FromTSObject($dfield.");
-                        sb.Append(property.Name);
-                        sb.Append(");\n");
-                    }
-                    else
-                    {
-                        sb.Append("new ");
-                        sb.Append(GetTypeFullName(property.PropertyType));
-                        sb.Append("($dfield.");
-                        sb.Append(property.Name);
-                        sb.Append(");\n");
-                    }
-                }
-                else
-                {
-                    sb.Append("\t\t\t");
-                    sb.Append("this.");
-                    sb.Append(property.Name);
-                    sb.Append(" = $dfield.");
-                    sb.Append(property.Name);
-                    sb.Append(";\n");
-
-                }
-            }
-
-            classText = classText.Replace("$constructor2", sb.ToString());
-            return classText;
-        }
-
-
 
         private readonly string text = @"
     public sealed class $classname $fatherClass
@@ -320,7 +277,7 @@ $dproperties
 
         dynamic $dfield;
         
-        public $classname()
+        $firstConstructorAccessor $classname()
         {
             this.$dfield =  TSActivator.CreateInstance(""$namespace.$classname"");
         }
@@ -328,11 +285,9 @@ $dproperties
         public $classname(dynamic tsObject)
         {
             this.$dfield = tsObject;
-$constructor2
         }
 
-
-        public dynamic GetTSObject() => $dfield;
+        internal dynamic GetTSObject() => $dfield;
 
 $dmethods
 

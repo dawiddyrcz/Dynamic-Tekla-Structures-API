@@ -109,26 +109,9 @@ namespace Dynamic.Tekla.Structures
         public ComponentOptions(dynamic tsObject)
         {
             this.componentoptions = tsObject;
-			this.PlateProfileName = componentoptions.PlateProfileName;
-			this.FoldedPlateProfileName = componentoptions.FoldedPlateProfileName;
-			this.BoltEdgeDistanceFactor = componentoptions.BoltEdgeDistanceFactor;
-			this.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
-			this.BoltStandard = componentoptions.BoltStandard;
-			this.BoltSize = componentoptions.BoltSize;
-			this.PartMaterial = componentoptions.PartMaterial;
-			this.PartWeldedToPrimaryStartNumber = componentoptions.PartWeldedToPrimaryStartNumber;
-			this.PartWeldedToPrimaryPositionPrefix = componentoptions.PartWeldedToPrimaryPositionPrefix;
-			this.PartWeldedToSecondaryStartNumber = componentoptions.PartWeldedToSecondaryStartNumber;
-			this.PartWeldedToSecondaryPositionPrefix = componentoptions.PartWeldedToSecondaryPositionPrefix;
-			this.LoosePartStartNumber = componentoptions.LoosePartStartNumber;
-			this.LoosePartPositionPrefix = componentoptions.LoosePartPositionPrefix;
-			this.AssemblyLoosePartStartNumber = componentoptions.AssemblyLoosePartStartNumber;
-			this.AssemblyLoosePartPositionPrefix = componentoptions.AssemblyLoosePartPositionPrefix;
-
         }
 
-
-        public dynamic GetTSObject() => componentoptions;
+        internal dynamic GetTSObject() => componentoptions;
 
 
 

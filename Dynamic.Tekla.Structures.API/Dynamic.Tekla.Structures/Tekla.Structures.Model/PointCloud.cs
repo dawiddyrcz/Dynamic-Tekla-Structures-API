@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PointCloud(dynamic tsObject)
         {
             this.pointcloud = tsObject;
-			this.Guid = pointcloud.Guid;
-			this.OriginalPath = pointcloud.OriginalPath;
-			this.Url = pointcloud.Url;
-			this.Name = pointcloud.Name;
-			this.LocationBy = pointcloud.LocationBy;
-			this.UseAutoCreatedBasePoint = pointcloud.UseAutoCreatedBasePoint;
-			this.BoundingBox = new Dynamic.Tekla.Structures.Geometry3d.AABB(pointcloud.BoundingBox);
-			this.Scale = pointcloud.Scale;
-
         }
 
-
-        public dynamic GetTSObject() => pointcloud;
+        internal dynamic GetTSObject() => pointcloud;
 
 		public System.Boolean Attach()
 			 => pointcloud.Attach();

@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Profile(dynamic tsObject)
         {
             this.profile = tsObject;
-			this.ProfileString = profile.ProfileString;
-
         }
 
-
-        public dynamic GetTSObject() => profile;
+        internal dynamic GetTSObject() => profile;
 
 		public System.String ParseProfileString(System.String profileString)
 			 => profile.ParseProfileString(profileString);

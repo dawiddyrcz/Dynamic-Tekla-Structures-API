@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures
         public TeklaStructuresSettings(dynamic tsObject)
         {
             this.teklastructuressettings = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => teklastructuressettings;
+        internal dynamic GetTSObject() => teklastructuressettings;
 
 		public System.Boolean GetAdvancedOption(System.String VariableName, System.Boolean Value)
 			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
@@ -85,13 +83,9 @@ namespace Dynamic.Tekla.Structures
         public InvalidPathCallback(dynamic tsObject)
         {
             this.invalidpathcallback = tsObject;
-			this.Method = invalidpathcallback.Method;
-			this.Target = invalidpathcallback.Target;
-
         }
 
-
-        public dynamic GetTSObject() => invalidpathcallback;
+        internal dynamic GetTSObject() => invalidpathcallback;
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 			 => invalidpathcallback.Invoke(advancedOption, invalidString, exceptionMessage);
@@ -125,7 +119,7 @@ namespace Dynamic.Tekla.Structures
 
         dynamic tooloptionnames;
         
-        public ToolOptionNames()
+        private ToolOptionNames()
         {
             this.tooloptionnames =  TSActivator.CreateInstance("Tekla.Structures.ToolOptionNames");
         }
@@ -133,11 +127,9 @@ namespace Dynamic.Tekla.Structures
         public ToolOptionNames(dynamic tsObject)
         {
             this.tooloptionnames = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => tooloptionnames;
+        internal dynamic GetTSObject() => tooloptionnames;
 
 
 

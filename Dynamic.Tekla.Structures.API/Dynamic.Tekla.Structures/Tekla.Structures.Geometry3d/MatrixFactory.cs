@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         dynamic matrixfactory;
         
-        public MatrixFactory()
+        private MatrixFactory()
         {
             this.matrixfactory =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.MatrixFactory");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public MatrixFactory(dynamic tsObject)
         {
             this.matrixfactory = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => matrixfactory;
+        internal dynamic GetTSObject() => matrixfactory;
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix Rotate(System.Double Angle, Dynamic.Tekla.Structures.Geometry3d.Vector Axis)
 			 => new Dynamic.Tekla.Structures.Geometry3d.Matrix(matrixfactory.Rotate(Angle, Axis.GetTSObject()));

@@ -97,24 +97,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSplitter(dynamic tsObject)
         {
             this.rebarsplitter = tsObject;
-			this.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(rebarsplitter.StaggerType);
-			this.StaggerOffset = rebarsplitter.StaggerOffset;
-			this.SplitOffset = rebarsplitter.SplitOffset;
-			this.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(rebarsplitter.SplitType);
-			this.Lapping = new Dynamic.Tekla.Structures.Model.RebarLapping(rebarsplitter.Lapping);
-			this.Cranking = new Dynamic.Tekla.Structures.Model.RebarCranking(rebarsplitter.Cranking);
-			this.Father = new Dynamic.Tekla.Structures.Model.RebarSet(rebarsplitter.Father);
-			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(rebarsplitter.Curve);
-			this.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarsplitter.BarsAffected);
-			this.FirstAffectedBar = rebarsplitter.FirstAffectedBar;
-			this.ModificationTime = rebarsplitter.ModificationTime;
-			this.IsUpToDate = rebarsplitter.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarsplitter.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarsplitter;
+        internal dynamic GetTSObject() => rebarsplitter;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplitter.GetAffectedBars(whichEnd.GetTSObject()));

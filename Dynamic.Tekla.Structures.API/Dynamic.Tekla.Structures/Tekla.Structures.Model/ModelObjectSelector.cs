@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ModelObjectSelector(dynamic tsObject)
         {
             this.modelobjectselector = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => modelobjectselector;
+        internal dynamic GetTSObject() => modelobjectselector;
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjects()
 			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetAllObjects());

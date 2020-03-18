@@ -187,39 +187,9 @@ namespace Dynamic.Tekla.Structures.Model
         public CircleRebarGroup(dynamic tsObject)
         {
             this.circlerebargroup = tsObject;
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Polygon(circlerebargroup.Polygon);
-			this.StirrupType = Dynamic.Tekla.Structures.Model.CircleRebarGroup.CircleRebarGroupStirrupTypeEnum_.FromTSObject(circlerebargroup.StirrupType);
-			this.Size = circlerebargroup.Size;
-			this.StartHook = new Dynamic.Tekla.Structures.Model.RebarHookData(circlerebargroup.StartHook);
-			this.EndHook = new Dynamic.Tekla.Structures.Model.RebarHookData(circlerebargroup.EndHook);
-			this.FromPlaneOffset = circlerebargroup.FromPlaneOffset;
-			this.StartFromPlaneOffset = circlerebargroup.StartFromPlaneOffset;
-			this.EndFromPlaneOffset = circlerebargroup.EndFromPlaneOffset;
-			this.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(circlerebargroup.ExcludeType);
-			this.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(circlerebargroup.SpacingType);
-			this.Spacings = circlerebargroup.Spacings;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(circlerebargroup.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(circlerebargroup.EndPoint);
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(circlerebargroup.Father);
-			this.Grade = circlerebargroup.Grade;
-			this.Name = circlerebargroup.Name;
-			this.Class = circlerebargroup.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(circlerebargroup.NumberingSeries);
-			this.OnPlaneOffsets = circlerebargroup.OnPlaneOffsets;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.StartPointOffsetType);
-			this.StartPointOffsetValue = circlerebargroup.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(circlerebargroup.EndPointOffsetType);
-			this.EndPointOffsetValue = circlerebargroup.EndPointOffsetValue;
-			this.RadiusValues = circlerebargroup.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(circlerebargroup.InputPointDeformingState);
-			this.ModificationTime = circlerebargroup.ModificationTime;
-			this.IsUpToDate = circlerebargroup.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(circlerebargroup.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => circlerebargroup;
+        internal dynamic GetTSObject() => circlerebargroup;
 
 		public System.Boolean Insert()
 			 => circlerebargroup.Insert();

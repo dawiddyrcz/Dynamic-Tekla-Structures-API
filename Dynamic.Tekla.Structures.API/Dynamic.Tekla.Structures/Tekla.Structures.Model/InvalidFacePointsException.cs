@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public InvalidFacePointsException(dynamic tsObject)
         {
             this.invalidfacepointsexception = tsObject;
-			this.Message = invalidfacepointsexception.Message;
-			this.Data = invalidfacepointsexception.Data;
-			this.InnerException = invalidfacepointsexception.InnerException;
-			this.TargetSite = invalidfacepointsexception.TargetSite;
-			this.StackTrace = invalidfacepointsexception.StackTrace;
-			this.HelpLink = invalidfacepointsexception.HelpLink;
-			this.Source = invalidfacepointsexception.Source;
-			this.HResult = invalidfacepointsexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => invalidfacepointsexception;
+        internal dynamic GetTSObject() => invalidfacepointsexception;
 
 		public System.Exception GetBaseException()
 			 => invalidfacepointsexception.GetBaseException();

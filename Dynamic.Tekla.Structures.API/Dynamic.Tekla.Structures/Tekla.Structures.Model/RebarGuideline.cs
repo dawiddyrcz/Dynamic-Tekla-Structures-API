@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarGuideline(dynamic tsObject)
         {
             this.rebarguideline = tsObject;
-			this.Id = rebarguideline.Id;
-			this.Curve = new Dynamic.Tekla.Structures.Model.Contour(rebarguideline.Curve);
-			this.Spacing = new Dynamic.Tekla.Structures.Model.RebarSpacing(rebarguideline.Spacing);
-
         }
 
-
-        public dynamic GetTSObject() => rebarguideline;
+        internal dynamic GetTSObject() => rebarguideline;
 
 
 

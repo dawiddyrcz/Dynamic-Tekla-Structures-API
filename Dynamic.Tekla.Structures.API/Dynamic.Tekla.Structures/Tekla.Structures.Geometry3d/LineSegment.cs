@@ -43,15 +43,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public LineSegment(dynamic tsObject)
         {
             this.linesegment = tsObject;
-			this.Point1 = new Dynamic.Tekla.Structures.Geometry3d.Point(linesegment.Point1);
-			this.Point2 = new Dynamic.Tekla.Structures.Geometry3d.Point(linesegment.Point2);
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(linesegment.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(linesegment.EndPoint);
-
         }
 
-
-        public dynamic GetTSObject() => linesegment;
+        internal dynamic GetTSObject() => linesegment;
 
 		public System.Double Length()
 			 => linesegment.Length();

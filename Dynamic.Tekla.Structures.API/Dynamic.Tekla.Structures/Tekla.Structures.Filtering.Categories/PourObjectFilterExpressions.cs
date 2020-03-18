@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PourObjectFilterExpressions(dynamic tsObject)
         {
             this.pourobjectfilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => pourobjectfilterexpressions;
+        internal dynamic GetTSObject() => pourobjectfilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 
@@ -155,11 +145,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PourNumber(dynamic tsObject)
         {
             this.pournumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => pournumber;
+        internal dynamic GetTSObject() => pournumber;
 
 
 
@@ -183,11 +171,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PourType(dynamic tsObject)
         {
             this.pourtype = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => pourtype;
+        internal dynamic GetTSObject() => pourtype;
 
 
 
@@ -211,11 +197,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public ConcreteMixture(dynamic tsObject)
         {
             this.concretemixture = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => concretemixture;
+        internal dynamic GetTSObject() => concretemixture;
 
 
 
@@ -239,11 +223,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Material(dynamic tsObject)
         {
             this.material = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => material;
+        internal dynamic GetTSObject() => material;
 
 
 
@@ -267,11 +249,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PourPhase(dynamic tsObject)
         {
             this.pourphase = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => pourphase;
+        internal dynamic GetTSObject() => pourphase;
 
 
 

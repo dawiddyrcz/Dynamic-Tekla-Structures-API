@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Polygon(dynamic tsObject)
         {
             this.polygon = tsObject;
-			this.Points = polygon.Points;
-
         }
 
-
-        public dynamic GetTSObject() => polygon;
+        internal dynamic GetTSObject() => polygon;
 
 
 

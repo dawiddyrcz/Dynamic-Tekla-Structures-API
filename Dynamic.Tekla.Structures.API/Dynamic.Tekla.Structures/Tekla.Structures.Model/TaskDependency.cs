@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public TaskDependency(dynamic tsObject)
         {
             this.taskdependency = tsObject;
-			this.Lag = taskdependency.Lag;
-			this.Local = taskdependency.Local;
-			this.Primary = new Dynamic.Tekla.Structures.Model.Task(taskdependency.Primary);
-			this.Secondary = new Dynamic.Tekla.Structures.Model.Task(taskdependency.Secondary);
-			this.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
-			this.ModificationTime = taskdependency.ModificationTime;
-			this.IsUpToDate = taskdependency.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(taskdependency.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => taskdependency;
+        internal dynamic GetTSObject() => taskdependency;
 
 		public System.Boolean Insert()
 			 => taskdependency.Insert();

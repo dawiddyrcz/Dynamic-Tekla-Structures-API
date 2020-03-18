@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public FacetedBrep(dynamic tsObject)
         {
             this.facetedbrep = tsObject;
-			this.Faces = facetedbrep.Faces;
-			this.InnerWires = facetedbrep.InnerWires;
-			this.OuterWires = facetedbrep.OuterWires;
-			this.GetEdges = facetedbrep.GetEdges;
-			this.Vertices = facetedbrep.Vertices;
-
         }
 
-
-        public dynamic GetTSObject() => facetedbrep;
+        internal dynamic GetTSObject() => facetedbrep;
 
 		public System.Boolean CheckForTwoManifold()
 			 => facetedbrep.CheckForTwoManifold();

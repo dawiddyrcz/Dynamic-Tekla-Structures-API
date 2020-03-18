@@ -55,17 +55,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarPropertiesNullable(dynamic tsObject)
         {
             this.rebarpropertiesnullable = tsObject;
-			this.Size = rebarpropertiesnullable.Size;
-			this.Grade = rebarpropertiesnullable.Grade;
-			this.Name = rebarpropertiesnullable.Name;
-			this.Class = rebarpropertiesnullable.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeriesNullable(rebarpropertiesnullable.NumberingSeries);
-			this.BendingRadius = rebarpropertiesnullable.BendingRadius;
-
         }
 
-
-        public dynamic GetTSObject() => rebarpropertiesnullable;
+        internal dynamic GetTSObject() => rebarpropertiesnullable;
 
 
 

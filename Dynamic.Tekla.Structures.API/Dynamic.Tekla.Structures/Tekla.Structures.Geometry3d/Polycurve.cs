@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Polycurve(dynamic tsObject)
         {
             this.polycurve = tsObject;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(polycurve.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(polycurve.EndPoint);
-			this.Length = polycurve.Length;
-
         }
 
-
-        public dynamic GetTSObject() => polycurve;
+        internal dynamic GetTSObject() => polycurve;
 
 
 

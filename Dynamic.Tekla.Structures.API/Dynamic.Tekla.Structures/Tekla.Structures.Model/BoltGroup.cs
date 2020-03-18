@@ -227,7 +227,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic boltgroup;
         
-        public BoltGroup()
+        private BoltGroup()
         {
             this.boltgroup =  TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup");
         }
@@ -235,47 +235,9 @@ namespace Dynamic.Tekla.Structures.Model
         public BoltGroup(dynamic tsObject)
         {
             this.boltgroup = tsObject;
-			this.BoltSize = boltgroup.BoltSize;
-			this.BoltStandard = boltgroup.BoltStandard;
-			this.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltgroup.BoltType);
-			this.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltgroup.ThreadInMaterial);
-			this.Length = boltgroup.Length;
-			this.CutLength = boltgroup.CutLength;
-			this.ExtraLength = boltgroup.ExtraLength;
-			this.Tolerance = boltgroup.Tolerance;
-			this.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltgroup.HoleType);
-			this.SlottedHoleX = boltgroup.SlottedHoleX;
-			this.SlottedHoleY = boltgroup.SlottedHoleY;
-			this.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltgroup.RotateSlots);
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(boltgroup.Position);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltgroup.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(boltgroup.EndPointOffset);
-			this.Washer1 = boltgroup.Washer1;
-			this.Washer2 = boltgroup.Washer2;
-			this.Washer3 = boltgroup.Washer3;
-			this.Nut1 = boltgroup.Nut1;
-			this.Nut2 = boltgroup.Nut2;
-			this.Bolt = boltgroup.Bolt;
-			this.Hole1 = boltgroup.Hole1;
-			this.Hole2 = boltgroup.Hole2;
-			this.Hole3 = boltgroup.Hole3;
-			this.Hole4 = boltgroup.Hole4;
-			this.Hole5 = boltgroup.Hole5;
-			this.PartToBoltTo = new Dynamic.Tekla.Structures.Model.Part(boltgroup.PartToBoltTo);
-			this.PartToBeBolted = new Dynamic.Tekla.Structures.Model.Part(boltgroup.PartToBeBolted);
-			this.OtherPartsToBolt = boltgroup.OtherPartsToBolt;
-			this.FirstPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltgroup.FirstPosition);
-			this.SecondPosition = new Dynamic.Tekla.Structures.Geometry3d.Point(boltgroup.SecondPosition);
-			this.ConnectAssemblies = boltgroup.ConnectAssemblies;
-			this.BoltPositions = boltgroup.BoltPositions;
-			this.ModificationTime = boltgroup.ModificationTime;
-			this.IsUpToDate = boltgroup.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(boltgroup.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => boltgroup;
+        internal dynamic GetTSObject() => boltgroup;
 
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 			 => boltgroup.AddOtherPartToBolt(M.GetTSObject());

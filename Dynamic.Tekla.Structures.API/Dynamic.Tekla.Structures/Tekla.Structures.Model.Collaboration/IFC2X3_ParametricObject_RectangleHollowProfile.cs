@@ -91,23 +91,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public IFC2X3_ParametricObject_RectangleHollowProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_rectanglehollowprofile = tsObject;
-			this.XDim = ifc2x3_parametricobject_rectanglehollowprofile.XDim;
-			this.YDim = ifc2x3_parametricobject_rectanglehollowprofile.YDim;
-			this.WallThickness = ifc2x3_parametricobject_rectanglehollowprofile.WallThickness;
-			this.InnerFilletRadius = ifc2x3_parametricobject_rectanglehollowprofile.InnerFilletRadius;
-			this.OuterFilletRadius = ifc2x3_parametricobject_rectanglehollowprofile.OuterFilletRadius;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_rectanglehollowprofile.Origin);
-			this.xDir = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectanglehollowprofile.xDir);
-			this.Extrusion = new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectanglehollowprofile.Extrusion);
-			this.ProfileName = ifc2x3_parametricobject_rectanglehollowprofile.ProfileName;
-			this.Name = ifc2x3_parametricobject_rectanglehollowprofile.Name;
-			this.Description = ifc2x3_parametricobject_rectanglehollowprofile.Description;
-			this.ObjectType = ifc2x3_parametricobject_rectanglehollowprofile.ObjectType;
-
         }
 
-
-        public dynamic GetTSObject() => ifc2x3_parametricobject_rectanglehollowprofile;
+        internal dynamic GetTSObject() => ifc2x3_parametricobject_rectanglehollowprofile;
 
 
 

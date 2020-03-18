@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures
         public Identifier(dynamic tsObject)
         {
             this.identifier = tsObject;
-			this.ID = identifier.ID;
-			this.ID2 = identifier.ID2;
-			this.GUID = identifier.GUID;
-
         }
 
-
-        public dynamic GetTSObject() => identifier;
+        internal dynamic GetTSObject() => identifier;
 
 		public System.Boolean IsValid()
 			 => identifier.IsValid();

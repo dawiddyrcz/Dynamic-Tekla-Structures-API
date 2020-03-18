@@ -73,20 +73,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadGroup(dynamic tsObject)
         {
             this.loadgroup = tsObject;
-			this.GroupName = loadgroup.GroupName;
-			this.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(loadgroup.GroupType);
-			this.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
-			this.Compatible = loadgroup.Compatible;
-			this.Incompatible = loadgroup.Incompatible;
-			this.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(loadgroup.Color);
-			this.ModificationTime = loadgroup.ModificationTime;
-			this.IsUpToDate = loadgroup.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadgroup.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loadgroup;
+        internal dynamic GetTSObject() => loadgroup;
 
 		public System.Boolean Insert()
 			 => loadgroup.Insert();

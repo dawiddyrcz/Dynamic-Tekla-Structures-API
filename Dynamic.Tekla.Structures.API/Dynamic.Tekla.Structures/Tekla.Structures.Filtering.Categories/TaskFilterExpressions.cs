@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public TaskFilterExpressions(dynamic tsObject)
         {
             this.taskfilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => taskfilterexpressions;
+        internal dynamic GetTSObject() => taskfilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 
@@ -155,11 +145,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public ActualEndDate(dynamic tsObject)
         {
             this.actualenddate = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => actualenddate;
+        internal dynamic GetTSObject() => actualenddate;
 
 
 
@@ -183,11 +171,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public ActualStartDate(dynamic tsObject)
         {
             this.actualstartdate = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => actualstartdate;
+        internal dynamic GetTSObject() => actualstartdate;
 
 
 
@@ -211,11 +197,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Completeness(dynamic tsObject)
         {
             this.completeness = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => completeness;
+        internal dynamic GetTSObject() => completeness;
 
 
 
@@ -239,11 +223,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Critical(dynamic tsObject)
         {
             this.critical = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => critical;
+        internal dynamic GetTSObject() => critical;
 
 
 
@@ -267,11 +249,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Local(dynamic tsObject)
         {
             this.local = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => local;
+        internal dynamic GetTSObject() => local;
 
 
 
@@ -295,11 +275,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Name(dynamic tsObject)
         {
             this.name = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => name;
+        internal dynamic GetTSObject() => name;
 
 
 
@@ -323,11 +301,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PlannedEndDate(dynamic tsObject)
         {
             this.plannedenddate = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => plannedenddate;
+        internal dynamic GetTSObject() => plannedenddate;
 
 
 
@@ -351,11 +327,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PlannedStartDate(dynamic tsObject)
         {
             this.plannedstartdate = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => plannedstartdate;
+        internal dynamic GetTSObject() => plannedstartdate;
 
 
 

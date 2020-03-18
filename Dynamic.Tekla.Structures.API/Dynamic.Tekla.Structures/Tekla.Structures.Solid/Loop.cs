@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public Loop(dynamic tsObject)
         {
             this.loop = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => loop;
+        internal dynamic GetTSObject() => loop;
 
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
 			 => new Dynamic.Tekla.Structures.Solid.VertexEnumerator(loop.GetVertexEnumerator());

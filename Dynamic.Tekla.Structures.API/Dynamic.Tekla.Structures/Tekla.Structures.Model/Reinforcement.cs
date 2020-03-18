@@ -107,7 +107,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic reinforcement;
         
-        public Reinforcement()
+        private Reinforcement()
         {
             this.reinforcement =  TSActivator.CreateInstance("Tekla.Structures.Model.Reinforcement");
         }
@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Reinforcement(dynamic tsObject)
         {
             this.reinforcement = tsObject;
-			this.Father = new Dynamic.Tekla.Structures.Model.ModelObject(reinforcement.Father);
-			this.Grade = reinforcement.Grade;
-			this.Name = reinforcement.Name;
-			this.Class = reinforcement.Class;
-			this.NumberingSeries = new Dynamic.Tekla.Structures.Model.NumberingSeries(reinforcement.NumberingSeries);
-			this.OnPlaneOffsets = reinforcement.OnPlaneOffsets;
-			this.FromPlaneOffset = reinforcement.FromPlaneOffset;
-			this.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(reinforcement.StartPointOffsetType);
-			this.StartPointOffsetValue = reinforcement.StartPointOffsetValue;
-			this.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(reinforcement.EndPointOffsetType);
-			this.EndPointOffsetValue = reinforcement.EndPointOffsetValue;
-			this.RadiusValues = reinforcement.RadiusValues;
-			this.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(reinforcement.InputPointDeformingState);
-			this.ModificationTime = reinforcement.ModificationTime;
-			this.IsUpToDate = reinforcement.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(reinforcement.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => reinforcement;
+        internal dynamic GetTSObject() => reinforcement;
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 			 => reinforcement.GetRebarGeometries(options.GetTSObject());

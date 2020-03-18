@@ -85,22 +85,9 @@ namespace Dynamic.Tekla.Structures.Model
         public CylindricalSurface(dynamic tsObject)
         {
             this.cylindricalsurface = tsObject;
-			this.Radius = cylindricalsurface.Radius;
-			this.InwardCurved = cylindricalsurface.InwardCurved;
-			this.IntersectionLine = new Dynamic.Tekla.Structures.Geometry3d.Line(cylindricalsurface.IntersectionLine);
-			this.EndFaceNormal1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.EndFaceNormal1);
-			this.EndFaceNormal2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.EndFaceNormal2);
-			this.CenterLine = new Dynamic.Tekla.Structures.Geometry3d.Line(cylindricalsurface.CenterLine);
-			this.RotationAxis = new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.RotationAxis);
-			this.LateralBoundary1 = cylindricalsurface.LateralBoundary1;
-			this.LateralBoundary2 = cylindricalsurface.LateralBoundary2;
-			this.SideBoundary1 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(cylindricalsurface.SideBoundary1);
-			this.SideBoundary2 = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(cylindricalsurface.SideBoundary2);
-
         }
 
-
-        public dynamic GetTSObject() => cylindricalsurface;
+        internal dynamic GetTSObject() => cylindricalsurface;
 
 
 

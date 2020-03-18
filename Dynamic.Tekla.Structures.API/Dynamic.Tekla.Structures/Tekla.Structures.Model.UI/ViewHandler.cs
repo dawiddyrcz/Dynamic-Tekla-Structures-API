@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public ViewHandler(dynamic tsObject)
         {
             this.viewhandler = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => viewhandler;
+        internal dynamic GetTSObject() => viewhandler;
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetAllViews()
 			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetAllViews());

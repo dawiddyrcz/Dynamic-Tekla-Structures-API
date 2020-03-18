@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PlateIntersectsWithIntersectionLineException(dynamic tsObject)
         {
             this.plateintersectswithintersectionlineexception = tsObject;
-			this.Message = plateintersectswithintersectionlineexception.Message;
-			this.Data = plateintersectswithintersectionlineexception.Data;
-			this.InnerException = plateintersectswithintersectionlineexception.InnerException;
-			this.TargetSite = plateintersectswithintersectionlineexception.TargetSite;
-			this.StackTrace = plateintersectswithintersectionlineexception.StackTrace;
-			this.HelpLink = plateintersectswithintersectionlineexception.HelpLink;
-			this.Source = plateintersectswithintersectionlineexception.Source;
-			this.HResult = plateintersectswithintersectionlineexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => plateintersectswithintersectionlineexception;
+        internal dynamic GetTSObject() => plateintersectswithintersectionlineexception;
 
 		public System.Exception GetBaseException()
 			 => plateintersectswithintersectionlineexception.GetBaseException();

@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarHookDataNullable(dynamic tsObject)
         {
             this.rebarhookdatanullable = tsObject;
-			this.Shape = rebarhookdatanullable.Shape;
-			this.Angle = rebarhookdatanullable.Angle;
-			this.Radius = rebarhookdatanullable.Radius;
-			this.Length = rebarhookdatanullable.Length;
-			this.Rotation = rebarhookdatanullable.Rotation;
-
         }
 
-
-        public dynamic GetTSObject() => rebarhookdatanullable;
+        internal dynamic GetTSObject() => rebarhookdatanullable;
 
 
 

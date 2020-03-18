@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         public ReferenceModelObjectAttributeEnumerator(dynamic tsObject)
         {
             this.referencemodelobjectattributeenumerator = tsObject;
-			this.Current = referencemodelobjectattributeenumerator.Current;
-
         }
 
-
-        public dynamic GetTSObject() => referencemodelobjectattributeenumerator;
+        internal dynamic GetTSObject() => referencemodelobjectattributeenumerator;
 
 		public System.Boolean MoveNext()
 			 => referencemodelobjectattributeenumerator.MoveNext();

@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model.History
         public ModificationStamp(dynamic tsObject)
         {
             this.modificationstamp = tsObject;
-			this.LocalStamp = modificationstamp.LocalStamp;
-			this.ServerStamp = modificationstamp.ServerStamp;
-			this.Guid = modificationstamp.Guid;
-
         }
 
-
-        public dynamic GetTSObject() => modificationstamp;
+        internal dynamic GetTSObject() => modificationstamp;
 
 
 

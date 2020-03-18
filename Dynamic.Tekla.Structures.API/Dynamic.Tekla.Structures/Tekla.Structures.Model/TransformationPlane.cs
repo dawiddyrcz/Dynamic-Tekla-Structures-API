@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Model
         public TransformationPlane(dynamic tsObject)
         {
             this.transformationplane = tsObject;
-			this.TransformationMatrixToGlobal = new Dynamic.Tekla.Structures.Geometry3d.Matrix(transformationplane.TransformationMatrixToGlobal);
-			this.TransformationMatrixToLocal = new Dynamic.Tekla.Structures.Geometry3d.Matrix(transformationplane.TransformationMatrixToLocal);
-
         }
 
-
-        public dynamic GetTSObject() => transformationplane;
+        internal dynamic GetTSObject() => transformationplane;
 
 
 

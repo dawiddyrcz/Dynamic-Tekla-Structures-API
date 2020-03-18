@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public StrandUnbondingData(dynamic tsObject)
         {
             this.strandunbondingdata = tsObject;
-			this.StrandIndex = strandunbondingdata.StrandIndex;
-			this.FromStart = strandunbondingdata.FromStart;
-			this.MiddleToStart = strandunbondingdata.MiddleToStart;
-			this.MiddleToEnd = strandunbondingdata.MiddleToEnd;
-			this.FromEnd = strandunbondingdata.FromEnd;
-
         }
 
-
-        public dynamic GetTSObject() => strandunbondingdata;
+        internal dynamic GetTSObject() => strandunbondingdata;
 
 
 

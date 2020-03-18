@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public DateTimeConstantFilterExpression(dynamic tsObject)
         {
             this.datetimeconstantfilterexpression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => datetimeconstantfilterexpression;
+        internal dynamic GetTSObject() => datetimeconstantfilterexpression;
 
 
 

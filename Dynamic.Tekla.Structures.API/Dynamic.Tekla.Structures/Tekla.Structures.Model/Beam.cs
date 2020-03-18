@@ -133,30 +133,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Beam(dynamic tsObject)
         {
             this.beam = tsObject;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(beam.EndPoint);
-			this.StartPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.StartPointOffset);
-			this.EndPointOffset = new Dynamic.Tekla.Structures.Model.Offset(beam.EndPointOffset);
-			this.Type = Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.FromTSObject(beam.Type);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(beam.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(beam.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(beam.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(beam.AssemblyNumber);
-			this.Name = beam.Name;
-			this.Class = beam.Class;
-			this.Finish = beam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(beam.CastUnitType);
-			this.PourPhase = beam.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(beam.Position);
-			this.ModificationTime = beam.ModificationTime;
-			this.IsUpToDate = beam.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(beam.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => beam;
+        internal dynamic GetTSObject() => beam;
 
 		public System.Boolean Insert()
 			 => beam.Insert();

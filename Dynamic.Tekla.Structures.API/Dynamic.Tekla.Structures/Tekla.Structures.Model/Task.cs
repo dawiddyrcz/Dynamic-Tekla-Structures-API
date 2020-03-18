@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Task(dynamic tsObject)
         {
             this.task = tsObject;
-			this.Name = task.Name;
-			this.Completeness = task.Completeness;
-			this.Critical = task.Critical;
-			this.Local = task.Local;
-			this.Scenario = new Dynamic.Tekla.Structures.Model.HierarchicObject(task.Scenario);
-			this.Description = task.Description;
-			this.Url = task.Url;
-			this.PlannedStartDate = task.PlannedStartDate;
-			this.PlannedEndDate = task.PlannedEndDate;
-			this.PlannedWorkAmount = task.PlannedWorkAmount;
-			this.ActualStartDate = task.ActualStartDate;
-			this.ActualEndDate = task.ActualEndDate;
-			this.ActualWorkAmount = task.ActualWorkAmount;
-			this.ModificationTime = task.ModificationTime;
-			this.IsUpToDate = task.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(task.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => task;
+        internal dynamic GetTSObject() => task;
 
 		public System.Boolean Insert()
 			 => task.Insert();

@@ -59,7 +59,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         dynamic gridbase;
         
-        public GridBase()
+        private GridBase()
         {
             this.gridbase =  TSActivator.CreateInstance("Tekla.Structures.Model.GridBase");
         }
@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public GridBase(dynamic tsObject)
         {
             this.gridbase = tsObject;
-			this.IsMagnetic = gridbase.IsMagnetic;
-			this.Name = gridbase.Name;
-			this.FontSize = gridbase.FontSize;
-			this.FontColor = gridbase.FontColor;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(gridbase.Origin);
-			this.ModificationTime = gridbase.ModificationTime;
-			this.IsUpToDate = gridbase.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(gridbase.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => gridbase;
+        internal dynamic GetTSObject() => gridbase;
 
 		public System.Boolean Insert()
 			 => gridbase.Insert();

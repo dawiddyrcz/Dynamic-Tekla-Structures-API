@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public SurfaceTreatment(dynamic tsObject)
         {
             this.surfacetreatment = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
-			this.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(surfacetreatment.Material);
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(surfacetreatment.Position);
-			this.Polygon = new Dynamic.Tekla.Structures.Model.Contour(surfacetreatment.Polygon);
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(surfacetreatment.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(surfacetreatment.EndPoint);
-			this.Father = new Dynamic.Tekla.Structures.Model.Part(surfacetreatment.Father);
-			this.Thickness = surfacetreatment.Thickness;
-			this.Name = surfacetreatment.Name;
-			this.Class = surfacetreatment.Class;
-			this.CutByFatherBooleans = surfacetreatment.CutByFatherBooleans;
-			this.TypeName = surfacetreatment.TypeName;
-			this.ModificationTime = surfacetreatment.ModificationTime;
-			this.IsUpToDate = surfacetreatment.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(surfacetreatment.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => surfacetreatment;
+        internal dynamic GetTSObject() => surfacetreatment;
 
 		public System.Boolean Insert()
 			 => surfacetreatment.Insert();

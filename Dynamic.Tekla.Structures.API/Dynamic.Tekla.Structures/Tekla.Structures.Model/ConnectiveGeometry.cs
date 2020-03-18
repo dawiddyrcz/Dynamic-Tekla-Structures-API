@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ConnectiveGeometry(dynamic tsObject)
         {
             this.connectivegeometry = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => connectivegeometry;
+        internal dynamic GetTSObject() => connectivegeometry;
 
 		public System.Boolean IsEmpty()
 			 => connectivegeometry.IsEmpty();

@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public OBB(dynamic tsObject)
         {
             this.obb = tsObject;
-			this.Center = new Dynamic.Tekla.Structures.Geometry3d.Point(obb.Center);
-			this.Axis0 = new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis0);
-			this.Axis1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis1);
-			this.Axis2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis2);
-			this.Extent0 = obb.Extent0;
-			this.Extent1 = obb.Extent1;
-			this.Extent2 = obb.Extent2;
-
         }
 
-
-        public dynamic GetTSObject() => obb;
+        internal dynamic GetTSObject() => obb;
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis0, Dynamic.Tekla.Structures.Geometry3d.Vector axis1, Dynamic.Tekla.Structures.Geometry3d.Vector axis2)
 			 => obb.SetAxis(axis0.GetTSObject(), axis1.GetTSObject(), axis2.GetTSObject());

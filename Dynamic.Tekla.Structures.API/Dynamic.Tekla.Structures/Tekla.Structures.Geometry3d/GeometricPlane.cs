@@ -31,13 +31,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public GeometricPlane(dynamic tsObject)
         {
             this.geometricplane = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(geometricplane.Origin);
-			this.Normal = new Dynamic.Tekla.Structures.Geometry3d.Vector(geometricplane.Normal);
-
         }
 
-
-        public dynamic GetTSObject() => geometricplane;
+        internal dynamic GetTSObject() => geometricplane;
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
 			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(geometricplane.GetNormal());

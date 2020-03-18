@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PhaseCollection(dynamic tsObject)
         {
             this.phasecollection = tsObject;
-			this.Count = phasecollection.Count;
-			this.IsSynchronized = phasecollection.IsSynchronized;
-			this.SyncRoot = phasecollection.SyncRoot;
-
         }
 
-
-        public dynamic GetTSObject() => phasecollection;
+        internal dynamic GetTSObject() => phasecollection;
 
 		public void CopyTo(System.Array Array, System.Int32 Index)
 			 => phasecollection.CopyTo(Array, Index);

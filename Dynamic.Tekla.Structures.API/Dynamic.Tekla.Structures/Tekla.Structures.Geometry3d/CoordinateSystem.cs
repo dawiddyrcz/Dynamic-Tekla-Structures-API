@@ -37,14 +37,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public CoordinateSystem(dynamic tsObject)
         {
             this.coordinatesystem = tsObject;
-			this.Origin = new Dynamic.Tekla.Structures.Geometry3d.Point(coordinatesystem.Origin);
-			this.AxisX = new Dynamic.Tekla.Structures.Geometry3d.Vector(coordinatesystem.AxisX);
-			this.AxisY = new Dynamic.Tekla.Structures.Geometry3d.Vector(coordinatesystem.AxisY);
-
         }
 
-
-        public dynamic GetTSObject() => coordinatesystem;
+        internal dynamic GetTSObject() => coordinatesystem;
 
 
 

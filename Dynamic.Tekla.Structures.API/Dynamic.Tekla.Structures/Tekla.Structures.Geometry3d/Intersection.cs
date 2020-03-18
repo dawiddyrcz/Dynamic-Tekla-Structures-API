@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         dynamic intersection;
         
-        public Intersection()
+        private Intersection()
         {
             this.intersection =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Intersection");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Intersection(dynamic tsObject)
         {
             this.intersection = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => intersection;
+        internal dynamic GetTSObject() => intersection;
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line line1, Dynamic.Tekla.Structures.Geometry3d.Line line2)
 			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(intersection.LineToLine(line1.GetTSObject(), line2.GetTSObject()));

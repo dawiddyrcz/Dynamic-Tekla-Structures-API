@@ -103,25 +103,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
         public View(dynamic tsObject)
         {
             this.view = tsObject;
-			this.CurrentRepresentation = view.CurrentRepresentation;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(view.Identifier);
-			this.ViewCoordinateSystem = new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(view.ViewCoordinateSystem);
-			this.DisplayCoordinateSystem = new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(view.DisplayCoordinateSystem);
-			this.Name = view.Name;
-			this.WorkArea = new Dynamic.Tekla.Structures.Geometry3d.AABB(view.WorkArea);
-			this.ViewDepthUp = view.ViewDepthUp;
-			this.ViewDepthDown = view.ViewDepthDown;
-			this.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(view.ViewProjection);
-			this.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(view.DisplayType);
-			this.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(view.ViewRendering);
-			this.ViewFilter = view.ViewFilter;
-			this.SharedView = view.SharedView;
-			this.VisibilitySettings = new Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings(view.VisibilitySettings);
-
         }
 
-
-        public dynamic GetTSObject() => view;
+        internal dynamic GetTSObject() => view;
 
 		public System.Boolean Insert()
 			 => view.Insert();

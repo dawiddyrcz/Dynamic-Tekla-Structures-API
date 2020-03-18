@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Material(dynamic tsObject)
         {
             this.material = tsObject;
-			this.MaterialString = material.MaterialString;
-
         }
 
-
-        public dynamic GetTSObject() => material;
+        internal dynamic GetTSObject() => material;
 
 
 

@@ -115,27 +115,9 @@ namespace Dynamic.Tekla.Structures.Model
         public PolyBeam(dynamic tsObject)
         {
             this.polybeam = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
-			this.Contour = new Dynamic.Tekla.Structures.Model.Contour(polybeam.Contour);
-			this.Profile = new Dynamic.Tekla.Structures.Model.Profile(polybeam.Profile);
-			this.Material = new Dynamic.Tekla.Structures.Model.Material(polybeam.Material);
-			this.DeformingData = new Dynamic.Tekla.Structures.Model.DeformingData(polybeam.DeformingData);
-			this.PartNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(polybeam.PartNumber);
-			this.AssemblyNumber = new Dynamic.Tekla.Structures.Model.NumberingSeries(polybeam.AssemblyNumber);
-			this.Name = polybeam.Name;
-			this.Class = polybeam.Class;
-			this.Finish = polybeam.Finish;
-			this.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
-			this.PourPhase = polybeam.PourPhase;
-			this.Position = new Dynamic.Tekla.Structures.Model.Position(polybeam.Position);
-			this.ModificationTime = polybeam.ModificationTime;
-			this.IsUpToDate = polybeam.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(polybeam.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => polybeam;
+        internal dynamic GetTSObject() => polybeam;
 
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
 			 => polybeam.AddContourPoint(contourPoint.GetTSObject());

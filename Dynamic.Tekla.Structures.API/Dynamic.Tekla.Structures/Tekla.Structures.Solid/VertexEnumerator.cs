@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Solid
         public VertexEnumerator(dynamic tsObject)
         {
             this.vertexenumerator = tsObject;
-			this.Current = new Dynamic.Tekla.Structures.Geometry3d.Point(vertexenumerator.Current);
-
         }
 
-
-        public dynamic GetTSObject() => vertexenumerator;
+        internal dynamic GetTSObject() => vertexenumerator;
 
 		public System.Boolean MoveNext()
 			 => vertexenumerator.MoveNext();

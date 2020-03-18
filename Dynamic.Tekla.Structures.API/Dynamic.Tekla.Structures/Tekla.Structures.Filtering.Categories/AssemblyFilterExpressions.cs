@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public AssemblyFilterExpressions(dynamic tsObject)
         {
             this.assemblyfilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => assemblyfilterexpressions;
+        internal dynamic GetTSObject() => assemblyfilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 
@@ -155,11 +145,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public IdNumber(dynamic tsObject)
         {
             this.idnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => idnumber;
+        internal dynamic GetTSObject() => idnumber;
 
 
 
@@ -183,11 +171,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Guid(dynamic tsObject)
         {
             this.guid = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => guid;
+        internal dynamic GetTSObject() => guid;
 
 
 
@@ -211,11 +197,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Level(dynamic tsObject)
         {
             this.level = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => level;
+        internal dynamic GetTSObject() => level;
 
 
 
@@ -239,11 +223,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Name(dynamic tsObject)
         {
             this.name = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => name;
+        internal dynamic GetTSObject() => name;
 
 
 
@@ -267,11 +249,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Phase(dynamic tsObject)
         {
             this.phase = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => phase;
+        internal dynamic GetTSObject() => phase;
 
 
 
@@ -295,11 +275,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PositionNumber(dynamic tsObject)
         {
             this.positionnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => positionnumber;
+        internal dynamic GetTSObject() => positionnumber;
 
 
 
@@ -323,11 +301,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Prefix(dynamic tsObject)
         {
             this.prefix = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => prefix;
+        internal dynamic GetTSObject() => prefix;
 
 
 
@@ -351,11 +327,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Series(dynamic tsObject)
         {
             this.series = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => series;
+        internal dynamic GetTSObject() => series;
 
 
 
@@ -379,11 +353,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public StartNumber(dynamic tsObject)
         {
             this.startnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => startnumber;
+        internal dynamic GetTSObject() => startnumber;
 
 
 
@@ -407,11 +379,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Type(dynamic tsObject)
         {
             this.type = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => type;
+        internal dynamic GetTSObject() => type;
 
 
 

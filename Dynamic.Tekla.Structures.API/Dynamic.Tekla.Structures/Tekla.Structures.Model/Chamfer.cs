@@ -49,16 +49,9 @@ namespace Dynamic.Tekla.Structures.Model
         public Chamfer(dynamic tsObject)
         {
             this.chamfer = tsObject;
-			this.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(chamfer.Type);
-			this.X = chamfer.X;
-			this.Y = chamfer.Y;
-			this.DZ1 = chamfer.DZ1;
-			this.DZ2 = chamfer.DZ2;
-
         }
 
-
-        public dynamic GetTSObject() => chamfer;
+        internal dynamic GetTSObject() => chamfer;
 
 
 

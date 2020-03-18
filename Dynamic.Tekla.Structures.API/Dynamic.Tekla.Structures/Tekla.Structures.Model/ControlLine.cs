@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public ControlLine(dynamic tsObject)
         {
             this.controlline = tsObject;
-			this.Line = new Dynamic.Tekla.Structures.Geometry3d.LineSegment(controlline.Line);
-			this.IsMagnetic = controlline.IsMagnetic;
-			this.Extension = controlline.Extension;
-			this.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(controlline.Color);
-			this.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlline.LineType);
-			this.ModificationTime = controlline.ModificationTime;
-			this.IsUpToDate = controlline.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(controlline.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => controlline;
+        internal dynamic GetTSObject() => controlline;
 
 		public System.Boolean Insert()
 			 => controlline.Insert();

@@ -175,37 +175,9 @@ namespace Dynamic.Tekla.Structures.Model
         public LoadArea(dynamic tsObject)
         {
             this.loadarea = tsObject;
-			this.Position1 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position1);
-			this.Position2 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position2);
-			this.Position3 = new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position3);
-			this.P1 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P1);
-			this.P2 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P2);
-			this.P3 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P3);
-			this.P4 = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P4);
-			this.LoadForm = Dynamic.Tekla.Structures.Model.LoadArea.AreaLoadFormEnum_.FromTSObject(loadarea.LoadForm);
-			this.DistanceA = loadarea.DistanceA;
-			this.FatherId = new Dynamic.Tekla.Structures.Identifier(loadarea.FatherId);
-			this.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadarea.Spanning);
-			this.PrimaryAxisDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.PrimaryAxisDirection);
-			this.AutomaticPrimaryAxisWeight = loadarea.AutomaticPrimaryAxisWeight;
-			this.Weight = loadarea.Weight;
-			this.LoadDispersionAngle = loadarea.LoadDispersionAngle;
-			this.CreateFixedSupportConditionsAutomatically = loadarea.CreateFixedSupportConditionsAutomatically;
-			this.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadarea.LoadAttachment);
-			this.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadarea.PartNames);
-			this.PartFilter = loadarea.PartFilter;
-			this.BoundingBoxDx = loadarea.BoundingBoxDx;
-			this.BoundingBoxDy = loadarea.BoundingBoxDy;
-			this.BoundingBoxDz = loadarea.BoundingBoxDz;
-			this.Group = new Dynamic.Tekla.Structures.Model.LoadGroup(loadarea.Group);
-			this.ModificationTime = loadarea.ModificationTime;
-			this.IsUpToDate = loadarea.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(loadarea.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => loadarea;
+        internal dynamic GetTSObject() => loadarea;
 
 		public System.Boolean Insert()
 			 => loadarea.Insert();

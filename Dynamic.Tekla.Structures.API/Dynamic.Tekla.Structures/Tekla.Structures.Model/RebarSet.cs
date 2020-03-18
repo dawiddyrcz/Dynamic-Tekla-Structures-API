@@ -61,18 +61,9 @@ namespace Dynamic.Tekla.Structures.Model
         public RebarSet(dynamic tsObject)
         {
             this.rebarset = tsObject;
-			this.RebarProperties = new Dynamic.Tekla.Structures.Model.RebarProperties(rebarset.RebarProperties);
-			this.LegFaces = rebarset.LegFaces;
-			this.Guidelines = rebarset.Guidelines;
-			this.LayerOrderNumber = rebarset.LayerOrderNumber;
-			this.ModificationTime = rebarset.ModificationTime;
-			this.IsUpToDate = rebarset.IsUpToDate;
-			this.Identifier = new Dynamic.Tekla.Structures.Identifier(rebarset.Identifier);
-
         }
 
-
-        public dynamic GetTSObject() => rebarset;
+        internal dynamic GetTSObject() => rebarset;
 
 		public System.Boolean Insert()
 			 => rebarset.Insert();

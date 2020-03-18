@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public WeldFilterExpressions(dynamic tsObject)
         {
             this.weldfilterexpressions = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => weldfilterexpressions;
+        internal dynamic GetTSObject() => weldfilterexpressions;
 
 
 
@@ -43,11 +41,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customboolean;
+        internal dynamic GetTSObject() => customboolean;
 
 
 
@@ -71,11 +67,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customdatetime;
+        internal dynamic GetTSObject() => customdatetime;
 
 
 
@@ -99,11 +93,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customnumber;
+        internal dynamic GetTSObject() => customnumber;
 
 
 
@@ -127,11 +119,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => customstring;
+        internal dynamic GetTSObject() => customstring;
 
 
 
@@ -155,11 +145,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public Phase(dynamic tsObject)
         {
             this.phase = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => phase;
+        internal dynamic GetTSObject() => phase;
 
 
 
@@ -183,11 +171,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public PositionNumber(dynamic tsObject)
         {
             this.positionnumber = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => positionnumber;
+        internal dynamic GetTSObject() => positionnumber;
 
 
 
@@ -211,11 +197,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public ReferenceText(dynamic tsObject)
         {
             this.referencetext = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => referencetext;
+        internal dynamic GetTSObject() => referencetext;
 
 
 
@@ -239,11 +223,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public SizeAboveLine(dynamic tsObject)
         {
             this.sizeaboveline = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => sizeaboveline;
+        internal dynamic GetTSObject() => sizeaboveline;
 
 
 
@@ -267,11 +249,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public SizeBelowLine(dynamic tsObject)
         {
             this.sizebelowline = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => sizebelowline;
+        internal dynamic GetTSObject() => sizebelowline;
 
 
 
@@ -295,11 +275,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public TypeAboveLine(dynamic tsObject)
         {
             this.typeaboveline = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => typeaboveline;
+        internal dynamic GetTSObject() => typeaboveline;
 
 
 
@@ -323,11 +301,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public TypeBelowLine(dynamic tsObject)
         {
             this.typebelowline = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => typebelowline;
+        internal dynamic GetTSObject() => typebelowline;
 
 
 
@@ -351,11 +327,9 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         public WeldingSite(dynamic tsObject)
         {
             this.weldingsite = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => weldingsite;
+        internal dynamic GetTSObject() => weldingsite;
 
 
 

@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
         public WorkPlaneHandler(dynamic tsObject)
         {
             this.workplanehandler = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => workplanehandler;
+        internal dynamic GetTSObject() => workplanehandler;
 
 		public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
 			 => new Dynamic.Tekla.Structures.Model.TransformationPlane(workplanehandler.GetCurrentTransformationPlane());

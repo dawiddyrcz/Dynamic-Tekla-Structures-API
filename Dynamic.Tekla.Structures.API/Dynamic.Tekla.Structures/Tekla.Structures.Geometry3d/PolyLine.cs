@@ -25,12 +25,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public PolyLine(dynamic tsObject)
         {
             this.polyline = tsObject;
-			this.Points = polyline.Points;
-
         }
 
-
-        public dynamic GetTSObject() => polyline;
+        internal dynamic GetTSObject() => polyline;
 
 		public System.Double Length()
 			 => polyline.Length();

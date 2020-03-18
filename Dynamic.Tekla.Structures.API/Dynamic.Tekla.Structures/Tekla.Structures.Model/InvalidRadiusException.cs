@@ -67,19 +67,9 @@ namespace Dynamic.Tekla.Structures.Model
         public InvalidRadiusException(dynamic tsObject)
         {
             this.invalidradiusexception = tsObject;
-			this.Message = invalidradiusexception.Message;
-			this.Data = invalidradiusexception.Data;
-			this.InnerException = invalidradiusexception.InnerException;
-			this.TargetSite = invalidradiusexception.TargetSite;
-			this.StackTrace = invalidradiusexception.StackTrace;
-			this.HelpLink = invalidradiusexception.HelpLink;
-			this.Source = invalidradiusexception.Source;
-			this.HResult = invalidradiusexception.HResult;
-
         }
 
-
-        public dynamic GetTSObject() => invalidradiusexception;
+        internal dynamic GetTSObject() => invalidradiusexception;
 
 		public System.Exception GetBaseException()
 			 => invalidradiusexception.GetBaseException();

@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         dynamic distance;
         
-        public Distance()
+        private Distance()
         {
             this.distance =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Distance");
         }
@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Distance(dynamic tsObject)
         {
             this.distance = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => distance;
+        internal dynamic GetTSObject() => distance;
 
 		public System.Double PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
 			 => distance.PointToPoint(Point1.GetTSObject(), Point2.GetTSObject());

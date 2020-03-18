@@ -79,21 +79,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         public Arc(dynamic tsObject)
         {
             this.arc = tsObject;
-			this.Length = arc.Length;
-			this.StartPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(arc.StartPoint);
-			this.EndPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(arc.EndPoint);
-			this.CenterPoint = new Dynamic.Tekla.Structures.Geometry3d.Point(arc.CenterPoint);
-			this.ArcMiddlePoint = new Dynamic.Tekla.Structures.Geometry3d.Point(arc.ArcMiddlePoint);
-			this.Normal = new Dynamic.Tekla.Structures.Geometry3d.Vector(arc.Normal);
-			this.Angle = arc.Angle;
-			this.Radius = arc.Radius;
-			this.StartTangent = new Dynamic.Tekla.Structures.Geometry3d.Vector(arc.StartTangent);
-			this.StartDirection = new Dynamic.Tekla.Structures.Geometry3d.Vector(arc.StartDirection);
-
         }
 
-
-        public dynamic GetTSObject() => arc;
+        internal dynamic GetTSObject() => arc;
 
 
 

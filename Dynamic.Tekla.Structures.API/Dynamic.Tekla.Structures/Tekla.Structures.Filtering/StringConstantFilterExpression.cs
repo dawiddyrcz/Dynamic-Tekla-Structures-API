@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public StringConstantFilterExpression(dynamic tsObject)
         {
             this.stringconstantfilterexpression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => stringconstantfilterexpression;
+        internal dynamic GetTSObject() => stringconstantfilterexpression;
 
 
 

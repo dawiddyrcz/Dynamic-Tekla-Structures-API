@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public BinaryFilterExpressionItem(dynamic tsObject)
         {
             this.binaryfilterexpressionitem = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => binaryfilterexpressionitem;
+        internal dynamic GetTSObject() => binaryfilterexpressionitem;
 
 
 

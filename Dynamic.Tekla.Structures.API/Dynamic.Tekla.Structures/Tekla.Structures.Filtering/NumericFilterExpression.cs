@@ -19,11 +19,9 @@ namespace Dynamic.Tekla.Structures.Filtering
         public NumericFilterExpression(dynamic tsObject)
         {
             this.numericfilterexpression = tsObject;
-
         }
 
-
-        public dynamic GetTSObject() => numericfilterexpression;
+        internal dynamic GetTSObject() => numericfilterexpression;
 
 
 

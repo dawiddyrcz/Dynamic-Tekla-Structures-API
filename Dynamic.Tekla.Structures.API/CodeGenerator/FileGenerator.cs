@@ -9,18 +9,20 @@ namespace CodeGenerator
 
         public void SaveToFile(Type type)
         {
-            return;
+           // return;
 
             var generator = new TypeGenerator();
             string outputText = String.Copy(text);
 
             string fileName = Path.Combine(Path.GetDirectoryName(Program.GetProjectDirectory())
-                  , "Dynamic.Tekla.Structures",
+                  , "Dynamic.Tekla.Structures", type.Namespace,
                   type.Name + ".cs");
 
             outputText = outputText.Replace("$typeContent", generator.GetTextFromType(type));
             outputText = outputText.Replace("$namespace", type.Namespace);
-            
+
+            if (!Directory.Exists(Path.GetDirectoryName(fileName)))
+                Directory.CreateDirectory(Path.GetDirectoryName(fileName));
             File.WriteAllText(fileName, outputText);
         }
 

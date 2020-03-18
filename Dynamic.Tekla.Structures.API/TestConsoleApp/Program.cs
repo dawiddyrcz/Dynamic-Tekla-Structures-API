@@ -13,6 +13,7 @@ namespace TestConsoleApp
     {
         //TODO dodać takie same konstruktory jak są oryginalnie bo nie mogę zrobić noweg punktu
         //ProgramConfigurationEnum ma zduplikowane wartości
+        //TODO w enum var tsType = TSActivator.CreateInstance(""$namespace.$classname""); niepodaje pełnego namespace dla nested type
 
         static void Main(string[] args)
         {

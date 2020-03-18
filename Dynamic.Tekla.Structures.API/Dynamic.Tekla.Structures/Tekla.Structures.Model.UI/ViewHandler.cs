@@ -9,49 +9,47 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic viewhandler;
+        internal dynamic viewhandler;
         
         public ViewHandler()
         {
             this.viewhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewHandler");
         }
 
-        public ViewHandler(dynamic tsObject)
+        internal ViewHandler(dynamic tsObject)
         {
             this.viewhandler = tsObject;
         }
 
-        internal dynamic GetTSObject() => viewhandler;
-
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetAllViews()
-			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetAllViews());
+			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(viewhandler.GetAllViews());
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetVisibleViews()
-			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetVisibleViews());
+			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(viewhandler.GetVisibleViews());
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetPermanentViews()
-			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetPermanentViews());
+			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(viewhandler.GetPermanentViews());
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetTemporaryViews()
-			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetTemporaryViews());
+			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(viewhandler.GetTemporaryViews());
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetSelectedViews()
-			 => new Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator(viewhandler.GetSelectedViews());
+			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(viewhandler.GetSelectedViews());
 
 		public System.Boolean ShowView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => viewhandler.ShowView(view.GetTSObject());
+			 => viewhandler.ShowView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
 
 		public System.Boolean HideView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => viewhandler.HideView(view.GetTSObject());
+			 => viewhandler.HideView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
 
 		public System.Boolean RedrawView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => viewhandler.RedrawView(view.GetTSObject());
+			 => viewhandler.RedrawView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
 
 		public System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View view, Dynamic.Tekla.Structures.Geometry3d.AABB B)
-			 => viewhandler.ZoomToBoundingBox(view.GetTSObject(), B.GetTSObject());
+			 => viewhandler.ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B));
 
 		public System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB box)
-			 => viewhandler.ZoomToBoundingBox(box.GetTSObject());
+			 => viewhandler.ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box));
 
 		public System.Boolean SetRepresentation(System.String Representation)
 			 => viewhandler.SetRepresentation(Representation);
@@ -64,6 +62,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ViewHandler_
+    {
+        public static dynamic GetTSObject(ViewHandler dynObject)
+        {
+            return dynObject.viewhandler;
+        }
+
+        public static ViewHandler FromTSObject(dynamic tsObject)
+        {
+            return new ViewHandler(tsObject);
+        }
+    }
+
 
 }
     

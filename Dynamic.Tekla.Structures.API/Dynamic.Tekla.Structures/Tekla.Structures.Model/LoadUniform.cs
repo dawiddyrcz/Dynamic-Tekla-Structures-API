@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => new Dynamic.Tekla.Structures.Model.Polygon(loaduniform.Polygon);
-			set { loaduniform.Polygon = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(loaduniform.Polygon);
+			set { loaduniform.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loaduniform.P1);
-			set { loaduniform.P1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loaduniform.P1);
+			set { loaduniform.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double DistanceA
@@ -27,20 +27,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loaduniform.FatherId);
-			set { loaduniform.FatherId = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loaduniform.FatherId);
+			set { loaduniform.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loaduniform.Spanning);
-			set { loaduniform.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
+			set { loaduniform.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loaduniform.PrimaryAxisDirection);
-			set { loaduniform.PrimaryAxisDirection = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loaduniform.PrimaryAxisDirection);
+			set { loaduniform.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
@@ -70,13 +70,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loaduniform.LoadAttachment);
-			set { loaduniform.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
+			set { loaduniform.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loaduniform.PartNames);
-			set { loaduniform.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
+			set { loaduniform.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -105,8 +105,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => new Dynamic.Tekla.Structures.Model.LoadGroup(loaduniform.Group);
-			set { loaduniform.Group = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(loaduniform.Group);
+			set { loaduniform.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -123,25 +123,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loaduniform.Identifier);
-			set { loaduniform.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loaduniform.Identifier);
+			set { loaduniform.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic loaduniform;
+        internal dynamic loaduniform;
         
         public LoadUniform()
         {
             this.loaduniform =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadUniform");
         }
 
-        public LoadUniform(dynamic tsObject)
+        internal LoadUniform(dynamic tsObject)
         {
             this.loaduniform = tsObject;
         }
-
-        internal dynamic GetTSObject() => loaduniform;
 
 		public System.Boolean Insert()
 			 => loaduniform.Insert();
@@ -156,13 +154,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loaduniform.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loaduniform.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loaduniform.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(loaduniform.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loaduniform.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loaduniform.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loaduniform.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => loaduniform.GetAllUserProperties(values);
@@ -222,13 +220,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loaduniform.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(loaduniform.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loaduniform.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loaduniform.SetPhase(phase.GetTSObject());
+			 => loaduniform.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loaduniform.GetPhase(phase.GetTSObject());
+			 => loaduniform.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => loaduniform.SetLabel(label);
@@ -241,6 +239,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class LoadUniform_
+    {
+        public static dynamic GetTSObject(LoadUniform dynObject)
+        {
+            return dynObject.loaduniform;
+        }
+
+        public static LoadUniform FromTSObject(dynamic tsObject)
+        {
+            return new LoadUniform(tsObject);
+        }
+    }
+
 
 }
     

@@ -21,20 +21,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Task Primary
 		{
-			get => new Dynamic.Tekla.Structures.Model.Task(taskdependency.Primary);
-			set { taskdependency.Primary = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(taskdependency.Primary);
+			set { taskdependency.Primary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Task Secondary
 		{
-			get => new Dynamic.Tekla.Structures.Model.Task(taskdependency.Secondary);
-			set { taskdependency.Secondary = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(taskdependency.Secondary);
+			set { taskdependency.Secondary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
 		{
 			get => Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
-			set { taskdependency.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(value); }
+			set { taskdependency.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -51,25 +51,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(taskdependency.Identifier);
-			set { taskdependency.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(taskdependency.Identifier);
+			set { taskdependency.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic taskdependency;
+        internal dynamic taskdependency;
         
         public TaskDependency()
         {
             this.taskdependency =  TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency");
         }
 
-        public TaskDependency(dynamic tsObject)
+        internal TaskDependency(dynamic tsObject)
         {
             this.taskdependency = tsObject;
         }
-
-        internal dynamic GetTSObject() => taskdependency;
 
 		public System.Boolean Insert()
 			 => taskdependency.Insert();
@@ -84,13 +82,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => taskdependency.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(taskdependency.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskdependency.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(taskdependency.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(taskdependency.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(taskdependency.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskdependency.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => taskdependency.GetAllUserProperties(values);
@@ -150,13 +148,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => taskdependency.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(taskdependency.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(taskdependency.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskdependency.SetPhase(phase.GetTSObject());
+			 => taskdependency.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskdependency.GetPhase(phase.GetTSObject());
+			 => taskdependency.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => taskdependency.SetLabel(label);
@@ -167,31 +165,72 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct DependencyTypeEnum
+    public enum DependencyTypeEnum
     {
-       
+			FINISH_TO_FINISH,
+			FINISH_TO_START,
+			START_TO_FINISH,
+			START_TO_START        
     }
 
     internal static class DependencyTypeEnum_
     {
-        public static dynamic GetTSObject(DependencyTypeEnum dynStruct)
+        public static dynamic GetTSObject(DependencyTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.DependencyTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case DependencyTypeEnum.FINISH_TO_FINISH:
+					return System.Enum.Parse(tsType, "FINISH_TO_FINISH");
+				case DependencyTypeEnum.FINISH_TO_START:
+					return System.Enum.Parse(tsType, "FINISH_TO_START");
+				case DependencyTypeEnum.START_TO_FINISH:
+					return System.Enum.Parse(tsType, "START_TO_FINISH");
+				case DependencyTypeEnum.START_TO_START:
+					return System.Enum.Parse(tsType, "START_TO_START");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static DependencyTypeEnum FromTSObject(dynamic tsStruct)
+        public static DependencyTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new DependencyTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("FINISH_TO_FINISH", System.StringComparison.InvariantCulture))
+				return DependencyTypeEnum.FINISH_TO_FINISH;
+			else if (tsEnumValue.Equals("FINISH_TO_START", System.StringComparison.InvariantCulture))
+				return DependencyTypeEnum.FINISH_TO_START;
+			else if (tsEnumValue.Equals("START_TO_FINISH", System.StringComparison.InvariantCulture))
+				return DependencyTypeEnum.START_TO_FINISH;
+			else if (tsEnumValue.Equals("START_TO_START", System.StringComparison.InvariantCulture))
+				return DependencyTypeEnum.START_TO_START;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class TaskDependency_
+    {
+        public static dynamic GetTSObject(TaskDependency dynObject)
+        {
+            return dynObject.taskdependency;
+        }
+
+        public static TaskDependency FromTSObject(dynamic tsObject)
+        {
+            return new TaskDependency(tsObject);
+        }
+    }
+
 
 }
     

@@ -39,25 +39,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic strandunbondingdata;
+        internal dynamic strandunbondingdata;
         
         public StrandUnbondingData()
         {
             this.strandunbondingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.StrandUnbondingData");
         }
 
-        public StrandUnbondingData(dynamic tsObject)
+        internal StrandUnbondingData(dynamic tsObject)
         {
             this.strandunbondingdata = tsObject;
         }
-
-        internal dynamic GetTSObject() => strandunbondingdata;
 
 
 
 
 
     }
+
+    internal static class StrandUnbondingData_
+    {
+        public static dynamic GetTSObject(StrandUnbondingData dynObject)
+        {
+            return dynObject.strandunbondingdata;
+        }
+
+        public static StrandUnbondingData FromTSObject(dynamic tsObject)
+        {
+            return new StrandUnbondingData(tsObject);
+        }
+    }
+
 
 }
     

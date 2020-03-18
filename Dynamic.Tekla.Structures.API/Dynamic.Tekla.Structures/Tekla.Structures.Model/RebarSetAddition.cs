@@ -15,8 +15,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarSet(rebarsetaddition.Father);
-			set { rebarsetaddition.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(rebarsetaddition.Father);
+			set { rebarsetaddition.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -33,25 +33,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarsetaddition.Identifier);
-			set { rebarsetaddition.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarsetaddition.Identifier);
+			set { rebarsetaddition.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarsetaddition;
+        internal dynamic rebarsetaddition;
         
         public RebarSetAddition()
         {
             this.rebarsetaddition =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSetAddition");
         }
 
-        public RebarSetAddition(dynamic tsObject)
+        internal RebarSetAddition(dynamic tsObject)
         {
             this.rebarsetaddition = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarsetaddition;
 
 		public System.Boolean Insert()
 			 => rebarsetaddition.Insert();
@@ -66,13 +64,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsetaddition.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsetaddition.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsetaddition.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarsetaddition.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarsetaddition.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsetaddition.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsetaddition.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarsetaddition.GetAllUserProperties(values);
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsetaddition.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarsetaddition.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarsetaddition.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsetaddition.SetPhase(phase.GetTSObject());
+			 => rebarsetaddition.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsetaddition.GetPhase(phase.GetTSObject());
+			 => rebarsetaddition.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarsetaddition.SetLabel(label);
@@ -151,6 +149,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class RebarSetAddition_
+    {
+        public static dynamic GetTSObject(RebarSetAddition dynObject)
+        {
+            return dynObject.rebarsetaddition;
+        }
+
+        public static RebarSetAddition FromTSObject(dynamic tsObject)
+        {
+            return new RebarSetAddition(tsObject);
+        }
+    }
+
 
 }
     

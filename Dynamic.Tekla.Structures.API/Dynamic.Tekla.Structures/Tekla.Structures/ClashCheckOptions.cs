@@ -21,25 +21,37 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic clashcheckoptions;
+        internal dynamic clashcheckoptions;
         
         public ClashCheckOptions()
         {
             this.clashcheckoptions =  TSActivator.CreateInstance("Tekla.Structures.ClashCheckOptions");
         }
 
-        public ClashCheckOptions(dynamic tsObject)
+        internal ClashCheckOptions(dynamic tsObject)
         {
             this.clashcheckoptions = tsObject;
         }
-
-        internal dynamic GetTSObject() => clashcheckoptions;
 
 
 
 
 
     }
+
+    internal static class ClashCheckOptions_
+    {
+        public static dynamic GetTSObject(ClashCheckOptions dynObject)
+        {
+            return dynObject.clashcheckoptions;
+        }
+
+        public static ClashCheckOptions FromTSObject(dynamic tsObject)
+        {
+            return new ClashCheckOptions(tsObject);
+        }
+    }
+
 
 }
     

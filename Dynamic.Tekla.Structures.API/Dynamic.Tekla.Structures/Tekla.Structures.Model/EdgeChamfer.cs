@@ -9,32 +9,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
 		{
-			get => new Dynamic.Tekla.Structures.Model.Chamfer(edgechamfer.Chamfer);
-			set { edgechamfer.Chamfer = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(edgechamfer.Chamfer);
+			set { edgechamfer.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point FirstEnd
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.FirstEnd);
-			set { edgechamfer.FirstEnd = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edgechamfer.FirstEnd);
+			set { edgechamfer.FirstEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point SecondEnd
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(edgechamfer.SecondEnd);
-			set { edgechamfer.SecondEnd = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edgechamfer.SecondEnd);
+			set { edgechamfer.SecondEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum FirstChamferEndType
 		{
 			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
-			set { edgechamfer.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(value); }
+			set { edgechamfer.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum SecondChamferEndType
 		{
 			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
-			set { edgechamfer.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(value); }
+			set { edgechamfer.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double SecondBevelDimension
@@ -57,8 +57,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(edgechamfer.Father);
-			set { edgechamfer.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(edgechamfer.Father);
+			set { edgechamfer.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -75,25 +75,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(edgechamfer.Identifier);
-			set { edgechamfer.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(edgechamfer.Identifier);
+			set { edgechamfer.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic edgechamfer;
+        internal dynamic edgechamfer;
         
         public EdgeChamfer()
         {
             this.edgechamfer =  TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer");
         }
 
-        public EdgeChamfer(dynamic tsObject)
+        internal EdgeChamfer(dynamic tsObject)
         {
             this.edgechamfer = tsObject;
         }
-
-        internal dynamic GetTSObject() => edgechamfer;
 
 		public System.Boolean Insert()
 			 => edgechamfer.Insert();
@@ -108,13 +106,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => edgechamfer.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(edgechamfer.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(edgechamfer.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(edgechamfer.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(edgechamfer.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(edgechamfer.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(edgechamfer.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => edgechamfer.GetAllUserProperties(values);
@@ -174,13 +172,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => edgechamfer.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(edgechamfer.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(edgechamfer.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => edgechamfer.SetPhase(phase.GetTSObject());
+			 => edgechamfer.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => edgechamfer.GetPhase(phase.GetTSObject());
+			 => edgechamfer.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => edgechamfer.SetLabel(label);
@@ -191,31 +189,67 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct ChamferEndTypeEnum
+    public enum ChamferEndTypeEnum
     {
-       
+			FULL,
+			STRAIGHT,
+			BEVELLED        
     }
 
     internal static class ChamferEndTypeEnum_
     {
-        public static dynamic GetTSObject(ChamferEndTypeEnum dynStruct)
+        public static dynamic GetTSObject(ChamferEndTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChamferEndTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ChamferEndTypeEnum.FULL:
+					return System.Enum.Parse(tsType, "FULL");
+				case ChamferEndTypeEnum.STRAIGHT:
+					return System.Enum.Parse(tsType, "STRAIGHT");
+				case ChamferEndTypeEnum.BEVELLED:
+					return System.Enum.Parse(tsType, "BEVELLED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ChamferEndTypeEnum FromTSObject(dynamic tsStruct)
+        public static ChamferEndTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ChamferEndTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("FULL", System.StringComparison.InvariantCulture))
+				return ChamferEndTypeEnum.FULL;
+			else if (tsEnumValue.Equals("STRAIGHT", System.StringComparison.InvariantCulture))
+				return ChamferEndTypeEnum.STRAIGHT;
+			else if (tsEnumValue.Equals("BEVELLED", System.StringComparison.InvariantCulture))
+				return ChamferEndTypeEnum.BEVELLED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class EdgeChamfer_
+    {
+        public static dynamic GetTSObject(EdgeChamfer dynObject)
+        {
+            return dynObject.edgechamfer;
+        }
+
+        public static EdgeChamfer FromTSObject(dynamic tsObject)
+        {
+            return new EdgeChamfer(tsObject);
+        }
+    }
+
 
 }
     

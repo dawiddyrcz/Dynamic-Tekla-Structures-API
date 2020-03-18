@@ -15,40 +15,52 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic matrix;
+        internal dynamic matrix;
         
         public Matrix()
         {
             this.matrix =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix");
         }
 
-        public Matrix(dynamic tsObject)
+        internal Matrix(dynamic tsObject)
         {
             this.matrix = tsObject;
         }
-
-        internal dynamic GetTSObject() => matrix;
 
 		public void Transpose()
 			 => matrix.Transpose();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
-			 => new Dynamic.Tekla.Structures.Geometry3d.Matrix(matrix.GetTranspose());
+			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(matrix.GetTranspose());
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix B, Dynamic.Tekla.Structures.Geometry3d.Matrix A)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Matrix(matrix.op_Multiply(B.GetTSObject(), A.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(matrix.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(B), Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Transform(Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(matrix.Transform(p.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(matrix.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix A, Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(matrix.op_Multiply(A.GetTSObject(), p.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(matrix.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
 
 
 
 
 
     }
+
+    internal static class Matrix_
+    {
+        public static dynamic GetTSObject(Matrix dynObject)
+        {
+            return dynObject.matrix;
+        }
+
+        public static Matrix FromTSObject(dynamic tsObject)
+        {
+            return new Matrix(tsObject);
+        }
+    }
+
 
 }
     

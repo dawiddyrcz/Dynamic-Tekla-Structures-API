@@ -9,25 +9,23 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Solid.Loop Current
 		{
-			get => new Dynamic.Tekla.Structures.Solid.Loop(loopenumerator.Current);
-			set { loopenumerator.Current = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(loopenumerator.Current);
+			set { loopenumerator.Current = Dynamic.Tekla.Structures.Solid.Loop_.GetTSObject(value); }
 		}
 
         
 
-        dynamic loopenumerator;
+        internal dynamic loopenumerator;
         
         public LoopEnumerator()
         {
             this.loopenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.LoopEnumerator");
         }
 
-        public LoopEnumerator(dynamic tsObject)
+        internal LoopEnumerator(dynamic tsObject)
         {
             this.loopenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => loopenumerator;
 
 		public System.Boolean MoveNext()
 			 => loopenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Solid
 
 
     }
+
+    internal static class LoopEnumerator_
+    {
+        public static dynamic GetTSObject(LoopEnumerator dynObject)
+        {
+            return dynObject.loopenumerator;
+        }
+
+        public static LoopEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new LoopEnumerator(tsObject);
+        }
+    }
+
 
 }
     

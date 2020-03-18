@@ -21,20 +21,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_ellipseprofile.Origin);
-			set { ifc2x3_parametricobject_ellipseprofile.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(ifc2x3_parametricobject_ellipseprofile.Origin);
+			set { ifc2x3_parametricobject_ellipseprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ellipseprofile.xDir);
-			set { ifc2x3_parametricobject_ellipseprofile.xDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_ellipseprofile.xDir);
+			set { ifc2x3_parametricobject_ellipseprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_ellipseprofile.Extrusion);
-			set { ifc2x3_parametricobject_ellipseprofile.Extrusion = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_ellipseprofile.Extrusion);
+			set { ifc2x3_parametricobject_ellipseprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
@@ -63,25 +63,37 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic ifc2x3_parametricobject_ellipseprofile;
+        internal dynamic ifc2x3_parametricobject_ellipseprofile;
         
         public IFC2X3_ParametricObject_EllipseProfile()
         {
             this.ifc2x3_parametricobject_ellipseprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_EllipseProfile");
         }
 
-        public IFC2X3_ParametricObject_EllipseProfile(dynamic tsObject)
+        internal IFC2X3_ParametricObject_EllipseProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_ellipseprofile = tsObject;
         }
-
-        internal dynamic GetTSObject() => ifc2x3_parametricobject_ellipseprofile;
 
 
 
 
 
     }
+
+    internal static class IFC2X3_ParametricObject_EllipseProfile_
+    {
+        public static dynamic GetTSObject(IFC2X3_ParametricObject_EllipseProfile dynObject)
+        {
+            return dynObject.ifc2x3_parametricobject_ellipseprofile;
+        }
+
+        public static IFC2X3_ParametricObject_EllipseProfile FromTSObject(dynamic tsObject)
+        {
+            return new IFC2X3_ParametricObject_EllipseProfile(tsObject);
+        }
+    }
+
 
 }
     

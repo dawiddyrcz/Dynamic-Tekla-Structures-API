@@ -45,8 +45,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB BoundingBox
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.AABB(pointcloud.BoundingBox);
-			set { pointcloud.BoundingBox = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(pointcloud.BoundingBox);
+			set { pointcloud.BoundingBox = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value); }
 		}
 
 		public System.Double Scale
@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic pointcloud;
+        internal dynamic pointcloud;
         
         public PointCloud()
         {
             this.pointcloud =  TSActivator.CreateInstance("Tekla.Structures.Model.PointCloud");
         }
 
-        public PointCloud(dynamic tsObject)
+        internal PointCloud(dynamic tsObject)
         {
             this.pointcloud = tsObject;
         }
-
-        internal dynamic GetTSObject() => pointcloud;
 
 		public System.Boolean Attach()
 			 => pointcloud.Attach();
@@ -97,6 +95,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class PointCloud_
+    {
+        public static dynamic GetTSObject(PointCloud dynObject)
+        {
+            return dynObject.pointcloud;
+        }
+
+        public static PointCloud FromTSObject(dynamic tsObject)
+        {
+            return new PointCloud(tsObject);
+        }
+    }
+
 
 }
     

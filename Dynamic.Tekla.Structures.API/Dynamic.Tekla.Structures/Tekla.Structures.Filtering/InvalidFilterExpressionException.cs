@@ -9,32 +9,32 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public Dynamic.Tekla.Structures.Filtering.Expression Expression
 		{
-			get => new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.Expression);
-			set { invalidfilterexpressionexception.Expression = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.Expression);
+			set { invalidfilterexpressionexception.Expression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType
 		{
 			get => Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType);
-			set { invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(value); }
+			set { invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression LeftExpression
 		{
-			get => new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.LeftExpression);
-			set { invalidfilterexpressionexception.LeftExpression = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.LeftExpression);
+			set { invalidfilterexpressionexception.LeftExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression RightExpression
 		{
-			get => new Dynamic.Tekla.Structures.Filtering.Expression(invalidfilterexpressionexception.RightExpression);
-			set { invalidfilterexpressionexception.RightExpression = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.RightExpression);
+			set { invalidfilterexpressionexception.RightExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.OperatorType OperatorType
 		{
 			get => Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(invalidfilterexpressionexception.OperatorType);
-			set { invalidfilterexpressionexception.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(value); }
+			set { invalidfilterexpressionexception.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(value); }
 		}
 
 		public System.String Message
@@ -87,19 +87,17 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic invalidfilterexpressionexception;
+        internal dynamic invalidfilterexpressionexception;
         
         public InvalidFilterExpressionException()
         {
             this.invalidfilterexpressionexception =  TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException");
         }
 
-        public InvalidFilterExpressionException(dynamic tsObject)
+        internal InvalidFilterExpressionException(dynamic tsObject)
         {
             this.invalidfilterexpressionexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => invalidfilterexpressionexception;
 
 		public System.Exception GetBaseException()
 			 => invalidfilterexpressionexception.GetBaseException();
@@ -112,6 +110,20 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 
     }
+
+    internal static class InvalidFilterExpressionException_
+    {
+        public static dynamic GetTSObject(InvalidFilterExpressionException dynObject)
+        {
+            return dynObject.invalidfilterexpressionexception;
+        }
+
+        public static InvalidFilterExpressionException FromTSObject(dynamic tsObject)
+        {
+            return new InvalidFilterExpressionException(tsObject);
+        }
+    }
+
 
 }
     

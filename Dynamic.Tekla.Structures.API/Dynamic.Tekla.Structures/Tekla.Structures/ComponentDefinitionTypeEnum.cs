@@ -4,25 +4,57 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public struct ComponentDefinitionTypeEnum
+    public enum ComponentDefinitionTypeEnum
     {
-       
+			SYSTEM,
+			DOTNET_DRAWING,
+			DOTNET_CONNECTION,
+			DOTNET,
+			CUSTOM        
     }
 
     internal static class ComponentDefinitionTypeEnum_
     {
-        public static dynamic GetTSObject(ComponentDefinitionTypeEnum dynStruct)
+        public static dynamic GetTSObject(ComponentDefinitionTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.ComponentDefinitionTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ComponentDefinitionTypeEnum.SYSTEM:
+					return System.Enum.Parse(tsType, "SYSTEM");
+				case ComponentDefinitionTypeEnum.DOTNET_DRAWING:
+					return System.Enum.Parse(tsType, "DOTNET_DRAWING");
+				case ComponentDefinitionTypeEnum.DOTNET_CONNECTION:
+					return System.Enum.Parse(tsType, "DOTNET_CONNECTION");
+				case ComponentDefinitionTypeEnum.DOTNET:
+					return System.Enum.Parse(tsType, "DOTNET");
+				case ComponentDefinitionTypeEnum.CUSTOM:
+					return System.Enum.Parse(tsType, "CUSTOM");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ComponentDefinitionTypeEnum FromTSObject(dynamic tsStruct)
+        public static ComponentDefinitionTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ComponentDefinitionTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("SYSTEM", System.StringComparison.InvariantCulture))
+				return ComponentDefinitionTypeEnum.SYSTEM;
+			else if (tsEnumValue.Equals("DOTNET_DRAWING", System.StringComparison.InvariantCulture))
+				return ComponentDefinitionTypeEnum.DOTNET_DRAWING;
+			else if (tsEnumValue.Equals("DOTNET_CONNECTION", System.StringComparison.InvariantCulture))
+				return ComponentDefinitionTypeEnum.DOTNET_CONNECTION;
+			else if (tsEnumValue.Equals("DOTNET", System.StringComparison.InvariantCulture))
+				return ComponentDefinitionTypeEnum.DOTNET;
+			else if (tsEnumValue.Equals("CUSTOM", System.StringComparison.InvariantCulture))
+				return ComponentDefinitionTypeEnum.CUSTOM;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 

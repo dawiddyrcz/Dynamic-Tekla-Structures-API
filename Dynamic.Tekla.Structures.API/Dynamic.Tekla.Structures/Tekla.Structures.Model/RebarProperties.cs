@@ -33,8 +33,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(rebarproperties.NumberingSeries);
-			set { rebarproperties.NumberingSeries = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(rebarproperties.NumberingSeries);
+			set { rebarproperties.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Double BendingRadius
@@ -45,25 +45,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarproperties;
+        internal dynamic rebarproperties;
         
         public RebarProperties()
         {
             this.rebarproperties =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarProperties");
         }
 
-        public RebarProperties(dynamic tsObject)
+        internal RebarProperties(dynamic tsObject)
         {
             this.rebarproperties = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarproperties;
 
 
 
 
 
     }
+
+    internal static class RebarProperties_
+    {
+        public static dynamic GetTSObject(RebarProperties dynObject)
+        {
+            return dynObject.rebarproperties;
+        }
+
+        public static RebarProperties FromTSObject(dynamic tsObject)
+        {
+            return new RebarProperties(tsObject);
+        }
+    }
+
 
 }
     

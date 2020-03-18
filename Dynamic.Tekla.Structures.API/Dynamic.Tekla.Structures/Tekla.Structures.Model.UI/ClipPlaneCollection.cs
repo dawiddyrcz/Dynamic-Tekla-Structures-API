@@ -27,19 +27,17 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic clipplanecollection;
+        internal dynamic clipplanecollection;
         
         public ClipPlaneCollection()
         {
             this.clipplanecollection =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlaneCollection");
         }
 
-        public ClipPlaneCollection(dynamic tsObject)
+        internal ClipPlaneCollection(dynamic tsObject)
         {
             this.clipplanecollection = tsObject;
         }
-
-        internal dynamic GetTSObject() => clipplanecollection;
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => clipplanecollection.CopyTo(array, index);
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ClipPlaneCollection_
+    {
+        public static dynamic GetTSObject(ClipPlaneCollection dynObject)
+        {
+            return dynObject.clipplanecollection;
+        }
+
+        public static ClipPlaneCollection FromTSObject(dynamic tsObject)
+        {
+            return new ClipPlaneCollection(tsObject);
+        }
+    }
+
 
 }
     

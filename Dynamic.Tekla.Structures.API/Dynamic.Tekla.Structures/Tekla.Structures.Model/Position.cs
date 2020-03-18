@@ -28,111 +28,194 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Position.PlaneEnum Plane
 		{
 			get => Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(position.Plane);
-			set { position.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(value); }
+			set { position.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position.DepthEnum Depth
 		{
 			get => Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(position.Depth);
-			set { position.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(value); }
+			set { position.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position.RotationEnum Rotation
 		{
 			get => Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(position.Rotation);
-			set { position.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(value); }
+			set { position.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.GetTSObject(value); }
 		}
 
         
 
-        dynamic position;
+        internal dynamic position;
         
         public Position()
         {
             this.position =  TSActivator.CreateInstance("Tekla.Structures.Model.Position");
         }
 
-        public Position(dynamic tsObject)
+        internal Position(dynamic tsObject)
         {
             this.position = tsObject;
         }
 
-        internal dynamic GetTSObject() => position;
 
 
 
-
-    public struct PlaneEnum
+    public enum PlaneEnum
     {
-       
+			MIDDLE,
+			LEFT,
+			RIGHT        
     }
 
     internal static class PlaneEnum_
     {
-        public static dynamic GetTSObject(PlaneEnum dynStruct)
+        public static dynamic GetTSObject(PlaneEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PlaneEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case PlaneEnum.MIDDLE:
+					return System.Enum.Parse(tsType, "MIDDLE");
+				case PlaneEnum.LEFT:
+					return System.Enum.Parse(tsType, "LEFT");
+				case PlaneEnum.RIGHT:
+					return System.Enum.Parse(tsType, "RIGHT");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static PlaneEnum FromTSObject(dynamic tsStruct)
+        public static PlaneEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new PlaneEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("MIDDLE", System.StringComparison.InvariantCulture))
+				return PlaneEnum.MIDDLE;
+			else if (tsEnumValue.Equals("LEFT", System.StringComparison.InvariantCulture))
+				return PlaneEnum.LEFT;
+			else if (tsEnumValue.Equals("RIGHT", System.StringComparison.InvariantCulture))
+				return PlaneEnum.RIGHT;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct DepthEnum
+    public enum DepthEnum
     {
-       
+			MIDDLE,
+			FRONT,
+			BEHIND        
     }
 
     internal static class DepthEnum_
     {
-        public static dynamic GetTSObject(DepthEnum dynStruct)
+        public static dynamic GetTSObject(DepthEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.DepthEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case DepthEnum.MIDDLE:
+					return System.Enum.Parse(tsType, "MIDDLE");
+				case DepthEnum.FRONT:
+					return System.Enum.Parse(tsType, "FRONT");
+				case DepthEnum.BEHIND:
+					return System.Enum.Parse(tsType, "BEHIND");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static DepthEnum FromTSObject(dynamic tsStruct)
+        public static DepthEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new DepthEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("MIDDLE", System.StringComparison.InvariantCulture))
+				return DepthEnum.MIDDLE;
+			else if (tsEnumValue.Equals("FRONT", System.StringComparison.InvariantCulture))
+				return DepthEnum.FRONT;
+			else if (tsEnumValue.Equals("BEHIND", System.StringComparison.InvariantCulture))
+				return DepthEnum.BEHIND;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct RotationEnum
+    public enum RotationEnum
     {
-       
+			FRONT,
+			TOP,
+			BACK,
+			BELOW        
     }
 
     internal static class RotationEnum_
     {
-        public static dynamic GetTSObject(RotationEnum dynStruct)
+        public static dynamic GetTSObject(RotationEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RotationEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RotationEnum.FRONT:
+					return System.Enum.Parse(tsType, "FRONT");
+				case RotationEnum.TOP:
+					return System.Enum.Parse(tsType, "TOP");
+				case RotationEnum.BACK:
+					return System.Enum.Parse(tsType, "BACK");
+				case RotationEnum.BELOW:
+					return System.Enum.Parse(tsType, "BELOW");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RotationEnum FromTSObject(dynamic tsStruct)
+        public static RotationEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RotationEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("FRONT", System.StringComparison.InvariantCulture))
+				return RotationEnum.FRONT;
+			else if (tsEnumValue.Equals("TOP", System.StringComparison.InvariantCulture))
+				return RotationEnum.TOP;
+			else if (tsEnumValue.Equals("BACK", System.StringComparison.InvariantCulture))
+				return RotationEnum.BACK;
+			else if (tsEnumValue.Equals("BELOW", System.StringComparison.InvariantCulture))
+				return RotationEnum.BELOW;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class Position_
+    {
+        public static dynamic GetTSObject(Position dynObject)
+        {
+            return dynObject.position;
+        }
+
+        public static Position FromTSObject(dynamic tsObject)
+        {
+            return new Position(tsObject);
+        }
+    }
+
 
 }
     

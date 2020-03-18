@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(seam.UpVector);
-			set { seam.UpVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(seam.UpVector);
+			set { seam.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
 		{
 			get => Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(seam.AutoDirectionType);
-			set { seam.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(value); }
+			set { seam.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutoPosition
@@ -40,7 +40,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
 		{
 			get => Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(seam.Status);
-			set { seam.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(value); }
+			set { seam.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -69,34 +69,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(seam.Identifier);
-			set { seam.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(seam.Identifier);
+			set { seam.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic seam;
+        internal dynamic seam;
         
         public Seam()
         {
             this.seam =  TSActivator.CreateInstance("Tekla.Structures.Model.Seam");
         }
 
-        public Seam(dynamic tsObject)
+        internal Seam(dynamic tsObject)
         {
             this.seam = tsObject;
         }
 
-        internal dynamic GetTSObject() => seam;
-
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => seam.SetPrimaryObject(M.GetTSObject());
+			 => seam.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(seam.GetPrimaryObject());
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(seam.GetPrimaryObject());
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => seam.SetSecondaryObject(M.GetTSObject());
+			 => seam.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
 			 => seam.SetSecondaryObjects(Secondaries);
@@ -105,16 +103,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => seam.GetSecondaryObjects();
 
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => seam.SetInputPositions(StartPoint.GetTSObject(), EndPoint.GetTSObject());
+			 => seam.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public System.Boolean GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => seam.GetStartAndEndPositions(StartPoint.GetTSObject(), EndPoint.GetTSObject());
+			 => seam.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public System.Boolean SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon InputPolygon)
-			 => seam.SetInputPolygon(InputPolygon.GetTSObject());
+			 => seam.SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon));
 
 		public Dynamic.Tekla.Structures.Model.Polygon GetInputPolygon()
-			 => new Dynamic.Tekla.Structures.Model.Polygon(seam.GetInputPolygon());
+			 => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(seam.GetInputPolygon());
 
 		public System.Boolean Insert()
 			 => seam.Insert();
@@ -150,13 +148,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => seam.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(seam.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(seam.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(seam.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(seam.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(seam.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(seam.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => seam.GetAllUserProperties(values);
@@ -216,13 +214,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => seam.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(seam.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(seam.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => seam.SetPhase(phase.GetTSObject());
+			 => seam.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => seam.GetPhase(phase.GetTSObject());
+			 => seam.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => seam.SetLabel(label);
@@ -235,6 +233,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Seam_
+    {
+        public static dynamic GetTSObject(Seam dynObject)
+        {
+            return dynObject.seam;
+        }
+
+        public static Seam FromTSObject(dynamic tsObject)
+        {
+            return new Seam(tsObject);
+        }
+    }
+
 
 }
     

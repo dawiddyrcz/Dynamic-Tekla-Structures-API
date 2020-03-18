@@ -9,25 +9,23 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic modelobjectselector;
+        internal dynamic modelobjectselector;
         
         public ModelObjectSelector()
         {
             this.modelobjectselector =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectSelector");
         }
 
-        public ModelObjectSelector(dynamic tsObject)
+        internal ModelObjectSelector(dynamic tsObject)
         {
             this.modelobjectselector = tsObject;
         }
 
-        internal dynamic GetTSObject() => modelobjectselector;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSelectedObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetSelectedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetSelectedObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point MinPoint, Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint, Dynamic.Tekla.Structures.Model.UI.View View)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetObjectsByBoundingBox(MinPoint.GetTSObject(), MaxPoint.GetTSObject(), View.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint), Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(View)));
 
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects)
 			 => modelobjectselector.Select(ModelObjects);
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ModelObjectSelector_
+    {
+        public static dynamic GetTSObject(ModelObjectSelector dynObject)
+        {
+            return dynObject.modelobjectselector;
+        }
+
+        public static ModelObjectSelector FromTSObject(dynamic tsObject)
+        {
+            return new ModelObjectSelector(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,40 +9,52 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(face.Normal);
-			set { face.Normal = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(face.Normal);
+			set { face.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier OriginPartId
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(face.OriginPartId);
-			set { face.OriginPartId = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(face.OriginPartId);
+			set { face.OriginPartId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic face;
+        internal dynamic face;
         
         public Face()
         {
             this.face =  TSActivator.CreateInstance("Tekla.Structures.Solid.Face");
         }
 
-        public Face(dynamic tsObject)
+        internal Face(dynamic tsObject)
         {
             this.face = tsObject;
         }
 
-        internal dynamic GetTSObject() => face;
-
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
-			 => new Dynamic.Tekla.Structures.Solid.LoopEnumerator(face.GetLoopEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(face.GetLoopEnumerator());
 
 
 
 
 
     }
+
+    internal static class Face_
+    {
+        public static dynamic GetTSObject(Face dynObject)
+        {
+            return dynObject.face;
+        }
+
+        public static Face FromTSObject(dynamic tsObject)
+        {
+            return new Face(tsObject);
+        }
+    }
+
 
 }
     

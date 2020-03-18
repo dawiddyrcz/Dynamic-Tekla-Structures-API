@@ -9,50 +9,50 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position1);
-			set { loadarea.Position1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadarea.Position1);
+			set { loadarea.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position2);
-			set { loadarea.Position2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadarea.Position2);
+			set { loadarea.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position3
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(loadarea.Position3);
-			set { loadarea.Position3 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadarea.Position3);
+			set { loadarea.Position3 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P1);
-			set { loadarea.P1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadarea.P1);
+			set { loadarea.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P2);
-			set { loadarea.P2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadarea.P2);
+			set { loadarea.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P3
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P3);
-			set { loadarea.P3 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadarea.P3);
+			set { loadarea.P3 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P4
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.P4);
-			set { loadarea.P4 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadarea.P4);
+			set { loadarea.P4 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadArea.AreaLoadFormEnum LoadForm
 		{
 			get => Dynamic.Tekla.Structures.Model.LoadArea.AreaLoadFormEnum_.FromTSObject(loadarea.LoadForm);
-			set { loadarea.LoadForm = Dynamic.Tekla.Structures.Model.LoadArea.AreaLoadFormEnum_.FromTSObject(value); }
+			set { loadarea.LoadForm = Dynamic.Tekla.Structures.Model.LoadArea.AreaLoadFormEnum_.GetTSObject(value); }
 		}
 
 		public System.Double DistanceA
@@ -63,20 +63,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loadarea.FatherId);
-			set { loadarea.FatherId = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadarea.FatherId);
+			set { loadarea.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadarea.Spanning);
-			set { loadarea.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
+			set { loadarea.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadarea.PrimaryAxisDirection);
-			set { loadarea.PrimaryAxisDirection = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadarea.PrimaryAxisDirection);
+			set { loadarea.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
@@ -106,13 +106,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadarea.LoadAttachment);
-			set { loadarea.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
+			set { loadarea.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadarea.PartNames);
-			set { loadarea.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
+			set { loadarea.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -141,8 +141,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => new Dynamic.Tekla.Structures.Model.LoadGroup(loadarea.Group);
-			set { loadarea.Group = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(loadarea.Group);
+			set { loadarea.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -159,25 +159,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loadarea.Identifier);
-			set { loadarea.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadarea.Identifier);
+			set { loadarea.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic loadarea;
+        internal dynamic loadarea;
         
         public LoadArea()
         {
             this.loadarea =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadArea");
         }
 
-        public LoadArea(dynamic tsObject)
+        internal LoadArea(dynamic tsObject)
         {
             this.loadarea = tsObject;
         }
-
-        internal dynamic GetTSObject() => loadarea;
 
 		public System.Boolean Insert()
 			 => loadarea.Insert();
@@ -192,13 +190,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loadarea.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loadarea.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadarea.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(loadarea.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loadarea.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loadarea.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadarea.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => loadarea.GetAllUserProperties(values);
@@ -258,13 +256,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loadarea.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(loadarea.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loadarea.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadarea.SetPhase(phase.GetTSObject());
+			 => loadarea.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadarea.GetPhase(phase.GetTSObject());
+			 => loadarea.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => loadarea.SetLabel(label);
@@ -275,31 +273,62 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct AreaLoadFormEnum
+    public enum AreaLoadFormEnum
     {
-       
+			LOAD_FORM_AREA_PARALLELOGRAM,
+			LOAD_FORM_AREA_TRIANGLE        
     }
 
     internal static class AreaLoadFormEnum_
     {
-        public static dynamic GetTSObject(AreaLoadFormEnum dynStruct)
+        public static dynamic GetTSObject(AreaLoadFormEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AreaLoadFormEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case AreaLoadFormEnum.LOAD_FORM_AREA_PARALLELOGRAM:
+					return System.Enum.Parse(tsType, "LOAD_FORM_AREA_PARALLELOGRAM");
+				case AreaLoadFormEnum.LOAD_FORM_AREA_TRIANGLE:
+					return System.Enum.Parse(tsType, "LOAD_FORM_AREA_TRIANGLE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static AreaLoadFormEnum FromTSObject(dynamic tsStruct)
+        public static AreaLoadFormEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new AreaLoadFormEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOAD_FORM_AREA_PARALLELOGRAM", System.StringComparison.InvariantCulture))
+				return AreaLoadFormEnum.LOAD_FORM_AREA_PARALLELOGRAM;
+			else if (tsEnumValue.Equals("LOAD_FORM_AREA_TRIANGLE", System.StringComparison.InvariantCulture))
+				return AreaLoadFormEnum.LOAD_FORM_AREA_TRIANGLE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class LoadArea_
+    {
+        public static dynamic GetTSObject(LoadArea dynObject)
+        {
+            return dynObject.loadarea;
+        }
+
+        public static LoadArea FromTSObject(dynamic tsObject)
+        {
+            return new LoadArea(tsObject);
+        }
+    }
+
 
 }
     

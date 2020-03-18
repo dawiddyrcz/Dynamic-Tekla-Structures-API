@@ -9,19 +9,17 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic teklastructuressettings;
+        internal dynamic teklastructuressettings;
         
         public TeklaStructuresSettings()
         {
             this.teklastructuressettings =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings");
         }
 
-        public TeklaStructuresSettings(dynamic tsObject)
+        internal TeklaStructuresSettings(dynamic tsObject)
         {
             this.teklastructuressettings = tsObject;
         }
-
-        internal dynamic GetTSObject() => teklastructuressettings;
 
 		public System.Boolean GetAdvancedOption(System.String VariableName, System.Boolean Value)
 			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
@@ -36,16 +34,16 @@ namespace Dynamic.Tekla.Structures
 			 => teklastructuressettings.GetAdvancedOption(VariableName, Value);
 
 		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
-			 => teklastructuressettings.GetOptions(Options.GetTSObject());
+			 => teklastructuressettings.GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
-			 => teklastructuressettings.SetOptions(Options.GetTSObject());
+			 => teklastructuressettings.SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
 
 		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
-			 => teklastructuressettings.GetOptions(Options.GetTSObject());
+			 => teklastructuressettings.GetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
-			 => teklastructuressettings.SetOptions(Options.GetTSObject());
+			 => teklastructuressettings.SetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
 
 		public System.Boolean IsToolOptionOn(System.String toolOptionName)
 			 => teklastructuressettings.IsToolOptionOn(toolOptionName);
@@ -73,19 +71,17 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic invalidpathcallback;
+        internal dynamic invalidpathcallback;
         
         public InvalidPathCallback()
         {
             this.invalidpathcallback =  TSActivator.CreateInstance("Tekla.Structures.InvalidPathCallback");
         }
 
-        public InvalidPathCallback(dynamic tsObject)
+        internal InvalidPathCallback(dynamic tsObject)
         {
             this.invalidpathcallback = tsObject;
         }
-
-        internal dynamic GetTSObject() => invalidpathcallback;
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 			 => invalidpathcallback.Invoke(advancedOption, invalidString, exceptionMessage);
@@ -111,35 +107,75 @@ namespace Dynamic.Tekla.Structures
 
     }
 
+    internal static class InvalidPathCallback_
+    {
+        public static dynamic GetTSObject(InvalidPathCallback dynObject)
+        {
+            return dynObject.invalidpathcallback;
+        }
+
+        public static InvalidPathCallback FromTSObject(dynamic tsObject)
+        {
+            return new InvalidPathCallback(tsObject);
+        }
+    }
+
+
 
     public sealed class ToolOptionNames 
     {
 
         
 
-        dynamic tooloptionnames;
+        internal dynamic tooloptionnames;
         
         private ToolOptionNames()
         {
             this.tooloptionnames =  TSActivator.CreateInstance("Tekla.Structures.ToolOptionNames");
         }
 
-        public ToolOptionNames(dynamic tsObject)
+        internal ToolOptionNames(dynamic tsObject)
         {
             this.tooloptionnames = tsObject;
         }
 
-        internal dynamic GetTSObject() => tooloptionnames;
-
 
 
 
 
     }
 
+    internal static class ToolOptionNames_
+    {
+        public static dynamic GetTSObject(ToolOptionNames dynObject)
+        {
+            return dynObject.tooloptionnames;
+        }
+
+        public static ToolOptionNames FromTSObject(dynamic tsObject)
+        {
+            return new ToolOptionNames(tsObject);
+        }
+    }
+
+
 
 
     }
+
+    internal static class TeklaStructuresSettings_
+    {
+        public static dynamic GetTSObject(TeklaStructuresSettings dynObject)
+        {
+            return dynObject.teklastructuressettings;
+        }
+
+        public static TeklaStructuresSettings FromTSObject(dynamic tsObject)
+        {
+            return new TeklaStructuresSettings(tsObject);
+        }
+    }
+
 
 }
     

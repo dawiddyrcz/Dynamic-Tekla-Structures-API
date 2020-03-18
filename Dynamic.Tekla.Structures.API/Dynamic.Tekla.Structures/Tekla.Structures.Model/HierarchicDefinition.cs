@@ -22,13 +22,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum HierarchyType
 		{
 			get => Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.FromTSObject(hierarchicdefinition.HierarchyType);
-			set { hierarchicdefinition.HierarchyType = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.FromTSObject(value); }
+			set { hierarchicdefinition.HierarchyType = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.HierarchicDefinition Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.HierarchicDefinition(hierarchicdefinition.Father);
-			set { hierarchicdefinition.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(hierarchicdefinition.Father);
+			set { hierarchicdefinition.Father = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value); }
 		}
 
 		public System.String HierarchyIdentifier
@@ -63,25 +63,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(hierarchicdefinition.Identifier);
-			set { hierarchicdefinition.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(hierarchicdefinition.Identifier);
+			set { hierarchicdefinition.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic hierarchicdefinition;
+        internal dynamic hierarchicdefinition;
         
         public HierarchicDefinition()
         {
             this.hierarchicdefinition =  TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicDefinition");
         }
 
-        public HierarchicDefinition(dynamic tsObject)
+        internal HierarchicDefinition(dynamic tsObject)
         {
             this.hierarchicdefinition = tsObject;
         }
-
-        internal dynamic GetTSObject() => hierarchicdefinition;
 
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
 			 => hierarchicdefinition.AddObjects(Objects);
@@ -102,13 +100,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => hierarchicdefinition.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(hierarchicdefinition.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(hierarchicdefinition.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(hierarchicdefinition.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(hierarchicdefinition.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(hierarchicdefinition.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(hierarchicdefinition.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => hierarchicdefinition.GetAllUserProperties(values);
@@ -168,13 +166,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => hierarchicdefinition.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(hierarchicdefinition.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(hierarchicdefinition.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => hierarchicdefinition.SetPhase(phase.GetTSObject());
+			 => hierarchicdefinition.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => hierarchicdefinition.GetPhase(phase.GetTSObject());
+			 => hierarchicdefinition.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => hierarchicdefinition.SetLabel(label);
@@ -187,6 +185,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class HierarchicDefinition_
+    {
+        public static dynamic GetTSObject(HierarchicDefinition dynObject)
+        {
+            return dynObject.hierarchicdefinition;
+        }
+
+        public static HierarchicDefinition FromTSObject(dynamic tsObject)
+        {
+            return new HierarchicDefinition(tsObject);
+        }
+    }
+
 
 }
     

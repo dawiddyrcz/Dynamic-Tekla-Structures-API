@@ -33,14 +33,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(rebarstrand.StartPoint);
-			set { rebarstrand.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarstrand.StartPoint);
+			set { rebarstrand.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(rebarstrand.EndPoint);
-			set { rebarstrand.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarstrand.EndPoint);
+			set { rebarstrand.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OnPlaneOffsets
@@ -51,8 +51,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(rebarstrand.Father);
-			set { rebarstrand.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(rebarstrand.Father);
+			set { rebarstrand.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.String Grade
@@ -75,8 +75,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(rebarstrand.NumberingSeries);
-			set { rebarstrand.NumberingSeries = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(rebarstrand.NumberingSeries);
+			set { rebarstrand.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Double FromPlaneOffset
@@ -88,7 +88,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarstrand.StartPointOffsetType);
-			set { rebarstrand.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { rebarstrand.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
@@ -100,7 +100,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarstrand.EndPointOffsetType);
-			set { rebarstrand.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { rebarstrand.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
@@ -118,7 +118,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Forming.DeformingType InputPointDeformingState
 		{
 			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebarstrand.InputPointDeformingState);
-			set { rebarstrand.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
+			set { rebarstrand.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -135,25 +135,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarstrand.Identifier);
-			set { rebarstrand.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarstrand.Identifier);
+			set { rebarstrand.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarstrand;
+        internal dynamic rebarstrand;
         
         public RebarStrand()
         {
             this.rebarstrand =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarStrand");
         }
 
-        public RebarStrand(dynamic tsObject)
+        internal RebarStrand(dynamic tsObject)
         {
             this.rebarstrand = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarstrand;
 
 		public System.Boolean Insert()
 			 => rebarstrand.Insert();
@@ -168,7 +166,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarstrand.Delete();
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
-			 => rebarstrand.GetRebarGeometries(options.GetTSObject());
+			 => rebarstrand.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
 			 => rebarstrand.GetRebarGeometries(withHooks);
@@ -183,28 +181,28 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarstrand.GetNumberOfRebars();
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebar(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(rebarstrand.GetSingleRebar(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarstrand.GetSingleRebar(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebarWithoutClash(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(rebarstrand.GetSingleRebarWithoutClash(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarstrand.GetSingleRebarWithoutClash(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(rebarstrand.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(rebarstrand.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(rebarstrand.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(rebarstrand.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(rebarstrand.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(rebarstrand.GetFatherPourUnit());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarstrand.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarstrand.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarstrand.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarstrand.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarstrand.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarstrand.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarstrand.GetAllUserProperties(values);
@@ -264,13 +262,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarstrand.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarstrand.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarstrand.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarstrand.SetPhase(phase.GetTSObject());
+			 => rebarstrand.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarstrand.GetPhase(phase.GetTSObject());
+			 => rebarstrand.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarstrand.SetLabel(label);
@@ -283,6 +281,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class RebarStrand_
+    {
+        public static dynamic GetTSObject(RebarStrand dynObject)
+        {
+            return dynObject.rebarstrand;
+        }
+
+        public static RebarStrand FromTSObject(dynamic tsObject)
+        {
+            return new RebarStrand(tsObject);
+        }
+    }
+
 
 }
     

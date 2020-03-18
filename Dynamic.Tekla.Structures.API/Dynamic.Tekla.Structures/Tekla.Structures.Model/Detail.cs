@@ -15,26 +15,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(detail.UpVector);
-			set { detail.UpVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(detail.UpVector);
+			set { detail.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
 		{
 			get => Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(detail.AutoDirectionType);
-			set { detail.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(value); }
+			set { detail.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.PositionTypeEnum PositionType
 		{
 			get => Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(detail.PositionType);
-			set { detail.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(value); }
+			set { detail.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.DetailTypeEnum DetailType
 		{
 			get => Dynamic.Tekla.Structures.DetailTypeEnum_.FromTSObject(detail.DetailType);
-			set { detail.DetailType = Dynamic.Tekla.Structures.DetailTypeEnum_.FromTSObject(value); }
+			set { detail.DetailType = Dynamic.Tekla.Structures.DetailTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.String Code
@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
 		{
 			get => Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(detail.Status);
-			set { detail.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(value); }
+			set { detail.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -75,37 +75,35 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(detail.Identifier);
-			set { detail.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(detail.Identifier);
+			set { detail.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic detail;
+        internal dynamic detail;
         
         public Detail()
         {
             this.detail =  TSActivator.CreateInstance("Tekla.Structures.Model.Detail");
         }
 
-        public Detail(dynamic tsObject)
+        internal Detail(dynamic tsObject)
         {
             this.detail = tsObject;
         }
 
-        internal dynamic GetTSObject() => detail;
-
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => detail.SetPrimaryObject(M.GetTSObject());
+			 => detail.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(detail.GetPrimaryObject());
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(detail.GetPrimaryObject());
 
 		public System.Boolean SetReferencePoint(Dynamic.Tekla.Structures.Geometry3d.Point ReferencePoint)
-			 => detail.SetReferencePoint(ReferencePoint.GetTSObject());
+			 => detail.SetReferencePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ReferencePoint));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point GetReferencePoint()
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(detail.GetReferencePoint());
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(detail.GetReferencePoint());
 
 		public System.Boolean Insert()
 			 => detail.Insert();
@@ -141,13 +139,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => detail.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(detail.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(detail.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(detail.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(detail.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(detail.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(detail.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => detail.GetAllUserProperties(values);
@@ -207,13 +205,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => detail.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(detail.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(detail.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => detail.SetPhase(phase.GetTSObject());
+			 => detail.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => detail.GetPhase(phase.GetTSObject());
+			 => detail.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => detail.SetLabel(label);
@@ -226,6 +224,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Detail_
+    {
+        public static dynamic GetTSObject(Detail dynObject)
+        {
+            return dynObject.detail;
+        }
+
+        public static Detail FromTSObject(dynamic tsObject)
+        {
+            return new Detail(tsObject);
+        }
+    }
+
 
 }
     

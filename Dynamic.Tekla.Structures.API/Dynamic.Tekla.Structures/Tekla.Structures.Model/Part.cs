@@ -9,32 +9,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(part.Profile);
-			set { part.Profile = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(part.Profile);
+			set { part.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(part.Material);
-			set { part.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(part.Material);
+			set { part.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
 		{
-			get => new Dynamic.Tekla.Structures.Model.DeformingData(part.DeformingData);
-			set { part.DeformingData = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(part.DeformingData);
+			set { part.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(part.PartNumber);
-			set { part.PartNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(part.PartNumber);
+			set { part.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(part.AssemblyNumber);
-			set { part.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(part.AssemblyNumber);
+			set { part.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -58,7 +58,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
 			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(part.CastUnitType);
-			set { part.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
+			set { part.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -69,8 +69,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(part.Position);
-			set { part.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(part.Position);
+			set { part.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -87,37 +87,35 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(part.Identifier);
-			set { part.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(part.Identifier);
+			set { part.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic part;
+        internal dynamic part;
         
         private Part()
         {
             this.part =  TSActivator.CreateInstance("Tekla.Structures.Model.Part");
         }
 
-        public Part(dynamic tsObject)
+        internal Part(dynamic tsObject)
         {
             this.part = tsObject;
         }
 
-        internal dynamic GetTSObject() => part;
-
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(part.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid(solidCreationType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(part.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-			 => new Dynamic.Tekla.Structures.Model.Solid(part.GetSolid(formingStates.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(part.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(part.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(part.GetAssembly());
 
 		public System.String GetPartMark()
 			 => part.GetPartMark();
@@ -129,34 +127,34 @@ namespace Dynamic.Tekla.Structures.Model
 			 => part.GetReferenceLine(withCutsFittings);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetComponents());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetBooleans());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetBooleans());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetBolts());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetBolts());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetWelds());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetWelds());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetReinforcements());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetReinforcements());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetSurfaceTreatments());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetSurfaceTreatments());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetSurfaceObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetSurfaceObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetPours());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetPours());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-			 => part.CompareTo(partToCompare.GetTSObject());
+			 => part.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(part.GetDSTVCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(part.GetDSTVCoordinateSystem());
 
 		public System.Boolean Insert()
 			 => part.Insert();
@@ -171,13 +169,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => part.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(part.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(part.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(part.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(part.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => part.GetAllUserProperties(values);
@@ -237,13 +235,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => part.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(part.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(part.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => part.SetPhase(phase.GetTSObject());
+			 => part.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => part.GetPhase(phase.GetTSObject());
+			 => part.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => part.SetLabel(label);
@@ -254,31 +252,62 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct CastUnitTypeEnum
+    public enum CastUnitTypeEnum
     {
-       
+			PRECAST,
+			CAST_IN_PLACE        
     }
 
     internal static class CastUnitTypeEnum_
     {
-        public static dynamic GetTSObject(CastUnitTypeEnum dynStruct)
+        public static dynamic GetTSObject(CastUnitTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CastUnitTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case CastUnitTypeEnum.PRECAST:
+					return System.Enum.Parse(tsType, "PRECAST");
+				case CastUnitTypeEnum.CAST_IN_PLACE:
+					return System.Enum.Parse(tsType, "CAST_IN_PLACE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static CastUnitTypeEnum FromTSObject(dynamic tsStruct)
+        public static CastUnitTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new CastUnitTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("PRECAST", System.StringComparison.InvariantCulture))
+				return CastUnitTypeEnum.PRECAST;
+			else if (tsEnumValue.Equals("CAST_IN_PLACE", System.StringComparison.InvariantCulture))
+				return CastUnitTypeEnum.CAST_IN_PLACE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class Part_
+    {
+        public static dynamic GetTSObject(Part dynObject)
+        {
+            return dynObject.part;
+        }
+
+        public static Part FromTSObject(dynamic tsObject)
+        {
+            return new Part(tsObject);
+        }
+    }
+
 
 }
     

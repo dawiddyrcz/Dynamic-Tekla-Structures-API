@@ -9,37 +9,49 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(line.Origin);
-			set { line.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(line.Origin);
+			set { line.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Direction
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(line.Direction);
-			set { line.Direction = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(line.Direction);
+			set { line.Direction = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        dynamic line;
+        internal dynamic line;
         
         public Line()
         {
             this.line =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Line");
         }
 
-        public Line(dynamic tsObject)
+        internal Line(dynamic tsObject)
         {
             this.line = tsObject;
         }
-
-        internal dynamic GetTSObject() => line;
 
 
 
 
 
     }
+
+    internal static class Line_
+    {
+        public static dynamic GetTSObject(Line dynObject)
+        {
+            return dynObject.line;
+        }
+
+        public static Line FromTSObject(dynamic tsObject)
+        {
+            return new Line(tsObject);
+        }
+    }
+
 
 }
     

@@ -21,48 +21,82 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarlengthadjustmentdatanullable;
+        internal dynamic rebarlengthadjustmentdatanullable;
         
         public RebarLengthAdjustmentDataNullable()
         {
             this.rebarlengthadjustmentdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLengthAdjustmentDataNullable");
         }
 
-        public RebarLengthAdjustmentDataNullable(dynamic tsObject)
+        internal RebarLengthAdjustmentDataNullable(dynamic tsObject)
         {
             this.rebarlengthadjustmentdatanullable = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarlengthadjustmentdatanullable;
 
 
 
-
-    public struct LengthAdjustmentTypeEnum
+    public enum LengthAdjustmentTypeEnum
     {
-       
+			NO_ADJUSTMENT,
+			END_OFFSET,
+			LEG_LENGTH        
     }
 
     internal static class LengthAdjustmentTypeEnum_
     {
-        public static dynamic GetTSObject(LengthAdjustmentTypeEnum dynStruct)
+        public static dynamic GetTSObject(LengthAdjustmentTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthAdjustmentTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LengthAdjustmentTypeEnum.NO_ADJUSTMENT:
+					return System.Enum.Parse(tsType, "NO_ADJUSTMENT");
+				case LengthAdjustmentTypeEnum.END_OFFSET:
+					return System.Enum.Parse(tsType, "END_OFFSET");
+				case LengthAdjustmentTypeEnum.LEG_LENGTH:
+					return System.Enum.Parse(tsType, "LEG_LENGTH");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LengthAdjustmentTypeEnum FromTSObject(dynamic tsStruct)
+        public static LengthAdjustmentTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LengthAdjustmentTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NO_ADJUSTMENT", System.StringComparison.InvariantCulture))
+				return LengthAdjustmentTypeEnum.NO_ADJUSTMENT;
+			else if (tsEnumValue.Equals("END_OFFSET", System.StringComparison.InvariantCulture))
+				return LengthAdjustmentTypeEnum.END_OFFSET;
+			else if (tsEnumValue.Equals("LEG_LENGTH", System.StringComparison.InvariantCulture))
+				return LengthAdjustmentTypeEnum.LEG_LENGTH;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarLengthAdjustmentDataNullable_
+    {
+        public static dynamic GetTSObject(RebarLengthAdjustmentDataNullable dynObject)
+        {
+            return dynObject.rebarlengthadjustmentdatanullable;
+        }
+
+        public static RebarLengthAdjustmentDataNullable FromTSObject(dynamic tsObject)
+        {
+            return new RebarLengthAdjustmentDataNullable(tsObject);
+        }
+    }
+
 
 }
     

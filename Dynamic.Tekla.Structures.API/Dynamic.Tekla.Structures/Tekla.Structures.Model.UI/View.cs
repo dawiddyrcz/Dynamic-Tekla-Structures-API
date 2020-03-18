@@ -15,20 +15,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(view.Identifier);
-			set { view.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(view.Identifier);
+			set { view.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem ViewCoordinateSystem
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(view.ViewCoordinateSystem);
-			set { view.ViewCoordinateSystem = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(view.ViewCoordinateSystem);
+			set { view.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem DisplayCoordinateSystem
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(view.DisplayCoordinateSystem);
-			set { view.DisplayCoordinateSystem = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(view.DisplayCoordinateSystem);
+			set { view.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -39,8 +39,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB WorkArea
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.AABB(view.WorkArea);
-			set { view.WorkArea = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(view.WorkArea);
+			set { view.WorkArea = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value); }
 		}
 
 		public System.Double ViewDepthUp
@@ -58,19 +58,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType ViewProjection
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(view.ViewProjection);
-			set { view.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(value); }
+			set { view.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(view.DisplayType);
-			set { view.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(value); }
+			set { view.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType ViewRendering
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(view.ViewRendering);
-			set { view.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(value); }
+			set { view.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.GetTSObject(value); }
 		}
 
 		public System.String ViewFilter
@@ -87,25 +87,23 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings VisibilitySettings
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings(view.VisibilitySettings);
-			set { view.VisibilitySettings = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.FromTSObject(view.VisibilitySettings);
+			set { view.VisibilitySettings = Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.GetTSObject(value); }
 		}
 
         
 
-        dynamic view;
+        internal dynamic view;
         
         public View()
         {
             this.view =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.View");
         }
 
-        public View(dynamic tsObject)
+        internal View(dynamic tsObject)
         {
             this.view = tsObject;
         }
-
-        internal dynamic GetTSObject() => view;
 
 		public System.Boolean Insert()
 			 => view.Insert();
@@ -126,82 +124,147 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			 => view.IsVisible();
 
 		public Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection GetClipPlanes()
-			 => new Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection(view.GetClipPlanes());
+			 => Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(view.GetClipPlanes());
 
 
 
 
-    public struct ViewProjectionType
+    public enum ViewProjectionType
     {
-       
+			ORTHOGONAL_PROJECTION,
+			PERSPECTIVE_PROJECTION        
     }
 
     internal static class ViewProjectionType_
     {
-        public static dynamic GetTSObject(ViewProjectionType dynStruct)
+        public static dynamic GetTSObject(ViewProjectionType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewProjectionType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ViewProjectionType.ORTHOGONAL_PROJECTION:
+					return System.Enum.Parse(tsType, "ORTHOGONAL_PROJECTION");
+				case ViewProjectionType.PERSPECTIVE_PROJECTION:
+					return System.Enum.Parse(tsType, "PERSPECTIVE_PROJECTION");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ViewProjectionType FromTSObject(dynamic tsStruct)
+        public static ViewProjectionType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ViewProjectionType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("ORTHOGONAL_PROJECTION", System.StringComparison.InvariantCulture))
+				return ViewProjectionType.ORTHOGONAL_PROJECTION;
+			else if (tsEnumValue.Equals("PERSPECTIVE_PROJECTION", System.StringComparison.InvariantCulture))
+				return ViewProjectionType.PERSPECTIVE_PROJECTION;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct DisplayOrientationType
+    public enum DisplayOrientationType
     {
-       
+			DISPLAY_VIEW_PLANE,
+			DISPLAY_3D        
     }
 
     internal static class DisplayOrientationType_
     {
-        public static dynamic GetTSObject(DisplayOrientationType dynStruct)
+        public static dynamic GetTSObject(DisplayOrientationType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.DisplayOrientationType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case DisplayOrientationType.DISPLAY_VIEW_PLANE:
+					return System.Enum.Parse(tsType, "DISPLAY_VIEW_PLANE");
+				case DisplayOrientationType.DISPLAY_3D:
+					return System.Enum.Parse(tsType, "DISPLAY_3D");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static DisplayOrientationType FromTSObject(dynamic tsStruct)
+        public static DisplayOrientationType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new DisplayOrientationType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("DISPLAY_VIEW_PLANE", System.StringComparison.InvariantCulture))
+				return DisplayOrientationType.DISPLAY_VIEW_PLANE;
+			else if (tsEnumValue.Equals("DISPLAY_3D", System.StringComparison.InvariantCulture))
+				return DisplayOrientationType.DISPLAY_3D;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct ViewRenderingType
+    public enum ViewRenderingType
     {
-       
+			WIREFRAME_VIEW,
+			RENDERED_VIEW        
     }
 
     internal static class ViewRenderingType_
     {
-        public static dynamic GetTSObject(ViewRenderingType dynStruct)
+        public static dynamic GetTSObject(ViewRenderingType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewRenderingType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ViewRenderingType.WIREFRAME_VIEW:
+					return System.Enum.Parse(tsType, "WIREFRAME_VIEW");
+				case ViewRenderingType.RENDERED_VIEW:
+					return System.Enum.Parse(tsType, "RENDERED_VIEW");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ViewRenderingType FromTSObject(dynamic tsStruct)
+        public static ViewRenderingType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ViewRenderingType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("WIREFRAME_VIEW", System.StringComparison.InvariantCulture))
+				return ViewRenderingType.WIREFRAME_VIEW;
+			else if (tsEnumValue.Equals("RENDERED_VIEW", System.StringComparison.InvariantCulture))
+				return ViewRenderingType.RENDERED_VIEW;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class View_
+    {
+        public static dynamic GetTSObject(View dynObject)
+        {
+            return dynObject.view;
+        }
+
+        public static View FromTSObject(dynamic tsObject)
+        {
+            return new View(tsObject);
+        }
+    }
+
 
 }
     

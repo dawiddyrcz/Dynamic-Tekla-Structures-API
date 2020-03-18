@@ -9,61 +9,73 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         
 
-        dynamic modelhistory;
+        internal dynamic modelhistory;
         
         private ModelHistory()
         {
             this.modelhistory =  TSActivator.CreateInstance("Tekla.Structures.Model.History.ModelHistory");
         }
 
-        public ModelHistory(dynamic tsObject)
+        internal ModelHistory(dynamic tsObject)
         {
             this.modelhistory = tsObject;
         }
 
-        internal dynamic GetTSObject() => modelhistory;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetModifiedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetModifiedObjects(ModStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelhistory.GetModifiedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(ModStamp)));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetModifiedObjectsWithType(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp, Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetModifiedObjectsWithType(ModStamp.GetTSObject(), Enum.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelhistory.GetModifiedObjectsWithType(Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(ModStamp), Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum)));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDeletedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetDeletedObjects(ModStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelhistory.GetDeletedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(ModStamp)));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDeletedObjectsWithType(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp, Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetDeletedObjectsWithType(ModStamp.GetTSObject(), Enum.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelhistory.GetDeletedObjectsWithType(Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(ModStamp), Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum)));
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationStamp GetCurrentModificationStamp()
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationStamp(modelhistory.GetCurrentModificationStamp());
+			 => Dynamic.Tekla.Structures.Model.History.ModificationStamp_.FromTSObject(modelhistory.GetCurrentModificationStamp());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetNotSharedObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelhistory.GetNotSharedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelhistory.GetNotSharedObjects());
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetLocalChanges()
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.GetLocalChanges());
+			 => Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(modelhistory.GetLocalChanges());
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.TakeModifications(Name, PrevStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(modelhistory.TakeModifications(Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp)));
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifications(System.String Name, System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.TakeModifications(Name, ObjectTypes, PrevStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(modelhistory.TakeModifications(Name, ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp)));
 
 		public void UpdateModificationStampToLatest(System.String modificationStampKey)
 			 => modelhistory.UpdateModificationStampToLatest(modificationStampKey);
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.GetModifications(Name, PrevStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(modelhistory.GetModifications(Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp)));
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum> ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)
-			 => new Dynamic.Tekla.Structures.Model.History.ModificationInfo(modelhistory.GetModifications(Name, ObjectTypes, PrevStamp.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(modelhistory.GetModifications(Name, ObjectTypes, Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp)));
 
 
 
 
 
     }
+
+    internal static class ModelHistory_
+    {
+        public static dynamic GetTSObject(ModelHistory dynObject)
+        {
+            return dynObject.modelhistory;
+        }
+
+        public static ModelHistory FromTSObject(dynamic tsObject)
+        {
+            return new ModelHistory(tsObject);
+        }
+    }
+
 
 }
     

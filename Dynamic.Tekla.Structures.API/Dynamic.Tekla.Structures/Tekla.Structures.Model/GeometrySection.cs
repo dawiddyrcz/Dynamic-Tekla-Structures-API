@@ -15,31 +15,43 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
 		{
-			get => new Dynamic.Tekla.Structures.Model.IGeometryNode(geometrysection.GeometryNode);
-			set { geometrysection.GeometryNode = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(geometrysection.GeometryNode);
+			set { geometrysection.GeometryNode = Dynamic.Tekla.Structures.Model.IGeometryNode_.GetTSObject(value); }
 		}
 
         
 
-        dynamic geometrysection;
+        internal dynamic geometrysection;
         
         public GeometrySection()
         {
             this.geometrysection =  TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySection");
         }
 
-        public GeometrySection(dynamic tsObject)
+        internal GeometrySection(dynamic tsObject)
         {
             this.geometrysection = tsObject;
         }
-
-        internal dynamic GetTSObject() => geometrysection;
 
 
 
 
 
     }
+
+    internal static class GeometrySection_
+    {
+        public static dynamic GetTSObject(GeometrySection dynObject)
+        {
+            return dynObject.geometrysection;
+        }
+
+        public static GeometrySection FromTSObject(dynamic tsObject)
+        {
+            return new GeometrySection(tsObject);
+        }
+    }
+
 
 }
     

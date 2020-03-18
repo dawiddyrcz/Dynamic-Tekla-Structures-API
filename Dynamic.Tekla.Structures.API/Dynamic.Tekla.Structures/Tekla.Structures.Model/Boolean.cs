@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(boolean.Father);
-			set { boolean.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(boolean.Father);
+			set { boolean.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -27,25 +27,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(boolean.Identifier);
-			set { boolean.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(boolean.Identifier);
+			set { boolean.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic boolean;
+        internal dynamic boolean;
         
         private Boolean()
         {
             this.boolean =  TSActivator.CreateInstance("Tekla.Structures.Model.Boolean");
         }
 
-        public Boolean(dynamic tsObject)
+        internal Boolean(dynamic tsObject)
         {
             this.boolean = tsObject;
         }
-
-        internal dynamic GetTSObject() => boolean;
 
 		public System.Boolean Insert()
 			 => boolean.Insert();
@@ -60,13 +58,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boolean.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boolean.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boolean.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(boolean.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(boolean.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boolean.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boolean.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => boolean.GetAllUserProperties(values);
@@ -126,13 +124,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boolean.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(boolean.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(boolean.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boolean.SetPhase(phase.GetTSObject());
+			 => boolean.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boolean.GetPhase(phase.GetTSObject());
+			 => boolean.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => boolean.SetLabel(label);
@@ -145,6 +143,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Boolean_
+    {
+        public static dynamic GetTSObject(Boolean dynObject)
+        {
+            return dynObject.boolean;
+        }
+
+        public static Boolean FromTSObject(dynamic tsObject)
+        {
+            return new Boolean(tsObject);
+        }
+    }
+
 
 }
     

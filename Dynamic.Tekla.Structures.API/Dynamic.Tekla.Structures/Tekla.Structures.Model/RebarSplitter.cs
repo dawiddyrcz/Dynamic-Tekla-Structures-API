@@ -10,7 +10,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum StaggerType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(rebarsplitter.StaggerType);
-			set { rebarsplitter.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(value); }
+			set { rebarsplitter.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StaggerOffset
@@ -28,37 +28,37 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(rebarsplitter.SplitType);
-			set { rebarsplitter.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(value); }
+			set { rebarsplitter.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping Lapping
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarLapping(rebarsplitter.Lapping);
-			set { rebarsplitter.Lapping = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(rebarsplitter.Lapping);
+			set { rebarsplitter.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking Cranking
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarCranking(rebarsplitter.Cranking);
-			set { rebarsplitter.Cranking = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(rebarsplitter.Cranking);
+			set { rebarsplitter.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarSet(rebarsplitter.Father);
-			set { rebarsplitter.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(rebarsplitter.Father);
+			set { rebarsplitter.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(rebarsplitter.Curve);
-			set { rebarsplitter.Curve = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarsplitter.Curve);
+			set { rebarsplitter.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarsplitter.BarsAffected);
-			set { rebarsplitter.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(value); }
+			set { rebarsplitter.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
@@ -81,28 +81,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarsplitter.Identifier);
-			set { rebarsplitter.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarsplitter.Identifier);
+			set { rebarsplitter.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarsplitter;
+        internal dynamic rebarsplitter;
         
         public RebarSplitter()
         {
             this.rebarsplitter =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplitter");
         }
 
-        public RebarSplitter(dynamic tsObject)
+        internal RebarSplitter(dynamic tsObject)
         {
             this.rebarsplitter = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarsplitter;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplitter.GetAffectedBars(whichEnd.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum_.GetTSObject(whichEnd)));
 
 		public System.Boolean Insert()
 			 => rebarsplitter.Insert();
@@ -117,13 +115,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsplitter.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplitter.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarsplitter.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarsplitter.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplitter.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarsplitter.GetAllUserProperties(values);
@@ -183,13 +181,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsplitter.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarsplitter.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarsplitter.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplitter.SetPhase(phase.GetTSObject());
+			 => rebarsplitter.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplitter.GetPhase(phase.GetTSObject());
+			 => rebarsplitter.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarsplitter.SetLabel(label);
@@ -200,54 +198,112 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct StaggerTypeEnum
+    public enum StaggerTypeEnum
     {
-       
+			NO_STAGGER,
+			STAGGER_LEFT,
+			STAGGER_RIGHT,
+			STAGGER_MIDDLE        
     }
 
     internal static class StaggerTypeEnum_
     {
-        public static dynamic GetTSObject(StaggerTypeEnum dynStruct)
+        public static dynamic GetTSObject(StaggerTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.StaggerTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case StaggerTypeEnum.NO_STAGGER:
+					return System.Enum.Parse(tsType, "NO_STAGGER");
+				case StaggerTypeEnum.STAGGER_LEFT:
+					return System.Enum.Parse(tsType, "STAGGER_LEFT");
+				case StaggerTypeEnum.STAGGER_RIGHT:
+					return System.Enum.Parse(tsType, "STAGGER_RIGHT");
+				case StaggerTypeEnum.STAGGER_MIDDLE:
+					return System.Enum.Parse(tsType, "STAGGER_MIDDLE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static StaggerTypeEnum FromTSObject(dynamic tsStruct)
+        public static StaggerTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new StaggerTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NO_STAGGER", System.StringComparison.InvariantCulture))
+				return StaggerTypeEnum.NO_STAGGER;
+			else if (tsEnumValue.Equals("STAGGER_LEFT", System.StringComparison.InvariantCulture))
+				return StaggerTypeEnum.STAGGER_LEFT;
+			else if (tsEnumValue.Equals("STAGGER_RIGHT", System.StringComparison.InvariantCulture))
+				return StaggerTypeEnum.STAGGER_RIGHT;
+			else if (tsEnumValue.Equals("STAGGER_MIDDLE", System.StringComparison.InvariantCulture))
+				return StaggerTypeEnum.STAGGER_MIDDLE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct SplitTypeEnum
+    public enum SplitTypeEnum
     {
-       
+			LAPPING,
+			CRANKING        
     }
 
     internal static class SplitTypeEnum_
     {
-        public static dynamic GetTSObject(SplitTypeEnum dynStruct)
+        public static dynamic GetTSObject(SplitTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SplitTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case SplitTypeEnum.LAPPING:
+					return System.Enum.Parse(tsType, "LAPPING");
+				case SplitTypeEnum.CRANKING:
+					return System.Enum.Parse(tsType, "CRANKING");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static SplitTypeEnum FromTSObject(dynamic tsStruct)
+        public static SplitTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new SplitTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LAPPING", System.StringComparison.InvariantCulture))
+				return SplitTypeEnum.LAPPING;
+			else if (tsEnumValue.Equals("CRANKING", System.StringComparison.InvariantCulture))
+				return SplitTypeEnum.CRANKING;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarSplitter_
+    {
+        public static dynamic GetTSObject(RebarSplitter dynObject)
+        {
+            return dynObject.rebarsplitter;
+        }
+
+        public static RebarSplitter FromTSObject(dynamic tsObject)
+        {
+            return new RebarSplitter(tsObject);
+        }
+    }
+
 
 }
     

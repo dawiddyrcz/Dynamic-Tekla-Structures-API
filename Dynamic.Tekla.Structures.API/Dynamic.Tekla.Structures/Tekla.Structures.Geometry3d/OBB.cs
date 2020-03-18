@@ -9,26 +9,26 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Center
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.Center);
-			set { obb.Center = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.Center);
+			set { obb.Center = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis0
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis0);
-			set { obb.Axis0 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(obb.Axis0);
+			set { obb.Axis0 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis1);
-			set { obb.Axis1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(obb.Axis1);
+			set { obb.Axis1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(obb.Axis2);
-			set { obb.Axis2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(obb.Axis2);
+			set { obb.Axis2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double Extent0
@@ -51,25 +51,23 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic obb;
+        internal dynamic obb;
         
         public OBB()
         {
             this.obb =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB");
         }
 
-        public OBB(dynamic tsObject)
+        internal OBB(dynamic tsObject)
         {
             this.obb = tsObject;
         }
 
-        internal dynamic GetTSObject() => obb;
-
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis0, Dynamic.Tekla.Structures.Geometry3d.Vector axis1, Dynamic.Tekla.Structures.Geometry3d.Vector axis2)
-			 => obb.SetAxis(axis0.GetTSObject(), axis1.GetTSObject(), axis2.GetTSObject());
+			 => obb.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2));
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis)
-			 => obb.SetAxis(axis.GetTSObject());
+			 => obb.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis));
 
 		public void SetExtent(System.Double extent0, System.Double extent1, System.Double extent2)
 			 => obb.SetExtent(extent0, extent1, extent2);
@@ -78,64 +76,78 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			 => obb.SetExtent(extent);
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ComputeVertices()
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ComputeVertices());
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.ComputeVertices());
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ClosestPointTo(point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ClosestPointTo(line.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.ClosestPointTo(lineSegment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => obb.DistanceTo(point.GetTSObject());
+			 => obb.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point));
 
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => obb.DistanceTo(line.GetTSObject());
+			 => obb.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
 
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => obb.DistanceTo(lineSegment.GetTSObject());
+			 => obb.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.IntersectionPointsWith(line.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(obb.IntersectionPointsWith(lineSegment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(obb.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.IntersectionWith(line.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(obb.IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.IntersectionWith(lineSegment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(obb.IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.OBB obb)
-			 => obb.Intersects(obb.GetTSObject());
+			 => obb.Intersects(Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb));
 
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => obb.Intersects(line.GetTSObject());
+			 => obb.Intersects(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
 
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => obb.Intersects(lineSegment.GetTSObject());
+			 => obb.Intersects(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
 
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane geometricPlane)
-			 => obb.Intersects(geometricPlane.GetTSObject());
+			 => obb.Intersects(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane));
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.Line line)
-			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.ShortestSegmentTo(line.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(obb.ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.ShortestSegmentTo(lineSegment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(obb.ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(obb.ShortestSegmentTo(point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(obb.ShortestSegmentTo(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 
 
 
 
     }
+
+    internal static class OBB_
+    {
+        public static dynamic GetTSObject(OBB dynObject)
+        {
+            return dynObject.obb;
+        }
+
+        public static OBB FromTSObject(dynamic tsObject)
+        {
+            return new OBB(tsObject);
+        }
+    }
+
 
 }
     

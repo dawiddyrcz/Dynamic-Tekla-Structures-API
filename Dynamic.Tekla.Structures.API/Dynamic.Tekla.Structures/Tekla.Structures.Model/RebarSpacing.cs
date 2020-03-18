@@ -28,13 +28,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum StartOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
-			set { rebarspacing.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(value); }
+			set { rebarspacing.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum EndOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
-			set { rebarspacing.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(value); }
+			set { rebarspacing.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean StartOffsetIsAutomatic
@@ -57,48 +57,77 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarspacing;
+        internal dynamic rebarspacing;
         
         public RebarSpacing()
         {
             this.rebarspacing =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing");
         }
 
-        public RebarSpacing(dynamic tsObject)
+        internal RebarSpacing(dynamic tsObject)
         {
             this.rebarspacing = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarspacing;
 
 
 
-
-    public struct OffsetEnum
+    public enum OffsetEnum
     {
-       
+			EXACT,
+			MINIMUM        
     }
 
     internal static class OffsetEnum_
     {
-        public static dynamic GetTSObject(OffsetEnum dynStruct)
+        public static dynamic GetTSObject(OffsetEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.OffsetEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case OffsetEnum.EXACT:
+					return System.Enum.Parse(tsType, "EXACT");
+				case OffsetEnum.MINIMUM:
+					return System.Enum.Parse(tsType, "MINIMUM");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static OffsetEnum FromTSObject(dynamic tsStruct)
+        public static OffsetEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new OffsetEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("EXACT", System.StringComparison.InvariantCulture))
+				return OffsetEnum.EXACT;
+			else if (tsEnumValue.Equals("MINIMUM", System.StringComparison.InvariantCulture))
+				return OffsetEnum.MINIMUM;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarSpacing_
+    {
+        public static dynamic GetTSObject(RebarSpacing dynObject)
+        {
+            return dynObject.rebarspacing;
+        }
+
+        public static RebarSpacing FromTSObject(dynamic tsObject)
+        {
+            return new RebarSpacing(tsObject);
+        }
+    }
+
 
 }
     

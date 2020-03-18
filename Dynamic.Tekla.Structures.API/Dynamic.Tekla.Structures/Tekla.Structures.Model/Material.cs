@@ -15,25 +15,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic material;
+        internal dynamic material;
         
         public Material()
         {
             this.material =  TSActivator.CreateInstance("Tekla.Structures.Model.Material");
         }
 
-        public Material(dynamic tsObject)
+        internal Material(dynamic tsObject)
         {
             this.material = tsObject;
         }
-
-        internal dynamic GetTSObject() => material;
 
 
 
 
 
     }
+
+    internal static class Material_
+    {
+        public static dynamic GetTSObject(Material dynObject)
+        {
+            return dynObject.material;
+        }
+
+        public static Material FromTSObject(dynamic tsObject)
+        {
+            return new Material(tsObject);
+        }
+    }
+
 
 }
     

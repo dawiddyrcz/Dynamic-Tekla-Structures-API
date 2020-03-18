@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic unknownloftedplateerrorexception;
+        internal dynamic unknownloftedplateerrorexception;
         
         public UnknownLoftedPlateErrorException()
         {
             this.unknownloftedplateerrorexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UnknownLoftedPlateErrorException");
         }
 
-        public UnknownLoftedPlateErrorException(dynamic tsObject)
+        internal UnknownLoftedPlateErrorException(dynamic tsObject)
         {
             this.unknownloftedplateerrorexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => unknownloftedplateerrorexception;
 
 		public System.Exception GetBaseException()
 			 => unknownloftedplateerrorexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class UnknownLoftedPlateErrorException_
+    {
+        public static dynamic GetTSObject(UnknownLoftedPlateErrorException dynObject)
+        {
+            return dynObject.unknownloftedplateerrorexception;
+        }
+
+        public static UnknownLoftedPlateErrorException FromTSObject(dynamic tsObject)
+        {
+            return new UnknownLoftedPlateErrorException(tsObject);
+        }
+    }
+
 
 }
     

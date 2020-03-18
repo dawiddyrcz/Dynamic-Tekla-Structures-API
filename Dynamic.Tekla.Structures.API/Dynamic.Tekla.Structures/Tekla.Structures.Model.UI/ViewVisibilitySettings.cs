@@ -171,25 +171,37 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic viewvisibilitysettings;
+        internal dynamic viewvisibilitysettings;
         
         public ViewVisibilitySettings()
         {
             this.viewvisibilitysettings =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewVisibilitySettings");
         }
 
-        public ViewVisibilitySettings(dynamic tsObject)
+        internal ViewVisibilitySettings(dynamic tsObject)
         {
             this.viewvisibilitysettings = tsObject;
         }
-
-        internal dynamic GetTSObject() => viewvisibilitysettings;
 
 
 
 
 
     }
+
+    internal static class ViewVisibilitySettings_
+    {
+        public static dynamic GetTSObject(ViewVisibilitySettings dynObject)
+        {
+            return dynObject.viewvisibilitysettings;
+        }
+
+        public static ViewVisibilitySettings FromTSObject(dynamic tsObject)
+        {
+            return new ViewVisibilitySettings(tsObject);
+        }
+    }
+
 
 }
     

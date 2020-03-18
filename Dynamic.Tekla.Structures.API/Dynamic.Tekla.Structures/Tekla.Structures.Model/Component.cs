@@ -33,34 +33,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(component.Identifier);
-			set { component.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(component.Identifier);
+			set { component.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic component;
+        internal dynamic component;
         
         public Component()
         {
             this.component =  TSActivator.CreateInstance("Tekla.Structures.Model.Component");
         }
 
-        public Component(dynamic tsObject)
+        internal Component(dynamic tsObject)
         {
             this.component = tsObject;
         }
 
-        internal dynamic GetTSObject() => component;
-
 		public System.Boolean SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput I)
-			 => component.SetComponentInput(I.GetTSObject());
+			 => component.SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I));
 
 		public Dynamic.Tekla.Structures.Model.ComponentInput GetComponentInput()
-			 => new Dynamic.Tekla.Structures.Model.ComponentInput(component.GetComponentInput());
+			 => Dynamic.Tekla.Structures.Model.ComponentInput_.FromTSObject(component.GetComponentInput());
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(component.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(component.GetAssembly());
 
 		public System.Boolean Insert()
 			 => component.Insert();
@@ -75,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => component.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(component.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(component.GetComponents());
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 			 => component.SetAttribute(AttrName, StrValue);
@@ -99,13 +97,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => component.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(component.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(component.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(component.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(component.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(component.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(component.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => component.GetAllUserProperties(values);
@@ -165,13 +163,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => component.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(component.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(component.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => component.SetPhase(phase.GetTSObject());
+			 => component.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => component.GetPhase(phase.GetTSObject());
+			 => component.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => component.SetLabel(label);
@@ -184,6 +182,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Component_
+    {
+        public static dynamic GetTSObject(Component dynObject)
+        {
+            return dynObject.component;
+        }
+
+        public static Component FromTSObject(dynamic tsObject)
+        {
+            return new Component(tsObject);
+        }
+    }
+
 
 }
     

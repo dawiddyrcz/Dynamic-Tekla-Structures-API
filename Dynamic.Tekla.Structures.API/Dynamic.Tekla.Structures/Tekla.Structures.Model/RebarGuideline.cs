@@ -15,37 +15,49 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(rebarguideline.Curve);
-			set { rebarguideline.Curve = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarguideline.Curve);
+			set { rebarguideline.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing Spacing
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarSpacing(rebarguideline.Spacing);
-			set { rebarguideline.Spacing = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(rebarguideline.Spacing);
+			set { rebarguideline.Spacing = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarguideline;
+        internal dynamic rebarguideline;
         
         public RebarGuideline()
         {
             this.rebarguideline =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGuideline");
         }
 
-        public RebarGuideline(dynamic tsObject)
+        internal RebarGuideline(dynamic tsObject)
         {
             this.rebarguideline = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarguideline;
 
 
 
 
 
     }
+
+    internal static class RebarGuideline_
+    {
+        public static dynamic GetTSObject(RebarGuideline dynObject)
+        {
+            return dynObject.rebarguideline;
+        }
+
+        public static RebarGuideline FromTSObject(dynamic tsObject)
+        {
+            return new RebarGuideline(tsObject);
+        }
+    }
+
 
 }
     

@@ -27,19 +27,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic phasecollection;
+        internal dynamic phasecollection;
         
         public PhaseCollection()
         {
             this.phasecollection =  TSActivator.CreateInstance("Tekla.Structures.Model.PhaseCollection");
         }
 
-        public PhaseCollection(dynamic tsObject)
+        internal PhaseCollection(dynamic tsObject)
         {
             this.phasecollection = tsObject;
         }
-
-        internal dynamic GetTSObject() => phasecollection;
 
 		public void CopyTo(System.Array Array, System.Int32 Index)
 			 => phasecollection.CopyTo(Array, Index);
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class PhaseCollection_
+    {
+        public static dynamic GetTSObject(PhaseCollection dynObject)
+        {
+            return dynObject.phasecollection;
+        }
+
+        public static PhaseCollection FromTSObject(dynamic tsObject)
+        {
+            return new PhaseCollection(tsObject);
+        }
+    }
+
 
 }
     

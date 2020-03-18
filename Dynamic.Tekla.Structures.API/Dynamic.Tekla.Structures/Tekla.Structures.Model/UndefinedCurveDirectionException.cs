@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic undefinedcurvedirectionexception;
+        internal dynamic undefinedcurvedirectionexception;
         
         public UndefinedCurveDirectionException()
         {
             this.undefinedcurvedirectionexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UndefinedCurveDirectionException");
         }
 
-        public UndefinedCurveDirectionException(dynamic tsObject)
+        internal UndefinedCurveDirectionException(dynamic tsObject)
         {
             this.undefinedcurvedirectionexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => undefinedcurvedirectionexception;
 
 		public System.Exception GetBaseException()
 			 => undefinedcurvedirectionexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class UndefinedCurveDirectionException_
+    {
+        public static dynamic GetTSObject(UndefinedCurveDirectionException dynObject)
+        {
+            return dynObject.undefinedcurvedirectionexception;
+        }
+
+        public static UndefinedCurveDirectionException FromTSObject(dynamic tsObject)
+        {
+            return new UndefinedCurveDirectionException(tsObject);
+        }
+    }
+
 
 }
     

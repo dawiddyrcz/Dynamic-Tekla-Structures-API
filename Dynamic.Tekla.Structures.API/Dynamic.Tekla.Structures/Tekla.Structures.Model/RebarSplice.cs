@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement RebarGroup1
 		{
-			get => new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup1);
-			set { rebarsplice.RebarGroup1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(rebarsplice.RebarGroup1);
+			set { rebarsplice.RebarGroup1 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement RebarGroup2
 		{
-			get => new Dynamic.Tekla.Structures.Model.Reinforcement(rebarsplice.RebarGroup2);
-			set { rebarsplice.RebarGroup2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(rebarsplice.RebarGroup2);
+			set { rebarsplice.RebarGroup2 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(rebarsplice.Type);
-			set { rebarsplice.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(value); }
+			set { rebarsplice.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double LapLength
@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum BarPositions
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(rebarsplice.BarPositions);
-			set { rebarsplice.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(value); }
+			set { rebarsplice.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -63,25 +63,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarsplice.Identifier);
-			set { rebarsplice.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarsplice.Identifier);
+			set { rebarsplice.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarsplice;
+        internal dynamic rebarsplice;
         
         public RebarSplice()
         {
             this.rebarsplice =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplice");
         }
 
-        public RebarSplice(dynamic tsObject)
+        internal RebarSplice(dynamic tsObject)
         {
             this.rebarsplice = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarsplice;
 
 		public System.Boolean Insert()
 			 => rebarsplice.Insert();
@@ -96,13 +94,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsplice.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplice.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplice.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarsplice.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarsplice.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarsplice.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplice.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarsplice.GetAllUserProperties(values);
@@ -162,13 +160,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarsplice.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarsplice.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarsplice.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplice.SetPhase(phase.GetTSObject());
+			 => rebarsplice.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplice.GetPhase(phase.GetTSObject());
+			 => rebarsplice.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarsplice.SetLabel(label);
@@ -179,54 +177,117 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct RebarSpliceTypeEnum
+    public enum RebarSpliceTypeEnum
     {
-       
+			SPLICE_TYPE_LAP_RIGHT,
+			SPLICE_TYPE_LAP_LEFT,
+			SPLICE_TYPE_LAP_BOTH,
+			SPLICE_TYPE_MUFF,
+			SPLICE_TYPE_WELD        
     }
 
     internal static class RebarSpliceTypeEnum_
     {
-        public static dynamic GetTSObject(RebarSpliceTypeEnum dynStruct)
+        public static dynamic GetTSObject(RebarSpliceTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_RIGHT:
+					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_RIGHT");
+				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_LEFT:
+					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_LEFT");
+				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_BOTH:
+					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_BOTH");
+				case RebarSpliceTypeEnum.SPLICE_TYPE_MUFF:
+					return System.Enum.Parse(tsType, "SPLICE_TYPE_MUFF");
+				case RebarSpliceTypeEnum.SPLICE_TYPE_WELD:
+					return System.Enum.Parse(tsType, "SPLICE_TYPE_WELD");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RebarSpliceTypeEnum FromTSObject(dynamic tsStruct)
+        public static RebarSpliceTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RebarSpliceTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("SPLICE_TYPE_LAP_RIGHT", System.StringComparison.InvariantCulture))
+				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_RIGHT;
+			else if (tsEnumValue.Equals("SPLICE_TYPE_LAP_LEFT", System.StringComparison.InvariantCulture))
+				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_LEFT;
+			else if (tsEnumValue.Equals("SPLICE_TYPE_LAP_BOTH", System.StringComparison.InvariantCulture))
+				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_BOTH;
+			else if (tsEnumValue.Equals("SPLICE_TYPE_MUFF", System.StringComparison.InvariantCulture))
+				return RebarSpliceTypeEnum.SPLICE_TYPE_MUFF;
+			else if (tsEnumValue.Equals("SPLICE_TYPE_WELD", System.StringComparison.InvariantCulture))
+				return RebarSpliceTypeEnum.SPLICE_TYPE_WELD;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct RebarSpliceBarPositionsEnum
+    public enum RebarSpliceBarPositionsEnum
     {
-       
+			SPLICE_BAR_ON_TOP,
+			SPLICE_BAR_PARALLEL        
     }
 
     internal static class RebarSpliceBarPositionsEnum_
     {
-        public static dynamic GetTSObject(RebarSpliceBarPositionsEnum dynStruct)
+        public static dynamic GetTSObject(RebarSpliceBarPositionsEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceBarPositionsEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RebarSpliceBarPositionsEnum.SPLICE_BAR_ON_TOP:
+					return System.Enum.Parse(tsType, "SPLICE_BAR_ON_TOP");
+				case RebarSpliceBarPositionsEnum.SPLICE_BAR_PARALLEL:
+					return System.Enum.Parse(tsType, "SPLICE_BAR_PARALLEL");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RebarSpliceBarPositionsEnum FromTSObject(dynamic tsStruct)
+        public static RebarSpliceBarPositionsEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RebarSpliceBarPositionsEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("SPLICE_BAR_ON_TOP", System.StringComparison.InvariantCulture))
+				return RebarSpliceBarPositionsEnum.SPLICE_BAR_ON_TOP;
+			else if (tsEnumValue.Equals("SPLICE_BAR_PARALLEL", System.StringComparison.InvariantCulture))
+				return RebarSpliceBarPositionsEnum.SPLICE_BAR_PARALLEL;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarSplice_
+    {
+        public static dynamic GetTSObject(RebarSplice dynObject)
+        {
+            return dynObject.rebarsplice;
+        }
+
+        public static RebarSplice FromTSObject(dynamic tsObject)
+        {
+            return new RebarSplice(tsObject);
+        }
+    }
+
 
 }
     

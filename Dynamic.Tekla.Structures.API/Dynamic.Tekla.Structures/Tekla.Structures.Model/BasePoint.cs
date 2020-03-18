@@ -117,19 +117,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic basepoint;
+        internal dynamic basepoint;
         
         public BasePoint()
         {
             this.basepoint =  TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint");
         }
 
-        public BasePoint(dynamic tsObject)
+        internal BasePoint(dynamic tsObject)
         {
             this.basepoint = tsObject;
         }
-
-        internal dynamic GetTSObject() => basepoint;
 
 		public System.Boolean Insert()
 			 => basepoint.Insert();
@@ -141,7 +139,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => basepoint.Delete();
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType)
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(basepoint.GetCoordinateSystem(CoordsysType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(basepoint.GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType_.GetTSObject(CoordsysType)));
 
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
 			 => basepoint.GetCompoundPlaneAngleLatitude();
@@ -150,45 +148,76 @@ namespace Dynamic.Tekla.Structures.Model
 			 => basepoint.GetCompoundPlaneAngleLongitude();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(basepoint.ConvertToBasePoint(point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(basepoint.ConvertFromBasePoint(point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(basepoint.ConvertToBasePoint(basePoint.GetTSObject(), point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(basepoint.ConvertFromBasePoint(basePoint.GetTSObject(), point.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 
 
 
-    public struct CoordinateSystemType
+    public enum CoordinateSystemType
     {
-       
+			GLOBAL,
+			WORKPLANE        
     }
 
     internal static class CoordinateSystemType_
     {
-        public static dynamic GetTSObject(CoordinateSystemType dynStruct)
+        public static dynamic GetTSObject(CoordinateSystemType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CoordinateSystemType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case CoordinateSystemType.GLOBAL:
+					return System.Enum.Parse(tsType, "GLOBAL");
+				case CoordinateSystemType.WORKPLANE:
+					return System.Enum.Parse(tsType, "WORKPLANE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static CoordinateSystemType FromTSObject(dynamic tsStruct)
+        public static CoordinateSystemType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new CoordinateSystemType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("GLOBAL", System.StringComparison.InvariantCulture))
+				return CoordinateSystemType.GLOBAL;
+			else if (tsEnumValue.Equals("WORKPLANE", System.StringComparison.InvariantCulture))
+				return CoordinateSystemType.WORKPLANE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class BasePoint_
+    {
+        public static dynamic GetTSObject(BasePoint dynObject)
+        {
+            return dynObject.basepoint;
+        }
+
+        public static BasePoint FromTSObject(dynamic tsObject)
+        {
+            return new BasePoint(tsObject);
+        }
+    }
+
 
 }
     

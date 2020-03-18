@@ -27,22 +27,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic mesh;
+        internal dynamic mesh;
         
         public Mesh()
         {
             this.mesh =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.Mesh");
         }
 
-        public Mesh(dynamic tsObject)
+        internal Mesh(dynamic tsObject)
         {
             this.mesh = tsObject;
         }
 
-        internal dynamic GetTSObject() => mesh;
-
 		public System.Int32 AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point)
-			 => mesh.AddPoint(Point.GetTSObject());
+			 => mesh.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
 
 		public void AddTriangle(System.Int32 Index1, System.Int32 Index2, System.Int32 Index3)
 			 => mesh.AddTriangle(Index1, Index2, Index3);
@@ -55,6 +53,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class Mesh_
+    {
+        public static dynamic GetTSObject(Mesh dynObject)
+        {
+            return dynObject.mesh;
+        }
+
+        public static Mesh FromTSObject(dynamic tsObject)
+        {
+            return new Mesh(tsObject);
+        }
+    }
+
 
 }
     

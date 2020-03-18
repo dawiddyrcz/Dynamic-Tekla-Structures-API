@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normals
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(facetedbrepwithnormals.Normals);
-			set { facetedbrepwithnormals.Normals = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(facetedbrepwithnormals.Normals);
+			set { facetedbrepwithnormals.Normals = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
@@ -45,19 +45,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic facetedbrepwithnormals;
+        internal dynamic facetedbrepwithnormals;
         
         public FacetedBrepWithNormals()
         {
             this.facetedbrepwithnormals =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals");
         }
 
-        public FacetedBrepWithNormals(dynamic tsObject)
+        internal FacetedBrepWithNormals(dynamic tsObject)
         {
             this.facetedbrepwithnormals = tsObject;
         }
-
-        internal dynamic GetTSObject() => facetedbrepwithnormals;
 
 		public System.Boolean CheckForTwoManifold()
 			 => facetedbrepwithnormals.CheckForTwoManifold();
@@ -76,6 +74,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
     }
+
+    internal static class FacetedBrepWithNormals_
+    {
+        public static dynamic GetTSObject(FacetedBrepWithNormals dynObject)
+        {
+            return dynObject.facetedbrepwithnormals;
+        }
+
+        public static FacetedBrepWithNormals FromTSObject(dynamic tsObject)
+        {
+            return new FacetedBrepWithNormals(tsObject);
+        }
+    }
+
 
 }
     

@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic plateintersectswithintersectionlineexception;
+        internal dynamic plateintersectswithintersectionlineexception;
         
         public PlateIntersectsWithIntersectionLineException()
         {
             this.plateintersectswithintersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.PlateIntersectsWithIntersectionLineException");
         }
 
-        public PlateIntersectsWithIntersectionLineException(dynamic tsObject)
+        internal PlateIntersectsWithIntersectionLineException(dynamic tsObject)
         {
             this.plateintersectswithintersectionlineexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => plateintersectswithintersectionlineexception;
 
 		public System.Exception GetBaseException()
 			 => plateintersectswithintersectionlineexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class PlateIntersectsWithIntersectionLineException_
+    {
+        public static dynamic GetTSObject(PlateIntersectsWithIntersectionLineException dynObject)
+        {
+            return dynObject.plateintersectswithintersectionlineexception;
+        }
+
+        public static PlateIntersectsWithIntersectionLineException FromTSObject(dynamic tsObject)
+        {
+            return new PlateIntersectsWithIntersectionLineException(tsObject);
+        }
+    }
+
 
 }
     

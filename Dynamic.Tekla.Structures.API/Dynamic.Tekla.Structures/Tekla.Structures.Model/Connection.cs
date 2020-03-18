@@ -15,20 +15,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(connection.UpVector);
-			set { connection.UpVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(connection.UpVector);
+			set { connection.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
 		{
 			get => Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(connection.AutoDirectionType);
-			set { connection.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(value); }
+			set { connection.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.PositionTypeEnum PositionType
 		{
 			get => Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(connection.PositionType);
-			set { connection.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(value); }
+			set { connection.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.String Code
@@ -40,7 +40,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
 		{
 			get => Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(connection.Status);
-			set { connection.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(value); }
+			set { connection.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -69,34 +69,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(connection.Identifier);
-			set { connection.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(connection.Identifier);
+			set { connection.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic connection;
+        internal dynamic connection;
         
         public Connection()
         {
             this.connection =  TSActivator.CreateInstance("Tekla.Structures.Model.Connection");
         }
 
-        public Connection(dynamic tsObject)
+        internal Connection(dynamic tsObject)
         {
             this.connection = tsObject;
         }
 
-        internal dynamic GetTSObject() => connection;
-
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => connection.SetPrimaryObject(M.GetTSObject());
+			 => connection.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(connection.GetPrimaryObject());
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(connection.GetPrimaryObject());
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => connection.SetSecondaryObject(M.GetTSObject());
+			 => connection.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
 			 => connection.SetSecondaryObjects(Secondaries);
@@ -138,13 +136,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => connection.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(connection.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(connection.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(connection.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(connection.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(connection.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(connection.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => connection.GetAllUserProperties(values);
@@ -204,13 +202,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => connection.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(connection.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(connection.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => connection.SetPhase(phase.GetTSObject());
+			 => connection.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => connection.GetPhase(phase.GetTSObject());
+			 => connection.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => connection.SetLabel(label);
@@ -223,6 +221,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Connection_
+    {
+        public static dynamic GetTSObject(Connection dynObject)
+        {
+            return dynObject.connection;
+        }
+
+        public static Connection FromTSObject(dynamic tsObject)
+        {
+            return new Connection(tsObject);
+        }
+    }
+
 
 }
     

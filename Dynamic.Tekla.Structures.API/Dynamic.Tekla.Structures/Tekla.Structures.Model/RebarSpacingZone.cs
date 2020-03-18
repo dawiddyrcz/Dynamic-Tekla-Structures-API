@@ -28,88 +28,134 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum NumberOfSpacesType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.NumberOfSpacesType);
-			set { rebarspacingzone.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value); }
+			set { rebarspacingzone.NumberOfSpacesType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum SpacingType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(rebarspacingzone.SpacingType);
-			set { rebarspacingzone.SpacingType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value); }
+			set { rebarspacingzone.SpacingType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum LengthType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(rebarspacingzone.LengthType);
-			set { rebarspacingzone.LengthType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(value); }
+			set { rebarspacingzone.LengthType = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarspacingzone;
+        internal dynamic rebarspacingzone;
         
         public RebarSpacingZone()
         {
             this.rebarspacingzone =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacingZone");
         }
 
-        public RebarSpacingZone(dynamic tsObject)
+        internal RebarSpacingZone(dynamic tsObject)
         {
             this.rebarspacingzone = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarspacingzone;
 
 
 
-
-    public struct LengthEnum
+    public enum LengthEnum
     {
-       
+			ABSOLUTE,
+			RELATIVE        
     }
 
     internal static class LengthEnum_
     {
-        public static dynamic GetTSObject(LengthEnum dynStruct)
+        public static dynamic GetTSObject(LengthEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LengthEnum.ABSOLUTE:
+					return System.Enum.Parse(tsType, "ABSOLUTE");
+				case LengthEnum.RELATIVE:
+					return System.Enum.Parse(tsType, "RELATIVE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LengthEnum FromTSObject(dynamic tsStruct)
+        public static LengthEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LengthEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("ABSOLUTE", System.StringComparison.InvariantCulture))
+				return LengthEnum.ABSOLUTE;
+			else if (tsEnumValue.Equals("RELATIVE", System.StringComparison.InvariantCulture))
+				return LengthEnum.RELATIVE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct SpacingEnum
+    public enum SpacingEnum
     {
-       
+			EXACT,
+			TARGET        
     }
 
     internal static class SpacingEnum_
     {
-        public static dynamic GetTSObject(SpacingEnum dynStruct)
+        public static dynamic GetTSObject(SpacingEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SpacingEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case SpacingEnum.EXACT:
+					return System.Enum.Parse(tsType, "EXACT");
+				case SpacingEnum.TARGET:
+					return System.Enum.Parse(tsType, "TARGET");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static SpacingEnum FromTSObject(dynamic tsStruct)
+        public static SpacingEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new SpacingEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("EXACT", System.StringComparison.InvariantCulture))
+				return SpacingEnum.EXACT;
+			else if (tsEnumValue.Equals("TARGET", System.StringComparison.InvariantCulture))
+				return SpacingEnum.TARGET;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarSpacingZone_
+    {
+        public static dynamic GetTSObject(RebarSpacingZone dynObject)
+        {
+            return dynObject.rebarspacingzone;
+        }
+
+        public static RebarSpacingZone FromTSObject(dynamic tsObject)
+        {
+            return new RebarSpacingZone(tsObject);
+        }
+    }
+
 
 }
     

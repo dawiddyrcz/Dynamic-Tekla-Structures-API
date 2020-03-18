@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic assertion;
+        internal dynamic assertion;
         
         public Assertion()
         {
             this.assertion =  TSActivator.CreateInstance("Tekla.Structures.Assertion");
         }
 
-        public Assertion(dynamic tsObject)
+        internal Assertion(dynamic tsObject)
         {
             this.assertion = tsObject;
         }
-
-        internal dynamic GetTSObject() => assertion;
 
 
 
 
 
     }
+
+    internal static class Assertion_
+    {
+        public static dynamic GetTSObject(Assertion dynObject)
+        {
+            return dynObject.assertion;
+        }
+
+        public static Assertion FromTSObject(dynamic tsObject)
+        {
+            return new Assertion(tsObject);
+        }
+    }
+
 
 }
     

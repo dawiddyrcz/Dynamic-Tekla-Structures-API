@@ -10,49 +10,49 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
-			set { surfacetreatment.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(value); }
+			set { surfacetreatment.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum Color
 		{
 			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
-			set { surfacetreatment.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(value); }
+			set { surfacetreatment.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(surfacetreatment.Material);
-			set { surfacetreatment.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(surfacetreatment.Material);
+			set { surfacetreatment.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(surfacetreatment.Position);
-			set { surfacetreatment.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(surfacetreatment.Position);
+			set { surfacetreatment.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Polygon
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(surfacetreatment.Polygon);
-			set { surfacetreatment.Polygon = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(surfacetreatment.Polygon);
+			set { surfacetreatment.Polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(surfacetreatment.StartPoint);
-			set { surfacetreatment.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(surfacetreatment.StartPoint);
+			set { surfacetreatment.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(surfacetreatment.EndPoint);
-			set { surfacetreatment.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(surfacetreatment.EndPoint);
+			set { surfacetreatment.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(surfacetreatment.Father);
-			set { surfacetreatment.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(surfacetreatment.Father);
+			set { surfacetreatment.Father = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public System.Double Thickness
@@ -99,25 +99,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(surfacetreatment.Identifier);
-			set { surfacetreatment.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(surfacetreatment.Identifier);
+			set { surfacetreatment.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic surfacetreatment;
+        internal dynamic surfacetreatment;
         
         public SurfaceTreatment()
         {
             this.surfacetreatment =  TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTreatment");
         }
 
-        public SurfaceTreatment(dynamic tsObject)
+        internal SurfaceTreatment(dynamic tsObject)
         {
             this.surfacetreatment = tsObject;
         }
-
-        internal dynamic GetTSObject() => surfacetreatment;
 
 		public System.Boolean Insert()
 			 => surfacetreatment.Insert();
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => surfacetreatment.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(surfacetreatment.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfacetreatment.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(surfacetreatment.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(surfacetreatment.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(surfacetreatment.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfacetreatment.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => surfacetreatment.GetAllUserProperties(values);
@@ -198,13 +196,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => surfacetreatment.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(surfacetreatment.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(surfacetreatment.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfacetreatment.SetPhase(phase.GetTSObject());
+			 => surfacetreatment.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfacetreatment.GetPhase(phase.GetTSObject());
+			 => surfacetreatment.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => surfacetreatment.SetLabel(label);
@@ -215,54 +213,137 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct SurfaceTypeEnum
+    public enum SurfaceTypeEnum
     {
-       
+			CONCRETE_FINISH,
+			SPECIAL_MIX,
+			TILE_SURFACE,
+			STEEL_FINISH        
     }
 
     internal static class SurfaceTypeEnum_
     {
-        public static dynamic GetTSObject(SurfaceTypeEnum dynStruct)
+        public static dynamic GetTSObject(SurfaceTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case SurfaceTypeEnum.CONCRETE_FINISH:
+					return System.Enum.Parse(tsType, "CONCRETE_FINISH");
+				case SurfaceTypeEnum.SPECIAL_MIX:
+					return System.Enum.Parse(tsType, "SPECIAL_MIX");
+				case SurfaceTypeEnum.TILE_SURFACE:
+					return System.Enum.Parse(tsType, "TILE_SURFACE");
+				case SurfaceTypeEnum.STEEL_FINISH:
+					return System.Enum.Parse(tsType, "STEEL_FINISH");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static SurfaceTypeEnum FromTSObject(dynamic tsStruct)
+        public static SurfaceTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new SurfaceTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("CONCRETE_FINISH", System.StringComparison.InvariantCulture))
+				return SurfaceTypeEnum.CONCRETE_FINISH;
+			else if (tsEnumValue.Equals("SPECIAL_MIX", System.StringComparison.InvariantCulture))
+				return SurfaceTypeEnum.SPECIAL_MIX;
+			else if (tsEnumValue.Equals("TILE_SURFACE", System.StringComparison.InvariantCulture))
+				return SurfaceTypeEnum.TILE_SURFACE;
+			else if (tsEnumValue.Equals("STEEL_FINISH", System.StringComparison.InvariantCulture))
+				return SurfaceTypeEnum.STEEL_FINISH;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct SurfaceColorEnum
+    public enum SurfaceColorEnum
     {
-       
+			WHITE,
+			RED,
+			GREEN,
+			BLUE,
+			CYAN,
+			YELLOW,
+			MAGENTA        
     }
 
     internal static class SurfaceColorEnum_
     {
-        public static dynamic GetTSObject(SurfaceColorEnum dynStruct)
+        public static dynamic GetTSObject(SurfaceColorEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceColorEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case SurfaceColorEnum.WHITE:
+					return System.Enum.Parse(tsType, "WHITE");
+				case SurfaceColorEnum.RED:
+					return System.Enum.Parse(tsType, "RED");
+				case SurfaceColorEnum.GREEN:
+					return System.Enum.Parse(tsType, "GREEN");
+				case SurfaceColorEnum.BLUE:
+					return System.Enum.Parse(tsType, "BLUE");
+				case SurfaceColorEnum.CYAN:
+					return System.Enum.Parse(tsType, "CYAN");
+				case SurfaceColorEnum.YELLOW:
+					return System.Enum.Parse(tsType, "YELLOW");
+				case SurfaceColorEnum.MAGENTA:
+					return System.Enum.Parse(tsType, "MAGENTA");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static SurfaceColorEnum FromTSObject(dynamic tsStruct)
+        public static SurfaceColorEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new SurfaceColorEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.WHITE;
+			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.RED;
+			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.GREEN;
+			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.BLUE;
+			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.CYAN;
+			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.YELLOW;
+			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
+				return SurfaceColorEnum.MAGENTA;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class SurfaceTreatment_
+    {
+        public static dynamic GetTSObject(SurfaceTreatment dynObject)
+        {
+            return dynObject.surfacetreatment;
+        }
+
+        public static SurfaceTreatment FromTSObject(dynamic tsObject)
+        {
+            return new SurfaceTreatment(tsObject);
+        }
+    }
+
 
 }
     

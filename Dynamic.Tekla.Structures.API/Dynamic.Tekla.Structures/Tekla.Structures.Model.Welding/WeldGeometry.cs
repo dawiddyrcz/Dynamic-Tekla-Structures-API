@@ -10,7 +10,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 		public Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum Position
 		{
 			get => Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(weldgeometry.Position);
-			set { weldgeometry.Position = Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(value); }
+			set { weldgeometry.Position = Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList Polygons
@@ -21,25 +21,37 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 
         
 
-        dynamic weldgeometry;
+        internal dynamic weldgeometry;
         
         public WeldGeometry()
         {
             this.weldgeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.Welding.WeldGeometry");
         }
 
-        public WeldGeometry(dynamic tsObject)
+        internal WeldGeometry(dynamic tsObject)
         {
             this.weldgeometry = tsObject;
         }
-
-        internal dynamic GetTSObject() => weldgeometry;
 
 
 
 
 
     }
+
+    internal static class WeldGeometry_
+    {
+        public static dynamic GetTSObject(WeldGeometry dynObject)
+        {
+            return dynObject.weldgeometry;
+        }
+
+        public static WeldGeometry FromTSObject(dynamic tsObject)
+        {
+            return new WeldGeometry(tsObject);
+        }
+    }
+
 
 }
     

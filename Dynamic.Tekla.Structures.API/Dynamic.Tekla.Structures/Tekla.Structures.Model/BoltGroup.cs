@@ -22,13 +22,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum BoltType
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltgroup.BoltType);
-			set { boltgroup.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(value); }
+			set { boltgroup.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum ThreadInMaterial
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltgroup.ThreadInMaterial);
-			set { boltgroup.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(value); }
+			set { boltgroup.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.GetTSObject(value); }
 		}
 
 		public System.Double Length
@@ -58,7 +58,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum HoleType
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltgroup.HoleType);
-			set { boltgroup.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(value); }
+			set { boltgroup.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double SlottedHoleX
@@ -76,25 +76,25 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum RotateSlots
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltgroup.RotateSlots);
-			set { boltgroup.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(value); }
+			set { boltgroup.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(boltgroup.Position);
-			set { boltgroup.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(boltgroup.Position);
+			set { boltgroup.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Offset StartPointOffset
 		{
-			get => new Dynamic.Tekla.Structures.Model.Offset(boltgroup.StartPointOffset);
-			set { boltgroup.StartPointOffset = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(boltgroup.StartPointOffset);
+			set { boltgroup.StartPointOffset = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Offset EndPointOffset
 		{
-			get => new Dynamic.Tekla.Structures.Model.Offset(boltgroup.EndPointOffset);
-			set { boltgroup.EndPointOffset = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(boltgroup.EndPointOffset);
+			set { boltgroup.EndPointOffset = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value); }
 		}
 
 		public System.Boolean Washer1
@@ -165,14 +165,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Part PartToBoltTo
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(boltgroup.PartToBoltTo);
-			set { boltgroup.PartToBoltTo = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(boltgroup.PartToBoltTo);
+			set { boltgroup.PartToBoltTo = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part PartToBeBolted
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(boltgroup.PartToBeBolted);
-			set { boltgroup.PartToBeBolted = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(boltgroup.PartToBeBolted);
+			set { boltgroup.PartToBeBolted = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OtherPartsToBolt
@@ -183,14 +183,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(boltgroup.FirstPosition);
-			set { boltgroup.FirstPosition = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(boltgroup.FirstPosition);
+			set { boltgroup.FirstPosition = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point SecondPosition
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(boltgroup.SecondPosition);
-			set { boltgroup.SecondPosition = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(boltgroup.SecondPosition);
+			set { boltgroup.SecondPosition = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Boolean ConnectAssemblies
@@ -219,46 +219,44 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(boltgroup.Identifier);
-			set { boltgroup.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(boltgroup.Identifier);
+			set { boltgroup.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic boltgroup;
+        internal dynamic boltgroup;
         
         private BoltGroup()
         {
             this.boltgroup =  TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup");
         }
 
-        public BoltGroup(dynamic tsObject)
+        internal BoltGroup(dynamic tsObject)
         {
             this.boltgroup = tsObject;
         }
 
-        internal dynamic GetTSObject() => boltgroup;
-
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
-			 => boltgroup.AddOtherPartToBolt(M.GetTSObject());
+			 => boltgroup.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
 
 		public System.Boolean RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
-			 => boltgroup.RemoveOtherPartToBolt(M.GetTSObject());
+			 => boltgroup.RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
 
 		public System.Collections.ArrayList GetOtherPartsToBolt()
 			 => boltgroup.GetOtherPartsToBolt();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(boltgroup.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(boltgroup.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(System.Boolean withHighAccuracy)
-			 => new Dynamic.Tekla.Structures.Model.Solid(boltgroup.GetSolid(withHighAccuracy));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(boltgroup.GetSolid(withHighAccuracy));
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(boltgroup.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(boltgroup.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(boltgroup.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(boltgroup.GetFatherPourUnit());
 
 		public System.Boolean Insert()
 			 => boltgroup.Insert();
@@ -273,13 +271,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boltgroup.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boltgroup.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boltgroup.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(boltgroup.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(boltgroup.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boltgroup.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boltgroup.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => boltgroup.GetAllUserProperties(values);
@@ -339,13 +337,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boltgroup.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(boltgroup.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(boltgroup.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boltgroup.SetPhase(phase.GetTSObject());
+			 => boltgroup.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boltgroup.GetPhase(phase.GetTSObject());
+			 => boltgroup.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => boltgroup.SetLabel(label);
@@ -356,100 +354,192 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct BoltTypeEnum
+    public enum BoltTypeEnum
     {
-       
+			BOLT_TYPE_SITE,
+			BOLT_TYPE_WORKSHOP        
     }
 
     internal static class BoltTypeEnum_
     {
-        public static dynamic GetTSObject(BoltTypeEnum dynStruct)
+        public static dynamic GetTSObject(BoltTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BoltTypeEnum.BOLT_TYPE_SITE:
+					return System.Enum.Parse(tsType, "BOLT_TYPE_SITE");
+				case BoltTypeEnum.BOLT_TYPE_WORKSHOP:
+					return System.Enum.Parse(tsType, "BOLT_TYPE_WORKSHOP");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BoltTypeEnum FromTSObject(dynamic tsStruct)
+        public static BoltTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BoltTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BOLT_TYPE_SITE", System.StringComparison.InvariantCulture))
+				return BoltTypeEnum.BOLT_TYPE_SITE;
+			else if (tsEnumValue.Equals("BOLT_TYPE_WORKSHOP", System.StringComparison.InvariantCulture))
+				return BoltTypeEnum.BOLT_TYPE_WORKSHOP;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct BoltThreadInMaterialEnum
+    public enum BoltThreadInMaterialEnum
     {
-       
+			THREAD_IN_MATERIAL_NO,
+			THREAD_IN_MATERIAL_YES        
     }
 
     internal static class BoltThreadInMaterialEnum_
     {
-        public static dynamic GetTSObject(BoltThreadInMaterialEnum dynStruct)
+        public static dynamic GetTSObject(BoltThreadInMaterialEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltThreadInMaterialEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_NO:
+					return System.Enum.Parse(tsType, "THREAD_IN_MATERIAL_NO");
+				case BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_YES:
+					return System.Enum.Parse(tsType, "THREAD_IN_MATERIAL_YES");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BoltThreadInMaterialEnum FromTSObject(dynamic tsStruct)
+        public static BoltThreadInMaterialEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BoltThreadInMaterialEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("THREAD_IN_MATERIAL_NO", System.StringComparison.InvariantCulture))
+				return BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_NO;
+			else if (tsEnumValue.Equals("THREAD_IN_MATERIAL_YES", System.StringComparison.InvariantCulture))
+				return BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_YES;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct BoltHoleTypeEnum
+    public enum BoltHoleTypeEnum
     {
-       
+			HOLE_TYPE_OVERSIZED,
+			HOLE_TYPE_SLOTTED,
+			HOLE_TYPE_NO_HOLE        
     }
 
     internal static class BoltHoleTypeEnum_
     {
-        public static dynamic GetTSObject(BoltHoleTypeEnum dynStruct)
+        public static dynamic GetTSObject(BoltHoleTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltHoleTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BoltHoleTypeEnum.HOLE_TYPE_OVERSIZED:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_OVERSIZED");
+				case BoltHoleTypeEnum.HOLE_TYPE_SLOTTED:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_SLOTTED");
+				case BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_NO_HOLE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BoltHoleTypeEnum FromTSObject(dynamic tsStruct)
+        public static BoltHoleTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BoltHoleTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("HOLE_TYPE_OVERSIZED", System.StringComparison.InvariantCulture))
+				return BoltHoleTypeEnum.HOLE_TYPE_OVERSIZED;
+			else if (tsEnumValue.Equals("HOLE_TYPE_SLOTTED", System.StringComparison.InvariantCulture))
+				return BoltHoleTypeEnum.HOLE_TYPE_SLOTTED;
+			else if (tsEnumValue.Equals("HOLE_TYPE_NO_HOLE", System.StringComparison.InvariantCulture))
+				return BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct BoltRotateSlotsEnum
+    public enum BoltRotateSlotsEnum
     {
-       
+			ROTATE_SLOTS_ODD,
+			ROTATE_SLOTS_EVEN,
+			ROTATE_SLOTS_PARALLEL        
     }
 
     internal static class BoltRotateSlotsEnum_
     {
-        public static dynamic GetTSObject(BoltRotateSlotsEnum dynStruct)
+        public static dynamic GetTSObject(BoltRotateSlotsEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltRotateSlotsEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BoltRotateSlotsEnum.ROTATE_SLOTS_ODD:
+					return System.Enum.Parse(tsType, "ROTATE_SLOTS_ODD");
+				case BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN:
+					return System.Enum.Parse(tsType, "ROTATE_SLOTS_EVEN");
+				case BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL:
+					return System.Enum.Parse(tsType, "ROTATE_SLOTS_PARALLEL");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BoltRotateSlotsEnum FromTSObject(dynamic tsStruct)
+        public static BoltRotateSlotsEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BoltRotateSlotsEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("ROTATE_SLOTS_ODD", System.StringComparison.InvariantCulture))
+				return BoltRotateSlotsEnum.ROTATE_SLOTS_ODD;
+			else if (tsEnumValue.Equals("ROTATE_SLOTS_EVEN", System.StringComparison.InvariantCulture))
+				return BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN;
+			else if (tsEnumValue.Equals("ROTATE_SLOTS_PARALLEL", System.StringComparison.InvariantCulture))
+				return BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class BoltGroup_
+    {
+        public static dynamic GetTSObject(BoltGroup dynObject)
+        {
+            return dynObject.boltgroup;
+        }
+
+        public static BoltGroup FromTSObject(dynamic tsObject)
+        {
+            return new BoltGroup(tsObject);
+        }
+    }
+
 
 }
     

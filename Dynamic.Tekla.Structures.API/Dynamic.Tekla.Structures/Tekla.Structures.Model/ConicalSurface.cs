@@ -15,8 +15,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Apex
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(conicalsurface.Apex);
-			set { conicalsurface.Apex = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(conicalsurface.Apex);
+			set { conicalsurface.Apex = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Boolean InwardCurved
@@ -27,32 +27,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line IntersectionLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(conicalsurface.IntersectionLine);
-			set { conicalsurface.IntersectionLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(conicalsurface.IntersectionLine);
+			set { conicalsurface.IntersectionLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.EndFaceNormal1);
-			set { conicalsurface.EndFaceNormal1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.EndFaceNormal1);
+			set { conicalsurface.EndFaceNormal1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.EndFaceNormal2);
-			set { conicalsurface.EndFaceNormal2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.EndFaceNormal2);
+			set { conicalsurface.EndFaceNormal2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line CenterLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(conicalsurface.CenterLine);
-			set { conicalsurface.CenterLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(conicalsurface.CenterLine);
+			set { conicalsurface.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxis
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(conicalsurface.RotationAxis);
-			set { conicalsurface.RotationAxis = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.RotationAxis);
+			set { conicalsurface.RotationAxis = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
@@ -69,37 +69,49 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(conicalsurface.SideBoundary1);
-			set { conicalsurface.SideBoundary1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(conicalsurface.SideBoundary1);
+			set { conicalsurface.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(conicalsurface.SideBoundary2);
-			set { conicalsurface.SideBoundary2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(conicalsurface.SideBoundary2);
+			set { conicalsurface.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
         
 
-        dynamic conicalsurface;
+        internal dynamic conicalsurface;
         
         public ConicalSurface()
         {
             this.conicalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface");
         }
 
-        public ConicalSurface(dynamic tsObject)
+        internal ConicalSurface(dynamic tsObject)
         {
             this.conicalsurface = tsObject;
         }
-
-        internal dynamic GetTSObject() => conicalsurface;
 
 
 
 
 
     }
+
+    internal static class ConicalSurface_
+    {
+        public static dynamic GetTSObject(ConicalSurface dynObject)
+        {
+            return dynObject.conicalsurface;
+        }
+
+        public static ConicalSurface FromTSObject(dynamic tsObject)
+        {
+            return new ConicalSurface(tsObject);
+        }
+    }
+
 
 }
     

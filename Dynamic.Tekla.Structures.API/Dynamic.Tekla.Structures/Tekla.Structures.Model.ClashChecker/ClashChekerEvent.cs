@@ -9,22 +9,20 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         
 
-        dynamic clashchekerevent;
+        internal dynamic clashchekerevent;
         
         private ClashChekerEvent()
         {
             this.clashchekerevent =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashChecker.ClashChekerEvent");
         }
 
-        public ClashChekerEvent(dynamic tsObject)
+        internal ClashChekerEvent(dynamic tsObject)
         {
             this.clashchekerevent = tsObject;
         }
 
-        internal dynamic GetTSObject() => clashchekerevent;
-
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
-			 => new Dynamic.Tekla.Structures.Model.ClashCheckHandler(clashchekerevent.GetClashCheckHandler());
+			 => Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(clashchekerevent.GetClashCheckHandler());
 
 
 
@@ -46,19 +44,17 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         
 
-        dynamic clashcheckdonedelegate;
+        internal dynamic clashcheckdonedelegate;
         
         public ClashCheckDoneDelegate()
         {
             this.clashcheckdonedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashChecker.ClashCheckDoneDelegate");
         }
 
-        public ClashCheckDoneDelegate(dynamic tsObject)
+        internal ClashCheckDoneDelegate(dynamic tsObject)
         {
             this.clashcheckdonedelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => clashcheckdonedelegate;
 
 		public void Invoke(System.Int32 nClashes)
 			 => clashcheckdonedelegate.Invoke(nClashes);
@@ -84,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
     }
 
+    internal static class ClashCheckDoneDelegate_
+    {
+        public static dynamic GetTSObject(ClashCheckDoneDelegate dynObject)
+        {
+            return dynObject.clashcheckdonedelegate;
+        }
+
+        public static ClashCheckDoneDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ClashCheckDoneDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ClashDetectedDelegate 
     {
@@ -102,22 +112,20 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         
 
-        dynamic clashdetecteddelegate;
+        internal dynamic clashdetecteddelegate;
         
         public ClashDetectedDelegate()
         {
             this.clashdetecteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashChecker.ClashDetectedDelegate");
         }
 
-        public ClashDetectedDelegate(dynamic tsObject)
+        internal ClashDetectedDelegate(dynamic tsObject)
         {
             this.clashdetecteddelegate = tsObject;
         }
 
-        internal dynamic GetTSObject() => clashdetecteddelegate;
-
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
-			 => clashdetecteddelegate.Invoke(ClashData.GetTSObject());
+			 => clashdetecteddelegate.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashdetecteddelegate.EndInvoke(result);
@@ -140,9 +148,37 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
     }
 
+    internal static class ClashDetectedDelegate_
+    {
+        public static dynamic GetTSObject(ClashDetectedDelegate dynObject)
+        {
+            return dynObject.clashdetecteddelegate;
+        }
+
+        public static ClashDetectedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ClashDetectedDelegate(tsObject);
+        }
+    }
+
+
 
 
     }
+
+    internal static class ClashChekerEvent_
+    {
+        public static dynamic GetTSObject(ClashChekerEvent dynObject)
+        {
+            return dynObject.clashchekerevent;
+        }
+
+        public static ClashChekerEvent FromTSObject(dynamic tsObject)
+        {
+            return new ClashChekerEvent(tsObject);
+        }
+    }
+
 
 }
     

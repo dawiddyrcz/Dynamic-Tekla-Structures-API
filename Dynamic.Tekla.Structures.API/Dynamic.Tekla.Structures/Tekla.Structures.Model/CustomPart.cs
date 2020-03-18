@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(custompart.Position);
-			set { custompart.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(custompart.Position);
+			set { custompart.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -39,34 +39,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(custompart.Identifier);
-			set { custompart.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(custompart.Identifier);
+			set { custompart.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic custompart;
+        internal dynamic custompart;
         
         public CustomPart()
         {
             this.custompart =  TSActivator.CreateInstance("Tekla.Structures.Model.CustomPart");
         }
 
-        public CustomPart(dynamic tsObject)
+        internal CustomPart(dynamic tsObject)
         {
             this.custompart = tsObject;
         }
 
-        internal dynamic GetTSObject() => custompart;
-
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => custompart.SetInputPositions(StartPoint.GetTSObject(), EndPoint.GetTSObject());
+			 => custompart.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public System.Boolean GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => custompart.GetStartAndEndPositions(StartPoint.GetTSObject(), EndPoint.GetTSObject());
+			 => custompart.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(custompart.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(custompart.GetAssembly());
 
 		public System.Boolean Insert()
 			 => custompart.Insert();
@@ -81,7 +79,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => custompart.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(custompart.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetComponents());
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 			 => custompart.SetAttribute(AttrName, StrValue);
@@ -105,13 +103,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => custompart.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(custompart.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(custompart.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(custompart.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(custompart.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => custompart.GetAllUserProperties(values);
@@ -171,13 +169,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => custompart.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(custompart.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(custompart.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => custompart.SetPhase(phase.GetTSObject());
+			 => custompart.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => custompart.GetPhase(phase.GetTSObject());
+			 => custompart.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => custompart.SetLabel(label);
@@ -190,6 +188,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class CustomPart_
+    {
+        public static dynamic GetTSObject(CustomPart dynObject)
+        {
+            return dynObject.custompart;
+        }
+
+        public static CustomPart FromTSObject(dynamic tsObject)
+        {
+            return new CustomPart(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,73 +9,85 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic polycurvegeometrybuilder;
+        internal dynamic polycurvegeometrybuilder;
         
         public PolycurveGeometryBuilder()
         {
             this.polycurvegeometrybuilder =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolycurveGeometryBuilder");
         }
 
-        public PolycurveGeometryBuilder(dynamic tsObject)
+        internal PolycurveGeometryBuilder(dynamic tsObject)
         {
             this.polycurvegeometrybuilder = tsObject;
         }
 
-        internal dynamic GetTSObject() => polycurvegeometrybuilder;
-
 		public Dynamic.Tekla.Structures.Geometry3d.Polycurve GetPolycurve()
-			 => new Dynamic.Tekla.Structures.Geometry3d.Polycurve(polycurvegeometrybuilder.GetPolycurve());
+			 => Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(polycurvegeometrybuilder.GetPolycurve());
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.Arc arc)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Append(arc.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Append(Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Append(segment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Append(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.Polycurve otherPolycurve)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Append(otherPolycurve.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Append(Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(otherPolycurve)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendArc(Dynamic.Tekla.Structures.Geometry3d.Point middlePoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.AppendArc(middlePoint.GetTSObject(), endPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.AppendArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendSegment(Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.AppendSegment(endPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.AppendSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.AppendTangentArc(endPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.AppendTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendTangentSegment(System.Double length)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.AppendTangentSegment(length));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.AppendTangentSegment(length));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Prepend(Dynamic.Tekla.Structures.Geometry3d.Arc arc)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Prepend(arc.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Prepend(Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Prepend(Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Prepend(segment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Prepend(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependArc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point middlePoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.PrependArc(startPoint.GetTSObject(), middlePoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.PrependArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependSegment(Dynamic.Tekla.Structures.Geometry3d.Point startPoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.PrependSegment(startPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.PrependSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.PrependTangentArc(startPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.PrependTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependTangentSegment(System.Double length)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.PrependTangentSegment(length));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.PrependTangentSegment(length));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Replace(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.Arc arc)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Replace(index, arc.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Replace(index, Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Replace(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
-			 => new Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder(polycurvegeometrybuilder.Replace(index, segment.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(polycurvegeometrybuilder.Replace(index, Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 
 
 
 
 
     }
+
+    internal static class PolycurveGeometryBuilder_
+    {
+        public static dynamic GetTSObject(PolycurveGeometryBuilder dynObject)
+        {
+            return dynObject.polycurvegeometrybuilder;
+        }
+
+        public static PolycurveGeometryBuilder FromTSObject(dynamic tsObject)
+        {
+            return new PolycurveGeometryBuilder(tsObject);
+        }
+    }
+
 
 }
     

@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic nullrulingexception;
+        internal dynamic nullrulingexception;
         
         public NullRulingException()
         {
             this.nullrulingexception =  TSActivator.CreateInstance("Tekla.Structures.Model.NullRulingException");
         }
 
-        public NullRulingException(dynamic tsObject)
+        internal NullRulingException(dynamic tsObject)
         {
             this.nullrulingexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => nullrulingexception;
 
 		public System.Exception GetBaseException()
 			 => nullrulingexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class NullRulingException_
+    {
+        public static dynamic GetTSObject(NullRulingException dynObject)
+        {
+            return dynObject.nullrulingexception;
+        }
+
+        public static NullRulingException FromTSObject(dynamic tsObject)
+        {
+            return new NullRulingException(tsObject);
+        }
+    }
+
 
 }
     

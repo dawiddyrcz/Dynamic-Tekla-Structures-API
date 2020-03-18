@@ -27,25 +27,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(taskworktype.Identifier);
-			set { taskworktype.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(taskworktype.Identifier);
+			set { taskworktype.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic taskworktype;
+        internal dynamic taskworktype;
         
         public TaskWorktype()
         {
             this.taskworktype =  TSActivator.CreateInstance("Tekla.Structures.Model.TaskWorktype");
         }
 
-        public TaskWorktype(dynamic tsObject)
+        internal TaskWorktype(dynamic tsObject)
         {
             this.taskworktype = tsObject;
         }
-
-        internal dynamic GetTSObject() => taskworktype;
 
 		public System.Boolean Insert()
 			 => taskworktype.Insert();
@@ -60,13 +58,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => taskworktype.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(taskworktype.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskworktype.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(taskworktype.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(taskworktype.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(taskworktype.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskworktype.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => taskworktype.GetAllUserProperties(values);
@@ -126,13 +124,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => taskworktype.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(taskworktype.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(taskworktype.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskworktype.SetPhase(phase.GetTSObject());
+			 => taskworktype.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskworktype.GetPhase(phase.GetTSObject());
+			 => taskworktype.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => taskworktype.SetLabel(label);
@@ -145,6 +143,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class TaskWorktype_
+    {
+        public static dynamic GetTSObject(TaskWorktype dynObject)
+        {
+            return dynObject.taskworktype;
+        }
+
+        public static TaskWorktype FromTSObject(dynamic tsObject)
+        {
+            return new TaskWorktype(tsObject);
+        }
+    }
+
 
 }
     

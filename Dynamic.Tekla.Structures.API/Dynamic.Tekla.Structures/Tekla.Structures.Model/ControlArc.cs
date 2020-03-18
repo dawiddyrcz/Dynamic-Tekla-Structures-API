@@ -10,19 +10,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ControlObjectColorEnum Color
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(controlarc.Color);
-			set { controlarc.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(value); }
+			set { controlarc.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlarc.LineType);
-			set { controlarc.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(value); }
+			set { controlarc.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Arc Geometry
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Arc(controlarc.Geometry);
-			set { controlarc.Geometry = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(controlarc.Geometry);
+			set { controlarc.Geometry = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -39,25 +39,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlarc.Identifier);
-			set { controlarc.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlarc.Identifier);
+			set { controlarc.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlarc;
+        internal dynamic controlarc;
         
         public ControlArc()
         {
             this.controlarc =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlArc");
         }
 
-        public ControlArc(dynamic tsObject)
+        internal ControlArc(dynamic tsObject)
         {
             this.controlarc = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlarc;
 
 		public System.Boolean Delete()
 			 => controlarc.Delete();
@@ -72,13 +70,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlarc.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlarc.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlarc.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlarc.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlarc.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlarc.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlarc.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlarc.GetAllUserProperties(values);
@@ -138,13 +136,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlarc.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlarc.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlarc.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlarc.SetPhase(phase.GetTSObject());
+			 => controlarc.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlarc.GetPhase(phase.GetTSObject());
+			 => controlarc.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlarc.SetLabel(label);
@@ -157,6 +155,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ControlArc_
+    {
+        public static dynamic GetTSObject(ControlArc dynObject)
+        {
+            return dynObject.controlarc;
+        }
+
+        public static ControlArc FromTSObject(dynamic tsObject)
+        {
+            return new ControlArc(tsObject);
+        }
+    }
+
 
 }
     

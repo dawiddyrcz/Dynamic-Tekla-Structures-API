@@ -4,25 +4,37 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public struct InvalidFilterExpressionExceptionReasonsType
+    public enum InvalidFilterExpressionExceptionReasonsType
     {
-       
+			TOO_MANY_NESTED_COLLECTIONS        
     }
 
     internal static class InvalidFilterExpressionExceptionReasonsType_
     {
-        public static dynamic GetTSObject(InvalidFilterExpressionExceptionReasonsType dynStruct)
+        public static dynamic GetTSObject(InvalidFilterExpressionExceptionReasonsType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case InvalidFilterExpressionExceptionReasonsType.TOO_MANY_NESTED_COLLECTIONS:
+					return System.Enum.Parse(tsType, "TOO_MANY_NESTED_COLLECTIONS");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static InvalidFilterExpressionExceptionReasonsType FromTSObject(dynamic tsStruct)
+        public static InvalidFilterExpressionExceptionReasonsType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new InvalidFilterExpressionExceptionReasonsType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("TOO_MANY_NESTED_COLLECTIONS", System.StringComparison.InvariantCulture))
+				return InvalidFilterExpressionExceptionReasonsType.TOO_MANY_NESTED_COLLECTIONS;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 

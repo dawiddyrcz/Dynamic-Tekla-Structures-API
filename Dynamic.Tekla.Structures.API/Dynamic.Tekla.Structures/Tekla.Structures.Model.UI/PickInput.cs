@@ -27,19 +27,17 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic pickinput;
+        internal dynamic pickinput;
         
         public PickInput()
         {
             this.pickinput =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickInput");
         }
 
-        public PickInput(dynamic tsObject)
+        internal PickInput(dynamic tsObject)
         {
             this.pickinput = tsObject;
         }
-
-        internal dynamic GetTSObject() => pickinput;
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => pickinput.CopyTo(array, index);
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class PickInput_
+    {
+        public static dynamic GetTSObject(PickInput dynObject)
+        {
+            return dynObject.pickinput;
+        }
+
+        public static PickInput FromTSObject(dynamic tsObject)
+        {
+            return new PickInput(tsObject);
+        }
+    }
+
 
 }
     

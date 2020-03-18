@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic extensionintersectswithplateexception;
+        internal dynamic extensionintersectswithplateexception;
         
         public ExtensionIntersectsWithPlateException()
         {
             this.extensionintersectswithplateexception =  TSActivator.CreateInstance("Tekla.Structures.Model.ExtensionIntersectsWithPlateException");
         }
 
-        public ExtensionIntersectsWithPlateException(dynamic tsObject)
+        internal ExtensionIntersectsWithPlateException(dynamic tsObject)
         {
             this.extensionintersectswithplateexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => extensionintersectswithplateexception;
 
 		public System.Exception GetBaseException()
 			 => extensionintersectswithplateexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ExtensionIntersectsWithPlateException_
+    {
+        public static dynamic GetTSObject(ExtensionIntersectsWithPlateException dynObject)
+        {
+            return dynObject.extensionintersectswithplateexception;
+        }
+
+        public static ExtensionIntersectsWithPlateException FromTSObject(dynamic tsObject)
+        {
+            return new ExtensionIntersectsWithPlateException(tsObject);
+        }
+    }
+
 
 }
     

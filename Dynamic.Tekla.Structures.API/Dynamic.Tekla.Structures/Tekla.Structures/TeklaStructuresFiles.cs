@@ -15,19 +15,17 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic teklastructuresfiles;
+        internal dynamic teklastructuresfiles;
         
         public TeklaStructuresFiles()
         {
             this.teklastructuresfiles =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles");
         }
 
-        public TeklaStructuresFiles(dynamic tsObject)
+        internal TeklaStructuresFiles(dynamic tsObject)
         {
             this.teklastructuresfiles = tsObject;
         }
-
-        internal dynamic GetTSObject() => teklastructuresfiles;
 
 		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
 			 => teklastructuresfiles.GetMultiDirectoryFileList(fileExtension, fullpath);
@@ -43,6 +41,20 @@ namespace Dynamic.Tekla.Structures
 
 
     }
+
+    internal static class TeklaStructuresFiles_
+    {
+        public static dynamic GetTSObject(TeklaStructuresFiles dynObject)
+        {
+            return dynObject.teklastructuresfiles;
+        }
+
+        public static TeklaStructuresFiles FromTSObject(dynamic tsObject)
+        {
+            return new TeklaStructuresFiles(tsObject);
+        }
+    }
+
 
 }
     

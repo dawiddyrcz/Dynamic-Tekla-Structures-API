@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Plane Plane
 		{
-			get => new Dynamic.Tekla.Structures.Model.Plane(gridplane.Plane);
-			set { gridplane.Plane = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(gridplane.Plane);
+			set { gridplane.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Grid Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.Grid(gridplane.Father);
-			set { gridplane.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Grid_.FromTSObject(gridplane.Father);
+			set { gridplane.Father = Dynamic.Tekla.Structures.Model.Grid_.GetTSObject(value); }
 		}
 
 		public System.String Label
@@ -75,8 +75,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.GridBase Parent
 		{
-			get => new Dynamic.Tekla.Structures.Model.GridBase(gridplane.Parent);
-			set { gridplane.Parent = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(gridplane.Parent);
+			set { gridplane.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsManual
@@ -99,25 +99,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(gridplane.Identifier);
-			set { gridplane.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(gridplane.Identifier);
+			set { gridplane.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic gridplane;
+        internal dynamic gridplane;
         
         public GridPlane()
         {
             this.gridplane =  TSActivator.CreateInstance("Tekla.Structures.Model.GridPlane");
         }
 
-        public GridPlane(dynamic tsObject)
+        internal GridPlane(dynamic tsObject)
         {
             this.gridplane = tsObject;
         }
-
-        internal dynamic GetTSObject() => gridplane;
 
 		public System.Boolean Insert()
 			 => gridplane.Insert();
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => gridplane.Modify();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(gridplane.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridplane.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(gridplane.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(gridplane.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(gridplane.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridplane.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => gridplane.GetAllUserProperties(values);
@@ -198,13 +196,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => gridplane.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(gridplane.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(gridplane.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridplane.SetPhase(phase.GetTSObject());
+			 => gridplane.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridplane.GetPhase(phase.GetTSObject());
+			 => gridplane.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => gridplane.SetLabel(label);
@@ -217,6 +215,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class GridPlane_
+    {
+        public static dynamic GetTSObject(GridPlane dynObject)
+        {
+            return dynObject.gridplane;
+        }
+
+        public static GridPlane FromTSObject(dynamic tsObject)
+        {
+            return new GridPlane(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,19 +9,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic vector;
+        internal dynamic vector;
         
         public Vector()
         {
             this.vector =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector");
         }
 
-        public Vector(dynamic tsObject)
+        internal Vector(dynamic tsObject)
         {
             this.vector = tsObject;
         }
-
-        internal dynamic GetTSObject() => vector;
 
 		public System.Double Normalize()
 			 => vector.Normalize();
@@ -33,28 +31,28 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			 => vector.GetLength();
 
 		public System.Double GetAngleBetween(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
-			 => vector.GetAngleBetween(Vector.GetTSObject());
+			 => vector.GetAngleBetween(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
-			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.GetNormal());
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(vector.GetNormal());
 
 		public System.Double Dot(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
-			 => vector.Dot(Vector.GetTSObject());
+			 => vector.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
 
 		public System.Double Dot(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
-			 => vector.Dot(Vector1.GetTSObject(), Vector2.GetTSObject());
+			 => vector.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.Cross(Vector.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(vector.Cross(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.Cross(Vector1.GetTSObject(), Vector2.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(vector.Cross(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, System.Double Multiplier)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.op_Multiply(Vector.GetTSObject(), Multiplier));
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(vector.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Multiplier));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(System.Double Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Vector(vector.op_Multiply(Multiplier, Vector.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(vector.op_Multiply(Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector)));
 
 		public void Zero()
 			 => vector.Zero();
@@ -70,6 +68,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
     }
+
+    internal static class Vector_
+    {
+        public static dynamic GetTSObject(Vector dynObject)
+        {
+            return dynObject.vector;
+        }
+
+        public static Vector FromTSObject(dynamic tsObject)
+        {
+            return new Vector(tsObject);
+        }
+    }
+
 
 }
     

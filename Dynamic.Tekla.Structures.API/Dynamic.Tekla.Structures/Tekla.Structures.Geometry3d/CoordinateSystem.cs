@@ -9,43 +9,55 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(coordinatesystem.Origin);
-			set { coordinatesystem.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(coordinatesystem.Origin);
+			set { coordinatesystem.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisX
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(coordinatesystem.AxisX);
-			set { coordinatesystem.AxisX = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(coordinatesystem.AxisX);
+			set { coordinatesystem.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisY
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(coordinatesystem.AxisY);
-			set { coordinatesystem.AxisY = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(coordinatesystem.AxisY);
+			set { coordinatesystem.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        dynamic coordinatesystem;
+        internal dynamic coordinatesystem;
         
         public CoordinateSystem()
         {
             this.coordinatesystem =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem");
         }
 
-        public CoordinateSystem(dynamic tsObject)
+        internal CoordinateSystem(dynamic tsObject)
         {
             this.coordinatesystem = tsObject;
         }
-
-        internal dynamic GetTSObject() => coordinatesystem;
 
 
 
 
 
     }
+
+    internal static class CoordinateSystem_
+    {
+        public static dynamic GetTSObject(CoordinateSystem dynObject)
+        {
+            return dynObject.coordinatesystem;
+        }
+
+        public static CoordinateSystem FromTSObject(dynamic tsObject)
+        {
+            return new CoordinateSystem(tsObject);
+        }
+    }
+
 
 }
     

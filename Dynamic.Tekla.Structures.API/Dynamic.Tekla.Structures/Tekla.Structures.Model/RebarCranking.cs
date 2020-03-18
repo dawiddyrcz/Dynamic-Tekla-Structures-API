@@ -10,7 +10,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum CrankSide
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(rebarcranking.CrankSide);
-			set { rebarcranking.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(value); }
+			set { rebarcranking.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.GetTSObject(value); }
 		}
 
 		public System.Double CrankRotation
@@ -28,7 +28,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum CrankedLengthType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(rebarcranking.CrankedLengthType);
-			set { rebarcranking.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(value); }
+			set { rebarcranking.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double CrankedRatio
@@ -52,99 +52,172 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum CrankingType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(rebarcranking.CrankingType);
-			set { rebarcranking.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(value); }
+			set { rebarcranking.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarcranking;
+        internal dynamic rebarcranking;
         
         public RebarCranking()
         {
             this.rebarcranking =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarCranking");
         }
 
-        public RebarCranking(dynamic tsObject)
+        internal RebarCranking(dynamic tsObject)
         {
             this.rebarcranking = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarcranking;
 
 
 
-
-    public struct CrankSideEnum
+    public enum CrankSideEnum
     {
-       
+			CRANK_LEFT,
+			CRANK_RIGHT        
     }
 
     internal static class CrankSideEnum_
     {
-        public static dynamic GetTSObject(CrankSideEnum dynStruct)
+        public static dynamic GetTSObject(CrankSideEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankSideEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case CrankSideEnum.CRANK_LEFT:
+					return System.Enum.Parse(tsType, "CRANK_LEFT");
+				case CrankSideEnum.CRANK_RIGHT:
+					return System.Enum.Parse(tsType, "CRANK_RIGHT");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static CrankSideEnum FromTSObject(dynamic tsStruct)
+        public static CrankSideEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new CrankSideEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("CRANK_LEFT", System.StringComparison.InvariantCulture))
+				return CrankSideEnum.CRANK_LEFT;
+			else if (tsEnumValue.Equals("CRANK_RIGHT", System.StringComparison.InvariantCulture))
+				return CrankSideEnum.CRANK_RIGHT;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct CrankedLengthTypeEnum
+    public enum CrankedLengthTypeEnum
     {
-       
+			DIAGONAL_RATIO,
+			DIAGONAL_DISTANCE,
+			HORIZONTAL_RATIO,
+			HORIZONTAL_DISTANCE        
     }
 
     internal static class CrankedLengthTypeEnum_
     {
-        public static dynamic GetTSObject(CrankedLengthTypeEnum dynStruct)
+        public static dynamic GetTSObject(CrankedLengthTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankedLengthTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case CrankedLengthTypeEnum.DIAGONAL_RATIO:
+					return System.Enum.Parse(tsType, "DIAGONAL_RATIO");
+				case CrankedLengthTypeEnum.DIAGONAL_DISTANCE:
+					return System.Enum.Parse(tsType, "DIAGONAL_DISTANCE");
+				case CrankedLengthTypeEnum.HORIZONTAL_RATIO:
+					return System.Enum.Parse(tsType, "HORIZONTAL_RATIO");
+				case CrankedLengthTypeEnum.HORIZONTAL_DISTANCE:
+					return System.Enum.Parse(tsType, "HORIZONTAL_DISTANCE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static CrankedLengthTypeEnum FromTSObject(dynamic tsStruct)
+        public static CrankedLengthTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new CrankedLengthTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("DIAGONAL_RATIO", System.StringComparison.InvariantCulture))
+				return CrankedLengthTypeEnum.DIAGONAL_RATIO;
+			else if (tsEnumValue.Equals("DIAGONAL_DISTANCE", System.StringComparison.InvariantCulture))
+				return CrankedLengthTypeEnum.DIAGONAL_DISTANCE;
+			else if (tsEnumValue.Equals("HORIZONTAL_RATIO", System.StringComparison.InvariantCulture))
+				return CrankedLengthTypeEnum.HORIZONTAL_RATIO;
+			else if (tsEnumValue.Equals("HORIZONTAL_DISTANCE", System.StringComparison.InvariantCulture))
+				return CrankedLengthTypeEnum.HORIZONTAL_DISTANCE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct CrankingTypeEnum
+    public enum CrankingTypeEnum
     {
-       
+			CUSTOM_CRANKING,
+			STANDARD_CRANKING        
     }
 
     internal static class CrankingTypeEnum_
     {
-        public static dynamic GetTSObject(CrankingTypeEnum dynStruct)
+        public static dynamic GetTSObject(CrankingTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankingTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case CrankingTypeEnum.CUSTOM_CRANKING:
+					return System.Enum.Parse(tsType, "CUSTOM_CRANKING");
+				case CrankingTypeEnum.STANDARD_CRANKING:
+					return System.Enum.Parse(tsType, "STANDARD_CRANKING");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static CrankingTypeEnum FromTSObject(dynamic tsStruct)
+        public static CrankingTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new CrankingTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("CUSTOM_CRANKING", System.StringComparison.InvariantCulture))
+				return CrankingTypeEnum.CUSTOM_CRANKING;
+			else if (tsEnumValue.Equals("STANDARD_CRANKING", System.StringComparison.InvariantCulture))
+				return CrankingTypeEnum.STANDARD_CRANKING;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarCranking_
+    {
+        public static dynamic GetTSObject(RebarCranking dynObject)
+        {
+            return dynObject.rebarcranking;
+        }
+
+        public static RebarCranking FromTSObject(dynamic tsObject)
+        {
+            return new RebarCranking(tsObject);
+        }
+    }
+
 
 }
     

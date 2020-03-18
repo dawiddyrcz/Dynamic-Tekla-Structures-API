@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.View Current
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.View(modelviewenumerator.Current);
-			set { modelviewenumerator.Current = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(modelviewenumerator.Current);
+			set { modelviewenumerator.Current = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
 		public System.Int32 Count
@@ -27,19 +27,17 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         
 
-        dynamic modelviewenumerator;
+        internal dynamic modelviewenumerator;
         
         public ModelViewEnumerator()
         {
             this.modelviewenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelViewEnumerator");
         }
 
-        public ModelViewEnumerator(dynamic tsObject)
+        internal ModelViewEnumerator(dynamic tsObject)
         {
             this.modelviewenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelviewenumerator;
 
 		public System.Boolean MoveNext()
 			 => modelviewenumerator.MoveNext();
@@ -52,6 +50,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ModelViewEnumerator_
+    {
+        public static dynamic GetTSObject(ModelViewEnumerator dynObject)
+        {
+            return dynObject.modelviewenumerator;
+        }
+
+        public static ModelViewEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new ModelViewEnumerator(tsObject);
+        }
+    }
+
 
 }
     

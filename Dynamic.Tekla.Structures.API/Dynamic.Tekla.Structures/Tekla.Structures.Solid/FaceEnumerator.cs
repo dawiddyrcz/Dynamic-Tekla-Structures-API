@@ -9,25 +9,23 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Solid.Face Current
 		{
-			get => new Dynamic.Tekla.Structures.Solid.Face(faceenumerator.Current);
-			set { faceenumerator.Current = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Solid.Face_.FromTSObject(faceenumerator.Current);
+			set { faceenumerator.Current = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(value); }
 		}
 
         
 
-        dynamic faceenumerator;
+        internal dynamic faceenumerator;
         
         public FaceEnumerator()
         {
             this.faceenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.FaceEnumerator");
         }
 
-        public FaceEnumerator(dynamic tsObject)
+        internal FaceEnumerator(dynamic tsObject)
         {
             this.faceenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => faceenumerator;
 
 		public System.Boolean MoveNext()
 			 => faceenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Solid
 
 
     }
+
+    internal static class FaceEnumerator_
+    {
+        public static dynamic GetTSObject(FaceEnumerator dynObject)
+        {
+            return dynObject.faceenumerator;
+        }
+
+        public static FaceEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new FaceEnumerator(tsObject);
+        }
+    }
+
 
 }
     

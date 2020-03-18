@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment Line
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(controlline.Line);
-			set { controlline.Line = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(controlline.Line);
+			set { controlline.Line = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsMagnetic
@@ -28,13 +28,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum Color
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(controlline.Color);
-			set { controlline.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(value); }
+			set { controlline.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlline.LineType);
-			set { controlline.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(value); }
+			set { controlline.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -51,25 +51,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlline.Identifier);
-			set { controlline.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlline.Identifier);
+			set { controlline.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlline;
+        internal dynamic controlline;
         
         public ControlLine()
         {
             this.controlline =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlLine");
         }
 
-        public ControlLine(dynamic tsObject)
+        internal ControlLine(dynamic tsObject)
         {
             this.controlline = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlline;
 
 		public System.Boolean Insert()
 			 => controlline.Insert();
@@ -84,13 +82,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlline.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlline.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlline.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlline.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlline.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlline.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlline.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlline.GetAllUserProperties(values);
@@ -150,13 +148,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlline.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlline.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlline.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlline.SetPhase(phase.GetTSObject());
+			 => controlline.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlline.GetPhase(phase.GetTSObject());
+			 => controlline.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlline.SetLabel(label);
@@ -167,31 +165,97 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct ControlLineColorEnum
+    public enum ControlLineColorEnum
     {
-       
+			BLACK,
+			WHITE,
+			RED,
+			GREEN,
+			BLUE,
+			CYAN,
+			YELLOW,
+			MAGENTA,
+			YELLOW_RED        
     }
 
     internal static class ControlLineColorEnum_
     {
-        public static dynamic GetTSObject(ControlLineColorEnum dynStruct)
+        public static dynamic GetTSObject(ControlLineColorEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlLineColorEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ControlLineColorEnum.BLACK:
+					return System.Enum.Parse(tsType, "BLACK");
+				case ControlLineColorEnum.WHITE:
+					return System.Enum.Parse(tsType, "WHITE");
+				case ControlLineColorEnum.RED:
+					return System.Enum.Parse(tsType, "RED");
+				case ControlLineColorEnum.GREEN:
+					return System.Enum.Parse(tsType, "GREEN");
+				case ControlLineColorEnum.BLUE:
+					return System.Enum.Parse(tsType, "BLUE");
+				case ControlLineColorEnum.CYAN:
+					return System.Enum.Parse(tsType, "CYAN");
+				case ControlLineColorEnum.YELLOW:
+					return System.Enum.Parse(tsType, "YELLOW");
+				case ControlLineColorEnum.MAGENTA:
+					return System.Enum.Parse(tsType, "MAGENTA");
+				case ControlLineColorEnum.YELLOW_RED:
+					return System.Enum.Parse(tsType, "YELLOW_RED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ControlLineColorEnum FromTSObject(dynamic tsStruct)
+        public static ControlLineColorEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ControlLineColorEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BLACK", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.BLACK;
+			else if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.WHITE;
+			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.RED;
+			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.GREEN;
+			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.BLUE;
+			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.CYAN;
+			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.YELLOW;
+			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.MAGENTA;
+			else if (tsEnumValue.Equals("YELLOW_RED", System.StringComparison.InvariantCulture))
+				return ControlLineColorEnum.YELLOW_RED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ControlLine_
+    {
+        public static dynamic GetTSObject(ControlLine dynObject)
+        {
+            return dynObject.controlline;
+        }
+
+        public static ControlLine FromTSObject(dynamic tsObject)
+        {
+            return new ControlLine(tsObject);
+        }
+    }
+
 
 }
     

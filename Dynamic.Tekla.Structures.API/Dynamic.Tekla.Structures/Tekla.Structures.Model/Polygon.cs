@@ -15,25 +15,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic polygon;
+        internal dynamic polygon;
         
         public Polygon()
         {
             this.polygon =  TSActivator.CreateInstance("Tekla.Structures.Model.Polygon");
         }
 
-        public Polygon(dynamic tsObject)
+        internal Polygon(dynamic tsObject)
         {
             this.polygon = tsObject;
         }
-
-        internal dynamic GetTSObject() => polygon;
 
 
 
 
 
     }
+
+    internal static class Polygon_
+    {
+        public static dynamic GetTSObject(Polygon dynObject)
+        {
+            return dynObject.polygon;
+        }
+
+        public static Polygon FromTSObject(dynamic tsObject)
+        {
+            return new Polygon(tsObject);
+        }
+    }
+
 
 }
     

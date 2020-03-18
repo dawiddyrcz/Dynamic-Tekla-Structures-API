@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarSet(baserebarmodifier.Father);
-			set { baserebarmodifier.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(baserebarmodifier.Father);
+			set { baserebarmodifier.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(baserebarmodifier.Curve);
-			set { baserebarmodifier.Curve = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(baserebarmodifier.Curve);
+			set { baserebarmodifier.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(baserebarmodifier.BarsAffected);
-			set { baserebarmodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(value); }
+			set { baserebarmodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
@@ -45,25 +45,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(baserebarmodifier.Identifier);
-			set { baserebarmodifier.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(baserebarmodifier.Identifier);
+			set { baserebarmodifier.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic baserebarmodifier;
+        internal dynamic baserebarmodifier;
         
         private BaseRebarModifier()
         {
             this.baserebarmodifier =  TSActivator.CreateInstance("Tekla.Structures.Model.BaseRebarModifier");
         }
 
-        public BaseRebarModifier(dynamic tsObject)
+        internal BaseRebarModifier(dynamic tsObject)
         {
             this.baserebarmodifier = tsObject;
         }
-
-        internal dynamic GetTSObject() => baserebarmodifier;
 
 		public System.Boolean Insert()
 			 => baserebarmodifier.Insert();
@@ -78,13 +76,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => baserebarmodifier.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(baserebarmodifier.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(baserebarmodifier.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(baserebarmodifier.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(baserebarmodifier.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(baserebarmodifier.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(baserebarmodifier.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => baserebarmodifier.GetAllUserProperties(values);
@@ -144,13 +142,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => baserebarmodifier.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(baserebarmodifier.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(baserebarmodifier.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => baserebarmodifier.SetPhase(phase.GetTSObject());
+			 => baserebarmodifier.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => baserebarmodifier.GetPhase(phase.GetTSObject());
+			 => baserebarmodifier.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => baserebarmodifier.SetLabel(label);
@@ -161,54 +159,117 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct AffectedRebarEnum
+    public enum AffectedRebarEnum
     {
-       
+			START,
+			END,
+			EITHER        
     }
 
     internal static class AffectedRebarEnum_
     {
-        public static dynamic GetTSObject(AffectedRebarEnum dynStruct)
+        public static dynamic GetTSObject(AffectedRebarEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AffectedRebarEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case AffectedRebarEnum.START:
+					return System.Enum.Parse(tsType, "START");
+				case AffectedRebarEnum.END:
+					return System.Enum.Parse(tsType, "END");
+				case AffectedRebarEnum.EITHER:
+					return System.Enum.Parse(tsType, "EITHER");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static AffectedRebarEnum FromTSObject(dynamic tsStruct)
+        public static AffectedRebarEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new AffectedRebarEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("START", System.StringComparison.InvariantCulture))
+				return AffectedRebarEnum.START;
+			else if (tsEnumValue.Equals("END", System.StringComparison.InvariantCulture))
+				return AffectedRebarEnum.END;
+			else if (tsEnumValue.Equals("EITHER", System.StringComparison.InvariantCulture))
+				return AffectedRebarEnum.EITHER;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct BarsAffectedEnum
+    public enum BarsAffectedEnum
     {
-       
+			ALL_BARS,
+			EVERY_SECOND_BAR,
+			EVERY_THIRD_BAR,
+			EVERY_FOURTH_BAR        
     }
 
     internal static class BarsAffectedEnum_
     {
-        public static dynamic GetTSObject(BarsAffectedEnum dynStruct)
+        public static dynamic GetTSObject(BarsAffectedEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BarsAffectedEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BarsAffectedEnum.ALL_BARS:
+					return System.Enum.Parse(tsType, "ALL_BARS");
+				case BarsAffectedEnum.EVERY_SECOND_BAR:
+					return System.Enum.Parse(tsType, "EVERY_SECOND_BAR");
+				case BarsAffectedEnum.EVERY_THIRD_BAR:
+					return System.Enum.Parse(tsType, "EVERY_THIRD_BAR");
+				case BarsAffectedEnum.EVERY_FOURTH_BAR:
+					return System.Enum.Parse(tsType, "EVERY_FOURTH_BAR");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BarsAffectedEnum FromTSObject(dynamic tsStruct)
+        public static BarsAffectedEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BarsAffectedEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("ALL_BARS", System.StringComparison.InvariantCulture))
+				return BarsAffectedEnum.ALL_BARS;
+			else if (tsEnumValue.Equals("EVERY_SECOND_BAR", System.StringComparison.InvariantCulture))
+				return BarsAffectedEnum.EVERY_SECOND_BAR;
+			else if (tsEnumValue.Equals("EVERY_THIRD_BAR", System.StringComparison.InvariantCulture))
+				return BarsAffectedEnum.EVERY_THIRD_BAR;
+			else if (tsEnumValue.Equals("EVERY_FOURTH_BAR", System.StringComparison.InvariantCulture))
+				return BarsAffectedEnum.EVERY_FOURTH_BAR;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class BaseRebarModifier_
+    {
+        public static dynamic GetTSObject(BaseRebarModifier dynObject)
+        {
+            return dynObject.baserebarmodifier;
+        }
+
+        public static BaseRebarModifier FromTSObject(dynamic tsObject)
+        {
+            return new BaseRebarModifier(tsObject);
+        }
+    }
+
 
 }
     

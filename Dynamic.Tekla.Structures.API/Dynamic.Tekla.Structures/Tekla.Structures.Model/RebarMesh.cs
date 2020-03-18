@@ -10,19 +10,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum MeshType
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(rebarmesh.MeshType);
-			set { rebarmesh.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(value); }
+			set { rebarmesh.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum LongitudinalSpacingMethod
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(rebarmesh.LongitudinalSpacingMethod);
-			set { rebarmesh.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(value); }
+			set { rebarmesh.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => new Dynamic.Tekla.Structures.Model.Polygon(rebarmesh.Polygon);
-			set { rebarmesh.Polygon = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(rebarmesh.Polygon);
+			set { rebarmesh.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList LongitudinalDistances
@@ -57,14 +57,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(rebarmesh.StartPoint);
-			set { rebarmesh.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarmesh.StartPoint);
+			set { rebarmesh.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(rebarmesh.EndPoint);
-			set { rebarmesh.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarmesh.EndPoint);
+			set { rebarmesh.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double LeftOverhangLongitudinal
@@ -130,25 +130,25 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum CrossBarLocation
 		{
 			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(rebarmesh.CrossBarLocation);
-			set { rebarmesh.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(value); }
+			set { rebarmesh.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarHookData(rebarmesh.StartHook);
-			set { rebarmesh.StartHook = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(rebarmesh.StartHook);
+			set { rebarmesh.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarHookData(rebarmesh.EndHook);
-			set { rebarmesh.EndHook = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(rebarmesh.EndHook);
+			set { rebarmesh.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(rebarmesh.Father);
-			set { rebarmesh.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(rebarmesh.Father);
+			set { rebarmesh.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.String Grade
@@ -171,8 +171,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(rebarmesh.NumberingSeries);
-			set { rebarmesh.NumberingSeries = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(rebarmesh.NumberingSeries);
+			set { rebarmesh.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OnPlaneOffsets
@@ -184,7 +184,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.StartPointOffsetType);
-			set { rebarmesh.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { rebarmesh.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
@@ -196,7 +196,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.EndPointOffsetType);
-			set { rebarmesh.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { rebarmesh.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
@@ -214,7 +214,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Forming.DeformingType InputPointDeformingState
 		{
 			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebarmesh.InputPointDeformingState);
-			set { rebarmesh.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
+			set { rebarmesh.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -231,25 +231,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarmesh.Identifier);
-			set { rebarmesh.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarmesh.Identifier);
+			set { rebarmesh.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarmesh;
+        internal dynamic rebarmesh;
         
         public RebarMesh()
         {
             this.rebarmesh =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh");
         }
 
-        public RebarMesh(dynamic tsObject)
+        internal RebarMesh(dynamic tsObject)
         {
             this.rebarmesh = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarmesh;
 
 		public System.Boolean Insert()
 			 => rebarmesh.Insert();
@@ -264,7 +262,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarmesh.Delete();
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
-			 => rebarmesh.GetRebarGeometries(options.GetTSObject());
+			 => rebarmesh.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
 			 => rebarmesh.GetRebarGeometries(withHooks);
@@ -279,28 +277,28 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarmesh.GetNumberOfRebars();
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebar(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(rebarmesh.GetSingleRebar(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarmesh.GetSingleRebar(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebarWithoutClash(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(rebarmesh.GetSingleRebarWithoutClash(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarmesh.GetSingleRebarWithoutClash(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(rebarmesh.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(rebarmesh.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(rebarmesh.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(rebarmesh.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(rebarmesh.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(rebarmesh.GetFatherPourUnit());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarmesh.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarmesh.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarmesh.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarmesh.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarmesh.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarmesh.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarmesh.GetAllUserProperties(values);
@@ -360,13 +358,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarmesh.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarmesh.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarmesh.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarmesh.SetPhase(phase.GetTSObject());
+			 => rebarmesh.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarmesh.GetPhase(phase.GetTSObject());
+			 => rebarmesh.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarmesh.SetLabel(label);
@@ -377,77 +375,162 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct RebarMeshTypeEnum
+    public enum RebarMeshTypeEnum
     {
-       
+			UNKNOWN_MESH,
+			RECTANGULAR_MESH,
+			POLYGON_MESH,
+			BENT_MESH        
     }
 
     internal static class RebarMeshTypeEnum_
     {
-        public static dynamic GetTSObject(RebarMeshTypeEnum dynStruct)
+        public static dynamic GetTSObject(RebarMeshTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RebarMeshTypeEnum.UNKNOWN_MESH:
+					return System.Enum.Parse(tsType, "UNKNOWN_MESH");
+				case RebarMeshTypeEnum.RECTANGULAR_MESH:
+					return System.Enum.Parse(tsType, "RECTANGULAR_MESH");
+				case RebarMeshTypeEnum.POLYGON_MESH:
+					return System.Enum.Parse(tsType, "POLYGON_MESH");
+				case RebarMeshTypeEnum.BENT_MESH:
+					return System.Enum.Parse(tsType, "BENT_MESH");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RebarMeshTypeEnum FromTSObject(dynamic tsStruct)
+        public static RebarMeshTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RebarMeshTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("UNKNOWN_MESH", System.StringComparison.InvariantCulture))
+				return RebarMeshTypeEnum.UNKNOWN_MESH;
+			else if (tsEnumValue.Equals("RECTANGULAR_MESH", System.StringComparison.InvariantCulture))
+				return RebarMeshTypeEnum.RECTANGULAR_MESH;
+			else if (tsEnumValue.Equals("POLYGON_MESH", System.StringComparison.InvariantCulture))
+				return RebarMeshTypeEnum.POLYGON_MESH;
+			else if (tsEnumValue.Equals("BENT_MESH", System.StringComparison.InvariantCulture))
+				return RebarMeshTypeEnum.BENT_MESH;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct RebarMeshSpacingMethodEnum
+    public enum RebarMeshSpacingMethodEnum
     {
-       
+			SPACING_TYPE_UNDEFINED,
+			SPACING_TYPE_SAME_DISTANCE,
+			SPACING_TYPE_MULTIPLE_VARYING_DISTANCES        
     }
 
     internal static class RebarMeshSpacingMethodEnum_
     {
-        public static dynamic GetTSObject(RebarMeshSpacingMethodEnum dynStruct)
+        public static dynamic GetTSObject(RebarMeshSpacingMethodEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshSpacingMethodEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RebarMeshSpacingMethodEnum.SPACING_TYPE_UNDEFINED:
+					return System.Enum.Parse(tsType, "SPACING_TYPE_UNDEFINED");
+				case RebarMeshSpacingMethodEnum.SPACING_TYPE_SAME_DISTANCE:
+					return System.Enum.Parse(tsType, "SPACING_TYPE_SAME_DISTANCE");
+				case RebarMeshSpacingMethodEnum.SPACING_TYPE_MULTIPLE_VARYING_DISTANCES:
+					return System.Enum.Parse(tsType, "SPACING_TYPE_MULTIPLE_VARYING_DISTANCES");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RebarMeshSpacingMethodEnum FromTSObject(dynamic tsStruct)
+        public static RebarMeshSpacingMethodEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RebarMeshSpacingMethodEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("SPACING_TYPE_UNDEFINED", System.StringComparison.InvariantCulture))
+				return RebarMeshSpacingMethodEnum.SPACING_TYPE_UNDEFINED;
+			else if (tsEnumValue.Equals("SPACING_TYPE_SAME_DISTANCE", System.StringComparison.InvariantCulture))
+				return RebarMeshSpacingMethodEnum.SPACING_TYPE_SAME_DISTANCE;
+			else if (tsEnumValue.Equals("SPACING_TYPE_MULTIPLE_VARYING_DISTANCES", System.StringComparison.InvariantCulture))
+				return RebarMeshSpacingMethodEnum.SPACING_TYPE_MULTIPLE_VARYING_DISTANCES;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct RebarMeshCrossBarLocationEnum
+    public enum RebarMeshCrossBarLocationEnum
     {
-       
+			LOCATION_TYPE_ABOVE,
+			LOCATION_TYPE_BELOW,
+			LOCATION_TYPE_UNDEFINED        
     }
 
     internal static class RebarMeshCrossBarLocationEnum_
     {
-        public static dynamic GetTSObject(RebarMeshCrossBarLocationEnum dynStruct)
+        public static dynamic GetTSObject(RebarMeshCrossBarLocationEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshCrossBarLocationEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_ABOVE:
+					return System.Enum.Parse(tsType, "LOCATION_TYPE_ABOVE");
+				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_BELOW:
+					return System.Enum.Parse(tsType, "LOCATION_TYPE_BELOW");
+				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_UNDEFINED:
+					return System.Enum.Parse(tsType, "LOCATION_TYPE_UNDEFINED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static RebarMeshCrossBarLocationEnum FromTSObject(dynamic tsStruct)
+        public static RebarMeshCrossBarLocationEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new RebarMeshCrossBarLocationEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOCATION_TYPE_ABOVE", System.StringComparison.InvariantCulture))
+				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_ABOVE;
+			else if (tsEnumValue.Equals("LOCATION_TYPE_BELOW", System.StringComparison.InvariantCulture))
+				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_BELOW;
+			else if (tsEnumValue.Equals("LOCATION_TYPE_UNDEFINED", System.StringComparison.InvariantCulture))
+				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_UNDEFINED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarMesh_
+    {
+        public static dynamic GetTSObject(RebarMesh dynObject)
+        {
+            return dynObject.rebarmesh;
+        }
+
+        public static RebarMesh FromTSObject(dynamic tsObject)
+        {
+            return new RebarMesh(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,25 +9,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.GeometrySection Current
 		{
-			get => new Dynamic.Tekla.Structures.Model.GeometrySection(geometrysectionenumerator.Current);
-			set { geometrysectionenumerator.Current = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.GeometrySection_.FromTSObject(geometrysectionenumerator.Current);
+			set { geometrysectionenumerator.Current = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(value); }
 		}
 
         
 
-        dynamic geometrysectionenumerator;
+        internal dynamic geometrysectionenumerator;
         
         public GeometrySectionEnumerator()
         {
             this.geometrysectionenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySectionEnumerator");
         }
 
-        public GeometrySectionEnumerator(dynamic tsObject)
+        internal GeometrySectionEnumerator(dynamic tsObject)
         {
             this.geometrysectionenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => geometrysectionenumerator;
 
 		public System.Boolean MoveNext()
 			 => geometrysectionenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class GeometrySectionEnumerator_
+    {
+        public static dynamic GetTSObject(GeometrySectionEnumerator dynObject)
+        {
+            return dynObject.geometrysectionenumerator;
+        }
+
+        public static GeometrySectionEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new GeometrySectionEnumerator(tsObject);
+        }
+    }
+
 
 }
     

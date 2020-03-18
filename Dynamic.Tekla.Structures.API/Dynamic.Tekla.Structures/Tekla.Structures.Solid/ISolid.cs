@@ -9,43 +9,55 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(isolid.MinimumPoint);
-			set { isolid.MinimumPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(isolid.MinimumPoint);
+			set { isolid.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(isolid.MaximumPoint);
-			set { isolid.MaximumPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(isolid.MaximumPoint);
+			set { isolid.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        dynamic isolid;
+        internal dynamic isolid;
         
         private ISolid()
         {
             this.isolid =  TSActivator.CreateInstance("Tekla.Structures.Solid.ISolid");
         }
 
-        public ISolid(dynamic tsObject)
+        internal ISolid(dynamic tsObject)
         {
             this.isolid = tsObject;
         }
 
-        internal dynamic GetTSObject() => isolid;
-
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
-			 => new Dynamic.Tekla.Structures.Solid.FaceEnumerator(isolid.GetFaceEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(isolid.GetFaceEnumerator());
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
-			 => new Dynamic.Tekla.Structures.Solid.EdgeEnumerator(isolid.GetEdgeEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(isolid.GetEdgeEnumerator());
 
 
 
 
 
     }
+
+    internal static class ISolid_
+    {
+        public static dynamic GetTSObject(ISolid dynObject)
+        {
+            return dynObject.isolid;
+        }
+
+        public static ISolid FromTSObject(dynamic tsObject)
+        {
+            return new ISolid(tsObject);
+        }
+    }
+
 
 }
     

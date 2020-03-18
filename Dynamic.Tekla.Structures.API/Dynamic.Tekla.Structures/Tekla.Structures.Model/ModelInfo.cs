@@ -45,25 +45,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelinfo;
+        internal dynamic modelinfo;
         
         public ModelInfo()
         {
             this.modelinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelInfo");
         }
 
-        public ModelInfo(dynamic tsObject)
+        internal ModelInfo(dynamic tsObject)
         {
             this.modelinfo = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelinfo;
 
 
 
 
 
     }
+
+    internal static class ModelInfo_
+    {
+        public static dynamic GetTSObject(ModelInfo dynObject)
+        {
+            return dynObject.modelinfo;
+        }
+
+        public static ModelInfo FromTSObject(dynamic tsObject)
+        {
+            return new ModelInfo(tsObject);
+        }
+    }
+
 
 }
     

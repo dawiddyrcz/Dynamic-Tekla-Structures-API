@@ -9,34 +9,46 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
 		{
-			get => new Dynamic.Tekla.Structures.Filtering.FilterExpression(filter.FilterExpression);
-			set { filter.FilterExpression = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(filter.FilterExpression);
+			set { filter.FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value); }
 		}
 
         
 
-        dynamic filter;
+        internal dynamic filter;
         
         public Filter()
         {
             this.filter =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Filter");
         }
 
-        public Filter(dynamic tsObject)
+        internal Filter(dynamic tsObject)
         {
             this.filter = tsObject;
         }
 
-        internal dynamic GetTSObject() => filter;
-
 		public System.String CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType, System.String FullFileName)
-			 => filter.CreateFile(FilterExpressionFileType.GetTSObject(), FullFileName);
+			 => filter.CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType_.GetTSObject(FilterExpressionFileType), FullFileName);
 
 
 
 
 
     }
+
+    internal static class Filter_
+    {
+        public static dynamic GetTSObject(Filter dynObject)
+        {
+            return dynObject.filter;
+        }
+
+        public static Filter FromTSObject(dynamic tsObject)
+        {
+            return new Filter(tsObject);
+        }
+    }
+
 
 }
     

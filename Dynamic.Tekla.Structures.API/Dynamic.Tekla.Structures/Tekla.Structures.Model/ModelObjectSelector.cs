@@ -9,49 +9,61 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelobjectselector;
+        internal dynamic modelobjectselector;
         
         public ModelObjectSelector()
         {
             this.modelobjectselector =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectSelector");
         }
 
-        public ModelObjectSelector(dynamic tsObject)
+        internal ModelObjectSelector(dynamic tsObject)
         {
             this.modelobjectselector = tsObject;
         }
 
-        internal dynamic GetTSObject() => modelobjectselector;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetAllObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetAllObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetAllObjectsWithType(Enum.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetAllObjectsWithType(Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum)));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(System.Type TypeFilter)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetAllObjectsWithType(TypeFilter));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetAllObjectsWithType(TypeFilter));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point MinPoint, Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetObjectsByBoundingBox(MinPoint.GetTSObject(), MaxPoint.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint)));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetEnumerator()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetEnumerator());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetEnumerator());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilterName(System.String FilterName)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetObjectsByFilterName(FilterName));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetObjectsByFilterName(FilterName));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFilteredObjectsWithType(Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum, System.String FilterName)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetFilteredObjectsWithType(Enum.GetTSObject(), FilterName));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetFilteredObjectsWithType(Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum), FilterName));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilter(Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(modelobjectselector.GetObjectsByFilter(FilterExpression.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetObjectsByFilter(Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression)));
 
 
 
 
 
     }
+
+    internal static class ModelObjectSelector_
+    {
+        public static dynamic GetTSObject(ModelObjectSelector dynObject)
+        {
+            return dynObject.modelobjectselector;
+        }
+
+        public static ModelObjectSelector FromTSObject(dynamic tsObject)
+        {
+            return new ModelObjectSelector(tsObject);
+        }
+    }
+
 
 }
     

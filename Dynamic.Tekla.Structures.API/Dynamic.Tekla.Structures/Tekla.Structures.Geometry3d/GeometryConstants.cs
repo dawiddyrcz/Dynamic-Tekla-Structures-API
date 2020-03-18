@@ -9,25 +9,37 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic geometryconstants;
+        internal dynamic geometryconstants;
         
         public GeometryConstants()
         {
             this.geometryconstants =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometryConstants");
         }
 
-        public GeometryConstants(dynamic tsObject)
+        internal GeometryConstants(dynamic tsObject)
         {
             this.geometryconstants = tsObject;
         }
-
-        internal dynamic GetTSObject() => geometryconstants;
 
 
 
 
 
     }
+
+    internal static class GeometryConstants_
+    {
+        public static dynamic GetTSObject(GeometryConstants dynObject)
+        {
+            return dynObject.geometryconstants;
+        }
+
+        public static GeometryConstants FromTSObject(dynamic tsObject)
+        {
+            return new GeometryConstants(tsObject);
+        }
+    }
+
 
 }
     

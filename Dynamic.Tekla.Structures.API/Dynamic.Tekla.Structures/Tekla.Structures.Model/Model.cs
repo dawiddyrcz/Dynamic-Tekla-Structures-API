@@ -9,46 +9,44 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic model;
+        internal dynamic model;
         
         public Model()
         {
             this.model =  TSActivator.CreateInstance("Tekla.Structures.Model.Model");
         }
 
-        public Model(dynamic tsObject)
+        internal Model(dynamic tsObject)
         {
             this.model = tsObject;
         }
-
-        internal dynamic GetTSObject() => model;
 
 		public System.Boolean GetConnectionStatus()
 			 => model.GetConnectionStatus();
 
 		public Dynamic.Tekla.Structures.Model.ModelInfo GetInfo()
-			 => new Dynamic.Tekla.Structures.Model.ModelInfo(model.GetInfo());
+			 => Dynamic.Tekla.Structures.Model.ModelInfo_.FromTSObject(model.GetInfo());
 
 		public Dynamic.Tekla.Structures.Model.ProjectInfo GetProjectInfo()
-			 => new Dynamic.Tekla.Structures.Model.ProjectInfo(model.GetProjectInfo());
+			 => Dynamic.Tekla.Structures.Model.ProjectInfo_.FromTSObject(model.GetProjectInfo());
 
 		public Dynamic.Tekla.Structures.Model.PhaseCollection GetPhases()
-			 => new Dynamic.Tekla.Structures.Model.PhaseCollection(model.GetPhases());
+			 => Dynamic.Tekla.Structures.Model.PhaseCollection_.FromTSObject(model.GetPhases());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectSelector GetModelObjectSelector()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectSelector(model.GetModelObjectSelector());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectSelector_.FromTSObject(model.GetModelObjectSelector());
 
 		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(model.SelectModelObject(ID.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(model.SelectModelObject(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID)));
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)
 			 => model.FetchModelObjects(Guids, SelectInstances);
 
 		public Dynamic.Tekla.Structures.Identifier GetIdentifierByGUID(System.String guid)
-			 => new Dynamic.Tekla.Structures.Identifier(model.GetIdentifierByGUID(guid));
+			 => Dynamic.Tekla.Structures.Identifier_.FromTSObject(model.GetIdentifierByGUID(guid));
 
 		public System.String GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier identifier)
-			 => model.GetGUIDByIdentifier(identifier.GetTSObject());
+			 => model.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
 
 		public System.Boolean CommitChanges()
 			 => model.CommitChanges();
@@ -57,16 +55,30 @@ namespace Dynamic.Tekla.Structures.Model
 			 => model.CommitChanges(Message);
 
 		public Dynamic.Tekla.Structures.Model.WorkPlaneHandler GetWorkPlaneHandler()
-			 => new Dynamic.Tekla.Structures.Model.WorkPlaneHandler(model.GetWorkPlaneHandler());
+			 => Dynamic.Tekla.Structures.Model.WorkPlaneHandler_.FromTSObject(model.GetWorkPlaneHandler());
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
-			 => new Dynamic.Tekla.Structures.Model.ClashCheckHandler(model.GetClashCheckHandler());
+			 => Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(model.GetClashCheckHandler());
 
 
 
 
 
     }
+
+    internal static class Model_
+    {
+        public static dynamic GetTSObject(Model dynObject)
+        {
+            return dynObject.model;
+        }
+
+        public static Model FromTSObject(dynamic tsObject)
+        {
+            return new Model(tsObject);
+        }
+    }
+
 
 }
     

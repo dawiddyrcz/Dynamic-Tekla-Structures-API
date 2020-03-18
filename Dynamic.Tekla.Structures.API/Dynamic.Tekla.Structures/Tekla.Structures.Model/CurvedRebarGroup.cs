@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => new Dynamic.Tekla.Structures.Model.Polygon(curvedrebargroup.Polygon);
-			set { curvedrebargroup.Polygon = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(curvedrebargroup.Polygon);
+			set { curvedrebargroup.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
 		}
 
 		public System.String Size
@@ -21,14 +21,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarHookData(curvedrebargroup.StartHook);
-			set { curvedrebargroup.StartHook = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(curvedrebargroup.StartHook);
+			set { curvedrebargroup.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarHookData(curvedrebargroup.EndHook);
-			set { curvedrebargroup.EndHook = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(curvedrebargroup.EndHook);
+			set { curvedrebargroup.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public System.Double FromPlaneOffset
@@ -52,13 +52,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum ExcludeType
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(curvedrebargroup.ExcludeType);
-			set { curvedrebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.FromTSObject(value); }
+			set { curvedrebargroup.ExcludeType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum SpacingType
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(curvedrebargroup.SpacingType);
-			set { curvedrebargroup.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.FromTSObject(value); }
+			set { curvedrebargroup.SpacingType = Dynamic.Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList Spacings
@@ -69,20 +69,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(curvedrebargroup.StartPoint);
-			set { curvedrebargroup.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(curvedrebargroup.StartPoint);
+			set { curvedrebargroup.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(curvedrebargroup.EndPoint);
-			set { curvedrebargroup.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(curvedrebargroup.EndPoint);
+			set { curvedrebargroup.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(curvedrebargroup.Father);
-			set { curvedrebargroup.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(curvedrebargroup.Father);
+			set { curvedrebargroup.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.String Grade
@@ -105,8 +105,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(curvedrebargroup.NumberingSeries);
-			set { curvedrebargroup.NumberingSeries = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(curvedrebargroup.NumberingSeries);
+			set { curvedrebargroup.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OnPlaneOffsets
@@ -118,7 +118,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(curvedrebargroup.StartPointOffsetType);
-			set { curvedrebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { curvedrebargroup.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
@@ -130,7 +130,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
 			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(curvedrebargroup.EndPointOffsetType);
-			set { curvedrebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(value); }
+			set { curvedrebargroup.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
@@ -148,7 +148,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Forming.DeformingType InputPointDeformingState
 		{
 			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(curvedrebargroup.InputPointDeformingState);
-			set { curvedrebargroup.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
+			set { curvedrebargroup.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -165,25 +165,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(curvedrebargroup.Identifier);
-			set { curvedrebargroup.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(curvedrebargroup.Identifier);
+			set { curvedrebargroup.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic curvedrebargroup;
+        internal dynamic curvedrebargroup;
         
         public CurvedRebarGroup()
         {
             this.curvedrebargroup =  TSActivator.CreateInstance("Tekla.Structures.Model.CurvedRebarGroup");
         }
 
-        public CurvedRebarGroup(dynamic tsObject)
+        internal CurvedRebarGroup(dynamic tsObject)
         {
             this.curvedrebargroup = tsObject;
         }
-
-        internal dynamic GetTSObject() => curvedrebargroup;
 
 		public System.Boolean Insert()
 			 => curvedrebargroup.Insert();
@@ -198,7 +196,7 @@ namespace Dynamic.Tekla.Structures.Model
 			 => curvedrebargroup.Delete();
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
-			 => curvedrebargroup.GetRebarGeometries(options.GetTSObject());
+			 => curvedrebargroup.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
 			 => curvedrebargroup.GetRebarGeometries(withHooks);
@@ -213,28 +211,28 @@ namespace Dynamic.Tekla.Structures.Model
 			 => curvedrebargroup.GetNumberOfRebars();
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebar(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(curvedrebargroup.GetSingleRebar(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(curvedrebargroup.GetSingleRebar(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebarWithoutClash(System.Int32 index, System.Boolean withHooks)
-			 => new Dynamic.Tekla.Structures.Model.RebarGeometry(curvedrebargroup.GetSingleRebarWithoutClash(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(curvedrebargroup.GetSingleRebarWithoutClash(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(curvedrebargroup.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(curvedrebargroup.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(curvedrebargroup.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(curvedrebargroup.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(curvedrebargroup.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(curvedrebargroup.GetFatherPourUnit());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(curvedrebargroup.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(curvedrebargroup.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(curvedrebargroup.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(curvedrebargroup.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(curvedrebargroup.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(curvedrebargroup.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => curvedrebargroup.GetAllUserProperties(values);
@@ -294,13 +292,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => curvedrebargroup.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(curvedrebargroup.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(curvedrebargroup.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => curvedrebargroup.SetPhase(phase.GetTSObject());
+			 => curvedrebargroup.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => curvedrebargroup.GetPhase(phase.GetTSObject());
+			 => curvedrebargroup.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => curvedrebargroup.SetLabel(label);
@@ -313,6 +311,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class CurvedRebarGroup_
+    {
+        public static dynamic GetTSObject(CurvedRebarGroup dynObject)
+        {
+            return dynObject.curvedrebargroup;
+        }
+
+        public static CurvedRebarGroup FromTSObject(dynamic tsObject)
+        {
+            return new CurvedRebarGroup(tsObject);
+        }
+    }
+
 
 }
     

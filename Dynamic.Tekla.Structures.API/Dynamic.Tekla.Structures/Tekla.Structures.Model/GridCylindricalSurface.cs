@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Arc CylinderBase
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Arc(gridcylindricalsurface.CylinderBase);
-			set { gridcylindricalsurface.CylinderBase = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(gridcylindricalsurface.CylinderBase);
+			set { gridcylindricalsurface.CylinderBase = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value); }
 		}
 
 		public System.Double CylinderHeight
@@ -21,8 +21,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.GridBase Parent
 		{
-			get => new Dynamic.Tekla.Structures.Model.GridBase(gridcylindricalsurface.Parent);
-			set { gridcylindricalsurface.Parent = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(gridcylindricalsurface.Parent);
+			set { gridcylindricalsurface.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
 		}
 
 		public System.String Label
@@ -87,25 +87,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(gridcylindricalsurface.Identifier);
-			set { gridcylindricalsurface.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(gridcylindricalsurface.Identifier);
+			set { gridcylindricalsurface.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic gridcylindricalsurface;
+        internal dynamic gridcylindricalsurface;
         
         public GridCylindricalSurface()
         {
             this.gridcylindricalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.GridCylindricalSurface");
         }
 
-        public GridCylindricalSurface(dynamic tsObject)
+        internal GridCylindricalSurface(dynamic tsObject)
         {
             this.gridcylindricalsurface = tsObject;
         }
-
-        internal dynamic GetTSObject() => gridcylindricalsurface;
 
 		public System.Boolean Modify()
 			 => gridcylindricalsurface.Modify();
@@ -120,13 +118,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => gridcylindricalsurface.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(gridcylindricalsurface.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridcylindricalsurface.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(gridcylindricalsurface.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(gridcylindricalsurface.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(gridcylindricalsurface.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridcylindricalsurface.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => gridcylindricalsurface.GetAllUserProperties(values);
@@ -186,13 +184,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => gridcylindricalsurface.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(gridcylindricalsurface.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(gridcylindricalsurface.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridcylindricalsurface.SetPhase(phase.GetTSObject());
+			 => gridcylindricalsurface.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridcylindricalsurface.GetPhase(phase.GetTSObject());
+			 => gridcylindricalsurface.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => gridcylindricalsurface.SetLabel(label);
@@ -205,6 +203,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class GridCylindricalSurface_
+    {
+        public static dynamic GetTSObject(GridCylindricalSurface dynObject)
+        {
+            return dynObject.gridcylindricalsurface;
+        }
+
+        public static GridCylindricalSurface FromTSObject(dynamic tsObject)
+        {
+            return new GridCylindricalSurface(tsObject);
+        }
+    }
+
 
 }
     

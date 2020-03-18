@@ -15,8 +15,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(assembly.AssemblyNumber);
-			set { assembly.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(assembly.AssemblyNumber);
+			set { assembly.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -33,43 +33,41 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(assembly.Identifier);
-			set { assembly.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(assembly.Identifier);
+			set { assembly.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic assembly;
+        internal dynamic assembly;
         
         public Assembly()
         {
             this.assembly =  TSActivator.CreateInstance("Tekla.Structures.Model.Assembly");
         }
 
-        public Assembly(dynamic tsObject)
+        internal Assembly(dynamic tsObject)
         {
             this.assembly = tsObject;
         }
 
-        internal dynamic GetTSObject() => assembly;
-
 		public Dynamic.Tekla.Structures.Model.ModelObject GetMainPart()
-			 => new Dynamic.Tekla.Structures.Model.ModelObject(assembly.GetMainPart());
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(assembly.GetMainPart());
 
 		public System.Boolean SetMainPart(Dynamic.Tekla.Structures.Model.Part Part)
-			 => assembly.SetMainPart(Part.GetTSObject());
+			 => assembly.SetMainPart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
 
 		public System.Collections.ArrayList GetSecondaries()
 			 => assembly.GetSecondaries();
 
 		public System.Boolean Add(Dynamic.Tekla.Structures.Model.IAssemblable Object)
-			 => assembly.Add(Object.GetTSObject());
+			 => assembly.Add(Dynamic.Tekla.Structures.Model.IAssemblable_.GetTSObject(Object));
 
 		public System.Boolean Add(System.Collections.ArrayList Assemblables)
 			 => assembly.Add(Assemblables);
 
 		public System.Boolean Remove(Dynamic.Tekla.Structures.Model.ModelObject Object)
-			 => assembly.Remove(Object.GetTSObject());
+			 => assembly.Remove(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object));
 
 		public System.Boolean Insert()
 			 => assembly.Insert();
@@ -84,34 +82,34 @@ namespace Dynamic.Tekla.Structures.Model
 			 => assembly.Delete();
 
 		public System.Boolean Add(Dynamic.Tekla.Structures.Model.Assembly Assembly)
-			 => assembly.Add(Assembly.GetTSObject());
+			 => assembly.Add(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(Assembly));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(assembly.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(assembly.GetAssembly());
 
 		public System.Collections.ArrayList GetSubAssemblies()
 			 => assembly.GetSubAssemblies();
 
 		public Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum GetAssemblyType()
-			 => new Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum(assembly.GetAssemblyType());
+			 => Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum_.FromTSObject(assembly.GetAssemblyType());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(assembly.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(assembly.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(assembly.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(assembly.GetFatherPourUnit());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Assembly AssemblyToCompare)
-			 => assembly.CompareTo(AssemblyToCompare.GetTSObject());
+			 => assembly.CompareTo(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(AssemblyToCompare));
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(assembly.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(assembly.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(assembly.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(assembly.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(assembly.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(assembly.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => assembly.GetAllUserProperties(values);
@@ -171,13 +169,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => assembly.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(assembly.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(assembly.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => assembly.SetPhase(phase.GetTSObject());
+			 => assembly.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => assembly.GetPhase(phase.GetTSObject());
+			 => assembly.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => assembly.SetLabel(label);
@@ -188,31 +186,77 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct AssemblyTypeEnum
+    public enum AssemblyTypeEnum
     {
-       
+			STEEL_ASSEMBLY,
+			PRECAST_ASSEMBLY,
+			IN_SITU_ASSEMBLY,
+			TIMBER_ASSEMBLY,
+			UNKNOWN_ASSEMBLY        
     }
 
     internal static class AssemblyTypeEnum_
     {
-        public static dynamic GetTSObject(AssemblyTypeEnum dynStruct)
+        public static dynamic GetTSObject(AssemblyTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AssemblyTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case AssemblyTypeEnum.STEEL_ASSEMBLY:
+					return System.Enum.Parse(tsType, "STEEL_ASSEMBLY");
+				case AssemblyTypeEnum.PRECAST_ASSEMBLY:
+					return System.Enum.Parse(tsType, "PRECAST_ASSEMBLY");
+				case AssemblyTypeEnum.IN_SITU_ASSEMBLY:
+					return System.Enum.Parse(tsType, "IN_SITU_ASSEMBLY");
+				case AssemblyTypeEnum.TIMBER_ASSEMBLY:
+					return System.Enum.Parse(tsType, "TIMBER_ASSEMBLY");
+				case AssemblyTypeEnum.UNKNOWN_ASSEMBLY:
+					return System.Enum.Parse(tsType, "UNKNOWN_ASSEMBLY");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static AssemblyTypeEnum FromTSObject(dynamic tsStruct)
+        public static AssemblyTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new AssemblyTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("STEEL_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.STEEL_ASSEMBLY;
+			else if (tsEnumValue.Equals("PRECAST_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.PRECAST_ASSEMBLY;
+			else if (tsEnumValue.Equals("IN_SITU_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.IN_SITU_ASSEMBLY;
+			else if (tsEnumValue.Equals("TIMBER_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.TIMBER_ASSEMBLY;
+			else if (tsEnumValue.Equals("UNKNOWN_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.UNKNOWN_ASSEMBLY;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class Assembly_
+    {
+        public static dynamic GetTSObject(Assembly dynObject)
+        {
+            return dynObject.assembly;
+        }
+
+        public static Assembly FromTSObject(dynamic tsObject)
+        {
+            return new Assembly(tsObject);
+        }
+    }
+
 
 }
     

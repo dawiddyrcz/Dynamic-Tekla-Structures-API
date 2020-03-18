@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(polycurve.StartPoint);
-			set { polycurve.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(polycurve.StartPoint);
+			set { polycurve.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(polycurve.EndPoint);
-			set { polycurve.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(polycurve.EndPoint);
+			set { polycurve.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double Length
@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic polycurve;
+        internal dynamic polycurve;
         
         public Polycurve()
         {
             this.polycurve =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Polycurve");
         }
 
-        public Polycurve(dynamic tsObject)
+        internal Polycurve(dynamic tsObject)
         {
             this.polycurve = tsObject;
         }
-
-        internal dynamic GetTSObject() => polycurve;
 
 
 
 
 
     }
+
+    internal static class Polycurve_
+    {
+        public static dynamic GetTSObject(Polycurve dynObject)
+        {
+            return dynObject.polycurve;
+        }
+
+        public static Polycurve FromTSObject(dynamic tsObject)
+        {
+            return new Polycurve(tsObject);
+        }
+    }
+
 
 }
     

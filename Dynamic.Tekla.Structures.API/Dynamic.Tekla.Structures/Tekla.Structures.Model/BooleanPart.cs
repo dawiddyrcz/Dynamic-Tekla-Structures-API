@@ -10,19 +10,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(booleanpart.Type);
-			set { booleanpart.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(value); }
+			set { booleanpart.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part OperativePart
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(booleanpart.OperativePart);
-			set { booleanpart.OperativePart = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(booleanpart.OperativePart);
+			set { booleanpart.OperativePart = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(booleanpart.Father);
-			set { booleanpart.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(booleanpart.Father);
+			set { booleanpart.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -39,28 +39,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(booleanpart.Identifier);
-			set { booleanpart.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(booleanpart.Identifier);
+			set { booleanpart.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic booleanpart;
+        internal dynamic booleanpart;
         
         public BooleanPart()
         {
             this.booleanpart =  TSActivator.CreateInstance("Tekla.Structures.Model.BooleanPart");
         }
 
-        public BooleanPart(dynamic tsObject)
+        internal BooleanPart(dynamic tsObject)
         {
             this.booleanpart = tsObject;
         }
 
-        internal dynamic GetTSObject() => booleanpart;
-
 		public System.Boolean SetOperativePart(Dynamic.Tekla.Structures.Model.Part Part)
-			 => booleanpart.SetOperativePart(Part.GetTSObject());
+			 => booleanpart.SetOperativePart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
 
 		public System.Boolean Insert()
 			 => booleanpart.Insert();
@@ -75,13 +73,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => booleanpart.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(booleanpart.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(booleanpart.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(booleanpart.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(booleanpart.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(booleanpart.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(booleanpart.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => booleanpart.GetAllUserProperties(values);
@@ -141,13 +139,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => booleanpart.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(booleanpart.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(booleanpart.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => booleanpart.SetPhase(phase.GetTSObject());
+			 => booleanpart.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => booleanpart.GetPhase(phase.GetTSObject());
+			 => booleanpart.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => booleanpart.SetLabel(label);
@@ -158,31 +156,67 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct BooleanTypeEnum
+    public enum BooleanTypeEnum
     {
-       
+			BOOLEAN_ADD,
+			BOOLEAN_CUT,
+			BOOLEAN_WELDPREP        
     }
 
     internal static class BooleanTypeEnum_
     {
-        public static dynamic GetTSObject(BooleanTypeEnum dynStruct)
+        public static dynamic GetTSObject(BooleanTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BooleanTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BooleanTypeEnum.BOOLEAN_ADD:
+					return System.Enum.Parse(tsType, "BOOLEAN_ADD");
+				case BooleanTypeEnum.BOOLEAN_CUT:
+					return System.Enum.Parse(tsType, "BOOLEAN_CUT");
+				case BooleanTypeEnum.BOOLEAN_WELDPREP:
+					return System.Enum.Parse(tsType, "BOOLEAN_WELDPREP");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BooleanTypeEnum FromTSObject(dynamic tsStruct)
+        public static BooleanTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BooleanTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BOOLEAN_ADD", System.StringComparison.InvariantCulture))
+				return BooleanTypeEnum.BOOLEAN_ADD;
+			else if (tsEnumValue.Equals("BOOLEAN_CUT", System.StringComparison.InvariantCulture))
+				return BooleanTypeEnum.BOOLEAN_CUT;
+			else if (tsEnumValue.Equals("BOOLEAN_WELDPREP", System.StringComparison.InvariantCulture))
+				return BooleanTypeEnum.BOOLEAN_WELDPREP;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class BooleanPart_
+    {
+        public static dynamic GetTSObject(BooleanPart dynObject)
+        {
+            return dynObject.booleanpart;
+        }
+
+        public static BooleanPart FromTSObject(dynamic tsObject)
+        {
+            return new BooleanPart(tsObject);
+        }
+    }
+
 
 }
     

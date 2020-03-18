@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic invalidcurvecombinationexception;
+        internal dynamic invalidcurvecombinationexception;
         
         public InvalidCurveCombinationException()
         {
             this.invalidcurvecombinationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidCurveCombinationException");
         }
 
-        public InvalidCurveCombinationException(dynamic tsObject)
+        internal InvalidCurveCombinationException(dynamic tsObject)
         {
             this.invalidcurvecombinationexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => invalidcurvecombinationexception;
 
 		public System.Exception GetBaseException()
 			 => invalidcurvecombinationexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class InvalidCurveCombinationException_
+    {
+        public static dynamic GetTSObject(InvalidCurveCombinationException dynObject)
+        {
+            return dynObject.invalidcurvecombinationexception;
+        }
+
+        public static InvalidCurveCombinationException FromTSObject(dynamic tsObject)
+        {
+            return new InvalidCurveCombinationException(tsObject);
+        }
+    }
+
 
 }
     

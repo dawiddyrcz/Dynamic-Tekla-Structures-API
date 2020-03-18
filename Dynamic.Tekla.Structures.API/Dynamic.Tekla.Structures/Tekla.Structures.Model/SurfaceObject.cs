@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Polymesh
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.FacetedBrep(surfaceobject.Polymesh);
-			set { surfaceobject.Polymesh = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(surfaceobject.Polymesh);
+			set { surfaceobject.Polymesh = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value); }
 		}
 
 		public System.String Class
@@ -39,8 +39,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(surfaceobject.Father);
-			set { surfaceobject.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(surfaceobject.Father);
+			set { surfaceobject.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -57,25 +57,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(surfaceobject.Identifier);
-			set { surfaceobject.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(surfaceobject.Identifier);
+			set { surfaceobject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic surfaceobject;
+        internal dynamic surfaceobject;
         
         public SurfaceObject()
         {
             this.surfaceobject =  TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceObject");
         }
 
-        public SurfaceObject(dynamic tsObject)
+        internal SurfaceObject(dynamic tsObject)
         {
             this.surfaceobject = tsObject;
         }
-
-        internal dynamic GetTSObject() => surfaceobject;
 
 		public System.Boolean Insert()
 			 => surfaceobject.Insert();
@@ -90,13 +88,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => surfaceobject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(surfaceobject.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfaceobject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(surfaceobject.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(surfaceobject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(surfaceobject.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfaceobject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => surfaceobject.GetAllUserProperties(values);
@@ -156,13 +154,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => surfaceobject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(surfaceobject.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(surfaceobject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfaceobject.SetPhase(phase.GetTSObject());
+			 => surfaceobject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfaceobject.GetPhase(phase.GetTSObject());
+			 => surfaceobject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => surfaceobject.SetLabel(label);
@@ -175,6 +173,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class SurfaceObject_
+    {
+        public static dynamic GetTSObject(SurfaceObject dynObject)
+        {
+            return dynObject.surfaceobject;
+        }
+
+        public static SurfaceObject FromTSObject(dynamic tsObject)
+        {
+            return new SurfaceObject(tsObject);
+        }
+    }
+
 
 }
     

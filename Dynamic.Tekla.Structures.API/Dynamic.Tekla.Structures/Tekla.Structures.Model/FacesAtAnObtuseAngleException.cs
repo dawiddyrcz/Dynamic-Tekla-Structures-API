@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic facesatanobtuseangleexception;
+        internal dynamic facesatanobtuseangleexception;
         
         public FacesAtAnObtuseAngleException()
         {
             this.facesatanobtuseangleexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacesAtAnObtuseAngleException");
         }
 
-        public FacesAtAnObtuseAngleException(dynamic tsObject)
+        internal FacesAtAnObtuseAngleException(dynamic tsObject)
         {
             this.facesatanobtuseangleexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => facesatanobtuseangleexception;
 
 		public System.Exception GetBaseException()
 			 => facesatanobtuseangleexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class FacesAtAnObtuseAngleException_
+    {
+        public static dynamic GetTSObject(FacesAtAnObtuseAngleException dynObject)
+        {
+            return dynObject.facesatanobtuseangleexception;
+        }
+
+        public static FacesAtAnObtuseAngleException FromTSObject(dynamic tsObject)
+        {
+            return new FacesAtAnObtuseAngleException(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry Geometry
 		{
-			get => new Dynamic.Tekla.Structures.Model.ConnectiveGeometry(bentplate.Geometry);
-			set { bentplate.Geometry = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(bentplate.Geometry);
+			set { bentplate.Geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value); }
 		}
 
 		public System.Double Thickness
@@ -21,32 +21,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(bentplate.Profile);
-			set { bentplate.Profile = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(bentplate.Profile);
+			set { bentplate.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(bentplate.Material);
-			set { bentplate.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(bentplate.Material);
+			set { bentplate.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
 		{
-			get => new Dynamic.Tekla.Structures.Model.DeformingData(bentplate.DeformingData);
-			set { bentplate.DeformingData = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(bentplate.DeformingData);
+			set { bentplate.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(bentplate.PartNumber);
-			set { bentplate.PartNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(bentplate.PartNumber);
+			set { bentplate.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(bentplate.AssemblyNumber);
-			set { bentplate.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(bentplate.AssemblyNumber);
+			set { bentplate.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
 			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(bentplate.CastUnitType);
-			set { bentplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
+			set { bentplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(bentplate.Position);
-			set { bentplate.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(bentplate.Position);
+			set { bentplate.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -99,25 +99,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(bentplate.Identifier);
-			set { bentplate.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(bentplate.Identifier);
+			set { bentplate.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic bentplate;
+        internal dynamic bentplate;
         
         public BentPlate()
         {
             this.bentplate =  TSActivator.CreateInstance("Tekla.Structures.Model.BentPlate");
         }
 
-        public BentPlate(dynamic tsObject)
+        internal BentPlate(dynamic tsObject)
         {
             this.bentplate = tsObject;
         }
-
-        internal dynamic GetTSObject() => bentplate;
 
 		public System.Boolean Insert()
 			 => bentplate.Insert();
@@ -132,16 +130,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => bentplate.Modify();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(bentplate.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(bentplate.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-			 => new Dynamic.Tekla.Structures.Model.Solid(bentplate.GetSolid(solidCreationType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(bentplate.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-			 => new Dynamic.Tekla.Structures.Model.Solid(bentplate.GetSolid(formingStates.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(bentplate.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(bentplate.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(bentplate.GetAssembly());
 
 		public System.String GetPartMark()
 			 => bentplate.GetPartMark();
@@ -153,43 +151,43 @@ namespace Dynamic.Tekla.Structures.Model
 			 => bentplate.GetReferenceLine(withCutsFittings);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetComponents());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetBooleans());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetBooleans());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetBolts());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetBolts());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetWelds());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetWelds());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetReinforcements());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetReinforcements());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetSurfaceTreatments());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetSurfaceTreatments());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetSurfaceObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetSurfaceObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetPours());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetPours());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-			 => bentplate.CompareTo(partToCompare.GetTSObject());
+			 => bentplate.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(bentplate.GetDSTVCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(bentplate.GetDSTVCoordinateSystem());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(bentplate.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(bentplate.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(bentplate.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(bentplate.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => bentplate.GetAllUserProperties(values);
@@ -249,13 +247,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => bentplate.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(bentplate.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(bentplate.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => bentplate.SetPhase(phase.GetTSObject());
+			 => bentplate.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => bentplate.GetPhase(phase.GetTSObject());
+			 => bentplate.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => bentplate.SetLabel(label);
@@ -266,31 +264,62 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct BendShape
+    public enum BendShape
     {
-       
+			Cylindrical,
+			Conical        
     }
 
     internal static class BendShape_
     {
-        public static dynamic GetTSObject(BendShape dynStruct)
+        public static dynamic GetTSObject(BendShape dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BendShape");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BendShape.Cylindrical:
+					return System.Enum.Parse(tsType, "Cylindrical");
+				case BendShape.Conical:
+					return System.Enum.Parse(tsType, "Conical");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BendShape FromTSObject(dynamic tsStruct)
+        public static BendShape FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BendShape();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("Cylindrical", System.StringComparison.InvariantCulture))
+				return BendShape.Cylindrical;
+			else if (tsEnumValue.Equals("Conical", System.StringComparison.InvariantCulture))
+				return BendShape.Conical;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class BentPlate_
+    {
+        public static dynamic GetTSObject(BentPlate dynObject)
+        {
+            return dynObject.bentplate;
+        }
+
+        public static BentPlate FromTSObject(dynamic tsObject)
+        {
+            return new BentPlate(tsObject);
+        }
+    }
+
 
 }
     

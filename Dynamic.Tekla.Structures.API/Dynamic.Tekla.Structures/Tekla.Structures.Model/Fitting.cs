@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Plane Plane
 		{
-			get => new Dynamic.Tekla.Structures.Model.Plane(fitting.Plane);
-			set { fitting.Plane = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(fitting.Plane);
+			set { fitting.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(fitting.Father);
-			set { fitting.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(fitting.Father);
+			set { fitting.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -33,25 +33,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(fitting.Identifier);
-			set { fitting.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(fitting.Identifier);
+			set { fitting.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic fitting;
+        internal dynamic fitting;
         
         public Fitting()
         {
             this.fitting =  TSActivator.CreateInstance("Tekla.Structures.Model.Fitting");
         }
 
-        public Fitting(dynamic tsObject)
+        internal Fitting(dynamic tsObject)
         {
             this.fitting = tsObject;
         }
-
-        internal dynamic GetTSObject() => fitting;
 
 		public System.Boolean Insert()
 			 => fitting.Insert();
@@ -66,13 +64,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => fitting.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(fitting.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(fitting.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(fitting.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(fitting.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(fitting.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(fitting.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => fitting.GetAllUserProperties(values);
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => fitting.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(fitting.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(fitting.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => fitting.SetPhase(phase.GetTSObject());
+			 => fitting.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => fitting.GetPhase(phase.GetTSObject());
+			 => fitting.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => fitting.SetLabel(label);
@@ -151,6 +149,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Fitting_
+    {
+        public static dynamic GetTSObject(Fitting dynObject)
+        {
+            return dynObject.fitting;
+        }
+
+        public static Fitting FromTSObject(dynamic tsObject)
+        {
+            return new Fitting(tsObject);
+        }
+    }
+
 
 }
     

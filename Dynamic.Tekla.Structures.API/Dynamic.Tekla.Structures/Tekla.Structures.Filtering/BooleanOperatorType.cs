@@ -4,25 +4,52 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public struct BooleanOperatorType
+    public enum BooleanOperatorType
     {
-       
+			IS_EQUAL,
+			IS_NOT_EQUAL,
+			BOOLEAN_OR,
+			BOOLEAN_AND        
     }
 
     internal static class BooleanOperatorType_
     {
-        public static dynamic GetTSObject(BooleanOperatorType dynStruct)
+        public static dynamic GetTSObject(BooleanOperatorType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanOperatorType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BooleanOperatorType.IS_EQUAL:
+					return System.Enum.Parse(tsType, "IS_EQUAL");
+				case BooleanOperatorType.IS_NOT_EQUAL:
+					return System.Enum.Parse(tsType, "IS_NOT_EQUAL");
+				case BooleanOperatorType.BOOLEAN_OR:
+					return System.Enum.Parse(tsType, "BOOLEAN_OR");
+				case BooleanOperatorType.BOOLEAN_AND:
+					return System.Enum.Parse(tsType, "BOOLEAN_AND");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BooleanOperatorType FromTSObject(dynamic tsStruct)
+        public static BooleanOperatorType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BooleanOperatorType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("IS_EQUAL", System.StringComparison.InvariantCulture))
+				return BooleanOperatorType.IS_EQUAL;
+			else if (tsEnumValue.Equals("IS_NOT_EQUAL", System.StringComparison.InvariantCulture))
+				return BooleanOperatorType.IS_NOT_EQUAL;
+			else if (tsEnumValue.Equals("BOOLEAN_OR", System.StringComparison.InvariantCulture))
+				return BooleanOperatorType.BOOLEAN_OR;
+			else if (tsEnumValue.Equals("BOOLEAN_AND", System.StringComparison.InvariantCulture))
+				return BooleanOperatorType.BOOLEAN_AND;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 

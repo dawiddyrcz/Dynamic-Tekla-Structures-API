@@ -15,28 +15,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic igeometrynode;
+        internal dynamic igeometrynode;
         
         private IGeometryNode()
         {
             this.igeometrynode =  TSActivator.CreateInstance("Tekla.Structures.Model.IGeometryNode");
         }
 
-        public IGeometryNode(dynamic tsObject)
+        internal IGeometryNode(dynamic tsObject)
         {
             this.igeometrynode = tsObject;
         }
 
-        internal dynamic GetTSObject() => igeometrynode;
-
-		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => igeometrynode.AcceptVisitor(visitor.GetTSObject());
-
-
+	
 
 
 
     }
+
+    internal static class IGeometryNode_
+    {
+        public static dynamic GetTSObject(IGeometryNode dynObject)
+        {
+            return dynObject.igeometrynode;
+        }
+
+        public static IGeometryNode FromTSObject(dynamic tsObject)
+        {
+            return new IGeometryNode(tsObject);
+        }
+    }
+
 
 }
     

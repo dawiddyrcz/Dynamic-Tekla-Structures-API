@@ -15,34 +15,46 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic polyline;
+        internal dynamic polyline;
         
         public PolyLine()
         {
             this.polyline =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine");
         }
 
-        public PolyLine(dynamic tsObject)
+        internal PolyLine(dynamic tsObject)
         {
             this.polyline = tsObject;
         }
-
-        internal dynamic GetTSObject() => polyline;
 
 		public System.Double Length()
 			 => polyline.Length();
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => polyline.op_Equality(PolyLine1.GetTSObject(), PolyLine2.GetTSObject());
+			 => polyline.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => polyline.op_Inequality(PolyLine1.GetTSObject(), PolyLine2.GetTSObject());
+			 => polyline.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
 
 
 
 
 
     }
+
+    internal static class PolyLine_
+    {
+        public static dynamic GetTSObject(PolyLine dynObject)
+        {
+            return dynObject.polyline;
+        }
+
+        public static PolyLine FromTSObject(dynamic tsObject)
+        {
+            return new PolyLine(tsObject);
+        }
+    }
+
 
 }
     

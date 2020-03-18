@@ -9,26 +9,26 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.yDir);
-			set { parametricobject_objectboundingbox.yDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(parametricobject_objectboundingbox.yDir);
+			set { parametricobject_objectboundingbox.yDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(parametricobject_objectboundingbox.Origin);
-			set { parametricobject_objectboundingbox.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(parametricobject_objectboundingbox.Origin);
+			set { parametricobject_objectboundingbox.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.xDir);
-			set { parametricobject_objectboundingbox.xDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(parametricobject_objectboundingbox.xDir);
+			set { parametricobject_objectboundingbox.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_objectboundingbox.Extrusion);
-			set { parametricobject_objectboundingbox.Extrusion = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(parametricobject_objectboundingbox.Extrusion);
+			set { parametricobject_objectboundingbox.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
@@ -57,25 +57,37 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic parametricobject_objectboundingbox;
+        internal dynamic parametricobject_objectboundingbox;
         
         public ParametricObject_ObjectBoundingBox()
         {
             this.parametricobject_objectboundingbox =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_ObjectBoundingBox");
         }
 
-        public ParametricObject_ObjectBoundingBox(dynamic tsObject)
+        internal ParametricObject_ObjectBoundingBox(dynamic tsObject)
         {
             this.parametricobject_objectboundingbox = tsObject;
         }
-
-        internal dynamic GetTSObject() => parametricobject_objectboundingbox;
 
 
 
 
 
     }
+
+    internal static class ParametricObject_ObjectBoundingBox_
+    {
+        public static dynamic GetTSObject(ParametricObject_ObjectBoundingBox dynObject)
+        {
+            return dynObject.parametricobject_objectboundingbox;
+        }
+
+        public static ParametricObject_ObjectBoundingBox FromTSObject(dynamic tsObject)
+        {
+            return new ParametricObject_ObjectBoundingBox(tsObject);
+        }
+    }
+
 
 }
     

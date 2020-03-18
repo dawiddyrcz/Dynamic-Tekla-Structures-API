@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic offset;
+        internal dynamic offset;
         
         public Offset()
         {
             this.offset =  TSActivator.CreateInstance("Tekla.Structures.Model.Offset");
         }
 
-        public Offset(dynamic tsObject)
+        internal Offset(dynamic tsObject)
         {
             this.offset = tsObject;
         }
-
-        internal dynamic GetTSObject() => offset;
 
 
 
 
 
     }
+
+    internal static class Offset_
+    {
+        public static dynamic GetTSObject(Offset dynObject)
+        {
+            return dynObject.offset;
+        }
+
+        public static Offset FromTSObject(dynamic tsObject)
+        {
+            return new Offset(tsObject);
+        }
+    }
+
 
 }
     

@@ -28,7 +28,7 @@ namespace Dynamic.Tekla.Structures
 		public Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
 		{
 			get => Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
-			set { componentoptions.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(value); }
+			set { componentoptions.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value); }
 		}
 
 		public System.String BoltStandard
@@ -99,48 +99,77 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic componentoptions;
+        internal dynamic componentoptions;
         
         public ComponentOptions()
         {
             this.componentoptions =  TSActivator.CreateInstance("Tekla.Structures.ComponentOptions");
         }
 
-        public ComponentOptions(dynamic tsObject)
+        internal ComponentOptions(dynamic tsObject)
         {
             this.componentoptions = tsObject;
         }
 
-        internal dynamic GetTSObject() => componentoptions;
 
 
 
-
-    public struct BoltEdgeDistanceReferenceEnum
+    public enum BoltEdgeDistanceReferenceEnum
     {
-       
+			BOLT_DIAMETER,
+			HOLE_DIAMETER        
     }
 
     internal static class BoltEdgeDistanceReferenceEnum_
     {
-        public static dynamic GetTSObject(BoltEdgeDistanceReferenceEnum dynStruct)
+        public static dynamic GetTSObject(BoltEdgeDistanceReferenceEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.BoltEdgeDistanceReferenceEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case BoltEdgeDistanceReferenceEnum.BOLT_DIAMETER:
+					return System.Enum.Parse(tsType, "BOLT_DIAMETER");
+				case BoltEdgeDistanceReferenceEnum.HOLE_DIAMETER:
+					return System.Enum.Parse(tsType, "HOLE_DIAMETER");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static BoltEdgeDistanceReferenceEnum FromTSObject(dynamic tsStruct)
+        public static BoltEdgeDistanceReferenceEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new BoltEdgeDistanceReferenceEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BOLT_DIAMETER", System.StringComparison.InvariantCulture))
+				return BoltEdgeDistanceReferenceEnum.BOLT_DIAMETER;
+			else if (tsEnumValue.Equals("HOLE_DIAMETER", System.StringComparison.InvariantCulture))
+				return BoltEdgeDistanceReferenceEnum.HOLE_DIAMETER;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ComponentOptions_
+    {
+        public static dynamic GetTSObject(ComponentOptions dynObject)
+        {
+            return dynObject.componentoptions;
+        }
+
+        public static ComponentOptions FromTSObject(dynamic tsObject)
+        {
+            return new ComponentOptions(tsObject);
+        }
+    }
+
 
 }
     

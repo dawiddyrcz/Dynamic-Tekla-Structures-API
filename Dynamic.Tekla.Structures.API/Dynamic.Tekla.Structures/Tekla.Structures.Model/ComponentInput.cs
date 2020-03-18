@@ -27,31 +27,29 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic componentinput;
+        internal dynamic componentinput;
         
         public ComponentInput()
         {
             this.componentinput =  TSActivator.CreateInstance("Tekla.Structures.Model.ComponentInput");
         }
 
-        public ComponentInput(dynamic tsObject)
+        internal ComponentInput(dynamic tsObject)
         {
             this.componentinput = tsObject;
         }
 
-        internal dynamic GetTSObject() => componentinput;
-
 		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => componentinput.AddOneInputPosition(P.GetTSObject());
+			 => componentinput.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
 
 		public System.Boolean AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point Position1, Dynamic.Tekla.Structures.Geometry3d.Point Position2)
-			 => componentinput.AddTwoInputPositions(Position1.GetTSObject(), Position2.GetTSObject());
+			 => componentinput.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
 
 		public System.Boolean AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon P)
-			 => componentinput.AddInputPolygon(P.GetTSObject());
+			 => componentinput.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
 
 		public System.Boolean AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => componentinput.AddInputObject(M.GetTSObject());
+			 => componentinput.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
 			 => componentinput.AddInputObjects(Objects);
@@ -64,6 +62,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ComponentInput_
+    {
+        public static dynamic GetTSObject(ComponentInput dynObject)
+        {
+            return dynObject.componentinput;
+        }
+
+        public static ComponentInput FromTSObject(dynamic tsObject)
+        {
+            return new ComponentInput(tsObject);
+        }
+    }
+
 
 }
     

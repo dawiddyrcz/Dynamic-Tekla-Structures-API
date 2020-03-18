@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(load.FatherId);
-			set { load.FatherId = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(load.FatherId);
+			set { load.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(load.Spanning);
-			set { load.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
+			set { load.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(load.PrimaryAxisDirection);
-			set { load.PrimaryAxisDirection = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(load.PrimaryAxisDirection);
+			set { load.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
@@ -52,13 +52,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(load.LoadAttachment);
-			set { load.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
+			set { load.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(load.PartNames);
-			set { load.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
+			set { load.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -87,8 +87,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => new Dynamic.Tekla.Structures.Model.LoadGroup(load.Group);
-			set { load.Group = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(load.Group);
+			set { load.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -105,25 +105,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(load.Identifier);
-			set { load.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(load.Identifier);
+			set { load.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic load;
+        internal dynamic load;
         
         private Load()
         {
             this.load =  TSActivator.CreateInstance("Tekla.Structures.Model.Load");
         }
 
-        public Load(dynamic tsObject)
+        internal Load(dynamic tsObject)
         {
             this.load = tsObject;
         }
-
-        internal dynamic GetTSObject() => load;
 
 		public System.Boolean Insert()
 			 => load.Insert();
@@ -138,13 +136,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => load.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(load.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(load.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(load.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(load.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(load.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(load.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => load.GetAllUserProperties(values);
@@ -204,13 +202,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => load.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(load.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(load.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => load.SetPhase(phase.GetTSObject());
+			 => load.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => load.GetPhase(phase.GetTSObject());
+			 => load.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => load.SetLabel(label);
@@ -221,77 +219,142 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct LoadSpanningEnum
+    public enum LoadSpanningEnum
     {
-       
+			LOAD_SPANNING_SINGLE,
+			LOAD_SPANNING_DOUBLE        
     }
 
     internal static class LoadSpanningEnum_
     {
-        public static dynamic GetTSObject(LoadSpanningEnum dynStruct)
+        public static dynamic GetTSObject(LoadSpanningEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadSpanningEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LoadSpanningEnum.LOAD_SPANNING_SINGLE:
+					return System.Enum.Parse(tsType, "LOAD_SPANNING_SINGLE");
+				case LoadSpanningEnum.LOAD_SPANNING_DOUBLE:
+					return System.Enum.Parse(tsType, "LOAD_SPANNING_DOUBLE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LoadSpanningEnum FromTSObject(dynamic tsStruct)
+        public static LoadSpanningEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LoadSpanningEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOAD_SPANNING_SINGLE", System.StringComparison.InvariantCulture))
+				return LoadSpanningEnum.LOAD_SPANNING_SINGLE;
+			else if (tsEnumValue.Equals("LOAD_SPANNING_DOUBLE", System.StringComparison.InvariantCulture))
+				return LoadSpanningEnum.LOAD_SPANNING_DOUBLE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct LoadAttachmentEnum
+    public enum LoadAttachmentEnum
     {
-       
+			LOAD_ATTACHMENT_ATTACH_TO_MEMBER,
+			LOAD_ATTACHMENT_DONT_ATTACH        
     }
 
     internal static class LoadAttachmentEnum_
     {
-        public static dynamic GetTSObject(LoadAttachmentEnum dynStruct)
+        public static dynamic GetTSObject(LoadAttachmentEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadAttachmentEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LoadAttachmentEnum.LOAD_ATTACHMENT_ATTACH_TO_MEMBER:
+					return System.Enum.Parse(tsType, "LOAD_ATTACHMENT_ATTACH_TO_MEMBER");
+				case LoadAttachmentEnum.LOAD_ATTACHMENT_DONT_ATTACH:
+					return System.Enum.Parse(tsType, "LOAD_ATTACHMENT_DONT_ATTACH");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LoadAttachmentEnum FromTSObject(dynamic tsStruct)
+        public static LoadAttachmentEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LoadAttachmentEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOAD_ATTACHMENT_ATTACH_TO_MEMBER", System.StringComparison.InvariantCulture))
+				return LoadAttachmentEnum.LOAD_ATTACHMENT_ATTACH_TO_MEMBER;
+			else if (tsEnumValue.Equals("LOAD_ATTACHMENT_DONT_ATTACH", System.StringComparison.InvariantCulture))
+				return LoadAttachmentEnum.LOAD_ATTACHMENT_DONT_ATTACH;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
-    public struct LoadPartNamesEnum
+    public enum LoadPartNamesEnum
     {
-       
+			LOAD_PART_NAMES_EXCLUDE,
+			LOAD_PART_NAMES_INCLUDE        
     }
 
     internal static class LoadPartNamesEnum_
     {
-        public static dynamic GetTSObject(LoadPartNamesEnum dynStruct)
+        public static dynamic GetTSObject(LoadPartNamesEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadPartNamesEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LoadPartNamesEnum.LOAD_PART_NAMES_EXCLUDE:
+					return System.Enum.Parse(tsType, "LOAD_PART_NAMES_EXCLUDE");
+				case LoadPartNamesEnum.LOAD_PART_NAMES_INCLUDE:
+					return System.Enum.Parse(tsType, "LOAD_PART_NAMES_INCLUDE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LoadPartNamesEnum FromTSObject(dynamic tsStruct)
+        public static LoadPartNamesEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LoadPartNamesEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOAD_PART_NAMES_EXCLUDE", System.StringComparison.InvariantCulture))
+				return LoadPartNamesEnum.LOAD_PART_NAMES_EXCLUDE;
+			else if (tsEnumValue.Equals("LOAD_PART_NAMES_INCLUDE", System.StringComparison.InvariantCulture))
+				return LoadPartNamesEnum.LOAD_PART_NAMES_INCLUDE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class Load_
+    {
+        public static dynamic GetTSObject(Load dynObject)
+        {
+            return dynObject.load;
+        }
+
+        public static Load FromTSObject(dynamic tsObject)
+        {
+            return new Load(tsObject);
+        }
+    }
+
 
 }
     

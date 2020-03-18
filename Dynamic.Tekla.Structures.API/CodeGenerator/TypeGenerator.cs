@@ -11,12 +11,7 @@ namespace CodeGenerator
         {
             string outputText = String.Empty;
 
-            if (type.IsValueType)
-            {
-                var generator = new StructGenerator();
-                return generator.GetTextFromType(type);
-            }
-            else if (type.IsClass || type.IsInterface)
+             if (type.IsClass || type.IsInterface)
             {
                 var generator = new ClassGenerator();
                 return generator.GetTextFromType(type);
@@ -24,6 +19,11 @@ namespace CodeGenerator
             else if (type.IsEnum)
             {
                 var generator = new EnumGenerator();
+                return generator.GetTextFromType(type);
+            }
+            else if (type.IsValueType)
+            {
+                var generator = new StructGenerator();
                 return generator.GetTextFromType(type);
             }
             else System.Diagnostics.Debug.WriteLine("Type not supported " + type.FullName);

@@ -51,48 +51,82 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarcrankingnullable;
+        internal dynamic rebarcrankingnullable;
         
         public RebarCrankingNullable()
         {
             this.rebarcrankingnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarCrankingNullable");
         }
 
-        public RebarCrankingNullable(dynamic tsObject)
+        internal RebarCrankingNullable(dynamic tsObject)
         {
             this.rebarcrankingnullable = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarcrankingnullable;
 
 
 
-
-    public struct EndCrankingTypeEnum
+    public enum EndCrankingTypeEnum
     {
-       
+			NO_CRANKING,
+			CUSTOM_CRANKING,
+			STANDARD_CRANKING        
     }
 
     internal static class EndCrankingTypeEnum_
     {
-        public static dynamic GetTSObject(EndCrankingTypeEnum dynStruct)
+        public static dynamic GetTSObject(EndCrankingTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EndCrankingTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case EndCrankingTypeEnum.NO_CRANKING:
+					return System.Enum.Parse(tsType, "NO_CRANKING");
+				case EndCrankingTypeEnum.CUSTOM_CRANKING:
+					return System.Enum.Parse(tsType, "CUSTOM_CRANKING");
+				case EndCrankingTypeEnum.STANDARD_CRANKING:
+					return System.Enum.Parse(tsType, "STANDARD_CRANKING");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static EndCrankingTypeEnum FromTSObject(dynamic tsStruct)
+        public static EndCrankingTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new EndCrankingTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NO_CRANKING", System.StringComparison.InvariantCulture))
+				return EndCrankingTypeEnum.NO_CRANKING;
+			else if (tsEnumValue.Equals("CUSTOM_CRANKING", System.StringComparison.InvariantCulture))
+				return EndCrankingTypeEnum.CUSTOM_CRANKING;
+			else if (tsEnumValue.Equals("STANDARD_CRANKING", System.StringComparison.InvariantCulture))
+				return EndCrankingTypeEnum.STANDARD_CRANKING;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarCrankingNullable_
+    {
+        public static dynamic GetTSObject(RebarCrankingNullable dynObject)
+        {
+            return dynObject.rebarcrankingnullable;
+        }
+
+        public static RebarCrankingNullable FromTSObject(dynamic tsObject)
+        {
+            return new RebarCrankingNullable(tsObject);
+        }
+    }
+
 
 }
     

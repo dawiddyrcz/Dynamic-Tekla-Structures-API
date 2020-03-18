@@ -21,25 +21,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic numberingseries;
+        internal dynamic numberingseries;
         
         public NumberingSeries()
         {
             this.numberingseries =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries");
         }
 
-        public NumberingSeries(dynamic tsObject)
+        internal NumberingSeries(dynamic tsObject)
         {
             this.numberingseries = tsObject;
         }
-
-        internal dynamic GetTSObject() => numberingseries;
 
 
 
 
 
     }
+
+    internal static class NumberingSeries_
+    {
+        public static dynamic GetTSObject(NumberingSeries dynObject)
+        {
+            return dynObject.numberingseries;
+        }
+
+        public static NumberingSeries FromTSObject(dynamic tsObject)
+        {
+            return new NumberingSeries(tsObject);
+        }
+    }
+
 
 }
     

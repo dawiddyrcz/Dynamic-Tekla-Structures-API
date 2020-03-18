@@ -33,25 +33,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(basecomponent.Identifier);
-			set { basecomponent.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(basecomponent.Identifier);
+			set { basecomponent.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic basecomponent;
+        internal dynamic basecomponent;
         
         private BaseComponent()
         {
             this.basecomponent =  TSActivator.CreateInstance("Tekla.Structures.Model.BaseComponent");
         }
 
-        public BaseComponent(dynamic tsObject)
+        internal BaseComponent(dynamic tsObject)
         {
             this.basecomponent = tsObject;
         }
-
-        internal dynamic GetTSObject() => basecomponent;
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 			 => basecomponent.SetAttribute(AttrName, StrValue);
@@ -87,13 +85,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => basecomponent.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(basecomponent.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(basecomponent.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(basecomponent.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(basecomponent.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(basecomponent.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(basecomponent.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => basecomponent.GetAllUserProperties(values);
@@ -153,13 +151,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => basecomponent.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(basecomponent.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(basecomponent.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => basecomponent.SetPhase(phase.GetTSObject());
+			 => basecomponent.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => basecomponent.GetPhase(phase.GetTSObject());
+			 => basecomponent.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => basecomponent.SetLabel(label);
@@ -172,6 +170,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class BaseComponent_
+    {
+        public static dynamic GetTSObject(BaseComponent dynObject)
+        {
+            return dynObject.basecomponent;
+        }
+
+        public static BaseComponent FromTSObject(dynamic tsObject)
+        {
+            return new BaseComponent(tsObject);
+        }
+    }
+
 
 }
     

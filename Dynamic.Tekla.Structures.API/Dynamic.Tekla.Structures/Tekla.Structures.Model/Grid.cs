@@ -117,8 +117,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(grid.Origin);
-			set { grid.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(grid.Origin);
+			set { grid.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -135,25 +135,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(grid.Identifier);
-			set { grid.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(grid.Identifier);
+			set { grid.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic grid;
+        internal dynamic grid;
         
         public Grid()
         {
             this.grid =  TSActivator.CreateInstance("Tekla.Structures.Model.Grid");
         }
 
-        public Grid(dynamic tsObject)
+        internal Grid(dynamic tsObject)
         {
             this.grid = tsObject;
         }
-
-        internal dynamic GetTSObject() => grid;
 
 		public System.Boolean Insert()
 			 => grid.Insert();
@@ -168,13 +166,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => grid.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(grid.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(grid.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(grid.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(grid.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(grid.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(grid.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => grid.GetAllUserProperties(values);
@@ -234,13 +232,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => grid.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(grid.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(grid.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => grid.SetPhase(phase.GetTSObject());
+			 => grid.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => grid.GetPhase(phase.GetTSObject());
+			 => grid.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => grid.SetLabel(label);
@@ -253,6 +251,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Grid_
+    {
+        public static dynamic GetTSObject(Grid dynObject)
+        {
+            return dynObject.grid;
+        }
+
+        public static Grid FromTSObject(dynamic tsObject)
+        {
+            return new Grid(tsObject);
+        }
+    }
+
 
 }
     

@@ -33,8 +33,8 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item
 		{
-			get => new Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem(binaryfilterexpressioncollection.Item);
-			set { binaryfilterexpressioncollection.Item = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(binaryfilterexpressioncollection.Item);
+			set { binaryfilterexpressioncollection.Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsEnable
@@ -45,31 +45,29 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic binaryfilterexpressioncollection;
+        internal dynamic binaryfilterexpressioncollection;
         
         public BinaryFilterExpressionCollection()
         {
             this.binaryfilterexpressioncollection =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpressionCollection");
         }
 
-        public BinaryFilterExpressionCollection(dynamic tsObject)
+        internal BinaryFilterExpressionCollection(dynamic tsObject)
         {
             this.binaryfilterexpressioncollection = tsObject;
         }
 
-        internal dynamic GetTSObject() => binaryfilterexpressioncollection;
-
 		public System.Int32 IndexOf(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
-			 => binaryfilterexpressioncollection.IndexOf(Item.GetTSObject());
+			 => binaryfilterexpressioncollection.IndexOf(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 
 		public void Add(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
-			 => binaryfilterexpressioncollection.Add(Item.GetTSObject());
+			 => binaryfilterexpressioncollection.Add(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 
 		public void Insert(System.Int32 Index, Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
-			 => binaryfilterexpressioncollection.Insert(Index, Item.GetTSObject());
+			 => binaryfilterexpressioncollection.Insert(Index, Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 
 		public System.Boolean Remove(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
-			 => binaryfilterexpressioncollection.Remove(Item.GetTSObject());
+			 => binaryfilterexpressioncollection.Remove(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 
 		public void RemoveAt(System.Int32 Index)
 			 => binaryfilterexpressioncollection.RemoveAt(Index);
@@ -78,28 +76,42 @@ namespace Dynamic.Tekla.Structures.Filtering
 			 => binaryfilterexpressioncollection.Clear();
 
 		public System.Boolean Contains(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
-			 => binaryfilterexpressioncollection.Contains(Item.GetTSObject());
+			 => binaryfilterexpressioncollection.Contains(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 
 		public void CopyTo(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Array, System.Int32 ArrayIndex)
-			 => binaryfilterexpressioncollection.CopyTo(Array.GetTSObject(), ArrayIndex);
+			 => binaryfilterexpressioncollection.CopyTo(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Array), ArrayIndex);
 
 		public System.Boolean IsFirst(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem)
-			 => binaryfilterexpressioncollection.IsFirst(BinaryFilterExpressionItem.GetTSObject());
+			 => binaryfilterexpressioncollection.IsFirst(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem));
 
 		public System.Boolean IsLast(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem)
-			 => binaryfilterexpressioncollection.IsLast(BinaryFilterExpressionItem.GetTSObject());
+			 => binaryfilterexpressioncollection.IsLast(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem));
 
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetFirst()
-			 => new Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem(binaryfilterexpressioncollection.GetFirst());
+			 => Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(binaryfilterexpressioncollection.GetFirst());
 
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetLast()
-			 => new Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem(binaryfilterexpressioncollection.GetLast());
+			 => Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(binaryfilterexpressioncollection.GetLast());
 
 
 
 
 
     }
+
+    internal static class BinaryFilterExpressionCollection_
+    {
+        public static dynamic GetTSObject(BinaryFilterExpressionCollection dynObject)
+        {
+            return dynObject.binaryfilterexpressioncollection;
+        }
+
+        public static BinaryFilterExpressionCollection FromTSObject(dynamic tsObject)
+        {
+            return new BinaryFilterExpressionCollection(tsObject);
+        }
+    }
+
 
 }
     

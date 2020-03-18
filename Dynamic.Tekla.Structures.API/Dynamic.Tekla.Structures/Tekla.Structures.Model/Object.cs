@@ -9,31 +9,43 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(@object.Identifier);
-			set { @object.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(@object.Identifier);
+			set { @object.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic @object;
+        internal dynamic @object;
         
         private Object()
         {
             this.@object =  TSActivator.CreateInstance("Tekla.Structures.Model.Object");
         }
 
-        public Object(dynamic tsObject)
+        internal Object(dynamic tsObject)
         {
             this.@object = tsObject;
         }
-
-        internal dynamic GetTSObject() => @object;
 
 
 
 
 
     }
+
+    internal static class Object_
+    {
+        public static dynamic GetTSObject(Object dynObject)
+        {
+            return dynObject.@object;
+        }
+
+        public static Object FromTSObject(dynamic tsObject)
+        {
+            return new Object(tsObject);
+        }
+    }
+
 
 }
     

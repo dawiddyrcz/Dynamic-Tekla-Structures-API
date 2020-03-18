@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(controlpoint.Point);
-			set { controlpoint.Point = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(controlpoint.Point);
+			set { controlpoint.Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -27,25 +27,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlpoint.Identifier);
-			set { controlpoint.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlpoint.Identifier);
+			set { controlpoint.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlpoint;
+        internal dynamic controlpoint;
         
         public ControlPoint()
         {
             this.controlpoint =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlPoint");
         }
 
-        public ControlPoint(dynamic tsObject)
+        internal ControlPoint(dynamic tsObject)
         {
             this.controlpoint = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlpoint;
 
 		public System.Boolean Insert()
 			 => controlpoint.Insert();
@@ -60,13 +58,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlpoint.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlpoint.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlpoint.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlpoint.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlpoint.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlpoint.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlpoint.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlpoint.GetAllUserProperties(values);
@@ -126,13 +124,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlpoint.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlpoint.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlpoint.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlpoint.SetPhase(phase.GetTSObject());
+			 => controlpoint.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlpoint.GetPhase(phase.GetTSObject());
+			 => controlpoint.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlpoint.SetLabel(label);
@@ -145,6 +143,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ControlPoint_
+    {
+        public static dynamic GetTSObject(ControlPoint dynObject)
+        {
+            return dynObject.controlpoint;
+        }
+
+        public static ControlPoint FromTSObject(dynamic tsObject)
+        {
+            return new ControlPoint(tsObject);
+        }
+    }
+
 
 }
     

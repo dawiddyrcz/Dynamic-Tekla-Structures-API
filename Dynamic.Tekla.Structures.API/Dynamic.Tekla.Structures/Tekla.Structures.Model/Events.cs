@@ -9,115 +9,113 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic events;
+        internal dynamic events;
         
         public Events()
         {
             this.events =  TSActivator.CreateInstance("Tekla.Structures.Model.Events");
         }
 
-        public Events(dynamic tsObject)
+        internal Events(dynamic tsObject)
         {
             this.events = tsObject;
         }
 
-        internal dynamic GetTSObject() => events;
-
 		public void add_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate value)
-			 => events.add_SelectionChange(value.GetTSObject());
+			 => events.add_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
 
 		public void remove_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate value)
-			 => events.remove_SelectionChange(value.GetTSObject());
+			 => events.remove_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
 
 		public void add_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate value)
-			 => events.add_CommandStatusChange(value.GetTSObject());
+			 => events.add_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
 
 		public void remove_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate value)
-			 => events.remove_CommandStatusChange(value.GetTSObject());
+			 => events.remove_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
 
 		public void add_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate value)
-			 => events.add_TrackEvent(value.GetTSObject());
+			 => events.add_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
 
 		public void remove_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate value)
-			 => events.remove_TrackEvent(value.GetTSObject());
+			 => events.remove_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
 
 		public void add_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate value)
-			 => events.add_PointInputChanged(value.GetTSObject());
+			 => events.add_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
 
 		public void remove_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate value)
-			 => events.remove_PointInputChanged(value.GetTSObject());
+			 => events.remove_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
 
 		public void add_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate value)
-			 => events.add_ModelSave(value.GetTSObject());
+			 => events.add_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
 
 		public void remove_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate value)
-			 => events.remove_ModelSave(value.GetTSObject());
+			 => events.remove_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
 
 		public void add_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate value)
-			 => events.add_ModelSaveAs(value.GetTSObject());
+			 => events.add_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
 
 		public void remove_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate value)
-			 => events.remove_ModelSaveAs(value.GetTSObject());
+			 => events.remove_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
 
 		public void add_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => events.add_ModelLoad(value.GetTSObject());
+			 => events.add_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
 
 		public void remove_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => events.remove_ModelLoad(value.GetTSObject());
+			 => events.remove_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
 
 		public void add_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => events.add_ModelUnloading(value.GetTSObject());
+			 => events.add_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
 
 		public void remove_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => events.remove_ModelUnloading(value.GetTSObject());
+			 => events.remove_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
 
 		public void add_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate value)
-			 => events.add_Numbering(value.GetTSObject());
+			 => events.add_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
 
 		public void remove_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate value)
-			 => events.remove_Numbering(value.GetTSObject());
+			 => events.remove_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
 
 		public void add_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate value)
-			 => events.add_ModelChanged(value.GetTSObject());
+			 => events.add_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
 
 		public void remove_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate value)
-			 => events.remove_ModelChanged(value.GetTSObject());
+			 => events.remove_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
 
 		public void add_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate value)
-			 => events.add_ModelObjectNumbered(value.GetTSObject());
+			 => events.add_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
 
 		public void remove_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate value)
-			 => events.remove_ModelObjectNumbered(value.GetTSObject());
+			 => events.remove_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
 
 		public void add_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate value)
-			 => events.add_ModelObjectChanged(value.GetTSObject());
+			 => events.add_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
 
 		public void remove_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate value)
-			 => events.remove_ModelObjectChanged(value.GetTSObject());
+			 => events.remove_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
 
 		public void add_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate value)
-			 => events.add_TeklaStructuresExit(value.GetTSObject());
+			 => events.add_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
 
 		public void remove_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate value)
-			 => events.remove_TeklaStructuresExit(value.GetTSObject());
+			 => events.remove_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
 
 		public void add_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate value)
-			 => events.add_ClashCheckDone(value.GetTSObject());
+			 => events.add_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
 
 		public void remove_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate value)
-			 => events.remove_ClashCheckDone(value.GetTSObject());
+			 => events.remove_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
 
 		public void add_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate value)
-			 => events.add_ClashDetected(value.GetTSObject());
+			 => events.add_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
 
 		public void remove_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate value)
-			 => events.remove_ClashDetected(value.GetTSObject());
+			 => events.remove_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
 
 		public void add_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate value)
-			 => events.add_Interrupted(value.GetTSObject());
+			 => events.add_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
 
 		public void remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate value)
-			 => events.remove_Interrupted(value.GetTSObject());
+			 => events.remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
 
 		public void OnSelectionChange(System.String eventName, System.Object parameters)
 			 => events.OnSelectionChange(eventName, parameters);
@@ -205,19 +203,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic selectionchangedelegate;
+        internal dynamic selectionchangedelegate;
         
         public SelectionChangeDelegate()
         {
             this.selectionchangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.SelectionChangeDelegate");
         }
 
-        public SelectionChangeDelegate(dynamic tsObject)
+        internal SelectionChangeDelegate(dynamic tsObject)
         {
             this.selectionchangedelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => selectionchangedelegate;
 
 		public void Invoke()
 			 => selectionchangedelegate.Invoke();
@@ -243,6 +239,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class SelectionChangeDelegate_
+    {
+        public static dynamic GetTSObject(SelectionChangeDelegate dynObject)
+        {
+            return dynObject.selectionchangedelegate;
+        }
+
+        public static SelectionChangeDelegate FromTSObject(dynamic tsObject)
+        {
+            return new SelectionChangeDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class CommandStatusChangeDelegate 
     {
@@ -261,19 +271,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic commandstatuschangedelegate;
+        internal dynamic commandstatuschangedelegate;
         
         public CommandStatusChangeDelegate()
         {
             this.commandstatuschangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.CommandStatusChangeDelegate");
         }
 
-        public CommandStatusChangeDelegate(dynamic tsObject)
+        internal CommandStatusChangeDelegate(dynamic tsObject)
         {
             this.commandstatuschangedelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => commandstatuschangedelegate;
 
 		public void Invoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status)
 			 => commandstatuschangedelegate.Invoke(TSCommand, TSCommandParam, Status);
@@ -299,6 +307,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class CommandStatusChangeDelegate_
+    {
+        public static dynamic GetTSObject(CommandStatusChangeDelegate dynObject)
+        {
+            return dynObject.commandstatuschangedelegate;
+        }
+
+        public static CommandStatusChangeDelegate FromTSObject(dynamic tsObject)
+        {
+            return new CommandStatusChangeDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class TrackEventDelegate 
     {
@@ -317,19 +339,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic trackeventdelegate;
+        internal dynamic trackeventdelegate;
         
         public TrackEventDelegate()
         {
             this.trackeventdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TrackEventDelegate");
         }
 
-        public TrackEventDelegate(dynamic tsObject)
+        internal TrackEventDelegate(dynamic tsObject)
         {
             this.trackeventdelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => trackeventdelegate;
 
 		public void Invoke(System.String Category, System.String Name, System.String Content)
 			 => trackeventdelegate.Invoke(Category, Name, Content);
@@ -355,6 +375,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class TrackEventDelegate_
+    {
+        public static dynamic GetTSObject(TrackEventDelegate dynObject)
+        {
+            return dynObject.trackeventdelegate;
+        }
+
+        public static TrackEventDelegate FromTSObject(dynamic tsObject)
+        {
+            return new TrackEventDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelSaveDelegate 
     {
@@ -373,19 +407,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelsavedelegate;
+        internal dynamic modelsavedelegate;
         
         public ModelSaveDelegate()
         {
             this.modelsavedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveDelegate");
         }
 
-        public ModelSaveDelegate(dynamic tsObject)
+        internal ModelSaveDelegate(dynamic tsObject)
         {
             this.modelsavedelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelsavedelegate;
 
 		public void Invoke()
 			 => modelsavedelegate.Invoke();
@@ -411,6 +443,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelSaveDelegate_
+    {
+        public static dynamic GetTSObject(ModelSaveDelegate dynObject)
+        {
+            return dynObject.modelsavedelegate;
+        }
+
+        public static ModelSaveDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelSaveDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelSaveAsDelegate 
     {
@@ -429,19 +475,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelsaveasdelegate;
+        internal dynamic modelsaveasdelegate;
         
         public ModelSaveAsDelegate()
         {
             this.modelsaveasdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveAsDelegate");
         }
 
-        public ModelSaveAsDelegate(dynamic tsObject)
+        internal ModelSaveAsDelegate(dynamic tsObject)
         {
             this.modelsaveasdelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelsaveasdelegate;
 
 		public void Invoke()
 			 => modelsaveasdelegate.Invoke();
@@ -467,6 +511,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelSaveAsDelegate_
+    {
+        public static dynamic GetTSObject(ModelSaveAsDelegate dynObject)
+        {
+            return dynObject.modelsaveasdelegate;
+        }
+
+        public static ModelSaveAsDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelSaveAsDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelLoadDelegate 
     {
@@ -485,19 +543,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelloaddelegate;
+        internal dynamic modelloaddelegate;
         
         public ModelLoadDelegate()
         {
             this.modelloaddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelLoadDelegate");
         }
 
-        public ModelLoadDelegate(dynamic tsObject)
+        internal ModelLoadDelegate(dynamic tsObject)
         {
             this.modelloaddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelloaddelegate;
 
 		public void Invoke()
 			 => modelloaddelegate.Invoke();
@@ -523,6 +579,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelLoadDelegate_
+    {
+        public static dynamic GetTSObject(ModelLoadDelegate dynObject)
+        {
+            return dynObject.modelloaddelegate;
+        }
+
+        public static ModelLoadDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelLoadDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class NumberingDelegate 
     {
@@ -541,19 +611,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic numberingdelegate;
+        internal dynamic numberingdelegate;
         
         public NumberingDelegate()
         {
             this.numberingdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingDelegate");
         }
 
-        public NumberingDelegate(dynamic tsObject)
+        internal NumberingDelegate(dynamic tsObject)
         {
             this.numberingdelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => numberingdelegate;
 
 		public void Invoke()
 			 => numberingdelegate.Invoke();
@@ -579,6 +647,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class NumberingDelegate_
+    {
+        public static dynamic GetTSObject(NumberingDelegate dynObject)
+        {
+            return dynObject.numberingdelegate;
+        }
+
+        public static NumberingDelegate FromTSObject(dynamic tsObject)
+        {
+            return new NumberingDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelChangedDelegate 
     {
@@ -597,19 +679,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelchangeddelegate;
+        internal dynamic modelchangeddelegate;
         
         public ModelChangedDelegate()
         {
             this.modelchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelChangedDelegate");
         }
 
-        public ModelChangedDelegate(dynamic tsObject)
+        internal ModelChangedDelegate(dynamic tsObject)
         {
             this.modelchangeddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelchangeddelegate;
 
 		public void Invoke()
 			 => modelchangeddelegate.Invoke();
@@ -635,6 +715,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelChangedDelegate_
+    {
+        public static dynamic GetTSObject(ModelChangedDelegate dynObject)
+        {
+            return dynObject.modelchangeddelegate;
+        }
+
+        public static ModelChangedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelChangedDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelObjectNumberedDelegate 
     {
@@ -653,19 +747,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelobjectnumbereddelegate;
+        internal dynamic modelobjectnumbereddelegate;
         
         public ModelObjectNumberedDelegate()
         {
             this.modelobjectnumbereddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectNumberedDelegate");
         }
 
-        public ModelObjectNumberedDelegate(dynamic tsObject)
+        internal ModelObjectNumberedDelegate(dynamic tsObject)
         {
             this.modelobjectnumbereddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelobjectnumbereddelegate;
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
 			 => modelobjectnumbereddelegate.Invoke(Objects);
@@ -691,6 +783,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelObjectNumberedDelegate_
+    {
+        public static dynamic GetTSObject(ModelObjectNumberedDelegate dynObject)
+        {
+            return dynObject.modelobjectnumbereddelegate;
+        }
+
+        public static ModelObjectNumberedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelObjectNumberedDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ModelObjectChangedDelegate 
     {
@@ -709,19 +815,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelobjectchangeddelegate;
+        internal dynamic modelobjectchangeddelegate;
         
         public ModelObjectChangedDelegate()
         {
             this.modelobjectchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectChangedDelegate");
         }
 
-        public ModelObjectChangedDelegate(dynamic tsObject)
+        internal ModelObjectChangedDelegate(dynamic tsObject)
         {
             this.modelobjectchangeddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelobjectchangeddelegate;
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
 			 => modelobjectchangeddelegate.Invoke(Changes);
@@ -747,6 +851,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ModelObjectChangedDelegate_
+    {
+        public static dynamic GetTSObject(ModelObjectChangedDelegate dynObject)
+        {
+            return dynObject.modelobjectchangeddelegate;
+        }
+
+        public static ModelObjectChangedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ModelObjectChangedDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class TeklaStructuresExitDelegate 
     {
@@ -765,19 +883,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic teklastructuresexitdelegate;
+        internal dynamic teklastructuresexitdelegate;
         
         public TeklaStructuresExitDelegate()
         {
             this.teklastructuresexitdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TeklaStructuresExitDelegate");
         }
 
-        public TeklaStructuresExitDelegate(dynamic tsObject)
+        internal TeklaStructuresExitDelegate(dynamic tsObject)
         {
             this.teklastructuresexitdelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => teklastructuresexitdelegate;
 
 		public void Invoke()
 			 => teklastructuresexitdelegate.Invoke();
@@ -803,6 +919,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class TeklaStructuresExitDelegate_
+    {
+        public static dynamic GetTSObject(TeklaStructuresExitDelegate dynObject)
+        {
+            return dynObject.teklastructuresexitdelegate;
+        }
+
+        public static TeklaStructuresExitDelegate FromTSObject(dynamic tsObject)
+        {
+            return new TeklaStructuresExitDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ClashCheckDoneDelegate 
     {
@@ -821,19 +951,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic clashcheckdonedelegate;
+        internal dynamic clashcheckdonedelegate;
         
         public ClashCheckDoneDelegate()
         {
             this.clashcheckdonedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckDoneDelegate");
         }
 
-        public ClashCheckDoneDelegate(dynamic tsObject)
+        internal ClashCheckDoneDelegate(dynamic tsObject)
         {
             this.clashcheckdonedelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => clashcheckdonedelegate;
 
 		public void Invoke(System.Int32 NumbersOfClashes)
 			 => clashcheckdonedelegate.Invoke(NumbersOfClashes);
@@ -859,6 +987,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ClashCheckDoneDelegate_
+    {
+        public static dynamic GetTSObject(ClashCheckDoneDelegate dynObject)
+        {
+            return dynObject.clashcheckdonedelegate;
+        }
+
+        public static ClashCheckDoneDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ClashCheckDoneDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class ClashDetectedDelegate 
     {
@@ -877,22 +1019,20 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic clashdetecteddelegate;
+        internal dynamic clashdetecteddelegate;
         
         public ClashDetectedDelegate()
         {
             this.clashdetecteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashDetectedDelegate");
         }
 
-        public ClashDetectedDelegate(dynamic tsObject)
+        internal ClashDetectedDelegate(dynamic tsObject)
         {
             this.clashdetecteddelegate = tsObject;
         }
 
-        internal dynamic GetTSObject() => clashdetecteddelegate;
-
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
-			 => clashdetecteddelegate.Invoke(ClashData.GetTSObject());
+			 => clashdetecteddelegate.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => clashdetecteddelegate.EndInvoke(result);
@@ -915,6 +1055,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class ClashDetectedDelegate_
+    {
+        public static dynamic GetTSObject(ClashDetectedDelegate dynObject)
+        {
+            return dynObject.clashdetecteddelegate;
+        }
+
+        public static ClashDetectedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new ClashDetectedDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class PointInputChangedDelegate 
     {
@@ -933,19 +1087,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic pointinputchangeddelegate;
+        internal dynamic pointinputchangeddelegate;
         
         public PointInputChangedDelegate()
         {
             this.pointinputchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.PointInputChangedDelegate");
         }
 
-        public PointInputChangedDelegate(dynamic tsObject)
+        internal PointInputChangedDelegate(dynamic tsObject)
         {
             this.pointinputchangeddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => pointinputchangeddelegate;
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
 			 => pointinputchangeddelegate.Invoke(Changes);
@@ -971,6 +1123,20 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class PointInputChangedDelegate_
+    {
+        public static dynamic GetTSObject(PointInputChangedDelegate dynObject)
+        {
+            return dynObject.pointinputchangeddelegate;
+        }
+
+        public static PointInputChangedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new PointInputChangedDelegate(tsObject);
+        }
+    }
+
+
 
     public sealed class InterruptedDelegate 
     {
@@ -989,19 +1155,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic interrupteddelegate;
+        internal dynamic interrupteddelegate;
         
         public InterruptedDelegate()
         {
             this.interrupteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.InterruptedDelegate");
         }
 
-        public InterruptedDelegate(dynamic tsObject)
+        internal InterruptedDelegate(dynamic tsObject)
         {
             this.interrupteddelegate = tsObject;
         }
-
-        internal dynamic GetTSObject() => interrupteddelegate;
 
 		public void Invoke()
 			 => interrupteddelegate.Invoke();
@@ -1027,9 +1191,37 @@ namespace Dynamic.Tekla.Structures.Model
 
     }
 
+    internal static class InterruptedDelegate_
+    {
+        public static dynamic GetTSObject(InterruptedDelegate dynObject)
+        {
+            return dynObject.interrupteddelegate;
+        }
+
+        public static InterruptedDelegate FromTSObject(dynamic tsObject)
+        {
+            return new InterruptedDelegate(tsObject);
+        }
+    }
+
+
 
 
     }
+
+    internal static class Events_
+    {
+        public static dynamic GetTSObject(Events dynObject)
+        {
+            return dynObject.events;
+        }
+
+        public static Events FromTSObject(dynamic tsObject)
+        {
+            return new Events(tsObject);
+        }
+    }
+
 
 }
     

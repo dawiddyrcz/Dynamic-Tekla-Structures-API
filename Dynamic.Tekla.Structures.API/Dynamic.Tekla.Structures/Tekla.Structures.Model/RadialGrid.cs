@@ -111,8 +111,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(radialgrid.Origin);
-			set { radialgrid.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(radialgrid.Origin);
+			set { radialgrid.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -129,25 +129,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(radialgrid.Identifier);
-			set { radialgrid.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(radialgrid.Identifier);
+			set { radialgrid.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic radialgrid;
+        internal dynamic radialgrid;
         
         public RadialGrid()
         {
             this.radialgrid =  TSActivator.CreateInstance("Tekla.Structures.Model.RadialGrid");
         }
 
-        public RadialGrid(dynamic tsObject)
+        internal RadialGrid(dynamic tsObject)
         {
             this.radialgrid = tsObject;
         }
-
-        internal dynamic GetTSObject() => radialgrid;
 
 		public System.Boolean Insert()
 			 => radialgrid.Insert();
@@ -162,13 +160,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => radialgrid.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(radialgrid.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(radialgrid.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(radialgrid.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(radialgrid.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(radialgrid.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(radialgrid.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => radialgrid.GetAllUserProperties(values);
@@ -228,13 +226,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => radialgrid.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(radialgrid.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(radialgrid.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => radialgrid.SetPhase(phase.GetTSObject());
+			 => radialgrid.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => radialgrid.GetPhase(phase.GetTSObject());
+			 => radialgrid.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => radialgrid.SetLabel(label);
@@ -247,6 +245,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class RadialGrid_
+    {
+        public static dynamic GetTSObject(RadialGrid dynObject)
+        {
+            return dynObject.radialgrid;
+        }
+
+        public static RadialGrid FromTSObject(dynamic tsObject)
+        {
+            return new RadialGrid(tsObject);
+        }
+    }
+
 
 }
     

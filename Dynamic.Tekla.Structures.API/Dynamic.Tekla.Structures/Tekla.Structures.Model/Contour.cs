@@ -15,31 +15,43 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic contour;
+        internal dynamic contour;
         
         public Contour()
         {
             this.contour =  TSActivator.CreateInstance("Tekla.Structures.Model.Contour");
         }
 
-        public Contour(dynamic tsObject)
+        internal Contour(dynamic tsObject)
         {
             this.contour = tsObject;
         }
 
-        internal dynamic GetTSObject() => contour;
-
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
-			 => contour.AddContourPoint(Point.GetTSObject());
+			 => contour.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
 
 		public System.Boolean CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon polygon)
-			 => contour.CalculatePolygon(polygon.GetTSObject());
+			 => contour.CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon));
 
 
 
 
 
     }
+
+    internal static class Contour_
+    {
+        public static dynamic GetTSObject(Contour dynObject)
+        {
+            return dynObject.contour;
+        }
+
+        public static Contour FromTSObject(dynamic tsObject)
+        {
+            return new Contour(tsObject);
+        }
+    }
+
 
 }
     

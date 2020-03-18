@@ -33,25 +33,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic deformingdata;
+        internal dynamic deformingdata;
         
         public DeformingData()
         {
             this.deformingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.DeformingData");
         }
 
-        public DeformingData(dynamic tsObject)
+        internal DeformingData(dynamic tsObject)
         {
             this.deformingdata = tsObject;
         }
-
-        internal dynamic GetTSObject() => deformingdata;
 
 
 
 
 
     }
+
+    internal static class DeformingData_
+    {
+        public static dynamic GetTSObject(DeformingData dynObject)
+        {
+            return dynObject.deformingdata;
+        }
+
+        public static DeformingData FromTSObject(dynamic tsObject)
+        {
+            return new DeformingData(tsObject);
+        }
+    }
+
 
 }
     

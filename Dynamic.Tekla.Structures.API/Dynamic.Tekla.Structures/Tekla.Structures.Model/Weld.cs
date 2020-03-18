@@ -10,25 +10,25 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum Position
 		{
 			get => Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.FromTSObject(weld.Position);
-			set { weld.Position = Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.FromTSObject(value); }
+			set { weld.Position = Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Direction
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(weld.Direction);
-			set { weld.Direction = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(weld.Direction);
+			set { weld.Direction = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject MainObject
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(weld.MainObject);
-			set { weld.MainObject = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(weld.MainObject);
+			set { weld.MainObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject SecondaryObject
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(weld.SecondaryObject);
-			set { weld.SecondaryObject = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(weld.SecondaryObject);
+			set { weld.SecondaryObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.Double SizeAbove
@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum TypeAbove
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(weld.TypeAbove);
-			set { weld.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(value); }
+			set { weld.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double AngleAbove
@@ -64,13 +64,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum ContourAbove
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(weld.ContourAbove);
-			set { weld.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(value); }
+			set { weld.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum FinishAbove
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(weld.FinishAbove);
-			set { weld.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(value); }
+			set { weld.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
 		}
 
 		public System.Double PitchAbove
@@ -94,7 +94,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum TypeBelow
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(weld.TypeBelow);
-			set { weld.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(value); }
+			set { weld.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double AngleBelow
@@ -112,13 +112,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum ContourBelow
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(weld.ContourBelow);
-			set { weld.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(value); }
+			set { weld.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum FinishBelow
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(weld.FinishBelow);
-			set { weld.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(value); }
+			set { weld.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
 		}
 
 		public System.Double PitchBelow
@@ -196,7 +196,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum ElectrodeClassification
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(weld.ElectrodeClassification);
-			set { weld.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(value); }
+			set { weld.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.GetTSObject(value); }
 		}
 
 		public System.Double ElectrodeStrength
@@ -214,13 +214,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum ProcessType
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(weld.ProcessType);
-			set { weld.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(value); }
+			set { weld.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum NDTInspection
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(weld.NDTInspection);
-			set { weld.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(value); }
+			set { weld.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean ConnectAssemblies
@@ -268,19 +268,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum IntermittentType
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(weld.IntermittentType);
-			set { weld.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(value); }
+			set { weld.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum Placement
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(weld.Placement);
-			set { weld.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(value); }
+			set { weld.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum Preparation
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(weld.Preparation);
-			set { weld.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(value); }
+			set { weld.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -297,25 +297,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(weld.Identifier);
-			set { weld.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(weld.Identifier);
+			set { weld.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic weld;
+        internal dynamic weld;
         
         public Weld()
         {
             this.weld =  TSActivator.CreateInstance("Tekla.Structures.Model.Weld");
         }
 
-        public Weld(dynamic tsObject)
+        internal Weld(dynamic tsObject)
         {
             this.weld = tsObject;
         }
-
-        internal dynamic GetTSObject() => weld;
 
 		public System.Boolean Insert()
 			 => weld.Insert();
@@ -330,22 +328,22 @@ namespace Dynamic.Tekla.Structures.Model
 			 => weld.Delete();
 
 		public System.Boolean GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld LogicalWeld)
-			 => weld.GetLogicalWeld(LogicalWeld.GetTSObject());
+			 => weld.GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld));
 
 		public System.Collections.ArrayList GetWeldGeometries()
 			 => weld.GetWeldGeometries();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(weld.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(weld.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(weld.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(weld.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(weld.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(weld.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(weld.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(weld.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => weld.GetAllUserProperties(values);
@@ -405,13 +403,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => weld.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(weld.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(weld.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => weld.SetPhase(phase.GetTSObject());
+			 => weld.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => weld.GetPhase(phase.GetTSObject());
+			 => weld.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => weld.SetLabel(label);
@@ -422,31 +420,82 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct WeldPositionEnum
+    public enum WeldPositionEnum
     {
-       
+			WELD_POSITION_PLUS_X,
+			WELD_POSITION_MINUS_X,
+			WELD_POSITION_PLUS_Y,
+			WELD_POSITION_MINUS_Y,
+			WELD_POSITION_PLUS_Z,
+			WELD_POSITION_MINUS_Z        
     }
 
     internal static class WeldPositionEnum_
     {
-        public static dynamic GetTSObject(WeldPositionEnum dynStruct)
+        public static dynamic GetTSObject(WeldPositionEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPositionEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case WeldPositionEnum.WELD_POSITION_PLUS_X:
+					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_X");
+				case WeldPositionEnum.WELD_POSITION_MINUS_X:
+					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_X");
+				case WeldPositionEnum.WELD_POSITION_PLUS_Y:
+					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_Y");
+				case WeldPositionEnum.WELD_POSITION_MINUS_Y:
+					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_Y");
+				case WeldPositionEnum.WELD_POSITION_PLUS_Z:
+					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_Z");
+				case WeldPositionEnum.WELD_POSITION_MINUS_Z:
+					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_Z");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static WeldPositionEnum FromTSObject(dynamic tsStruct)
+        public static WeldPositionEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new WeldPositionEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("WELD_POSITION_PLUS_X", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_PLUS_X;
+			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_X", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_MINUS_X;
+			else if (tsEnumValue.Equals("WELD_POSITION_PLUS_Y", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_PLUS_Y;
+			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_Y", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_MINUS_Y;
+			else if (tsEnumValue.Equals("WELD_POSITION_PLUS_Z", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_PLUS_Z;
+			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_Z", System.StringComparison.InvariantCulture))
+				return WeldPositionEnum.WELD_POSITION_MINUS_Z;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class Weld_
+    {
+        public static dynamic GetTSObject(Weld dynObject)
+        {
+            return dynObject.weld;
+        }
+
+        public static Weld FromTSObject(dynamic tsObject)
+        {
+            return new Weld(tsObject);
+        }
+    }
+
 
 }
     

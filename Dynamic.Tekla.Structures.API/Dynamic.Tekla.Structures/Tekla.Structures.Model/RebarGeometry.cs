@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.PolyLine(rebargeometry.Shape);
-			set { rebargeometry.Shape = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(rebargeometry.Shape);
+			set { rebargeometry.Shape = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
 		}
 
 		public System.Double Diameter
@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebargeometry;
+        internal dynamic rebargeometry;
         
         public RebarGeometry()
         {
             this.rebargeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGeometry");
         }
 
-        public RebarGeometry(dynamic tsObject)
+        internal RebarGeometry(dynamic tsObject)
         {
             this.rebargeometry = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebargeometry;
 
 
 
 
 
     }
+
+    internal static class RebarGeometry_
+    {
+        public static dynamic GetTSObject(RebarGeometry dynObject)
+        {
+            return dynObject.rebargeometry;
+        }
+
+        public static RebarGeometry FromTSObject(dynamic tsObject)
+        {
+            return new RebarGeometry(tsObject);
+        }
+    }
+
 
 }
     

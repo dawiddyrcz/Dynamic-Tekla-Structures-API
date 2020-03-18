@@ -33,31 +33,43 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(rebarlegface.Contour);
-			set { rebarlegface.Contour = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarlegface.Contour);
+			set { rebarlegface.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarlegface;
+        internal dynamic rebarlegface;
         
         public RebarLegFace()
         {
             this.rebarlegface =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace");
         }
 
-        public RebarLegFace(dynamic tsObject)
+        internal RebarLegFace(dynamic tsObject)
         {
             this.rebarlegface = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarlegface;
 
 
 
 
 
     }
+
+    internal static class RebarLegFace_
+    {
+        public static dynamic GetTSObject(RebarLegFace dynObject)
+        {
+            return dynObject.rebarlegface;
+        }
+
+        public static RebarLegFace FromTSObject(dynamic tsObject)
+        {
+            return new RebarLegFace(tsObject);
+        }
+    }
+
 
 }
     

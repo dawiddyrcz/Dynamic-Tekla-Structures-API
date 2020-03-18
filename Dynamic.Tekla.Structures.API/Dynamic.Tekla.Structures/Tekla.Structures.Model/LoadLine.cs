@@ -9,26 +9,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(loadline.Position1);
-			set { loadline.Position1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadline.Position1);
+			set { loadline.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(loadline.Position2);
-			set { loadline.Position2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadline.Position2);
+			set { loadline.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.P1);
-			set { loadline.P1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.P1);
+			set { loadline.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.P2);
-			set { loadline.P2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.P2);
+			set { loadline.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double Torsion1
@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum LoadForm
 		{
 			get => Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(loadline.LoadForm);
-			set { loadline.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(value); }
+			set { loadline.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.GetTSObject(value); }
 		}
 
 		public System.Double DistanceA
@@ -63,20 +63,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loadline.FatherId);
-			set { loadline.FatherId = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadline.FatherId);
+			set { loadline.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadline.Spanning);
-			set { loadline.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(value); }
+			set { loadline.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(loadline.PrimaryAxisDirection);
-			set { loadline.PrimaryAxisDirection = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.PrimaryAxisDirection);
+			set { loadline.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
@@ -106,13 +106,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadline.LoadAttachment);
-			set { loadline.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(value); }
+			set { loadline.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
 			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadline.PartNames);
-			set { loadline.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(value); }
+			set { loadline.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
@@ -141,8 +141,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => new Dynamic.Tekla.Structures.Model.LoadGroup(loadline.Group);
-			set { loadline.Group = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(loadline.Group);
+			set { loadline.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -159,25 +159,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loadline.Identifier);
-			set { loadline.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadline.Identifier);
+			set { loadline.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic loadline;
+        internal dynamic loadline;
         
         public LoadLine()
         {
             this.loadline =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadLine");
         }
 
-        public LoadLine(dynamic tsObject)
+        internal LoadLine(dynamic tsObject)
         {
             this.loadline = tsObject;
         }
-
-        internal dynamic GetTSObject() => loadline;
 
 		public System.Boolean Insert()
 			 => loadline.Insert();
@@ -192,13 +190,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loadline.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loadline.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadline.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(loadline.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loadline.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loadline.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadline.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => loadline.GetAllUserProperties(values);
@@ -258,13 +256,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loadline.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(loadline.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loadline.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadline.SetPhase(phase.GetTSObject());
+			 => loadline.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadline.GetPhase(phase.GetTSObject());
+			 => loadline.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => loadline.SetLabel(label);
@@ -275,31 +273,72 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct LineLoadFormEnum
+    public enum LineLoadFormEnum
     {
-       
+			LOAD_FORM_LINE_1,
+			LOAD_FORM_LINE_2,
+			LOAD_FORM_LINE_3,
+			LOAD_FORM_LINE_4        
     }
 
     internal static class LineLoadFormEnum_
     {
-        public static dynamic GetTSObject(LineLoadFormEnum dynStruct)
+        public static dynamic GetTSObject(LineLoadFormEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LineLoadFormEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LineLoadFormEnum.LOAD_FORM_LINE_1:
+					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_1");
+				case LineLoadFormEnum.LOAD_FORM_LINE_2:
+					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_2");
+				case LineLoadFormEnum.LOAD_FORM_LINE_3:
+					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_3");
+				case LineLoadFormEnum.LOAD_FORM_LINE_4:
+					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_4");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LineLoadFormEnum FromTSObject(dynamic tsStruct)
+        public static LineLoadFormEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LineLoadFormEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("LOAD_FORM_LINE_1", System.StringComparison.InvariantCulture))
+				return LineLoadFormEnum.LOAD_FORM_LINE_1;
+			else if (tsEnumValue.Equals("LOAD_FORM_LINE_2", System.StringComparison.InvariantCulture))
+				return LineLoadFormEnum.LOAD_FORM_LINE_2;
+			else if (tsEnumValue.Equals("LOAD_FORM_LINE_3", System.StringComparison.InvariantCulture))
+				return LineLoadFormEnum.LOAD_FORM_LINE_3;
+			else if (tsEnumValue.Equals("LOAD_FORM_LINE_4", System.StringComparison.InvariantCulture))
+				return LineLoadFormEnum.LOAD_FORM_LINE_4;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class LoadLine_
+    {
+        public static dynamic GetTSObject(LoadLine dynObject)
+        {
+            return dynObject.loadline;
+        }
+
+        public static LoadLine FromTSObject(dynamic tsObject)
+        {
+            return new LoadLine(tsObject);
+        }
+    }
+
 
 }
     

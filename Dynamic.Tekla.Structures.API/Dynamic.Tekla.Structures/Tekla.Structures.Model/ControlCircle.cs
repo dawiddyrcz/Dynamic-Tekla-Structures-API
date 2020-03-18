@@ -16,31 +16,31 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum Color
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(controlcircle.Color);
-			set { controlcircle.Color = Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.FromTSObject(value); }
+			set { controlcircle.Color = Dynamic.Tekla.Structures.Model.ControlCircle.ControlCircleColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlcircle.LineType);
-			set { controlcircle.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(value); }
+			set { controlcircle.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point1);
-			set { controlcircle.Point1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(controlcircle.Point1);
+			set { controlcircle.Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point2);
-			set { controlcircle.Point2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(controlcircle.Point2);
+			set { controlcircle.Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point3
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(controlcircle.Point3);
-			set { controlcircle.Point3 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(controlcircle.Point3);
+			set { controlcircle.Point3 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -57,25 +57,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlcircle.Identifier);
-			set { controlcircle.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlcircle.Identifier);
+			set { controlcircle.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlcircle;
+        internal dynamic controlcircle;
         
         public ControlCircle()
         {
             this.controlcircle =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlCircle");
         }
 
-        public ControlCircle(dynamic tsObject)
+        internal ControlCircle(dynamic tsObject)
         {
             this.controlcircle = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlcircle;
 
 		public System.Boolean Insert()
 			 => controlcircle.Insert();
@@ -90,13 +88,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlcircle.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlcircle.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlcircle.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlcircle.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlcircle.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlcircle.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlcircle.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlcircle.GetAllUserProperties(values);
@@ -156,13 +154,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlcircle.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlcircle.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlcircle.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlcircle.SetPhase(phase.GetTSObject());
+			 => controlcircle.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlcircle.GetPhase(phase.GetTSObject());
+			 => controlcircle.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlcircle.SetLabel(label);
@@ -173,31 +171,97 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct ControlCircleColorEnum
+    public enum ControlCircleColorEnum
     {
-       
+			BLACK,
+			WHITE,
+			RED,
+			GREEN,
+			BLUE,
+			CYAN,
+			YELLOW,
+			MAGENTA,
+			YELLOW_RED        
     }
 
     internal static class ControlCircleColorEnum_
     {
-        public static dynamic GetTSObject(ControlCircleColorEnum dynStruct)
+        public static dynamic GetTSObject(ControlCircleColorEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlCircleColorEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ControlCircleColorEnum.BLACK:
+					return System.Enum.Parse(tsType, "BLACK");
+				case ControlCircleColorEnum.WHITE:
+					return System.Enum.Parse(tsType, "WHITE");
+				case ControlCircleColorEnum.RED:
+					return System.Enum.Parse(tsType, "RED");
+				case ControlCircleColorEnum.GREEN:
+					return System.Enum.Parse(tsType, "GREEN");
+				case ControlCircleColorEnum.BLUE:
+					return System.Enum.Parse(tsType, "BLUE");
+				case ControlCircleColorEnum.CYAN:
+					return System.Enum.Parse(tsType, "CYAN");
+				case ControlCircleColorEnum.YELLOW:
+					return System.Enum.Parse(tsType, "YELLOW");
+				case ControlCircleColorEnum.MAGENTA:
+					return System.Enum.Parse(tsType, "MAGENTA");
+				case ControlCircleColorEnum.YELLOW_RED:
+					return System.Enum.Parse(tsType, "YELLOW_RED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ControlCircleColorEnum FromTSObject(dynamic tsStruct)
+        public static ControlCircleColorEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ControlCircleColorEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BLACK", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.BLACK;
+			else if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.WHITE;
+			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.RED;
+			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.GREEN;
+			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.BLUE;
+			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.CYAN;
+			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.YELLOW;
+			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.MAGENTA;
+			else if (tsEnumValue.Equals("YELLOW_RED", System.StringComparison.InvariantCulture))
+				return ControlCircleColorEnum.YELLOW_RED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ControlCircle_
+    {
+        public static dynamic GetTSObject(ControlCircle dynObject)
+        {
+            return dynObject.controlcircle;
+        }
+
+        public static ControlCircle FromTSObject(dynamic tsObject)
+        {
+            return new ControlCircle(tsObject);
+        }
+    }
+
 
 }
     

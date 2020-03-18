@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ConicalSurface Surface
 		{
-			get => new Dynamic.Tekla.Structures.Model.ConicalSurface(conicalsurfacenode.Surface);
-			set { conicalsurfacenode.Surface = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ConicalSurface_.FromTSObject(conicalsurfacenode.Surface);
+			set { conicalsurfacenode.Surface = Dynamic.Tekla.Structures.Model.ConicalSurface_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsAutomatic
@@ -19,36 +19,36 @@ namespace Dynamic.Tekla.Structures.Model
 			set { conicalsurfacenode.IsAutomatic = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.BendSurface Surface
-		{
-			get => new Dynamic.Tekla.Structures.Model.BendSurface(conicalsurfacenode.Surface);
-			set { conicalsurfacenode.Surface = value.GetTSObject(); }
-		}
-
         
 
-        dynamic conicalsurfacenode;
+        internal dynamic conicalsurfacenode;
         
         public ConicalSurfaceNode()
         {
             this.conicalsurfacenode =  TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurfaceNode");
         }
 
-        public ConicalSurfaceNode(dynamic tsObject)
+        internal ConicalSurfaceNode(dynamic tsObject)
         {
             this.conicalsurfacenode = tsObject;
         }
 
-        internal dynamic GetTSObject() => conicalsurfacenode;
-
-		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => conicalsurfacenode.AcceptVisitor(visitor.GetTSObject());
-
-
-
-
 
     }
+
+    internal static class ConicalSurfaceNode_
+    {
+        public static dynamic GetTSObject(ConicalSurfaceNode dynObject)
+        {
+            return dynObject.conicalsurfacenode;
+        }
+
+        public static ConicalSurfaceNode FromTSObject(dynamic tsObject)
+        {
+            return new ConicalSurfaceNode(tsObject);
+        }
+    }
+
 
 }
     

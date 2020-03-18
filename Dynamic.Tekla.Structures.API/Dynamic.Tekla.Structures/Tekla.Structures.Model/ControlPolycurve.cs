@@ -10,19 +10,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ControlObjectColorEnum Color
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(controlpolycurve.Color);
-			set { controlpolycurve.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(value); }
+			set { controlpolycurve.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
 			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(controlpolycurve.LineType);
-			set { controlpolycurve.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(value); }
+			set { controlpolycurve.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Polycurve Geometry
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Polycurve(controlpolycurve.Geometry);
-			set { controlpolycurve.Geometry = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(controlpolycurve.Geometry);
+			set { controlpolycurve.Geometry = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -39,25 +39,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlpolycurve.Identifier);
-			set { controlpolycurve.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlpolycurve.Identifier);
+			set { controlpolycurve.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlpolycurve;
+        internal dynamic controlpolycurve;
         
         public ControlPolycurve()
         {
             this.controlpolycurve =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlPolycurve");
         }
 
-        public ControlPolycurve(dynamic tsObject)
+        internal ControlPolycurve(dynamic tsObject)
         {
             this.controlpolycurve = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlpolycurve;
 
 		public System.Boolean Delete()
 			 => controlpolycurve.Delete();
@@ -72,13 +70,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlpolycurve.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlpolycurve.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlpolycurve.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlpolycurve.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlpolycurve.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlpolycurve.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlpolycurve.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlpolycurve.GetAllUserProperties(values);
@@ -138,13 +136,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlpolycurve.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlpolycurve.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlpolycurve.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlpolycurve.SetPhase(phase.GetTSObject());
+			 => controlpolycurve.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlpolycurve.GetPhase(phase.GetTSObject());
+			 => controlpolycurve.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlpolycurve.SetLabel(label);
@@ -157,6 +155,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ControlPolycurve_
+    {
+        public static dynamic GetTSObject(ControlPolycurve dynObject)
+        {
+            return dynObject.controlpolycurve;
+        }
+
+        public static ControlPolycurve FromTSObject(dynamic tsObject)
+        {
+            return new ControlPolycurve(tsObject);
+        }
+    }
+
 
 }
     

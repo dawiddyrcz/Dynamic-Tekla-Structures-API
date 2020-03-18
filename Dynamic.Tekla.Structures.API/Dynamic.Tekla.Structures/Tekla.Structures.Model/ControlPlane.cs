@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Plane Plane
 		{
-			get => new Dynamic.Tekla.Structures.Model.Plane(controlplane.Plane);
-			set { controlplane.Plane = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(controlplane.Plane);
+			set { controlplane.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsMagnetic
@@ -39,25 +39,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(controlplane.Identifier);
-			set { controlplane.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(controlplane.Identifier);
+			set { controlplane.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic controlplane;
+        internal dynamic controlplane;
         
         public ControlPlane()
         {
             this.controlplane =  TSActivator.CreateInstance("Tekla.Structures.Model.ControlPlane");
         }
 
-        public ControlPlane(dynamic tsObject)
+        internal ControlPlane(dynamic tsObject)
         {
             this.controlplane = tsObject;
         }
-
-        internal dynamic GetTSObject() => controlplane;
 
 		public System.Boolean Insert()
 			 => controlplane.Insert();
@@ -72,13 +70,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlplane.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlplane.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlplane.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(controlplane.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(controlplane.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(controlplane.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(controlplane.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => controlplane.GetAllUserProperties(values);
@@ -138,13 +136,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => controlplane.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(controlplane.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(controlplane.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlplane.SetPhase(phase.GetTSObject());
+			 => controlplane.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => controlplane.GetPhase(phase.GetTSObject());
+			 => controlplane.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => controlplane.SetLabel(label);
@@ -157,6 +155,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ControlPlane_
+    {
+        public static dynamic GetTSObject(ControlPlane dynObject)
+        {
+            return dynObject.controlplane;
+        }
+
+        public static ControlPlane FromTSObject(dynamic tsObject)
+        {
+            return new ControlPlane(tsObject);
+        }
+    }
+
 
 }
     

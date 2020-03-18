@@ -21,28 +21,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(referencemodelobject.Identifier);
-			set { referencemodelobject.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(referencemodelobject.Identifier);
+			set { referencemodelobject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic referencemodelobject;
+        internal dynamic referencemodelobject;
         
         public ReferenceModelObject()
         {
             this.referencemodelobject =  TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModelObject");
         }
 
-        public ReferenceModelObject(dynamic tsObject)
+        internal ReferenceModelObject(dynamic tsObject)
         {
             this.referencemodelobject = tsObject;
         }
 
-        internal dynamic GetTSObject() => referencemodelobject;
-
 		public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
-			 => new Dynamic.Tekla.Structures.Model.ReferenceModel(referencemodelobject.GetReferenceModel());
+			 => Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(referencemodelobject.GetReferenceModel());
 
 		public System.Boolean Insert()
 			 => referencemodelobject.Insert();
@@ -57,16 +55,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => referencemodelobject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetFather()
-			 => new Dynamic.Tekla.Structures.Model.ReferenceModelObject(referencemodelobject.GetFather());
+			 => Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(referencemodelobject.GetFather());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodelobject.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodelobject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(referencemodelobject.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(referencemodelobject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodelobject.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodelobject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => referencemodelobject.GetAllUserProperties(values);
@@ -126,13 +124,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => referencemodelobject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(referencemodelobject.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(referencemodelobject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodelobject.SetPhase(phase.GetTSObject());
+			 => referencemodelobject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodelobject.GetPhase(phase.GetTSObject());
+			 => referencemodelobject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => referencemodelobject.SetLabel(label);
@@ -145,6 +143,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ReferenceModelObject_
+    {
+        public static dynamic GetTSObject(ReferenceModelObject dynObject)
+        {
+            return dynObject.referencemodelobject;
+        }
+
+        public static ReferenceModelObject FromTSObject(dynamic tsObject)
+        {
+            return new ReferenceModelObject(tsObject);
+        }
+    }
+
 
 }
     

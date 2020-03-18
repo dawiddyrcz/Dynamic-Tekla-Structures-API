@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         
 
-        dynamic modificationstamp;
+        internal dynamic modificationstamp;
         
         public ModificationStamp()
         {
             this.modificationstamp =  TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp");
         }
 
-        public ModificationStamp(dynamic tsObject)
+        internal ModificationStamp(dynamic tsObject)
         {
             this.modificationstamp = tsObject;
         }
-
-        internal dynamic GetTSObject() => modificationstamp;
 
 
 
 
 
     }
+
+    internal static class ModificationStamp_
+    {
+        public static dynamic GetTSObject(ModificationStamp dynObject)
+        {
+            return dynObject.modificationstamp;
+        }
+
+        public static ModificationStamp FromTSObject(dynamic tsObject)
+        {
+            return new ModificationStamp(tsObject);
+        }
+    }
+
 
 }
     

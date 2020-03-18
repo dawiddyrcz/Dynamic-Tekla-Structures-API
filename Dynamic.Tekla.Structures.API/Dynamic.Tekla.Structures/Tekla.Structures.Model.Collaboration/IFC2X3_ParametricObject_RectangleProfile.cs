@@ -21,20 +21,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(ifc2x3_parametricobject_rectangleprofile.Origin);
-			set { ifc2x3_parametricobject_rectangleprofile.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(ifc2x3_parametricobject_rectangleprofile.Origin);
+			set { ifc2x3_parametricobject_rectangleprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectangleprofile.xDir);
-			set { ifc2x3_parametricobject_rectangleprofile.xDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_rectangleprofile.xDir);
+			set { ifc2x3_parametricobject_rectangleprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(ifc2x3_parametricobject_rectangleprofile.Extrusion);
-			set { ifc2x3_parametricobject_rectangleprofile.Extrusion = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_rectangleprofile.Extrusion);
+			set { ifc2x3_parametricobject_rectangleprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
@@ -63,25 +63,37 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic ifc2x3_parametricobject_rectangleprofile;
+        internal dynamic ifc2x3_parametricobject_rectangleprofile;
         
         public IFC2X3_ParametricObject_RectangleProfile()
         {
             this.ifc2x3_parametricobject_rectangleprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_RectangleProfile");
         }
 
-        public IFC2X3_ParametricObject_RectangleProfile(dynamic tsObject)
+        internal IFC2X3_ParametricObject_RectangleProfile(dynamic tsObject)
         {
             this.ifc2x3_parametricobject_rectangleprofile = tsObject;
         }
-
-        internal dynamic GetTSObject() => ifc2x3_parametricobject_rectangleprofile;
 
 
 
 
 
     }
+
+    internal static class IFC2X3_ParametricObject_RectangleProfile_
+    {
+        public static dynamic GetTSObject(IFC2X3_ParametricObject_RectangleProfile dynObject)
+        {
+            return dynObject.ifc2x3_parametricobject_rectangleprofile;
+        }
+
+        public static IFC2X3_ParametricObject_RectangleProfile FromTSObject(dynamic tsObject)
+        {
+            return new IFC2X3_ParametricObject_RectangleProfile(tsObject);
+        }
+    }
+
 
 }
     

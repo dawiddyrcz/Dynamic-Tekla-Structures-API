@@ -9,22 +9,20 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic disposabletoken;
+        internal dynamic disposabletoken;
         
         public DisposableToken()
         {
             this.disposabletoken =  TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken");
         }
 
-        public DisposableToken(dynamic tsObject)
+        internal DisposableToken(dynamic tsObject)
         {
             this.disposabletoken = tsObject;
         }
 
-        internal dynamic GetTSObject() => disposabletoken;
-
 		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
-			 => new Dynamic.Tekla.Structures.Model.DisposableToken(disposabletoken.op_Addition(a.GetTSObject(), b));
+			 => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(disposabletoken.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
 
 		public void Dispose()
 			 => disposabletoken.Dispose();
@@ -34,6 +32,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class DisposableToken_
+    {
+        public static dynamic GetTSObject(DisposableToken dynObject)
+        {
+            return dynObject.disposabletoken;
+        }
+
+        public static DisposableToken FromTSObject(dynamic tsObject)
+        {
+            return new DisposableToken(tsObject);
+        }
+    }
+
 
 }
     

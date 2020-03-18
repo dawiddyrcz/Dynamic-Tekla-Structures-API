@@ -10,43 +10,43 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(polybeam.Type);
-			set { polybeam.Type = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.FromTSObject(value); }
+			set { polybeam.Type = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(polybeam.Contour);
-			set { polybeam.Contour = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(polybeam.Contour);
+			set { polybeam.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(polybeam.Profile);
-			set { polybeam.Profile = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(polybeam.Profile);
+			set { polybeam.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(polybeam.Material);
-			set { polybeam.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(polybeam.Material);
+			set { polybeam.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
 		{
-			get => new Dynamic.Tekla.Structures.Model.DeformingData(polybeam.DeformingData);
-			set { polybeam.DeformingData = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(polybeam.DeformingData);
+			set { polybeam.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(polybeam.PartNumber);
-			set { polybeam.PartNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(polybeam.PartNumber);
+			set { polybeam.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(polybeam.AssemblyNumber);
-			set { polybeam.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(polybeam.AssemblyNumber);
+			set { polybeam.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
 			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(polybeam.CastUnitType);
-			set { polybeam.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
+			set { polybeam.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(polybeam.Position);
-			set { polybeam.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(polybeam.Position);
+			set { polybeam.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -99,28 +99,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(polybeam.Identifier);
-			set { polybeam.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(polybeam.Identifier);
+			set { polybeam.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic polybeam;
+        internal dynamic polybeam;
         
         public PolyBeam()
         {
             this.polybeam =  TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeam");
         }
 
-        public PolyBeam(dynamic tsObject)
+        internal PolyBeam(dynamic tsObject)
         {
             this.polybeam = tsObject;
         }
 
-        internal dynamic GetTSObject() => polybeam;
-
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
-			 => polybeam.AddContourPoint(contourPoint.GetTSObject());
+			 => polybeam.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
 
 		public System.Boolean Insert()
 			 => polybeam.Insert();
@@ -138,16 +136,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => polybeam.GetPolybeamCoordinateSystems();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(polybeam.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(polybeam.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-			 => new Dynamic.Tekla.Structures.Model.Solid(polybeam.GetSolid(solidCreationType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(polybeam.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-			 => new Dynamic.Tekla.Structures.Model.Solid(polybeam.GetSolid(formingStates.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(polybeam.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(polybeam.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(polybeam.GetAssembly());
 
 		public System.String GetPartMark()
 			 => polybeam.GetPartMark();
@@ -159,43 +157,43 @@ namespace Dynamic.Tekla.Structures.Model
 			 => polybeam.GetReferenceLine(withCutsFittings);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetComponents());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetBooleans());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetBooleans());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetBolts());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetBolts());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetWelds());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetWelds());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetReinforcements());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetReinforcements());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetSurfaceTreatments());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetSurfaceTreatments());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetSurfaceObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetSurfaceObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetPours());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetPours());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-			 => polybeam.CompareTo(partToCompare.GetTSObject());
+			 => polybeam.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(polybeam.GetDSTVCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(polybeam.GetDSTVCoordinateSystem());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(polybeam.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(polybeam.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(polybeam.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polybeam.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => polybeam.GetAllUserProperties(values);
@@ -255,13 +253,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => polybeam.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(polybeam.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(polybeam.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => polybeam.SetPhase(phase.GetTSObject());
+			 => polybeam.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => polybeam.GetPhase(phase.GetTSObject());
+			 => polybeam.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => polybeam.SetLabel(label);
@@ -272,31 +270,72 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct PolyBeamTypeEnum
+    public enum PolyBeamTypeEnum
     {
-       
+			BEAM,
+			PANEL,
+			STRIP_FOOTING,
+			COLUMN        
     }
 
     internal static class PolyBeamTypeEnum_
     {
-        public static dynamic GetTSObject(PolyBeamTypeEnum dynStruct)
+        public static dynamic GetTSObject(PolyBeamTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeamTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case PolyBeamTypeEnum.BEAM:
+					return System.Enum.Parse(tsType, "BEAM");
+				case PolyBeamTypeEnum.PANEL:
+					return System.Enum.Parse(tsType, "PANEL");
+				case PolyBeamTypeEnum.STRIP_FOOTING:
+					return System.Enum.Parse(tsType, "STRIP_FOOTING");
+				case PolyBeamTypeEnum.COLUMN:
+					return System.Enum.Parse(tsType, "COLUMN");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static PolyBeamTypeEnum FromTSObject(dynamic tsStruct)
+        public static PolyBeamTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new PolyBeamTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("BEAM", System.StringComparison.InvariantCulture))
+				return PolyBeamTypeEnum.BEAM;
+			else if (tsEnumValue.Equals("PANEL", System.StringComparison.InvariantCulture))
+				return PolyBeamTypeEnum.PANEL;
+			else if (tsEnumValue.Equals("STRIP_FOOTING", System.StringComparison.InvariantCulture))
+				return PolyBeamTypeEnum.STRIP_FOOTING;
+			else if (tsEnumValue.Equals("COLUMN", System.StringComparison.InvariantCulture))
+				return PolyBeamTypeEnum.COLUMN;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class PolyBeam_
+    {
+        public static dynamic GetTSObject(PolyBeam dynObject)
+        {
+            return dynObject.polybeam;
+        }
+
+        public static PolyBeam FromTSObject(dynamic tsObject)
+        {
+            return new PolyBeam(tsObject);
+        }
+    }
+
 
 }
     

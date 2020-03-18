@@ -15,19 +15,17 @@ namespace Dynamic.Tekla.Structures.Solid
 
         
 
-        dynamic shellenumerator;
+        internal dynamic shellenumerator;
         
         public ShellEnumerator()
         {
             this.shellenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.ShellEnumerator");
         }
 
-        public ShellEnumerator(dynamic tsObject)
+        internal ShellEnumerator(dynamic tsObject)
         {
             this.shellenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => shellenumerator;
 
 		public System.Boolean MoveNext()
 			 => shellenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Solid
 
 
     }
+
+    internal static class ShellEnumerator_
+    {
+        public static dynamic GetTSObject(ShellEnumerator dynObject)
+        {
+            return dynObject.shellenumerator;
+        }
+
+        public static ShellEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new ShellEnumerator(tsObject);
+        }
+    }
+
 
 }
     

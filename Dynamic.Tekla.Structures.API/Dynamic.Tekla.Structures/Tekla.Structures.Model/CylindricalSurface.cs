@@ -21,32 +21,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line IntersectionLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(cylindricalsurface.IntersectionLine);
-			set { cylindricalsurface.IntersectionLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(cylindricalsurface.IntersectionLine);
+			set { cylindricalsurface.IntersectionLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.EndFaceNormal1);
-			set { cylindricalsurface.EndFaceNormal1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(cylindricalsurface.EndFaceNormal1);
+			set { cylindricalsurface.EndFaceNormal1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.EndFaceNormal2);
-			set { cylindricalsurface.EndFaceNormal2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(cylindricalsurface.EndFaceNormal2);
+			set { cylindricalsurface.EndFaceNormal2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line CenterLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(cylindricalsurface.CenterLine);
-			set { cylindricalsurface.CenterLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(cylindricalsurface.CenterLine);
+			set { cylindricalsurface.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxis
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(cylindricalsurface.RotationAxis);
-			set { cylindricalsurface.RotationAxis = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(cylindricalsurface.RotationAxis);
+			set { cylindricalsurface.RotationAxis = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
@@ -63,37 +63,49 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(cylindricalsurface.SideBoundary1);
-			set { cylindricalsurface.SideBoundary1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(cylindricalsurface.SideBoundary1);
+			set { cylindricalsurface.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(cylindricalsurface.SideBoundary2);
-			set { cylindricalsurface.SideBoundary2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(cylindricalsurface.SideBoundary2);
+			set { cylindricalsurface.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
         
 
-        dynamic cylindricalsurface;
+        internal dynamic cylindricalsurface;
         
         public CylindricalSurface()
         {
             this.cylindricalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface");
         }
 
-        public CylindricalSurface(dynamic tsObject)
+        internal CylindricalSurface(dynamic tsObject)
         {
             this.cylindricalsurface = tsObject;
         }
-
-        internal dynamic GetTSObject() => cylindricalsurface;
 
 
 
 
 
     }
+
+    internal static class CylindricalSurface_
+    {
+        public static dynamic GetTSObject(CylindricalSurface dynObject)
+        {
+            return dynObject.cylindricalsurface;
+        }
+
+        public static CylindricalSurface FromTSObject(dynamic tsObject)
+        {
+            return new CylindricalSurface(tsObject);
+        }
+    }
+
 
 }
     

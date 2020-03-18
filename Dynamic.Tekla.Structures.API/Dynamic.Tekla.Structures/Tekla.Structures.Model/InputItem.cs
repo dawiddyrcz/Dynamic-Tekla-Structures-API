@@ -9,22 +9,20 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic inputitem;
+        internal dynamic inputitem;
         
         public InputItem()
         {
             this.inputitem =  TSActivator.CreateInstance("Tekla.Structures.Model.InputItem");
         }
 
-        public InputItem(dynamic tsObject)
+        internal InputItem(dynamic tsObject)
         {
             this.inputitem = tsObject;
         }
 
-        internal dynamic GetTSObject() => inputitem;
-
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-			 => new Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum(inputitem.GetInputType());
+			 => Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(inputitem.GetInputType());
 
 		public System.Object GetData()
 			 => inputitem.GetData();
@@ -32,31 +30,77 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct InputTypeEnum
+    public enum InputTypeEnum
     {
-       
+			INPUT_1_POINT,
+			INPUT_2_POINTS,
+			INPUT_POLYGON,
+			INPUT_1_OBJECT,
+			INPUT_N_OBJECTS        
     }
 
     internal static class InputTypeEnum_
     {
-        public static dynamic GetTSObject(InputTypeEnum dynStruct)
+        public static dynamic GetTSObject(InputTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.InputTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case InputTypeEnum.INPUT_1_POINT:
+					return System.Enum.Parse(tsType, "INPUT_1_POINT");
+				case InputTypeEnum.INPUT_2_POINTS:
+					return System.Enum.Parse(tsType, "INPUT_2_POINTS");
+				case InputTypeEnum.INPUT_POLYGON:
+					return System.Enum.Parse(tsType, "INPUT_POLYGON");
+				case InputTypeEnum.INPUT_1_OBJECT:
+					return System.Enum.Parse(tsType, "INPUT_1_OBJECT");
+				case InputTypeEnum.INPUT_N_OBJECTS:
+					return System.Enum.Parse(tsType, "INPUT_N_OBJECTS");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static InputTypeEnum FromTSObject(dynamic tsStruct)
+        public static InputTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new InputTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("INPUT_1_POINT", System.StringComparison.InvariantCulture))
+				return InputTypeEnum.INPUT_1_POINT;
+			else if (tsEnumValue.Equals("INPUT_2_POINTS", System.StringComparison.InvariantCulture))
+				return InputTypeEnum.INPUT_2_POINTS;
+			else if (tsEnumValue.Equals("INPUT_POLYGON", System.StringComparison.InvariantCulture))
+				return InputTypeEnum.INPUT_POLYGON;
+			else if (tsEnumValue.Equals("INPUT_1_OBJECT", System.StringComparison.InvariantCulture))
+				return InputTypeEnum.INPUT_1_OBJECT;
+			else if (tsEnumValue.Equals("INPUT_N_OBJECTS", System.StringComparison.InvariantCulture))
+				return InputTypeEnum.INPUT_N_OBJECTS;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class InputItem_
+    {
+        public static dynamic GetTSObject(InputItem dynObject)
+        {
+            return dynObject.inputitem;
+        }
+
+        public static InputItem FromTSObject(dynamic tsObject)
+        {
+            return new InputItem(tsObject);
+        }
+    }
+
 
 }
     

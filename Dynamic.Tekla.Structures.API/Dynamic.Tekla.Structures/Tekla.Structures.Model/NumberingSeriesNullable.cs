@@ -21,25 +21,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic numberingseriesnullable;
+        internal dynamic numberingseriesnullable;
         
         public NumberingSeriesNullable()
         {
             this.numberingseriesnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable");
         }
 
-        public NumberingSeriesNullable(dynamic tsObject)
+        internal NumberingSeriesNullable(dynamic tsObject)
         {
             this.numberingseriesnullable = tsObject;
         }
-
-        internal dynamic GetTSObject() => numberingseriesnullable;
 
 
 
 
 
     }
+
+    internal static class NumberingSeriesNullable_
+    {
+        public static dynamic GetTSObject(NumberingSeriesNullable dynObject)
+        {
+            return dynObject.numberingseriesnullable;
+        }
+
+        public static NumberingSeriesNullable FromTSObject(dynamic tsObject)
+        {
+            return new NumberingSeriesNullable(tsObject);
+        }
+    }
+
 
 }
     

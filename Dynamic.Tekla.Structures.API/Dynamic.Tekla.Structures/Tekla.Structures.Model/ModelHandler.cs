@@ -9,19 +9,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic modelhandler;
+        internal dynamic modelhandler;
         
         public ModelHandler()
         {
             this.modelhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelHandler");
         }
 
-        public ModelHandler(dynamic tsObject)
+        internal ModelHandler(dynamic tsObject)
         {
             this.modelhandler = tsObject;
         }
-
-        internal dynamic GetTSObject() => modelhandler;
 
 		public System.Boolean CreateNewSingleUserModel(System.String ModelName, System.String ModelFolder, System.String Template)
 			 => modelhandler.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ModelHandler_
+    {
+        public static dynamic GetTSObject(ModelHandler dynObject)
+        {
+            return dynObject.modelhandler;
+        }
+
+        public static ModelHandler FromTSObject(dynamic tsObject)
+        {
+            return new ModelHandler(tsObject);
+        }
+    }
+
 
 }
     

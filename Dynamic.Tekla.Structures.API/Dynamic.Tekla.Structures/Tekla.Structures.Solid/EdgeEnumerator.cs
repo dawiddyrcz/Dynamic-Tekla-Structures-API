@@ -15,19 +15,17 @@ namespace Dynamic.Tekla.Structures.Solid
 
         
 
-        dynamic edgeenumerator;
+        internal dynamic edgeenumerator;
         
         public EdgeEnumerator()
         {
             this.edgeenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.EdgeEnumerator");
         }
 
-        public EdgeEnumerator(dynamic tsObject)
+        internal EdgeEnumerator(dynamic tsObject)
         {
             this.edgeenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => edgeenumerator;
 
 		public System.Boolean MoveNext()
 			 => edgeenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Solid
 
 
     }
+
+    internal static class EdgeEnumerator_
+    {
+        public static dynamic GetTSObject(EdgeEnumerator dynObject)
+        {
+            return dynObject.edgeenumerator;
+        }
+
+        public static EdgeEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new EdgeEnumerator(tsObject);
+        }
+    }
+
 
 }
     

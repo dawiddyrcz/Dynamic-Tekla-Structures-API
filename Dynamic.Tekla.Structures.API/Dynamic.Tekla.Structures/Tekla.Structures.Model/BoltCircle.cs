@@ -34,13 +34,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum BoltType
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(boltcircle.BoltType);
-			set { boltcircle.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(value); }
+			set { boltcircle.BoltType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum ThreadInMaterial
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(boltcircle.ThreadInMaterial);
-			set { boltcircle.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(value); }
+			set { boltcircle.ThreadInMaterial = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.GetTSObject(value); }
 		}
 
 		public System.Double Length
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum HoleType
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(boltcircle.HoleType);
-			set { boltcircle.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(value); }
+			set { boltcircle.HoleType = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double SlottedHoleX
@@ -88,25 +88,25 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum RotateSlots
 		{
 			get => Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(boltcircle.RotateSlots);
-			set { boltcircle.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(value); }
+			set { boltcircle.RotateSlots = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(boltcircle.Position);
-			set { boltcircle.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(boltcircle.Position);
+			set { boltcircle.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Offset StartPointOffset
 		{
-			get => new Dynamic.Tekla.Structures.Model.Offset(boltcircle.StartPointOffset);
-			set { boltcircle.StartPointOffset = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(boltcircle.StartPointOffset);
+			set { boltcircle.StartPointOffset = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Offset EndPointOffset
 		{
-			get => new Dynamic.Tekla.Structures.Model.Offset(boltcircle.EndPointOffset);
-			set { boltcircle.EndPointOffset = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(boltcircle.EndPointOffset);
+			set { boltcircle.EndPointOffset = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value); }
 		}
 
 		public System.Boolean Washer1
@@ -177,14 +177,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Part PartToBoltTo
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(boltcircle.PartToBoltTo);
-			set { boltcircle.PartToBoltTo = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(boltcircle.PartToBoltTo);
+			set { boltcircle.PartToBoltTo = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part PartToBeBolted
 		{
-			get => new Dynamic.Tekla.Structures.Model.Part(boltcircle.PartToBeBolted);
-			set { boltcircle.PartToBeBolted = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(boltcircle.PartToBeBolted);
+			set { boltcircle.PartToBeBolted = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OtherPartsToBolt
@@ -195,14 +195,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(boltcircle.FirstPosition);
-			set { boltcircle.FirstPosition = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(boltcircle.FirstPosition);
+			set { boltcircle.FirstPosition = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point SecondPosition
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(boltcircle.SecondPosition);
-			set { boltcircle.SecondPosition = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(boltcircle.SecondPosition);
+			set { boltcircle.SecondPosition = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Boolean ConnectAssemblies
@@ -231,25 +231,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(boltcircle.Identifier);
-			set { boltcircle.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(boltcircle.Identifier);
+			set { boltcircle.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic boltcircle;
+        internal dynamic boltcircle;
         
         public BoltCircle()
         {
             this.boltcircle =  TSActivator.CreateInstance("Tekla.Structures.Model.BoltCircle");
         }
 
-        public BoltCircle(dynamic tsObject)
+        internal BoltCircle(dynamic tsObject)
         {
             this.boltcircle = tsObject;
         }
-
-        internal dynamic GetTSObject() => boltcircle;
 
 		public System.Boolean Insert()
 			 => boltcircle.Insert();
@@ -264,34 +262,34 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boltcircle.Delete();
 
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
-			 => boltcircle.AddOtherPartToBolt(M.GetTSObject());
+			 => boltcircle.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
 
 		public System.Boolean RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
-			 => boltcircle.RemoveOtherPartToBolt(M.GetTSObject());
+			 => boltcircle.RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
 
 		public System.Collections.ArrayList GetOtherPartsToBolt()
 			 => boltcircle.GetOtherPartsToBolt();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(boltcircle.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(boltcircle.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(System.Boolean withHighAccuracy)
-			 => new Dynamic.Tekla.Structures.Model.Solid(boltcircle.GetSolid(withHighAccuracy));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(boltcircle.GetSolid(withHighAccuracy));
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(boltcircle.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(boltcircle.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => new Dynamic.Tekla.Structures.Model.PourUnit(boltcircle.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(boltcircle.GetFatherPourUnit());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boltcircle.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boltcircle.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(boltcircle.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(boltcircle.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(boltcircle.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boltcircle.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => boltcircle.GetAllUserProperties(values);
@@ -351,13 +349,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => boltcircle.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(boltcircle.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(boltcircle.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boltcircle.SetPhase(phase.GetTSObject());
+			 => boltcircle.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boltcircle.GetPhase(phase.GetTSObject());
+			 => boltcircle.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => boltcircle.SetLabel(label);
@@ -370,6 +368,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class BoltCircle_
+    {
+        public static dynamic GetTSObject(BoltCircle dynObject)
+        {
+            return dynObject.boltcircle;
+        }
+
+        public static BoltCircle FromTSObject(dynamic tsObject)
+        {
+            return new BoltCircle(tsObject);
+        }
+    }
+
 
 }
     

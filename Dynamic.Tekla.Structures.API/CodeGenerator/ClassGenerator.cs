@@ -83,9 +83,8 @@ namespace CodeGenerator
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
                     sb.Append(")\n\t\t\t => ");
-                    sb.Append("new ");
                     sb.Append(GetTypeFullName(method.ReturnType));
-                    sb.Append("($dfield.");
+                    sb.Append("_.FromTSObject($dfield.");
                     sb.Append(name);
                     sb.Append("(");
 
@@ -93,9 +92,16 @@ namespace CodeGenerator
                     {
                         if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
-                        sb.Append(param.Name);
+                        
                         if (IsTeklaType(param.ParameterType))
-                            sb.Append(".GetTSObject()");
+                        {
+                            sb.Append(GetTypeFullName(param.ParameterType));
+                            sb.Append("_.GetTSObject(");
+                            sb.Append(param.Name);
+                            sb.Append(")");
+                        }
+                        else
+                            sb.Append(param.Name);
                         sb.Append(", ");
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
@@ -142,12 +148,19 @@ namespace CodeGenerator
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
-                       // if (param.ParameterType.IsByRef) sb.Append("ref ");
+                        // if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
-                        
-                        sb.Append(paramName);
+
                         if (IsTeklaType(param.ParameterType))
-                            sb.Append(".GetTSObject()");
+                        {
+                            sb.Append(GetTypeFullName(param.ParameterType));
+                            sb.Append("_.GetTSObject(");
+                            sb.Append(paramName);
+                            sb.Append(")");
+                        }
+                        else
+                            sb.Append(paramName);
+
                         sb.Append(", ");
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
@@ -175,8 +188,8 @@ namespace CodeGenerator
             {
                 if (IsTeklaType(property.PropertyType))
                 {
-                    if (property.PropertyType.IsEnum)
-                    {
+                    //if (property.PropertyType.IsEnum)
+                    //{
                         sb.Append("\t\tpublic ");
                         sb.Append(GetTypeFullName(property.PropertyType));
                         sb.Append(" ");
@@ -184,21 +197,21 @@ namespace CodeGenerator
                         sb.Append("\n\t\t{" +
                             "\n\t\t\tget => " + GetTypeFullName(property.PropertyType) + "_.FromTSObject($dfield." +
                             "" + property.Name + ");" +
-                            "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.FromTSObject(value); }" +
+                            "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.GetTSObject(value); }" +
                             "\n\t\t}\n\n");
-                    }
-                    else
-                    {
-                        sb.Append("\t\tpublic ");
-                        sb.Append(GetTypeFullName(property.PropertyType));
-                        sb.Append(" ");
-                        sb.Append(property.Name);
-                        sb.Append("\n\t\t{" +
-                            "\n\t\t\tget => new " + GetTypeFullName(property.PropertyType) + "($dfield." +
-                            "" + property.Name + ");" +
-                            "\n\t\t\tset { $dfield." + property.Name + " = value.GetTSObject(); }" +
-                            "\n\t\t}\n\n");
-                    }
+                    //}
+                    //else
+                    //{
+                    //    sb.Append("\t\tpublic ");
+                    //    sb.Append(GetTypeFullName(property.PropertyType));
+                    //    sb.Append(" ");
+                    //    sb.Append(property.Name);
+                    //    sb.Append("\n\t\t{" +
+                    //        "\n\t\t\tget => new " + GetTypeFullName(property.PropertyType) + "($dfield." +
+                    //        "" + property.Name + ");" +
+                    //        "\n\t\t\tset { $dfield." + property.Name + " = value.GetTSObject(); }" +
+                    //        "\n\t\t}\n\n");
+                    //}
                 }
                 else
                 {
@@ -275,25 +288,37 @@ namespace CodeGenerator
 
 $dproperties        
 
-        dynamic $dfield;
+        internal dynamic $dfield;
         
         $firstConstructorAccessor $classname()
         {
             this.$dfield =  TSActivator.CreateInstance(""$namespace.$classname"");
         }
 
-        public $classname(dynamic tsObject)
+        internal $classname(dynamic tsObject)
         {
             this.$dfield = tsObject;
         }
-
-        internal dynamic GetTSObject() => $dfield;
 
 $dmethods
 
 $nestedTypes
 
     }
+
+    internal static class $classname_
+    {
+        public static dynamic GetTSObject($classname dynObject)
+        {
+            return dynObject.$dfield;
+        }
+
+        public static $classname FromTSObject(dynamic tsObject)
+        {
+            return new $classname(tsObject);
+        }
+    }
+
 ";
     }
 }

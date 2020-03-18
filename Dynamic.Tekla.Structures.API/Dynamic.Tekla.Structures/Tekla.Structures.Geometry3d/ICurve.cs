@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(icurve.StartPoint);
-			set { icurve.StartPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(icurve.StartPoint);
+			set { icurve.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(icurve.EndPoint);
-			set { icurve.EndPoint = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(icurve.EndPoint);
+			set { icurve.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double Length
@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic icurve;
+        internal dynamic icurve;
         
         private ICurve()
         {
             this.icurve =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.ICurve");
         }
 
-        public ICurve(dynamic tsObject)
+        internal ICurve(dynamic tsObject)
         {
             this.icurve = tsObject;
         }
-
-        internal dynamic GetTSObject() => icurve;
 
 
 
 
 
     }
+
+    internal static class ICurve_
+    {
+        public static dynamic GetTSObject(ICurve dynObject)
+        {
+            return dynObject.icurve;
+        }
+
+        public static ICurve FromTSObject(dynamic tsObject)
+        {
+            return new ICurve(tsObject);
+        }
+    }
+
 
 }
     

@@ -10,36 +10,34 @@ namespace Dynamic.Tekla.Structures.Forming
 		public Dynamic.Tekla.Structures.Forming.DeformingType Deforming
 		{
 			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(formingstates.Deforming);
-			set { formingstates.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value); }
+			set { formingstates.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Forming.FoldingType Folding
 		{
 			get => Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(formingstates.Folding);
-			set { formingstates.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(value); }
+			set { formingstates.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Forming.WrappingType Wrapping
 		{
 			get => Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(formingstates.Wrapping);
-			set { formingstates.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(value); }
+			set { formingstates.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value); }
 		}
 
         
 
-        dynamic formingstates;
+        internal dynamic formingstates;
         
         public FormingStates()
         {
             this.formingstates =  TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates");
         }
 
-        public FormingStates(dynamic tsObject)
+        internal FormingStates(dynamic tsObject)
         {
             this.formingstates = tsObject;
         }
-
-        internal dynamic GetTSObject() => formingstates;
 
 		public System.Object Clone()
 			 => formingstates.Clone();
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures.Forming
 
 
     }
+
+    internal static class FormingStates_
+    {
+        public static dynamic GetTSObject(FormingStates dynObject)
+        {
+            return dynObject.formingstates;
+        }
+
+        public static FormingStates FromTSObject(dynamic tsObject)
+        {
+            return new FormingStates(tsObject);
+        }
+    }
+
 
 }
     

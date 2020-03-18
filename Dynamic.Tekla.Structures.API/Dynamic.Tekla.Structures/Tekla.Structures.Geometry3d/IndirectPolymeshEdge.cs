@@ -10,7 +10,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum EdgeType
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(indirectpolymeshedge.EdgeType);
-			set { indirectpolymeshedge.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(value); }
+			set { indirectpolymeshedge.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 StartPoint
@@ -33,25 +33,37 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic indirectpolymeshedge;
+        internal dynamic indirectpolymeshedge;
         
         public IndirectPolymeshEdge()
         {
             this.indirectpolymeshedge =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.IndirectPolymeshEdge");
         }
 
-        public IndirectPolymeshEdge(dynamic tsObject)
+        internal IndirectPolymeshEdge(dynamic tsObject)
         {
             this.indirectpolymeshedge = tsObject;
         }
-
-        internal dynamic GetTSObject() => indirectpolymeshedge;
 
 
 
 
 
     }
+
+    internal static class IndirectPolymeshEdge_
+    {
+        public static dynamic GetTSObject(IndirectPolymeshEdge dynObject)
+        {
+            return dynObject.indirectpolymeshedge;
+        }
+
+        public static IndirectPolymeshEdge FromTSObject(dynamic tsObject)
+        {
+            return new IndirectPolymeshEdge(tsObject);
+        }
+    }
+
 
 }
     

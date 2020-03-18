@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(parametricobject_customprofile.Origin);
-			set { parametricobject_customprofile.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(parametricobject_customprofile.Origin);
+			set { parametricobject_customprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_customprofile.xDir);
-			set { parametricobject_customprofile.xDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(parametricobject_customprofile.xDir);
+			set { parametricobject_customprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(parametricobject_customprofile.Extrusion);
-			set { parametricobject_customprofile.Extrusion = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(parametricobject_customprofile.Extrusion);
+			set { parametricobject_customprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
@@ -51,25 +51,37 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic parametricobject_customprofile;
+        internal dynamic parametricobject_customprofile;
         
         public ParametricObject_CustomProfile()
         {
             this.parametricobject_customprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_CustomProfile");
         }
 
-        public ParametricObject_CustomProfile(dynamic tsObject)
+        internal ParametricObject_CustomProfile(dynamic tsObject)
         {
             this.parametricobject_customprofile = tsObject;
         }
-
-        internal dynamic GetTSObject() => parametricobject_customprofile;
 
 
 
 
 
     }
+
+    internal static class ParametricObject_CustomProfile_
+    {
+        public static dynamic GetTSObject(ParametricObject_CustomProfile dynObject)
+        {
+            return dynObject.parametricobject_customprofile;
+        }
+
+        public static ParametricObject_CustomProfile FromTSObject(dynamic tsObject)
+        {
+            return new ParametricObject_CustomProfile(tsObject);
+        }
+    }
+
 
 }
     

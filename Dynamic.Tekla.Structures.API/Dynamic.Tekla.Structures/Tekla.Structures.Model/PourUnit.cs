@@ -27,25 +27,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(pourunit.Identifier);
-			set { pourunit.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(pourunit.Identifier);
+			set { pourunit.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic pourunit;
+        internal dynamic pourunit;
         
         public PourUnit()
         {
             this.pourunit =  TSActivator.CreateInstance("Tekla.Structures.Model.PourUnit");
         }
 
-        public PourUnit(dynamic tsObject)
+        internal PourUnit(dynamic tsObject)
         {
             this.pourunit = tsObject;
         }
-
-        internal dynamic GetTSObject() => pourunit;
 
 		public System.Boolean Insert()
 			 => pourunit.Insert();
@@ -60,19 +58,19 @@ namespace Dynamic.Tekla.Structures.Model
 			 => pourunit.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(pourunit.GetObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(pourunit.GetObjects());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetPourObject()
-			 => new Dynamic.Tekla.Structures.Model.PourObject(pourunit.GetPourObject());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(pourunit.GetPourObject());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(pourunit.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(pourunit.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(pourunit.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(pourunit.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(pourunit.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(pourunit.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => pourunit.GetAllUserProperties(values);
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => pourunit.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(pourunit.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(pourunit.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => pourunit.SetPhase(phase.GetTSObject());
+			 => pourunit.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => pourunit.GetPhase(phase.GetTSObject());
+			 => pourunit.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => pourunit.SetLabel(label);
@@ -151,6 +149,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class PourUnit_
+    {
+        public static dynamic GetTSObject(PourUnit dynObject)
+        {
+            return dynObject.pourunit;
+        }
+
+        public static PourUnit FromTSObject(dynamic tsObject)
+        {
+            return new PourUnit(tsObject);
+        }
+    }
+
 
 }
     

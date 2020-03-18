@@ -15,32 +15,32 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line IntersectionLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(bendsurface.IntersectionLine);
-			set { bendsurface.IntersectionLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(bendsurface.IntersectionLine);
+			set { bendsurface.IntersectionLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.EndFaceNormal1);
-			set { bendsurface.EndFaceNormal1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(bendsurface.EndFaceNormal1);
+			set { bendsurface.EndFaceNormal1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.EndFaceNormal2);
-			set { bendsurface.EndFaceNormal2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(bendsurface.EndFaceNormal2);
+			set { bendsurface.EndFaceNormal2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line CenterLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Line(bendsurface.CenterLine);
-			set { bendsurface.CenterLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(bendsurface.CenterLine);
+			set { bendsurface.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxis
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(bendsurface.RotationAxis);
-			set { bendsurface.RotationAxis = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(bendsurface.RotationAxis);
+			set { bendsurface.RotationAxis = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
@@ -57,37 +57,49 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary1
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(bendsurface.SideBoundary1);
-			set { bendsurface.SideBoundary1 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(bendsurface.SideBoundary1);
+			set { bendsurface.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary2
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.LineSegment(bendsurface.SideBoundary2);
-			set { bendsurface.SideBoundary2 = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(bendsurface.SideBoundary2);
+			set { bendsurface.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
         
 
-        dynamic bendsurface;
+        internal dynamic bendsurface;
         
         private BendSurface()
         {
             this.bendsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface");
         }
 
-        public BendSurface(dynamic tsObject)
+        internal BendSurface(dynamic tsObject)
         {
             this.bendsurface = tsObject;
         }
-
-        internal dynamic GetTSObject() => bendsurface;
 
 
 
 
 
     }
+
+    internal static class BendSurface_
+    {
+        public static dynamic GetTSObject(BendSurface dynObject)
+        {
+            return dynObject.bendsurface;
+        }
+
+        public static BendSurface FromTSObject(dynamic tsObject)
+        {
+            return new BendSurface(tsObject);
+        }
+    }
+
 
 }
     

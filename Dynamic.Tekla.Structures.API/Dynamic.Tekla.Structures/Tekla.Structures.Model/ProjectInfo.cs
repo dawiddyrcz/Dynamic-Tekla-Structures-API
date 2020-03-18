@@ -129,19 +129,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic projectinfo;
+        internal dynamic projectinfo;
         
         public ProjectInfo()
         {
             this.projectinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ProjectInfo");
         }
 
-        public ProjectInfo(dynamic tsObject)
+        internal ProjectInfo(dynamic tsObject)
         {
             this.projectinfo = tsObject;
         }
-
-        internal dynamic GetTSObject() => projectinfo;
 
 		public System.Boolean Modify()
 			 => projectinfo.Modify();
@@ -183,25 +181,39 @@ namespace Dynamic.Tekla.Structures.Model
 			 => projectinfo.GetBasePoints();
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
-			 => new Dynamic.Tekla.Structures.Model.BasePoint(projectinfo.GetBasePointByName(name));
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetBasePointByName(name));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
-			 => new Dynamic.Tekla.Structures.Model.BasePoint(projectinfo.GetBasePointByGuid(guid));
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetBasePointByGuid(guid));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
-			 => new Dynamic.Tekla.Structures.Model.BasePoint(projectinfo.GetCurrentCoordsysBasePoint());
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetCurrentCoordsysBasePoint());
 
 		public System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
-			 => projectinfo.SetCurrentCoordsysToBasePoint(basePoint.GetTSObject());
+			 => projectinfo.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
-			 => new Dynamic.Tekla.Structures.Model.BasePoint(projectinfo.GetProjectBasePoint());
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetProjectBasePoint());
 
 
 
 
 
     }
+
+    internal static class ProjectInfo_
+    {
+        public static dynamic GetTSObject(ProjectInfo dynObject)
+        {
+            return dynObject.projectinfo;
+        }
+
+        public static ProjectInfo FromTSObject(dynamic tsObject)
+        {
+            return new ProjectInfo(tsObject);
+        }
+    }
+
 
 }
     

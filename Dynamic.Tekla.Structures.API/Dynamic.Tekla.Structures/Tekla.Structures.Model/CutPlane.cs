@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Plane Plane
 		{
-			get => new Dynamic.Tekla.Structures.Model.Plane(cutplane.Plane);
-			set { cutplane.Plane = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(cutplane.Plane);
+			set { cutplane.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(cutplane.Father);
-			set { cutplane.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(cutplane.Father);
+			set { cutplane.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -33,25 +33,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(cutplane.Identifier);
-			set { cutplane.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(cutplane.Identifier);
+			set { cutplane.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic cutplane;
+        internal dynamic cutplane;
         
         public CutPlane()
         {
             this.cutplane =  TSActivator.CreateInstance("Tekla.Structures.Model.CutPlane");
         }
 
-        public CutPlane(dynamic tsObject)
+        internal CutPlane(dynamic tsObject)
         {
             this.cutplane = tsObject;
         }
-
-        internal dynamic GetTSObject() => cutplane;
 
 		public System.Boolean Insert()
 			 => cutplane.Insert();
@@ -66,13 +64,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => cutplane.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(cutplane.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(cutplane.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(cutplane.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(cutplane.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(cutplane.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(cutplane.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => cutplane.GetAllUserProperties(values);
@@ -132,13 +130,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => cutplane.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(cutplane.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(cutplane.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => cutplane.SetPhase(phase.GetTSObject());
+			 => cutplane.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => cutplane.GetPhase(phase.GetTSObject());
+			 => cutplane.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => cutplane.SetLabel(label);
@@ -151,6 +149,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class CutPlane_
+    {
+        public static dynamic GetTSObject(CutPlane dynObject)
+        {
+            return dynObject.cutplane;
+        }
+
+        public static CutPlane FromTSObject(dynamic tsObject)
+        {
+            return new CutPlane(tsObject);
+        }
+    }
+
 
 }
     

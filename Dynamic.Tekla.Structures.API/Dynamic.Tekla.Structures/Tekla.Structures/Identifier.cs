@@ -27,19 +27,17 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic identifier;
+        internal dynamic identifier;
         
         public Identifier()
         {
             this.identifier =  TSActivator.CreateInstance("Tekla.Structures.Identifier");
         }
 
-        public Identifier(dynamic tsObject)
+        internal Identifier(dynamic tsObject)
         {
             this.identifier = tsObject;
         }
-
-        internal dynamic GetTSObject() => identifier;
 
 		public System.Boolean IsValid()
 			 => identifier.IsValid();
@@ -49,6 +47,20 @@ namespace Dynamic.Tekla.Structures
 
 
     }
+
+    internal static class Identifier_
+    {
+        public static dynamic GetTSObject(Identifier dynObject)
+        {
+            return dynObject.identifier;
+        }
+
+        public static Identifier FromTSObject(dynamic tsObject)
+        {
+            return new Identifier(tsObject);
+        }
+    }
+
 
 }
     

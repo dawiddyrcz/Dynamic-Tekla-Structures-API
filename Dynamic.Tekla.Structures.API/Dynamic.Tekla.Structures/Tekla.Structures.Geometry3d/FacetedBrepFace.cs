@@ -39,25 +39,37 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic facetedbrepface;
+        internal dynamic facetedbrepface;
         
         public FacetedBrepFace()
         {
             this.facetedbrepface =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepFace");
         }
 
-        public FacetedBrepFace(dynamic tsObject)
+        internal FacetedBrepFace(dynamic tsObject)
         {
             this.facetedbrepface = tsObject;
         }
-
-        internal dynamic GetTSObject() => facetedbrepface;
 
 
 
 
 
     }
+
+    internal static class FacetedBrepFace_
+    {
+        public static dynamic GetTSObject(FacetedBrepFace dynObject)
+        {
+            return dynObject.facetedbrepface;
+        }
+
+        public static FacetedBrepFace FromTSObject(dynamic tsObject)
+        {
+            return new FacetedBrepFace(tsObject);
+        }
+    }
+
 
 }
     

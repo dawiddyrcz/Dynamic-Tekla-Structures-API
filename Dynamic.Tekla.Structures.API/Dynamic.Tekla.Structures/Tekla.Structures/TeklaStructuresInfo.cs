@@ -9,19 +9,17 @@ namespace Dynamic.Tekla.Structures
 
         
 
-        dynamic teklastructuresinfo;
+        internal dynamic teklastructuresinfo;
         
         public TeklaStructuresInfo()
         {
             this.teklastructuresinfo =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresInfo");
         }
 
-        public TeklaStructuresInfo(dynamic tsObject)
+        internal TeklaStructuresInfo(dynamic tsObject)
         {
             this.teklastructuresinfo = tsObject;
         }
-
-        internal dynamic GetTSObject() => teklastructuresinfo;
 
 		public System.String GetCurrentProgramVersion()
 			 => teklastructuresinfo.GetCurrentProgramVersion();
@@ -52,6 +50,20 @@ namespace Dynamic.Tekla.Structures
 
 
     }
+
+    internal static class TeklaStructuresInfo_
+    {
+        public static dynamic GetTSObject(TeklaStructuresInfo dynObject)
+        {
+            return dynObject.teklastructuresinfo;
+        }
+
+        public static TeklaStructuresInfo FromTSObject(dynamic tsObject)
+        {
+            return new TeklaStructuresInfo(tsObject);
+        }
+    }
+
 
 }
     

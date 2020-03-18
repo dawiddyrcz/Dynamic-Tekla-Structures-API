@@ -33,8 +33,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.HierarchicObject Scenario
 		{
-			get => new Dynamic.Tekla.Structures.Model.HierarchicObject(task.Scenario);
-			set { task.Scenario = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(task.Scenario);
+			set { task.Scenario = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value); }
 		}
 
 		public System.String Description
@@ -99,25 +99,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(task.Identifier);
-			set { task.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(task.Identifier);
+			set { task.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic task;
+        internal dynamic task;
         
         public Task()
         {
             this.task =  TSActivator.CreateInstance("Tekla.Structures.Model.Task");
         }
 
-        public Task(dynamic tsObject)
+        internal Task(dynamic tsObject)
         {
             this.task = tsObject;
         }
-
-        internal dynamic GetTSObject() => task;
 
 		public System.Boolean Insert()
 			 => task.Insert();
@@ -138,22 +136,22 @@ namespace Dynamic.Tekla.Structures.Model
 			 => task.RemoveObjectsFromTask(ModelObjects);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFathers()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(task.GetFathers());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(task.GetFathers());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDependencies()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(task.GetDependencies());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(task.GetDependencies());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(task.GetAllTasksOfSelectedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(task.GetAllTasksOfSelectedObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(task.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(task.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(task.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(task.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(task.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(task.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => task.GetAllUserProperties(values);
@@ -213,13 +211,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => task.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(task.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(task.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => task.SetPhase(phase.GetTSObject());
+			 => task.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => task.GetPhase(phase.GetTSObject());
+			 => task.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => task.SetLabel(label);
@@ -232,6 +230,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Task_
+    {
+        public static dynamic GetTSObject(Task dynObject)
+        {
+            return dynObject.task;
+        }
+
+        public static Task FromTSObject(dynamic tsObject)
+        {
+            return new Task(tsObject);
+        }
+    }
+
 
 }
     

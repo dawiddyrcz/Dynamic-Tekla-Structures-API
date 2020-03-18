@@ -16,37 +16,37 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum FaceType
 		{
 			get => Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(loftedplate.FaceType);
-			set { loftedplate.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(value); }
+			set { loftedplate.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(loftedplate.Profile);
-			set { loftedplate.Profile = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(loftedplate.Profile);
+			set { loftedplate.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(loftedplate.Material);
-			set { loftedplate.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(loftedplate.Material);
+			set { loftedplate.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
 		{
-			get => new Dynamic.Tekla.Structures.Model.DeformingData(loftedplate.DeformingData);
-			set { loftedplate.DeformingData = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(loftedplate.DeformingData);
+			set { loftedplate.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(loftedplate.PartNumber);
-			set { loftedplate.PartNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(loftedplate.PartNumber);
+			set { loftedplate.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(loftedplate.AssemblyNumber);
-			set { loftedplate.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(loftedplate.AssemblyNumber);
+			set { loftedplate.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
 			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(loftedplate.CastUnitType);
-			set { loftedplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
+			set { loftedplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(loftedplate.Position);
-			set { loftedplate.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(loftedplate.Position);
+			set { loftedplate.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -99,25 +99,23 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(loftedplate.Identifier);
-			set { loftedplate.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loftedplate.Identifier);
+			set { loftedplate.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic loftedplate;
+        internal dynamic loftedplate;
         
         public LoftedPlate()
         {
             this.loftedplate =  TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlate");
         }
 
-        public LoftedPlate(dynamic tsObject)
+        internal LoftedPlate(dynamic tsObject)
         {
             this.loftedplate = tsObject;
         }
-
-        internal dynamic GetTSObject() => loftedplate;
 
 		public System.Boolean Insert()
 			 => loftedplate.Insert();
@@ -132,16 +130,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loftedplate.Modify();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(loftedplate.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(loftedplate.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-			 => new Dynamic.Tekla.Structures.Model.Solid(loftedplate.GetSolid(solidCreationType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(loftedplate.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-			 => new Dynamic.Tekla.Structures.Model.Solid(loftedplate.GetSolid(formingStates.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(loftedplate.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(loftedplate.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(loftedplate.GetAssembly());
 
 		public System.String GetPartMark()
 			 => loftedplate.GetPartMark();
@@ -153,43 +151,43 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loftedplate.GetReferenceLine(withCutsFittings);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetComponents());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetBooleans());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetBooleans());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetBolts());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetBolts());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetWelds());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetWelds());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetReinforcements());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetReinforcements());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetSurfaceTreatments());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetSurfaceTreatments());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetSurfaceObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetSurfaceObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetPours());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetPours());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-			 => loftedplate.CompareTo(partToCompare.GetTSObject());
+			 => loftedplate.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(loftedplate.GetDSTVCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loftedplate.GetDSTVCoordinateSystem());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(loftedplate.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loftedplate.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(loftedplate.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loftedplate.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => loftedplate.GetAllUserProperties(values);
@@ -249,13 +247,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => loftedplate.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(loftedplate.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loftedplate.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loftedplate.SetPhase(phase.GetTSObject());
+			 => loftedplate.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loftedplate.GetPhase(phase.GetTSObject());
+			 => loftedplate.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => loftedplate.SetLabel(label);
@@ -266,31 +264,62 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct LoftedPlateFaceTypeEnum
+    public enum LoftedPlateFaceTypeEnum
     {
-       
+			Perpendicular,
+			BoundedByCurvePlanes        
     }
 
     internal static class LoftedPlateFaceTypeEnum_
     {
-        public static dynamic GetTSObject(LoftedPlateFaceTypeEnum dynStruct)
+        public static dynamic GetTSObject(LoftedPlateFaceTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateFaceTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LoftedPlateFaceTypeEnum.Perpendicular:
+					return System.Enum.Parse(tsType, "Perpendicular");
+				case LoftedPlateFaceTypeEnum.BoundedByCurvePlanes:
+					return System.Enum.Parse(tsType, "BoundedByCurvePlanes");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LoftedPlateFaceTypeEnum FromTSObject(dynamic tsStruct)
+        public static LoftedPlateFaceTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LoftedPlateFaceTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("Perpendicular", System.StringComparison.InvariantCulture))
+				return LoftedPlateFaceTypeEnum.Perpendicular;
+			else if (tsEnumValue.Equals("BoundedByCurvePlanes", System.StringComparison.InvariantCulture))
+				return LoftedPlateFaceTypeEnum.BoundedByCurvePlanes;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class LoftedPlate_
+    {
+        public static dynamic GetTSObject(LoftedPlate dynObject)
+        {
+            return dynObject.loftedplate;
+        }
+
+        public static LoftedPlate FromTSObject(dynamic tsObject)
+        {
+            return new LoftedPlate(tsObject);
+        }
+    }
+
 
 }
     

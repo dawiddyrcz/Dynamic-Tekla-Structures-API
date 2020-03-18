@@ -9,19 +9,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic point;
+        internal dynamic point;
         
         public Point()
         {
             this.point =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Point");
         }
 
-        public Point(dynamic tsObject)
+        internal Point(dynamic tsObject)
         {
             this.point = tsObject;
         }
-
-        internal dynamic GetTSObject() => point;
 
 		public void Zero()
 			 => point.Zero();
@@ -30,19 +28,19 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			 => point.Translate(X, Y, Z);
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(point.op_Addition(p1.GetTSObject(), p2.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(point.op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Subtraction(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => new Dynamic.Tekla.Structures.Geometry3d.Point(point.op_Subtraction(p1.GetTSObject(), p2.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(point.op_Subtraction(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => point.op_Equality(p1.GetTSObject(), p2.GetTSObject());
+			 => point.op_Equality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => point.op_Inequality(p1.GetTSObject(), p2.GetTSObject());
+			 => point.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
 
 		public System.Boolean AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-			 => point.AreEqual(Point1.GetTSObject(), Point2.GetTSObject());
+			 => point.AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
 
 		public System.Int32 CompareTo(System.Object obj)
 			 => point.CompareTo(obj);
@@ -52,6 +50,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
     }
+
+    internal static class Point_
+    {
+        public static dynamic GetTSObject(Point dynObject)
+        {
+            return dynObject.point;
+        }
+
+        public static Point FromTSObject(dynamic tsObject)
+        {
+            return new Point(tsObject);
+        }
+    }
+
 
 }
     

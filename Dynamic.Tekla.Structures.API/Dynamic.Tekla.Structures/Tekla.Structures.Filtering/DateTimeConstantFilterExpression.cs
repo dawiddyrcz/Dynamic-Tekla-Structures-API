@@ -9,25 +9,37 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic datetimeconstantfilterexpression;
+        internal dynamic datetimeconstantfilterexpression;
         
         public DateTimeConstantFilterExpression()
         {
             this.datetimeconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression");
         }
 
-        public DateTimeConstantFilterExpression(dynamic tsObject)
+        internal DateTimeConstantFilterExpression(dynamic tsObject)
         {
             this.datetimeconstantfilterexpression = tsObject;
         }
-
-        internal dynamic GetTSObject() => datetimeconstantfilterexpression;
 
 
 
 
 
     }
+
+    internal static class DateTimeConstantFilterExpression_
+    {
+        public static dynamic GetTSObject(DateTimeConstantFilterExpression dynObject)
+        {
+            return dynObject.datetimeconstantfilterexpression;
+        }
+
+        public static DateTimeConstantFilterExpression FromTSObject(dynamic tsObject)
+        {
+            return new DateTimeConstantFilterExpression(tsObject);
+        }
+    }
+
 
 }
     

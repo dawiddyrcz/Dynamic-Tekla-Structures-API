@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(referencemodelobjectattribute.Origin);
-			set { referencemodelobjectattribute.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(referencemodelobjectattribute.Origin);
+			set { referencemodelobjectattribute.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(referencemodelobjectattribute.xDir);
-			set { referencemodelobjectattribute.xDir = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(referencemodelobjectattribute.xDir);
+			set { referencemodelobjectattribute.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(referencemodelobjectattribute.Extrusion);
-			set { referencemodelobjectattribute.Extrusion = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(referencemodelobjectattribute.Extrusion);
+			set { referencemodelobjectattribute.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
@@ -51,48 +51,137 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic referencemodelobjectattribute;
+        internal dynamic referencemodelobjectattribute;
         
         private ReferenceModelObjectAttribute()
         {
             this.referencemodelobjectattribute =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute");
         }
 
-        public ReferenceModelObjectAttribute(dynamic tsObject)
+        internal ReferenceModelObjectAttribute(dynamic tsObject)
         {
             this.referencemodelobjectattribute = tsObject;
         }
 
-        internal dynamic GetTSObject() => referencemodelobjectattribute;
 
 
 
-
-    public struct AttributeTypeEnum
+    public enum AttributeTypeEnum
     {
-       
+			ATTRIBUTETYPE_INVALID,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CSHAPEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEHOLLOWPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ELLIPSEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ISHAPEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_LSHAPEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEHOLLOWPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_TSHAPEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_USHAPEPROFILE,
+			ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ZSHAPEPROFILE,
+			ATTRIBUTETYPE_PARAMETRICOBJECT_CUSTOMPROFILE,
+			ATTRIBUTETYPE_PARAMETRICOBJECT_OBB        
     }
 
     internal static class AttributeTypeEnum_
     {
-        public static dynamic GetTSObject(AttributeTypeEnum dynStruct)
+        public static dynamic GetTSObject(AttributeTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.AttributeTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case AttributeTypeEnum.ATTRIBUTETYPE_INVALID:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_INVALID");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CSHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CSHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEHOLLOWPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEHOLLOWPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ELLIPSEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ELLIPSEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ISHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ISHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_LSHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_LSHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEHOLLOWPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEHOLLOWPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_TSHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_TSHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_USHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_USHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ZSHAPEPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ZSHAPEPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_PARAMETRICOBJECT_CUSTOMPROFILE:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_PARAMETRICOBJECT_CUSTOMPROFILE");
+				case AttributeTypeEnum.ATTRIBUTETYPE_PARAMETRICOBJECT_OBB:
+					return System.Enum.Parse(tsType, "ATTRIBUTETYPE_PARAMETRICOBJECT_OBB");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static AttributeTypeEnum FromTSObject(dynamic tsStruct)
+        public static AttributeTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new AttributeTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("ATTRIBUTETYPE_INVALID", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_INVALID;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CSHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CSHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEHOLLOWPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEHOLLOWPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_CIRCLEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ELLIPSEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ELLIPSEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ISHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ISHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_LSHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_LSHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEHOLLOWPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEHOLLOWPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_RECTANGLEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_TSHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_TSHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_USHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_USHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ZSHAPEPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_IFC2X3_PARAMETRICOBJECT_ZSHAPEPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_PARAMETRICOBJECT_CUSTOMPROFILE", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_PARAMETRICOBJECT_CUSTOMPROFILE;
+			else if (tsEnumValue.Equals("ATTRIBUTETYPE_PARAMETRICOBJECT_OBB", System.StringComparison.InvariantCulture))
+				return AttributeTypeEnum.ATTRIBUTETYPE_PARAMETRICOBJECT_OBB;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ReferenceModelObjectAttribute_
+    {
+        public static dynamic GetTSObject(ReferenceModelObjectAttribute dynObject)
+        {
+            return dynObject.referencemodelobjectattribute;
+        }
+
+        public static ReferenceModelObjectAttribute FromTSObject(dynamic tsObject)
+        {
+            return new ReferenceModelObjectAttribute(tsObject);
+        }
+    }
+
 
 }
     

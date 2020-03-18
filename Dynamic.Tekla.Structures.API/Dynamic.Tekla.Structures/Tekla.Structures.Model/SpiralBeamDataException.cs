@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic spiralbeamdataexception;
+        internal dynamic spiralbeamdataexception;
         
         public SpiralBeamDataException()
         {
             this.spiralbeamdataexception =  TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException");
         }
 
-        public SpiralBeamDataException(dynamic tsObject)
+        internal SpiralBeamDataException(dynamic tsObject)
         {
             this.spiralbeamdataexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => spiralbeamdataexception;
 
 		public System.Exception GetBaseException()
 			 => spiralbeamdataexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class SpiralBeamDataException_
+    {
+        public static dynamic GetTSObject(SpiralBeamDataException dynObject)
+        {
+            return dynObject.spiralbeamdataexception;
+        }
+
+        public static SpiralBeamDataException FromTSObject(dynamic tsObject)
+        {
+            return new SpiralBeamDataException(tsObject);
+        }
+    }
+
 
 }
     

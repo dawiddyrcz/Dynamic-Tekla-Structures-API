@@ -10,43 +10,43 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(contourplate.Type);
-			set { contourplate.Type = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(value); }
+			set { contourplate.Type = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(contourplate.Contour);
-			set { contourplate.Contour = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(contourplate.Contour);
+			set { contourplate.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
 		{
-			get => new Dynamic.Tekla.Structures.Model.Profile(contourplate.Profile);
-			set { contourplate.Profile = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(contourplate.Profile);
+			set { contourplate.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => new Dynamic.Tekla.Structures.Model.Material(contourplate.Material);
-			set { contourplate.Material = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(contourplate.Material);
+			set { contourplate.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
 		{
-			get => new Dynamic.Tekla.Structures.Model.DeformingData(contourplate.DeformingData);
-			set { contourplate.DeformingData = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(contourplate.DeformingData);
+			set { contourplate.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(contourplate.PartNumber);
-			set { contourplate.PartNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(contourplate.PartNumber);
+			set { contourplate.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeries(contourplate.AssemblyNumber);
-			set { contourplate.AssemblyNumber = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(contourplate.AssemblyNumber);
+			set { contourplate.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.String Name
@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
 		{
 			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(contourplate.CastUnitType);
-			set { contourplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(value); }
+			set { contourplate.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 PourPhase
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => new Dynamic.Tekla.Structures.Model.Position(contourplate.Position);
-			set { contourplate.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(contourplate.Position);
+			set { contourplate.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
@@ -99,28 +99,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(contourplate.Identifier);
-			set { contourplate.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(contourplate.Identifier);
+			set { contourplate.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic contourplate;
+        internal dynamic contourplate;
         
         public ContourPlate()
         {
             this.contourplate =  TSActivator.CreateInstance("Tekla.Structures.Model.ContourPlate");
         }
 
-        public ContourPlate(dynamic tsObject)
+        internal ContourPlate(dynamic tsObject)
         {
             this.contourplate = tsObject;
         }
 
-        internal dynamic GetTSObject() => contourplate;
-
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
-			 => contourplate.AddContourPoint(contourPoint.GetTSObject());
+			 => contourplate.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
 
 		public System.Boolean Insert()
 			 => contourplate.Insert();
@@ -135,16 +133,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => contourplate.Delete();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => new Dynamic.Tekla.Structures.Model.Solid(contourplate.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(contourplate.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-			 => new Dynamic.Tekla.Structures.Model.Solid(contourplate.GetSolid(solidCreationType.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(contourplate.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-			 => new Dynamic.Tekla.Structures.Model.Solid(contourplate.GetSolid(formingStates.GetTSObject()));
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(contourplate.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => new Dynamic.Tekla.Structures.Model.Assembly(contourplate.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(contourplate.GetAssembly());
 
 		public System.String GetPartMark()
 			 => contourplate.GetPartMark();
@@ -156,43 +154,43 @@ namespace Dynamic.Tekla.Structures.Model
 			 => contourplate.GetReferenceLine(withCutsFittings);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetComponents());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetBooleans());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetBooleans());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetBolts());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetBolts());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetWelds());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetWelds());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetReinforcements());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetReinforcements());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetSurfaceTreatments());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetSurfaceTreatments());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetSurfaceObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetSurfaceObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetPours());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetPours());
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-			 => contourplate.CompareTo(partToCompare.GetTSObject());
+			 => contourplate.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(contourplate.GetDSTVCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(contourplate.GetDSTVCoordinateSystem());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(contourplate.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(contourplate.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(contourplate.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(contourplate.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => contourplate.GetAllUserProperties(values);
@@ -252,13 +250,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => contourplate.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(contourplate.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(contourplate.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => contourplate.SetPhase(phase.GetTSObject());
+			 => contourplate.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => contourplate.GetPhase(phase.GetTSObject());
+			 => contourplate.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => contourplate.SetLabel(label);
@@ -269,31 +267,67 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct ContourPlateTypeEnum
+    public enum ContourPlateTypeEnum
     {
-       
+			UNKNOWN,
+			PLATE,
+			SLAB        
     }
 
     internal static class ContourPlateTypeEnum_
     {
-        public static dynamic GetTSObject(ContourPlateTypeEnum dynStruct)
+        public static dynamic GetTSObject(ContourPlateTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPlateTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ContourPlateTypeEnum.UNKNOWN:
+					return System.Enum.Parse(tsType, "UNKNOWN");
+				case ContourPlateTypeEnum.PLATE:
+					return System.Enum.Parse(tsType, "PLATE");
+				case ContourPlateTypeEnum.SLAB:
+					return System.Enum.Parse(tsType, "SLAB");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ContourPlateTypeEnum FromTSObject(dynamic tsStruct)
+        public static ContourPlateTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ContourPlateTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("UNKNOWN", System.StringComparison.InvariantCulture))
+				return ContourPlateTypeEnum.UNKNOWN;
+			else if (tsEnumValue.Equals("PLATE", System.StringComparison.InvariantCulture))
+				return ContourPlateTypeEnum.PLATE;
+			else if (tsEnumValue.Equals("SLAB", System.StringComparison.InvariantCulture))
+				return ContourPlateTypeEnum.SLAB;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ContourPlate_
+    {
+        public static dynamic GetTSObject(ContourPlate dynObject)
+        {
+            return dynObject.contourplate;
+        }
+
+        public static ContourPlate FromTSObject(dynamic tsObject)
+        {
+            return new ContourPlate(tsObject);
+        }
+    }
+
 
 }
     

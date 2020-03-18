@@ -4,25 +4,47 @@
 namespace Dynamic.Tekla.Structures.Forming
 {
 
-    public struct WrappingType
+    public enum WrappingType
     {
-       
+			NOT_SPECIFIED,
+			WRAPPED,
+			UNWRAPPED        
     }
 
     internal static class WrappingType_
     {
-        public static dynamic GetTSObject(WrappingType dynStruct)
+        public static dynamic GetTSObject(WrappingType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.WrappingType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case WrappingType.NOT_SPECIFIED:
+					return System.Enum.Parse(tsType, "NOT_SPECIFIED");
+				case WrappingType.WRAPPED:
+					return System.Enum.Parse(tsType, "WRAPPED");
+				case WrappingType.UNWRAPPED:
+					return System.Enum.Parse(tsType, "UNWRAPPED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static WrappingType FromTSObject(dynamic tsStruct)
+        public static WrappingType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new WrappingType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NOT_SPECIFIED", System.StringComparison.InvariantCulture))
+				return WrappingType.NOT_SPECIFIED;
+			else if (tsEnumValue.Equals("WRAPPED", System.StringComparison.InvariantCulture))
+				return WrappingType.WRAPPED;
+			else if (tsEnumValue.Equals("UNWRAPPED", System.StringComparison.InvariantCulture))
+				return WrappingType.UNWRAPPED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 

@@ -9,60 +9,99 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Object
 		{
-			get => new Dynamic.Tekla.Structures.Model.ModelObject(changedata.Object);
-			set { changedata.Object = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(changedata.Object);
+			set { changedata.Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(changedata.Type);
-			set { changedata.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(value); }
+			set { changedata.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.GetTSObject(value); }
 		}
 
         
 
-        dynamic changedata;
+        internal dynamic changedata;
         
         public ChangeData()
         {
             this.changedata =  TSActivator.CreateInstance("Tekla.Structures.Model.ChangeData");
         }
 
-        public ChangeData(dynamic tsObject)
+        internal ChangeData(dynamic tsObject)
         {
             this.changedata = tsObject;
         }
 
-        internal dynamic GetTSObject() => changedata;
 
 
 
-
-    public struct ChangeTypeEnum
+    public enum ChangeTypeEnum
     {
-       
+			OBJECT_INSERT,
+			OBJECT_MODIFY,
+			OBJECT_DELETE,
+			USERPROPERTY_CHANGED        
     }
 
     internal static class ChangeTypeEnum_
     {
-        public static dynamic GetTSObject(ChangeTypeEnum dynStruct)
+        public static dynamic GetTSObject(ChangeTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChangeTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case ChangeTypeEnum.OBJECT_INSERT:
+					return System.Enum.Parse(tsType, "OBJECT_INSERT");
+				case ChangeTypeEnum.OBJECT_MODIFY:
+					return System.Enum.Parse(tsType, "OBJECT_MODIFY");
+				case ChangeTypeEnum.OBJECT_DELETE:
+					return System.Enum.Parse(tsType, "OBJECT_DELETE");
+				case ChangeTypeEnum.USERPROPERTY_CHANGED:
+					return System.Enum.Parse(tsType, "USERPROPERTY_CHANGED");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static ChangeTypeEnum FromTSObject(dynamic tsStruct)
+        public static ChangeTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new ChangeTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("OBJECT_INSERT", System.StringComparison.InvariantCulture))
+				return ChangeTypeEnum.OBJECT_INSERT;
+			else if (tsEnumValue.Equals("OBJECT_MODIFY", System.StringComparison.InvariantCulture))
+				return ChangeTypeEnum.OBJECT_MODIFY;
+			else if (tsEnumValue.Equals("OBJECT_DELETE", System.StringComparison.InvariantCulture))
+				return ChangeTypeEnum.OBJECT_DELETE;
+			else if (tsEnumValue.Equals("USERPROPERTY_CHANGED", System.StringComparison.InvariantCulture))
+				return ChangeTypeEnum.USERPROPERTY_CHANGED;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ChangeData_
+    {
+        public static dynamic GetTSObject(ChangeData dynObject)
+        {
+            return dynObject.changedata;
+        }
+
+        public static ChangeData FromTSObject(dynamic tsObject)
+        {
+            return new ChangeData(tsObject);
+        }
+    }
+
 
 }
     

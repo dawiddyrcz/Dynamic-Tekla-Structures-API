@@ -9,8 +9,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarPropertiesNullable RebarProperties
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarPropertiesNullable(rebarpropertymodifier.RebarProperties);
-			set { rebarpropertymodifier.RebarProperties = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(rebarpropertymodifier.RebarProperties);
+			set { rebarpropertymodifier.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value); }
 		}
 
 		public Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum GroupingType
@@ -21,20 +21,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => new Dynamic.Tekla.Structures.Model.RebarSet(rebarpropertymodifier.Father);
-			set { rebarpropertymodifier.Father = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(rebarpropertymodifier.Father);
+			set { rebarpropertymodifier.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => new Dynamic.Tekla.Structures.Model.Contour(rebarpropertymodifier.Curve);
-			set { rebarpropertymodifier.Curve = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarpropertymodifier.Curve);
+			set { rebarpropertymodifier.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
 			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarpropertymodifier.BarsAffected);
-			set { rebarpropertymodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(value); }
+			set { rebarpropertymodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
@@ -57,28 +57,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(rebarpropertymodifier.Identifier);
-			set { rebarpropertymodifier.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarpropertymodifier.Identifier);
+			set { rebarpropertymodifier.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic rebarpropertymodifier;
+        internal dynamic rebarpropertymodifier;
         
         public RebarPropertyModifier()
         {
             this.rebarpropertymodifier =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarPropertyModifier");
         }
 
-        public RebarPropertyModifier(dynamic tsObject)
+        internal RebarPropertyModifier(dynamic tsObject)
         {
             this.rebarpropertymodifier = tsObject;
         }
 
-        internal dynamic GetTSObject() => rebarpropertymodifier;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarpropertymodifier.GetAffectedBars());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarpropertymodifier.GetAffectedBars());
 
 		public System.Boolean Insert()
 			 => rebarpropertymodifier.Insert();
@@ -93,13 +91,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarpropertymodifier.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarpropertymodifier.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarpropertymodifier.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(rebarpropertymodifier.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarpropertymodifier.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(rebarpropertymodifier.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarpropertymodifier.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => rebarpropertymodifier.GetAllUserProperties(values);
@@ -159,13 +157,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => rebarpropertymodifier.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(rebarpropertymodifier.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarpropertymodifier.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarpropertymodifier.SetPhase(phase.GetTSObject());
+			 => rebarpropertymodifier.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarpropertymodifier.GetPhase(phase.GetTSObject());
+			 => rebarpropertymodifier.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => rebarpropertymodifier.SetLabel(label);
@@ -176,31 +174,67 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public struct GroupingTypeEnum
+    public enum GroupingTypeEnum
     {
-       
+			AUTOMATIC,
+			MANUAL,
+			NO_GROUPING        
     }
 
     internal static class GroupingTypeEnum_
     {
-        public static dynamic GetTSObject(GroupingTypeEnum dynStruct)
+        public static dynamic GetTSObject(GroupingTypeEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.GroupingTypeEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case GroupingTypeEnum.AUTOMATIC:
+					return System.Enum.Parse(tsType, "AUTOMATIC");
+				case GroupingTypeEnum.MANUAL:
+					return System.Enum.Parse(tsType, "MANUAL");
+				case GroupingTypeEnum.NO_GROUPING:
+					return System.Enum.Parse(tsType, "NO_GROUPING");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static GroupingTypeEnum FromTSObject(dynamic tsStruct)
+        public static GroupingTypeEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new GroupingTypeEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("AUTOMATIC", System.StringComparison.InvariantCulture))
+				return GroupingTypeEnum.AUTOMATIC;
+			else if (tsEnumValue.Equals("MANUAL", System.StringComparison.InvariantCulture))
+				return GroupingTypeEnum.MANUAL;
+			else if (tsEnumValue.Equals("NO_GROUPING", System.StringComparison.InvariantCulture))
+				return GroupingTypeEnum.NO_GROUPING;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class RebarPropertyModifier_
+    {
+        public static dynamic GetTSObject(RebarPropertyModifier dynObject)
+        {
+            return dynObject.rebarpropertymodifier;
+        }
+
+        public static RebarPropertyModifier FromTSObject(dynamic tsObject)
+        {
+            return new RebarPropertyModifier(tsObject);
+        }
+    }
+
 
 }
     

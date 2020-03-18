@@ -9,28 +9,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
 		{
-			get => new Dynamic.Tekla.Structures.Model.Chamfer(contourpoint.Chamfer);
-			set { contourpoint.Chamfer = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(contourpoint.Chamfer);
+			set { contourpoint.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
 		}
 
         
 
-        dynamic contourpoint;
+        internal dynamic contourpoint;
         
         public ContourPoint()
         {
             this.contourpoint =  TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint");
         }
 
-        public ContourPoint(dynamic tsObject)
+        internal ContourPoint(dynamic tsObject)
         {
             this.contourpoint = tsObject;
         }
 
-        internal dynamic GetTSObject() => contourpoint;
-
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => contourpoint.SetPoint(P.GetTSObject());
+			 => contourpoint.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
 
 		public void Zero()
 			 => contourpoint.Zero();
@@ -46,6 +44,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class ContourPoint_
+    {
+        public static dynamic GetTSObject(ContourPoint dynObject)
+        {
+            return dynObject.contourpoint;
+        }
+
+        public static ContourPoint FromTSObject(dynamic tsObject)
+        {
+            return new ContourPoint(tsObject);
+        }
+    }
+
 
 }
     

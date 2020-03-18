@@ -9,25 +9,37 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic binaryfilterexpressionitem;
+        internal dynamic binaryfilterexpressionitem;
         
         public BinaryFilterExpressionItem()
         {
             this.binaryfilterexpressionitem =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpressionItem");
         }
 
-        public BinaryFilterExpressionItem(dynamic tsObject)
+        internal BinaryFilterExpressionItem(dynamic tsObject)
         {
             this.binaryfilterexpressionitem = tsObject;
         }
-
-        internal dynamic GetTSObject() => binaryfilterexpressionitem;
 
 
 
 
 
     }
+
+    internal static class BinaryFilterExpressionItem_
+    {
+        public static dynamic GetTSObject(BinaryFilterExpressionItem dynObject)
+        {
+            return dynObject.binaryfilterexpressionitem;
+        }
+
+        public static BinaryFilterExpressionItem FromTSObject(dynamic tsObject)
+        {
+            return new BinaryFilterExpressionItem(tsObject);
+        }
+    }
+
 
 }
     

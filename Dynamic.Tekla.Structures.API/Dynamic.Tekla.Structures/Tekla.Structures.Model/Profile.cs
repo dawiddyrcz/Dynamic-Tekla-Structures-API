@@ -15,19 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic profile;
+        internal dynamic profile;
         
         public Profile()
         {
             this.profile =  TSActivator.CreateInstance("Tekla.Structures.Model.Profile");
         }
 
-        public Profile(dynamic tsObject)
+        internal Profile(dynamic tsObject)
         {
             this.profile = tsObject;
         }
-
-        internal dynamic GetTSObject() => profile;
 
 		public System.String ParseProfileString(System.String profileString)
 			 => profile.ParseProfileString(profileString);
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class Profile_
+    {
+        public static dynamic GetTSObject(Profile dynObject)
+        {
+            return dynObject.profile;
+        }
+
+        public static Profile FromTSObject(dynamic tsObject)
+        {
+            return new Profile(tsObject);
+        }
+    }
+
 
 }
     

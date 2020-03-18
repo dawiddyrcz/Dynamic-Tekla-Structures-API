@@ -11,8 +11,8 @@ namespace TestConsoleApp
 {
     class Program
     {
-        //TODO wyrzucic przypisywanie properties z konstruktora numer 2
         //TODO dodać takie same konstruktory jak są oryginalnie bo nie mogę zrobić noweg punktu
+        //ProgramConfigurationEnum ma zduplikowane wartości
 
         static void Main(string[] args)
         {
@@ -37,7 +37,24 @@ namespace TestConsoleApp
             model.CommitChanges();
 
 
-            //var objects = model.
+            Console.WriteLine("Objects");
+            var objects = model.GetModelObjectSelector().GetAllObjects();
+
+            while (objects.MoveNext())
+            {
+                Console.WriteLine(objects.Current.Identifier.ID);
+            }
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Beams:");
+            var beams = model.GetModelObjectSelector().GetAllObjectsWithType(ModelObject.ModelObjectEnum.BEAM);
+
+            while (beams.MoveNext())
+            {
+                Console.WriteLine(beams.Current.Identifier.ID);
+            }
 
             Console.WriteLine("end");
             Console.ReadKey();

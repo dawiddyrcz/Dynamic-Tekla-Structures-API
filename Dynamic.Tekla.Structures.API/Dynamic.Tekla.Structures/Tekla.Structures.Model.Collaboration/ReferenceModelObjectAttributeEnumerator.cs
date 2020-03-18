@@ -15,19 +15,17 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-        dynamic referencemodelobjectattributeenumerator;
+        internal dynamic referencemodelobjectattributeenumerator;
         
         public ReferenceModelObjectAttributeEnumerator()
         {
             this.referencemodelobjectattributeenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator");
         }
 
-        public ReferenceModelObjectAttributeEnumerator(dynamic tsObject)
+        internal ReferenceModelObjectAttributeEnumerator(dynamic tsObject)
         {
             this.referencemodelobjectattributeenumerator = tsObject;
         }
-
-        internal dynamic GetTSObject() => referencemodelobjectattributeenumerator;
 
 		public System.Boolean MoveNext()
 			 => referencemodelobjectattributeenumerator.MoveNext();
@@ -40,6 +38,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 
     }
+
+    internal static class ReferenceModelObjectAttributeEnumerator_
+    {
+        public static dynamic GetTSObject(ReferenceModelObjectAttributeEnumerator dynObject)
+        {
+            return dynObject.referencemodelobjectattributeenumerator;
+        }
+
+        public static ReferenceModelObjectAttributeEnumerator FromTSObject(dynamic tsObject)
+        {
+            return new ReferenceModelObjectAttributeEnumerator(tsObject);
+        }
+    }
+
 
 }
     

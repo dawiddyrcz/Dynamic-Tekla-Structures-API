@@ -9,37 +9,35 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(clipplane.Location);
-			set { clipplane.Location = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(clipplane.Location);
+			set { clipplane.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(clipplane.UpVector);
-			set { clipplane.UpVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(clipplane.UpVector);
+			set { clipplane.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.View(clipplane.View);
-			set { clipplane.View = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(clipplane.View);
+			set { clipplane.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
         
 
-        dynamic clipplane;
+        internal dynamic clipplane;
         
         public ClipPlane()
         {
             this.clipplane =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlane");
         }
 
-        public ClipPlane(dynamic tsObject)
+        internal ClipPlane(dynamic tsObject)
         {
             this.clipplane = tsObject;
         }
-
-        internal dynamic GetTSObject() => clipplane;
 
 		public System.Boolean Insert()
 			 => clipplane.Insert();
@@ -55,6 +53,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ClipPlane_
+    {
+        public static dynamic GetTSObject(ClipPlane dynObject)
+        {
+            return dynObject.clipplane;
+        }
+
+        public static ClipPlane FromTSObject(dynamic tsObject)
+        {
+            return new ClipPlane(tsObject);
+        }
+    }
+
 
 }
     

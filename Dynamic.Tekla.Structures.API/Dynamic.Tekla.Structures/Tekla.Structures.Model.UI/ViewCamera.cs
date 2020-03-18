@@ -9,20 +9,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(viewcamera.Location);
-			set { viewcamera.Location = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(viewcamera.Location);
+			set { viewcamera.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector DirectionVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(viewcamera.DirectionVector);
-			set { viewcamera.DirectionVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(viewcamera.DirectionVector);
+			set { viewcamera.DirectionVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(viewcamera.UpVector);
-			set { viewcamera.UpVector = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(viewcamera.UpVector);
+			set { viewcamera.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double FieldOfView
@@ -39,25 +39,23 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.View(viewcamera.View);
-			set { viewcamera.View = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(viewcamera.View);
+			set { viewcamera.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
         
 
-        dynamic viewcamera;
+        internal dynamic viewcamera;
         
         public ViewCamera()
         {
             this.viewcamera =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewCamera");
         }
 
-        public ViewCamera(dynamic tsObject)
+        internal ViewCamera(dynamic tsObject)
         {
             this.viewcamera = tsObject;
         }
-
-        internal dynamic GetTSObject() => viewcamera;
 
 		public System.Boolean Select()
 			 => viewcamera.Select();
@@ -70,6 +68,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
     }
+
+    internal static class ViewCamera_
+    {
+        public static dynamic GetTSObject(ViewCamera dynObject)
+        {
+            return dynObject.viewcamera;
+        }
+
+        public static ViewCamera FromTSObject(dynamic tsObject)
+        {
+            return new ViewCamera(tsObject);
+        }
+    }
+
 
 }
     

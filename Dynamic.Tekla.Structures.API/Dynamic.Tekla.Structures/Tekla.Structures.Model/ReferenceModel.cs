@@ -21,8 +21,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(referencemodel.Position);
-			set { referencemodel.Position = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(referencemodel.Position);
+			set { referencemodel.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double Scale
@@ -34,7 +34,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum Visibility
 		{
 			get => Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
-			set { referencemodel.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(value); }
+			set { referencemodel.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.GetTSObject(value); }
 		}
 
 		public System.Guid BasePointGuid
@@ -81,28 +81,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => new Dynamic.Tekla.Structures.Identifier(referencemodel.Identifier);
-			set { referencemodel.Identifier = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(referencemodel.Identifier);
+			set { referencemodel.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        dynamic referencemodel;
+        internal dynamic referencemodel;
         
         public ReferenceModel()
         {
             this.referencemodel =  TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel");
         }
 
-        public ReferenceModel(dynamic tsObject)
+        internal ReferenceModel(dynamic tsObject)
         {
             this.referencemodel = tsObject;
         }
 
-        internal dynamic GetTSObject() => referencemodel;
-
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodel.GetConvertedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetConvertedObjects());
 
 		public System.Boolean RefreshFile()
 			 => referencemodel.RefreshFile();
@@ -111,16 +109,16 @@ namespace Dynamic.Tekla.Structures.Model
 			 => referencemodel.GetRevisions();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
-			 => new Dynamic.Tekla.Structures.Model.ReferenceModelObject(referencemodel.GetReferenceModelObjectByExternalGuid(externalGuid));
+			 => Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(referencemodel.GetReferenceModelObjectByExternalGuid(externalGuid));
 
 		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
-			 => referencemodel.SetAsCurrentRevision(revision.GetTSObject());
+			 => referencemodel.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
 
 		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
 			 => referencemodel.SetAsCurrentRevision(modelId, revisionId);
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
-			 => new Dynamic.Tekla.Structures.Model.ReferenceModel.Revision(referencemodel.GetCurrentRevision());
+			 => Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(referencemodel.GetCurrentRevision());
 
 		public System.Boolean Insert()
 			 => referencemodel.Insert();
@@ -135,13 +133,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => referencemodel.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodel.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => new Dynamic.Tekla.Structures.Model.BaseComponent(referencemodel.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(referencemodel.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => new Dynamic.Tekla.Structures.Model.ModelObjectEnumerator(referencemodel.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
 			 => referencemodel.GetAllUserProperties(values);
@@ -201,13 +199,13 @@ namespace Dynamic.Tekla.Structures.Model
 			 => referencemodel.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => new Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem(referencemodel.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(referencemodel.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodel.SetPhase(phase.GetTSObject());
+			 => referencemodel.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodel.GetPhase(phase.GetTSObject());
+			 => referencemodel.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
 			 => referencemodel.SetLabel(label);
@@ -241,31 +239,62 @@ namespace Dynamic.Tekla.Structures.Model
     }
 
 
-    public struct VisibilityEnum
+    public enum VisibilityEnum
     {
-       
+			HIDDEN,
+			VISIBLE        
     }
 
     internal static class VisibilityEnum_
     {
-        public static dynamic GetTSObject(VisibilityEnum dynStruct)
+        public static dynamic GetTSObject(VisibilityEnum dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.VisibilityEnum");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case VisibilityEnum.HIDDEN:
+					return System.Enum.Parse(tsType, "HIDDEN");
+				case VisibilityEnum.VISIBLE:
+					return System.Enum.Parse(tsType, "VISIBLE");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static VisibilityEnum FromTSObject(dynamic tsStruct)
+        public static VisibilityEnum FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new VisibilityEnum();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("HIDDEN", System.StringComparison.InvariantCulture))
+				return VisibilityEnum.HIDDEN;
+			else if (tsEnumValue.Equals("VISIBLE", System.StringComparison.InvariantCulture))
+				return VisibilityEnum.VISIBLE;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class ReferenceModel_
+    {
+        public static dynamic GetTSObject(ReferenceModel dynObject)
+        {
+            return dynObject.referencemodel;
+        }
+
+        public static ReferenceModel FromTSObject(dynamic tsObject)
+        {
+            return new ReferenceModel(tsObject);
+        }
+    }
+
 
 }
     

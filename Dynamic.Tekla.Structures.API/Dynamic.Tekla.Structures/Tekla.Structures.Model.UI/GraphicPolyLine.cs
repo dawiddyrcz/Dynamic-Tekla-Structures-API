@@ -9,14 +9,14 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.PolyLine(graphicpolyline.PolyLine);
-			set { graphicpolyline.PolyLine = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(graphicpolyline.PolyLine);
+			set { graphicpolyline.PolyLine = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.Color Color
 		{
-			get => new Dynamic.Tekla.Structures.Model.UI.Color(graphicpolyline.Color);
-			set { graphicpolyline.Color = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(graphicpolyline.Color);
+			set { graphicpolyline.Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(value); }
 		}
 
 		public System.Int32 Width
@@ -28,53 +28,97 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType Type
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(graphicpolyline.Type);
-			set { graphicpolyline.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(value); }
+			set { graphicpolyline.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(value); }
 		}
 
         
 
-        dynamic graphicpolyline;
+        internal dynamic graphicpolyline;
         
         public GraphicPolyLine()
         {
             this.graphicpolyline =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine");
         }
 
-        public GraphicPolyLine(dynamic tsObject)
+        internal GraphicPolyLine(dynamic tsObject)
         {
             this.graphicpolyline = tsObject;
         }
 
-        internal dynamic GetTSObject() => graphicpolyline;
 
 
 
-
-    public struct LineType
+    public enum LineType
     {
-       
+			Solid,
+			Dashed1,
+			Dashed2,
+			DashedAndDotted,
+			Dotted        
     }
 
     internal static class LineType_
     {
-        public static dynamic GetTSObject(LineType dynStruct)
+        public static dynamic GetTSObject(LineType dynEnum)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.LineType");
 
-            return tsType;
+            switch (dynEnum)
+            {
+				case LineType.Solid:
+					return System.Enum.Parse(tsType, "Solid");
+				case LineType.Dashed1:
+					return System.Enum.Parse(tsType, "Dashed1");
+				case LineType.Dashed2:
+					return System.Enum.Parse(tsType, "Dashed2");
+				case LineType.DashedAndDotted:
+					return System.Enum.Parse(tsType, "DashedAndDotted");
+				case LineType.Dotted:
+					return System.Enum.Parse(tsType, "Dotted");
+
+                default:
+                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+            }
         }
     
-        public static LineType FromTSObject(dynamic tsStruct)
+        public static LineType FromTSObject(dynamic tsEnum)
         {
-            var dynStruct = new LineType();
- 
-            return dynStruct;
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("Solid", System.StringComparison.InvariantCulture))
+				return LineType.Solid;
+			else if (tsEnumValue.Equals("Dashed1", System.StringComparison.InvariantCulture))
+				return LineType.Dashed1;
+			else if (tsEnumValue.Equals("Dashed2", System.StringComparison.InvariantCulture))
+				return LineType.Dashed2;
+			else if (tsEnumValue.Equals("DashedAndDotted", System.StringComparison.InvariantCulture))
+				return LineType.DashedAndDotted;
+			else if (tsEnumValue.Equals("Dotted", System.StringComparison.InvariantCulture))
+				return LineType.Dotted;
+
+            else 
+                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+            
         }
     }
 
 
 
     }
+
+    internal static class GraphicPolyLine_
+    {
+        public static dynamic GetTSObject(GraphicPolyLine dynObject)
+        {
+            return dynObject.graphicpolyline;
+        }
+
+        public static GraphicPolyLine FromTSObject(dynamic tsObject)
+        {
+            return new GraphicPolyLine(tsObject);
+        }
+    }
+
 
 }
     

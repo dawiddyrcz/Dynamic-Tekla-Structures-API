@@ -27,25 +27,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarthreadingdatanullable;
+        internal dynamic rebarthreadingdatanullable;
         
         public RebarThreadingDataNullable()
         {
             this.rebarthreadingdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarThreadingDataNullable");
         }
 
-        public RebarThreadingDataNullable(dynamic tsObject)
+        internal RebarThreadingDataNullable(dynamic tsObject)
         {
             this.rebarthreadingdatanullable = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarthreadingdatanullable;
 
 
 
 
 
     }
+
+    internal static class RebarThreadingDataNullable_
+    {
+        public static dynamic GetTSObject(RebarThreadingDataNullable dynObject)
+        {
+            return dynObject.rebarthreadingdatanullable;
+        }
+
+        public static RebarThreadingDataNullable FromTSObject(dynamic tsObject)
+        {
+            return new RebarThreadingDataNullable(tsObject);
+        }
+    }
+
 
 }
     

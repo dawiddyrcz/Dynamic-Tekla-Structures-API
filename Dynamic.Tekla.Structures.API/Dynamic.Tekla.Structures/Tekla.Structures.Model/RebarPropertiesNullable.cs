@@ -33,8 +33,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeriesNullable NumberingSeries
 		{
-			get => new Dynamic.Tekla.Structures.Model.NumberingSeriesNullable(rebarpropertiesnullable.NumberingSeries);
-			set { rebarpropertiesnullable.NumberingSeries = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.FromTSObject(rebarpropertiesnullable.NumberingSeries);
+			set { rebarpropertiesnullable.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.GetTSObject(value); }
 		}
 
 		public System.Double BendingRadius
@@ -45,25 +45,37 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic rebarpropertiesnullable;
+        internal dynamic rebarpropertiesnullable;
         
         public RebarPropertiesNullable()
         {
             this.rebarpropertiesnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarPropertiesNullable");
         }
 
-        public RebarPropertiesNullable(dynamic tsObject)
+        internal RebarPropertiesNullable(dynamic tsObject)
         {
             this.rebarpropertiesnullable = tsObject;
         }
-
-        internal dynamic GetTSObject() => rebarpropertiesnullable;
 
 
 
 
 
     }
+
+    internal static class RebarPropertiesNullable_
+    {
+        public static dynamic GetTSObject(RebarPropertiesNullable dynObject)
+        {
+            return dynObject.rebarpropertiesnullable;
+        }
+
+        public static RebarPropertiesNullable FromTSObject(dynamic tsObject)
+        {
+            return new RebarPropertiesNullable(tsObject);
+        }
+    }
+
 
 }
     

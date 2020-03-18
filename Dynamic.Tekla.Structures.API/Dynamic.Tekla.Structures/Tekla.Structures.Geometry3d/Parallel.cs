@@ -9,67 +9,79 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic parallel;
+        internal dynamic parallel;
         
         private Parallel()
         {
             this.parallel =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Parallel");
         }
 
-        public Parallel(dynamic tsObject)
+        internal Parallel(dynamic tsObject)
         {
             this.parallel = tsObject;
         }
 
-        internal dynamic GetTSObject() => parallel;
-
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
-			 => parallel.VectorToVector(Vector1.GetTSObject(), Vector2.GetTSObject());
+			 => parallel.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
 
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2, System.Double Tolerance)
-			 => parallel.VectorToVector(Vector1.GetTSObject(), Vector2.GetTSObject(), Tolerance);
+			 => parallel.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2), Tolerance);
 
 		public System.Boolean LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line Line1, Dynamic.Tekla.Structures.Geometry3d.Line Line2)
-			 => parallel.LineToLine(Line1.GetTSObject(), Line2.GetTSObject());
+			 => parallel.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2));
 
 		public System.Boolean LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line Line1, Dynamic.Tekla.Structures.Geometry3d.Line Line2, System.Double Tolerance)
-			 => parallel.LineToLine(Line1.GetTSObject(), Line2.GetTSObject(), Tolerance);
+			 => parallel.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2), Tolerance);
 
 		public System.Boolean LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment2)
-			 => parallel.LineSegmentToLineSegment(LineSegment1.GetTSObject(), LineSegment2.GetTSObject());
+			 => parallel.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2));
 
 		public System.Boolean LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment2, System.Double Tolerance)
-			 => parallel.LineSegmentToLineSegment(LineSegment1.GetTSObject(), LineSegment2.GetTSObject(), Tolerance);
+			 => parallel.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2), Tolerance);
 
 		public System.Boolean PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane1, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane2)
-			 => parallel.PlaneToPlane(Plane1.GetTSObject(), Plane2.GetTSObject());
+			 => parallel.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2));
 
 		public System.Boolean PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane1, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane2, System.Double Tolerance)
-			 => parallel.PlaneToPlane(Plane1.GetTSObject(), Plane2.GetTSObject(), Tolerance);
+			 => parallel.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2), Tolerance);
 
 		public System.Boolean VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => parallel.VectorToPlane(Vector.GetTSObject(), Plane.GetTSObject());
+			 => parallel.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
 
 		public System.Boolean VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => parallel.VectorToPlane(Vector.GetTSObject(), Plane.GetTSObject(), Tolerance);
+			 => parallel.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
 
 		public System.Boolean LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => parallel.LineToPlane(Line.GetTSObject(), Plane.GetTSObject());
+			 => parallel.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
 
 		public System.Boolean LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => parallel.LineToPlane(Line.GetTSObject(), Plane.GetTSObject(), Tolerance);
+			 => parallel.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
 
 		public System.Boolean LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => parallel.LineSegmentToPlane(LineSegment.GetTSObject(), Plane.GetTSObject());
+			 => parallel.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
 
 		public System.Boolean LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => parallel.LineSegmentToPlane(LineSegment.GetTSObject(), Plane.GetTSObject(), Tolerance);
+			 => parallel.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
 
 
 
 
 
     }
+
+    internal static class Parallel_
+    {
+        public static dynamic GetTSObject(Parallel dynObject)
+        {
+            return dynObject.parallel;
+        }
+
+        public static Parallel FromTSObject(dynamic tsObject)
+        {
+            return new Parallel(tsObject);
+        }
+    }
+
 
 }
     

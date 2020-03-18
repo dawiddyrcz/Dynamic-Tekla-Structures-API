@@ -9,25 +9,37 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic booleanfilterexpression;
+        internal dynamic booleanfilterexpression;
         
         public BooleanFilterExpression()
         {
             this.booleanfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanFilterExpression");
         }
 
-        public BooleanFilterExpression(dynamic tsObject)
+        internal BooleanFilterExpression(dynamic tsObject)
         {
             this.booleanfilterexpression = tsObject;
         }
-
-        internal dynamic GetTSObject() => booleanfilterexpression;
 
 
 
 
 
     }
+
+    internal static class BooleanFilterExpression_
+    {
+        public static dynamic GetTSObject(BooleanFilterExpression dynObject)
+        {
+            return dynObject.booleanfilterexpression;
+        }
+
+        public static BooleanFilterExpression FromTSObject(dynamic tsObject)
+        {
+            return new BooleanFilterExpression(tsObject);
+        }
+    }
+
 
 }
     

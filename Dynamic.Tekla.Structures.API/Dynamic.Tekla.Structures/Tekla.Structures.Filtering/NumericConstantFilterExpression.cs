@@ -9,25 +9,37 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        dynamic numericconstantfilterexpression;
+        internal dynamic numericconstantfilterexpression;
         
         public NumericConstantFilterExpression()
         {
             this.numericconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.NumericConstantFilterExpression");
         }
 
-        public NumericConstantFilterExpression(dynamic tsObject)
+        internal NumericConstantFilterExpression(dynamic tsObject)
         {
             this.numericconstantfilterexpression = tsObject;
         }
-
-        internal dynamic GetTSObject() => numericconstantfilterexpression;
 
 
 
 
 
     }
+
+    internal static class NumericConstantFilterExpression_
+    {
+        public static dynamic GetTSObject(NumericConstantFilterExpression dynObject)
+        {
+            return dynObject.numericconstantfilterexpression;
+        }
+
+        public static NumericConstantFilterExpression FromTSObject(dynamic tsObject)
+        {
+            return new NumericConstantFilterExpression(tsObject);
+        }
+    }
+
 
 }
     

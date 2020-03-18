@@ -57,19 +57,17 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic faceperpendiculartointersectionlineexception;
+        internal dynamic faceperpendiculartointersectionlineexception;
         
         public FacePerpendicularToIntersectionLineException()
         {
             this.faceperpendiculartointersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacePerpendicularToIntersectionLineException");
         }
 
-        public FacePerpendicularToIntersectionLineException(dynamic tsObject)
+        internal FacePerpendicularToIntersectionLineException(dynamic tsObject)
         {
             this.faceperpendiculartointersectionlineexception = tsObject;
         }
-
-        internal dynamic GetTSObject() => faceperpendiculartointersectionlineexception;
 
 		public System.Exception GetBaseException()
 			 => faceperpendiculartointersectionlineexception.GetBaseException();
@@ -82,6 +80,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 
     }
+
+    internal static class FacePerpendicularToIntersectionLineException_
+    {
+        public static dynamic GetTSObject(FacePerpendicularToIntersectionLineException dynObject)
+        {
+            return dynObject.faceperpendiculartointersectionlineexception;
+        }
+
+        public static FacePerpendicularToIntersectionLineException FromTSObject(dynamic tsObject)
+        {
+            return new FacePerpendicularToIntersectionLineException(tsObject);
+        }
+    }
+
 
 }
     

@@ -9,43 +9,55 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Point(plane.Origin);
-			set { plane.Origin = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(plane.Origin);
+			set { plane.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisX
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(plane.AxisX);
-			set { plane.AxisX = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(plane.AxisX);
+			set { plane.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisY
 		{
-			get => new Dynamic.Tekla.Structures.Geometry3d.Vector(plane.AxisY);
-			set { plane.AxisY = value.GetTSObject(); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(plane.AxisY);
+			set { plane.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        dynamic plane;
+        internal dynamic plane;
         
         public Plane()
         {
             this.plane =  TSActivator.CreateInstance("Tekla.Structures.Model.Plane");
         }
 
-        public Plane(dynamic tsObject)
+        internal Plane(dynamic tsObject)
         {
             this.plane = tsObject;
         }
-
-        internal dynamic GetTSObject() => plane;
 
 
 
 
 
     }
+
+    internal static class Plane_
+    {
+        public static dynamic GetTSObject(Plane dynObject)
+        {
+            return dynObject.plane;
+        }
+
+        public static Plane FromTSObject(dynamic tsObject)
+        {
+            return new Plane(tsObject);
+        }
+    }
+
 
 }
     

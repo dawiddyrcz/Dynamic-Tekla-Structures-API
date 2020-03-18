@@ -9,31 +9,43 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-        dynamic connectivegeometry;
+        internal dynamic connectivegeometry;
         
         public ConnectiveGeometry()
         {
             this.connectivegeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry");
         }
 
-        public ConnectiveGeometry(dynamic tsObject)
+        internal ConnectiveGeometry(dynamic tsObject)
         {
             this.connectivegeometry = tsObject;
         }
-
-        internal dynamic GetTSObject() => connectivegeometry;
 
 		public System.Boolean IsEmpty()
 			 => connectivegeometry.IsEmpty();
 
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
-			 => new Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator(connectivegeometry.GetGeometryEnumerator());
+			 => Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(connectivegeometry.GetGeometryEnumerator());
 
 
 
 
 
     }
+
+    internal static class ConnectiveGeometry_
+    {
+        public static dynamic GetTSObject(ConnectiveGeometry dynObject)
+        {
+            return dynObject.connectivegeometry;
+        }
+
+        public static ConnectiveGeometry FromTSObject(dynamic tsObject)
+        {
+            return new ConnectiveGeometry(tsObject);
+        }
+    }
+
 
 }
     

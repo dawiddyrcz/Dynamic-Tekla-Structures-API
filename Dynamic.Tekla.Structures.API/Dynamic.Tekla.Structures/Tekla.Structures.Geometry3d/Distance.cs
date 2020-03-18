@@ -9,37 +9,49 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-        dynamic distance;
+        internal dynamic distance;
         
         private Distance()
         {
             this.distance =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Distance");
         }
 
-        public Distance(dynamic tsObject)
+        internal Distance(dynamic tsObject)
         {
             this.distance = tsObject;
         }
 
-        internal dynamic GetTSObject() => distance;
-
 		public System.Double PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-			 => distance.PointToPoint(Point1.GetTSObject(), Point2.GetTSObject());
+			 => distance.PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
 
 		public System.Double PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
-			 => distance.PointToLine(Point.GetTSObject(), Line.GetTSObject());
+			 => distance.PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line));
 
 		public System.Double PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
-			 => distance.PointToLineSegment(Point.GetTSObject(), LineSegment.GetTSObject());
+			 => distance.PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
 
 		public System.Double PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => distance.PointToPlane(Point.GetTSObject(), Plane.GetTSObject());
+			 => distance.PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
 
 
 
 
 
     }
+
+    internal static class Distance_
+    {
+        public static dynamic GetTSObject(Distance dynObject)
+        {
+            return dynObject.distance;
+        }
+
+        public static Distance FromTSObject(dynamic tsObject)
+        {
+            return new Distance(tsObject);
+        }
+    }
+
 
 }
     

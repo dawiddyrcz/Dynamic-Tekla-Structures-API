@@ -284,57 +284,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum BeamTypeEnum
+    public struct BeamTypeEnum
     {
-			BEAM,
-			PANEL,
-			STRIP_FOOTING,
-			PAD_FOOTING,
-			COLUMN        
+       
     }
 
-    public static class BeamTypeEnum_
+    internal static class BeamTypeEnum_
     {
-        public static dynamic GetTSObject(BeamTypeEnum dynEnum)
+        public static dynamic GetTSObject(BeamTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BeamTypeEnum");
 
-            switch (dynEnum)
-            {
-				case BeamTypeEnum.BEAM:
-					return System.Enum.Parse(tsType, "BEAM");
-				case BeamTypeEnum.PANEL:
-					return System.Enum.Parse(tsType, "PANEL");
-				case BeamTypeEnum.STRIP_FOOTING:
-					return System.Enum.Parse(tsType, "STRIP_FOOTING");
-				case BeamTypeEnum.PAD_FOOTING:
-					return System.Enum.Parse(tsType, "PAD_FOOTING");
-				case BeamTypeEnum.COLUMN:
-					return System.Enum.Parse(tsType, "COLUMN");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BeamTypeEnum FromTSObject(dynamic tsEnum)
+        public static BeamTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BEAM", System.StringComparison.InvariantCulture))
-				return BeamTypeEnum.BEAM;
-			else if (tsEnumValue.Equals("PANEL", System.StringComparison.InvariantCulture))
-				return BeamTypeEnum.PANEL;
-			else if (tsEnumValue.Equals("STRIP_FOOTING", System.StringComparison.InvariantCulture))
-				return BeamTypeEnum.STRIP_FOOTING;
-			else if (tsEnumValue.Equals("PAD_FOOTING", System.StringComparison.InvariantCulture))
-				return BeamTypeEnum.PAD_FOOTING;
-			else if (tsEnumValue.Equals("COLUMN", System.StringComparison.InvariantCulture))
-				return BeamTypeEnum.COLUMN;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BeamTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -4,47 +4,25 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public enum DetailTypeEnum
+    public struct DetailTypeEnum
     {
-			END,
-			INTERMEDIATE,
-			INTERMEDIATE_REVERSE        
+       
     }
 
-    public static class DetailTypeEnum_
+    internal static class DetailTypeEnum_
     {
-        public static dynamic GetTSObject(DetailTypeEnum dynEnum)
+        public static dynamic GetTSObject(DetailTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.DetailTypeEnum");
 
-            switch (dynEnum)
-            {
-				case DetailTypeEnum.END:
-					return System.Enum.Parse(tsType, "END");
-				case DetailTypeEnum.INTERMEDIATE:
-					return System.Enum.Parse(tsType, "INTERMEDIATE");
-				case DetailTypeEnum.INTERMEDIATE_REVERSE:
-					return System.Enum.Parse(tsType, "INTERMEDIATE_REVERSE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static DetailTypeEnum FromTSObject(dynamic tsEnum)
+        public static DetailTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("END", System.StringComparison.InvariantCulture))
-				return DetailTypeEnum.END;
-			else if (tsEnumValue.Equals("INTERMEDIATE", System.StringComparison.InvariantCulture))
-				return DetailTypeEnum.INTERMEDIATE;
-			else if (tsEnumValue.Equals("INTERMEDIATE_REVERSE", System.StringComparison.InvariantCulture))
-				return DetailTypeEnum.INTERMEDIATE_REVERSE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new DetailTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -377,142 +377,71 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum RebarMeshTypeEnum
+    public struct RebarMeshTypeEnum
     {
-			UNKNOWN_MESH,
-			RECTANGULAR_MESH,
-			POLYGON_MESH,
-			BENT_MESH        
+       
     }
 
-    public static class RebarMeshTypeEnum_
+    internal static class RebarMeshTypeEnum_
     {
-        public static dynamic GetTSObject(RebarMeshTypeEnum dynEnum)
+        public static dynamic GetTSObject(RebarMeshTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshTypeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarMeshTypeEnum.UNKNOWN_MESH:
-					return System.Enum.Parse(tsType, "UNKNOWN_MESH");
-				case RebarMeshTypeEnum.RECTANGULAR_MESH:
-					return System.Enum.Parse(tsType, "RECTANGULAR_MESH");
-				case RebarMeshTypeEnum.POLYGON_MESH:
-					return System.Enum.Parse(tsType, "POLYGON_MESH");
-				case RebarMeshTypeEnum.BENT_MESH:
-					return System.Enum.Parse(tsType, "BENT_MESH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarMeshTypeEnum FromTSObject(dynamic tsEnum)
+        public static RebarMeshTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("UNKNOWN_MESH", System.StringComparison.InvariantCulture))
-				return RebarMeshTypeEnum.UNKNOWN_MESH;
-			else if (tsEnumValue.Equals("RECTANGULAR_MESH", System.StringComparison.InvariantCulture))
-				return RebarMeshTypeEnum.RECTANGULAR_MESH;
-			else if (tsEnumValue.Equals("POLYGON_MESH", System.StringComparison.InvariantCulture))
-				return RebarMeshTypeEnum.POLYGON_MESH;
-			else if (tsEnumValue.Equals("BENT_MESH", System.StringComparison.InvariantCulture))
-				return RebarMeshTypeEnum.BENT_MESH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarMeshTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum RebarMeshSpacingMethodEnum
+    public struct RebarMeshSpacingMethodEnum
     {
-			SPACING_TYPE_UNDEFINED,
-			SPACING_TYPE_SAME_DISTANCE,
-			SPACING_TYPE_MULTIPLE_VARYING_DISTANCES        
+       
     }
 
-    public static class RebarMeshSpacingMethodEnum_
+    internal static class RebarMeshSpacingMethodEnum_
     {
-        public static dynamic GetTSObject(RebarMeshSpacingMethodEnum dynEnum)
+        public static dynamic GetTSObject(RebarMeshSpacingMethodEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshSpacingMethodEnum");
 
-            switch (dynEnum)
-            {
-				case RebarMeshSpacingMethodEnum.SPACING_TYPE_UNDEFINED:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_UNDEFINED");
-				case RebarMeshSpacingMethodEnum.SPACING_TYPE_SAME_DISTANCE:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_SAME_DISTANCE");
-				case RebarMeshSpacingMethodEnum.SPACING_TYPE_MULTIPLE_VARYING_DISTANCES:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_MULTIPLE_VARYING_DISTANCES");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarMeshSpacingMethodEnum FromTSObject(dynamic tsEnum)
+        public static RebarMeshSpacingMethodEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SPACING_TYPE_UNDEFINED", System.StringComparison.InvariantCulture))
-				return RebarMeshSpacingMethodEnum.SPACING_TYPE_UNDEFINED;
-			else if (tsEnumValue.Equals("SPACING_TYPE_SAME_DISTANCE", System.StringComparison.InvariantCulture))
-				return RebarMeshSpacingMethodEnum.SPACING_TYPE_SAME_DISTANCE;
-			else if (tsEnumValue.Equals("SPACING_TYPE_MULTIPLE_VARYING_DISTANCES", System.StringComparison.InvariantCulture))
-				return RebarMeshSpacingMethodEnum.SPACING_TYPE_MULTIPLE_VARYING_DISTANCES;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarMeshSpacingMethodEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum RebarMeshCrossBarLocationEnum
+    public struct RebarMeshCrossBarLocationEnum
     {
-			LOCATION_TYPE_ABOVE,
-			LOCATION_TYPE_BELOW,
-			LOCATION_TYPE_UNDEFINED        
+       
     }
 
-    public static class RebarMeshCrossBarLocationEnum_
+    internal static class RebarMeshCrossBarLocationEnum_
     {
-        public static dynamic GetTSObject(RebarMeshCrossBarLocationEnum dynEnum)
+        public static dynamic GetTSObject(RebarMeshCrossBarLocationEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshCrossBarLocationEnum");
 
-            switch (dynEnum)
-            {
-				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_ABOVE:
-					return System.Enum.Parse(tsType, "LOCATION_TYPE_ABOVE");
-				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_BELOW:
-					return System.Enum.Parse(tsType, "LOCATION_TYPE_BELOW");
-				case RebarMeshCrossBarLocationEnum.LOCATION_TYPE_UNDEFINED:
-					return System.Enum.Parse(tsType, "LOCATION_TYPE_UNDEFINED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarMeshCrossBarLocationEnum FromTSObject(dynamic tsEnum)
+        public static RebarMeshCrossBarLocationEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOCATION_TYPE_ABOVE", System.StringComparison.InvariantCulture))
-				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_ABOVE;
-			else if (tsEnumValue.Equals("LOCATION_TYPE_BELOW", System.StringComparison.InvariantCulture))
-				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_BELOW;
-			else if (tsEnumValue.Equals("LOCATION_TYPE_UNDEFINED", System.StringComparison.InvariantCulture))
-				return RebarMeshCrossBarLocationEnum.LOCATION_TYPE_UNDEFINED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarMeshCrossBarLocationEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -173,77 +173,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ControlCircleColorEnum
+    public struct ControlCircleColorEnum
     {
-			BLACK,
-			WHITE,
-			RED,
-			GREEN,
-			BLUE,
-			CYAN,
-			YELLOW,
-			MAGENTA,
-			YELLOW_RED        
+       
     }
 
-    public static class ControlCircleColorEnum_
+    internal static class ControlCircleColorEnum_
     {
-        public static dynamic GetTSObject(ControlCircleColorEnum dynEnum)
+        public static dynamic GetTSObject(ControlCircleColorEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlCircleColorEnum");
 
-            switch (dynEnum)
-            {
-				case ControlCircleColorEnum.BLACK:
-					return System.Enum.Parse(tsType, "BLACK");
-				case ControlCircleColorEnum.WHITE:
-					return System.Enum.Parse(tsType, "WHITE");
-				case ControlCircleColorEnum.RED:
-					return System.Enum.Parse(tsType, "RED");
-				case ControlCircleColorEnum.GREEN:
-					return System.Enum.Parse(tsType, "GREEN");
-				case ControlCircleColorEnum.BLUE:
-					return System.Enum.Parse(tsType, "BLUE");
-				case ControlCircleColorEnum.CYAN:
-					return System.Enum.Parse(tsType, "CYAN");
-				case ControlCircleColorEnum.YELLOW:
-					return System.Enum.Parse(tsType, "YELLOW");
-				case ControlCircleColorEnum.MAGENTA:
-					return System.Enum.Parse(tsType, "MAGENTA");
-				case ControlCircleColorEnum.YELLOW_RED:
-					return System.Enum.Parse(tsType, "YELLOW_RED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ControlCircleColorEnum FromTSObject(dynamic tsEnum)
+        public static ControlCircleColorEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BLACK", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.BLACK;
-			else if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.WHITE;
-			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.RED;
-			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.GREEN;
-			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.BLUE;
-			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.CYAN;
-			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.YELLOW;
-			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.MAGENTA;
-			else if (tsEnumValue.Equals("YELLOW_RED", System.StringComparison.InvariantCulture))
-				return ControlCircleColorEnum.YELLOW_RED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ControlCircleColorEnum();
+ 
+            return dynStruct;
         }
     }
 

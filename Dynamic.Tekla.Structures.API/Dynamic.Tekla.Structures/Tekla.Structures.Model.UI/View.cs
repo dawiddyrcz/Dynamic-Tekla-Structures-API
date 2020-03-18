@@ -131,122 +131,71 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
 
-    public enum ViewProjectionType
+    public struct ViewProjectionType
     {
-			ORTHOGONAL_PROJECTION,
-			PERSPECTIVE_PROJECTION        
+       
     }
 
-    public static class ViewProjectionType_
+    internal static class ViewProjectionType_
     {
-        public static dynamic GetTSObject(ViewProjectionType dynEnum)
+        public static dynamic GetTSObject(ViewProjectionType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewProjectionType");
 
-            switch (dynEnum)
-            {
-				case ViewProjectionType.ORTHOGONAL_PROJECTION:
-					return System.Enum.Parse(tsType, "ORTHOGONAL_PROJECTION");
-				case ViewProjectionType.PERSPECTIVE_PROJECTION:
-					return System.Enum.Parse(tsType, "PERSPECTIVE_PROJECTION");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ViewProjectionType FromTSObject(dynamic tsEnum)
+        public static ViewProjectionType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("ORTHOGONAL_PROJECTION", System.StringComparison.InvariantCulture))
-				return ViewProjectionType.ORTHOGONAL_PROJECTION;
-			else if (tsEnumValue.Equals("PERSPECTIVE_PROJECTION", System.StringComparison.InvariantCulture))
-				return ViewProjectionType.PERSPECTIVE_PROJECTION;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ViewProjectionType();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum DisplayOrientationType
+    public struct DisplayOrientationType
     {
-			DISPLAY_VIEW_PLANE,
-			DISPLAY_3D        
+       
     }
 
-    public static class DisplayOrientationType_
+    internal static class DisplayOrientationType_
     {
-        public static dynamic GetTSObject(DisplayOrientationType dynEnum)
+        public static dynamic GetTSObject(DisplayOrientationType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.DisplayOrientationType");
 
-            switch (dynEnum)
-            {
-				case DisplayOrientationType.DISPLAY_VIEW_PLANE:
-					return System.Enum.Parse(tsType, "DISPLAY_VIEW_PLANE");
-				case DisplayOrientationType.DISPLAY_3D:
-					return System.Enum.Parse(tsType, "DISPLAY_3D");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static DisplayOrientationType FromTSObject(dynamic tsEnum)
+        public static DisplayOrientationType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("DISPLAY_VIEW_PLANE", System.StringComparison.InvariantCulture))
-				return DisplayOrientationType.DISPLAY_VIEW_PLANE;
-			else if (tsEnumValue.Equals("DISPLAY_3D", System.StringComparison.InvariantCulture))
-				return DisplayOrientationType.DISPLAY_3D;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new DisplayOrientationType();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum ViewRenderingType
+    public struct ViewRenderingType
     {
-			WIREFRAME_VIEW,
-			RENDERED_VIEW        
+       
     }
 
-    public static class ViewRenderingType_
+    internal static class ViewRenderingType_
     {
-        public static dynamic GetTSObject(ViewRenderingType dynEnum)
+        public static dynamic GetTSObject(ViewRenderingType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewRenderingType");
 
-            switch (dynEnum)
-            {
-				case ViewRenderingType.WIREFRAME_VIEW:
-					return System.Enum.Parse(tsType, "WIREFRAME_VIEW");
-				case ViewRenderingType.RENDERED_VIEW:
-					return System.Enum.Parse(tsType, "RENDERED_VIEW");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ViewRenderingType FromTSObject(dynamic tsEnum)
+        public static ViewRenderingType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WIREFRAME_VIEW", System.StringComparison.InvariantCulture))
-				return ViewRenderingType.WIREFRAME_VIEW;
-			else if (tsEnumValue.Equals("RENDERED_VIEW", System.StringComparison.InvariantCulture))
-				return ViewRenderingType.RENDERED_VIEW;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ViewRenderingType();
+ 
+            return dynStruct;
         }
     }
 

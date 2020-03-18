@@ -269,47 +269,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ContourPlateTypeEnum
+    public struct ContourPlateTypeEnum
     {
-			UNKNOWN,
-			PLATE,
-			SLAB        
+       
     }
 
-    public static class ContourPlateTypeEnum_
+    internal static class ContourPlateTypeEnum_
     {
-        public static dynamic GetTSObject(ContourPlateTypeEnum dynEnum)
+        public static dynamic GetTSObject(ContourPlateTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPlateTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ContourPlateTypeEnum.UNKNOWN:
-					return System.Enum.Parse(tsType, "UNKNOWN");
-				case ContourPlateTypeEnum.PLATE:
-					return System.Enum.Parse(tsType, "PLATE");
-				case ContourPlateTypeEnum.SLAB:
-					return System.Enum.Parse(tsType, "SLAB");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ContourPlateTypeEnum FromTSObject(dynamic tsEnum)
+        public static ContourPlateTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("UNKNOWN", System.StringComparison.InvariantCulture))
-				return ContourPlateTypeEnum.UNKNOWN;
-			else if (tsEnumValue.Equals("PLATE", System.StringComparison.InvariantCulture))
-				return ContourPlateTypeEnum.PLATE;
-			else if (tsEnumValue.Equals("SLAB", System.StringComparison.InvariantCulture))
-				return ContourPlateTypeEnum.SLAB;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ContourPlateTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

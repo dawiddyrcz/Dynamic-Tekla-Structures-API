@@ -4,47 +4,25 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public enum PropertyTypeEnum
+    public struct PropertyTypeEnum
     {
-			TYPE_INT,
-			TYPE_DOUBLE,
-			TYPE_STRING        
+       
     }
 
-    public static class PropertyTypeEnum_
+    internal static class PropertyTypeEnum_
     {
-        public static dynamic GetTSObject(PropertyTypeEnum dynEnum)
+        public static dynamic GetTSObject(PropertyTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.PropertyTypeEnum");
 
-            switch (dynEnum)
-            {
-				case PropertyTypeEnum.TYPE_INT:
-					return System.Enum.Parse(tsType, "TYPE_INT");
-				case PropertyTypeEnum.TYPE_DOUBLE:
-					return System.Enum.Parse(tsType, "TYPE_DOUBLE");
-				case PropertyTypeEnum.TYPE_STRING:
-					return System.Enum.Parse(tsType, "TYPE_STRING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PropertyTypeEnum FromTSObject(dynamic tsEnum)
+        public static PropertyTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("TYPE_INT", System.StringComparison.InvariantCulture))
-				return PropertyTypeEnum.TYPE_INT;
-			else if (tsEnumValue.Equals("TYPE_DOUBLE", System.StringComparison.InvariantCulture))
-				return PropertyTypeEnum.TYPE_DOUBLE;
-			else if (tsEnumValue.Equals("TYPE_STRING", System.StringComparison.InvariantCulture))
-				return PropertyTypeEnum.TYPE_STRING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PropertyTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

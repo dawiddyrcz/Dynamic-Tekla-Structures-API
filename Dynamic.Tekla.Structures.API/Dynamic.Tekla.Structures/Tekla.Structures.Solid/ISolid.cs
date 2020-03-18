@@ -4,5 +4,48 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
+    public sealed class ISolid 
+    {
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(isolid.MinimumPoint);
+			set { isolid.MinimumPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(isolid.MaximumPoint);
+			set { isolid.MaximumPoint = value.GetTSObject(); }
+		}
+
+        
+
+        dynamic isolid;
+        
+        private ISolid()
+        {
+            this.isolid =  TSActivator.CreateInstance("Tekla.Structures.Solid.ISolid");
+        }
+
+        public ISolid(dynamic tsObject)
+        {
+            this.isolid = tsObject;
+        }
+
+        internal dynamic GetTSObject() => isolid;
+
+		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
+			 => new Dynamic.Tekla.Structures.Solid.FaceEnumerator(isolid.GetFaceEnumerator());
+
+		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
+			 => new Dynamic.Tekla.Structures.Solid.EdgeEnumerator(isolid.GetEdgeEnumerator());
+
+
+
+
+
+    }
+
 }
     

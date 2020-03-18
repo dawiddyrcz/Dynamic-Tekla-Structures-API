@@ -62,82 +62,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LengthEnum
+    public struct LengthEnum
     {
-			ABSOLUTE,
-			RELATIVE        
+       
     }
 
-    public static class LengthEnum_
+    internal static class LengthEnum_
     {
-        public static dynamic GetTSObject(LengthEnum dynEnum)
+        public static dynamic GetTSObject(LengthEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthEnum");
 
-            switch (dynEnum)
-            {
-				case LengthEnum.ABSOLUTE:
-					return System.Enum.Parse(tsType, "ABSOLUTE");
-				case LengthEnum.RELATIVE:
-					return System.Enum.Parse(tsType, "RELATIVE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LengthEnum FromTSObject(dynamic tsEnum)
+        public static LengthEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("ABSOLUTE", System.StringComparison.InvariantCulture))
-				return LengthEnum.ABSOLUTE;
-			else if (tsEnumValue.Equals("RELATIVE", System.StringComparison.InvariantCulture))
-				return LengthEnum.RELATIVE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LengthEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum SpacingEnum
+    public struct SpacingEnum
     {
-			EXACT,
-			TARGET        
+       
     }
 
-    public static class SpacingEnum_
+    internal static class SpacingEnum_
     {
-        public static dynamic GetTSObject(SpacingEnum dynEnum)
+        public static dynamic GetTSObject(SpacingEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SpacingEnum");
 
-            switch (dynEnum)
-            {
-				case SpacingEnum.EXACT:
-					return System.Enum.Parse(tsType, "EXACT");
-				case SpacingEnum.TARGET:
-					return System.Enum.Parse(tsType, "TARGET");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static SpacingEnum FromTSObject(dynamic tsEnum)
+        public static SpacingEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("EXACT", System.StringComparison.InvariantCulture))
-				return SpacingEnum.EXACT;
-			else if (tsEnumValue.Equals("TARGET", System.StringComparison.InvariantCulture))
-				return SpacingEnum.TARGET;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new SpacingEnum();
+ 
+            return dynStruct;
         }
     }
 

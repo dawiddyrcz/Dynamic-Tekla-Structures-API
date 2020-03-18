@@ -50,77 +50,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ClashTypeEnum
+    public struct ClashTypeEnum
     {
-			CLASH_TYPE_INVALID,
-			CLASH_TYPE_ISINSIDE,
-			CLASH_TYPE_EXACTMATCH,
-			CLASH_TYPE_CLASH,
-			CLASH_TYPE_MINDISTANCE,
-			CLASH_TYPE_FAILEDSOLID,
-			CLASH_TYPE_CUTTHROUGH,
-			CLASH_TYPE_COMPLEXCLASH,
-			CLASH_TYPE_FAILEDTEST        
+       
     }
 
-    public static class ClashTypeEnum_
+    internal static class ClashTypeEnum_
     {
-        public static dynamic GetTSObject(ClashTypeEnum dynEnum)
+        public static dynamic GetTSObject(ClashTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ClashTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ClashTypeEnum.CLASH_TYPE_INVALID:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_INVALID");
-				case ClashTypeEnum.CLASH_TYPE_ISINSIDE:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_ISINSIDE");
-				case ClashTypeEnum.CLASH_TYPE_EXACTMATCH:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_EXACTMATCH");
-				case ClashTypeEnum.CLASH_TYPE_CLASH:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_CLASH");
-				case ClashTypeEnum.CLASH_TYPE_MINDISTANCE:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_MINDISTANCE");
-				case ClashTypeEnum.CLASH_TYPE_FAILEDSOLID:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_FAILEDSOLID");
-				case ClashTypeEnum.CLASH_TYPE_CUTTHROUGH:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_CUTTHROUGH");
-				case ClashTypeEnum.CLASH_TYPE_COMPLEXCLASH:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_COMPLEXCLASH");
-				case ClashTypeEnum.CLASH_TYPE_FAILEDTEST:
-					return System.Enum.Parse(tsType, "CLASH_TYPE_FAILEDTEST");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ClashTypeEnum FromTSObject(dynamic tsEnum)
+        public static ClashTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CLASH_TYPE_INVALID", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_INVALID;
-			else if (tsEnumValue.Equals("CLASH_TYPE_ISINSIDE", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_ISINSIDE;
-			else if (tsEnumValue.Equals("CLASH_TYPE_EXACTMATCH", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_EXACTMATCH;
-			else if (tsEnumValue.Equals("CLASH_TYPE_CLASH", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_CLASH;
-			else if (tsEnumValue.Equals("CLASH_TYPE_MINDISTANCE", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_MINDISTANCE;
-			else if (tsEnumValue.Equals("CLASH_TYPE_FAILEDSOLID", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_FAILEDSOLID;
-			else if (tsEnumValue.Equals("CLASH_TYPE_CUTTHROUGH", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_CUTTHROUGH;
-			else if (tsEnumValue.Equals("CLASH_TYPE_COMPLEXCLASH", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_COMPLEXCLASH;
-			else if (tsEnumValue.Equals("CLASH_TYPE_FAILEDTEST", System.StringComparison.InvariantCulture))
-				return ClashTypeEnum.CLASH_TYPE_FAILEDTEST;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ClashTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -83,7 +83,7 @@ namespace CodeGenerator
 $enumValues        
     }
 
-    public static class $classname_
+    internal static class $classname_
     {
         public static dynamic GetTSObject($classname dynEnum)
         {

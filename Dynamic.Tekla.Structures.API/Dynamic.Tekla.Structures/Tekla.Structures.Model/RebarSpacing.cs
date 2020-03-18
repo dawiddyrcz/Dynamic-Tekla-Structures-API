@@ -74,42 +74,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum OffsetEnum
+    public struct OffsetEnum
     {
-			EXACT,
-			MINIMUM        
+       
     }
 
-    public static class OffsetEnum_
+    internal static class OffsetEnum_
     {
-        public static dynamic GetTSObject(OffsetEnum dynEnum)
+        public static dynamic GetTSObject(OffsetEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.OffsetEnum");
 
-            switch (dynEnum)
-            {
-				case OffsetEnum.EXACT:
-					return System.Enum.Parse(tsType, "EXACT");
-				case OffsetEnum.MINIMUM:
-					return System.Enum.Parse(tsType, "MINIMUM");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static OffsetEnum FromTSObject(dynamic tsEnum)
+        public static OffsetEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("EXACT", System.StringComparison.InvariantCulture))
-				return OffsetEnum.EXACT;
-			else if (tsEnumValue.Equals("MINIMUM", System.StringComparison.InvariantCulture))
-				return OffsetEnum.MINIMUM;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new OffsetEnum();
+ 
+            return dynStruct;
         }
     }
 

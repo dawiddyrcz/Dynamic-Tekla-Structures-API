@@ -4,52 +4,25 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public enum ConnectionStatusEnum
+    public struct ConnectionStatusEnum
     {
-			STATUS_UNKNOWN,
-			STATUS_OK,
-			STATUS_WARNING,
-			STATUS_ERROR        
+       
     }
 
-    public static class ConnectionStatusEnum_
+    internal static class ConnectionStatusEnum_
     {
-        public static dynamic GetTSObject(ConnectionStatusEnum dynEnum)
+        public static dynamic GetTSObject(ConnectionStatusEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.ConnectionStatusEnum");
 
-            switch (dynEnum)
-            {
-				case ConnectionStatusEnum.STATUS_UNKNOWN:
-					return System.Enum.Parse(tsType, "STATUS_UNKNOWN");
-				case ConnectionStatusEnum.STATUS_OK:
-					return System.Enum.Parse(tsType, "STATUS_OK");
-				case ConnectionStatusEnum.STATUS_WARNING:
-					return System.Enum.Parse(tsType, "STATUS_WARNING");
-				case ConnectionStatusEnum.STATUS_ERROR:
-					return System.Enum.Parse(tsType, "STATUS_ERROR");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ConnectionStatusEnum FromTSObject(dynamic tsEnum)
+        public static ConnectionStatusEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("STATUS_UNKNOWN", System.StringComparison.InvariantCulture))
-				return ConnectionStatusEnum.STATUS_UNKNOWN;
-			else if (tsEnumValue.Equals("STATUS_OK", System.StringComparison.InvariantCulture))
-				return ConnectionStatusEnum.STATUS_OK;
-			else if (tsEnumValue.Equals("STATUS_WARNING", System.StringComparison.InvariantCulture))
-				return ConnectionStatusEnum.STATUS_WARNING;
-			else if (tsEnumValue.Equals("STATUS_ERROR", System.StringComparison.InvariantCulture))
-				return ConnectionStatusEnum.STATUS_ERROR;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ConnectionStatusEnum();
+ 
+            return dynStruct;
         }
     }
 

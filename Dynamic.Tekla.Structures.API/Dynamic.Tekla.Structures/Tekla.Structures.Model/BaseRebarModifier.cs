@@ -161,97 +161,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum AffectedRebarEnum
+    public struct AffectedRebarEnum
     {
-			START,
-			END,
-			EITHER        
+       
     }
 
-    public static class AffectedRebarEnum_
+    internal static class AffectedRebarEnum_
     {
-        public static dynamic GetTSObject(AffectedRebarEnum dynEnum)
+        public static dynamic GetTSObject(AffectedRebarEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AffectedRebarEnum");
 
-            switch (dynEnum)
-            {
-				case AffectedRebarEnum.START:
-					return System.Enum.Parse(tsType, "START");
-				case AffectedRebarEnum.END:
-					return System.Enum.Parse(tsType, "END");
-				case AffectedRebarEnum.EITHER:
-					return System.Enum.Parse(tsType, "EITHER");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static AffectedRebarEnum FromTSObject(dynamic tsEnum)
+        public static AffectedRebarEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("START", System.StringComparison.InvariantCulture))
-				return AffectedRebarEnum.START;
-			else if (tsEnumValue.Equals("END", System.StringComparison.InvariantCulture))
-				return AffectedRebarEnum.END;
-			else if (tsEnumValue.Equals("EITHER", System.StringComparison.InvariantCulture))
-				return AffectedRebarEnum.EITHER;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new AffectedRebarEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum BarsAffectedEnum
+    public struct BarsAffectedEnum
     {
-			ALL_BARS,
-			EVERY_SECOND_BAR,
-			EVERY_THIRD_BAR,
-			EVERY_FOURTH_BAR        
+       
     }
 
-    public static class BarsAffectedEnum_
+    internal static class BarsAffectedEnum_
     {
-        public static dynamic GetTSObject(BarsAffectedEnum dynEnum)
+        public static dynamic GetTSObject(BarsAffectedEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BarsAffectedEnum");
 
-            switch (dynEnum)
-            {
-				case BarsAffectedEnum.ALL_BARS:
-					return System.Enum.Parse(tsType, "ALL_BARS");
-				case BarsAffectedEnum.EVERY_SECOND_BAR:
-					return System.Enum.Parse(tsType, "EVERY_SECOND_BAR");
-				case BarsAffectedEnum.EVERY_THIRD_BAR:
-					return System.Enum.Parse(tsType, "EVERY_THIRD_BAR");
-				case BarsAffectedEnum.EVERY_FOURTH_BAR:
-					return System.Enum.Parse(tsType, "EVERY_FOURTH_BAR");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BarsAffectedEnum FromTSObject(dynamic tsEnum)
+        public static BarsAffectedEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("ALL_BARS", System.StringComparison.InvariantCulture))
-				return BarsAffectedEnum.ALL_BARS;
-			else if (tsEnumValue.Equals("EVERY_SECOND_BAR", System.StringComparison.InvariantCulture))
-				return BarsAffectedEnum.EVERY_SECOND_BAR;
-			else if (tsEnumValue.Equals("EVERY_THIRD_BAR", System.StringComparison.InvariantCulture))
-				return BarsAffectedEnum.EVERY_THIRD_BAR;
-			else if (tsEnumValue.Equals("EVERY_FOURTH_BAR", System.StringComparison.InvariantCulture))
-				return BarsAffectedEnum.EVERY_FOURTH_BAR;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BarsAffectedEnum();
+ 
+            return dynStruct;
         }
     }
 

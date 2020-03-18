@@ -62,167 +62,71 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
 
-    public enum PickPointEnum
+    public struct PickPointEnum
     {
-			PICK_ONE_POINT,
-			PICK_TWO_POINTS,
-			PICK_POLYGON,
-			PICK_LINE,
-			PICK_FACE        
+       
     }
 
-    public static class PickPointEnum_
+    internal static class PickPointEnum_
     {
-        public static dynamic GetTSObject(PickPointEnum dynEnum)
+        public static dynamic GetTSObject(PickPointEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickPointEnum");
 
-            switch (dynEnum)
-            {
-				case PickPointEnum.PICK_ONE_POINT:
-					return System.Enum.Parse(tsType, "PICK_ONE_POINT");
-				case PickPointEnum.PICK_TWO_POINTS:
-					return System.Enum.Parse(tsType, "PICK_TWO_POINTS");
-				case PickPointEnum.PICK_POLYGON:
-					return System.Enum.Parse(tsType, "PICK_POLYGON");
-				case PickPointEnum.PICK_LINE:
-					return System.Enum.Parse(tsType, "PICK_LINE");
-				case PickPointEnum.PICK_FACE:
-					return System.Enum.Parse(tsType, "PICK_FACE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PickPointEnum FromTSObject(dynamic tsEnum)
+        public static PickPointEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PICK_ONE_POINT", System.StringComparison.InvariantCulture))
-				return PickPointEnum.PICK_ONE_POINT;
-			else if (tsEnumValue.Equals("PICK_TWO_POINTS", System.StringComparison.InvariantCulture))
-				return PickPointEnum.PICK_TWO_POINTS;
-			else if (tsEnumValue.Equals("PICK_POLYGON", System.StringComparison.InvariantCulture))
-				return PickPointEnum.PICK_POLYGON;
-			else if (tsEnumValue.Equals("PICK_LINE", System.StringComparison.InvariantCulture))
-				return PickPointEnum.PICK_LINE;
-			else if (tsEnumValue.Equals("PICK_FACE", System.StringComparison.InvariantCulture))
-				return PickPointEnum.PICK_FACE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PickPointEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum PickObjectEnum
+    public struct PickObjectEnum
     {
-			PICK_ONE_OBJECT,
-			PICK_ONE_PART,
-			PICK_ONE_WELD,
-			PICK_ONE_BOLTGROUP,
-			PICK_ONE_REINFORCEMENT        
+       
     }
 
-    public static class PickObjectEnum_
+    internal static class PickObjectEnum_
     {
-        public static dynamic GetTSObject(PickObjectEnum dynEnum)
+        public static dynamic GetTSObject(PickObjectEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickObjectEnum");
 
-            switch (dynEnum)
-            {
-				case PickObjectEnum.PICK_ONE_OBJECT:
-					return System.Enum.Parse(tsType, "PICK_ONE_OBJECT");
-				case PickObjectEnum.PICK_ONE_PART:
-					return System.Enum.Parse(tsType, "PICK_ONE_PART");
-				case PickObjectEnum.PICK_ONE_WELD:
-					return System.Enum.Parse(tsType, "PICK_ONE_WELD");
-				case PickObjectEnum.PICK_ONE_BOLTGROUP:
-					return System.Enum.Parse(tsType, "PICK_ONE_BOLTGROUP");
-				case PickObjectEnum.PICK_ONE_REINFORCEMENT:
-					return System.Enum.Parse(tsType, "PICK_ONE_REINFORCEMENT");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PickObjectEnum FromTSObject(dynamic tsEnum)
+        public static PickObjectEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PICK_ONE_OBJECT", System.StringComparison.InvariantCulture))
-				return PickObjectEnum.PICK_ONE_OBJECT;
-			else if (tsEnumValue.Equals("PICK_ONE_PART", System.StringComparison.InvariantCulture))
-				return PickObjectEnum.PICK_ONE_PART;
-			else if (tsEnumValue.Equals("PICK_ONE_WELD", System.StringComparison.InvariantCulture))
-				return PickObjectEnum.PICK_ONE_WELD;
-			else if (tsEnumValue.Equals("PICK_ONE_BOLTGROUP", System.StringComparison.InvariantCulture))
-				return PickObjectEnum.PICK_ONE_BOLTGROUP;
-			else if (tsEnumValue.Equals("PICK_ONE_REINFORCEMENT", System.StringComparison.InvariantCulture))
-				return PickObjectEnum.PICK_ONE_REINFORCEMENT;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PickObjectEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum PickObjectsEnum
+    public struct PickObjectsEnum
     {
-			PICK_N_OBJECTS,
-			PICK_N_PARTS,
-			PICK_N_WELDS,
-			PICK_N_BOLTGROUPS,
-			PICK_N_REINFORCEMENTS        
+       
     }
 
-    public static class PickObjectsEnum_
+    internal static class PickObjectsEnum_
     {
-        public static dynamic GetTSObject(PickObjectsEnum dynEnum)
+        public static dynamic GetTSObject(PickObjectsEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickObjectsEnum");
 
-            switch (dynEnum)
-            {
-				case PickObjectsEnum.PICK_N_OBJECTS:
-					return System.Enum.Parse(tsType, "PICK_N_OBJECTS");
-				case PickObjectsEnum.PICK_N_PARTS:
-					return System.Enum.Parse(tsType, "PICK_N_PARTS");
-				case PickObjectsEnum.PICK_N_WELDS:
-					return System.Enum.Parse(tsType, "PICK_N_WELDS");
-				case PickObjectsEnum.PICK_N_BOLTGROUPS:
-					return System.Enum.Parse(tsType, "PICK_N_BOLTGROUPS");
-				case PickObjectsEnum.PICK_N_REINFORCEMENTS:
-					return System.Enum.Parse(tsType, "PICK_N_REINFORCEMENTS");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PickObjectsEnum FromTSObject(dynamic tsEnum)
+        public static PickObjectsEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PICK_N_OBJECTS", System.StringComparison.InvariantCulture))
-				return PickObjectsEnum.PICK_N_OBJECTS;
-			else if (tsEnumValue.Equals("PICK_N_PARTS", System.StringComparison.InvariantCulture))
-				return PickObjectsEnum.PICK_N_PARTS;
-			else if (tsEnumValue.Equals("PICK_N_WELDS", System.StringComparison.InvariantCulture))
-				return PickObjectsEnum.PICK_N_WELDS;
-			else if (tsEnumValue.Equals("PICK_N_BOLTGROUPS", System.StringComparison.InvariantCulture))
-				return PickObjectsEnum.PICK_N_BOLTGROUPS;
-			else if (tsEnumValue.Equals("PICK_N_REINFORCEMENTS", System.StringComparison.InvariantCulture))
-				return PickObjectsEnum.PICK_N_REINFORCEMENTS;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PickObjectsEnum();
+ 
+            return dynStruct;
         }
     }
 

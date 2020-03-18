@@ -422,62 +422,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum WeldPositionEnum
+    public struct WeldPositionEnum
     {
-			WELD_POSITION_PLUS_X,
-			WELD_POSITION_MINUS_X,
-			WELD_POSITION_PLUS_Y,
-			WELD_POSITION_MINUS_Y,
-			WELD_POSITION_PLUS_Z,
-			WELD_POSITION_MINUS_Z        
+       
     }
 
-    public static class WeldPositionEnum_
+    internal static class WeldPositionEnum_
     {
-        public static dynamic GetTSObject(WeldPositionEnum dynEnum)
+        public static dynamic GetTSObject(WeldPositionEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPositionEnum");
 
-            switch (dynEnum)
-            {
-				case WeldPositionEnum.WELD_POSITION_PLUS_X:
-					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_X");
-				case WeldPositionEnum.WELD_POSITION_MINUS_X:
-					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_X");
-				case WeldPositionEnum.WELD_POSITION_PLUS_Y:
-					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_Y");
-				case WeldPositionEnum.WELD_POSITION_MINUS_Y:
-					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_Y");
-				case WeldPositionEnum.WELD_POSITION_PLUS_Z:
-					return System.Enum.Parse(tsType, "WELD_POSITION_PLUS_Z");
-				case WeldPositionEnum.WELD_POSITION_MINUS_Z:
-					return System.Enum.Parse(tsType, "WELD_POSITION_MINUS_Z");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldPositionEnum FromTSObject(dynamic tsEnum)
+        public static WeldPositionEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_POSITION_PLUS_X", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_PLUS_X;
-			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_X", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_MINUS_X;
-			else if (tsEnumValue.Equals("WELD_POSITION_PLUS_Y", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_PLUS_Y;
-			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_Y", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_MINUS_Y;
-			else if (tsEnumValue.Equals("WELD_POSITION_PLUS_Z", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_PLUS_Z;
-			else if (tsEnumValue.Equals("WELD_POSITION_MINUS_Z", System.StringComparison.InvariantCulture))
-				return WeldPositionEnum.WELD_POSITION_MINUS_Z;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldPositionEnum();
+ 
+            return dynStruct;
         }
     }
 

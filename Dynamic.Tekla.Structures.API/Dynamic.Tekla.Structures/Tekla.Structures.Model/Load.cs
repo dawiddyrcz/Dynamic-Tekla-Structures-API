@@ -221,122 +221,71 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LoadSpanningEnum
+    public struct LoadSpanningEnum
     {
-			LOAD_SPANNING_SINGLE,
-			LOAD_SPANNING_DOUBLE        
+       
     }
 
-    public static class LoadSpanningEnum_
+    internal static class LoadSpanningEnum_
     {
-        public static dynamic GetTSObject(LoadSpanningEnum dynEnum)
+        public static dynamic GetTSObject(LoadSpanningEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadSpanningEnum");
 
-            switch (dynEnum)
-            {
-				case LoadSpanningEnum.LOAD_SPANNING_SINGLE:
-					return System.Enum.Parse(tsType, "LOAD_SPANNING_SINGLE");
-				case LoadSpanningEnum.LOAD_SPANNING_DOUBLE:
-					return System.Enum.Parse(tsType, "LOAD_SPANNING_DOUBLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LoadSpanningEnum FromTSObject(dynamic tsEnum)
+        public static LoadSpanningEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOAD_SPANNING_SINGLE", System.StringComparison.InvariantCulture))
-				return LoadSpanningEnum.LOAD_SPANNING_SINGLE;
-			else if (tsEnumValue.Equals("LOAD_SPANNING_DOUBLE", System.StringComparison.InvariantCulture))
-				return LoadSpanningEnum.LOAD_SPANNING_DOUBLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LoadSpanningEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum LoadAttachmentEnum
+    public struct LoadAttachmentEnum
     {
-			LOAD_ATTACHMENT_ATTACH_TO_MEMBER,
-			LOAD_ATTACHMENT_DONT_ATTACH        
+       
     }
 
-    public static class LoadAttachmentEnum_
+    internal static class LoadAttachmentEnum_
     {
-        public static dynamic GetTSObject(LoadAttachmentEnum dynEnum)
+        public static dynamic GetTSObject(LoadAttachmentEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadAttachmentEnum");
 
-            switch (dynEnum)
-            {
-				case LoadAttachmentEnum.LOAD_ATTACHMENT_ATTACH_TO_MEMBER:
-					return System.Enum.Parse(tsType, "LOAD_ATTACHMENT_ATTACH_TO_MEMBER");
-				case LoadAttachmentEnum.LOAD_ATTACHMENT_DONT_ATTACH:
-					return System.Enum.Parse(tsType, "LOAD_ATTACHMENT_DONT_ATTACH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LoadAttachmentEnum FromTSObject(dynamic tsEnum)
+        public static LoadAttachmentEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOAD_ATTACHMENT_ATTACH_TO_MEMBER", System.StringComparison.InvariantCulture))
-				return LoadAttachmentEnum.LOAD_ATTACHMENT_ATTACH_TO_MEMBER;
-			else if (tsEnumValue.Equals("LOAD_ATTACHMENT_DONT_ATTACH", System.StringComparison.InvariantCulture))
-				return LoadAttachmentEnum.LOAD_ATTACHMENT_DONT_ATTACH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LoadAttachmentEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum LoadPartNamesEnum
+    public struct LoadPartNamesEnum
     {
-			LOAD_PART_NAMES_EXCLUDE,
-			LOAD_PART_NAMES_INCLUDE        
+       
     }
 
-    public static class LoadPartNamesEnum_
+    internal static class LoadPartNamesEnum_
     {
-        public static dynamic GetTSObject(LoadPartNamesEnum dynEnum)
+        public static dynamic GetTSObject(LoadPartNamesEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadPartNamesEnum");
 
-            switch (dynEnum)
-            {
-				case LoadPartNamesEnum.LOAD_PART_NAMES_EXCLUDE:
-					return System.Enum.Parse(tsType, "LOAD_PART_NAMES_EXCLUDE");
-				case LoadPartNamesEnum.LOAD_PART_NAMES_INCLUDE:
-					return System.Enum.Parse(tsType, "LOAD_PART_NAMES_INCLUDE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LoadPartNamesEnum FromTSObject(dynamic tsEnum)
+        public static LoadPartNamesEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOAD_PART_NAMES_EXCLUDE", System.StringComparison.InvariantCulture))
-				return LoadPartNamesEnum.LOAD_PART_NAMES_EXCLUDE;
-			else if (tsEnumValue.Equals("LOAD_PART_NAMES_INCLUDE", System.StringComparison.InvariantCulture))
-				return LoadPartNamesEnum.LOAD_PART_NAMES_INCLUDE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LoadPartNamesEnum();
+ 
+            return dynStruct;
         }
     }
 

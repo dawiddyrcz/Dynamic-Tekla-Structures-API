@@ -38,52 +38,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ChangeTypeEnum
+    public struct ChangeTypeEnum
     {
-			OBJECT_INSERT,
-			OBJECT_MODIFY,
-			OBJECT_DELETE,
-			USERPROPERTY_CHANGED        
+       
     }
 
-    public static class ChangeTypeEnum_
+    internal static class ChangeTypeEnum_
     {
-        public static dynamic GetTSObject(ChangeTypeEnum dynEnum)
+        public static dynamic GetTSObject(ChangeTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChangeTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ChangeTypeEnum.OBJECT_INSERT:
-					return System.Enum.Parse(tsType, "OBJECT_INSERT");
-				case ChangeTypeEnum.OBJECT_MODIFY:
-					return System.Enum.Parse(tsType, "OBJECT_MODIFY");
-				case ChangeTypeEnum.OBJECT_DELETE:
-					return System.Enum.Parse(tsType, "OBJECT_DELETE");
-				case ChangeTypeEnum.USERPROPERTY_CHANGED:
-					return System.Enum.Parse(tsType, "USERPROPERTY_CHANGED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ChangeTypeEnum FromTSObject(dynamic tsEnum)
+        public static ChangeTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("OBJECT_INSERT", System.StringComparison.InvariantCulture))
-				return ChangeTypeEnum.OBJECT_INSERT;
-			else if (tsEnumValue.Equals("OBJECT_MODIFY", System.StringComparison.InvariantCulture))
-				return ChangeTypeEnum.OBJECT_MODIFY;
-			else if (tsEnumValue.Equals("OBJECT_DELETE", System.StringComparison.InvariantCulture))
-				return ChangeTypeEnum.OBJECT_DELETE;
-			else if (tsEnumValue.Equals("USERPROPERTY_CHANGED", System.StringComparison.InvariantCulture))
-				return ChangeTypeEnum.USERPROPERTY_CHANGED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ChangeTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

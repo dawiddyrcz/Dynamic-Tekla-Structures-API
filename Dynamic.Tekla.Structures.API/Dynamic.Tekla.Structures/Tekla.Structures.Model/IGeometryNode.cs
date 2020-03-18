@@ -4,5 +4,39 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
+    public sealed class IGeometryNode 
+    {
+
+		public System.Boolean IsAutomatic
+		{
+			get => igeometrynode.IsAutomatic;
+			set { igeometrynode.IsAutomatic = value; }
+		}
+
+        
+
+        dynamic igeometrynode;
+        
+        private IGeometryNode()
+        {
+            this.igeometrynode =  TSActivator.CreateInstance("Tekla.Structures.Model.IGeometryNode");
+        }
+
+        public IGeometryNode(dynamic tsObject)
+        {
+            this.igeometrynode = tsObject;
+        }
+
+        internal dynamic GetTSObject() => igeometrynode;
+
+		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
+			 => igeometrynode.AcceptVisitor(visitor.GetTSObject());
+
+
+
+
+
+    }
+
 }
     

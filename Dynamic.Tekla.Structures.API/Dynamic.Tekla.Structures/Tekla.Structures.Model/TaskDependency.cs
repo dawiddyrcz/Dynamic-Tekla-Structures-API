@@ -167,52 +167,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum DependencyTypeEnum
+    public struct DependencyTypeEnum
     {
-			FINISH_TO_FINISH,
-			FINISH_TO_START,
-			START_TO_FINISH,
-			START_TO_START        
+       
     }
 
-    public static class DependencyTypeEnum_
+    internal static class DependencyTypeEnum_
     {
-        public static dynamic GetTSObject(DependencyTypeEnum dynEnum)
+        public static dynamic GetTSObject(DependencyTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.DependencyTypeEnum");
 
-            switch (dynEnum)
-            {
-				case DependencyTypeEnum.FINISH_TO_FINISH:
-					return System.Enum.Parse(tsType, "FINISH_TO_FINISH");
-				case DependencyTypeEnum.FINISH_TO_START:
-					return System.Enum.Parse(tsType, "FINISH_TO_START");
-				case DependencyTypeEnum.START_TO_FINISH:
-					return System.Enum.Parse(tsType, "START_TO_FINISH");
-				case DependencyTypeEnum.START_TO_START:
-					return System.Enum.Parse(tsType, "START_TO_START");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static DependencyTypeEnum FromTSObject(dynamic tsEnum)
+        public static DependencyTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("FINISH_TO_FINISH", System.StringComparison.InvariantCulture))
-				return DependencyTypeEnum.FINISH_TO_FINISH;
-			else if (tsEnumValue.Equals("FINISH_TO_START", System.StringComparison.InvariantCulture))
-				return DependencyTypeEnum.FINISH_TO_START;
-			else if (tsEnumValue.Equals("START_TO_FINISH", System.StringComparison.InvariantCulture))
-				return DependencyTypeEnum.START_TO_FINISH;
-			else if (tsEnumValue.Equals("START_TO_START", System.StringComparison.InvariantCulture))
-				return DependencyTypeEnum.START_TO_START;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new DependencyTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -200,92 +200,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum StaggerTypeEnum
+    public struct StaggerTypeEnum
     {
-			NO_STAGGER,
-			STAGGER_LEFT,
-			STAGGER_RIGHT,
-			STAGGER_MIDDLE        
+       
     }
 
-    public static class StaggerTypeEnum_
+    internal static class StaggerTypeEnum_
     {
-        public static dynamic GetTSObject(StaggerTypeEnum dynEnum)
+        public static dynamic GetTSObject(StaggerTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.StaggerTypeEnum");
 
-            switch (dynEnum)
-            {
-				case StaggerTypeEnum.NO_STAGGER:
-					return System.Enum.Parse(tsType, "NO_STAGGER");
-				case StaggerTypeEnum.STAGGER_LEFT:
-					return System.Enum.Parse(tsType, "STAGGER_LEFT");
-				case StaggerTypeEnum.STAGGER_RIGHT:
-					return System.Enum.Parse(tsType, "STAGGER_RIGHT");
-				case StaggerTypeEnum.STAGGER_MIDDLE:
-					return System.Enum.Parse(tsType, "STAGGER_MIDDLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static StaggerTypeEnum FromTSObject(dynamic tsEnum)
+        public static StaggerTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NO_STAGGER", System.StringComparison.InvariantCulture))
-				return StaggerTypeEnum.NO_STAGGER;
-			else if (tsEnumValue.Equals("STAGGER_LEFT", System.StringComparison.InvariantCulture))
-				return StaggerTypeEnum.STAGGER_LEFT;
-			else if (tsEnumValue.Equals("STAGGER_RIGHT", System.StringComparison.InvariantCulture))
-				return StaggerTypeEnum.STAGGER_RIGHT;
-			else if (tsEnumValue.Equals("STAGGER_MIDDLE", System.StringComparison.InvariantCulture))
-				return StaggerTypeEnum.STAGGER_MIDDLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new StaggerTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum SplitTypeEnum
+    public struct SplitTypeEnum
     {
-			LAPPING,
-			CRANKING        
+       
     }
 
-    public static class SplitTypeEnum_
+    internal static class SplitTypeEnum_
     {
-        public static dynamic GetTSObject(SplitTypeEnum dynEnum)
+        public static dynamic GetTSObject(SplitTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SplitTypeEnum");
 
-            switch (dynEnum)
-            {
-				case SplitTypeEnum.LAPPING:
-					return System.Enum.Parse(tsType, "LAPPING");
-				case SplitTypeEnum.CRANKING:
-					return System.Enum.Parse(tsType, "CRANKING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static SplitTypeEnum FromTSObject(dynamic tsEnum)
+        public static SplitTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LAPPING", System.StringComparison.InvariantCulture))
-				return SplitTypeEnum.LAPPING;
-			else if (tsEnumValue.Equals("CRANKING", System.StringComparison.InvariantCulture))
-				return SplitTypeEnum.CRANKING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new SplitTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

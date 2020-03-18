@@ -275,52 +275,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LineLoadFormEnum
+    public struct LineLoadFormEnum
     {
-			LOAD_FORM_LINE_1,
-			LOAD_FORM_LINE_2,
-			LOAD_FORM_LINE_3,
-			LOAD_FORM_LINE_4        
+       
     }
 
-    public static class LineLoadFormEnum_
+    internal static class LineLoadFormEnum_
     {
-        public static dynamic GetTSObject(LineLoadFormEnum dynEnum)
+        public static dynamic GetTSObject(LineLoadFormEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LineLoadFormEnum");
 
-            switch (dynEnum)
-            {
-				case LineLoadFormEnum.LOAD_FORM_LINE_1:
-					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_1");
-				case LineLoadFormEnum.LOAD_FORM_LINE_2:
-					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_2");
-				case LineLoadFormEnum.LOAD_FORM_LINE_3:
-					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_3");
-				case LineLoadFormEnum.LOAD_FORM_LINE_4:
-					return System.Enum.Parse(tsType, "LOAD_FORM_LINE_4");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LineLoadFormEnum FromTSObject(dynamic tsEnum)
+        public static LineLoadFormEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOAD_FORM_LINE_1", System.StringComparison.InvariantCulture))
-				return LineLoadFormEnum.LOAD_FORM_LINE_1;
-			else if (tsEnumValue.Equals("LOAD_FORM_LINE_2", System.StringComparison.InvariantCulture))
-				return LineLoadFormEnum.LOAD_FORM_LINE_2;
-			else if (tsEnumValue.Equals("LOAD_FORM_LINE_3", System.StringComparison.InvariantCulture))
-				return LineLoadFormEnum.LOAD_FORM_LINE_3;
-			else if (tsEnumValue.Equals("LOAD_FORM_LINE_4", System.StringComparison.InvariantCulture))
-				return LineLoadFormEnum.LOAD_FORM_LINE_4;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LineLoadFormEnum();
+ 
+            return dynStruct;
         }
     }
 

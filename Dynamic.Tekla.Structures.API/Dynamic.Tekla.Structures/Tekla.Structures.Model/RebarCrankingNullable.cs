@@ -68,47 +68,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum EndCrankingTypeEnum
+    public struct EndCrankingTypeEnum
     {
-			NO_CRANKING,
-			CUSTOM_CRANKING,
-			STANDARD_CRANKING        
+       
     }
 
-    public static class EndCrankingTypeEnum_
+    internal static class EndCrankingTypeEnum_
     {
-        public static dynamic GetTSObject(EndCrankingTypeEnum dynEnum)
+        public static dynamic GetTSObject(EndCrankingTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EndCrankingTypeEnum");
 
-            switch (dynEnum)
-            {
-				case EndCrankingTypeEnum.NO_CRANKING:
-					return System.Enum.Parse(tsType, "NO_CRANKING");
-				case EndCrankingTypeEnum.CUSTOM_CRANKING:
-					return System.Enum.Parse(tsType, "CUSTOM_CRANKING");
-				case EndCrankingTypeEnum.STANDARD_CRANKING:
-					return System.Enum.Parse(tsType, "STANDARD_CRANKING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static EndCrankingTypeEnum FromTSObject(dynamic tsEnum)
+        public static EndCrankingTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NO_CRANKING", System.StringComparison.InvariantCulture))
-				return EndCrankingTypeEnum.NO_CRANKING;
-			else if (tsEnumValue.Equals("CUSTOM_CRANKING", System.StringComparison.InvariantCulture))
-				return EndCrankingTypeEnum.CUSTOM_CRANKING;
-			else if (tsEnumValue.Equals("STANDARD_CRANKING", System.StringComparison.InvariantCulture))
-				return EndCrankingTypeEnum.STANDARD_CRANKING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new EndCrankingTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

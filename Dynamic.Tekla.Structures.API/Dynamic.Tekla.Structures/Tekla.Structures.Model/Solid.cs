@@ -56,67 +56,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum SolidCreationTypeEnum
+    public struct SolidCreationTypeEnum
     {
-			RAW,
-			FITTED,
-			NORMAL,
-			HIGH_ACCURACY,
-			PLANECUTTED,
-			NORMAL_WITHOUT_EDGECHAMFERS,
-			NORMAL_WITHOUT_WELDPREPS        
+       
     }
 
-    public static class SolidCreationTypeEnum_
+    internal static class SolidCreationTypeEnum_
     {
-        public static dynamic GetTSObject(SolidCreationTypeEnum dynEnum)
+        public static dynamic GetTSObject(SolidCreationTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SolidCreationTypeEnum");
 
-            switch (dynEnum)
-            {
-				case SolidCreationTypeEnum.RAW:
-					return System.Enum.Parse(tsType, "RAW");
-				case SolidCreationTypeEnum.FITTED:
-					return System.Enum.Parse(tsType, "FITTED");
-				case SolidCreationTypeEnum.NORMAL:
-					return System.Enum.Parse(tsType, "NORMAL");
-				case SolidCreationTypeEnum.HIGH_ACCURACY:
-					return System.Enum.Parse(tsType, "HIGH_ACCURACY");
-				case SolidCreationTypeEnum.PLANECUTTED:
-					return System.Enum.Parse(tsType, "PLANECUTTED");
-				case SolidCreationTypeEnum.NORMAL_WITHOUT_EDGECHAMFERS:
-					return System.Enum.Parse(tsType, "NORMAL_WITHOUT_EDGECHAMFERS");
-				case SolidCreationTypeEnum.NORMAL_WITHOUT_WELDPREPS:
-					return System.Enum.Parse(tsType, "NORMAL_WITHOUT_WELDPREPS");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static SolidCreationTypeEnum FromTSObject(dynamic tsEnum)
+        public static SolidCreationTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("RAW", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.RAW;
-			else if (tsEnumValue.Equals("FITTED", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.FITTED;
-			else if (tsEnumValue.Equals("NORMAL", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.NORMAL;
-			else if (tsEnumValue.Equals("HIGH_ACCURACY", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.HIGH_ACCURACY;
-			else if (tsEnumValue.Equals("PLANECUTTED", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.PLANECUTTED;
-			else if (tsEnumValue.Equals("NORMAL_WITHOUT_EDGECHAMFERS", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.NORMAL_WITHOUT_EDGECHAMFERS;
-			else if (tsEnumValue.Equals("NORMAL_WITHOUT_WELDPREPS", System.StringComparison.InvariantCulture))
-				return SolidCreationTypeEnum.NORMAL_WITHOUT_WELDPREPS;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new SolidCreationTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

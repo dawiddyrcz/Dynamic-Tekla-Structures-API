@@ -50,57 +50,25 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
 
-    public enum LineType
+    public struct LineType
     {
-			Solid,
-			Dashed1,
-			Dashed2,
-			DashedAndDotted,
-			Dotted        
+       
     }
 
-    public static class LineType_
+    internal static class LineType_
     {
-        public static dynamic GetTSObject(LineType dynEnum)
+        public static dynamic GetTSObject(LineType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.LineType");
 
-            switch (dynEnum)
-            {
-				case LineType.Solid:
-					return System.Enum.Parse(tsType, "Solid");
-				case LineType.Dashed1:
-					return System.Enum.Parse(tsType, "Dashed1");
-				case LineType.Dashed2:
-					return System.Enum.Parse(tsType, "Dashed2");
-				case LineType.DashedAndDotted:
-					return System.Enum.Parse(tsType, "DashedAndDotted");
-				case LineType.Dotted:
-					return System.Enum.Parse(tsType, "Dotted");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LineType FromTSObject(dynamic tsEnum)
+        public static LineType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("Solid", System.StringComparison.InvariantCulture))
-				return LineType.Solid;
-			else if (tsEnumValue.Equals("Dashed1", System.StringComparison.InvariantCulture))
-				return LineType.Dashed1;
-			else if (tsEnumValue.Equals("Dashed2", System.StringComparison.InvariantCulture))
-				return LineType.Dashed2;
-			else if (tsEnumValue.Equals("DashedAndDotted", System.StringComparison.InvariantCulture))
-				return LineType.DashedAndDotted;
-			else if (tsEnumValue.Equals("Dotted", System.StringComparison.InvariantCulture))
-				return LineType.Dotted;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LineType();
+ 
+            return dynStruct;
         }
     }
 

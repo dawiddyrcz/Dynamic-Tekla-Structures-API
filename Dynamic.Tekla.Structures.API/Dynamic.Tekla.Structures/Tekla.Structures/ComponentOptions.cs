@@ -116,42 +116,25 @@ namespace Dynamic.Tekla.Structures
 
 
 
-    public enum BoltEdgeDistanceReferenceEnum
+    public struct BoltEdgeDistanceReferenceEnum
     {
-			BOLT_DIAMETER,
-			HOLE_DIAMETER        
+       
     }
 
-    public static class BoltEdgeDistanceReferenceEnum_
+    internal static class BoltEdgeDistanceReferenceEnum_
     {
-        public static dynamic GetTSObject(BoltEdgeDistanceReferenceEnum dynEnum)
+        public static dynamic GetTSObject(BoltEdgeDistanceReferenceEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.BoltEdgeDistanceReferenceEnum");
 
-            switch (dynEnum)
-            {
-				case BoltEdgeDistanceReferenceEnum.BOLT_DIAMETER:
-					return System.Enum.Parse(tsType, "BOLT_DIAMETER");
-				case BoltEdgeDistanceReferenceEnum.HOLE_DIAMETER:
-					return System.Enum.Parse(tsType, "HOLE_DIAMETER");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BoltEdgeDistanceReferenceEnum FromTSObject(dynamic tsEnum)
+        public static BoltEdgeDistanceReferenceEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BOLT_DIAMETER", System.StringComparison.InvariantCulture))
-				return BoltEdgeDistanceReferenceEnum.BOLT_DIAMETER;
-			else if (tsEnumValue.Equals("HOLE_DIAMETER", System.StringComparison.InvariantCulture))
-				return BoltEdgeDistanceReferenceEnum.HOLE_DIAMETER;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BoltEdgeDistanceReferenceEnum();
+ 
+            return dynStruct;
         }
     }
 

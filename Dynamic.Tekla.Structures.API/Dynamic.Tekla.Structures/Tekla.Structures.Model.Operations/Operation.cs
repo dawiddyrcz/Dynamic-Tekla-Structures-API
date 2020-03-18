@@ -197,102 +197,48 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 
 
-    public enum MISExportTypeEnum
+    public struct MISExportTypeEnum
     {
-			DSTV,
-			KISS,
-			EJE,
-			EPC,
-			STEEL2000        
+       
     }
 
-    public static class MISExportTypeEnum_
+    internal static class MISExportTypeEnum_
     {
-        public static dynamic GetTSObject(MISExportTypeEnum dynEnum)
+        public static dynamic GetTSObject(MISExportTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.MISExportTypeEnum");
 
-            switch (dynEnum)
-            {
-				case MISExportTypeEnum.DSTV:
-					return System.Enum.Parse(tsType, "DSTV");
-				case MISExportTypeEnum.KISS:
-					return System.Enum.Parse(tsType, "KISS");
-				case MISExportTypeEnum.EJE:
-					return System.Enum.Parse(tsType, "EJE");
-				case MISExportTypeEnum.EPC:
-					return System.Enum.Parse(tsType, "EPC");
-				case MISExportTypeEnum.STEEL2000:
-					return System.Enum.Parse(tsType, "STEEL2000");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static MISExportTypeEnum FromTSObject(dynamic tsEnum)
+        public static MISExportTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("DSTV", System.StringComparison.InvariantCulture))
-				return MISExportTypeEnum.DSTV;
-			else if (tsEnumValue.Equals("KISS", System.StringComparison.InvariantCulture))
-				return MISExportTypeEnum.KISS;
-			else if (tsEnumValue.Equals("EJE", System.StringComparison.InvariantCulture))
-				return MISExportTypeEnum.EJE;
-			else if (tsEnumValue.Equals("EPC", System.StringComparison.InvariantCulture))
-				return MISExportTypeEnum.EPC;
-			else if (tsEnumValue.Equals("STEEL2000", System.StringComparison.InvariantCulture))
-				return MISExportTypeEnum.STEEL2000;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new MISExportTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum UnselectedModeEnum
+    public struct UnselectedModeEnum
     {
-			Hidden,
-			Transparent,
-			AsSticks        
+       
     }
 
-    public static class UnselectedModeEnum_
+    internal static class UnselectedModeEnum_
     {
-        public static dynamic GetTSObject(UnselectedModeEnum dynEnum)
+        public static dynamic GetTSObject(UnselectedModeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.UnselectedModeEnum");
 
-            switch (dynEnum)
-            {
-				case UnselectedModeEnum.Hidden:
-					return System.Enum.Parse(tsType, "Hidden");
-				case UnselectedModeEnum.Transparent:
-					return System.Enum.Parse(tsType, "Transparent");
-				case UnselectedModeEnum.AsSticks:
-					return System.Enum.Parse(tsType, "AsSticks");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static UnselectedModeEnum FromTSObject(dynamic tsEnum)
+        public static UnselectedModeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("Hidden", System.StringComparison.InvariantCulture))
-				return UnselectedModeEnum.Hidden;
-			else if (tsEnumValue.Equals("Transparent", System.StringComparison.InvariantCulture))
-				return UnselectedModeEnum.Transparent;
-			else if (tsEnumValue.Equals("AsSticks", System.StringComparison.InvariantCulture))
-				return UnselectedModeEnum.AsSticks;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new UnselectedModeEnum();
+ 
+            return dynStruct;
         }
     }
 

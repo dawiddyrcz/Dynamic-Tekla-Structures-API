@@ -314,52 +314,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ErrorStatus
+    public struct ErrorStatus
     {
-			DataMissing,
-			DefinitionPointsTooClose,
-			DefinitionPointsCannotBeAligned,
-			ZeroTotalRiseWithMore360Degrees        
+       
     }
 
-    public static class ErrorStatus_
+    internal static class ErrorStatus_
     {
-        public static dynamic GetTSObject(ErrorStatus dynEnum)
+        public static dynamic GetTSObject(ErrorStatus dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ErrorStatus");
 
-            switch (dynEnum)
-            {
-				case ErrorStatus.DataMissing:
-					return System.Enum.Parse(tsType, "DataMissing");
-				case ErrorStatus.DefinitionPointsTooClose:
-					return System.Enum.Parse(tsType, "DefinitionPointsTooClose");
-				case ErrorStatus.DefinitionPointsCannotBeAligned:
-					return System.Enum.Parse(tsType, "DefinitionPointsCannotBeAligned");
-				case ErrorStatus.ZeroTotalRiseWithMore360Degrees:
-					return System.Enum.Parse(tsType, "ZeroTotalRiseWithMore360Degrees");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ErrorStatus FromTSObject(dynamic tsEnum)
+        public static ErrorStatus FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("DataMissing", System.StringComparison.InvariantCulture))
-				return ErrorStatus.DataMissing;
-			else if (tsEnumValue.Equals("DefinitionPointsTooClose", System.StringComparison.InvariantCulture))
-				return ErrorStatus.DefinitionPointsTooClose;
-			else if (tsEnumValue.Equals("DefinitionPointsCannotBeAligned", System.StringComparison.InvariantCulture))
-				return ErrorStatus.DefinitionPointsCannotBeAligned;
-			else if (tsEnumValue.Equals("ZeroTotalRiseWithMore360Degrees", System.StringComparison.InvariantCulture))
-				return ErrorStatus.ZeroTotalRiseWithMore360Degrees;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ErrorStatus();
+ 
+            return dynStruct;
         }
     }
 

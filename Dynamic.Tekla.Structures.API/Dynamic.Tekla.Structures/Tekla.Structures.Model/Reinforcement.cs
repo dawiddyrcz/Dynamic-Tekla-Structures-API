@@ -245,92 +245,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum RebarGeometryOptionEnum
+    public struct RebarGeometryOptionEnum
     {
-			NONE,
-			HOOKS,
-			AVOID_CLASH,
-			LENGTH_ADJUSTMENTS        
+       
     }
 
-    public static class RebarGeometryOptionEnum_
+    internal static class RebarGeometryOptionEnum_
     {
-        public static dynamic GetTSObject(RebarGeometryOptionEnum dynEnum)
+        public static dynamic GetTSObject(RebarGeometryOptionEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGeometryOptionEnum");
 
-            switch (dynEnum)
-            {
-				case RebarGeometryOptionEnum.NONE:
-					return System.Enum.Parse(tsType, "NONE");
-				case RebarGeometryOptionEnum.HOOKS:
-					return System.Enum.Parse(tsType, "HOOKS");
-				case RebarGeometryOptionEnum.AVOID_CLASH:
-					return System.Enum.Parse(tsType, "AVOID_CLASH");
-				case RebarGeometryOptionEnum.LENGTH_ADJUSTMENTS:
-					return System.Enum.Parse(tsType, "LENGTH_ADJUSTMENTS");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarGeometryOptionEnum FromTSObject(dynamic tsEnum)
+        public static RebarGeometryOptionEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NONE", System.StringComparison.InvariantCulture))
-				return RebarGeometryOptionEnum.NONE;
-			else if (tsEnumValue.Equals("HOOKS", System.StringComparison.InvariantCulture))
-				return RebarGeometryOptionEnum.HOOKS;
-			else if (tsEnumValue.Equals("AVOID_CLASH", System.StringComparison.InvariantCulture))
-				return RebarGeometryOptionEnum.AVOID_CLASH;
-			else if (tsEnumValue.Equals("LENGTH_ADJUSTMENTS", System.StringComparison.InvariantCulture))
-				return RebarGeometryOptionEnum.LENGTH_ADJUSTMENTS;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarGeometryOptionEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum RebarOffsetTypeEnum
+    public struct RebarOffsetTypeEnum
     {
-			OFFSET_TYPE_COVER_THICKNESS,
-			OFFSET_TYPE_LEG_LENGTH        
+       
     }
 
-    public static class RebarOffsetTypeEnum_
+    internal static class RebarOffsetTypeEnum_
     {
-        public static dynamic GetTSObject(RebarOffsetTypeEnum dynEnum)
+        public static dynamic GetTSObject(RebarOffsetTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarOffsetTypeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarOffsetTypeEnum.OFFSET_TYPE_COVER_THICKNESS:
-					return System.Enum.Parse(tsType, "OFFSET_TYPE_COVER_THICKNESS");
-				case RebarOffsetTypeEnum.OFFSET_TYPE_LEG_LENGTH:
-					return System.Enum.Parse(tsType, "OFFSET_TYPE_LEG_LENGTH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarOffsetTypeEnum FromTSObject(dynamic tsEnum)
+        public static RebarOffsetTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("OFFSET_TYPE_COVER_THICKNESS", System.StringComparison.InvariantCulture))
-				return RebarOffsetTypeEnum.OFFSET_TYPE_COVER_THICKNESS;
-			else if (tsEnumValue.Equals("OFFSET_TYPE_LEG_LENGTH", System.StringComparison.InvariantCulture))
-				return RebarOffsetTypeEnum.OFFSET_TYPE_LEG_LENGTH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarOffsetTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -272,52 +272,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum PolyBeamTypeEnum
+    public struct PolyBeamTypeEnum
     {
-			BEAM,
-			PANEL,
-			STRIP_FOOTING,
-			COLUMN        
+       
     }
 
-    public static class PolyBeamTypeEnum_
+    internal static class PolyBeamTypeEnum_
     {
-        public static dynamic GetTSObject(PolyBeamTypeEnum dynEnum)
+        public static dynamic GetTSObject(PolyBeamTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeamTypeEnum");
 
-            switch (dynEnum)
-            {
-				case PolyBeamTypeEnum.BEAM:
-					return System.Enum.Parse(tsType, "BEAM");
-				case PolyBeamTypeEnum.PANEL:
-					return System.Enum.Parse(tsType, "PANEL");
-				case PolyBeamTypeEnum.STRIP_FOOTING:
-					return System.Enum.Parse(tsType, "STRIP_FOOTING");
-				case PolyBeamTypeEnum.COLUMN:
-					return System.Enum.Parse(tsType, "COLUMN");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PolyBeamTypeEnum FromTSObject(dynamic tsEnum)
+        public static PolyBeamTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BEAM", System.StringComparison.InvariantCulture))
-				return PolyBeamTypeEnum.BEAM;
-			else if (tsEnumValue.Equals("PANEL", System.StringComparison.InvariantCulture))
-				return PolyBeamTypeEnum.PANEL;
-			else if (tsEnumValue.Equals("STRIP_FOOTING", System.StringComparison.InvariantCulture))
-				return PolyBeamTypeEnum.STRIP_FOOTING;
-			else if (tsEnumValue.Equals("COLUMN", System.StringComparison.InvariantCulture))
-				return PolyBeamTypeEnum.COLUMN;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PolyBeamTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

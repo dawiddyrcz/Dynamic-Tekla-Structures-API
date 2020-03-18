@@ -188,57 +188,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum AssemblyTypeEnum
+    public struct AssemblyTypeEnum
     {
-			STEEL_ASSEMBLY,
-			PRECAST_ASSEMBLY,
-			IN_SITU_ASSEMBLY,
-			TIMBER_ASSEMBLY,
-			UNKNOWN_ASSEMBLY        
+       
     }
 
-    public static class AssemblyTypeEnum_
+    internal static class AssemblyTypeEnum_
     {
-        public static dynamic GetTSObject(AssemblyTypeEnum dynEnum)
+        public static dynamic GetTSObject(AssemblyTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AssemblyTypeEnum");
 
-            switch (dynEnum)
-            {
-				case AssemblyTypeEnum.STEEL_ASSEMBLY:
-					return System.Enum.Parse(tsType, "STEEL_ASSEMBLY");
-				case AssemblyTypeEnum.PRECAST_ASSEMBLY:
-					return System.Enum.Parse(tsType, "PRECAST_ASSEMBLY");
-				case AssemblyTypeEnum.IN_SITU_ASSEMBLY:
-					return System.Enum.Parse(tsType, "IN_SITU_ASSEMBLY");
-				case AssemblyTypeEnum.TIMBER_ASSEMBLY:
-					return System.Enum.Parse(tsType, "TIMBER_ASSEMBLY");
-				case AssemblyTypeEnum.UNKNOWN_ASSEMBLY:
-					return System.Enum.Parse(tsType, "UNKNOWN_ASSEMBLY");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static AssemblyTypeEnum FromTSObject(dynamic tsEnum)
+        public static AssemblyTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("STEEL_ASSEMBLY", System.StringComparison.InvariantCulture))
-				return AssemblyTypeEnum.STEEL_ASSEMBLY;
-			else if (tsEnumValue.Equals("PRECAST_ASSEMBLY", System.StringComparison.InvariantCulture))
-				return AssemblyTypeEnum.PRECAST_ASSEMBLY;
-			else if (tsEnumValue.Equals("IN_SITU_ASSEMBLY", System.StringComparison.InvariantCulture))
-				return AssemblyTypeEnum.IN_SITU_ASSEMBLY;
-			else if (tsEnumValue.Equals("TIMBER_ASSEMBLY", System.StringComparison.InvariantCulture))
-				return AssemblyTypeEnum.TIMBER_ASSEMBLY;
-			else if (tsEnumValue.Equals("UNKNOWN_ASSEMBLY", System.StringComparison.InvariantCulture))
-				return AssemblyTypeEnum.UNKNOWN_ASSEMBLY;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new AssemblyTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

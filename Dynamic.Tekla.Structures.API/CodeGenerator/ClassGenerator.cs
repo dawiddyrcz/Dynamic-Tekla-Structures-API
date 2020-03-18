@@ -10,7 +10,7 @@ namespace CodeGenerator
 
         public string GetTextFromType(Type type)
         {
-            if (!type.IsClass) return string.Empty;
+            if (!(type.IsClass || type.IsInterface)) return string.Empty;
 
             string outputText = String.Copy(text);
             

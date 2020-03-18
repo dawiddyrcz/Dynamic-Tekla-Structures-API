@@ -4,57 +4,25 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public enum ControlObjectLineType
+    public struct ControlObjectLineType
     {
-			SolidLine,
-			DashedLine,
-			SlashedLine,
-			DashDot,
-			DottedLine        
+       
     }
 
-    public static class ControlObjectLineType_
+    internal static class ControlObjectLineType_
     {
-        public static dynamic GetTSObject(ControlObjectLineType dynEnum)
+        public static dynamic GetTSObject(ControlObjectLineType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlObjectLineType");
 
-            switch (dynEnum)
-            {
-				case ControlObjectLineType.SolidLine:
-					return System.Enum.Parse(tsType, "SolidLine");
-				case ControlObjectLineType.DashedLine:
-					return System.Enum.Parse(tsType, "DashedLine");
-				case ControlObjectLineType.SlashedLine:
-					return System.Enum.Parse(tsType, "SlashedLine");
-				case ControlObjectLineType.DashDot:
-					return System.Enum.Parse(tsType, "DashDot");
-				case ControlObjectLineType.DottedLine:
-					return System.Enum.Parse(tsType, "DottedLine");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ControlObjectLineType FromTSObject(dynamic tsEnum)
+        public static ControlObjectLineType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SolidLine", System.StringComparison.InvariantCulture))
-				return ControlObjectLineType.SolidLine;
-			else if (tsEnumValue.Equals("DashedLine", System.StringComparison.InvariantCulture))
-				return ControlObjectLineType.DashedLine;
-			else if (tsEnumValue.Equals("SlashedLine", System.StringComparison.InvariantCulture))
-				return ControlObjectLineType.SlashedLine;
-			else if (tsEnumValue.Equals("DashDot", System.StringComparison.InvariantCulture))
-				return ControlObjectLineType.DashDot;
-			else if (tsEnumValue.Equals("DottedLine", System.StringComparison.InvariantCulture))
-				return ControlObjectLineType.DottedLine;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ControlObjectLineType();
+ 
+            return dynStruct;
         }
     }
 

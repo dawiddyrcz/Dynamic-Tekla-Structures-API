@@ -32,57 +32,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum InputTypeEnum
+    public struct InputTypeEnum
     {
-			INPUT_1_POINT,
-			INPUT_2_POINTS,
-			INPUT_POLYGON,
-			INPUT_1_OBJECT,
-			INPUT_N_OBJECTS        
+       
     }
 
-    public static class InputTypeEnum_
+    internal static class InputTypeEnum_
     {
-        public static dynamic GetTSObject(InputTypeEnum dynEnum)
+        public static dynamic GetTSObject(InputTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.InputTypeEnum");
 
-            switch (dynEnum)
-            {
-				case InputTypeEnum.INPUT_1_POINT:
-					return System.Enum.Parse(tsType, "INPUT_1_POINT");
-				case InputTypeEnum.INPUT_2_POINTS:
-					return System.Enum.Parse(tsType, "INPUT_2_POINTS");
-				case InputTypeEnum.INPUT_POLYGON:
-					return System.Enum.Parse(tsType, "INPUT_POLYGON");
-				case InputTypeEnum.INPUT_1_OBJECT:
-					return System.Enum.Parse(tsType, "INPUT_1_OBJECT");
-				case InputTypeEnum.INPUT_N_OBJECTS:
-					return System.Enum.Parse(tsType, "INPUT_N_OBJECTS");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static InputTypeEnum FromTSObject(dynamic tsEnum)
+        public static InputTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("INPUT_1_POINT", System.StringComparison.InvariantCulture))
-				return InputTypeEnum.INPUT_1_POINT;
-			else if (tsEnumValue.Equals("INPUT_2_POINTS", System.StringComparison.InvariantCulture))
-				return InputTypeEnum.INPUT_2_POINTS;
-			else if (tsEnumValue.Equals("INPUT_POLYGON", System.StringComparison.InvariantCulture))
-				return InputTypeEnum.INPUT_POLYGON;
-			else if (tsEnumValue.Equals("INPUT_1_OBJECT", System.StringComparison.InvariantCulture))
-				return InputTypeEnum.INPUT_1_OBJECT;
-			else if (tsEnumValue.Equals("INPUT_N_OBJECTS", System.StringComparison.InvariantCulture))
-				return InputTypeEnum.INPUT_N_OBJECTS;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new InputTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

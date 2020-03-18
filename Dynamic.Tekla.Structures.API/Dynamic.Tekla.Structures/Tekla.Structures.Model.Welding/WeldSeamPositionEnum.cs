@@ -4,42 +4,25 @@
 namespace Dynamic.Tekla.Structures.Model.Welding
 {
 
-    public enum WeldSeamPositionEnum
+    public struct WeldSeamPositionEnum
     {
-			SEAM_ABOVE,
-			SEAM_BELOW        
+       
     }
 
-    public static class WeldSeamPositionEnum_
+    internal static class WeldSeamPositionEnum_
     {
-        public static dynamic GetTSObject(WeldSeamPositionEnum dynEnum)
+        public static dynamic GetTSObject(WeldSeamPositionEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Welding.WeldSeamPositionEnum");
 
-            switch (dynEnum)
-            {
-				case WeldSeamPositionEnum.SEAM_ABOVE:
-					return System.Enum.Parse(tsType, "SEAM_ABOVE");
-				case WeldSeamPositionEnum.SEAM_BELOW:
-					return System.Enum.Parse(tsType, "SEAM_BELOW");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldSeamPositionEnum FromTSObject(dynamic tsEnum)
+        public static WeldSeamPositionEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SEAM_ABOVE", System.StringComparison.InvariantCulture))
-				return WeldSeamPositionEnum.SEAM_ABOVE;
-			else if (tsEnumValue.Equals("SEAM_BELOW", System.StringComparison.InvariantCulture))
-				return WeldSeamPositionEnum.SEAM_BELOW;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldSeamPositionEnum();
+ 
+            return dynStruct;
         }
     }
 

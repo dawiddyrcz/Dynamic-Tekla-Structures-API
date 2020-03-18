@@ -266,42 +266,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum BendShape
+    public struct BendShape
     {
-			Cylindrical,
-			Conical        
+       
     }
 
-    public static class BendShape_
+    internal static class BendShape_
     {
-        public static dynamic GetTSObject(BendShape dynEnum)
+        public static dynamic GetTSObject(BendShape dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BendShape");
 
-            switch (dynEnum)
-            {
-				case BendShape.Cylindrical:
-					return System.Enum.Parse(tsType, "Cylindrical");
-				case BendShape.Conical:
-					return System.Enum.Parse(tsType, "Conical");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BendShape FromTSObject(dynamic tsEnum)
+        public static BendShape FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("Cylindrical", System.StringComparison.InvariantCulture))
-				return BendShape.Cylindrical;
-			else if (tsEnumValue.Equals("Conical", System.StringComparison.InvariantCulture))
-				return BendShape.Conical;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BendShape();
+ 
+            return dynStruct;
         }
     }
 

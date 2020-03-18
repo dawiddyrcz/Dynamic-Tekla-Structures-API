@@ -4,47 +4,25 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public enum BinaryFilterOperatorType
+    public struct BinaryFilterOperatorType
     {
-			BOOLEAN_OR,
-			BOOLEAN_AND,
-			EMPTY        
+       
     }
 
-    public static class BinaryFilterOperatorType_
+    internal static class BinaryFilterOperatorType_
     {
-        public static dynamic GetTSObject(BinaryFilterOperatorType dynEnum)
+        public static dynamic GetTSObject(BinaryFilterOperatorType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterOperatorType");
 
-            switch (dynEnum)
-            {
-				case BinaryFilterOperatorType.BOOLEAN_OR:
-					return System.Enum.Parse(tsType, "BOOLEAN_OR");
-				case BinaryFilterOperatorType.BOOLEAN_AND:
-					return System.Enum.Parse(tsType, "BOOLEAN_AND");
-				case BinaryFilterOperatorType.EMPTY:
-					return System.Enum.Parse(tsType, "EMPTY");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BinaryFilterOperatorType FromTSObject(dynamic tsEnum)
+        public static BinaryFilterOperatorType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BOOLEAN_OR", System.StringComparison.InvariantCulture))
-				return BinaryFilterOperatorType.BOOLEAN_OR;
-			else if (tsEnumValue.Equals("BOOLEAN_AND", System.StringComparison.InvariantCulture))
-				return BinaryFilterOperatorType.BOOLEAN_AND;
-			else if (tsEnumValue.Equals("EMPTY", System.StringComparison.InvariantCulture))
-				return BinaryFilterOperatorType.EMPTY;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BinaryFilterOperatorType();
+ 
+            return dynStruct;
         }
     }
 

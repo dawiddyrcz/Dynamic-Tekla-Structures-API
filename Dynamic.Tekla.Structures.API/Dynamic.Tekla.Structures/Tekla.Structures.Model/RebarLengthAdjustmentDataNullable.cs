@@ -38,47 +38,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LengthAdjustmentTypeEnum
+    public struct LengthAdjustmentTypeEnum
     {
-			NO_ADJUSTMENT,
-			END_OFFSET,
-			LEG_LENGTH        
+       
     }
 
-    public static class LengthAdjustmentTypeEnum_
+    internal static class LengthAdjustmentTypeEnum_
     {
-        public static dynamic GetTSObject(LengthAdjustmentTypeEnum dynEnum)
+        public static dynamic GetTSObject(LengthAdjustmentTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthAdjustmentTypeEnum");
 
-            switch (dynEnum)
-            {
-				case LengthAdjustmentTypeEnum.NO_ADJUSTMENT:
-					return System.Enum.Parse(tsType, "NO_ADJUSTMENT");
-				case LengthAdjustmentTypeEnum.END_OFFSET:
-					return System.Enum.Parse(tsType, "END_OFFSET");
-				case LengthAdjustmentTypeEnum.LEG_LENGTH:
-					return System.Enum.Parse(tsType, "LEG_LENGTH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LengthAdjustmentTypeEnum FromTSObject(dynamic tsEnum)
+        public static LengthAdjustmentTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NO_ADJUSTMENT", System.StringComparison.InvariantCulture))
-				return LengthAdjustmentTypeEnum.NO_ADJUSTMENT;
-			else if (tsEnumValue.Equals("END_OFFSET", System.StringComparison.InvariantCulture))
-				return LengthAdjustmentTypeEnum.END_OFFSET;
-			else if (tsEnumValue.Equals("LEG_LENGTH", System.StringComparison.InvariantCulture))
-				return LengthAdjustmentTypeEnum.LEG_LENGTH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LengthAdjustmentTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

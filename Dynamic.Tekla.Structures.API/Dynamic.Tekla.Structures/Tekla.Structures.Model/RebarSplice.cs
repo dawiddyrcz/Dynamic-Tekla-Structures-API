@@ -179,97 +179,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum RebarSpliceTypeEnum
+    public struct RebarSpliceTypeEnum
     {
-			SPLICE_TYPE_LAP_RIGHT,
-			SPLICE_TYPE_LAP_LEFT,
-			SPLICE_TYPE_LAP_BOTH,
-			SPLICE_TYPE_MUFF,
-			SPLICE_TYPE_WELD        
+       
     }
 
-    public static class RebarSpliceTypeEnum_
+    internal static class RebarSpliceTypeEnum_
     {
-        public static dynamic GetTSObject(RebarSpliceTypeEnum dynEnum)
+        public static dynamic GetTSObject(RebarSpliceTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceTypeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_RIGHT:
-					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_RIGHT");
-				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_LEFT:
-					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_LEFT");
-				case RebarSpliceTypeEnum.SPLICE_TYPE_LAP_BOTH:
-					return System.Enum.Parse(tsType, "SPLICE_TYPE_LAP_BOTH");
-				case RebarSpliceTypeEnum.SPLICE_TYPE_MUFF:
-					return System.Enum.Parse(tsType, "SPLICE_TYPE_MUFF");
-				case RebarSpliceTypeEnum.SPLICE_TYPE_WELD:
-					return System.Enum.Parse(tsType, "SPLICE_TYPE_WELD");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarSpliceTypeEnum FromTSObject(dynamic tsEnum)
+        public static RebarSpliceTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SPLICE_TYPE_LAP_RIGHT", System.StringComparison.InvariantCulture))
-				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_RIGHT;
-			else if (tsEnumValue.Equals("SPLICE_TYPE_LAP_LEFT", System.StringComparison.InvariantCulture))
-				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_LEFT;
-			else if (tsEnumValue.Equals("SPLICE_TYPE_LAP_BOTH", System.StringComparison.InvariantCulture))
-				return RebarSpliceTypeEnum.SPLICE_TYPE_LAP_BOTH;
-			else if (tsEnumValue.Equals("SPLICE_TYPE_MUFF", System.StringComparison.InvariantCulture))
-				return RebarSpliceTypeEnum.SPLICE_TYPE_MUFF;
-			else if (tsEnumValue.Equals("SPLICE_TYPE_WELD", System.StringComparison.InvariantCulture))
-				return RebarSpliceTypeEnum.SPLICE_TYPE_WELD;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarSpliceTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum RebarSpliceBarPositionsEnum
+    public struct RebarSpliceBarPositionsEnum
     {
-			SPLICE_BAR_ON_TOP,
-			SPLICE_BAR_PARALLEL        
+       
     }
 
-    public static class RebarSpliceBarPositionsEnum_
+    internal static class RebarSpliceBarPositionsEnum_
     {
-        public static dynamic GetTSObject(RebarSpliceBarPositionsEnum dynEnum)
+        public static dynamic GetTSObject(RebarSpliceBarPositionsEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceBarPositionsEnum");
 
-            switch (dynEnum)
-            {
-				case RebarSpliceBarPositionsEnum.SPLICE_BAR_ON_TOP:
-					return System.Enum.Parse(tsType, "SPLICE_BAR_ON_TOP");
-				case RebarSpliceBarPositionsEnum.SPLICE_BAR_PARALLEL:
-					return System.Enum.Parse(tsType, "SPLICE_BAR_PARALLEL");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarSpliceBarPositionsEnum FromTSObject(dynamic tsEnum)
+        public static RebarSpliceBarPositionsEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SPLICE_BAR_ON_TOP", System.StringComparison.InvariantCulture))
-				return RebarSpliceBarPositionsEnum.SPLICE_BAR_ON_TOP;
-			else if (tsEnumValue.Equals("SPLICE_BAR_PARALLEL", System.StringComparison.InvariantCulture))
-				return RebarSpliceBarPositionsEnum.SPLICE_BAR_PARALLEL;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarSpliceBarPositionsEnum();
+ 
+            return dynStruct;
         }
     }
 

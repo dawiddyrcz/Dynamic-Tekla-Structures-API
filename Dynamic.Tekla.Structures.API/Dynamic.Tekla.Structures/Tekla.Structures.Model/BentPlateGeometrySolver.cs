@@ -77,87 +77,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum OperationStatus
+    public struct OperationStatus
     {
-			Success,
-			Failure,
-			FacePerpendicularToIntersectionLine,
-			PlateIntersectsWithIntersectionLine,
-			ExtensionIntersectsWithPlate,
-			FacesTooNearEachOther,
-			FacesAtAnObtuseAngle,
-			UndefinedCurveDirection,
-			UnsupportedChamfer,
-			InvalidRadius,
-			InvalidFacePoints        
+       
     }
 
-    public static class OperationStatus_
+    internal static class OperationStatus_
     {
-        public static dynamic GetTSObject(OperationStatus dynEnum)
+        public static dynamic GetTSObject(OperationStatus dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.OperationStatus");
 
-            switch (dynEnum)
-            {
-				case OperationStatus.Success:
-					return System.Enum.Parse(tsType, "Success");
-				case OperationStatus.Failure:
-					return System.Enum.Parse(tsType, "Failure");
-				case OperationStatus.FacePerpendicularToIntersectionLine:
-					return System.Enum.Parse(tsType, "FacePerpendicularToIntersectionLine");
-				case OperationStatus.PlateIntersectsWithIntersectionLine:
-					return System.Enum.Parse(tsType, "PlateIntersectsWithIntersectionLine");
-				case OperationStatus.ExtensionIntersectsWithPlate:
-					return System.Enum.Parse(tsType, "ExtensionIntersectsWithPlate");
-				case OperationStatus.FacesTooNearEachOther:
-					return System.Enum.Parse(tsType, "FacesTooNearEachOther");
-				case OperationStatus.FacesAtAnObtuseAngle:
-					return System.Enum.Parse(tsType, "FacesAtAnObtuseAngle");
-				case OperationStatus.UndefinedCurveDirection:
-					return System.Enum.Parse(tsType, "UndefinedCurveDirection");
-				case OperationStatus.UnsupportedChamfer:
-					return System.Enum.Parse(tsType, "UnsupportedChamfer");
-				case OperationStatus.InvalidRadius:
-					return System.Enum.Parse(tsType, "InvalidRadius");
-				case OperationStatus.InvalidFacePoints:
-					return System.Enum.Parse(tsType, "InvalidFacePoints");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static OperationStatus FromTSObject(dynamic tsEnum)
+        public static OperationStatus FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("Success", System.StringComparison.InvariantCulture))
-				return OperationStatus.Success;
-			else if (tsEnumValue.Equals("Failure", System.StringComparison.InvariantCulture))
-				return OperationStatus.Failure;
-			else if (tsEnumValue.Equals("FacePerpendicularToIntersectionLine", System.StringComparison.InvariantCulture))
-				return OperationStatus.FacePerpendicularToIntersectionLine;
-			else if (tsEnumValue.Equals("PlateIntersectsWithIntersectionLine", System.StringComparison.InvariantCulture))
-				return OperationStatus.PlateIntersectsWithIntersectionLine;
-			else if (tsEnumValue.Equals("ExtensionIntersectsWithPlate", System.StringComparison.InvariantCulture))
-				return OperationStatus.ExtensionIntersectsWithPlate;
-			else if (tsEnumValue.Equals("FacesTooNearEachOther", System.StringComparison.InvariantCulture))
-				return OperationStatus.FacesTooNearEachOther;
-			else if (tsEnumValue.Equals("FacesAtAnObtuseAngle", System.StringComparison.InvariantCulture))
-				return OperationStatus.FacesAtAnObtuseAngle;
-			else if (tsEnumValue.Equals("UndefinedCurveDirection", System.StringComparison.InvariantCulture))
-				return OperationStatus.UndefinedCurveDirection;
-			else if (tsEnumValue.Equals("UnsupportedChamfer", System.StringComparison.InvariantCulture))
-				return OperationStatus.UnsupportedChamfer;
-			else if (tsEnumValue.Equals("InvalidRadius", System.StringComparison.InvariantCulture))
-				return OperationStatus.InvalidRadius;
-			else if (tsEnumValue.Equals("InvalidFacePoints", System.StringComparison.InvariantCulture))
-				return OperationStatus.InvalidFacePoints;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new OperationStatus();
+ 
+            return dynStruct;
         }
     }
 

@@ -305,122 +305,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ExcludeTypeEnum
+    public struct ExcludeTypeEnum
     {
-			EXCLUDE_TYPE_NONE,
-			EXCLUDE_TYPE_FIRST,
-			EXCLUDE_TYPE_LAST,
-			EXCLUDE_TYPE_BOTH        
+       
     }
 
-    public static class ExcludeTypeEnum_
+    internal static class ExcludeTypeEnum_
     {
-        public static dynamic GetTSObject(ExcludeTypeEnum dynEnum)
+        public static dynamic GetTSObject(ExcludeTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ExcludeTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ExcludeTypeEnum.EXCLUDE_TYPE_NONE:
-					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_NONE");
-				case ExcludeTypeEnum.EXCLUDE_TYPE_FIRST:
-					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_FIRST");
-				case ExcludeTypeEnum.EXCLUDE_TYPE_LAST:
-					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_LAST");
-				case ExcludeTypeEnum.EXCLUDE_TYPE_BOTH:
-					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_BOTH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ExcludeTypeEnum FromTSObject(dynamic tsEnum)
+        public static ExcludeTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("EXCLUDE_TYPE_NONE", System.StringComparison.InvariantCulture))
-				return ExcludeTypeEnum.EXCLUDE_TYPE_NONE;
-			else if (tsEnumValue.Equals("EXCLUDE_TYPE_FIRST", System.StringComparison.InvariantCulture))
-				return ExcludeTypeEnum.EXCLUDE_TYPE_FIRST;
-			else if (tsEnumValue.Equals("EXCLUDE_TYPE_LAST", System.StringComparison.InvariantCulture))
-				return ExcludeTypeEnum.EXCLUDE_TYPE_LAST;
-			else if (tsEnumValue.Equals("EXCLUDE_TYPE_BOTH", System.StringComparison.InvariantCulture))
-				return ExcludeTypeEnum.EXCLUDE_TYPE_BOTH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ExcludeTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum RebarGroupSpacingTypeEnum
+    public struct RebarGroupSpacingTypeEnum
     {
-			SPACING_TYPE_UNDEFINED,
-			SPACING_TYPE_EXACT_SPACINGS,
-			SPACING_TYPE_EXACT_NUMBER,
-			SPACING_TYPE_TARGET_SPACE,
-			SPACING_TYPE_EXACT_SPACE_FLEX_AT_START,
-			SPACING_TYPE_EXACT_SPACE_FLEX_AT_END,
-			SPACING_TYPE_EXACT_SPACE_FLEX_AT_BOTH,
-			SPACING_TYPE_EXACT_SPACE_FLEX_AT_MIDDLE        
+       
     }
 
-    public static class RebarGroupSpacingTypeEnum_
+    internal static class RebarGroupSpacingTypeEnum_
     {
-        public static dynamic GetTSObject(RebarGroupSpacingTypeEnum dynEnum)
+        public static dynamic GetTSObject(RebarGroupSpacingTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGroupSpacingTypeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_UNDEFINED:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_UNDEFINED");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACINGS:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_SPACINGS");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_NUMBER:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_NUMBER");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_TARGET_SPACE:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_TARGET_SPACE");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_START:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_SPACE_FLEX_AT_START");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_END:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_SPACE_FLEX_AT_END");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_BOTH:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_SPACE_FLEX_AT_BOTH");
-				case RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_MIDDLE:
-					return System.Enum.Parse(tsType, "SPACING_TYPE_EXACT_SPACE_FLEX_AT_MIDDLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarGroupSpacingTypeEnum FromTSObject(dynamic tsEnum)
+        public static RebarGroupSpacingTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("SPACING_TYPE_UNDEFINED", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_UNDEFINED;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_SPACINGS", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACINGS;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_NUMBER", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_NUMBER;
-			else if (tsEnumValue.Equals("SPACING_TYPE_TARGET_SPACE", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_TARGET_SPACE;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_SPACE_FLEX_AT_START", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_START;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_SPACE_FLEX_AT_END", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_END;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_SPACE_FLEX_AT_BOTH", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_BOTH;
-			else if (tsEnumValue.Equals("SPACING_TYPE_EXACT_SPACE_FLEX_AT_MIDDLE", System.StringComparison.InvariantCulture))
-				return RebarGroupSpacingTypeEnum.SPACING_TYPE_EXACT_SPACE_FLEX_AT_MIDDLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarGroupSpacingTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

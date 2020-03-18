@@ -254,42 +254,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum CastUnitTypeEnum
+    public struct CastUnitTypeEnum
     {
-			PRECAST,
-			CAST_IN_PLACE        
+       
     }
 
-    public static class CastUnitTypeEnum_
+    internal static class CastUnitTypeEnum_
     {
-        public static dynamic GetTSObject(CastUnitTypeEnum dynEnum)
+        public static dynamic GetTSObject(CastUnitTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CastUnitTypeEnum");
 
-            switch (dynEnum)
-            {
-				case CastUnitTypeEnum.PRECAST:
-					return System.Enum.Parse(tsType, "PRECAST");
-				case CastUnitTypeEnum.CAST_IN_PLACE:
-					return System.Enum.Parse(tsType, "CAST_IN_PLACE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CastUnitTypeEnum FromTSObject(dynamic tsEnum)
+        public static CastUnitTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PRECAST", System.StringComparison.InvariantCulture))
-				return CastUnitTypeEnum.PRECAST;
-			else if (tsEnumValue.Equals("CAST_IN_PLACE", System.StringComparison.InvariantCulture))
-				return CastUnitTypeEnum.CAST_IN_PLACE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CastUnitTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

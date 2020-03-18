@@ -266,42 +266,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LoftedPlateFaceTypeEnum
+    public struct LoftedPlateFaceTypeEnum
     {
-			Perpendicular,
-			BoundedByCurvePlanes        
+       
     }
 
-    public static class LoftedPlateFaceTypeEnum_
+    internal static class LoftedPlateFaceTypeEnum_
     {
-        public static dynamic GetTSObject(LoftedPlateFaceTypeEnum dynEnum)
+        public static dynamic GetTSObject(LoftedPlateFaceTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateFaceTypeEnum");
 
-            switch (dynEnum)
-            {
-				case LoftedPlateFaceTypeEnum.Perpendicular:
-					return System.Enum.Parse(tsType, "Perpendicular");
-				case LoftedPlateFaceTypeEnum.BoundedByCurvePlanes:
-					return System.Enum.Parse(tsType, "BoundedByCurvePlanes");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LoftedPlateFaceTypeEnum FromTSObject(dynamic tsEnum)
+        public static LoftedPlateFaceTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("Perpendicular", System.StringComparison.InvariantCulture))
-				return LoftedPlateFaceTypeEnum.Perpendicular;
-			else if (tsEnumValue.Equals("BoundedByCurvePlanes", System.StringComparison.InvariantCulture))
-				return LoftedPlateFaceTypeEnum.BoundedByCurvePlanes;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LoftedPlateFaceTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

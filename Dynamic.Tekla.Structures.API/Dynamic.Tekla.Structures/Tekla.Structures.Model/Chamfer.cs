@@ -56,72 +56,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ChamferTypeEnum
+    public struct ChamferTypeEnum
     {
-			CHAMFER_NONE,
-			CHAMFER_LINE,
-			CHAMFER_ROUNDING,
-			CHAMFER_ARC,
-			CHAMFER_ARC_POINT,
-			CHAMFER_SQUARE,
-			CHAMFER_SQUARE_PARALLEL,
-			CHAMFER_LINE_AND_ARC        
+       
     }
 
-    public static class ChamferTypeEnum_
+    internal static class ChamferTypeEnum_
     {
-        public static dynamic GetTSObject(ChamferTypeEnum dynEnum)
+        public static dynamic GetTSObject(ChamferTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChamferTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ChamferTypeEnum.CHAMFER_NONE:
-					return System.Enum.Parse(tsType, "CHAMFER_NONE");
-				case ChamferTypeEnum.CHAMFER_LINE:
-					return System.Enum.Parse(tsType, "CHAMFER_LINE");
-				case ChamferTypeEnum.CHAMFER_ROUNDING:
-					return System.Enum.Parse(tsType, "CHAMFER_ROUNDING");
-				case ChamferTypeEnum.CHAMFER_ARC:
-					return System.Enum.Parse(tsType, "CHAMFER_ARC");
-				case ChamferTypeEnum.CHAMFER_ARC_POINT:
-					return System.Enum.Parse(tsType, "CHAMFER_ARC_POINT");
-				case ChamferTypeEnum.CHAMFER_SQUARE:
-					return System.Enum.Parse(tsType, "CHAMFER_SQUARE");
-				case ChamferTypeEnum.CHAMFER_SQUARE_PARALLEL:
-					return System.Enum.Parse(tsType, "CHAMFER_SQUARE_PARALLEL");
-				case ChamferTypeEnum.CHAMFER_LINE_AND_ARC:
-					return System.Enum.Parse(tsType, "CHAMFER_LINE_AND_ARC");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ChamferTypeEnum FromTSObject(dynamic tsEnum)
+        public static ChamferTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CHAMFER_NONE", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_NONE;
-			else if (tsEnumValue.Equals("CHAMFER_LINE", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_LINE;
-			else if (tsEnumValue.Equals("CHAMFER_ROUNDING", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_ROUNDING;
-			else if (tsEnumValue.Equals("CHAMFER_ARC", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_ARC;
-			else if (tsEnumValue.Equals("CHAMFER_ARC_POINT", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_ARC_POINT;
-			else if (tsEnumValue.Equals("CHAMFER_SQUARE", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_SQUARE;
-			else if (tsEnumValue.Equals("CHAMFER_SQUARE_PARALLEL", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_SQUARE_PARALLEL;
-			else if (tsEnumValue.Equals("CHAMFER_LINE_AND_ARC", System.StringComparison.InvariantCulture))
-				return ChamferTypeEnum.CHAMFER_LINE_AND_ARC;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ChamferTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

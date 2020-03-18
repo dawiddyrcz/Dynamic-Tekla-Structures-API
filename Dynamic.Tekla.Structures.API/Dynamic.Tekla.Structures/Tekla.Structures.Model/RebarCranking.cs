@@ -74,132 +74,71 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum CrankSideEnum
+    public struct CrankSideEnum
     {
-			CRANK_LEFT,
-			CRANK_RIGHT        
+       
     }
 
-    public static class CrankSideEnum_
+    internal static class CrankSideEnum_
     {
-        public static dynamic GetTSObject(CrankSideEnum dynEnum)
+        public static dynamic GetTSObject(CrankSideEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankSideEnum");
 
-            switch (dynEnum)
-            {
-				case CrankSideEnum.CRANK_LEFT:
-					return System.Enum.Parse(tsType, "CRANK_LEFT");
-				case CrankSideEnum.CRANK_RIGHT:
-					return System.Enum.Parse(tsType, "CRANK_RIGHT");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CrankSideEnum FromTSObject(dynamic tsEnum)
+        public static CrankSideEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CRANK_LEFT", System.StringComparison.InvariantCulture))
-				return CrankSideEnum.CRANK_LEFT;
-			else if (tsEnumValue.Equals("CRANK_RIGHT", System.StringComparison.InvariantCulture))
-				return CrankSideEnum.CRANK_RIGHT;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CrankSideEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum CrankedLengthTypeEnum
+    public struct CrankedLengthTypeEnum
     {
-			DIAGONAL_RATIO,
-			DIAGONAL_DISTANCE,
-			HORIZONTAL_RATIO,
-			HORIZONTAL_DISTANCE        
+       
     }
 
-    public static class CrankedLengthTypeEnum_
+    internal static class CrankedLengthTypeEnum_
     {
-        public static dynamic GetTSObject(CrankedLengthTypeEnum dynEnum)
+        public static dynamic GetTSObject(CrankedLengthTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankedLengthTypeEnum");
 
-            switch (dynEnum)
-            {
-				case CrankedLengthTypeEnum.DIAGONAL_RATIO:
-					return System.Enum.Parse(tsType, "DIAGONAL_RATIO");
-				case CrankedLengthTypeEnum.DIAGONAL_DISTANCE:
-					return System.Enum.Parse(tsType, "DIAGONAL_DISTANCE");
-				case CrankedLengthTypeEnum.HORIZONTAL_RATIO:
-					return System.Enum.Parse(tsType, "HORIZONTAL_RATIO");
-				case CrankedLengthTypeEnum.HORIZONTAL_DISTANCE:
-					return System.Enum.Parse(tsType, "HORIZONTAL_DISTANCE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CrankedLengthTypeEnum FromTSObject(dynamic tsEnum)
+        public static CrankedLengthTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("DIAGONAL_RATIO", System.StringComparison.InvariantCulture))
-				return CrankedLengthTypeEnum.DIAGONAL_RATIO;
-			else if (tsEnumValue.Equals("DIAGONAL_DISTANCE", System.StringComparison.InvariantCulture))
-				return CrankedLengthTypeEnum.DIAGONAL_DISTANCE;
-			else if (tsEnumValue.Equals("HORIZONTAL_RATIO", System.StringComparison.InvariantCulture))
-				return CrankedLengthTypeEnum.HORIZONTAL_RATIO;
-			else if (tsEnumValue.Equals("HORIZONTAL_DISTANCE", System.StringComparison.InvariantCulture))
-				return CrankedLengthTypeEnum.HORIZONTAL_DISTANCE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CrankedLengthTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum CrankingTypeEnum
+    public struct CrankingTypeEnum
     {
-			CUSTOM_CRANKING,
-			STANDARD_CRANKING        
+       
     }
 
-    public static class CrankingTypeEnum_
+    internal static class CrankingTypeEnum_
     {
-        public static dynamic GetTSObject(CrankingTypeEnum dynEnum)
+        public static dynamic GetTSObject(CrankingTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankingTypeEnum");
 
-            switch (dynEnum)
-            {
-				case CrankingTypeEnum.CUSTOM_CRANKING:
-					return System.Enum.Parse(tsType, "CUSTOM_CRANKING");
-				case CrankingTypeEnum.STANDARD_CRANKING:
-					return System.Enum.Parse(tsType, "STANDARD_CRANKING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CrankingTypeEnum FromTSObject(dynamic tsEnum)
+        public static CrankingTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CUSTOM_CRANKING", System.StringComparison.InvariantCulture))
-				return CrankingTypeEnum.CUSTOM_CRANKING;
-			else if (tsEnumValue.Equals("STANDARD_CRANKING", System.StringComparison.InvariantCulture))
-				return CrankingTypeEnum.STANDARD_CRANKING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CrankingTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

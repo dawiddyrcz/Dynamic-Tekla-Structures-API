@@ -11,7 +11,12 @@ namespace CodeGenerator
         {
             string outputText = String.Empty;
 
-            if (type.IsClass)
+            if (type.IsValueType)
+            {
+                var generator = new StructGenerator();
+                return generator.GetTextFromType(type);
+            }
+            else if (type.IsClass || type.IsInterface)
             {
                 var generator = new ClassGenerator();
                 return generator.GetTextFromType(type);

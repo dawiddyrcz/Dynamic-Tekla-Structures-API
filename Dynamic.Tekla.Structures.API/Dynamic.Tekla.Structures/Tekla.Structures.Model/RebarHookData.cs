@@ -50,57 +50,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum RebarHookShapeEnum
+    public struct RebarHookShapeEnum
     {
-			NO_HOOK,
-			HOOK_90_DEGREES,
-			HOOK_135_DEGREES,
-			HOOK_180_DEGREES,
-			CUSTOM_HOOK        
+       
     }
 
-    public static class RebarHookShapeEnum_
+    internal static class RebarHookShapeEnum_
     {
-        public static dynamic GetTSObject(RebarHookShapeEnum dynEnum)
+        public static dynamic GetTSObject(RebarHookShapeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookShapeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarHookShapeEnum.NO_HOOK:
-					return System.Enum.Parse(tsType, "NO_HOOK");
-				case RebarHookShapeEnum.HOOK_90_DEGREES:
-					return System.Enum.Parse(tsType, "HOOK_90_DEGREES");
-				case RebarHookShapeEnum.HOOK_135_DEGREES:
-					return System.Enum.Parse(tsType, "HOOK_135_DEGREES");
-				case RebarHookShapeEnum.HOOK_180_DEGREES:
-					return System.Enum.Parse(tsType, "HOOK_180_DEGREES");
-				case RebarHookShapeEnum.CUSTOM_HOOK:
-					return System.Enum.Parse(tsType, "CUSTOM_HOOK");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarHookShapeEnum FromTSObject(dynamic tsEnum)
+        public static RebarHookShapeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NO_HOOK", System.StringComparison.InvariantCulture))
-				return RebarHookShapeEnum.NO_HOOK;
-			else if (tsEnumValue.Equals("HOOK_90_DEGREES", System.StringComparison.InvariantCulture))
-				return RebarHookShapeEnum.HOOK_90_DEGREES;
-			else if (tsEnumValue.Equals("HOOK_135_DEGREES", System.StringComparison.InvariantCulture))
-				return RebarHookShapeEnum.HOOK_135_DEGREES;
-			else if (tsEnumValue.Equals("HOOK_180_DEGREES", System.StringComparison.InvariantCulture))
-				return RebarHookShapeEnum.HOOK_180_DEGREES;
-			else if (tsEnumValue.Equals("CUSTOM_HOOK", System.StringComparison.InvariantCulture))
-				return RebarHookShapeEnum.CUSTOM_HOOK;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarHookShapeEnum();
+ 
+            return dynStruct;
         }
     }
 

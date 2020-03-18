@@ -158,47 +158,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum BooleanTypeEnum
+    public struct BooleanTypeEnum
     {
-			BOOLEAN_ADD,
-			BOOLEAN_CUT,
-			BOOLEAN_WELDPREP        
+       
     }
 
-    public static class BooleanTypeEnum_
+    internal static class BooleanTypeEnum_
     {
-        public static dynamic GetTSObject(BooleanTypeEnum dynEnum)
+        public static dynamic GetTSObject(BooleanTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BooleanTypeEnum");
 
-            switch (dynEnum)
-            {
-				case BooleanTypeEnum.BOOLEAN_ADD:
-					return System.Enum.Parse(tsType, "BOOLEAN_ADD");
-				case BooleanTypeEnum.BOOLEAN_CUT:
-					return System.Enum.Parse(tsType, "BOOLEAN_CUT");
-				case BooleanTypeEnum.BOOLEAN_WELDPREP:
-					return System.Enum.Parse(tsType, "BOOLEAN_WELDPREP");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BooleanTypeEnum FromTSObject(dynamic tsEnum)
+        public static BooleanTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BOOLEAN_ADD", System.StringComparison.InvariantCulture))
-				return BooleanTypeEnum.BOOLEAN_ADD;
-			else if (tsEnumValue.Equals("BOOLEAN_CUT", System.StringComparison.InvariantCulture))
-				return BooleanTypeEnum.BOOLEAN_CUT;
-			else if (tsEnumValue.Equals("BOOLEAN_WELDPREP", System.StringComparison.InvariantCulture))
-				return BooleanTypeEnum.BOOLEAN_WELDPREP;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BooleanTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

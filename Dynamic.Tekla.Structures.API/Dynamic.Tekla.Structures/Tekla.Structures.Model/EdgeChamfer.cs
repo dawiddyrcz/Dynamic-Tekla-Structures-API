@@ -191,47 +191,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ChamferEndTypeEnum
+    public struct ChamferEndTypeEnum
     {
-			FULL,
-			STRAIGHT,
-			BEVELLED        
+       
     }
 
-    public static class ChamferEndTypeEnum_
+    internal static class ChamferEndTypeEnum_
     {
-        public static dynamic GetTSObject(ChamferEndTypeEnum dynEnum)
+        public static dynamic GetTSObject(ChamferEndTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChamferEndTypeEnum");
 
-            switch (dynEnum)
-            {
-				case ChamferEndTypeEnum.FULL:
-					return System.Enum.Parse(tsType, "FULL");
-				case ChamferEndTypeEnum.STRAIGHT:
-					return System.Enum.Parse(tsType, "STRAIGHT");
-				case ChamferEndTypeEnum.BEVELLED:
-					return System.Enum.Parse(tsType, "BEVELLED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ChamferEndTypeEnum FromTSObject(dynamic tsEnum)
+        public static ChamferEndTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("FULL", System.StringComparison.InvariantCulture))
-				return ChamferEndTypeEnum.FULL;
-			else if (tsEnumValue.Equals("STRAIGHT", System.StringComparison.InvariantCulture))
-				return ChamferEndTypeEnum.STRAIGHT;
-			else if (tsEnumValue.Equals("BEVELLED", System.StringComparison.InvariantCulture))
-				return ChamferEndTypeEnum.BEVELLED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ChamferEndTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

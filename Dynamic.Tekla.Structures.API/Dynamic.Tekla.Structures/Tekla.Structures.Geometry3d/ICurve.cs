@@ -4,5 +4,48 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
+    public sealed class ICurve 
+    {
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(icurve.StartPoint);
+			set { icurve.StartPoint = value.GetTSObject(); }
+		}
+
+		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
+		{
+			get => new Dynamic.Tekla.Structures.Geometry3d.Point(icurve.EndPoint);
+			set { icurve.EndPoint = value.GetTSObject(); }
+		}
+
+		public System.Double Length
+		{
+			get => icurve.Length;
+			set { icurve.Length = value; }
+		}
+
+        
+
+        dynamic icurve;
+        
+        private ICurve()
+        {
+            this.icurve =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.ICurve");
+        }
+
+        public ICurve(dynamic tsObject)
+        {
+            this.icurve = tsObject;
+        }
+
+        internal dynamic GetTSObject() => icurve;
+
+
+
+
+
+    }
+
 }
     

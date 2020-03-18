@@ -275,42 +275,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum AreaLoadFormEnum
+    public struct AreaLoadFormEnum
     {
-			LOAD_FORM_AREA_PARALLELOGRAM,
-			LOAD_FORM_AREA_TRIANGLE        
+       
     }
 
-    public static class AreaLoadFormEnum_
+    internal static class AreaLoadFormEnum_
     {
-        public static dynamic GetTSObject(AreaLoadFormEnum dynEnum)
+        public static dynamic GetTSObject(AreaLoadFormEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AreaLoadFormEnum");
 
-            switch (dynEnum)
-            {
-				case AreaLoadFormEnum.LOAD_FORM_AREA_PARALLELOGRAM:
-					return System.Enum.Parse(tsType, "LOAD_FORM_AREA_PARALLELOGRAM");
-				case AreaLoadFormEnum.LOAD_FORM_AREA_TRIANGLE:
-					return System.Enum.Parse(tsType, "LOAD_FORM_AREA_TRIANGLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static AreaLoadFormEnum FromTSObject(dynamic tsEnum)
+        public static AreaLoadFormEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LOAD_FORM_AREA_PARALLELOGRAM", System.StringComparison.InvariantCulture))
-				return AreaLoadFormEnum.LOAD_FORM_AREA_PARALLELOGRAM;
-			else if (tsEnumValue.Equals("LOAD_FORM_AREA_TRIANGLE", System.StringComparison.InvariantCulture))
-				return AreaLoadFormEnum.LOAD_FORM_AREA_TRIANGLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new AreaLoadFormEnum();
+ 
+            return dynStruct;
         }
     }
 

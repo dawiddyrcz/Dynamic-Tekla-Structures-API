@@ -4,47 +4,25 @@
 namespace Dynamic.Tekla.Structures.Forming
 {
 
-    public enum DeformingType
+    public struct DeformingType
     {
-			NOT_SPECIFIED,
-			DEFORMED,
-			UNDEFORMED        
+       
     }
 
-    public static class DeformingType_
+    internal static class DeformingType_
     {
-        public static dynamic GetTSObject(DeformingType dynEnum)
+        public static dynamic GetTSObject(DeformingType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.DeformingType");
 
-            switch (dynEnum)
-            {
-				case DeformingType.NOT_SPECIFIED:
-					return System.Enum.Parse(tsType, "NOT_SPECIFIED");
-				case DeformingType.DEFORMED:
-					return System.Enum.Parse(tsType, "DEFORMED");
-				case DeformingType.UNDEFORMED:
-					return System.Enum.Parse(tsType, "UNDEFORMED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static DeformingType FromTSObject(dynamic tsEnum)
+        public static DeformingType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NOT_SPECIFIED", System.StringComparison.InvariantCulture))
-				return DeformingType.NOT_SPECIFIED;
-			else if (tsEnumValue.Equals("DEFORMED", System.StringComparison.InvariantCulture))
-				return DeformingType.DEFORMED;
-			else if (tsEnumValue.Equals("UNDEFORMED", System.StringComparison.InvariantCulture))
-				return DeformingType.UNDEFORMED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new DeformingType();
+ 
+            return dynStruct;
         }
     }
 

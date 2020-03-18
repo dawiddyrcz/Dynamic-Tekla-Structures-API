@@ -407,612 +407,209 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum WeldTypeEnum
+    public struct WeldTypeEnum
     {
-			WELD_TYPE_NONE,
-			WELD_TYPE_EDGE_FLANGE,
-			WELD_TYPE_SQUARE_GROOVE_SQUARE_BUTT,
-			WELD_TYPE_BEVEL_GROOVE_SINGLE_V_BUTT,
-			WELD_TYPE_BEVEL_GROOVE_SINGLE_BEVEL_BUTT,
-			WELD_TYPE_SINGLE_V_BUTT_WITH_BROAD_ROOT_FACE,
-			WELD_TYPE_SINGLE_BEVEL_BUTT_WITH_BROAD_ROOT_FACE,
-			WELD_TYPE_U_GROOVE_SINGLE_U_BUTT,
-			WELD_TYPE_J_GROOVE_J_BUTT,
-			WELD_TYPE_BEVEL_BACKING,
-			WELD_TYPE_FILLET,
-			WELD_TYPE_PLUG,
-			WELD_TYPE_SPOT,
-			WELD_TYPE_SEAM,
-			WELD_TYPE_SLOT,
-			WELD_TYPE_FLARE_BEVEL_GROOVE,
-			WELD_TYPE_FLARE_V_GROOVE,
-			WELD_TYPE_CORNER_FLANGE,
-			WELD_TYPE_PARTIAL_PENETRATION_SINGLE_BEVEL_BUTT_PLUS_FILLET,
-			WELD_TYPE_PARTIAL_PENETRATION_SQUARE_GROOVE_PLUS_FILLET,
-			WELD_TYPE_MELT_THROUGH,
-			STEEP_FLANKED_BEVEL_GROOVE_SINGLE_V_BUTT,
-			STEEP_FLANKED_BEVEL_GROOVE_SINGLE_BEVEL_BUTT,
-			WELD_TYPE_EDGE,
-			WELD_TYPE_ISO_SURFACING,
-			WELD_TYPE_FOLD,
-			WELD_TYPE_INCLINED        
+       
     }
 
-    public static class WeldTypeEnum_
+    internal static class WeldTypeEnum_
     {
-        public static dynamic GetTSObject(WeldTypeEnum dynEnum)
+        public static dynamic GetTSObject(WeldTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldTypeEnum");
 
-            switch (dynEnum)
-            {
-				case WeldTypeEnum.WELD_TYPE_NONE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_NONE");
-				case WeldTypeEnum.WELD_TYPE_EDGE_FLANGE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_EDGE_FLANGE");
-				case WeldTypeEnum.WELD_TYPE_SQUARE_GROOVE_SQUARE_BUTT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SQUARE_GROOVE_SQUARE_BUTT");
-				case WeldTypeEnum.WELD_TYPE_BEVEL_GROOVE_SINGLE_V_BUTT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_BEVEL_GROOVE_SINGLE_V_BUTT");
-				case WeldTypeEnum.WELD_TYPE_BEVEL_GROOVE_SINGLE_BEVEL_BUTT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_BEVEL_GROOVE_SINGLE_BEVEL_BUTT");
-				case WeldTypeEnum.WELD_TYPE_SINGLE_V_BUTT_WITH_BROAD_ROOT_FACE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SINGLE_V_BUTT_WITH_BROAD_ROOT_FACE");
-				case WeldTypeEnum.WELD_TYPE_SINGLE_BEVEL_BUTT_WITH_BROAD_ROOT_FACE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SINGLE_BEVEL_BUTT_WITH_BROAD_ROOT_FACE");
-				case WeldTypeEnum.WELD_TYPE_U_GROOVE_SINGLE_U_BUTT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_U_GROOVE_SINGLE_U_BUTT");
-				case WeldTypeEnum.WELD_TYPE_J_GROOVE_J_BUTT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_J_GROOVE_J_BUTT");
-				case WeldTypeEnum.WELD_TYPE_BEVEL_BACKING:
-					return System.Enum.Parse(tsType, "WELD_TYPE_BEVEL_BACKING");
-				case WeldTypeEnum.WELD_TYPE_FILLET:
-					return System.Enum.Parse(tsType, "WELD_TYPE_FILLET");
-				case WeldTypeEnum.WELD_TYPE_PLUG:
-					return System.Enum.Parse(tsType, "WELD_TYPE_PLUG");
-				case WeldTypeEnum.WELD_TYPE_SPOT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SPOT");
-				case WeldTypeEnum.WELD_TYPE_SEAM:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SEAM");
-				case WeldTypeEnum.WELD_TYPE_SLOT:
-					return System.Enum.Parse(tsType, "WELD_TYPE_SLOT");
-				case WeldTypeEnum.WELD_TYPE_FLARE_BEVEL_GROOVE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_FLARE_BEVEL_GROOVE");
-				case WeldTypeEnum.WELD_TYPE_FLARE_V_GROOVE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_FLARE_V_GROOVE");
-				case WeldTypeEnum.WELD_TYPE_CORNER_FLANGE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_CORNER_FLANGE");
-				case WeldTypeEnum.WELD_TYPE_PARTIAL_PENETRATION_SINGLE_BEVEL_BUTT_PLUS_FILLET:
-					return System.Enum.Parse(tsType, "WELD_TYPE_PARTIAL_PENETRATION_SINGLE_BEVEL_BUTT_PLUS_FILLET");
-				case WeldTypeEnum.WELD_TYPE_PARTIAL_PENETRATION_SQUARE_GROOVE_PLUS_FILLET:
-					return System.Enum.Parse(tsType, "WELD_TYPE_PARTIAL_PENETRATION_SQUARE_GROOVE_PLUS_FILLET");
-				case WeldTypeEnum.WELD_TYPE_MELT_THROUGH:
-					return System.Enum.Parse(tsType, "WELD_TYPE_MELT_THROUGH");
-				case WeldTypeEnum.STEEP_FLANKED_BEVEL_GROOVE_SINGLE_V_BUTT:
-					return System.Enum.Parse(tsType, "STEEP_FLANKED_BEVEL_GROOVE_SINGLE_V_BUTT");
-				case WeldTypeEnum.STEEP_FLANKED_BEVEL_GROOVE_SINGLE_BEVEL_BUTT:
-					return System.Enum.Parse(tsType, "STEEP_FLANKED_BEVEL_GROOVE_SINGLE_BEVEL_BUTT");
-				case WeldTypeEnum.WELD_TYPE_EDGE:
-					return System.Enum.Parse(tsType, "WELD_TYPE_EDGE");
-				case WeldTypeEnum.WELD_TYPE_ISO_SURFACING:
-					return System.Enum.Parse(tsType, "WELD_TYPE_ISO_SURFACING");
-				case WeldTypeEnum.WELD_TYPE_FOLD:
-					return System.Enum.Parse(tsType, "WELD_TYPE_FOLD");
-				case WeldTypeEnum.WELD_TYPE_INCLINED:
-					return System.Enum.Parse(tsType, "WELD_TYPE_INCLINED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldTypeEnum FromTSObject(dynamic tsEnum)
+        public static WeldTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_TYPE_NONE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_NONE;
-			else if (tsEnumValue.Equals("WELD_TYPE_EDGE_FLANGE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_EDGE_FLANGE;
-			else if (tsEnumValue.Equals("WELD_TYPE_SQUARE_GROOVE_SQUARE_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SQUARE_GROOVE_SQUARE_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_BEVEL_GROOVE_SINGLE_V_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_BEVEL_GROOVE_SINGLE_V_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_BEVEL_GROOVE_SINGLE_BEVEL_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_BEVEL_GROOVE_SINGLE_BEVEL_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_SINGLE_V_BUTT_WITH_BROAD_ROOT_FACE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SINGLE_V_BUTT_WITH_BROAD_ROOT_FACE;
-			else if (tsEnumValue.Equals("WELD_TYPE_SINGLE_BEVEL_BUTT_WITH_BROAD_ROOT_FACE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SINGLE_BEVEL_BUTT_WITH_BROAD_ROOT_FACE;
-			else if (tsEnumValue.Equals("WELD_TYPE_U_GROOVE_SINGLE_U_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_U_GROOVE_SINGLE_U_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_J_GROOVE_J_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_J_GROOVE_J_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_BEVEL_BACKING", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_BEVEL_BACKING;
-			else if (tsEnumValue.Equals("WELD_TYPE_FILLET", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_FILLET;
-			else if (tsEnumValue.Equals("WELD_TYPE_PLUG", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_PLUG;
-			else if (tsEnumValue.Equals("WELD_TYPE_SPOT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SPOT;
-			else if (tsEnumValue.Equals("WELD_TYPE_SEAM", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SEAM;
-			else if (tsEnumValue.Equals("WELD_TYPE_SLOT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_SLOT;
-			else if (tsEnumValue.Equals("WELD_TYPE_FLARE_BEVEL_GROOVE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_FLARE_BEVEL_GROOVE;
-			else if (tsEnumValue.Equals("WELD_TYPE_FLARE_V_GROOVE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_FLARE_V_GROOVE;
-			else if (tsEnumValue.Equals("WELD_TYPE_CORNER_FLANGE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_CORNER_FLANGE;
-			else if (tsEnumValue.Equals("WELD_TYPE_PARTIAL_PENETRATION_SINGLE_BEVEL_BUTT_PLUS_FILLET", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_PARTIAL_PENETRATION_SINGLE_BEVEL_BUTT_PLUS_FILLET;
-			else if (tsEnumValue.Equals("WELD_TYPE_PARTIAL_PENETRATION_SQUARE_GROOVE_PLUS_FILLET", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_PARTIAL_PENETRATION_SQUARE_GROOVE_PLUS_FILLET;
-			else if (tsEnumValue.Equals("WELD_TYPE_MELT_THROUGH", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_MELT_THROUGH;
-			else if (tsEnumValue.Equals("STEEP_FLANKED_BEVEL_GROOVE_SINGLE_V_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.STEEP_FLANKED_BEVEL_GROOVE_SINGLE_V_BUTT;
-			else if (tsEnumValue.Equals("STEEP_FLANKED_BEVEL_GROOVE_SINGLE_BEVEL_BUTT", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.STEEP_FLANKED_BEVEL_GROOVE_SINGLE_BEVEL_BUTT;
-			else if (tsEnumValue.Equals("WELD_TYPE_EDGE", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_EDGE;
-			else if (tsEnumValue.Equals("WELD_TYPE_ISO_SURFACING", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_ISO_SURFACING;
-			else if (tsEnumValue.Equals("WELD_TYPE_FOLD", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_FOLD;
-			else if (tsEnumValue.Equals("WELD_TYPE_INCLINED", System.StringComparison.InvariantCulture))
-				return WeldTypeEnum.WELD_TYPE_INCLINED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldContourEnum
+    public struct WeldContourEnum
     {
-			WELD_CONTOUR_NONE,
-			WELD_CONTOUR_FLUSH,
-			WELD_CONTOUR_CONVEX,
-			WELD_CONTOUR_CONCAVE        
+       
     }
 
-    public static class WeldContourEnum_
+    internal static class WeldContourEnum_
     {
-        public static dynamic GetTSObject(WeldContourEnum dynEnum)
+        public static dynamic GetTSObject(WeldContourEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldContourEnum");
 
-            switch (dynEnum)
-            {
-				case WeldContourEnum.WELD_CONTOUR_NONE:
-					return System.Enum.Parse(tsType, "WELD_CONTOUR_NONE");
-				case WeldContourEnum.WELD_CONTOUR_FLUSH:
-					return System.Enum.Parse(tsType, "WELD_CONTOUR_FLUSH");
-				case WeldContourEnum.WELD_CONTOUR_CONVEX:
-					return System.Enum.Parse(tsType, "WELD_CONTOUR_CONVEX");
-				case WeldContourEnum.WELD_CONTOUR_CONCAVE:
-					return System.Enum.Parse(tsType, "WELD_CONTOUR_CONCAVE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldContourEnum FromTSObject(dynamic tsEnum)
+        public static WeldContourEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_CONTOUR_NONE", System.StringComparison.InvariantCulture))
-				return WeldContourEnum.WELD_CONTOUR_NONE;
-			else if (tsEnumValue.Equals("WELD_CONTOUR_FLUSH", System.StringComparison.InvariantCulture))
-				return WeldContourEnum.WELD_CONTOUR_FLUSH;
-			else if (tsEnumValue.Equals("WELD_CONTOUR_CONVEX", System.StringComparison.InvariantCulture))
-				return WeldContourEnum.WELD_CONTOUR_CONVEX;
-			else if (tsEnumValue.Equals("WELD_CONTOUR_CONCAVE", System.StringComparison.InvariantCulture))
-				return WeldContourEnum.WELD_CONTOUR_CONCAVE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldContourEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldFinishEnum
+    public struct WeldFinishEnum
     {
-			WELD_FINISH_NONE,
-			WELD_FINISH_GRIND,
-			WELD_FINISH_MACHINE,
-			WELD_FINISH_CHIP,
-			WELD_FINISH_FINISHED_WELD,
-			WELS_FINISH_SMOOTH_TRANSITION        
+       
     }
 
-    public static class WeldFinishEnum_
+    internal static class WeldFinishEnum_
     {
-        public static dynamic GetTSObject(WeldFinishEnum dynEnum)
+        public static dynamic GetTSObject(WeldFinishEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldFinishEnum");
 
-            switch (dynEnum)
-            {
-				case WeldFinishEnum.WELD_FINISH_NONE:
-					return System.Enum.Parse(tsType, "WELD_FINISH_NONE");
-				case WeldFinishEnum.WELD_FINISH_GRIND:
-					return System.Enum.Parse(tsType, "WELD_FINISH_GRIND");
-				case WeldFinishEnum.WELD_FINISH_MACHINE:
-					return System.Enum.Parse(tsType, "WELD_FINISH_MACHINE");
-				case WeldFinishEnum.WELD_FINISH_CHIP:
-					return System.Enum.Parse(tsType, "WELD_FINISH_CHIP");
-				case WeldFinishEnum.WELD_FINISH_FINISHED_WELD:
-					return System.Enum.Parse(tsType, "WELD_FINISH_FINISHED_WELD");
-				case WeldFinishEnum.WELS_FINISH_SMOOTH_TRANSITION:
-					return System.Enum.Parse(tsType, "WELS_FINISH_SMOOTH_TRANSITION");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldFinishEnum FromTSObject(dynamic tsEnum)
+        public static WeldFinishEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_FINISH_NONE", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELD_FINISH_NONE;
-			else if (tsEnumValue.Equals("WELD_FINISH_GRIND", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELD_FINISH_GRIND;
-			else if (tsEnumValue.Equals("WELD_FINISH_MACHINE", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELD_FINISH_MACHINE;
-			else if (tsEnumValue.Equals("WELD_FINISH_CHIP", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELD_FINISH_CHIP;
-			else if (tsEnumValue.Equals("WELD_FINISH_FINISHED_WELD", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELD_FINISH_FINISHED_WELD;
-			else if (tsEnumValue.Equals("WELS_FINISH_SMOOTH_TRANSITION", System.StringComparison.InvariantCulture))
-				return WeldFinishEnum.WELS_FINISH_SMOOTH_TRANSITION;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldFinishEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldElectrodeClassificationEnum
+    public struct WeldElectrodeClassificationEnum
     {
-			WELD_ELECTRODE_CLASSIFICATION_NONE,
-			WELD_ELECTRODE_CLASSIFICATION_35,
-			WELD_ELECTRODE_CLASSIFICATION_42,
-			WELD_ELECTRODE_CLASSIFICATION_50,
-			WELD_ELECTRODE_CLASSIFICATION_E60XX,
-			WELD_ELECTRODE_CLASSIFICATION_E70XX,
-			WELD_ELECTRODE_CLASSIFICATION_E80XX,
-			WELD_ELECTRODE_CLASSIFICATION_E90XX        
+       
     }
 
-    public static class WeldElectrodeClassificationEnum_
+    internal static class WeldElectrodeClassificationEnum_
     {
-        public static dynamic GetTSObject(WeldElectrodeClassificationEnum dynEnum)
+        public static dynamic GetTSObject(WeldElectrodeClassificationEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldElectrodeClassificationEnum");
 
-            switch (dynEnum)
-            {
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_NONE:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_NONE");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_35:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_35");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_42:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_42");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_50:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_50");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E60XX:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_E60XX");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E70XX:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_E70XX");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E80XX:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_E80XX");
-				case WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E90XX:
-					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_E90XX");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldElectrodeClassificationEnum FromTSObject(dynamic tsEnum)
+        public static WeldElectrodeClassificationEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_NONE", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_NONE;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_35", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_35;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_42", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_42;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_50", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_50;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_E60XX", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E60XX;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_E70XX", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E70XX;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_E80XX", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E80XX;
-			else if (tsEnumValue.Equals("WELD_ELECTRODE_CLASSIFICATION_E90XX", System.StringComparison.InvariantCulture))
-				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E90XX;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldElectrodeClassificationEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldProcessTypeEnum
+    public struct WeldProcessTypeEnum
     {
-			WELD_PROCESS_NONE,
-			WELD_PROCESS_SMAW,
-			WELD_PROCESS_SAW,
-			WELD_PROCESS_GMAW,
-			WELD_PROCESS_FCAW,
-			WELD_PROCESS_ESW,
-			WELD_PROCESS_EGW        
+       
     }
 
-    public static class WeldProcessTypeEnum_
+    internal static class WeldProcessTypeEnum_
     {
-        public static dynamic GetTSObject(WeldProcessTypeEnum dynEnum)
+        public static dynamic GetTSObject(WeldProcessTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldProcessTypeEnum");
 
-            switch (dynEnum)
-            {
-				case WeldProcessTypeEnum.WELD_PROCESS_NONE:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_NONE");
-				case WeldProcessTypeEnum.WELD_PROCESS_SMAW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_SMAW");
-				case WeldProcessTypeEnum.WELD_PROCESS_SAW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_SAW");
-				case WeldProcessTypeEnum.WELD_PROCESS_GMAW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_GMAW");
-				case WeldProcessTypeEnum.WELD_PROCESS_FCAW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_FCAW");
-				case WeldProcessTypeEnum.WELD_PROCESS_ESW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_ESW");
-				case WeldProcessTypeEnum.WELD_PROCESS_EGW:
-					return System.Enum.Parse(tsType, "WELD_PROCESS_EGW");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldProcessTypeEnum FromTSObject(dynamic tsEnum)
+        public static WeldProcessTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_PROCESS_NONE", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_NONE;
-			else if (tsEnumValue.Equals("WELD_PROCESS_SMAW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_SMAW;
-			else if (tsEnumValue.Equals("WELD_PROCESS_SAW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_SAW;
-			else if (tsEnumValue.Equals("WELD_PROCESS_GMAW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_GMAW;
-			else if (tsEnumValue.Equals("WELD_PROCESS_FCAW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_FCAW;
-			else if (tsEnumValue.Equals("WELD_PROCESS_ESW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_ESW;
-			else if (tsEnumValue.Equals("WELD_PROCESS_EGW", System.StringComparison.InvariantCulture))
-				return WeldProcessTypeEnum.WELD_PROCESS_EGW;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldProcessTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldNDTInspectionEnum
+    public struct WeldNDTInspectionEnum
     {
-			WELD_NDT_INSPECTION_NONE,
-			WELD_NDT_INSPECTION_A,
-			WELD_NDT_INSPECTION_B,
-			WELD_NDT_INSPECTION_C,
-			WELD_NDT_INSPECTION_D,
-			WELD_NDT_INSPECTION_E        
+       
     }
 
-    public static class WeldNDTInspectionEnum_
+    internal static class WeldNDTInspectionEnum_
     {
-        public static dynamic GetTSObject(WeldNDTInspectionEnum dynEnum)
+        public static dynamic GetTSObject(WeldNDTInspectionEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldNDTInspectionEnum");
 
-            switch (dynEnum)
-            {
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_NONE:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_NONE");
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_A:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_A");
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_B:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_B");
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_C:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_C");
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_D:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_D");
-				case WeldNDTInspectionEnum.WELD_NDT_INSPECTION_E:
-					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_E");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldNDTInspectionEnum FromTSObject(dynamic tsEnum)
+        public static WeldNDTInspectionEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WELD_NDT_INSPECTION_NONE", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_NONE;
-			else if (tsEnumValue.Equals("WELD_NDT_INSPECTION_A", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_A;
-			else if (tsEnumValue.Equals("WELD_NDT_INSPECTION_B", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_B;
-			else if (tsEnumValue.Equals("WELD_NDT_INSPECTION_C", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_C;
-			else if (tsEnumValue.Equals("WELD_NDT_INSPECTION_D", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_D;
-			else if (tsEnumValue.Equals("WELD_NDT_INSPECTION_E", System.StringComparison.InvariantCulture))
-				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_E;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldNDTInspectionEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldIntermittentTypeEnum
+    public struct WeldIntermittentTypeEnum
     {
-			CONTINUOUS,
-			CHAIN_INTERMITTENT,
-			STAGGERED_INTERMITTENT        
+       
     }
 
-    public static class WeldIntermittentTypeEnum_
+    internal static class WeldIntermittentTypeEnum_
     {
-        public static dynamic GetTSObject(WeldIntermittentTypeEnum dynEnum)
+        public static dynamic GetTSObject(WeldIntermittentTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldIntermittentTypeEnum");
 
-            switch (dynEnum)
-            {
-				case WeldIntermittentTypeEnum.CONTINUOUS:
-					return System.Enum.Parse(tsType, "CONTINUOUS");
-				case WeldIntermittentTypeEnum.CHAIN_INTERMITTENT:
-					return System.Enum.Parse(tsType, "CHAIN_INTERMITTENT");
-				case WeldIntermittentTypeEnum.STAGGERED_INTERMITTENT:
-					return System.Enum.Parse(tsType, "STAGGERED_INTERMITTENT");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldIntermittentTypeEnum FromTSObject(dynamic tsEnum)
+        public static WeldIntermittentTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CONTINUOUS", System.StringComparison.InvariantCulture))
-				return WeldIntermittentTypeEnum.CONTINUOUS;
-			else if (tsEnumValue.Equals("CHAIN_INTERMITTENT", System.StringComparison.InvariantCulture))
-				return WeldIntermittentTypeEnum.CHAIN_INTERMITTENT;
-			else if (tsEnumValue.Equals("STAGGERED_INTERMITTENT", System.StringComparison.InvariantCulture))
-				return WeldIntermittentTypeEnum.STAGGERED_INTERMITTENT;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldIntermittentTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldPlacementTypeEnum
+    public struct WeldPlacementTypeEnum
     {
-			PLACEMENT_AUTO,
-			PLACEMENT_MAIN,
-			PLACEMENT_SECONDARY        
+       
     }
 
-    public static class WeldPlacementTypeEnum_
+    internal static class WeldPlacementTypeEnum_
     {
-        public static dynamic GetTSObject(WeldPlacementTypeEnum dynEnum)
+        public static dynamic GetTSObject(WeldPlacementTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPlacementTypeEnum");
 
-            switch (dynEnum)
-            {
-				case WeldPlacementTypeEnum.PLACEMENT_AUTO:
-					return System.Enum.Parse(tsType, "PLACEMENT_AUTO");
-				case WeldPlacementTypeEnum.PLACEMENT_MAIN:
-					return System.Enum.Parse(tsType, "PLACEMENT_MAIN");
-				case WeldPlacementTypeEnum.PLACEMENT_SECONDARY:
-					return System.Enum.Parse(tsType, "PLACEMENT_SECONDARY");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldPlacementTypeEnum FromTSObject(dynamic tsEnum)
+        public static WeldPlacementTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PLACEMENT_AUTO", System.StringComparison.InvariantCulture))
-				return WeldPlacementTypeEnum.PLACEMENT_AUTO;
-			else if (tsEnumValue.Equals("PLACEMENT_MAIN", System.StringComparison.InvariantCulture))
-				return WeldPlacementTypeEnum.PLACEMENT_MAIN;
-			else if (tsEnumValue.Equals("PLACEMENT_SECONDARY", System.StringComparison.InvariantCulture))
-				return WeldPlacementTypeEnum.PLACEMENT_SECONDARY;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldPlacementTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum WeldPreparationTypeEnum
+    public struct WeldPreparationTypeEnum
     {
-			PREPARATION_NONE,
-			PREPARATION_AUTO,
-			PREPARATION_MAIN,
-			PREPARATION_SECONDARY        
+       
     }
 
-    public static class WeldPreparationTypeEnum_
+    internal static class WeldPreparationTypeEnum_
     {
-        public static dynamic GetTSObject(WeldPreparationTypeEnum dynEnum)
+        public static dynamic GetTSObject(WeldPreparationTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPreparationTypeEnum");
 
-            switch (dynEnum)
-            {
-				case WeldPreparationTypeEnum.PREPARATION_NONE:
-					return System.Enum.Parse(tsType, "PREPARATION_NONE");
-				case WeldPreparationTypeEnum.PREPARATION_AUTO:
-					return System.Enum.Parse(tsType, "PREPARATION_AUTO");
-				case WeldPreparationTypeEnum.PREPARATION_MAIN:
-					return System.Enum.Parse(tsType, "PREPARATION_MAIN");
-				case WeldPreparationTypeEnum.PREPARATION_SECONDARY:
-					return System.Enum.Parse(tsType, "PREPARATION_SECONDARY");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static WeldPreparationTypeEnum FromTSObject(dynamic tsEnum)
+        public static WeldPreparationTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("PREPARATION_NONE", System.StringComparison.InvariantCulture))
-				return WeldPreparationTypeEnum.PREPARATION_NONE;
-			else if (tsEnumValue.Equals("PREPARATION_AUTO", System.StringComparison.InvariantCulture))
-				return WeldPreparationTypeEnum.PREPARATION_AUTO;
-			else if (tsEnumValue.Equals("PREPARATION_MAIN", System.StringComparison.InvariantCulture))
-				return WeldPreparationTypeEnum.PREPARATION_MAIN;
-			else if (tsEnumValue.Equals("PREPARATION_SECONDARY", System.StringComparison.InvariantCulture))
-				return WeldPreparationTypeEnum.PREPARATION_SECONDARY;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new WeldPreparationTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

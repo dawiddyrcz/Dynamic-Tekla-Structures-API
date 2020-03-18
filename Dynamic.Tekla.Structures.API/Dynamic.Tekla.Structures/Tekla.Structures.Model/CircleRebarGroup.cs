@@ -317,42 +317,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum CircleRebarGroupStirrupTypeEnum
+    public struct CircleRebarGroupStirrupTypeEnum
     {
-			STIRRUP_TYPE_CIRCLE,
-			STIRRUP_TYPE_SPIRAL        
+       
     }
 
-    public static class CircleRebarGroupStirrupTypeEnum_
+    internal static class CircleRebarGroupStirrupTypeEnum_
     {
-        public static dynamic GetTSObject(CircleRebarGroupStirrupTypeEnum dynEnum)
+        public static dynamic GetTSObject(CircleRebarGroupStirrupTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CircleRebarGroupStirrupTypeEnum");
 
-            switch (dynEnum)
-            {
-				case CircleRebarGroupStirrupTypeEnum.STIRRUP_TYPE_CIRCLE:
-					return System.Enum.Parse(tsType, "STIRRUP_TYPE_CIRCLE");
-				case CircleRebarGroupStirrupTypeEnum.STIRRUP_TYPE_SPIRAL:
-					return System.Enum.Parse(tsType, "STIRRUP_TYPE_SPIRAL");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CircleRebarGroupStirrupTypeEnum FromTSObject(dynamic tsEnum)
+        public static CircleRebarGroupStirrupTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("STIRRUP_TYPE_CIRCLE", System.StringComparison.InvariantCulture))
-				return CircleRebarGroupStirrupTypeEnum.STIRRUP_TYPE_CIRCLE;
-			else if (tsEnumValue.Equals("STIRRUP_TYPE_SPIRAL", System.StringComparison.InvariantCulture))
-				return CircleRebarGroupStirrupTypeEnum.STIRRUP_TYPE_SPIRAL;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CircleRebarGroupStirrupTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

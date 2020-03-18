@@ -356,172 +356,94 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum BoltTypeEnum
+    public struct BoltTypeEnum
     {
-			BOLT_TYPE_SITE,
-			BOLT_TYPE_WORKSHOP        
+       
     }
 
-    public static class BoltTypeEnum_
+    internal static class BoltTypeEnum_
     {
-        public static dynamic GetTSObject(BoltTypeEnum dynEnum)
+        public static dynamic GetTSObject(BoltTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltTypeEnum");
 
-            switch (dynEnum)
-            {
-				case BoltTypeEnum.BOLT_TYPE_SITE:
-					return System.Enum.Parse(tsType, "BOLT_TYPE_SITE");
-				case BoltTypeEnum.BOLT_TYPE_WORKSHOP:
-					return System.Enum.Parse(tsType, "BOLT_TYPE_WORKSHOP");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BoltTypeEnum FromTSObject(dynamic tsEnum)
+        public static BoltTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BOLT_TYPE_SITE", System.StringComparison.InvariantCulture))
-				return BoltTypeEnum.BOLT_TYPE_SITE;
-			else if (tsEnumValue.Equals("BOLT_TYPE_WORKSHOP", System.StringComparison.InvariantCulture))
-				return BoltTypeEnum.BOLT_TYPE_WORKSHOP;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BoltTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum BoltThreadInMaterialEnum
+    public struct BoltThreadInMaterialEnum
     {
-			THREAD_IN_MATERIAL_NO,
-			THREAD_IN_MATERIAL_YES        
+       
     }
 
-    public static class BoltThreadInMaterialEnum_
+    internal static class BoltThreadInMaterialEnum_
     {
-        public static dynamic GetTSObject(BoltThreadInMaterialEnum dynEnum)
+        public static dynamic GetTSObject(BoltThreadInMaterialEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltThreadInMaterialEnum");
 
-            switch (dynEnum)
-            {
-				case BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_NO:
-					return System.Enum.Parse(tsType, "THREAD_IN_MATERIAL_NO");
-				case BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_YES:
-					return System.Enum.Parse(tsType, "THREAD_IN_MATERIAL_YES");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BoltThreadInMaterialEnum FromTSObject(dynamic tsEnum)
+        public static BoltThreadInMaterialEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("THREAD_IN_MATERIAL_NO", System.StringComparison.InvariantCulture))
-				return BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_NO;
-			else if (tsEnumValue.Equals("THREAD_IN_MATERIAL_YES", System.StringComparison.InvariantCulture))
-				return BoltThreadInMaterialEnum.THREAD_IN_MATERIAL_YES;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BoltThreadInMaterialEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum BoltHoleTypeEnum
+    public struct BoltHoleTypeEnum
     {
-			HOLE_TYPE_OVERSIZED,
-			HOLE_TYPE_SLOTTED,
-			HOLE_TYPE_NO_HOLE        
+       
     }
 
-    public static class BoltHoleTypeEnum_
+    internal static class BoltHoleTypeEnum_
     {
-        public static dynamic GetTSObject(BoltHoleTypeEnum dynEnum)
+        public static dynamic GetTSObject(BoltHoleTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltHoleTypeEnum");
 
-            switch (dynEnum)
-            {
-				case BoltHoleTypeEnum.HOLE_TYPE_OVERSIZED:
-					return System.Enum.Parse(tsType, "HOLE_TYPE_OVERSIZED");
-				case BoltHoleTypeEnum.HOLE_TYPE_SLOTTED:
-					return System.Enum.Parse(tsType, "HOLE_TYPE_SLOTTED");
-				case BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE:
-					return System.Enum.Parse(tsType, "HOLE_TYPE_NO_HOLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BoltHoleTypeEnum FromTSObject(dynamic tsEnum)
+        public static BoltHoleTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("HOLE_TYPE_OVERSIZED", System.StringComparison.InvariantCulture))
-				return BoltHoleTypeEnum.HOLE_TYPE_OVERSIZED;
-			else if (tsEnumValue.Equals("HOLE_TYPE_SLOTTED", System.StringComparison.InvariantCulture))
-				return BoltHoleTypeEnum.HOLE_TYPE_SLOTTED;
-			else if (tsEnumValue.Equals("HOLE_TYPE_NO_HOLE", System.StringComparison.InvariantCulture))
-				return BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BoltHoleTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum BoltRotateSlotsEnum
+    public struct BoltRotateSlotsEnum
     {
-			ROTATE_SLOTS_ODD,
-			ROTATE_SLOTS_EVEN,
-			ROTATE_SLOTS_PARALLEL        
+       
     }
 
-    public static class BoltRotateSlotsEnum_
+    internal static class BoltRotateSlotsEnum_
     {
-        public static dynamic GetTSObject(BoltRotateSlotsEnum dynEnum)
+        public static dynamic GetTSObject(BoltRotateSlotsEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltRotateSlotsEnum");
 
-            switch (dynEnum)
-            {
-				case BoltRotateSlotsEnum.ROTATE_SLOTS_ODD:
-					return System.Enum.Parse(tsType, "ROTATE_SLOTS_ODD");
-				case BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN:
-					return System.Enum.Parse(tsType, "ROTATE_SLOTS_EVEN");
-				case BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL:
-					return System.Enum.Parse(tsType, "ROTATE_SLOTS_PARALLEL");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static BoltRotateSlotsEnum FromTSObject(dynamic tsEnum)
+        public static BoltRotateSlotsEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("ROTATE_SLOTS_ODD", System.StringComparison.InvariantCulture))
-				return BoltRotateSlotsEnum.ROTATE_SLOTS_ODD;
-			else if (tsEnumValue.Equals("ROTATE_SLOTS_EVEN", System.StringComparison.InvariantCulture))
-				return BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN;
-			else if (tsEnumValue.Equals("ROTATE_SLOTS_PARALLEL", System.StringComparison.InvariantCulture))
-				return BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new BoltRotateSlotsEnum();
+ 
+            return dynStruct;
         }
     }
 

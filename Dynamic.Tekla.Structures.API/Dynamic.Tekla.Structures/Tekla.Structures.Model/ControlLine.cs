@@ -167,77 +167,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum ControlLineColorEnum
+    public struct ControlLineColorEnum
     {
-			BLACK,
-			WHITE,
-			RED,
-			GREEN,
-			BLUE,
-			CYAN,
-			YELLOW,
-			MAGENTA,
-			YELLOW_RED        
+       
     }
 
-    public static class ControlLineColorEnum_
+    internal static class ControlLineColorEnum_
     {
-        public static dynamic GetTSObject(ControlLineColorEnum dynEnum)
+        public static dynamic GetTSObject(ControlLineColorEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlLineColorEnum");
 
-            switch (dynEnum)
-            {
-				case ControlLineColorEnum.BLACK:
-					return System.Enum.Parse(tsType, "BLACK");
-				case ControlLineColorEnum.WHITE:
-					return System.Enum.Parse(tsType, "WHITE");
-				case ControlLineColorEnum.RED:
-					return System.Enum.Parse(tsType, "RED");
-				case ControlLineColorEnum.GREEN:
-					return System.Enum.Parse(tsType, "GREEN");
-				case ControlLineColorEnum.BLUE:
-					return System.Enum.Parse(tsType, "BLUE");
-				case ControlLineColorEnum.CYAN:
-					return System.Enum.Parse(tsType, "CYAN");
-				case ControlLineColorEnum.YELLOW:
-					return System.Enum.Parse(tsType, "YELLOW");
-				case ControlLineColorEnum.MAGENTA:
-					return System.Enum.Parse(tsType, "MAGENTA");
-				case ControlLineColorEnum.YELLOW_RED:
-					return System.Enum.Parse(tsType, "YELLOW_RED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static ControlLineColorEnum FromTSObject(dynamic tsEnum)
+        public static ControlLineColorEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("BLACK", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.BLACK;
-			else if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.WHITE;
-			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.RED;
-			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.GREEN;
-			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.BLUE;
-			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.CYAN;
-			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.YELLOW;
-			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.MAGENTA;
-			else if (tsEnumValue.Equals("YELLOW_RED", System.StringComparison.InvariantCulture))
-				return ControlLineColorEnum.YELLOW_RED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new ControlLineColorEnum();
+ 
+            return dynStruct;
         }
     }
 

@@ -215,117 +215,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum SurfaceTypeEnum
+    public struct SurfaceTypeEnum
     {
-			CONCRETE_FINISH,
-			SPECIAL_MIX,
-			TILE_SURFACE,
-			STEEL_FINISH        
+       
     }
 
-    public static class SurfaceTypeEnum_
+    internal static class SurfaceTypeEnum_
     {
-        public static dynamic GetTSObject(SurfaceTypeEnum dynEnum)
+        public static dynamic GetTSObject(SurfaceTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTypeEnum");
 
-            switch (dynEnum)
-            {
-				case SurfaceTypeEnum.CONCRETE_FINISH:
-					return System.Enum.Parse(tsType, "CONCRETE_FINISH");
-				case SurfaceTypeEnum.SPECIAL_MIX:
-					return System.Enum.Parse(tsType, "SPECIAL_MIX");
-				case SurfaceTypeEnum.TILE_SURFACE:
-					return System.Enum.Parse(tsType, "TILE_SURFACE");
-				case SurfaceTypeEnum.STEEL_FINISH:
-					return System.Enum.Parse(tsType, "STEEL_FINISH");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static SurfaceTypeEnum FromTSObject(dynamic tsEnum)
+        public static SurfaceTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CONCRETE_FINISH", System.StringComparison.InvariantCulture))
-				return SurfaceTypeEnum.CONCRETE_FINISH;
-			else if (tsEnumValue.Equals("SPECIAL_MIX", System.StringComparison.InvariantCulture))
-				return SurfaceTypeEnum.SPECIAL_MIX;
-			else if (tsEnumValue.Equals("TILE_SURFACE", System.StringComparison.InvariantCulture))
-				return SurfaceTypeEnum.TILE_SURFACE;
-			else if (tsEnumValue.Equals("STEEL_FINISH", System.StringComparison.InvariantCulture))
-				return SurfaceTypeEnum.STEEL_FINISH;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new SurfaceTypeEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum SurfaceColorEnum
+    public struct SurfaceColorEnum
     {
-			WHITE,
-			RED,
-			GREEN,
-			BLUE,
-			CYAN,
-			YELLOW,
-			MAGENTA        
+       
     }
 
-    public static class SurfaceColorEnum_
+    internal static class SurfaceColorEnum_
     {
-        public static dynamic GetTSObject(SurfaceColorEnum dynEnum)
+        public static dynamic GetTSObject(SurfaceColorEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceColorEnum");
 
-            switch (dynEnum)
-            {
-				case SurfaceColorEnum.WHITE:
-					return System.Enum.Parse(tsType, "WHITE");
-				case SurfaceColorEnum.RED:
-					return System.Enum.Parse(tsType, "RED");
-				case SurfaceColorEnum.GREEN:
-					return System.Enum.Parse(tsType, "GREEN");
-				case SurfaceColorEnum.BLUE:
-					return System.Enum.Parse(tsType, "BLUE");
-				case SurfaceColorEnum.CYAN:
-					return System.Enum.Parse(tsType, "CYAN");
-				case SurfaceColorEnum.YELLOW:
-					return System.Enum.Parse(tsType, "YELLOW");
-				case SurfaceColorEnum.MAGENTA:
-					return System.Enum.Parse(tsType, "MAGENTA");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static SurfaceColorEnum FromTSObject(dynamic tsEnum)
+        public static SurfaceColorEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("WHITE", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.WHITE;
-			else if (tsEnumValue.Equals("RED", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.RED;
-			else if (tsEnumValue.Equals("GREEN", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.GREEN;
-			else if (tsEnumValue.Equals("BLUE", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.BLUE;
-			else if (tsEnumValue.Equals("CYAN", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.CYAN;
-			else if (tsEnumValue.Equals("YELLOW", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.YELLOW;
-			else if (tsEnumValue.Equals("MAGENTA", System.StringComparison.InvariantCulture))
-				return SurfaceColorEnum.MAGENTA;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new SurfaceColorEnum();
+ 
+            return dynStruct;
         }
     }
 

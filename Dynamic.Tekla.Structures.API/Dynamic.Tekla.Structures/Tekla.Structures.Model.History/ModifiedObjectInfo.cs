@@ -4,5 +4,42 @@
 namespace Dynamic.Tekla.Structures.Model.History
 {
 
+    public struct ModifiedObjectInfo
+    {
+			public Dynamic.Tekla.Structures.Model.ModelObject ModelObject;
+			public System.Boolean IsAttributeChanged;
+			public System.Boolean IsModified;
+			public System.Boolean IsCreated;
+			public System.Boolean IsNumberingChanged;
+       
+    }
+
+    internal static class ModifiedObjectInfo_
+    {
+        public static dynamic GetTSObject(ModifiedObjectInfo dynStruct)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.History.ModifiedObjectInfo");
+			tsType.ModelObject = dynStruct.ModelObject;
+			tsType.IsAttributeChanged = dynStruct.IsAttributeChanged;
+			tsType.IsModified = dynStruct.IsModified;
+			tsType.IsCreated = dynStruct.IsCreated;
+			tsType.IsNumberingChanged = dynStruct.IsNumberingChanged;
+
+            return tsType;
+        }
+    
+        public static ModifiedObjectInfo FromTSObject(dynamic tsStruct)
+        {
+            var dynStruct = new ModifiedObjectInfo();
+			dynStruct.ModelObject = tsStruct.ModelObject;
+			dynStruct.IsAttributeChanged = tsStruct.IsAttributeChanged;
+			dynStruct.IsModified = tsStruct.IsModified;
+			dynStruct.IsCreated = tsStruct.IsCreated;
+			dynStruct.IsNumberingChanged = tsStruct.IsNumberingChanged;
+ 
+            return dynStruct;
+        }
+    }
+
 }
     

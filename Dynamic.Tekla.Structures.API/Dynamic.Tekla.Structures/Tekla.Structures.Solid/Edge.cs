@@ -47,47 +47,25 @@ namespace Dynamic.Tekla.Structures.Solid
 
 
 
-    public enum EdgeTypeEnum
+    public struct EdgeTypeEnum
     {
-			EDGE_TYPE_NORMAL,
-			EDGE_TYPE_CURVED_SURFACE,
-			EDGE_TYPE_HIDDEN        
+       
     }
 
-    public static class EdgeTypeEnum_
+    internal static class EdgeTypeEnum_
     {
-        public static dynamic GetTSObject(EdgeTypeEnum dynEnum)
+        public static dynamic GetTSObject(EdgeTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Solid.EdgeTypeEnum");
 
-            switch (dynEnum)
-            {
-				case EdgeTypeEnum.EDGE_TYPE_NORMAL:
-					return System.Enum.Parse(tsType, "EDGE_TYPE_NORMAL");
-				case EdgeTypeEnum.EDGE_TYPE_CURVED_SURFACE:
-					return System.Enum.Parse(tsType, "EDGE_TYPE_CURVED_SURFACE");
-				case EdgeTypeEnum.EDGE_TYPE_HIDDEN:
-					return System.Enum.Parse(tsType, "EDGE_TYPE_HIDDEN");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static EdgeTypeEnum FromTSObject(dynamic tsEnum)
+        public static EdgeTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("EDGE_TYPE_NORMAL", System.StringComparison.InvariantCulture))
-				return EdgeTypeEnum.EDGE_TYPE_NORMAL;
-			else if (tsEnumValue.Equals("EDGE_TYPE_CURVED_SURFACE", System.StringComparison.InvariantCulture))
-				return EdgeTypeEnum.EDGE_TYPE_CURVED_SURFACE;
-			else if (tsEnumValue.Equals("EDGE_TYPE_HIDDEN", System.StringComparison.InvariantCulture))
-				return EdgeTypeEnum.EDGE_TYPE_HIDDEN;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new EdgeTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

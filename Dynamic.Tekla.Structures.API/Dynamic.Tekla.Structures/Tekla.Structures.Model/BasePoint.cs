@@ -164,42 +164,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum CoordinateSystemType
+    public struct CoordinateSystemType
     {
-			GLOBAL,
-			WORKPLANE        
+       
     }
 
-    public static class CoordinateSystemType_
+    internal static class CoordinateSystemType_
     {
-        public static dynamic GetTSObject(CoordinateSystemType dynEnum)
+        public static dynamic GetTSObject(CoordinateSystemType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CoordinateSystemType");
 
-            switch (dynEnum)
-            {
-				case CoordinateSystemType.GLOBAL:
-					return System.Enum.Parse(tsType, "GLOBAL");
-				case CoordinateSystemType.WORKPLANE:
-					return System.Enum.Parse(tsType, "WORKPLANE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static CoordinateSystemType FromTSObject(dynamic tsEnum)
+        public static CoordinateSystemType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("GLOBAL", System.StringComparison.InvariantCulture))
-				return CoordinateSystemType.GLOBAL;
-			else if (tsEnumValue.Equals("WORKPLANE", System.StringComparison.InvariantCulture))
-				return CoordinateSystemType.WORKPLANE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new CoordinateSystemType();
+ 
+            return dynStruct;
         }
     }
 

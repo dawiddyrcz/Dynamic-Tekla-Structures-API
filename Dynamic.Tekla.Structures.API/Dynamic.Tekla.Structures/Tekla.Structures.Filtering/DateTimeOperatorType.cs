@@ -4,62 +4,25 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public enum DateTimeOperatorType
+    public struct DateTimeOperatorType
     {
-			IS_EQUAL,
-			IS_NOT_EQUAL,
-			EARLIER_THAN,
-			EARLIER_OR_EQUAL,
-			LATER_THAN,
-			LATER_OR_EQUEL        
+       
     }
 
-    public static class DateTimeOperatorType_
+    internal static class DateTimeOperatorType_
     {
-        public static dynamic GetTSObject(DateTimeOperatorType dynEnum)
+        public static dynamic GetTSObject(DateTimeOperatorType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeOperatorType");
 
-            switch (dynEnum)
-            {
-				case DateTimeOperatorType.IS_EQUAL:
-					return System.Enum.Parse(tsType, "IS_EQUAL");
-				case DateTimeOperatorType.IS_NOT_EQUAL:
-					return System.Enum.Parse(tsType, "IS_NOT_EQUAL");
-				case DateTimeOperatorType.EARLIER_THAN:
-					return System.Enum.Parse(tsType, "EARLIER_THAN");
-				case DateTimeOperatorType.EARLIER_OR_EQUAL:
-					return System.Enum.Parse(tsType, "EARLIER_OR_EQUAL");
-				case DateTimeOperatorType.LATER_THAN:
-					return System.Enum.Parse(tsType, "LATER_THAN");
-				case DateTimeOperatorType.LATER_OR_EQUEL:
-					return System.Enum.Parse(tsType, "LATER_OR_EQUEL");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static DateTimeOperatorType FromTSObject(dynamic tsEnum)
+        public static DateTimeOperatorType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("IS_EQUAL", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.IS_EQUAL;
-			else if (tsEnumValue.Equals("IS_NOT_EQUAL", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.IS_NOT_EQUAL;
-			else if (tsEnumValue.Equals("EARLIER_THAN", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.EARLIER_THAN;
-			else if (tsEnumValue.Equals("EARLIER_OR_EQUAL", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.EARLIER_OR_EQUAL;
-			else if (tsEnumValue.Equals("LATER_THAN", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.LATER_THAN;
-			else if (tsEnumValue.Equals("LATER_OR_EQUEL", System.StringComparison.InvariantCulture))
-				return DateTimeOperatorType.LATER_OR_EQUEL;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new DateTimeOperatorType();
+ 
+            return dynStruct;
         }
     }
 

@@ -4,5 +4,33 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
+    public sealed class IAssemblable 
+    {
+
+        
+
+        dynamic iassemblable;
+        
+        private IAssemblable()
+        {
+            this.iassemblable =  TSActivator.CreateInstance("Tekla.Structures.Model.IAssemblable");
+        }
+
+        public IAssemblable(dynamic tsObject)
+        {
+            this.iassemblable = tsObject;
+        }
+
+        internal dynamic GetTSObject() => iassemblable;
+
+		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+			 => new Dynamic.Tekla.Structures.Model.Assembly(iassemblable.GetAssembly());
+
+
+
+
+
+    }
+
 }
     

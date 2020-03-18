@@ -176,47 +176,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum GroupingTypeEnum
+    public struct GroupingTypeEnum
     {
-			AUTOMATIC,
-			MANUAL,
-			NO_GROUPING        
+       
     }
 
-    public static class GroupingTypeEnum_
+    internal static class GroupingTypeEnum_
     {
-        public static dynamic GetTSObject(GroupingTypeEnum dynEnum)
+        public static dynamic GetTSObject(GroupingTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.GroupingTypeEnum");
 
-            switch (dynEnum)
-            {
-				case GroupingTypeEnum.AUTOMATIC:
-					return System.Enum.Parse(tsType, "AUTOMATIC");
-				case GroupingTypeEnum.MANUAL:
-					return System.Enum.Parse(tsType, "MANUAL");
-				case GroupingTypeEnum.NO_GROUPING:
-					return System.Enum.Parse(tsType, "NO_GROUPING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static GroupingTypeEnum FromTSObject(dynamic tsEnum)
+        public static GroupingTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("AUTOMATIC", System.StringComparison.InvariantCulture))
-				return GroupingTypeEnum.AUTOMATIC;
-			else if (tsEnumValue.Equals("MANUAL", System.StringComparison.InvariantCulture))
-				return GroupingTypeEnum.MANUAL;
-			else if (tsEnumValue.Equals("NO_GROUPING", System.StringComparison.InvariantCulture))
-				return GroupingTypeEnum.NO_GROUPING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new GroupingTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

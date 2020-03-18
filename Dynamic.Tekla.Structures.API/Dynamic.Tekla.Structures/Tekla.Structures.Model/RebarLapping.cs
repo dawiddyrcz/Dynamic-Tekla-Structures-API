@@ -50,127 +50,71 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum LapSideEnum
+    public struct LapSideEnum
     {
-			LAP_LEFT,
-			LAP_RIGHT,
-			LAP_MIDDLE        
+       
     }
 
-    public static class LapSideEnum_
+    internal static class LapSideEnum_
     {
-        public static dynamic GetTSObject(LapSideEnum dynEnum)
+        public static dynamic GetTSObject(LapSideEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LapSideEnum");
 
-            switch (dynEnum)
-            {
-				case LapSideEnum.LAP_LEFT:
-					return System.Enum.Parse(tsType, "LAP_LEFT");
-				case LapSideEnum.LAP_RIGHT:
-					return System.Enum.Parse(tsType, "LAP_RIGHT");
-				case LapSideEnum.LAP_MIDDLE:
-					return System.Enum.Parse(tsType, "LAP_MIDDLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LapSideEnum FromTSObject(dynamic tsEnum)
+        public static LapSideEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("LAP_LEFT", System.StringComparison.InvariantCulture))
-				return LapSideEnum.LAP_LEFT;
-			else if (tsEnumValue.Equals("LAP_RIGHT", System.StringComparison.InvariantCulture))
-				return LapSideEnum.LAP_RIGHT;
-			else if (tsEnumValue.Equals("LAP_MIDDLE", System.StringComparison.InvariantCulture))
-				return LapSideEnum.LAP_MIDDLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LapSideEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum LapPlacementEnum
+    public struct LapPlacementEnum
     {
-			ON_LEG_FACE,
-			PERPENDICULAR_TO_LEG_FACE        
+       
     }
 
-    public static class LapPlacementEnum_
+    internal static class LapPlacementEnum_
     {
-        public static dynamic GetTSObject(LapPlacementEnum dynEnum)
+        public static dynamic GetTSObject(LapPlacementEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LapPlacementEnum");
 
-            switch (dynEnum)
-            {
-				case LapPlacementEnum.ON_LEG_FACE:
-					return System.Enum.Parse(tsType, "ON_LEG_FACE");
-				case LapPlacementEnum.PERPENDICULAR_TO_LEG_FACE:
-					return System.Enum.Parse(tsType, "PERPENDICULAR_TO_LEG_FACE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LapPlacementEnum FromTSObject(dynamic tsEnum)
+        public static LapPlacementEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("ON_LEG_FACE", System.StringComparison.InvariantCulture))
-				return LapPlacementEnum.ON_LEG_FACE;
-			else if (tsEnumValue.Equals("PERPENDICULAR_TO_LEG_FACE", System.StringComparison.InvariantCulture))
-				return LapPlacementEnum.PERPENDICULAR_TO_LEG_FACE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LapPlacementEnum();
+ 
+            return dynStruct;
         }
     }
 
 
-    public enum LappingTypeEnum
+    public struct LappingTypeEnum
     {
-			CUSTOM_LAPPING,
-			STANDARD_LAPPING        
+       
     }
 
-    public static class LappingTypeEnum_
+    internal static class LappingTypeEnum_
     {
-        public static dynamic GetTSObject(LappingTypeEnum dynEnum)
+        public static dynamic GetTSObject(LappingTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LappingTypeEnum");
 
-            switch (dynEnum)
-            {
-				case LappingTypeEnum.CUSTOM_LAPPING:
-					return System.Enum.Parse(tsType, "CUSTOM_LAPPING");
-				case LappingTypeEnum.STANDARD_LAPPING:
-					return System.Enum.Parse(tsType, "STANDARD_LAPPING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static LappingTypeEnum FromTSObject(dynamic tsEnum)
+        public static LappingTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("CUSTOM_LAPPING", System.StringComparison.InvariantCulture))
-				return LappingTypeEnum.CUSTOM_LAPPING;
-			else if (tsEnumValue.Equals("STANDARD_LAPPING", System.StringComparison.InvariantCulture))
-				return LappingTypeEnum.STANDARD_LAPPING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new LappingTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

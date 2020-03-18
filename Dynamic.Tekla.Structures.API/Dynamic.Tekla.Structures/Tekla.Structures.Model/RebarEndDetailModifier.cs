@@ -194,42 +194,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum EndTypeEnum
+    public struct EndTypeEnum
     {
-			HOOK,
-			CRANKING        
+       
     }
 
-    public static class EndTypeEnum_
+    internal static class EndTypeEnum_
     {
-        public static dynamic GetTSObject(EndTypeEnum dynEnum)
+        public static dynamic GetTSObject(EndTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EndTypeEnum");
 
-            switch (dynEnum)
-            {
-				case EndTypeEnum.HOOK:
-					return System.Enum.Parse(tsType, "HOOK");
-				case EndTypeEnum.CRANKING:
-					return System.Enum.Parse(tsType, "CRANKING");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static EndTypeEnum FromTSObject(dynamic tsEnum)
+        public static EndTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("HOOK", System.StringComparison.InvariantCulture))
-				return EndTypeEnum.HOOK;
-			else if (tsEnumValue.Equals("CRANKING", System.StringComparison.InvariantCulture))
-				return EndTypeEnum.CRANKING;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new EndTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

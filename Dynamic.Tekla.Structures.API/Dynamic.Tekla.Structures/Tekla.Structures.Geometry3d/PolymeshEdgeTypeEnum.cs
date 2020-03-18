@@ -4,42 +4,25 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public enum PolymeshEdgeTypeEnum
+    public struct PolymeshEdgeTypeEnum
     {
-			VISIBLE_EDGE,
-			INVISIBLE_EDGE        
+       
     }
 
-    public static class PolymeshEdgeTypeEnum_
+    internal static class PolymeshEdgeTypeEnum_
     {
-        public static dynamic GetTSObject(PolymeshEdgeTypeEnum dynEnum)
+        public static dynamic GetTSObject(PolymeshEdgeTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum");
 
-            switch (dynEnum)
-            {
-				case PolymeshEdgeTypeEnum.VISIBLE_EDGE:
-					return System.Enum.Parse(tsType, "VISIBLE_EDGE");
-				case PolymeshEdgeTypeEnum.INVISIBLE_EDGE:
-					return System.Enum.Parse(tsType, "INVISIBLE_EDGE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static PolymeshEdgeTypeEnum FromTSObject(dynamic tsEnum)
+        public static PolymeshEdgeTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("VISIBLE_EDGE", System.StringComparison.InvariantCulture))
-				return PolymeshEdgeTypeEnum.VISIBLE_EDGE;
-			else if (tsEnumValue.Equals("INVISIBLE_EDGE", System.StringComparison.InvariantCulture))
-				return PolymeshEdgeTypeEnum.INVISIBLE_EDGE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new PolymeshEdgeTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

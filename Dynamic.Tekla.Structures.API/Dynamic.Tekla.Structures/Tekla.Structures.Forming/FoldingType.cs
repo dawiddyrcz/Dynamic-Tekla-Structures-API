@@ -4,47 +4,25 @@
 namespace Dynamic.Tekla.Structures.Forming
 {
 
-    public enum FoldingType
+    public struct FoldingType
     {
-			NOT_SPECIFIED,
-			FOLDED,
-			UNFOLDED        
+       
     }
 
-    public static class FoldingType_
+    internal static class FoldingType_
     {
-        public static dynamic GetTSObject(FoldingType dynEnum)
+        public static dynamic GetTSObject(FoldingType dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.FoldingType");
 
-            switch (dynEnum)
-            {
-				case FoldingType.NOT_SPECIFIED:
-					return System.Enum.Parse(tsType, "NOT_SPECIFIED");
-				case FoldingType.FOLDED:
-					return System.Enum.Parse(tsType, "FOLDED");
-				case FoldingType.UNFOLDED:
-					return System.Enum.Parse(tsType, "UNFOLDED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static FoldingType FromTSObject(dynamic tsEnum)
+        public static FoldingType FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("NOT_SPECIFIED", System.StringComparison.InvariantCulture))
-				return FoldingType.NOT_SPECIFIED;
-			else if (tsEnumValue.Equals("FOLDED", System.StringComparison.InvariantCulture))
-				return FoldingType.FOLDED;
-			else if (tsEnumValue.Equals("UNFOLDED", System.StringComparison.InvariantCulture))
-				return FoldingType.UNFOLDED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new FoldingType();
+ 
+            return dynStruct;
         }
     }
 

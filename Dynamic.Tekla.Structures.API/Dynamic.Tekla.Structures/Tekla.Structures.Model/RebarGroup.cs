@@ -317,47 +317,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-    public enum RebarGroupStirrupTypeEnum
+    public struct RebarGroupStirrupTypeEnum
     {
-			STIRRUP_TYPE_POLYGONAL,
-			STIRRUP_TYPE_SPIRAL,
-			STIRRUP_TYPE_TAPERED_CURVED        
+       
     }
 
-    public static class RebarGroupStirrupTypeEnum_
+    internal static class RebarGroupStirrupTypeEnum_
     {
-        public static dynamic GetTSObject(RebarGroupStirrupTypeEnum dynEnum)
+        public static dynamic GetTSObject(RebarGroupStirrupTypeEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGroupStirrupTypeEnum");
 
-            switch (dynEnum)
-            {
-				case RebarGroupStirrupTypeEnum.STIRRUP_TYPE_POLYGONAL:
-					return System.Enum.Parse(tsType, "STIRRUP_TYPE_POLYGONAL");
-				case RebarGroupStirrupTypeEnum.STIRRUP_TYPE_SPIRAL:
-					return System.Enum.Parse(tsType, "STIRRUP_TYPE_SPIRAL");
-				case RebarGroupStirrupTypeEnum.STIRRUP_TYPE_TAPERED_CURVED:
-					return System.Enum.Parse(tsType, "STIRRUP_TYPE_TAPERED_CURVED");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static RebarGroupStirrupTypeEnum FromTSObject(dynamic tsEnum)
+        public static RebarGroupStirrupTypeEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("STIRRUP_TYPE_POLYGONAL", System.StringComparison.InvariantCulture))
-				return RebarGroupStirrupTypeEnum.STIRRUP_TYPE_POLYGONAL;
-			else if (tsEnumValue.Equals("STIRRUP_TYPE_SPIRAL", System.StringComparison.InvariantCulture))
-				return RebarGroupStirrupTypeEnum.STIRRUP_TYPE_SPIRAL;
-			else if (tsEnumValue.Equals("STIRRUP_TYPE_TAPERED_CURVED", System.StringComparison.InvariantCulture))
-				return RebarGroupStirrupTypeEnum.STIRRUP_TYPE_TAPERED_CURVED;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new RebarGroupStirrupTypeEnum();
+ 
+            return dynStruct;
         }
     }
 

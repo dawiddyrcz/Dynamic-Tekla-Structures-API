@@ -218,43 +218,48 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-
-    public enum VisibilityEnum
+    public struct Revision
     {
-			HIDDEN,
-			VISIBLE        
+       
     }
 
-    public static class VisibilityEnum_
+    internal static class Revision_
     {
-        public static dynamic GetTSObject(VisibilityEnum dynEnum)
+        public static dynamic GetTSObject(Revision dynStruct)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Revision");
+
+            return tsType;
+        }
+    
+        public static Revision FromTSObject(dynamic tsStruct)
+        {
+            var dynStruct = new Revision();
+ 
+            return dynStruct;
+        }
+    }
+
+
+    public struct VisibilityEnum
+    {
+       
+    }
+
+    internal static class VisibilityEnum_
+    {
+        public static dynamic GetTSObject(VisibilityEnum dynStruct)
         {
             var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.VisibilityEnum");
 
-            switch (dynEnum)
-            {
-				case VisibilityEnum.HIDDEN:
-					return System.Enum.Parse(tsType, "HIDDEN");
-				case VisibilityEnum.VISIBLE:
-					return System.Enum.Parse(tsType, "VISIBLE");
-
-                default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
-            }
+            return tsType;
         }
     
-        public static VisibilityEnum FromTSObject(dynamic tsEnum)
+        public static VisibilityEnum FromTSObject(dynamic tsStruct)
         {
-            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
-            
-			if (tsEnumValue.Equals("HIDDEN", System.StringComparison.InvariantCulture))
-				return VisibilityEnum.HIDDEN;
-			else if (tsEnumValue.Equals("VISIBLE", System.StringComparison.InvariantCulture))
-				return VisibilityEnum.VISIBLE;
-
-            else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
-            
+            var dynStruct = new VisibilityEnum();
+ 
+            return dynStruct;
         }
     }
 

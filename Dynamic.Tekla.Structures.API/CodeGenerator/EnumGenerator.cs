@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace CodeGenerator
 {
@@ -15,7 +17,7 @@ namespace CodeGenerator
             var sb = new StringBuilder(text.Length * 5);
             sb.Append(text);
 
-            sb.Replace("$enumValues", GetEnumValues(type));
+            sb.Replace("$enumValues", GetEnumValuesText(type));
             sb.Replace("$switch1Values", GetSwitch1Values(type));
             sb.Replace("$switch2Values", GetSwitch2Values(type));
             
@@ -24,11 +26,22 @@ namespace CodeGenerator
             return sb.ToString();
         }
 
-        private string GetEnumValues(Type type)
+        private Array GetEnumValues(Type type)
+        {
+            var output = new List<object>();
+            foreach(var value in type.GetEnumValues())
+            {
+                if (!output.Contains(value))
+                    output.Add(value);
+            }
+            return output.ToArray();
+        }
+
+        private string GetEnumValuesText(Type type)
         {
             var sb = new StringBuilder(100);
 
-            foreach (var value in type.GetEnumValues())
+            foreach (var value in GetEnumValues(type))
             {
                 sb.Append("\t\t\t");
                 sb.Append(value);
@@ -44,7 +57,7 @@ namespace CodeGenerator
         {
             var sb = new StringBuilder();
 
-            foreach (var value in type.GetEnumValues())
+            foreach (var value in GetEnumValues(type))
             {
                 sb.Append("\t\t\t\tcase $classname.");
                 sb.Append(value);
@@ -61,7 +74,7 @@ namespace CodeGenerator
             var sb = new StringBuilder();
 
             int i = 0;
-            foreach (var value in type.GetEnumValues())
+            foreach (var value in GetEnumValues(type))
             {
                 sb.Append("\t\t\t");
                 if (i != 0) sb.Append("else ");

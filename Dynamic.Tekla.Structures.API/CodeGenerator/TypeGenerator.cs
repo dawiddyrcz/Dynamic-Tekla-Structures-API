@@ -11,6 +11,11 @@ namespace CodeGenerator
         {
             string outputText = String.Empty;
             
+            if (type.Name.Contains("IGeometryNodeVisitor"))
+            {
+                int a = 0;
+            }
+
              if (type.IsClass || type.IsInterface)
             {
                 var generator = new ClassGenerator();

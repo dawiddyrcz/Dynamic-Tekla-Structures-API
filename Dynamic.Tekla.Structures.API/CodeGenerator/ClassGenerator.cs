@@ -50,8 +50,13 @@ namespace CodeGenerator
         private string AddMethods(Type type, string classText)
         {
             var sb = new StringBuilder();
+            var methods = type.GetMethods().Where(
+                m => m.IsPublic 
+                && !m.ReturnType.ToString().Contains("Tekla.Structures.ModelInternal")
+                && !m.GetParameters().Any(p => p.ParameterType.ToString().Contains("Tekla.Structures.ModelInternal"))
+                );
 
-            foreach (var method in type.GetMethods().Where(m => m.IsPublic))
+            foreach (var method in methods)
             {
                 if (method.ReturnType.IsInterface) continue;
 
@@ -111,7 +116,6 @@ namespace CodeGenerator
                 else
                 {
                     var typeFullName = GetTypeFullName(method.ReturnType);
-                    if (typeFullName.Contains("Tekla.Structures.ModelInternal")) return string.Empty;
 
                     sb.Append(typeFullName.Replace("System.Void", "void"));
                     sb.Append(" ");
@@ -128,8 +132,6 @@ namespace CodeGenerator
                         //if (param.IsOut) sb.Append("out ");
 
                         var paramTypeFullName = GetTypeFullName(param.ParameterType);
-                        if (paramTypeFullName.Contains("Tekla.Structures.ModelInternal")) return string.Empty;
-
                         sb.Append(paramTypeFullName);
                         sb.Append(" ");
                         sb.Append(paramName);

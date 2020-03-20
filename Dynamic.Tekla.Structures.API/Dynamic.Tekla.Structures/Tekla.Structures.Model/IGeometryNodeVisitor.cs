@@ -4,5 +4,48 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
+    public sealed class IGeometryNodeVisitor 
+    {
+
+        
+
+        internal dynamic igeometrynodevisitor;
+        
+        private IGeometryNodeVisitor()
+        {
+            this.igeometrynodevisitor =  TSActivator.CreateInstance("Tekla.Structures.Model.IGeometryNodeVisitor");
+        }
+
+        internal IGeometryNodeVisitor(dynamic tsObject)
+        {
+            this.igeometrynodevisitor = tsObject;
+        }
+
+		public void Visit(Dynamic.Tekla.Structures.Model.PolygonNode node)
+			 => igeometrynodevisitor.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
+
+		public void Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node)
+			 => igeometrynodevisitor.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
+
+
+
+
+
+    }
+
+    internal static class IGeometryNodeVisitor_
+    {
+        public static dynamic GetTSObject(IGeometryNodeVisitor dynObject)
+        {
+            return dynObject.igeometrynodevisitor;
+        }
+
+        public static IGeometryNodeVisitor FromTSObject(dynamic tsObject)
+        {
+            return new IGeometryNodeVisitor(tsObject);
+        }
+    }
+
+
 }
     

@@ -27,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Model
             this.igeometrynode = tsObject;
         }
 
-	
+		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
+			 => igeometrynode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+
+
 
 
 

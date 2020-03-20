@@ -183,8 +183,9 @@ namespace CodeGenerator
         private string AddProperties(Type type, string classText)
         {
             var sb = new StringBuilder();
+            var properties = type.GetProperties().GroupBy(t => t.Name).Select(t => t.First());  //In one class returned two properties with the same value
 
-            foreach (var property in type.GetProperties())
+            foreach (var property in properties)
             {
                 if (IsTeklaType(property.PropertyType))
                 {

@@ -33,6 +33,10 @@ namespace Dynamic.Tekla.Structures.Model
             this.cylindricalsurfacenode = tsObject;
         }
 
+		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
+			 => cylindricalsurfacenode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+
+
 
 
 

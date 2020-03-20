@@ -33,6 +33,12 @@ namespace Dynamic.Tekla.Structures.Model
             this.conicalsurfacenode = tsObject;
         }
 
+		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
+			 => conicalsurfacenode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+
+
+
+
 
     }
 

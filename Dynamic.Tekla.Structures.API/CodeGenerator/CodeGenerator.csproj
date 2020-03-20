@@ -43,13 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="StructGenerator.cs" />
     <Compile Include="FileGenerator.cs" />
     <Compile Include="TypeFullName.cs" />
     <Compile Include="TypeGenerator.cs" />
     <Compile Include="ClassGenerator.cs" />
-    <Compile Include="Enum.cs" />
     <Compile Include="EnumGenerator.cs" />
     <Compile Include="NamespaceTest.cs" />
     <Compile Include="Program.cs" />

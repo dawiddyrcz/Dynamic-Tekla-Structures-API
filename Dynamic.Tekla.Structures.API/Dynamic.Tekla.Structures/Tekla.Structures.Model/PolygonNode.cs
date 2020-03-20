@@ -33,7 +33,10 @@ namespace Dynamic.Tekla.Structures.Model
             this.polygonnode = tsObject;
         }
 
-	
+		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
+			 => polygonnode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+
+
 
 
 

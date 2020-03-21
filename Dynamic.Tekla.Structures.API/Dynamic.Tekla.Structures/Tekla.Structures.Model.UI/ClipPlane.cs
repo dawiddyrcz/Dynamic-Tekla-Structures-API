@@ -35,13 +35,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 
 

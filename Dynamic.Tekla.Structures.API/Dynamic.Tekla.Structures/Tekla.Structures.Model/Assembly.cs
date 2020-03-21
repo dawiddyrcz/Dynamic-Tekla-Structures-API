@@ -29,55 +29,89 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetMainPart()
-			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetMainPart());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetMainPart());
+		}
 
 		public System.Boolean SetMainPart(Dynamic.Tekla.Structures.Model.Part Part)
-			 => teklaObject.SetMainPart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
+		{
+			return teklaObject.SetMainPart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
+		}
 
 		public System.Collections.ArrayList GetSecondaries()
-			 => teklaObject.GetSecondaries();
+		{
+			return teklaObject.GetSecondaries();
+		}
 
 		public System.Boolean Add(Dynamic.Tekla.Structures.Model.IAssemblable Object)
-			 => teklaObject.Add(Dynamic.Tekla.Structures.Model.IAssemblable_.GetTSObject(Object));
+		{
+			return teklaObject.Add(Dynamic.Tekla.Structures.Model.IAssemblable_.GetTSObject(Object));
+		}
 
 		public System.Boolean Add(System.Collections.ArrayList Assemblables)
-			 => teklaObject.Add(Assemblables);
+		{
+			return teklaObject.Add(Assemblables);
+		}
 
 		public System.Boolean Remove(Dynamic.Tekla.Structures.Model.ModelObject Object)
-			 => teklaObject.Remove(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object));
+		{
+			return teklaObject.Remove(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object));
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public System.Boolean Add(Dynamic.Tekla.Structures.Model.Assembly Assembly)
-			 => teklaObject.Add(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(Assembly));
+		{
+			return teklaObject.Add(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(Assembly));
+		}
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
+		{
+			return Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
+		}
 
 		public System.Collections.ArrayList GetSubAssemblies()
-			 => teklaObject.GetSubAssemblies();
+		{
+			return teklaObject.GetSubAssemblies();
+		}
 
 		public Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum GetAssemblyType()
-			 => Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum_.FromTSObject(teklaObject.GetAssemblyType());
+		{
+			return Dynamic.Tekla.Structures.Model.Assembly.AssemblyTypeEnum_.FromTSObject(teklaObject.GetAssemblyType());
+		}
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetFatherPour());
+		{
+			return Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetFatherPour());
+		}
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(teklaObject.GetFatherPourUnit());
+		{
+			return Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(teklaObject.GetFatherPourUnit());
+		}
 
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Assembly AssemblyToCompare)
-			 => teklaObject.CompareTo(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(AssemblyToCompare));
+		{
+			return teklaObject.CompareTo(Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(AssemblyToCompare));
+		}
 
 
 

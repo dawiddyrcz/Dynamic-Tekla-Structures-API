@@ -30,7 +30,9 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+		{
+			return teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+		}
 
 
 

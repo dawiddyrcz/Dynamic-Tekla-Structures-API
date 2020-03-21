@@ -85,40 +85,64 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetConvertedObjects());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetConvertedObjects());
+		}
 
 		public System.Boolean RefreshFile()
-			 => teklaObject.RefreshFile();
+		{
+			return teklaObject.RefreshFile();
+		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
-			 => teklaObject.GetRevisions();
+		{
+			return teklaObject.GetRevisions();
+		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
-			 => Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid));
+		{
+			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid));
+		}
 
 		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
-			 => teklaObject.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
+		{
+			return teklaObject.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
+		}
 
 		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
-			 => teklaObject.SetAsCurrentRevision(modelId, revisionId);
+		{
+			return teklaObject.SetAsCurrentRevision(modelId, revisionId);
+		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
-			 => Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(teklaObject.GetCurrentRevision());
+		{
+			return Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(teklaObject.GetCurrentRevision());
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
+		}
 
 
 

@@ -53,43 +53,69 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		{
+			return teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+		}
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		{
+			return teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		}
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
-			 => teklaObject.SetSecondaryObjects(Secondaries);
+		{
+			return teklaObject.SetSecondaryObjects(Secondaries);
+		}
 
 		public System.Collections.ArrayList GetSecondaryObjects()
-			 => teklaObject.GetSecondaryObjects();
+		{
+			return teklaObject.GetSecondaryObjects();
+		}
 
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => teklaObject.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+		{
+			return teklaObject.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+		}
 
-		public System.Boolean GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => teklaObject.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+		public System.Boolean GetStartAndEndPositions(ref Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, ref Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
+		{
+			return teklaObject.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+		}
 
 		public System.Boolean SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon InputPolygon)
-			 => teklaObject.SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon));
+		{
+			return teklaObject.SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon));
+		}
 
 		public Dynamic.Tekla.Structures.Model.Polygon GetInputPolygon()
-			 => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.GetInputPolygon());
+		{
+			return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.GetInputPolygon());
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 
 

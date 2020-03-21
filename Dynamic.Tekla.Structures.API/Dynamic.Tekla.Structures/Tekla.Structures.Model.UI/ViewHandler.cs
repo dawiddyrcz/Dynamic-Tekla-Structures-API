@@ -17,40 +17,64 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetAllViews()
-			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetAllViews());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetAllViews());
+		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetVisibleViews()
-			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetVisibleViews());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetVisibleViews());
+		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetPermanentViews()
-			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetPermanentViews());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetPermanentViews());
+		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetTemporaryViews()
-			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetTemporaryViews());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetTemporaryViews());
+		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetSelectedViews()
-			 => Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetSelectedViews());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(teklaObject.GetSelectedViews());
+		}
 
 		public System.Boolean ShowView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => teklaObject.ShowView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		{
+			return teklaObject.ShowView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		}
 
 		public System.Boolean HideView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => teklaObject.HideView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		{
+			return teklaObject.HideView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		}
 
 		public System.Boolean RedrawView(Dynamic.Tekla.Structures.Model.UI.View view)
-			 => teklaObject.RedrawView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		{
+			return teklaObject.RedrawView(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view));
+		}
 
 		public System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View view, Dynamic.Tekla.Structures.Geometry3d.AABB B)
-			 => teklaObject.ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B));
+		{
+			return teklaObject.ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B));
+		}
 
 		public System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB box)
-			 => teklaObject.ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box));
+		{
+			return teklaObject.ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box));
+		}
 
 		public System.Boolean SetRepresentation(System.String Representation)
-			 => teklaObject.SetRepresentation(Representation);
+		{
+			return teklaObject.SetRepresentation(Representation);
+		}
 
 		public System.Boolean RedrawWorkplane()
-			 => teklaObject.RedrawWorkplane();
+		{
+			return teklaObject.RedrawWorkplane();
+		}
 
 
 

@@ -17,43 +17,69 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean GetConnectionStatus()
-			 => teklaObject.GetConnectionStatus();
+		{
+			return teklaObject.GetConnectionStatus();
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelInfo GetInfo()
-			 => Dynamic.Tekla.Structures.Model.ModelInfo_.FromTSObject(teklaObject.GetInfo());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelInfo_.FromTSObject(teklaObject.GetInfo());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ProjectInfo GetProjectInfo()
-			 => Dynamic.Tekla.Structures.Model.ProjectInfo_.FromTSObject(teklaObject.GetProjectInfo());
+		{
+			return Dynamic.Tekla.Structures.Model.ProjectInfo_.FromTSObject(teklaObject.GetProjectInfo());
+		}
 
 		public Dynamic.Tekla.Structures.Model.PhaseCollection GetPhases()
-			 => Dynamic.Tekla.Structures.Model.PhaseCollection_.FromTSObject(teklaObject.GetPhases());
+		{
+			return Dynamic.Tekla.Structures.Model.PhaseCollection_.FromTSObject(teklaObject.GetPhases());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectSelector GetModelObjectSelector()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectSelector_.FromTSObject(teklaObject.GetModelObjectSelector());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectSelector_.FromTSObject(teklaObject.GetModelObjectSelector());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
-			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.SelectModelObject(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID)));
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.SelectModelObject(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID)));
+		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)
-			 => teklaObject.FetchModelObjects(Guids, SelectInstances);
+		{
+			return teklaObject.FetchModelObjects(Guids, SelectInstances);
+		}
 
 		public Dynamic.Tekla.Structures.Identifier GetIdentifierByGUID(System.String guid)
-			 => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.GetIdentifierByGUID(guid));
+		{
+			return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.GetIdentifierByGUID(guid));
+		}
 
 		public System.String GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier identifier)
-			 => teklaObject.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
+		{
+			return teklaObject.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
+		}
 
 		public System.Boolean CommitChanges()
-			 => teklaObject.CommitChanges();
+		{
+			return teklaObject.CommitChanges();
+		}
 
 		public System.Boolean CommitChanges(System.String Message)
-			 => teklaObject.CommitChanges(Message);
+		{
+			return teklaObject.CommitChanges(Message);
+		}
 
 		public Dynamic.Tekla.Structures.Model.WorkPlaneHandler GetWorkPlaneHandler()
-			 => Dynamic.Tekla.Structures.Model.WorkPlaneHandler_.FromTSObject(teklaObject.GetWorkPlaneHandler());
+		{
+			return Dynamic.Tekla.Structures.Model.WorkPlaneHandler_.FromTSObject(teklaObject.GetWorkPlaneHandler());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
-			 => Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+		{
+			return Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+		}
 
 
 

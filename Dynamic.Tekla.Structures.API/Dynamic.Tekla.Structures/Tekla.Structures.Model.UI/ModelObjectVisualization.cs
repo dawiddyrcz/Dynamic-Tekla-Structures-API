@@ -13,28 +13,44 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 
 		public System.Boolean SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color color)
-			 => teklaObject.SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		{
+			return teklaObject.SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		}
 
 		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.Color color)
-			 => teklaObject.SetTemporaryState(modelObjects, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		{
+			return teklaObject.SetTemporaryState(modelObjects, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		}
 
 		public System.Boolean SetTransparencyForAll(Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => teklaObject.SetTransparencyForAll(Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		{
+			return teklaObject.SetTransparencyForAll(Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		}
 
 		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => teklaObject.SetTransparency(modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		{
+			return teklaObject.SetTransparency(modelObjects, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		}
 
 		public System.Boolean SetTransparency(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency)
-			 => teklaObject.SetTransparency(identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		{
+			return teklaObject.SetTransparency(identifiers, Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency));
+		}
 
 		public System.Boolean SetTemporaryState(System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> identifiers, Dynamic.Tekla.Structures.Model.UI.Color color)
-			 => teklaObject.SetTemporaryState(identifiers, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		{
+			return teklaObject.SetTemporaryState(identifiers, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		}
 
-		public System.Boolean GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject modelObject, Dynamic.Tekla.Structures.Model.UI.Color color)
-			 => teklaObject.GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(modelObject), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		public System.Boolean GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject modelObject, ref Dynamic.Tekla.Structures.Model.UI.Color color)
+		{
+			return teklaObject.GetRepresentation(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(modelObject), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
+		}
 
 		public System.Boolean ClearAllTemporaryStates()
-			 => teklaObject.ClearAllTemporaryStates();
+		{
+			return teklaObject.ClearAllTemporaryStates();
+		}
 
 
 

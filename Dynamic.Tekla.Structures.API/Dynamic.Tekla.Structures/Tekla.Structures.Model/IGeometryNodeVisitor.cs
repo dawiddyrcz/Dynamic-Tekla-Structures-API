@@ -13,10 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 		public void Visit(Dynamic.Tekla.Structures.Model.PolygonNode node)
-			 => teklaObject.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
+		{
+			return teklaObject.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
+		}
 
 		public void Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node)
-			 => teklaObject.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
+		{
+			return teklaObject.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
+		}
 
 
 

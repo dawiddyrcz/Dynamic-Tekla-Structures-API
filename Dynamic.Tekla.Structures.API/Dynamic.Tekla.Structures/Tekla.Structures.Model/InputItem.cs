@@ -14,10 +14,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public InputItem() {}
 
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-			 => Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
+		{
+			return Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
+		}
 
 		public System.Object GetData()
-			 => teklaObject.GetData();
+		{
+			return teklaObject.GetData();
+		}
 
 
 

@@ -13,46 +13,74 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
-			 => teklaObject.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
+		{
+			return teklaObject.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
+		}
 
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2, System.Double Tolerance)
-			 => teklaObject.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2), Tolerance);
+		{
+			return teklaObject.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2), Tolerance);
+		}
 
 		public System.Boolean LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line Line1, Dynamic.Tekla.Structures.Geometry3d.Line Line2)
-			 => teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2));
+		{
+			return teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2));
+		}
 
 		public System.Boolean LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line Line1, Dynamic.Tekla.Structures.Geometry3d.Line Line2, System.Double Tolerance)
-			 => teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2), Tolerance);
+		{
+			return teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2), Tolerance);
+		}
 
 		public System.Boolean LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment2)
-			 => teklaObject.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2));
+		{
+			return teklaObject.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2));
+		}
 
 		public System.Boolean LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment2, System.Double Tolerance)
-			 => teklaObject.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2), Tolerance);
+		{
+			return teklaObject.LineSegmentToLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2), Tolerance);
+		}
 
 		public System.Boolean PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane1, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane2)
-			 => teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2));
+		{
+			return teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2));
+		}
 
 		public System.Boolean PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane1, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane2, System.Double Tolerance)
-			 => teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2), Tolerance);
+		{
+			return teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2), Tolerance);
+		}
 
 		public System.Boolean VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => teklaObject.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		{
+			return teklaObject.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		}
 
 		public System.Boolean VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => teklaObject.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		{
+			return teklaObject.VectorToPlane(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		}
 
 		public System.Boolean LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		{
+			return teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		}
 
 		public System.Boolean LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		{
+			return teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		}
 
 		public System.Boolean LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		{
+			return teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+		}
 
 		public System.Boolean LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane, System.Double Tolerance)
-			 => teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		{
+			return teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane), Tolerance);
+		}
 
 
 

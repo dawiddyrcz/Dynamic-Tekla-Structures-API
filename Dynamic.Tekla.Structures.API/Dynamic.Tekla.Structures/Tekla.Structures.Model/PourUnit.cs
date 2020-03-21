@@ -23,22 +23,34 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
+		}
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetPourObject()
-			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetPourObject());
+		{
+			return Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetPourObject());
+		}
 
 
 

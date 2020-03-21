@@ -17,25 +17,39 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean CreateNewSingleUserModel(System.String ModelName, System.String ModelFolder, System.String Template)
-			 => teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
+		{
+			return teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
+		}
 
 		public System.Boolean CreateNewMultiUserModel(System.String ModelName, System.String ModelFolder, System.String ServerName)
-			 => teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
+		{
+			return teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
+		}
 
 		public System.Boolean Save(System.String Comment, System.String User)
-			 => teklaObject.Save(Comment, User);
+		{
+			return teklaObject.Save(Comment, User);
+		}
 
 		public System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
-			 => teklaObject.Open(ModelFolder, OpenAutoSaved);
+		{
+			return teklaObject.Open(ModelFolder, OpenAutoSaved);
+		}
 
 		public void Close()
-			 => teklaObject.Close();
+		{
+			return teklaObject.Close();
+		}
 
 		public System.Boolean IsModelSaved()
-			 => teklaObject.IsModelSaved();
+		{
+			return teklaObject.IsModelSaved();
+		}
 
 		public System.Boolean IsModelAutoSaved(System.String ModelFolder)
-			 => teklaObject.IsModelAutoSaved(ModelFolder);
+		{
+			return teklaObject.IsModelAutoSaved(ModelFolder);
+		}
 
 
 

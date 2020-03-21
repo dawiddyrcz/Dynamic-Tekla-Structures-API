@@ -14,7 +14,9 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Loop() {}
 
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(teklaObject.GetVertexEnumerator());
+		{
+			return Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(teklaObject.GetVertexEnumerator());
+		}
 
 
 

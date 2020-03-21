@@ -32,13 +32,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public ModelObjectEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => teklaObject.MoveNext();
+		{
+			return teklaObject.MoveNext();
+		}
 
 		public void Reset()
-			 => teklaObject.Reset();
+		{
+			return teklaObject.Reset();
+		}
 
 		public System.Int32 GetSize()
-			 => teklaObject.GetSize();
+		{
+			return teklaObject.GetSize();
+		}
 
 
 

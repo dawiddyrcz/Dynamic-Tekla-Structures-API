@@ -14,10 +14,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public WorkPlaneHandler() {}
 
 		public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
-			 => Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(teklaObject.GetCurrentTransformationPlane());
+		{
+			return Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(teklaObject.GetCurrentTransformationPlane());
+		}
 
 		public System.Boolean SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane)
-			 => teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
+		{
+			return teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
+		}
 
 
 

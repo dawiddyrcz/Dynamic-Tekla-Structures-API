@@ -29,19 +29,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public void Transpose()
-			 => teklaObject.Transpose();
+		{
+			return teklaObject.Transpose();
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
-			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.GetTranspose());
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.GetTranspose());
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix B, Dynamic.Tekla.Structures.Geometry3d.Matrix A)
-			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(B), Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(B), Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Transform(Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix A, Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+		}
 
 
 

@@ -17,34 +17,54 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean AddBoltDistX(System.Double DistX)
-			 => teklaObject.AddBoltDistX(DistX);
+		{
+			return teklaObject.AddBoltDistX(DistX);
+		}
 
 		public System.Boolean AddBoltDistY(System.Double DistY)
-			 => teklaObject.AddBoltDistY(DistY);
+		{
+			return teklaObject.AddBoltDistY(DistY);
+		}
 
 		public System.Int32 GetBoltDistXCount()
-			 => teklaObject.GetBoltDistXCount();
+		{
+			return teklaObject.GetBoltDistXCount();
+		}
 
 		public System.Int32 GetBoltDistYCount()
-			 => teklaObject.GetBoltDistYCount();
+		{
+			return teklaObject.GetBoltDistYCount();
+		}
 
 		public System.Double GetBoltDistX(System.Int32 Index)
-			 => teklaObject.GetBoltDistX(Index);
+		{
+			return teklaObject.GetBoltDistX(Index);
+		}
 
 		public System.Double GetBoltDistY(System.Int32 Index)
-			 => teklaObject.GetBoltDistY(Index);
+		{
+			return teklaObject.GetBoltDistY(Index);
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 
 

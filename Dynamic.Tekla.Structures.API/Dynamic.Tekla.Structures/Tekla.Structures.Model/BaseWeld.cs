@@ -277,10 +277,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 		public System.Collections.ArrayList GetWeldGeometries()
-			 => teklaObject.GetWeldGeometries();
+		{
+			return teklaObject.GetWeldGeometries();
+		}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
+		{
+			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
+		}
 
 
 

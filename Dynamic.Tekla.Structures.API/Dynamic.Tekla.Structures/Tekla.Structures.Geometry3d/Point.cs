@@ -56,28 +56,44 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public void Zero()
-			 => teklaObject.Zero();
+		{
+			return teklaObject.Zero();
+		}
 
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
-			 => teklaObject.Translate(X, Y, Z);
+		{
+			return teklaObject.Translate(X, Y, Z);
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Subtraction(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Subtraction(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Subtraction(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2)));
+		}
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
+		{
+			return teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
+		}
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
-			 => teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
+		{
+			return teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2));
+		}
 
 		public System.Boolean AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-			 => teklaObject.AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
+		{
+			return teklaObject.AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
+		}
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => teklaObject.CompareTo(obj);
+		{
+			return teklaObject.CompareTo(obj);
+		}
 
 
 

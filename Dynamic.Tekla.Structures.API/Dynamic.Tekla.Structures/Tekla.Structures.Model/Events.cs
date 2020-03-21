@@ -17,160 +17,264 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void add_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate value)
-			 => teklaObject.add_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
+		}
 
 		public void remove_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate value)
-			 => teklaObject.remove_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_SelectionChange(Dynamic.Tekla.Structures.Model.Events.SelectionChangeDelegate_.GetTSObject(value));
+		}
 
 		public void add_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate value)
-			 => teklaObject.add_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
+		}
 
 		public void remove_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate value)
-			 => teklaObject.remove_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_CommandStatusChange(Dynamic.Tekla.Structures.Model.Events.CommandStatusChangeDelegate_.GetTSObject(value));
+		}
 
 		public void add_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate value)
-			 => teklaObject.add_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
+		}
 
 		public void remove_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate value)
-			 => teklaObject.remove_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_TrackEvent(Dynamic.Tekla.Structures.Model.Events.TrackEventDelegate_.GetTSObject(value));
+		}
 
 		public void add_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate value)
-			 => teklaObject.add_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate value)
-			 => teklaObject.remove_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_PointInputChanged(Dynamic.Tekla.Structures.Model.Events.PointInputChangedDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate value)
-			 => teklaObject.add_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate value)
-			 => teklaObject.remove_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelSave(Dynamic.Tekla.Structures.Model.Events.ModelSaveDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate value)
-			 => teklaObject.add_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate value)
-			 => teklaObject.remove_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelSaveAs(Dynamic.Tekla.Structures.Model.Events.ModelSaveAsDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => teklaObject.add_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => teklaObject.remove_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelLoad(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => teklaObject.add_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate value)
-			 => teklaObject.remove_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelUnloading(Dynamic.Tekla.Structures.Model.Events.ModelLoadDelegate_.GetTSObject(value));
+		}
 
 		public void add_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate value)
-			 => teklaObject.add_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
+		}
 
 		public void remove_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate value)
-			 => teklaObject.remove_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_Numbering(Dynamic.Tekla.Structures.Model.Events.NumberingDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate value)
-			 => teklaObject.add_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate value)
-			 => teklaObject.remove_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelChanged(Dynamic.Tekla.Structures.Model.Events.ModelChangedDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate value)
-			 => teklaObject.add_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate value)
-			 => teklaObject.remove_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelObjectNumbered(Dynamic.Tekla.Structures.Model.Events.ModelObjectNumberedDelegate_.GetTSObject(value));
+		}
 
 		public void add_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate value)
-			 => teklaObject.add_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate value)
-			 => teklaObject.remove_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ModelObjectChanged(Dynamic.Tekla.Structures.Model.Events.ModelObjectChangedDelegate_.GetTSObject(value));
+		}
 
 		public void add_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate value)
-			 => teklaObject.add_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
+		}
 
 		public void remove_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate value)
-			 => teklaObject.remove_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_TeklaStructuresExit(Dynamic.Tekla.Structures.Model.Events.TeklaStructuresExitDelegate_.GetTSObject(value));
+		}
 
 		public void add_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate value)
-			 => teklaObject.add_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate value)
-			 => teklaObject.remove_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ClashCheckDone(Dynamic.Tekla.Structures.Model.Events.ClashCheckDoneDelegate_.GetTSObject(value));
+		}
 
 		public void add_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate value)
-			 => teklaObject.add_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate value)
-			 => teklaObject.remove_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_ClashDetected(Dynamic.Tekla.Structures.Model.Events.ClashDetectedDelegate_.GetTSObject(value));
+		}
 
 		public void add_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate value)
-			 => teklaObject.add_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.add_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
+		}
 
 		public void remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate value)
-			 => teklaObject.remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
+		{
+			return teklaObject.remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
+		}
 
 		public void OnSelectionChange(System.String eventName, System.Object parameters)
-			 => teklaObject.OnSelectionChange(eventName, parameters);
+		{
+			return teklaObject.OnSelectionChange(eventName, parameters);
+		}
 
 		public void OnAnnotationSelectionChange(System.String eventName, System.Object parameters)
-			 => teklaObject.OnAnnotationSelectionChange(eventName, parameters);
+		{
+			return teklaObject.OnAnnotationSelectionChange(eventName, parameters);
+		}
 
 		public void OnCommandStatusChange(System.String eventName, System.Object parameters)
-			 => teklaObject.OnCommandStatusChange(eventName, parameters);
+		{
+			return teklaObject.OnCommandStatusChange(eventName, parameters);
+		}
 
 		public void OnTrackEvent(System.String eventName, System.Object parameters)
-			 => teklaObject.OnTrackEvent(eventName, parameters);
+		{
+			return teklaObject.OnTrackEvent(eventName, parameters);
+		}
 
 		public void OnPointInputChangedEvent(System.String eventName, System.Object parameters)
-			 => teklaObject.OnPointInputChangedEvent(eventName, parameters);
+		{
+			return teklaObject.OnPointInputChangedEvent(eventName, parameters);
+		}
 
 		public void OnModelSave(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelSave(eventName, parameters);
+		{
+			return teklaObject.OnModelSave(eventName, parameters);
+		}
 
 		public void OnModelSaveAs(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelSaveAs(eventName, parameters);
+		{
+			return teklaObject.OnModelSaveAs(eventName, parameters);
+		}
 
 		public void OnModelLoad(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelLoad(eventName, parameters);
+		{
+			return teklaObject.OnModelLoad(eventName, parameters);
+		}
 
 		public void OnModelUnloading(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelUnloading(eventName, parameters);
+		{
+			return teklaObject.OnModelUnloading(eventName, parameters);
+		}
 
 		public void OnNumbering(System.String eventName, System.Object parameters)
-			 => teklaObject.OnNumbering(eventName, parameters);
+		{
+			return teklaObject.OnNumbering(eventName, parameters);
+		}
 
 		public void OnModelObjectNumbered(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelObjectNumbered(eventName, parameters);
+		{
+			return teklaObject.OnModelObjectNumbered(eventName, parameters);
+		}
 
 		public void OnModelObjectChanged(System.String eventName, System.Object parameters)
-			 => teklaObject.OnModelObjectChanged(eventName, parameters);
+		{
+			return teklaObject.OnModelObjectChanged(eventName, parameters);
+		}
 
 		public void OnDbCommit(System.String eventName, System.Object parameters)
-			 => teklaObject.OnDbCommit(eventName, parameters);
+		{
+			return teklaObject.OnDbCommit(eventName, parameters);
+		}
 
 		public void OnTeklaStructuresExit(System.String eventName, System.Object parameters)
-			 => teklaObject.OnTeklaStructuresExit(eventName, parameters);
+		{
+			return teklaObject.OnTeklaStructuresExit(eventName, parameters);
+		}
 
 		public void OnClashCheckDone(System.String eventName, System.Object parameters)
-			 => teklaObject.OnClashCheckDone(eventName, parameters);
+		{
+			return teklaObject.OnClashCheckDone(eventName, parameters);
+		}
 
 		public void OnClashDetected(System.String eventName, System.Object parameters)
-			 => teklaObject.OnClashDetected(eventName, parameters);
+		{
+			return teklaObject.OnClashDetected(eventName, parameters);
+		}
 
 		public void OnInterrupted()
-			 => teklaObject.OnInterrupted();
+		{
+			return teklaObject.OnInterrupted();
+		}
 
 		public System.Object InitializeLifetimeService()
-			 => teklaObject.InitializeLifetimeService();
+		{
+			return teklaObject.InitializeLifetimeService();
+		}
 
 		public void Register()
-			 => teklaObject.Register();
+		{
+			return teklaObject.Register();
+		}
 
 		public void UnRegister()
-			 => teklaObject.UnRegister();
+		{
+			return teklaObject.UnRegister();
+		}
 
 
 
@@ -192,10 +296,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -239,10 +347,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status)
-			 => teklaObject.Invoke(TSCommand, TSCommandParam, Status);
+		{
+			return teklaObject.Invoke(TSCommand, TSCommandParam, Status);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -286,10 +398,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.String Category, System.String Name, System.String Content)
-			 => teklaObject.Invoke(Category, Name, Content);
+		{
+			return teklaObject.Invoke(Category, Name, Content);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -333,10 +449,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -380,10 +500,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -427,10 +551,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -474,10 +602,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -521,10 +653,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -568,10 +704,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
-			 => teklaObject.Invoke(Objects);
+		{
+			return teklaObject.Invoke(Objects);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -615,10 +755,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
-			 => teklaObject.Invoke(Changes);
+		{
+			return teklaObject.Invoke(Changes);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -662,10 +806,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -709,10 +857,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.Int32 NumbersOfClashes)
-			 => teklaObject.Invoke(NumbersOfClashes);
+		{
+			return teklaObject.Invoke(NumbersOfClashes);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -756,10 +908,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
-			 => teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
+		{
+			return teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -803,10 +959,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
-			 => teklaObject.Invoke(Changes);
+		{
+			return teklaObject.Invoke(Changes);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -850,10 +1010,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void Invoke()
-			 => teklaObject.Invoke();
+		{
+			return teklaObject.Invoke();
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 

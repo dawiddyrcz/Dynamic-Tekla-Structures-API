@@ -101,25 +101,39 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public System.Boolean IsPerspectiveViewProjection()
-			 => teklaObject.IsPerspectiveViewProjection();
+		{
+			return teklaObject.IsPerspectiveViewProjection();
+		}
 
 		public System.Boolean IsVisible()
-			 => teklaObject.IsVisible();
+		{
+			return teklaObject.IsVisible();
+		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection GetClipPlanes()
-			 => Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(teklaObject.GetClipPlanes());
+		{
+			return Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(teklaObject.GetClipPlanes());
+		}
 
 
 

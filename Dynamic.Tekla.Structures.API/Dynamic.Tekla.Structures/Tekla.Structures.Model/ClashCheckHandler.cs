@@ -14,13 +14,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public ClashCheckHandler() {}
 
 		public System.Boolean RunClashCheck()
-			 => teklaObject.RunClashCheck();
+		{
+			return teklaObject.RunClashCheck();
+		}
 
 		public System.Boolean StopClashCheck()
-			 => teklaObject.StopClashCheck();
+		{
+			return teklaObject.StopClashCheck();
+		}
 
 		public System.Collections.ArrayList GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier ID1, Dynamic.Tekla.Structures.Identifier ID2)
-			 => teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+		{
+			return teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+		}
 
 
 

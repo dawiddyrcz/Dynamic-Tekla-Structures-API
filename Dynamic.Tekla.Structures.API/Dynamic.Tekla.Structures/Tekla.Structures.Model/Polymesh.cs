@@ -23,13 +23,19 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.String Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep)
-			 => teklaObject.Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep));
+		{
+			return teklaObject.Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep));
+		}
 
 		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
-			 => teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
+		{
+			return teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
+		}
 
-		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
-			 => teklaObject.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
+		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, out Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
+		{
+			return teklaObject.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
+		}
 
 
 

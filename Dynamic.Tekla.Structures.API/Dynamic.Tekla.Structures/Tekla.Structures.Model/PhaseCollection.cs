@@ -32,7 +32,9 @@ namespace Dynamic.Tekla.Structures.Model
 		public PhaseCollection() {}
 
 		public void CopyTo(System.Array Array, System.Int32 Index)
-			 => teklaObject.CopyTo(Array, Index);
+		{
+			return teklaObject.CopyTo(Array, Index);
+		}
 
 
 

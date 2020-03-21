@@ -50,7 +50,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
-			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetNormal());
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetNormal());
+		}
 
 
 

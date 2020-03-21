@@ -13,22 +13,34 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line line1, Dynamic.Tekla.Structures.Geometry3d.Line line2)
-			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line2)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line2)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane plane)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane plane)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane plane1, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane plane2)
-			 => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane2)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.PlaneToPlane(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane1), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(plane2)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineToObb(Dynamic.Tekla.Structures.Geometry3d.Line line, Dynamic.Tekla.Structures.Geometry3d.OBB obb)
-			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineToObb(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line), Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineToObb(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line), Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb)));
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToObb(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment, Dynamic.Tekla.Structures.Geometry3d.OBB obb)
-			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineSegmentToObb(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment), Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb)));
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineSegmentToObb(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment), Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb)));
+		}
 
 
 

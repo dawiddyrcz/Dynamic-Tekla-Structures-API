@@ -13,13 +13,19 @@ namespace Dynamic.Tekla.Structures
 
 
 		public void Add(System.String key)
-			 => teklaObject.Add(key);
+		{
+			return teklaObject.Add(key);
+		}
 
 		public System.String Get(System.String key)
-			 => teklaObject.Get(key);
+		{
+			return teklaObject.Get(key);
+		}
 
 		public System.Boolean ContainsVariable(System.String key)
-			 => teklaObject.ContainsVariable(key);
+		{
+			return teklaObject.ContainsVariable(key);
+		}
 
 
 

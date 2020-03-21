@@ -134,58 +134,94 @@ namespace Dynamic.Tekla.Structures.Model
 		public ProjectInfo() {}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.String Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
-		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable Values)
-			 => teklaObject.GetIntegerUserProperties(Values);
+		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable Values)
+		{
+			return teklaObject.GetIntegerUserProperties(ref Values);
+		}
 
-		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable Values)
-			 => teklaObject.GetDoubleUserProperties(Values);
+		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable Values)
+		{
+			return teklaObject.GetDoubleUserProperties(ref Values);
+		}
 
-		public System.Boolean GetStringUserProperties(System.Collections.Hashtable Values)
-			 => teklaObject.GetStringUserProperties(Values);
+		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable Values)
+		{
+			return teklaObject.GetStringUserProperties(ref Values);
+		}
 
-		public System.Boolean GetDynamicStringProperty(System.String Name, System.String Value)
-			 => teklaObject.GetDynamicStringProperty(Name, Value);
+		public System.Boolean GetDynamicStringProperty(System.String Name, ref System.String Value)
+		{
+			return teklaObject.GetDynamicStringProperty(Name, ref Value);
+		}
 
 		public System.Boolean SetDynamicStringProperty(System.String Name, System.String Value)
-			 => teklaObject.SetDynamicStringProperty(Name, Value);
+		{
+			return teklaObject.SetDynamicStringProperty(Name, Value);
+		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
-			 => teklaObject.GetBasePoints();
+		{
+			return teklaObject.GetBasePoints();
+		}
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByName(name));
+		{
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByName(name));
+		}
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByGuid(guid));
+		{
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByGuid(guid));
+		}
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetCurrentCoordsysBasePoint());
+		{
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetCurrentCoordsysBasePoint());
+		}
 
 		public System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
-			 => teklaObject.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
+		{
+			return teklaObject.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
+		}
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetProjectBasePoint());
+		{
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetProjectBasePoint());
+		}
 
 
 

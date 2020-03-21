@@ -32,7 +32,9 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public ClipPlaneCollection() {}
 
 		public void CopyTo(System.Array array, System.Int32 index)
-			 => teklaObject.CopyTo(array, index);
+		{
+			return teklaObject.CopyTo(array, index);
+		}
 
 
 

@@ -17,10 +17,14 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		}
 
 		public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
-			 => teklaObject.GetGuidMapping();
+		{
+			return teklaObject.GetGuidMapping();
+		}
 
 		public System.Guid GetNewGuid(System.Guid oldGuid)
-			 => teklaObject.GetNewGuid(oldGuid);
+		{
+			return teklaObject.GetNewGuid(oldGuid);
+		}
 
 
 

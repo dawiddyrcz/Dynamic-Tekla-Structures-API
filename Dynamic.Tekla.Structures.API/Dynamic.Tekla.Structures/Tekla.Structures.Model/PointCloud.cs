@@ -65,25 +65,39 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean Attach()
-			 => teklaObject.Attach();
+		{
+			return teklaObject.Attach();
+		}
 
 		public System.Boolean AttachComplete()
-			 => teklaObject.AttachComplete();
+		{
+			return teklaObject.AttachComplete();
+		}
 
 		public System.Boolean Detach()
-			 => teklaObject.Detach();
+		{
+			return teklaObject.Detach();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean SetVisibility(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> views, System.Boolean visible)
-			 => teklaObject.SetVisibility(views, visible);
+		{
+			return teklaObject.SetVisibility(views, visible);
+		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> GetVisibleInViews()
-			 => teklaObject.GetVisibleInViews();
+		{
+			return teklaObject.GetVisibleInViews();
+		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
-			 => teklaObject.GetPointClouds();
+		{
+			return teklaObject.GetPointClouds();
+		}
 
 
 

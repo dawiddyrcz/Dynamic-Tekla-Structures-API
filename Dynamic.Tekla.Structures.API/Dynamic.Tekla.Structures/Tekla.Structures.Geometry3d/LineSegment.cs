@@ -48,16 +48,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public System.Double Length()
-			 => teklaObject.Length();
+		{
+			return teklaObject.Length();
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
-			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
+		{
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
+		}
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-			 => teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+		{
+			return teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+		}
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-			 => teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+		{
+			return teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+		}
 
 
 

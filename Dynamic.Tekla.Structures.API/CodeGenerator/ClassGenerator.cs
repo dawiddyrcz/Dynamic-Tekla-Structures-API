@@ -171,10 +171,12 @@ namespace CodeGenerator
                     sb.Append(name);
                     sb.Append("(");
 
+                    //params in method name
                     foreach (var param in method.GetParameters())
                     {
-                        if (param.ParameterType.IsByRef) sb.Append("ref ");
-                        //if (param.IsOut) sb.Append("out ");
+                        if (param.IsOut) sb.Append("out ");
+                        else if (param.ParameterType.IsByRef) sb.Append("ref ");
+
                         sb.Append(GetTypeFullName(param.ParameterType));
                         sb.Append(" ");
                         sb.Append(param.Name);
@@ -182,17 +184,16 @@ namespace CodeGenerator
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-                    sb.Append(")\n\t\t\t => ");
+                    sb.Append(")\n\t\t{\n");
+                    sb.Append("\t\t\treturn ");
                     sb.Append(GetTypeFullName(method.ReturnType));
                     sb.Append("_.FromTSObject($dfield.");
                     sb.Append(name);
                     sb.Append("(");
 
+                    //params in method body
                     foreach (var param in method.GetParameters())
                     {
-                        if (param.ParameterType.IsByRef) sb.Append("ref ");
-                        //if (param.IsOut) sb.Append("out ");
-                        
                         if (IsTeklaType(param.ParameterType))
                         {
                             sb.Append(GetTypeFullName(param.ParameterType));
@@ -201,12 +202,17 @@ namespace CodeGenerator
                             sb.Append(")");
                         }
                         else
+                        {
+                            if (param.IsOut) sb.Append("out ");
+                            else if (param.ParameterType.IsByRef) sb.Append("ref ");
+
                             sb.Append(param.Name);
+                        }
                         sb.Append(", ");
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-                    sb.Append("));");
+                    sb.Append("));\n\t\t}");
                 }
                 else
                 {
@@ -217,15 +223,16 @@ namespace CodeGenerator
                     sb.Append(name);
                     sb.Append("(");
 
+                    //params in method name
                     foreach (var param in method.GetParameters())
                     {
                         var paramName = param.Name;
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
-                        //if (param.ParameterType.IsByRef) sb.Append("ref ");
-                        //if (param.IsOut) sb.Append("out ");
-
+                        if (param.IsOut) sb.Append("out ");
+                        else if (param.ParameterType.IsByRef) sb.Append("ref ");
+                        
                         var paramTypeFullName = GetTypeFullName(param.ParameterType);
                         sb.Append(paramTypeFullName);
                         sb.Append(" ");
@@ -234,11 +241,12 @@ namespace CodeGenerator
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-                    sb.Append(")\n\t\t\t => ");
-                    sb.Append("$dfield.");
+                    sb.Append(")\n\t\t{\n");
+                    sb.Append("\t\t\treturn $dfield.");
                     sb.Append(name);
                     sb.Append("(");
 
+                    //params in method body
                     foreach (var param in method.GetParameters())
                     {
                         var paramName = param.Name;
@@ -256,13 +264,17 @@ namespace CodeGenerator
                             sb.Append(")");
                         }
                         else
+                        {
+                            if (param.IsOut) sb.Append("out ");
+                            else if (param.ParameterType.IsByRef) sb.Append("ref ");
                             sb.Append(paramName);
+                        }
 
                         sb.Append(", ");
                     }
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-                    sb.Append(");");
+                    sb.Append(");\n\t\t}");
                 }
 
                 sb.Append("\n\n");

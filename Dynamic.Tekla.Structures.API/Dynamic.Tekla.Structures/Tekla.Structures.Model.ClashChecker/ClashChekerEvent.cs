@@ -13,7 +13,9 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
-			 => Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+		{
+			return Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+		}
 
 
 
@@ -35,10 +37,14 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		}
 
 		public void Invoke(System.Int32 nClashes)
-			 => teklaObject.Invoke(nClashes);
+		{
+			return teklaObject.Invoke(nClashes);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 
@@ -82,10 +88,14 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		}
 
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
-			 => teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
+		{
+			return teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 

@@ -23,10 +23,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
-			 => teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
+		{
+			return teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
+		}
 
-		public System.Boolean CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon polygon)
-			 => teklaObject.CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon));
+		public System.Boolean CalculatePolygon(out Dynamic.Tekla.Structures.Model.Polygon polygon)
+		{
+			return teklaObject.CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon));
+		}
 
 
 

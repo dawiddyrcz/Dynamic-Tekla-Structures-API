@@ -35,22 +35,34 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => teklaObject.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+		{
+			return teklaObject.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+		}
 
 		public System.Boolean AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point Position1, Dynamic.Tekla.Structures.Geometry3d.Point Position2)
-			 => teklaObject.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
+		{
+			return teklaObject.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
+		}
 
 		public System.Boolean AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon P)
-			 => teklaObject.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
+		{
+			return teklaObject.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
+		}
 
 		public System.Boolean AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => teklaObject.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		{
+			return teklaObject.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		}
 
 		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
-			 => teklaObject.AddInputObjects(Objects);
+		{
+			return teklaObject.AddInputObjects(Objects);
+		}
 
 		public void CopyTo(System.Array array, System.Int32 index)
-			 => teklaObject.CopyTo(array, index);
+		{
+			return teklaObject.CopyTo(array, index);
+		}
 
 
 

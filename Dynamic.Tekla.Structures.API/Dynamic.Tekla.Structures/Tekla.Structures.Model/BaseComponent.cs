@@ -25,25 +25,39 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
-			 => teklaObject.SetAttribute(AttrName, StrValue);
+		{
+			return teklaObject.SetAttribute(AttrName, StrValue);
+		}
 
 		public void SetAttribute(System.String AttrName, System.Int32 Value)
-			 => teklaObject.SetAttribute(AttrName, Value);
+		{
+			return teklaObject.SetAttribute(AttrName, Value);
+		}
 
 		public void SetAttribute(System.String AttrName, System.Double DValue)
-			 => teklaObject.SetAttribute(AttrName, DValue);
+		{
+			return teklaObject.SetAttribute(AttrName, DValue);
+		}
 
-		public System.Boolean GetAttribute(System.String AttrName, System.String StrValue)
-			 => teklaObject.GetAttribute(AttrName, StrValue);
+		public System.Boolean GetAttribute(System.String AttrName, ref System.String StrValue)
+		{
+			return teklaObject.GetAttribute(AttrName, ref StrValue);
+		}
 
-		public System.Boolean GetAttribute(System.String AttrName, System.Int32 Value)
-			 => teklaObject.GetAttribute(AttrName, Value);
+		public System.Boolean GetAttribute(System.String AttrName, ref System.Int32 Value)
+		{
+			return teklaObject.GetAttribute(AttrName, ref Value);
+		}
 
-		public System.Boolean GetAttribute(System.String AttrName, System.Double DValue)
-			 => teklaObject.GetAttribute(AttrName, DValue);
+		public System.Boolean GetAttribute(System.String AttrName, ref System.Double DValue)
+		{
+			return teklaObject.GetAttribute(AttrName, ref DValue);
+		}
 
 		public System.Boolean LoadAttributesFromFile(System.String Filename)
-			 => teklaObject.LoadAttributesFromFile(Filename);
+		{
+			return teklaObject.LoadAttributesFromFile(Filename);
+		}
 
 
 

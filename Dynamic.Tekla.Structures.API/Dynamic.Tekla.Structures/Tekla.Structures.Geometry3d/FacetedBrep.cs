@@ -61,16 +61,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public System.Boolean CheckForTwoManifold()
-			 => teklaObject.CheckForTwoManifold();
+		{
+			return teklaObject.CheckForTwoManifold();
+		}
 
 		public System.Int32 GetInnerFace(System.Int32 faceIndex)
-			 => teklaObject.GetInnerFace(faceIndex);
+		{
+			return teklaObject.GetInnerFace(faceIndex);
+		}
 
 		public System.Int32 GetInnerFaceCount(System.Int32 faceIndex)
-			 => teklaObject.GetInnerFaceCount(faceIndex);
+		{
+			return teklaObject.GetInnerFaceCount(faceIndex);
+		}
 
 		public System.Int32 GetOuterFace(System.Int32 faceIndex)
-			 => teklaObject.GetOuterFace(faceIndex);
+		{
+			return teklaObject.GetOuterFace(faceIndex);
+		}
 
 
 

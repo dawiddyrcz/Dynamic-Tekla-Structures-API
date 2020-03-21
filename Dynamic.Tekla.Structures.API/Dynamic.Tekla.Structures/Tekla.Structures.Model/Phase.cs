@@ -56,34 +56,54 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
-			 => teklaObject.SetUserProperty(Name, Value);
+		{
+			return teklaObject.SetUserProperty(Name, Value);
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.String Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
-		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
-			 => teklaObject.GetUserProperty(Name, Value);
+		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
+		{
+			return teklaObject.GetUserProperty(Name, ref Value);
+		}
 
 
 

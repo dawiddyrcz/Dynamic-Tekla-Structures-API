@@ -26,10 +26,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean IsEmpty()
-			 => teklaObject.IsEmpty();
+		{
+			return teklaObject.IsEmpty();
+		}
 
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
-			 => Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(teklaObject.GetGeometryEnumerator());
+		{
+			return Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(teklaObject.GetGeometryEnumerator());
+		}
 
 
 

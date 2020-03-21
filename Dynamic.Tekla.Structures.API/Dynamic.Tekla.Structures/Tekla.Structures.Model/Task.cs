@@ -101,31 +101,49 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 		public System.Boolean AddObjectsToTask(System.Collections.ArrayList ModelObjects)
-			 => teklaObject.AddObjectsToTask(ModelObjects);
+		{
+			return teklaObject.AddObjectsToTask(ModelObjects);
+		}
 
 		public System.Boolean RemoveObjectsFromTask(System.Collections.ArrayList ModelObjects)
-			 => teklaObject.RemoveObjectsFromTask(ModelObjects);
+		{
+			return teklaObject.RemoveObjectsFromTask(ModelObjects);
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFathers()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetFathers());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetFathers());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDependencies()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetDependencies());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetDependencies());
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllTasksOfSelectedObjects());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllTasksOfSelectedObjects());
+		}
 
 
 

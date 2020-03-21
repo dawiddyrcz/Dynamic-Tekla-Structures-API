@@ -53,7 +53,9 @@ namespace Dynamic.Tekla.Structures
 		}
 
 		public System.Boolean IsValid()
-			 => teklaObject.IsValid();
+		{
+			return teklaObject.IsValid();
+		}
 
 
 

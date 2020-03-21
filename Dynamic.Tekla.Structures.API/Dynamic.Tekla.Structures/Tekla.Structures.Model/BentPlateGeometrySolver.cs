@@ -17,55 +17,89 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, System.Double radius)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), radius));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), radius));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, System.Double largestRadius, System.Double halfAperture)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), largestRadius, halfAperture));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), largestRadius, halfAperture));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, System.Double radius)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), radius));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), radius));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, System.Double largestRadius, System.Double halfAperture)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), largestRadius, halfAperture));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), largestRadius, halfAperture));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection legSection)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(legSection)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(legSection)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection bendSection, Dynamic.Tekla.Structures.Model.BendSurface surface)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(bendSection), Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(surface)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(bendSection), Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(surface)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyCylindricalSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection, Dynamic.Tekla.Structures.Model.CylindricalSurface surface)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyCylindricalSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(surface)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyCylindricalSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(surface)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyRadius(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection, System.Double radius)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyRadius(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), radius));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyRadius(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), radius));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyConicalRadiuses(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection conicalSection, System.Double radius1, System.Double radius2)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyConicalRadiuses(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), radius1, radius2));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyConicalRadiuses(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), radius1, radius2));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ScaleConeSection(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection conicalSection, System.Double scale)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ScaleConeSection(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), scale));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ScaleConeSection(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), scale));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyPolygon(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection polygonSection, Dynamic.Tekla.Structures.Model.Contour points)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyPolygon(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(polygonSection), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(points)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyPolygon(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(polygonSection), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(points)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetMainSection(Dynamic.Tekla.Structures.Model.GeometrySection newMainSection, Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetMainSection(Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(newMainSection), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetMainSection(Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(newMainSection), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetBendAngle(System.Double angle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToSetAngle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToMove, Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry)
-			 => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetBendAngle(angle, Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToSetAngle), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToMove), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
+		{
+			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetBendAngle(angle, Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToSetAngle), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToMove), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
+		}
 
 
 

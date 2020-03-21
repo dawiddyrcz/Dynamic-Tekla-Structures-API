@@ -17,28 +17,44 @@ namespace Dynamic.Tekla.Structures
 		}
 
 		public System.String GetCurrentProgramVersion()
-			 => teklaObject.GetCurrentProgramVersion();
+		{
+			return teklaObject.GetCurrentProgramVersion();
+		}
 
 		public System.String GetBuildNumber()
-			 => teklaObject.GetBuildNumber();
+		{
+			return teklaObject.GetBuildNumber();
+		}
 
 		public System.String GetRevisionDate()
-			 => teklaObject.GetRevisionDate();
+		{
+			return teklaObject.GetRevisionDate();
+		}
 
 		public System.String GetCopyRightText()
-			 => teklaObject.GetCopyRightText();
+		{
+			return teklaObject.GetCopyRightText();
+		}
 
 		public System.String GetLocalAppDataFolder()
-			 => teklaObject.GetLocalAppDataFolder();
+		{
+			return teklaObject.GetLocalAppDataFolder();
+		}
 
 		public System.String GetCommonAppDataFolder()
-			 => teklaObject.GetCommonAppDataFolder();
+		{
+			return teklaObject.GetCommonAppDataFolder();
+		}
 
 		public System.String GetFullTSRegistryKeyText()
-			 => teklaObject.GetFullTSRegistryKeyText();
+		{
+			return teklaObject.GetFullTSRegistryKeyText();
+		}
 
 		public System.String GetCurrentUser()
-			 => teklaObject.GetCurrentUser();
+		{
+			return teklaObject.GetCurrentUser();
+		}
 
 
 

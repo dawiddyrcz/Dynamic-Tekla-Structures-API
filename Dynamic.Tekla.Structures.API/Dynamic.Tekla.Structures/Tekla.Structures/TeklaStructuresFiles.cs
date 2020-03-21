@@ -26,13 +26,19 @@ namespace Dynamic.Tekla.Structures
 		}
 
 		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
-			 => teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
+		{
+			return teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
+		}
 
 		public System.IO.FileInfo GetAttributeFile(System.String fileName)
-			 => teklaObject.GetAttributeFile(fileName);
+		{
+			return teklaObject.GetAttributeFile(fileName);
+		}
 
 		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.List<System.String> searchDirectories, System.String fileName)
-			 => teklaObject.GetAttributeFile(searchDirectories, fileName);
+		{
+			return teklaObject.GetAttributeFile(searchDirectories, fileName);
+		}
 
 
 

@@ -26,7 +26,9 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Face() {}
 
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(teklaObject.GetLoopEnumerator());
+		{
+			return Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(teklaObject.GetLoopEnumerator());
+		}
 
 
 

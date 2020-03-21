@@ -20,10 +20,14 @@ namespace Dynamic.Tekla.Structures.Model
 		public PolymeshEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => teklaObject.MoveNext();
+		{
+			return teklaObject.MoveNext();
+		}
 
 		public void Reset()
-			 => teklaObject.Reset();
+		{
+			return teklaObject.Reset();
+		}
 
 
 

@@ -53,31 +53,49 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		{
+			return teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+		{
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+		}
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		{
+			return teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+		}
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
-			 => teklaObject.SetSecondaryObjects(Secondaries);
+		{
+			return teklaObject.SetSecondaryObjects(Secondaries);
+		}
 
 		public System.Collections.ArrayList GetSecondaryObjects()
-			 => teklaObject.GetSecondaryObjects();
+		{
+			return teklaObject.GetSecondaryObjects();
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 
 

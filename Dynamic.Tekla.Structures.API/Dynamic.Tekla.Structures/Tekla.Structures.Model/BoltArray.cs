@@ -17,46 +17,74 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean AddBoltDistX(System.Double DistX)
-			 => teklaObject.AddBoltDistX(DistX);
+		{
+			return teklaObject.AddBoltDistX(DistX);
+		}
 
 		public System.Boolean AddBoltDistY(System.Double DistY)
-			 => teklaObject.AddBoltDistY(DistY);
+		{
+			return teklaObject.AddBoltDistY(DistY);
+		}
 
 		public System.Boolean RemoveBoltDistX(System.Int32 Index)
-			 => teklaObject.RemoveBoltDistX(Index);
+		{
+			return teklaObject.RemoveBoltDistX(Index);
+		}
 
 		public System.Boolean RemoveBoltDistY(System.Int32 Index)
-			 => teklaObject.RemoveBoltDistY(Index);
+		{
+			return teklaObject.RemoveBoltDistY(Index);
+		}
 
 		public System.Int32 GetBoltDistXCount()
-			 => teklaObject.GetBoltDistXCount();
+		{
+			return teklaObject.GetBoltDistXCount();
+		}
 
 		public System.Int32 GetBoltDistYCount()
-			 => teklaObject.GetBoltDistYCount();
+		{
+			return teklaObject.GetBoltDistYCount();
+		}
 
 		public System.Double GetBoltDistX(System.Int32 Index)
-			 => teklaObject.GetBoltDistX(Index);
+		{
+			return teklaObject.GetBoltDistX(Index);
+		}
 
 		public System.Double GetBoltDistY(System.Int32 Index)
-			 => teklaObject.GetBoltDistY(Index);
+		{
+			return teklaObject.GetBoltDistY(Index);
+		}
 
 		public System.Boolean SetBoltDistX(System.Int32 Index, System.Double DistX)
-			 => teklaObject.SetBoltDistX(Index, DistX);
+		{
+			return teklaObject.SetBoltDistX(Index, DistX);
+		}
 
 		public System.Boolean SetBoltDistY(System.Int32 Index, System.Double DistY)
-			 => teklaObject.SetBoltDistY(Index, DistY);
+		{
+			return teklaObject.SetBoltDistY(Index, DistY);
+		}
 
 		public System.Boolean Insert()
-			 => teklaObject.Insert();
+		{
+			return teklaObject.Insert();
+		}
 
 		public System.Boolean Select()
-			 => teklaObject.Select();
+		{
+			return teklaObject.Select();
+		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 		public System.Boolean Delete()
-			 => teklaObject.Delete();
+		{
+			return teklaObject.Delete();
+		}
 
 
 

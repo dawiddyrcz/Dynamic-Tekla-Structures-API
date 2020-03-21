@@ -20,10 +20,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
-			 => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
+		{
+			return Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
+		}
 
 		public void Dispose()
-			 => teklaObject.Dispose();
+		{
+			return teklaObject.Dispose();
+		}
 
 
 

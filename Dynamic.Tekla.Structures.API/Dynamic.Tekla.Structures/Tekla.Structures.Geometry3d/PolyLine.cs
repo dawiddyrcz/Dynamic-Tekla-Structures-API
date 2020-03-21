@@ -26,13 +26,19 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 		public System.Double Length()
-			 => teklaObject.Length();
+		{
+			return teklaObject.Length();
+		}
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+		{
+			return teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+		}
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+		{
+			return teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+		}
 
 
 

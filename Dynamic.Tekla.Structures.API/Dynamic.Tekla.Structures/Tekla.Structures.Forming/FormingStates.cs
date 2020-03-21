@@ -61,7 +61,9 @@ namespace Dynamic.Tekla.Structures.Forming
 		}
 
 		public System.Object Clone()
-			 => teklaObject.Clone();
+		{
+			return teklaObject.Clone();
+		}
 
 
 

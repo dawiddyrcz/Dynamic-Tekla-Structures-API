@@ -16,35 +16,55 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings");
 		}
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, System.Boolean Value)
-			 => teklaObject.GetAdvancedOption(VariableName, Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Boolean Value)
+		{
+			return teklaObject.GetAdvancedOption(VariableName, ref Value);
+		}
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, System.Int32 Value)
-			 => teklaObject.GetAdvancedOption(VariableName, Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Int32 Value)
+		{
+			return teklaObject.GetAdvancedOption(VariableName, ref Value);
+		}
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, System.String Value)
-			 => teklaObject.GetAdvancedOption(VariableName, Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.String Value)
+		{
+			return teklaObject.GetAdvancedOption(VariableName, ref Value);
+		}
 
-		public System.Boolean GetAdvancedOption(System.String VariableName, System.Double Value)
-			 => teklaObject.GetAdvancedOption(VariableName, Value);
+		public System.Boolean GetAdvancedOption(System.String VariableName, ref System.Double Value)
+		{
+			return teklaObject.GetAdvancedOption(VariableName, ref Value);
+		}
 
-		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
-			 => teklaObject.GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
+		public System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ClashCheckOptions Options)
+		{
+			return teklaObject.GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
+		}
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
-			 => teklaObject.SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
+		{
+			return teklaObject.SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options));
+		}
 
-		public System.Boolean GetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
-			 => teklaObject.GetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
+		public System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ComponentOptions Options)
+		{
+			return teklaObject.GetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
+		}
 
 		public System.Boolean SetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
-			 => teklaObject.SetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
+		{
+			return teklaObject.SetOptions(Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options));
+		}
 
 		public System.Boolean IsToolOptionOn(System.String toolOptionName)
-			 => teklaObject.IsToolOptionOn(toolOptionName);
+		{
+			return teklaObject.IsToolOptionOn(toolOptionName);
+		}
 
 		public System.Boolean IsPourEnabled()
-			 => teklaObject.IsPourEnabled();
+		{
+			return teklaObject.IsPourEnabled();
+		}
 
 
 
@@ -66,10 +86,14 @@ namespace Dynamic.Tekla.Structures
 		}
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
-			 => teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+		{
+			return teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+		}
 
 		public void EndInvoke(System.IAsyncResult result)
-			 => teklaObject.EndInvoke(result);
+		{
+			return teklaObject.EndInvoke(result);
+		}
 
 
 

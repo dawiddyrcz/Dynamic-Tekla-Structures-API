@@ -37,7 +37,9 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.Boolean Modify()
-			 => teklaObject.Modify();
+		{
+			return teklaObject.Modify();
+		}
 
 
 

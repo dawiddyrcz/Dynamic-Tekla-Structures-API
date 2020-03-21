@@ -32,7 +32,9 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Edge() {}
 
 		public System.Object Clone()
-			 => teklaObject.Clone();
+		{
+			return teklaObject.Clone();
+		}
 
 
 

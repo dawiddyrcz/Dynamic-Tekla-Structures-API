@@ -23,10 +23,14 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 		public System.String ParseProfileString(System.String profileString)
-			 => teklaObject.ParseProfileString(profileString);
+		{
+			return teklaObject.ParseProfileString(profileString);
+		}
 
 		public System.String FormatProfileString(System.String profileString)
-			 => teklaObject.FormatProfileString(profileString);
+		{
+			return teklaObject.FormatProfileString(profileString);
+		}
 
 
 

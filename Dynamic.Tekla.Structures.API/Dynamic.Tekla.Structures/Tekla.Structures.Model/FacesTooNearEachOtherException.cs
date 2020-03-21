@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { facestooneareachotherexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(facestooneareachotherexception.OperationStatus);
+			set { facestooneareachotherexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic facestooneareachotherexception;

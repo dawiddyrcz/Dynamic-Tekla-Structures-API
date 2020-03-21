@@ -13,6 +13,24 @@ namespace Dynamic.Tekla.Structures.Model
 			set { contourpoint.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
 		}
 
+		public System.Double X
+		{
+			get => contourpoint.X;
+			set { contourpoint.X = value; }
+		}
+
+		public System.Double Y
+		{
+			get => contourpoint.Y;
+			set { contourpoint.Y = value; }
+		}
+
+		public System.Double Z
+		{
+			get => contourpoint.Z;
+			set { contourpoint.Z = value; }
+		}
+
         
 
         internal dynamic contourpoint;

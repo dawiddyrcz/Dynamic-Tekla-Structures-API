@@ -27,7 +27,9 @@ namespace CodeGenerator
                 ShowAllTypes();
             }
 
-           
+            //TODO make fields as properties
+            //hide private get set accessors in properties
+           //new Tekla.Structures.Geometry3d.Point().
         }
 
         private static void ShowAllTypes()

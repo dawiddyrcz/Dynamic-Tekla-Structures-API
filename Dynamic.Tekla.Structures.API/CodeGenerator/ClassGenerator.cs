@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace CodeGenerator
@@ -15,7 +17,7 @@ namespace CodeGenerator
             string outputText = String.Copy(text);
 
             outputText = outputText.Replace("$constructors", ConstructorsText(type));
-            outputText = outputText.Replace("$dproperties", PropertiesText(type));
+            outputText = outputText.Replace("$dproperties", PropertiesAndFieldsText(type));
             outputText = outputText.Replace("$dmethods", MethodsText(type));
             outputText = outputText.Replace("$classname", type.Name);
 
@@ -187,34 +189,51 @@ namespace CodeGenerator
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
         
-        private string PropertiesText(Type type)
+        /// <summary>Generates text from properties and fields. Public fields are made as properties</summary>
+        private string PropertiesAndFieldsText(Type type)
         {
             var sb = new StringBuilder();
-            var properties = type.GetProperties().GroupBy(t => t.Name).Select(t => t.First());  //In one class returned two properties with the same value
+            var propertiesAndFields = type.GetProperties()
+                .GroupBy(t => t.Name)
+                .Select(t => t.First())//In one class returned two properties with the same value
+                .ToList<MemberInfo>();  
 
-            foreach (var property in properties)
+            var fields = type.GetFields()
+                .Where(f => f.IsPublic & f.IsStatic == false)
+                .GroupBy(t => t.Name)
+                .Select(t => t.First()).ToList<MemberInfo>();
+            propertiesAndFields.AddRange(fields);
+
+            foreach (var propertyOrField in propertiesAndFields)
             {
-                if (IsTeklaType(property.PropertyType))
+                Type currentType = null;
+
+                if (propertyOrField is PropertyInfo pi)
+                    currentType = pi.PropertyType;
+                else if (propertyOrField is FieldInfo fi)
+                    currentType = fi.FieldType;
+
+                if (IsTeklaType(currentType))
                 {
                     sb.Append("\t\tpublic ");
-                    sb.Append(GetTypeFullName(property.PropertyType));
+                    sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
-                    sb.Append(property.Name);
+                    sb.Append(propertyOrField.Name);
                     sb.Append("\n\t\t{" +
-                        "\n\t\t\tget => " + GetTypeFullName(property.PropertyType) + "_.FromTSObject($dfield." +
-                        "" + property.Name + ");" +
-                        "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.GetTSObject(value); }" +
+                        "\n\t\t\tget => " + GetTypeFullName(currentType) + "_.FromTSObject($dfield." +
+                        "" + propertyOrField.Name + ");" +
+                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = " + GetTypeFullName(currentType) + "_.GetTSObject(value); }" +
                         "\n\t\t}\n\n");
                 }
                 else
                 {
                     sb.Append("\t\tpublic ");
-                    sb.Append(GetTypeFullName(property.PropertyType));
+                    sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
-                    sb.Append(property.Name);
+                    sb.Append(propertyOrField.Name);
                     sb.Append("\n\t\t{" +
-                        "\n\t\t\tget => $dfield." + property.Name + ";" +
-                        "\n\t\t\tset { $dfield." + property.Name + " = value; }" +
+                        "\n\t\t\tget => $dfield." + propertyOrField.Name + ";" +
+                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = value; }" +
                         "\n\t\t}\n\n");
                 }
             }

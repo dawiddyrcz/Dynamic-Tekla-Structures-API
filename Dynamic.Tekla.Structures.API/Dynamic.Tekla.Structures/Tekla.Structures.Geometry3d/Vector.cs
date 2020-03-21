@@ -7,6 +7,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public sealed class Vector 
     {
 
+		public System.Double X
+		{
+			get => vector.X;
+			set { vector.X = value; }
+		}
+
+		public System.Double Y
+		{
+			get => vector.Y;
+			set { vector.Y = value; }
+		}
+
+		public System.Double Z
+		{
+			get => vector.Z;
+			set { vector.Z = value; }
+		}
+
         
 
         internal dynamic vector;

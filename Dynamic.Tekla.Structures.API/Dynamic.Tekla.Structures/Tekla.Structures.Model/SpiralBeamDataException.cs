@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { spiralbeamdataexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(spiralbeamdataexception.ErrorStatus);
+			set { spiralbeamdataexception.ErrorStatus = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic spiralbeamdataexception;

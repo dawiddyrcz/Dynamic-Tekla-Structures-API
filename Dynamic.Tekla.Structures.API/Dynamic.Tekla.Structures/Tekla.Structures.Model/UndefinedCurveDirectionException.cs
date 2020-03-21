@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { undefinedcurvedirectionexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(undefinedcurvedirectionexception.OperationStatus);
+			set { undefinedcurvedirectionexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic undefinedcurvedirectionexception;

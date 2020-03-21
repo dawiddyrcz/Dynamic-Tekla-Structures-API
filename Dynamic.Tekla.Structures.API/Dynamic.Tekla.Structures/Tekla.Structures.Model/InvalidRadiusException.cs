@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { invalidradiusexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(invalidradiusexception.OperationStatus);
+			set { invalidradiusexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic invalidradiusexception;

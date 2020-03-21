@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { faceperpendiculartointersectionlineexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(faceperpendiculartointersectionlineexception.OperationStatus);
+			set { faceperpendiculartointersectionlineexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic faceperpendiculartointersectionlineexception;

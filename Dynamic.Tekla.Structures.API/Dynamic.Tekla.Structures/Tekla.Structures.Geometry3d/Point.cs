@@ -7,6 +7,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public sealed class Point 
     {
 
+		public System.Double X
+		{
+			get => point.X;
+			set { point.X = value; }
+		}
+
+		public System.Double Y
+		{
+			get => point.Y;
+			set { point.Y = value; }
+		}
+
+		public System.Double Z
+		{
+			get => point.Z;
+			set { point.Z = value; }
+		}
+
         
 
         internal dynamic point;

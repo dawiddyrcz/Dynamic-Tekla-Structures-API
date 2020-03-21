@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { extensionintersectswithplateexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(extensionintersectswithplateexception.OperationStatus);
+			set { extensionintersectswithplateexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic extensionintersectswithplateexception;

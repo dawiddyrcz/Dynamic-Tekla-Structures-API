@@ -27,8 +27,15 @@ namespace TestConsoleApp
 
             var p1 = new Point();
             var p2 = new Point();
+            p1.X = 0;
+            p1.Y = 0;
+            p1.Z = 0;
 
-            p2.Translate(5000, 5000, 5000);
+            p2.X = 5000;
+            p2.Y = 5000;
+            p2.Z = 5000;
+
+            //p2.Translate(5000, 5000, 5000);
 
             beam.StartPoint = p1;
             beam.EndPoint = p2;

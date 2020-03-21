@@ -55,6 +55,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { connectivegeometryexception.HResult = value; }
 		}
 
+		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+		{
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(connectivegeometryexception.OperationStatus);
+			set { connectivegeometryexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+		}
+
         
 
         internal dynamic connectivegeometryexception;

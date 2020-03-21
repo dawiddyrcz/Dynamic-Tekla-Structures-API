@@ -91,51 +91,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Color = value; }
 		}
 
-		public System.String Name
-		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
-		}
-
-		public System.Int32 FontSize
-		{
-			get => teklaObject.FontSize;
-			set { teklaObject.FontSize = value; }
-		}
-
-		public System.Drawing.Color FontColor
-		{
-			get => teklaObject.FontColor;
-			set { teklaObject.FontColor = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
-		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
-			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public RadialGrid()
 		{

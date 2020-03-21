@@ -79,75 +79,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.InitialAxialElongation = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Identifier FatherId
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.FatherId);
-			set { teklaObject.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
-		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(teklaObject.LoadAttachment);
-			set { teklaObject.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
-		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(teklaObject.PartNames);
-			set { teklaObject.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
-		}
-
-		public System.String PartFilter
-		{
-			get => teklaObject.PartFilter;
-			set { teklaObject.PartFilter = value; }
-		}
-
-		public System.Double BoundingBoxDx
-		{
-			get => teklaObject.BoundingBoxDx;
-			set { teklaObject.BoundingBoxDx = value; }
-		}
-
-		public System.Double BoundingBoxDy
-		{
-			get => teklaObject.BoundingBoxDy;
-			set { teklaObject.BoundingBoxDy = value; }
-		}
-
-		public System.Double BoundingBoxDz
-		{
-			get => teklaObject.BoundingBoxDz;
-			set { teklaObject.BoundingBoxDz = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Model.LoadGroup Group
-		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(teklaObject.Group);
-			set { teklaObject.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public LoadTemperature()
 		{

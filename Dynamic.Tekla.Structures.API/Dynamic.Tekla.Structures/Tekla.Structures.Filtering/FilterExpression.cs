@@ -15,7 +15,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        internal dynamic teklaObject;
+        
 
 
 

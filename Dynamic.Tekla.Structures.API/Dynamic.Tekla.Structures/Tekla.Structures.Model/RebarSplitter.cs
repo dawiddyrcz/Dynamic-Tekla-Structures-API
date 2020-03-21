@@ -43,51 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarSet Father
-		{
-			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
-			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Contour Curve
-		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
-			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
-		{
-			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
-			set { teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
-		}
-
-		public System.Int32 FirstAffectedBar
-		{
-			get => teklaObject.FirstAffectedBar;
-			set { teklaObject.FirstAffectedBar = value; }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public RebarSplitter()
 		{

@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomBoolean() {}
 		public CustomBoolean(System.String UserAttribute)
@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomDateTime() {}
 		public CustomDateTime(System.String UserAttribute)
@@ -101,7 +101,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomNumber() {}
 		public CustomNumber(System.String UserAttribute)
@@ -141,7 +141,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomString() {}
 		public CustomString(System.String UserAttribute)
@@ -181,7 +181,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Class()
 		{
@@ -218,7 +218,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Finish()
 		{
@@ -255,7 +255,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Lot()
 		{
@@ -292,7 +292,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Material()
 		{
@@ -329,7 +329,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Name()
 		{
@@ -366,7 +366,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public NumberingSeries()
 		{
@@ -403,7 +403,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Phase()
 		{
@@ -440,7 +440,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public PositionNumber()
 		{
@@ -477,7 +477,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Prefix()
 		{
@@ -514,7 +514,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public PrimaryPart()
 		{
@@ -551,7 +551,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Profile()
 		{
@@ -588,7 +588,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public StartNumber()
 		{
@@ -625,7 +625,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public PourPhase()
 		{

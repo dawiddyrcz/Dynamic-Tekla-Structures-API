@@ -19,15 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.IsUpToDate = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 
 		public System.Boolean Insert()

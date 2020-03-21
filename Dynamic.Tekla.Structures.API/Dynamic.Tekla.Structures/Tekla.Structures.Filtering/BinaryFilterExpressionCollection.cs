@@ -37,15 +37,9 @@ namespace Dynamic.Tekla.Structures.Filtering
 			set { teklaObject.Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value); }
 		}
 
-		public System.Boolean IsEnable
-		{
-			get => teklaObject.IsEnable;
-			set { teklaObject.IsEnable = value; }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public BinaryFilterExpressionCollection()
 		{

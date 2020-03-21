@@ -9,7 +9,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public NumericConstantFilterExpression() {}
 		public NumericConstantFilterExpression(Dynamic.Tekla.Structures.TeklaStructuresDatabaseTypeEnum ObjectType)

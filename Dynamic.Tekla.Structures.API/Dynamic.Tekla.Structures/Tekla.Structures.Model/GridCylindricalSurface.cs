@@ -19,81 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.CylinderHeight = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.GridBase Parent
-		{
-			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
-			set { teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
-		}
-
-		public System.String Label
-		{
-			get => teklaObject.Label;
-			set { teklaObject.Label = value; }
-		}
-
-		public System.Boolean IsMagnetic
-		{
-			get => teklaObject.IsMagnetic;
-			set { teklaObject.IsMagnetic = value; }
-		}
-
-		public System.Double ExtensionLeft
-		{
-			get => teklaObject.ExtensionLeft;
-			set { teklaObject.ExtensionLeft = value; }
-		}
-
-		public System.Double ExtensionRight
-		{
-			get => teklaObject.ExtensionRight;
-			set { teklaObject.ExtensionRight = value; }
-		}
-
-		public System.Double ExtensionBelow
-		{
-			get => teklaObject.ExtensionBelow;
-			set { teklaObject.ExtensionBelow = value; }
-		}
-
-		public System.Double ExtensionAbove
-		{
-			get => teklaObject.ExtensionAbove;
-			set { teklaObject.ExtensionAbove = value; }
-		}
-
-		public System.Boolean DrawingVisibility
-		{
-			get => teklaObject.DrawingVisibility;
-			set { teklaObject.DrawingVisibility = value; }
-		}
-
-		public System.Boolean IsManual
-		{
-			get => teklaObject.IsManual;
-			set { teklaObject.IsManual = value; }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public GridCylindricalSurface()
 		{

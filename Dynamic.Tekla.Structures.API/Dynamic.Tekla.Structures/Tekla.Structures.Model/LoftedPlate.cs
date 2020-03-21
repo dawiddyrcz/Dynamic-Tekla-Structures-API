@@ -19,93 +19,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.GetTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Model.Profile Profile
-		{
-			get => Dynamic.Tekla.Structures.Model.Profile_.FromTSObject(teklaObject.Profile);
-			set { teklaObject.Profile = Dynamic.Tekla.Structures.Model.Profile_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Material Material
-		{
-			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(teklaObject.Material);
-			set { teklaObject.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.DeformingData DeformingData
-		{
-			get => Dynamic.Tekla.Structures.Model.DeformingData_.FromTSObject(teklaObject.DeformingData);
-			set { teklaObject.DeformingData = Dynamic.Tekla.Structures.Model.DeformingData_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.NumberingSeries PartNumber
-		{
-			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(teklaObject.PartNumber);
-			set { teklaObject.PartNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
-		{
-			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(teklaObject.AssemblyNumber);
-			set { teklaObject.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
-		}
-
-		public System.String Name
-		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
-		}
-
-		public System.String Class
-		{
-			get => teklaObject.Class;
-			set { teklaObject.Class = value; }
-		}
-
-		public System.String Finish
-		{
-			get => teklaObject.Finish;
-			set { teklaObject.Finish = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum CastUnitType
-		{
-			get => Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.FromTSObject(teklaObject.CastUnitType);
-			set { teklaObject.CastUnitType = Dynamic.Tekla.Structures.Model.Part.CastUnitTypeEnum_.GetTSObject(value); }
-		}
-
-		public System.Int32 PourPhase
-		{
-			get => teklaObject.PourPhase;
-			set { teklaObject.PourPhase = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Model.Position Position
-		{
-			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
-			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public LoftedPlate()
 		{

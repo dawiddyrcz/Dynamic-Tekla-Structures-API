@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomBoolean() {}
 		public CustomBoolean(System.String UserAttribute)
@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomDateTime() {}
 		public CustomDateTime(System.String UserAttribute)
@@ -101,7 +101,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomNumber() {}
 		public CustomNumber(System.String UserAttribute)
@@ -141,7 +141,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public CustomString() {}
 		public CustomString(System.String UserAttribute)
@@ -181,7 +181,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Building()
 		{
@@ -218,7 +218,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Section()
 		{
@@ -255,7 +255,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Site()
 		{
@@ -292,7 +292,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public Story()
 		{

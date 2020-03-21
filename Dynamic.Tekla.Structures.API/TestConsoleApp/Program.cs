@@ -54,6 +54,7 @@ namespace TestConsoleApp
                     Console.WriteLine(b.Name);
                     Console.WriteLine(b.StartPoint.ToString());
                     Console.WriteLine(b.EndPoint.ToString());
+                    Console.WriteLine(b.Profile.ProfileString);
                 }
             }
 

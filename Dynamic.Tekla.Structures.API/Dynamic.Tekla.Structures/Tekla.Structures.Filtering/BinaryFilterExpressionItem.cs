@@ -9,7 +9,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public BinaryFilterExpressionItem() {}
 		public BinaryFilterExpressionItem(Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)

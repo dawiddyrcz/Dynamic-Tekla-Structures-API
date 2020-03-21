@@ -7,27 +7,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class Vector  : Dynamic.Tekla.Structures.Geometry3d.Point
     {
 
-		public System.Double X
-		{
-			get => teklaObject.X;
-			set { teklaObject.X = value; }
-		}
-
-		public System.Double Y
-		{
-			get => teklaObject.Y;
-			set { teklaObject.Y = value; }
-		}
-
-		public System.Double Z
-		{
-			get => teklaObject.Z;
-			set { teklaObject.Z = value; }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public Vector()
 		{

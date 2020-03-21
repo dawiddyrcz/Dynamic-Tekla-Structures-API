@@ -184,18 +184,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class SelectionChangeDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -254,18 +242,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class CommandStatusChangeDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -326,18 +302,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class TrackEventDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -396,18 +360,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class ModelSaveDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -468,18 +420,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ModelSaveAsDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -538,18 +478,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class ModelLoadDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -610,18 +538,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class NumberingDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -680,18 +596,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class ModelChangedDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -752,18 +656,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ModelObjectNumberedDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -822,18 +714,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class ModelObjectChangedDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -894,18 +774,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class TeklaStructuresExitDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -964,18 +832,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class ClashCheckDoneDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 
@@ -1036,18 +892,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ClashDetectedDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -1107,18 +951,6 @@ namespace Dynamic.Tekla.Structures.Model
     public  class PointInputChangedDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -1177,18 +1009,6 @@ namespace Dynamic.Tekla.Structures.Model
 
     public  class InterruptedDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 

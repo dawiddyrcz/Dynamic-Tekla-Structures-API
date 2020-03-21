@@ -9,7 +9,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public BooleanConstantFilterExpression() {}
 		public BooleanConstantFilterExpression(System.Boolean Value)

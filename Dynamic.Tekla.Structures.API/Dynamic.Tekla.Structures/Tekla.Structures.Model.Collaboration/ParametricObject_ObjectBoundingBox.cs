@@ -13,51 +13,9 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 			set { teklaObject.yDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
-		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
-			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
-		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.xDir);
-			set { teklaObject.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
-		}
-
-		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
-		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Extrusion);
-			set { teklaObject.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
-		}
-
-		public System.String ProfileName
-		{
-			get => teklaObject.ProfileName;
-			set { teklaObject.ProfileName = value; }
-		}
-
-		public System.String Name
-		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
-		}
-
-		public System.String Description
-		{
-			get => teklaObject.Description;
-			set { teklaObject.Description = value; }
-		}
-
-		public System.String ObjectType
-		{
-			get => teklaObject.ObjectType;
-			set { teklaObject.ObjectType = value; }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public ParametricObject_ObjectBoundingBox() {}
 

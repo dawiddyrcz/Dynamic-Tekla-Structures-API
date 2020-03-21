@@ -73,39 +73,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.ExtensionForMagneticArea = value; }
 		}
 
-		public Dynamic.Tekla.Structures.Model.GridBase Parent
-		{
-			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
-			set { teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
-		}
-
-		public System.Boolean IsManual
-		{
-			get => teklaObject.IsManual;
-			set { teklaObject.IsManual = value; }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public GridPlane()
 		{

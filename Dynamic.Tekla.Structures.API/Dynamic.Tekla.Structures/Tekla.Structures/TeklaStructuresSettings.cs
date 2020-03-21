@@ -52,18 +52,6 @@ namespace Dynamic.Tekla.Structures
     public  class InvalidPathCallback 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;

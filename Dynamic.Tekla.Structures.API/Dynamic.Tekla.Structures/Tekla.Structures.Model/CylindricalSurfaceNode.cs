@@ -13,15 +13,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Surface = Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(value); }
 		}
 
-		public System.Boolean IsAutomatic
-		{
-			get => teklaObject.IsAutomatic;
-			set { teklaObject.IsAutomatic = value; }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public CylindricalSurfaceNode() {}
 		public CylindricalSurfaceNode(Dynamic.Tekla.Structures.Model.CylindricalSurface surface)

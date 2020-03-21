@@ -9,7 +9,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-        internal dynamic teklaObject;
+        
 
 		public DateTimeConstantFilterExpression() {}
 		public DateTimeConstantFilterExpression(System.DateTime Value)

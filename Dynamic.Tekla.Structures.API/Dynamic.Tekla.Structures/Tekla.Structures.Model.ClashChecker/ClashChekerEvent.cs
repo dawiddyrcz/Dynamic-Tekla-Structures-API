@@ -21,18 +21,6 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     public  class ClashCheckDoneDelegate 
     {
 
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
-
         
 
         internal dynamic teklaObject;
@@ -91,18 +79,6 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
     public  class ClashDetectedDelegate 
     {
-
-		public System.Reflection.MethodInfo Method
-		{
-			get => teklaObject.Method;
-			set { teklaObject.Method = value; }
-		}
-
-		public System.Object Target
-		{
-			get => teklaObject.Target;
-			set { teklaObject.Target = value; }
-		}
 
         
 

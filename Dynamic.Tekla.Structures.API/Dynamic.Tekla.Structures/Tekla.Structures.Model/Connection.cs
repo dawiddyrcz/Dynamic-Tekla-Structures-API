@@ -43,39 +43,9 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
 		}
 
-		public System.String Name
-		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
-		}
-
-		public System.Int32 Number
-		{
-			get => teklaObject.Number;
-			set { teklaObject.Number = value; }
-		}
-
-		public System.DateTime ModificationTime
-		{
-			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
-		}
-
-		public System.Boolean IsUpToDate
-		{
-			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
-		}
-
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public Connection()
 		{

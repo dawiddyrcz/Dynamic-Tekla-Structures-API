@@ -30,16 +30,25 @@ namespace CodeGenerator
             if (type.IsAbstract) accessor = "private";
             outputText = outputText.Replace("$firstConstructorAccessor", accessor);
 
-            outputText = outputText.Replace("$dfield", "teklaObject");
 
             string baseClassText = string.Empty;
+            string dfieldDeclaration = string.Empty;
 
             if (type.BaseType != null)
             {
                 if (IsTeklaType(type.BaseType))
-                    baseClassText = " : " + GetTypeFullName(type.BaseType); 
+                {
+                    baseClassText = " : " + GetTypeFullName(type.BaseType);
+                }
+                else
+                    dfieldDeclaration = "internal dynamic $dfield;";
             }
+            else
+                dfieldDeclaration = "internal dynamic $dfield;";
 
+
+            outputText = outputText.Replace("$fieldDeclaration", dfieldDeclaration);
+            outputText = outputText.Replace("$dfield", "teklaObject");
             outputText = outputText.Replace("$baseClass", baseClassText);
 
             var nestedTypeGenerator = new TypeGenerator();
@@ -140,7 +149,9 @@ namespace CodeGenerator
                 m => m.IsPublic 
                 && !m.ReturnType.ToString().Contains("Tekla.Structures.ModelInternal")
                 && !m.GetParameters().Any(p => p.ParameterType.ToString().Contains("Tekla.Structures.ModelInternal"))
-                );
+                )
+                //.Where(m => m.DeclaringType.Equals(type))
+                .ToList();
 
             foreach (var method in methods)
             {
@@ -275,12 +286,15 @@ namespace CodeGenerator
             var propertiesAndFields = type.GetProperties()
                 .GroupBy(t => t.Name)
                 .Select(t => t.First())//In one class returned two properties with the same value
+                .Where(p => p.DeclaringType.Equals(type))
                 .ToList<MemberInfo>();  
 
             var fields = type.GetFields()
                 .Where(f => f.IsPublic & f.IsStatic == false)
                 .GroupBy(t => t.Name)
-                .Select(t => t.First()).ToList<MemberInfo>();
+                .Select(t => t.First())
+                .Where(p => p.DeclaringType.Equals(type))
+                .ToList<MemberInfo>();
             propertiesAndFields.AddRange(fields);
 
             foreach (var propertyOrField in propertiesAndFields)
@@ -344,7 +358,7 @@ namespace CodeGenerator
 
 $dproperties        
 
-        internal dynamic $dfield;
+        $fieldDeclaration
 
 $constructors
 $dmethods

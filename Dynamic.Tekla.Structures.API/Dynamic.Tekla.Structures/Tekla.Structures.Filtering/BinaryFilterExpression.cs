@@ -7,15 +7,9 @@ namespace Dynamic.Tekla.Structures.Filtering
     public  class BinaryFilterExpression  : Dynamic.Tekla.Structures.Filtering.FilterExpression
     {
 
-		public System.Boolean IsEnable
-		{
-			get => teklaObject.IsEnable;
-			set { teklaObject.IsEnable = value; }
-		}
-
         
 
-        internal dynamic teklaObject;
+        
 
 		public BinaryFilterExpression() {}
 		public BinaryFilterExpression(Dynamic.Tekla.Structures.Filtering.BooleanFilterExpression Left, Dynamic.Tekla.Structures.Filtering.BooleanOperatorType Oper, Dynamic.Tekla.Structures.Filtering.BooleanConstantFilterExpression Right)

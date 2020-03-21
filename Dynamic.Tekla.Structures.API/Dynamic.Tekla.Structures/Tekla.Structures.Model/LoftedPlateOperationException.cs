@@ -7,54 +7,6 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class LoftedPlateOperationException 
     {
 
-		public System.String Message
-		{
-			get => teklaObject.Message;
-			set { teklaObject.Message = value; }
-		}
-
-		public System.Collections.IDictionary Data
-		{
-			get => teklaObject.Data;
-			set { teklaObject.Data = value; }
-		}
-
-		public System.Exception InnerException
-		{
-			get => teklaObject.InnerException;
-			set { teklaObject.InnerException = value; }
-		}
-
-		public System.Reflection.MethodBase TargetSite
-		{
-			get => teklaObject.TargetSite;
-			set { teklaObject.TargetSite = value; }
-		}
-
-		public System.String StackTrace
-		{
-			get => teklaObject.StackTrace;
-			set { teklaObject.StackTrace = value; }
-		}
-
-		public System.String HelpLink
-		{
-			get => teklaObject.HelpLink;
-			set { teklaObject.HelpLink = value; }
-		}
-
-		public System.String Source
-		{
-			get => teklaObject.Source;
-			set { teklaObject.Source = value; }
-		}
-
-		public System.Int32 HResult
-		{
-			get => teklaObject.HResult;
-			set { teklaObject.HResult = value; }
-		}
-
         
 
         internal dynamic teklaObject;

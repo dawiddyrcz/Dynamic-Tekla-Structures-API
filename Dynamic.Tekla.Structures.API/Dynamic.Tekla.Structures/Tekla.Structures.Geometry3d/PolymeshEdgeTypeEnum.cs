@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(PolymeshEdgeTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum").GetType();
 
             switch (dynEnum)
             {

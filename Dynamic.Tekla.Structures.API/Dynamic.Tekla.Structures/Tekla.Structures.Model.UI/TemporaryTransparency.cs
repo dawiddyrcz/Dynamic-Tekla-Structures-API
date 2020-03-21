@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(TemporaryTransparency dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.TemporaryTransparency");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.TemporaryTransparency").GetType();
 
             switch (dynEnum)
             {

@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(AutoDirectionTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.AutoDirectionTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.AutoDirectionTypeEnum").GetType();
 
             switch (dynEnum)
             {

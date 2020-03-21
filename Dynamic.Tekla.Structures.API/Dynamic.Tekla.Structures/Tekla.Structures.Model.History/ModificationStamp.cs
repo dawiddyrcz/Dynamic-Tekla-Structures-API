@@ -38,6 +38,13 @@ namespace Dynamic.Tekla.Structures.Model.History
         {
             this.modificationstamp = tsObject;
         }
+		public ModificationStamp(System.Int32 LocalStamp, System.Int32 ServerStamp)
+		{
+			var args = new object[2];
+			args[0] = LocalStamp;
+			args[1] = ServerStamp;
+			this.modificationstamp = TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp", args);
+		}
 
 
 

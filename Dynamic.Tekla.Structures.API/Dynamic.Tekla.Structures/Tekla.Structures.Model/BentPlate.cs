@@ -274,7 +274,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BendShape dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BendShape");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BentPlate.BendShape").GetType();
 
             switch (dynEnum)
             {

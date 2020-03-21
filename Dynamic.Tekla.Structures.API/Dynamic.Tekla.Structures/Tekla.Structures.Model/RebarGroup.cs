@@ -326,7 +326,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarGroupStirrupTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGroupStirrupTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum").GetType();
 
             switch (dynEnum)
             {

@@ -33,13 +33,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomBoolean()
         {
-            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomBoolean");
+            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomBoolean");
         }
 
         internal CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
         }
+		public CustomBoolean(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customboolean = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomBoolean", args);
+		}
 
 
 
@@ -71,13 +77,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomDateTime()
         {
-            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomDateTime");
+            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomDateTime");
         }
 
         internal CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
         }
+		public CustomDateTime(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customdatetime = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomDateTime", args);
+		}
 
 
 
@@ -109,13 +121,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomNumber()
         {
-            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomNumber");
+            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomNumber");
         }
 
         internal CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
         }
+		public CustomNumber(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customnumber = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomNumber", args);
+		}
 
 
 
@@ -147,13 +165,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomString()
         {
-            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomString");
+            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomString");
         }
 
         internal CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
         }
+		public CustomString(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customstring = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.CustomString", args);
+		}
 
 
 
@@ -185,7 +209,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Phase()
         {
-            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Phase");
+            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.Phase");
         }
 
         internal Phase(dynamic tsObject)
@@ -223,7 +247,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public PositionNumber()
         {
-            this.positionnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.PositionNumber");
+            this.positionnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.PositionNumber");
         }
 
         internal PositionNumber(dynamic tsObject)
@@ -261,7 +285,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public ReferenceText()
         {
-            this.referencetext =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReferenceText");
+            this.referencetext =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.ReferenceText");
         }
 
         internal ReferenceText(dynamic tsObject)
@@ -299,7 +323,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public SizeAboveLine()
         {
-            this.sizeaboveline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SizeAboveLine");
+            this.sizeaboveline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.SizeAboveLine");
         }
 
         internal SizeAboveLine(dynamic tsObject)
@@ -337,7 +361,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public SizeBelowLine()
         {
-            this.sizebelowline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SizeBelowLine");
+            this.sizebelowline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.SizeBelowLine");
         }
 
         internal SizeBelowLine(dynamic tsObject)
@@ -375,7 +399,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public TypeAboveLine()
         {
-            this.typeaboveline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TypeAboveLine");
+            this.typeaboveline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.TypeAboveLine");
         }
 
         internal TypeAboveLine(dynamic tsObject)
@@ -413,7 +437,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public TypeBelowLine()
         {
-            this.typebelowline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TypeBelowLine");
+            this.typebelowline =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.TypeBelowLine");
         }
 
         internal TypeBelowLine(dynamic tsObject)
@@ -451,7 +475,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public WeldingSite()
         {
-            this.weldingsite =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldingSite");
+            this.weldingsite =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.WeldFilterExpressions.WeldingSite");
         }
 
         internal WeldingSite(dynamic tsObject)

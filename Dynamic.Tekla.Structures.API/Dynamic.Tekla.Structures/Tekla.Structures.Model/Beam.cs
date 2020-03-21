@@ -295,7 +295,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BeamTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BeamTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Beam.BeamTypeEnum").GetType();
 
             switch (dynEnum)
             {

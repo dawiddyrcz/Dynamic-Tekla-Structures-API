@@ -44,6 +44,23 @@ namespace Dynamic.Tekla.Structures.Model.UI
         {
             this.color = tsObject;
         }
+		public Color(System.Double Red, System.Double Green, System.Double Blue)
+		{
+			var args = new object[3];
+			args[0] = Red;
+			args[1] = Green;
+			args[2] = Blue;
+			this.color = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
+		}
+		public Color(System.Double Red, System.Double Green, System.Double Blue, System.Double Transparency)
+		{
+			var args = new object[4];
+			args[0] = Red;
+			args[1] = Green;
+			args[2] = Blue;
+			args[3] = Transparency;
+			this.color = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
+		}
 
 
 

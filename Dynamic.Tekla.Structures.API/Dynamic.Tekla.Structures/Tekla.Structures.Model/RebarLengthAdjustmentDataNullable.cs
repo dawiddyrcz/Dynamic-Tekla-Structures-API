@@ -47,7 +47,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LengthAdjustmentTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthAdjustmentTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum").GetType();
 
             switch (dynEnum)
             {

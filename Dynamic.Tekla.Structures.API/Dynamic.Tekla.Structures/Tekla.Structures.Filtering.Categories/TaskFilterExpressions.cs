@@ -33,13 +33,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomBoolean()
         {
-            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomBoolean");
+            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomBoolean");
         }
 
         internal CustomBoolean(dynamic tsObject)
         {
             this.customboolean = tsObject;
         }
+		public CustomBoolean(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customboolean = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomBoolean", args);
+		}
 
 
 
@@ -71,13 +77,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomDateTime()
         {
-            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomDateTime");
+            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomDateTime");
         }
 
         internal CustomDateTime(dynamic tsObject)
         {
             this.customdatetime = tsObject;
         }
+		public CustomDateTime(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customdatetime = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomDateTime", args);
+		}
 
 
 
@@ -109,13 +121,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomNumber()
         {
-            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomNumber");
+            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomNumber");
         }
 
         internal CustomNumber(dynamic tsObject)
         {
             this.customnumber = tsObject;
         }
+		public CustomNumber(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customnumber = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomNumber", args);
+		}
 
 
 
@@ -147,13 +165,19 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public CustomString()
         {
-            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.CustomString");
+            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomString");
         }
 
         internal CustomString(dynamic tsObject)
         {
             this.customstring = tsObject;
         }
+		public CustomString(System.String UserAttribute)
+		{
+			var args = new object[1];
+			args[0] = UserAttribute;
+			this.customstring = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomString", args);
+		}
 
 
 
@@ -185,7 +209,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public ActualEndDate()
         {
-            this.actualenddate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ActualEndDate");
+            this.actualenddate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.ActualEndDate");
         }
 
         internal ActualEndDate(dynamic tsObject)
@@ -223,7 +247,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public ActualStartDate()
         {
-            this.actualstartdate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ActualStartDate");
+            this.actualstartdate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.ActualStartDate");
         }
 
         internal ActualStartDate(dynamic tsObject)
@@ -261,7 +285,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Completeness()
         {
-            this.completeness =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Completeness");
+            this.completeness =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Completeness");
         }
 
         internal Completeness(dynamic tsObject)
@@ -299,7 +323,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Critical()
         {
-            this.critical =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Critical");
+            this.critical =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Critical");
         }
 
         internal Critical(dynamic tsObject)
@@ -337,7 +361,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Local()
         {
-            this.local =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Local");
+            this.local =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Local");
         }
 
         internal Local(dynamic tsObject)
@@ -375,7 +399,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public Name()
         {
-            this.name =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.Name");
+            this.name =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Name");
         }
 
         internal Name(dynamic tsObject)
@@ -413,7 +437,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public PlannedEndDate()
         {
-            this.plannedenddate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.PlannedEndDate");
+            this.plannedenddate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.PlannedEndDate");
         }
 
         internal PlannedEndDate(dynamic tsObject)
@@ -451,7 +475,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
         public PlannedStartDate()
         {
-            this.plannedstartdate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.PlannedStartDate");
+            this.plannedstartdate =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.TaskFilterExpressions.PlannedStartDate");
         }
 
         internal PlannedStartDate(dynamic tsObject)

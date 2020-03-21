@@ -56,7 +56,7 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(EdgeTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Solid.EdgeTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Solid.Edge.EdgeTypeEnum").GetType();
 
             switch (dynEnum)
             {

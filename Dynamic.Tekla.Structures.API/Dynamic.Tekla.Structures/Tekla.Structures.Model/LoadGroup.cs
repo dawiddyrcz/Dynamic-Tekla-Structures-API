@@ -259,7 +259,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadGroupType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroupType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup.LoadGroupType").GetType();
 
             switch (dynEnum)
             {
@@ -617,7 +617,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Colors dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Colors");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup.Colors").GetType();
 
             switch (dynEnum)
             {
@@ -685,7 +685,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadGroupDirection dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroupDirection");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup.LoadGroupDirection").GetType();
 
             switch (dynEnum)
             {

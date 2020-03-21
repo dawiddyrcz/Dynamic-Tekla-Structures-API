@@ -71,7 +71,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PlaneEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PlaneEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Position.PlaneEnum").GetType();
 
             switch (dynEnum)
             {
@@ -116,7 +116,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DepthEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.DepthEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Position.DepthEnum").GetType();
 
             switch (dynEnum)
             {
@@ -162,7 +162,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RotationEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RotationEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Position.RotationEnum").GetType();
 
             switch (dynEnum)
             {

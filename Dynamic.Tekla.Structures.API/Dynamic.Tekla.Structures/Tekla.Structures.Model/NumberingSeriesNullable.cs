@@ -32,6 +32,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.numberingseriesnullable = tsObject;
         }
+		public NumberingSeriesNullable(System.String prefix, System.Int32 number)
+		{
+			var args = new object[2];
+			args[0] = prefix;
+			args[1] = number;
+			this.numberingseriesnullable = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable", args);
+		}
 
 
 

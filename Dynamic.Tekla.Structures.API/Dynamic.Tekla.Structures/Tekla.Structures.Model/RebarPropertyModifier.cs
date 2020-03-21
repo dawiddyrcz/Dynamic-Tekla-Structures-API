@@ -185,7 +185,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(GroupingTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.GroupingTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum").GetType();
 
             switch (dynEnum)
             {

@@ -38,6 +38,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.vector = tsObject;
         }
+		public Vector(System.Double X, System.Double Y, System.Double Z)
+		{
+			var args = new object[3];
+			args[0] = X;
+			args[1] = Y;
+			args[2] = Z;
+			this.vector = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector", args);
+		}
 
 		public System.Double Normalize()
 			 => vector.Normalize();

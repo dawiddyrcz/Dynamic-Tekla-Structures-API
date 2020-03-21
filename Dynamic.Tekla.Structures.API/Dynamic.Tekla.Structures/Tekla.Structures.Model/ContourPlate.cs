@@ -278,7 +278,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ContourPlateTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPlateTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum").GetType();
 
             switch (dynEnum)
             {

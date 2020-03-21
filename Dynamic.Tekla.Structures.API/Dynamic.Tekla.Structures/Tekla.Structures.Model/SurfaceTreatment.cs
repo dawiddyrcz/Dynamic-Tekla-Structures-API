@@ -225,7 +225,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SurfaceTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -278,7 +278,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SurfaceColorEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceColorEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum").GetType();
 
             switch (dynEnum)
             {

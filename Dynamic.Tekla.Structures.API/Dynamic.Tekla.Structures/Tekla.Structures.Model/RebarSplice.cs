@@ -190,7 +190,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarSpliceTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -242,7 +242,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarSpliceBarPositionsEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpliceBarPositionsEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum").GetType();
 
             switch (dynEnum)
             {

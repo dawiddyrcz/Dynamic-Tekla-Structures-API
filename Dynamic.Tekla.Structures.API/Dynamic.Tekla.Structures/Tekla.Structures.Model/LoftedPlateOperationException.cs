@@ -68,6 +68,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.loftedplateoperationexception = tsObject;
         }
+		public LoftedPlateOperationException(System.String message)
+		{
+			var args = new object[1];
+			args[0] = message;
+			this.loftedplateoperationexception = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException", args);
+		}
 
 		public System.Exception GetBaseException()
 			 => loftedplateoperationexception.GetBaseException();

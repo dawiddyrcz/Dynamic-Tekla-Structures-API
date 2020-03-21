@@ -274,7 +274,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoftedPlateFaceTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateFaceTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum").GetType();
 
             switch (dynEnum)
             {

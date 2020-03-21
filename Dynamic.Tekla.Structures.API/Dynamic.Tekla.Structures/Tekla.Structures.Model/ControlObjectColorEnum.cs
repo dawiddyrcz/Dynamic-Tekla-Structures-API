@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ControlObjectColorEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlObjectColorEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlObjectColorEnum").GetType();
 
             switch (dynEnum)
             {

@@ -69,7 +69,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SolidCreationTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SolidCreationTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Solid.SolidCreationTypeEnum").GetType();
 
             switch (dynEnum)
             {

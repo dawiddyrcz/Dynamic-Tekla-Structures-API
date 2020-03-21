@@ -199,7 +199,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(AssemblyTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AssemblyTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Assembly.AssemblyTypeEnum").GetType();
 
             switch (dynEnum)
             {

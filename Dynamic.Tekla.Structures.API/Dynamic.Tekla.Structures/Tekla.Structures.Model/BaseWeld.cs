@@ -440,7 +440,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -582,7 +582,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldContourEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldContourEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldContourEnum").GetType();
 
             switch (dynEnum)
             {
@@ -634,7 +634,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldFinishEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldFinishEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldFinishEnum").GetType();
 
             switch (dynEnum)
             {
@@ -696,7 +696,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldElectrodeClassificationEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldElectrodeClassificationEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum").GetType();
 
             switch (dynEnum)
             {
@@ -765,7 +765,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldProcessTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldProcessTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -829,7 +829,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldNDTInspectionEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldNDTInspectionEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum").GetType();
 
             switch (dynEnum)
             {
@@ -886,7 +886,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldIntermittentTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldIntermittentTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -931,7 +931,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldPlacementTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPlacementTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -977,7 +977,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldPreparationTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPreparationTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum").GetType();
 
             switch (dynEnum)
             {

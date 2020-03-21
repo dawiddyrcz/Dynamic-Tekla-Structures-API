@@ -74,7 +74,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PolymeshHealthCheckEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolymeshHealthCheckEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Polymesh.PolymeshHealthCheckEnum").GetType();
 
             switch (dynEnum)
             {
@@ -217,7 +217,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PolymeshCheckerFlags dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolymeshCheckerFlags");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Polymesh.PolymeshCheckerFlags").GetType();
 
             switch (dynEnum)
             {

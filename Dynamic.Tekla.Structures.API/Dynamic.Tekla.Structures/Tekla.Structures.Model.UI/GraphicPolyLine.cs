@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(LineType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.LineType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine.LineType").GetType();
 
             switch (dynEnum)
             {

@@ -434,7 +434,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(WeldPositionEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.WeldPositionEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Weld.WeldPositionEnum").GetType();
 
             switch (dynEnum)
             {

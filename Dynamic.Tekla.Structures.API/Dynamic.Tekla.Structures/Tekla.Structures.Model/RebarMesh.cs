@@ -387,7 +387,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarMeshTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -436,7 +436,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarMeshSpacingMethodEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshSpacingMethodEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum").GetType();
 
             switch (dynEnum)
             {
@@ -481,7 +481,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarMeshCrossBarLocationEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMeshCrossBarLocationEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum").GetType();
 
             switch (dynEnum)
             {

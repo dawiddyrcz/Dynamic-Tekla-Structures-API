@@ -282,7 +282,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PolyBeamTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeamTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum").GetType();
 
             switch (dynEnum)
             {

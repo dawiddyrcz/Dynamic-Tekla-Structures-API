@@ -77,7 +77,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(EndCrankingTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EndCrankingTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum").GetType();
 
             switch (dynEnum)
             {

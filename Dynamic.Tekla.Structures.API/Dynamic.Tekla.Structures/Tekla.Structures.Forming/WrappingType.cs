@@ -15,7 +15,7 @@ namespace Dynamic.Tekla.Structures.Forming
     {
         public static dynamic GetTSObject(WrappingType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.WrappingType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.WrappingType").GetType();
 
             switch (dynEnum)
             {

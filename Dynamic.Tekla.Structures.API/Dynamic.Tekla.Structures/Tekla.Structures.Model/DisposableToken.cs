@@ -20,6 +20,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.disposabletoken = tsObject;
         }
+		public DisposableToken(System.Action disposed)
+		{
+			var args = new object[1];
+			args[0] = disposed;
+			this.disposabletoken = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken", args);
+		}
 
 		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
 			 => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(disposabletoken.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));

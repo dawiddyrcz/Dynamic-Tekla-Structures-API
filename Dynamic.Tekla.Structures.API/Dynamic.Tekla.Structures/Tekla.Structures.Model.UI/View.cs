@@ -139,7 +139,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ViewProjectionType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewProjectionType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.View.ViewProjectionType").GetType();
 
             switch (dynEnum)
             {
@@ -179,7 +179,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(DisplayOrientationType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.DisplayOrientationType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.View.DisplayOrientationType").GetType();
 
             switch (dynEnum)
             {
@@ -219,7 +219,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ViewRenderingType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewRenderingType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.View.ViewRenderingType").GetType();
 
             switch (dynEnum)
             {

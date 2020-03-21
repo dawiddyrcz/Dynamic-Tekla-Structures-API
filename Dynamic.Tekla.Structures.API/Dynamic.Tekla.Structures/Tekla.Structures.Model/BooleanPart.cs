@@ -167,7 +167,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BooleanTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BooleanTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BooleanPart.BooleanTypeEnum").GetType();
 
             switch (dynEnum)
             {

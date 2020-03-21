@@ -92,6 +92,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.gridsurface = tsObject;
         }
+		public GridSurface(System.String label)
+		{
+			var args = new object[1];
+			args[0] = label;
+			this.gridsurface = TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface", args);
+		}
 
 		public System.Boolean Insert()
 			 => gridsurface.Insert();

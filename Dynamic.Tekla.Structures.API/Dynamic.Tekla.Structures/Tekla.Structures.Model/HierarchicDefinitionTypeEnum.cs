@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(HierarchicDefinitionTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicDefinitionTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicDefinitionTypeEnum").GetType();
 
             switch (dynEnum)
             {

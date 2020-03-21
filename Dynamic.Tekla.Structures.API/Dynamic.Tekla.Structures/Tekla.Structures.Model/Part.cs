@@ -262,7 +262,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CastUnitTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CastUnitTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Part.CastUnitTypeEnum").GetType();
 
             switch (dynEnum)
             {

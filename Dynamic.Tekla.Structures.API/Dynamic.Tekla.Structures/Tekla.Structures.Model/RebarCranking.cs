@@ -82,7 +82,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CrankSideEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankSideEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarCranking.CrankSideEnum").GetType();
 
             switch (dynEnum)
             {
@@ -124,7 +124,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CrankedLengthTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankedLengthTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -172,7 +172,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CrankingTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CrankingTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarCranking.CrankingTypeEnum").GetType();
 
             switch (dynEnum)
             {

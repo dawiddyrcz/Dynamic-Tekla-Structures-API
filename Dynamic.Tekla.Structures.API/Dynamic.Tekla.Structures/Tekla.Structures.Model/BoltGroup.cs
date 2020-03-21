@@ -364,7 +364,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BoltTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.BoltTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -404,7 +404,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BoltThreadInMaterialEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltThreadInMaterialEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum").GetType();
 
             switch (dynEnum)
             {
@@ -445,7 +445,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BoltHoleTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltHoleTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -490,7 +490,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BoltRotateSlotsEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltRotateSlotsEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum").GetType();
 
             switch (dynEnum)
             {

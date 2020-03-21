@@ -38,6 +38,24 @@ namespace Dynamic.Tekla.Structures
         {
             this.identifier = tsObject;
         }
+		public Identifier(System.Int32 id)
+		{
+			var args = new object[1];
+			args[0] = id;
+			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+		}
+		public Identifier(System.Guid guid)
+		{
+			var args = new object[1];
+			args[0] = guid;
+			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+		}
+		public Identifier(System.String guid)
+		{
+			var args = new object[1];
+			args[0] = guid;
+			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+		}
 
 		public System.Boolean IsValid()
 			 => identifier.IsValid();

@@ -15,7 +15,7 @@ namespace Dynamic.Tekla.Structures.Forming
     {
         public static dynamic GetTSObject(FoldingType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.FoldingType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.FoldingType").GetType();
 
             switch (dynEnum)
             {

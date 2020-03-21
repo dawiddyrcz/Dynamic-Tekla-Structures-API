@@ -283,7 +283,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(AreaLoadFormEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.AreaLoadFormEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadArea.AreaLoadFormEnum").GetType();
 
             switch (dynEnum)
             {

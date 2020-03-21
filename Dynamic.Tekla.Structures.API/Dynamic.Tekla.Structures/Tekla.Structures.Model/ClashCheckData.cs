@@ -65,7 +65,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ClashTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckData.ClashTypeEnum").GetType();
 
             switch (dynEnum)
             {

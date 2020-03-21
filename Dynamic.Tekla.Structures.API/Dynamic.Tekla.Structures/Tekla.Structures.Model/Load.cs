@@ -229,7 +229,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadSpanningEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadSpanningEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Load.LoadSpanningEnum").GetType();
 
             switch (dynEnum)
             {
@@ -269,7 +269,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadAttachmentEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadAttachmentEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Load.LoadAttachmentEnum").GetType();
 
             switch (dynEnum)
             {
@@ -309,7 +309,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadPartNamesEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LoadPartNamesEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Load.LoadPartNamesEnum").GetType();
 
             switch (dynEnum)
             {

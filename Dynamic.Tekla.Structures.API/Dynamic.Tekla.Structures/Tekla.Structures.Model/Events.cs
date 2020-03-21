@@ -207,13 +207,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public SelectionChangeDelegate()
         {
-            this.selectionchangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.SelectionChangeDelegate");
+            this.selectionchangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.SelectionChangeDelegate");
         }
 
         internal SelectionChangeDelegate(dynamic tsObject)
         {
             this.selectionchangedelegate = tsObject;
         }
+		public SelectionChangeDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.selectionchangedelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.SelectionChangeDelegate", args);
+		}
 
 		public void Invoke()
 			 => selectionchangedelegate.Invoke();
@@ -275,13 +282,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public CommandStatusChangeDelegate()
         {
-            this.commandstatuschangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.CommandStatusChangeDelegate");
+            this.commandstatuschangedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.CommandStatusChangeDelegate");
         }
 
         internal CommandStatusChangeDelegate(dynamic tsObject)
         {
             this.commandstatuschangedelegate = tsObject;
         }
+		public CommandStatusChangeDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.commandstatuschangedelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.CommandStatusChangeDelegate", args);
+		}
 
 		public void Invoke(System.String TSCommand, System.String TSCommandParam, System.Boolean Status)
 			 => commandstatuschangedelegate.Invoke(TSCommand, TSCommandParam, Status);
@@ -343,13 +357,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public TrackEventDelegate()
         {
-            this.trackeventdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TrackEventDelegate");
+            this.trackeventdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.TrackEventDelegate");
         }
 
         internal TrackEventDelegate(dynamic tsObject)
         {
             this.trackeventdelegate = tsObject;
         }
+		public TrackEventDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.trackeventdelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.TrackEventDelegate", args);
+		}
 
 		public void Invoke(System.String Category, System.String Name, System.String Content)
 			 => trackeventdelegate.Invoke(Category, Name, Content);
@@ -411,13 +432,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelSaveDelegate()
         {
-            this.modelsavedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveDelegate");
+            this.modelsavedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelSaveDelegate");
         }
 
         internal ModelSaveDelegate(dynamic tsObject)
         {
             this.modelsavedelegate = tsObject;
         }
+		public ModelSaveDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelsavedelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelSaveDelegate", args);
+		}
 
 		public void Invoke()
 			 => modelsavedelegate.Invoke();
@@ -479,13 +507,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelSaveAsDelegate()
         {
-            this.modelsaveasdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelSaveAsDelegate");
+            this.modelsaveasdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelSaveAsDelegate");
         }
 
         internal ModelSaveAsDelegate(dynamic tsObject)
         {
             this.modelsaveasdelegate = tsObject;
         }
+		public ModelSaveAsDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelsaveasdelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelSaveAsDelegate", args);
+		}
 
 		public void Invoke()
 			 => modelsaveasdelegate.Invoke();
@@ -547,13 +582,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelLoadDelegate()
         {
-            this.modelloaddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelLoadDelegate");
+            this.modelloaddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelLoadDelegate");
         }
 
         internal ModelLoadDelegate(dynamic tsObject)
         {
             this.modelloaddelegate = tsObject;
         }
+		public ModelLoadDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelloaddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelLoadDelegate", args);
+		}
 
 		public void Invoke()
 			 => modelloaddelegate.Invoke();
@@ -615,13 +657,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public NumberingDelegate()
         {
-            this.numberingdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingDelegate");
+            this.numberingdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.NumberingDelegate");
         }
 
         internal NumberingDelegate(dynamic tsObject)
         {
             this.numberingdelegate = tsObject;
         }
+		public NumberingDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.numberingdelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.NumberingDelegate", args);
+		}
 
 		public void Invoke()
 			 => numberingdelegate.Invoke();
@@ -683,13 +732,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelChangedDelegate()
         {
-            this.modelchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelChangedDelegate");
+            this.modelchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelChangedDelegate");
         }
 
         internal ModelChangedDelegate(dynamic tsObject)
         {
             this.modelchangeddelegate = tsObject;
         }
+		public ModelChangedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelchangeddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelChangedDelegate", args);
+		}
 
 		public void Invoke()
 			 => modelchangeddelegate.Invoke();
@@ -751,13 +807,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelObjectNumberedDelegate()
         {
-            this.modelobjectnumbereddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectNumberedDelegate");
+            this.modelobjectnumbereddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelObjectNumberedDelegate");
         }
 
         internal ModelObjectNumberedDelegate(dynamic tsObject)
         {
             this.modelobjectnumbereddelegate = tsObject;
         }
+		public ModelObjectNumberedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelobjectnumbereddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelObjectNumberedDelegate", args);
+		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> Objects)
 			 => modelobjectnumbereddelegate.Invoke(Objects);
@@ -819,13 +882,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ModelObjectChangedDelegate()
         {
-            this.modelobjectchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectChangedDelegate");
+            this.modelobjectchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelObjectChangedDelegate");
         }
 
         internal ModelObjectChangedDelegate(dynamic tsObject)
         {
             this.modelobjectchangeddelegate = tsObject;
         }
+		public ModelObjectChangedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.modelobjectchangeddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ModelObjectChangedDelegate", args);
+		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ChangeData> Changes)
 			 => modelobjectchangeddelegate.Invoke(Changes);
@@ -887,13 +957,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public TeklaStructuresExitDelegate()
         {
-            this.teklastructuresexitdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.TeklaStructuresExitDelegate");
+            this.teklastructuresexitdelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.TeklaStructuresExitDelegate");
         }
 
         internal TeklaStructuresExitDelegate(dynamic tsObject)
         {
             this.teklastructuresexitdelegate = tsObject;
         }
+		public TeklaStructuresExitDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.teklastructuresexitdelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.TeklaStructuresExitDelegate", args);
+		}
 
 		public void Invoke()
 			 => teklastructuresexitdelegate.Invoke();
@@ -955,13 +1032,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ClashCheckDoneDelegate()
         {
-            this.clashcheckdonedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckDoneDelegate");
+            this.clashcheckdonedelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ClashCheckDoneDelegate");
         }
 
         internal ClashCheckDoneDelegate(dynamic tsObject)
         {
             this.clashcheckdonedelegate = tsObject;
         }
+		public ClashCheckDoneDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.clashcheckdonedelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ClashCheckDoneDelegate", args);
+		}
 
 		public void Invoke(System.Int32 NumbersOfClashes)
 			 => clashcheckdonedelegate.Invoke(NumbersOfClashes);
@@ -1023,13 +1107,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public ClashDetectedDelegate()
         {
-            this.clashdetecteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashDetectedDelegate");
+            this.clashdetecteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.ClashDetectedDelegate");
         }
 
         internal ClashDetectedDelegate(dynamic tsObject)
         {
             this.clashdetecteddelegate = tsObject;
         }
+		public ClashDetectedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.clashdetecteddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.ClashDetectedDelegate", args);
+		}
 
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
 			 => clashdetecteddelegate.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
@@ -1091,13 +1182,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public PointInputChangedDelegate()
         {
-            this.pointinputchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.PointInputChangedDelegate");
+            this.pointinputchangeddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.PointInputChangedDelegate");
         }
 
         internal PointInputChangedDelegate(dynamic tsObject)
         {
             this.pointinputchangeddelegate = tsObject;
         }
+		public PointInputChangedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.pointinputchangeddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.PointInputChangedDelegate", args);
+		}
 
 		public void Invoke(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> Changes)
 			 => pointinputchangeddelegate.Invoke(Changes);
@@ -1159,13 +1257,20 @@ namespace Dynamic.Tekla.Structures.Model
         
         public InterruptedDelegate()
         {
-            this.interrupteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.InterruptedDelegate");
+            this.interrupteddelegate =  TSActivator.CreateInstance("Tekla.Structures.Model.Events.InterruptedDelegate");
         }
 
         internal InterruptedDelegate(dynamic tsObject)
         {
             this.interrupteddelegate = tsObject;
         }
+		public InterruptedDelegate(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.interrupteddelegate = TSActivator.CreateInstance("Tekla.Structures.Model.Events.InterruptedDelegate", args);
+		}
 
 		public void Invoke()
 			 => interrupteddelegate.Invoke();

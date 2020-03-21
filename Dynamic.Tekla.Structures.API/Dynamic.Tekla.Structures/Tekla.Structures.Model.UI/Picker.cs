@@ -73,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(PickPointEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickPointEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Picker.PickPointEnum").GetType();
 
             switch (dynEnum)
             {
@@ -128,7 +128,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(PickObjectEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickObjectEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Picker.PickObjectEnum").GetType();
 
             switch (dynEnum)
             {
@@ -183,7 +183,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(PickObjectsEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickObjectsEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Picker.PickObjectsEnum").GetType();
 
             switch (dynEnum)
             {

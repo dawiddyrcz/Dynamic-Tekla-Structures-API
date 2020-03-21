@@ -16,7 +16,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ConnectionStatusEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.ConnectionStatusEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.ConnectionStatusEnum").GetType();
 
             switch (dynEnum)
             {

@@ -208,7 +208,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(MISExportTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.MISExportTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -261,7 +261,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(UnselectedModeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.UnselectedModeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -304,7 +304,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         
         public ProgressBar()
         {
-            this.progressbar =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.ProgressBar");
+            this.progressbar =  TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.ProgressBar");
         }
 
         internal ProgressBar(dynamic tsObject)

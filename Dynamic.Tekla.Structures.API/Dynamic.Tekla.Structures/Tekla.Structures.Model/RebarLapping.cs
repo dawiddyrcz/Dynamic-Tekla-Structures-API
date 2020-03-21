@@ -59,7 +59,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LapSideEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LapSideEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping.LapSideEnum").GetType();
 
             switch (dynEnum)
             {
@@ -103,7 +103,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LapPlacementEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LapPlacementEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping.LapPlacementEnum").GetType();
 
             switch (dynEnum)
             {
@@ -143,7 +143,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LappingTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LappingTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping.LappingTypeEnum").GetType();
 
             switch (dynEnum)
             {

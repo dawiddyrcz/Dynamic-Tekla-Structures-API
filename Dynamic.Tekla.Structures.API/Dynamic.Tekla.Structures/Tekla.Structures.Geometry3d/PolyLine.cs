@@ -26,6 +26,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.polyline = tsObject;
         }
+		public PolyLine(System.Collections.IEnumerable Points)
+		{
+			var args = new object[1];
+			args[0] = Points;
+			this.polyline = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine", args);
+		}
 
 		public System.Double Length()
 			 => polyline.Length();

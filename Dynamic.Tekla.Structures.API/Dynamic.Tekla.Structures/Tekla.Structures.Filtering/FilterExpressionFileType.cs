@@ -18,7 +18,7 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(FilterExpressionFileType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.FilterExpressionFileType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.FilterExpressionFileType").GetType();
 
             switch (dynEnum)
             {

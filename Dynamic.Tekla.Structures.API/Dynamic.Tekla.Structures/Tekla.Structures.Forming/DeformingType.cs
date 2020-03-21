@@ -15,7 +15,7 @@ namespace Dynamic.Tekla.Structures.Forming
     {
         public static dynamic GetTSObject(DeformingType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.DeformingType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Forming.DeformingType").GetType();
 
             switch (dynEnum)
             {

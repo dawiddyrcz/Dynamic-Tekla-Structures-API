@@ -61,7 +61,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarHookShapeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookShapeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum").GetType();
 
             switch (dynEnum)
             {

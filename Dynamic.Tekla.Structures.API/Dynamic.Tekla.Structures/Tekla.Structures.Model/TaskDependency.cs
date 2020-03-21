@@ -177,7 +177,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DependencyTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.DependencyTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency.DependencyTypeEnum").GetType();
 
             switch (dynEnum)
             {

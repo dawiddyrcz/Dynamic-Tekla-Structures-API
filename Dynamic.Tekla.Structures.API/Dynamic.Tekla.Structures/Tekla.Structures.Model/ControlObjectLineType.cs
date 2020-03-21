@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ControlObjectLineType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlObjectLineType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ControlObjectLineType").GetType();
 
             switch (dynEnum)
             {

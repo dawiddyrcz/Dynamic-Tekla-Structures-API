@@ -32,6 +32,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.numberingseries = tsObject;
         }
+		public NumberingSeries(System.String Prefix, System.Int32 Number)
+		{
+			var args = new object[2];
+			args[0] = Prefix;
+			args[1] = Number;
+			this.numberingseries = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries", args);
+		}
 
 
 

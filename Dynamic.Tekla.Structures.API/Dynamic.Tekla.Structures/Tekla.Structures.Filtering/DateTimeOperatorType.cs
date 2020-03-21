@@ -18,7 +18,7 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(DateTimeOperatorType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeOperatorType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeOperatorType").GetType();
 
             switch (dynEnum)
             {

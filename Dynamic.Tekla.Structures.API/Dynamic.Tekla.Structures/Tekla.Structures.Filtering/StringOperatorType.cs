@@ -20,7 +20,7 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(StringOperatorType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringOperatorType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringOperatorType").GetType();
 
             switch (dynEnum)
             {

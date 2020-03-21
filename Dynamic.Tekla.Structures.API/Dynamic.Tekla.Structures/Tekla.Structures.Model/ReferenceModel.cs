@@ -249,7 +249,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(VisibilityEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.VisibilityEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel.VisibilityEnum").GetType();
 
             switch (dynEnum)
             {

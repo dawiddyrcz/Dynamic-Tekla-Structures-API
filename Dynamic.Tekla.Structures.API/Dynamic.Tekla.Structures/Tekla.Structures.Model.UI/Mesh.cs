@@ -38,6 +38,14 @@ namespace Dynamic.Tekla.Structures.Model.UI
         {
             this.mesh = tsObject;
         }
+		public Mesh(System.Collections.ArrayList Points, System.Collections.ArrayList Triangles, System.Collections.ArrayList Lines)
+		{
+			var args = new object[3];
+			args[0] = Points;
+			args[1] = Triangles;
+			args[2] = Lines;
+			this.mesh = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Mesh", args);
+		}
 
 		public System.Int32 AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point)
 			 => mesh.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));

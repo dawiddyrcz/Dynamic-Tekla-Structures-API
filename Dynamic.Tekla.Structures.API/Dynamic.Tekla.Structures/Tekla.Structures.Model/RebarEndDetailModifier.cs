@@ -202,7 +202,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(EndTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EndTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum").GetType();
 
             switch (dynEnum)
             {

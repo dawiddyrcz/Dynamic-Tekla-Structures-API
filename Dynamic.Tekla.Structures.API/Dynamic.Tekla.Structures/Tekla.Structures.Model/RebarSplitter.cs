@@ -210,7 +210,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(StaggerTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.StaggerTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -258,7 +258,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SplitTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SplitTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplitter.SplitTypeEnum").GetType();
 
             switch (dynEnum)
             {

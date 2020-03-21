@@ -26,10 +26,28 @@ namespace CodeGenerator
             {
                 ShowAllTypes();
             }
-
-            //TODO make fields as properties
+            
             //hide private get set accessors in properties
-           //new Tekla.Structures.Geometry3d.Point().
+            //new Tekla.Structures.Geometry3d.Point().
+
+            if (input.Equals("n", StringComparison.InvariantCulture))
+            {
+                var constructors = typeof(Tekla.Structures.Geometry3d.Point).GetConstructors();
+
+                foreach (var item in constructors)
+                {
+                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item.GetParameters().Count());
+
+                    foreach (var param in item.GetParameters())
+                    {
+                        Console.WriteLine(param.ParameterType);
+                        Console.WriteLine(param.Name);
+                    }
+                }
+
+                Console.ReadKey(); 
+            }
         }
 
         private static void ShowAllTypes()

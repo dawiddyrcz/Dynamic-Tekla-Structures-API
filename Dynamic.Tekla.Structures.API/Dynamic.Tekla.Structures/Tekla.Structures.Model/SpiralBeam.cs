@@ -324,7 +324,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ErrorStatus dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ErrorStatus");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeam.ErrorStatus").GetType();
 
             switch (dynEnum)
             {

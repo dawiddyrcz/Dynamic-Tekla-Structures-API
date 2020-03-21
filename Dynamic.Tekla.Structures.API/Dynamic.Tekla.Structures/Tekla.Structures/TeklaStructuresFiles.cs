@@ -26,6 +26,12 @@ namespace Dynamic.Tekla.Structures
         {
             this.teklastructuresfiles = tsObject;
         }
+		public TeklaStructuresFiles(System.String modelpath)
+		{
+			var args = new object[1];
+			args[0] = modelpath;
+			this.teklastructuresfiles = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles", args);
+		}
 
 		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
 			 => teklastructuresfiles.GetMultiDirectoryFileList(fileExtension, fullpath);

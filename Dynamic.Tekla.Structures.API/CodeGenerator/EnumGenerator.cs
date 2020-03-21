@@ -22,7 +22,8 @@ namespace CodeGenerator
             sb.Replace("$switch2Values", GetSwitch2Values(type));
             
             sb.Replace("$classname", type.Name);
-
+            sb.Replace("$typeFullName", TypeFullName.GetTypeFullName(type).Replace("Dynamic.",""));
+            
             return sb.ToString();
         }
 
@@ -100,7 +101,7 @@ $enumValues
     {
         public static dynamic GetTSObject($classname dynEnum)
         {
-            var tsType = TSActivator.CreateInstance(""$namespace.$classname"");
+            var tsType = TSActivator.CreateInstance(""$typeFullName"").GetType();
 
             switch (dynEnum)
             {

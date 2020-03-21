@@ -82,7 +82,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(OffsetEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.OffsetEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing.OffsetEnum").GetType();
 
             switch (dynEnum)
             {

@@ -94,7 +94,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(OperationStatus dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.OperationStatus");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus").GetType();
 
             switch (dynEnum)
             {

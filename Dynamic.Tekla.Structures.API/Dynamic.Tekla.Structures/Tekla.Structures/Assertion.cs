@@ -38,6 +38,14 @@ namespace Dynamic.Tekla.Structures
         {
             this.assertion = tsObject;
         }
+		public Assertion(System.String message, System.String detailedMessage, System.String methodName)
+		{
+			var args = new object[3];
+			args[0] = message;
+			args[1] = detailedMessage;
+			args[2] = methodName;
+			this.assertion = TSActivator.CreateInstance("Tekla.Structures.Assertion", args);
+		}
 
 
 

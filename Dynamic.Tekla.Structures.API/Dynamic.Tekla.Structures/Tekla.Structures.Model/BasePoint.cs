@@ -128,6 +128,34 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.basepoint = tsObject;
         }
+		public BasePoint(System.String name)
+		{
+			var args = new object[1];
+			args[0] = name;
+			this.basepoint = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
+		}
+		public BasePoint(System.Int32 id, System.Guid guid, System.String initialGuid, System.String name, System.String description, System.String coordinateSystem, System.Double northSouth, System.Double eastWest, System.Double elevation, System.Double latitude, System.Double longitude, System.Double locationInModelX, System.Double locationInModelY, System.Double locationInModelZ, System.Double angleToNorth, System.Boolean isProjectBasePoint, System.Boolean isCurrentBasePoint)
+		{
+			var args = new object[17];
+			args[0] = id;
+			args[1] = guid;
+			args[2] = initialGuid;
+			args[3] = name;
+			args[4] = description;
+			args[5] = coordinateSystem;
+			args[6] = northSouth;
+			args[7] = eastWest;
+			args[8] = elevation;
+			args[9] = latitude;
+			args[10] = longitude;
+			args[11] = locationInModelX;
+			args[12] = locationInModelY;
+			args[13] = locationInModelZ;
+			args[14] = angleToNorth;
+			args[15] = isProjectBasePoint;
+			args[16] = isCurrentBasePoint;
+			this.basepoint = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
+		}
 
 		public System.Boolean Insert()
 			 => basepoint.Insert();
@@ -172,7 +200,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CoordinateSystemType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.CoordinateSystemType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint.CoordinateSystemType").GetType();
 
             switch (dynEnum)
             {

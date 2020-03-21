@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
     {
         public static dynamic GetTSObject(WeldSeamPositionEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Welding.WeldSeamPositionEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Welding.WeldSeamPositionEnum").GetType();
 
             switch (dynEnum)
             {

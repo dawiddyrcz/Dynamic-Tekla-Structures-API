@@ -44,6 +44,21 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.phase = tsObject;
         }
+		public Phase(System.Int32 PhaseNumber)
+		{
+			var args = new object[1];
+			args[0] = PhaseNumber;
+			this.phase = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
+		}
+		public Phase(System.Int32 PhaseNumber, System.String PhaseName, System.String PhaseComment, System.Int32 IsCurrentPhase)
+		{
+			var args = new object[4];
+			args[0] = PhaseNumber;
+			args[1] = PhaseName;
+			args[2] = PhaseComment;
+			args[3] = IsCurrentPhase;
+			this.phase = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
+		}
 
 		public System.Boolean Insert()
 			 => phase.Insert();

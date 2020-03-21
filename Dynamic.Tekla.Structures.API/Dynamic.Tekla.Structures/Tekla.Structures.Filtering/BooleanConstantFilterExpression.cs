@@ -20,6 +20,19 @@ namespace Dynamic.Tekla.Structures.Filtering
         {
             this.booleanconstantfilterexpression = tsObject;
         }
+		public BooleanConstantFilterExpression(System.Boolean Value)
+		{
+			var args = new object[1];
+			args[0] = Value;
+			this.booleanconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanConstantFilterExpression", args);
+		}
+		public BooleanConstantFilterExpression(System.Boolean Value, System.IFormatProvider Provider)
+		{
+			var args = new object[2];
+			args[0] = Value;
+			args[1] = Provider;
+			this.booleanconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanConstantFilterExpression", args);
+		}
 
 
 

@@ -20,6 +20,18 @@ namespace Dynamic.Tekla.Structures.Filtering
         {
             this.stringconstantfilterexpression = tsObject;
         }
+		public StringConstantFilterExpression(System.String Value)
+		{
+			var args = new object[1];
+			args[0] = Value;
+			this.stringconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
+		}
+		public StringConstantFilterExpression(System.Collections.Generic.IEnumerable<System.String> Values)
+		{
+			var args = new object[1];
+			args[0] = Values;
+			this.stringconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
+		}
 
 
 

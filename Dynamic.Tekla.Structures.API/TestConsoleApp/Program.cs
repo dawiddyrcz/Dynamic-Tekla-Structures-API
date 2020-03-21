@@ -13,8 +13,7 @@ namespace TestConsoleApp
     {
         //TODO dodać takie same konstruktory jak są oryginalnie bo nie mogę zrobić noweg punktu
         //ProgramConfigurationEnum ma zduplikowane wartości
-        //TODO w enum var tsType = TSActivator.CreateInstance(""$namespace.$classname""); niepodaje pełnego namespace dla nested type
-
+        
         static void Main(string[] args)
         {
             Console.WriteLine("started test");
@@ -25,15 +24,15 @@ namespace TestConsoleApp
             beam.Material.MaterialString = "S235JR";
             beam.Profile.ProfileString = "HEB300";
 
-            var p1 = new Point();
-            var p2 = new Point();
-            p1.X = 0;
-            p1.Y = 0;
-            p1.Z = 0;
+            var p1 = new Point(0,0,0);
+            var p2 = new Point(5000,5000,5000);
+            //p1.X = 0;
+            //p1.Y = 0;
+            //p1.Z = 0;
 
-            p2.X = 5000;
-            p2.Y = 5000;
-            p2.Z = 5000;
+            //p2.X = 5000;
+            //p2.Y = 5000;
+            //p2.Z = 5000;
 
             //p2.Translate(5000, 5000, 5000);
 

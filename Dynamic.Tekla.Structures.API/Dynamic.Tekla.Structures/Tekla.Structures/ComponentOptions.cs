@@ -124,7 +124,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(BoltEdgeDistanceReferenceEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.BoltEdgeDistanceReferenceEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum").GetType();
 
             switch (dynEnum)
             {

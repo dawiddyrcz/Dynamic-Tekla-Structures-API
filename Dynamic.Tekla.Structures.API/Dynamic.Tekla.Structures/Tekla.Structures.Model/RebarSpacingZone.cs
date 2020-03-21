@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LengthEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.LengthEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacingZone.LengthEnum").GetType();
 
             switch (dynEnum)
             {
@@ -110,7 +110,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SpacingEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.SpacingEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacingZone.SpacingEnum").GetType();
 
             switch (dynEnum)
             {

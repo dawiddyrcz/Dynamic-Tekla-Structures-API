@@ -44,13 +44,74 @@ namespace CodeGenerator
                 nestedTypeText.AppendLine(nestedTypeGenerator.GetTextFromType(nestedType));
             }
             outputText = outputText.Replace("$nestedTypes", nestedTypeText.ToString());
-            
+            outputText = outputText.Replace("$typeFullName", GetTypeFullName(type).Replace("Dynamic.",""));
+            //
             return outputText;
         }
         
         private string ConstructorsText(Type type)
         {
-            return string.Empty;
+            var constructors = type.GetConstructors()
+                .Where(c => c.GetParameters().Count() > 0
+                && c.GetParameters().Any(p => p.ParameterType.Namespace.Contains("Tekla.Structures")) == false)
+                .ToList();
+
+            var sb = new StringBuilder(500);
+
+            foreach (var constructor in constructors)
+            {
+                sb.Append("\t\tpublic $classname(");
+                foreach (var parameter in constructor.GetParameters())
+                {
+                    var parameterName = parameter.Name;
+                    if (parameter.Name.Equals("object", StringComparison.InvariantCulture))
+                        parameterName = "@object";
+
+                    sb.Append(GetTypeFullName(parameter.ParameterType));
+                    sb.Append(" ");
+                    sb.Append(parameterName);
+                    sb.Append(", ");
+                }
+                if (constructor.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
+
+                sb.Append(")\n");
+                sb.Append("\t\t{\n");
+                sb.Append("\t\t\tvar args = new object[");
+                sb.Append(constructor.GetParameters().Count());
+                sb.Append("];\n");
+
+                int i = 0;
+                foreach (var parameter in constructor.GetParameters())
+                {
+                    var parameterName = parameter.Name;
+                    if (parameter.Name.Equals("object", StringComparison.InvariantCulture))
+                        parameterName = "@object";
+
+                    if (IsTeklaType(parameter.ParameterType))
+                    {
+                        sb.Append("\t\t\targs["+i+"] = ");
+                        sb.Append(GetTypeFullName(parameter.ParameterType));
+                        sb.Append("_.GetTSObject(");
+                        sb.Append(parameterName);
+                        sb.Append(");\n");
+                    }
+                    else
+                    {
+                        sb.Append("\t\t\targs[" + i + "] = ");
+                        sb.Append(parameterName);
+                        sb.Append(";\n");
+                    }
+                    i++;
+                }
+
+                sb.Append("\t\t\tthis.$dfield = TSActivator.CreateInstance(\"");
+                sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
+                sb.Append("\", args);\n");
+
+                sb.Append("\t\t}\n");
+            }
+
+            return sb.ToString();
         }
 
 
@@ -257,7 +318,7 @@ $dproperties
         
         $firstConstructorAccessor $classname()
         {
-            this.$dfield =  TSActivator.CreateInstance(""$namespace.$classname"");
+            this.$dfield =  TSActivator.CreateInstance(""$typeFullName"");
         }
 
         internal $classname(dynamic tsObject)

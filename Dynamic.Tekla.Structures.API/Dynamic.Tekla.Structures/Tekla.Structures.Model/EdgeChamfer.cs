@@ -200,7 +200,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ChamferEndTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChamferEndTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum").GetType();
 
             switch (dynEnum)
             {

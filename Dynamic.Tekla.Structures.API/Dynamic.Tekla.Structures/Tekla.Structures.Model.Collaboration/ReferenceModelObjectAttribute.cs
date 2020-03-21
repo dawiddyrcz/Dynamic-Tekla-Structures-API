@@ -88,7 +88,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(AttributeTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.AttributeTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute.AttributeTypeEnum").GetType();
 
             switch (dynEnum)
             {

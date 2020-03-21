@@ -75,13 +75,20 @@ namespace Dynamic.Tekla.Structures
         
         public InvalidPathCallback()
         {
-            this.invalidpathcallback =  TSActivator.CreateInstance("Tekla.Structures.InvalidPathCallback");
+            this.invalidpathcallback =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback");
         }
 
         internal InvalidPathCallback(dynamic tsObject)
         {
             this.invalidpathcallback = tsObject;
         }
+		public InvalidPathCallback(System.Object @object, System.IntPtr method)
+		{
+			var args = new object[2];
+			args[0] = @object;
+			args[1] = method;
+			this.invalidpathcallback = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback", args);
+		}
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 			 => invalidpathcallback.Invoke(advancedOption, invalidString, exceptionMessage);
@@ -131,7 +138,7 @@ namespace Dynamic.Tekla.Structures
         
         private ToolOptionNames()
         {
-            this.tooloptionnames =  TSActivator.CreateInstance("Tekla.Structures.ToolOptionNames");
+            this.tooloptionnames =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames");
         }
 
         internal ToolOptionNames(dynamic tsObject)

@@ -315,7 +315,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ExcludeTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ExcludeTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseRebarGroup.ExcludeTypeEnum").GetType();
 
             switch (dynEnum)
             {
@@ -369,7 +369,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarGroupSpacingTypeEnum dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGroupSpacingTypeEnum");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BaseRebarGroup.RebarGroupSpacingTypeEnum").GetType();
 
             switch (dynEnum)
             {

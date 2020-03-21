@@ -13,7 +13,7 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(InvalidFilterExpressionExceptionReasonsType dynEnum)
         {
-            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType");
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType").GetType();
 
             switch (dynEnum)
             {

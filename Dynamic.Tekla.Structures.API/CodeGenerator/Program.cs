@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using TSM = Tekla.Structures.Model;
 
 namespace CodeGenerator
 {
@@ -32,19 +33,15 @@ namespace CodeGenerator
 
             if (input.Equals("n", StringComparison.InvariantCulture))
             {
-                var constructors = typeof(Tekla.Structures.Geometry3d.Point).GetConstructors();
-
-                foreach (var item in constructors)
-                {
-                    Console.WriteLine(item.Name);
-                    Console.WriteLine(item.GetParameters().Count());
-
-                    foreach (var param in item.GetParameters())
-                    {
-                        Console.WriteLine(param.ParameterType);
-                        Console.WriteLine(param.Name);
-                    }
-                }
+                var type = typeof(TSM.Beam);
+                Console.WriteLine(type);
+                Console.WriteLine(type.BaseType);
+                Console.WriteLine(type.BaseType.BaseType);
+                Console.WriteLine(type.BaseType.BaseType.BaseType);
+                Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType);
+                Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType.BaseType);
+                //Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType.BaseType.BaseType);
+                Console.WriteLine();
 
                 Console.ReadKey(); 
             }

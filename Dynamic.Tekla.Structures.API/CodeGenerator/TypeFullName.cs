@@ -12,8 +12,7 @@ namespace CodeGenerator
         {
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
-
-        //TODO refactor
+        
         public static string GetTypeFullName(Type type)
         {
             StringBuilder sb = new StringBuilder();

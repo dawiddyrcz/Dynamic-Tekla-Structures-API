@@ -32,7 +32,7 @@ namespace CodeGenerator
             else
                 outputText = outputText.Replace("$dfield", type.Name.ToLower());
             
-            //TODO father class
+            //TODO abstractions!!!
             outputText = outputText.Replace("$fatherClass", "");
 
             var nestedTypeGenerator = new TypeGenerator();

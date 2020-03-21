@@ -10,10 +10,7 @@ using Dynamic.Tekla.Structures.Model;
 namespace TestConsoleApp
 {
     class Program
-    {
-        //TODO dodać takie same konstruktory jak są oryginalnie bo nie mogę zrobić noweg punktu
-        //ProgramConfigurationEnum ma zduplikowane wartości
-        
+    {   
         static void Main(string[] args)
         {
             Console.WriteLine("started test");

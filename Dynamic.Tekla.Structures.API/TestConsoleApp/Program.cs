@@ -41,33 +41,35 @@ namespace TestConsoleApp
 
             model.CommitChanges();
 
+            //beam.GetPhase(out Phase phase);
+            //Console.WriteLine("Phase: " + phase.PhaseNumber);
 
-            Console.WriteLine("Objects");
-            var objects = model.GetModelObjectSelector().GetAllObjects();
+            //Console.WriteLine("Objects");
+            //var objects = model.GetModelObjectSelector().GetAllObjects();
 
-            while (objects.MoveNext())
-            {
-                Console.WriteLine(objects.Current.Identifier.ID);
+            //while (objects.MoveNext())
+            //{
+            //    Console.WriteLine(objects.Current.Identifier.ID);
 
-                if (objects.Current is Beam b)
-                {
-                    Console.WriteLine(b.Name);
-                    Console.WriteLine(b.StartPoint.ToString());
-                    Console.WriteLine(b.EndPoint.ToString());
-                    Console.WriteLine(b.Profile.ProfileString);
-                }
-            }
+            //    if (objects.Current is Beam b)
+            //    {
+            //        Console.WriteLine(b.Name);
+            //        Console.WriteLine(b.StartPoint.ToString());
+            //        Console.WriteLine(b.EndPoint.ToString());
+            //        Console.WriteLine(b.Profile.ProfileString);
+            //    }
+            //}
 
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Beams:");
-            var beams = model.GetModelObjectSelector().GetAllObjectsWithType(ModelObject.ModelObjectEnum.BEAM);
+            //Console.WriteLine("Beams:");
+            //var beams = model.GetModelObjectSelector().GetAllObjectsWithType(ModelObject.ModelObjectEnum.BEAM);
 
-            while (beams.MoveNext())
-            {
-                Console.WriteLine(beams.Current.Identifier.ID);
-            }
+            //while (beams.MoveNext())
+            //{
+            //    Console.WriteLine(beams.Current.Identifier.ID);
+            //}
 
             Console.WriteLine("end");
             Console.ReadKey();

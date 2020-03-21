@@ -160,7 +160,8 @@ namespace CodeGenerator
                 var name = method.Name;
                 if (name.Equals("GetType")||name.Equals("Equals")||name.Equals("ToString") || name.Equals("GetHashCode")) continue;
                 if (name.Contains("get_") || name.Contains("set_")) continue;
-                
+                if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
+
                 sb.Append("\t\t");
                 sb.Append("public ");
                 
@@ -174,6 +175,7 @@ namespace CodeGenerator
                     //params in method name
                     foreach (var param in method.GetParameters())
                     {
+
                         if (param.IsOut) sb.Append("out ");
                         else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
@@ -230,9 +232,11 @@ namespace CodeGenerator
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
+
                         if (param.IsOut) sb.Append("out ");
                         else if (param.ParameterType.IsByRef) sb.Append("ref ");
-                        
+
+
                         var paramTypeFullName = GetTypeFullName(param.ParameterType);
                         sb.Append(paramTypeFullName);
                         sb.Append(" ");
@@ -268,7 +272,7 @@ namespace CodeGenerator
                         else
                         {
                             if (param.IsOut) sb.Append("out ");
-                            else if (param.ParameterType.IsByRef) sb.Append("ref ");
+                            else if (param.ParameterType.IsByRef) sb.Append("ref "); //TODO a co z tym wyżej
                             sb.Append(paramName);
                         }
 
@@ -285,6 +289,20 @@ namespace CodeGenerator
             
             return sb.ToString();
         }
+
+        /*
+         
+            
+         public System.Boolean GetPhase(out Dynamic.Tekla.Structures.Model.Phase phase)
+		{
+            dynamic ph = null;
+            var result = teklaObject.GetPhase(out ph);
+            phase = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(ph);
+            return result;
+		}
+
+         */
+
 
         private bool IsTeklaType(Type type)
         {

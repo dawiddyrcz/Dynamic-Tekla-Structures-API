@@ -32,11 +32,6 @@ namespace Dynamic.Tekla.Structures.Model
 			return teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
 		}
 
-		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, out Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
-		{
-			return teklaObject.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
-		}
-
 
 
 

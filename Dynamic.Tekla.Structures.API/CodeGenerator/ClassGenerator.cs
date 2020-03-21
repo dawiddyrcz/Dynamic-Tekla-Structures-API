@@ -323,6 +323,18 @@ namespace CodeGenerator
         }
 
 
+        //TODO add from TSObject:
+        /*
+          public static ModelObject FromTSObject(dynamic tsObject)
+        {
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (ModelObject) System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
+        }
+         * */
+
         private readonly string text = @"
     public $abstract class $classname $baseClass
     {

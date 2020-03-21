@@ -509,7 +509,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObject FromTSObject(dynamic tsObject)
         {
-            return new ModelObject() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (ModelObject) System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

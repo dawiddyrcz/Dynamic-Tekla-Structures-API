@@ -49,12 +49,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void AddTriangle(System.Int32 Index1, System.Int32 Index2, System.Int32 Index3)
 		{
-			return teklaObject.AddTriangle(Index1, Index2, Index3);
+			teklaObject.AddTriangle(Index1, Index2, Index3);
 		}
 
 		public void AddLine(System.Int32 Index1, System.Int32 Index2)
 		{
-			return teklaObject.AddLine(Index1, Index2);
+			teklaObject.AddLine(Index1, Index2);
 		}
 
 

@@ -33,7 +33,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void CopyTo(System.Array array, System.Int32 index)
 		{
-			return teklaObject.CopyTo(array, index);
+			teklaObject.CopyTo(array, index);
 		}
 
 

@@ -194,7 +194,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public void ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum UnselectedMode)
 		{
-			return teklaObject.ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum_.GetTSObject(UnselectedMode));
+			teklaObject.ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum_.GetTSObject(UnselectedMode));
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
@@ -419,12 +419,12 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public void Close()
 		{
-			return teklaObject.Close();
+			teklaObject.Close();
 		}
 
 		public void SetProgress(System.String ProgressLabel, System.Int32 Progress)
 		{
-			return teklaObject.SetProgress(ProgressLabel, Progress);
+			teklaObject.SetProgress(ProgressLabel, Progress);
 		}
 
 		public System.Boolean Canceled()

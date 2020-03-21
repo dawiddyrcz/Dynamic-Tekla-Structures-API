@@ -59,7 +59,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 
 		public void UpdateModificationStampToLatest(System.String modificationStampKey)
 		{
-			return teklaObject.UpdateModificationStampToLatest(modificationStampKey);
+			teklaObject.UpdateModificationStampToLatest(modificationStampKey);
 		}
 
 		public Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)

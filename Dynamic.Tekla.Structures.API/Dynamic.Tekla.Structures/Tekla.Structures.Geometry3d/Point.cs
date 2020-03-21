@@ -57,12 +57,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void Zero()
 		{
-			return teklaObject.Zero();
+			teklaObject.Zero();
 		}
 
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
 		{
-			return teklaObject.Translate(X, Y, Z);
+			teklaObject.Translate(X, Y, Z);
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)

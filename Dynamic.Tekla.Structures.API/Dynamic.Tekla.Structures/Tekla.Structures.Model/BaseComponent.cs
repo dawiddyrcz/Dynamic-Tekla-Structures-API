@@ -26,17 +26,17 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 		{
-			return teklaObject.SetAttribute(AttrName, StrValue);
+			teklaObject.SetAttribute(AttrName, StrValue);
 		}
 
 		public void SetAttribute(System.String AttrName, System.Int32 Value)
 		{
-			return teklaObject.SetAttribute(AttrName, Value);
+			teklaObject.SetAttribute(AttrName, Value);
 		}
 
 		public void SetAttribute(System.String AttrName, System.Double DValue)
 		{
-			return teklaObject.SetAttribute(AttrName, DValue);
+			teklaObject.SetAttribute(AttrName, DValue);
 		}
 
 		public System.Boolean GetAttribute(System.String AttrName, ref System.String StrValue)

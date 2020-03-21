@@ -26,7 +26,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public void Reset()
 		{
-			return teklaObject.Reset();
+			teklaObject.Reset();
 		}
 
 

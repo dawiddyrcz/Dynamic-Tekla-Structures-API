@@ -48,12 +48,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void RemoveTemporaryGraphicsObject(System.Int32 GraphicObjectID)
 		{
-			return teklaObject.RemoveTemporaryGraphicsObject(GraphicObjectID);
+			teklaObject.RemoveTemporaryGraphicsObject(GraphicObjectID);
 		}
 
 		public void RemoveTemporaryGraphicsObjects(System.Collections.IEnumerable GraphicObjectIDs)
 		{
-			return teklaObject.RemoveTemporaryGraphicsObjects(GraphicObjectIDs);
+			teklaObject.RemoveTemporaryGraphicsObjects(GraphicObjectIDs);
 		}
 
 

@@ -216,9 +216,9 @@ namespace CodeGenerator
                 }
                 else
                 {
-                    var typeFullName = GetTypeFullName(method.ReturnType);
+                    var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
 
-                    sb.Append(typeFullName.Replace("System.Void", "void"));
+                    sb.Append(typeFullName);
                     sb.Append(" ");
                     sb.Append(name);
                     sb.Append("(");
@@ -242,7 +242,9 @@ namespace CodeGenerator
                     if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
                     sb.Append(")\n\t\t{\n");
-                    sb.Append("\t\t\treturn $dfield.");
+                    sb.Append("\t\t\t");
+                    if (!typeFullName.Equals("void")) sb.Append("return ");
+                    sb.Append("$dfield.");
                     sb.Append(name);
                     sb.Append("(");
 

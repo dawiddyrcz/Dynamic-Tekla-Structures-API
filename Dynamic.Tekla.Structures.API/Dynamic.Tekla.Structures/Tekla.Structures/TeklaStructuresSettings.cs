@@ -87,12 +87,12 @@ namespace Dynamic.Tekla.Structures
 
 		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
 		{
-			return teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+			teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
 		}
 
 		public void EndInvoke(System.IAsyncResult result)
 		{
-			return teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(result);
 		}
 
 

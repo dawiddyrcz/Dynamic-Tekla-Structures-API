@@ -26,7 +26,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Dispose()
 		{
-			return teklaObject.Dispose();
+			teklaObject.Dispose();
 		}
 
 

@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures
 
 		public void Add(System.String key)
 		{
-			return teklaObject.Add(key);
+			teklaObject.Add(key);
 		}
 
 		public System.String Get(System.String key)

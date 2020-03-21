@@ -38,12 +38,12 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
 		public void Invoke(System.Int32 nClashes)
 		{
-			return teklaObject.Invoke(nClashes);
+			teklaObject.Invoke(nClashes);
 		}
 
 		public void EndInvoke(System.IAsyncResult result)
 		{
-			return teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(result);
 		}
 
 
@@ -89,12 +89,12 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
 		public void Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData ClashData)
 		{
-			return teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
+			teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
 		}
 
 		public void EndInvoke(System.IAsyncResult result)
 		{
-			return teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(result);
 		}
 
 

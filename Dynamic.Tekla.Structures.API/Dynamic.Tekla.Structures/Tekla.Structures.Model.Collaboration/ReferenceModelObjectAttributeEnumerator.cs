@@ -32,7 +32,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public void Reset()
 		{
-			return teklaObject.Reset();
+			teklaObject.Reset();
 		}
 
 

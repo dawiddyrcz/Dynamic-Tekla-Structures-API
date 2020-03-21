@@ -38,7 +38,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void Reset()
 		{
-			return teklaObject.Reset();
+			teklaObject.Reset();
 		}
 
 

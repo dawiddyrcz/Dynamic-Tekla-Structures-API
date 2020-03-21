@@ -53,12 +53,12 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public void Add(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
 		{
-			return teklaObject.Add(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
+			teklaObject.Add(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 		}
 
 		public void Insert(System.Int32 Index, Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
 		{
-			return teklaObject.Insert(Index, Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
+			teklaObject.Insert(Index, Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item));
 		}
 
 		public System.Boolean Remove(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
@@ -68,12 +68,12 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public void RemoveAt(System.Int32 Index)
 		{
-			return teklaObject.RemoveAt(Index);
+			teklaObject.RemoveAt(Index);
 		}
 
 		public void Clear()
 		{
-			return teklaObject.Clear();
+			teklaObject.Clear();
 		}
 
 		public System.Boolean Contains(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item)
@@ -83,7 +83,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public void CopyTo(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Array, System.Int32 ArrayIndex)
 		{
-			return teklaObject.CopyTo(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Array), ArrayIndex);
+			teklaObject.CopyTo(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Array), ArrayIndex);
 		}
 
 		public System.Boolean IsFirst(Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem)

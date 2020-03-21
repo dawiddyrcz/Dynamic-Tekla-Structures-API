@@ -30,7 +30,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void Transpose()
 		{
-			return teklaObject.Transpose();
+			teklaObject.Transpose();
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()

@@ -86,22 +86,22 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis0, Dynamic.Tekla.Structures.Geometry3d.Vector axis1, Dynamic.Tekla.Structures.Geometry3d.Vector axis2)
 		{
-			return teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2));
+			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2));
 		}
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis)
 		{
-			return teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis));
+			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis));
 		}
 
 		public void SetExtent(System.Double extent0, System.Double extent1, System.Double extent2)
 		{
-			return teklaObject.SetExtent(extent0, extent1, extent2);
+			teklaObject.SetExtent(extent0, extent1, extent2);
 		}
 
 		public void SetExtent(System.Double extent)
 		{
-			return teklaObject.SetExtent(extent);
+			teklaObject.SetExtent(extent);
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ComputeVertices()

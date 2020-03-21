@@ -38,7 +38,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Reset()
 		{
-			return teklaObject.Reset();
+			teklaObject.Reset();
 		}
 
 		public System.Int32 GetSize()

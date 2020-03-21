@@ -38,7 +38,7 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Close()
 		{
-			return teklaObject.Close();
+			teklaObject.Close();
 		}
 
 		public System.Boolean IsModelSaved()

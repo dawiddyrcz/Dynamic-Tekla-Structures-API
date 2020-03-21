@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class BendSurfaceNode 
+    public  class BendSurfaceNode 
     {
 
 		public System.Boolean IsAutomatic
 		{
-			get => bendsurfacenode.IsAutomatic;
-			set { bendsurfacenode.IsAutomatic = value; }
+			get => teklaObject.IsAutomatic;
+			set { teklaObject.IsAutomatic = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BendSurface Surface
 		{
-			get => Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(bendsurfacenode.Surface);
-			set { bendsurfacenode.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
+			set { teklaObject.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic bendsurfacenode;
-        
-        private BendSurfaceNode()
-        {
-            this.bendsurfacenode =  TSActivator.CreateInstance("Tekla.Structures.Model.BendSurfaceNode");
-        }
+        internal dynamic teklaObject;
 
-        internal BendSurfaceNode(dynamic tsObject)
-        {
-            this.bendsurfacenode = tsObject;
-        }
+		internal BendSurfaceNode() {}
 		public BendSurfaceNode(Dynamic.Tekla.Structures.Model.BendSurface surface)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(surface);
-			this.bendsurfacenode = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurfaceNode", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurfaceNode", args);
 		}
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => bendsurfacenode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+			 => teklaObject.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BendSurfaceNode dynObject)
         {
-            return dynObject.bendsurfacenode;
+            return dynObject.teklaObject;
         }
 
         public static BendSurfaceNode FromTSObject(dynamic tsObject)
         {
-            return new BendSurfaceNode(tsObject);
+            return new BendSurfaceNode() { teklaObject = tsObject };
         }
     }
 

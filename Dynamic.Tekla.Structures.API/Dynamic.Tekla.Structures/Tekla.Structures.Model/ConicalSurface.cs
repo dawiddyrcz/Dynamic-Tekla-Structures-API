@@ -4,94 +4,86 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ConicalSurface 
+    public  class ConicalSurface  : Dynamic.Tekla.Structures.Model.BendSurface
     {
 
 		public System.Tuple<System.Double, System.Double> Radiuses
 		{
-			get => conicalsurface.Radiuses;
-			set { conicalsurface.Radiuses = value; }
+			get => teklaObject.Radiuses;
+			set { teklaObject.Radiuses = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Apex
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(conicalsurface.Apex);
-			set { conicalsurface.Apex = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Apex);
+			set { teklaObject.Apex = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Boolean InwardCurved
 		{
-			get => conicalsurface.InwardCurved;
-			set { conicalsurface.InwardCurved = value; }
+			get => teklaObject.InwardCurved;
+			set { teklaObject.InwardCurved = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line IntersectionLine
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(conicalsurface.IntersectionLine);
-			set { conicalsurface.IntersectionLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.IntersectionLine);
+			set { teklaObject.IntersectionLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.EndFaceNormal1);
-			set { conicalsurface.EndFaceNormal1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal1);
+			set { teklaObject.EndFaceNormal1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector EndFaceNormal2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.EndFaceNormal2);
-			set { conicalsurface.EndFaceNormal2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal2);
+			set { teklaObject.EndFaceNormal2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Line CenterLine
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(conicalsurface.CenterLine);
-			set { conicalsurface.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.CenterLine);
+			set { teklaObject.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxis
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(conicalsurface.RotationAxis);
-			set { conicalsurface.RotationAxis = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.RotationAxis);
+			set { teklaObject.RotationAxis = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
-			get => conicalsurface.LateralBoundary1;
-			set { conicalsurface.LateralBoundary1 = value; }
+			get => teklaObject.LateralBoundary1;
+			set { teklaObject.LateralBoundary1 = value; }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
-			get => conicalsurface.LateralBoundary2;
-			set { conicalsurface.LateralBoundary2 = value; }
+			get => teklaObject.LateralBoundary2;
+			set { teklaObject.LateralBoundary2 = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(conicalsurface.SideBoundary1);
-			set { conicalsurface.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary1);
+			set { teklaObject.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(conicalsurface.SideBoundary2);
-			set { conicalsurface.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary2);
+			set { teklaObject.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic conicalsurface;
-        
-        public ConicalSurface()
-        {
-            this.conicalsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface");
-        }
+        internal dynamic teklaObject;
 
-        internal ConicalSurface(dynamic tsObject)
-        {
-            this.conicalsurface = tsObject;
-        }
+		internal ConicalSurface() {}
 		public ConicalSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary1, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary2)
 		{
 			var args = new object[4];
@@ -99,7 +91,7 @@ namespace Dynamic.Tekla.Structures.Model
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary1);
 			args[3] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary2);
-			this.conicalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
 		}
 		public ConicalSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2)
 		{
@@ -108,7 +100,7 @@ namespace Dynamic.Tekla.Structures.Model
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
 			args[2] = lateralBoundary1;
 			args[3] = lateralBoundary2;
-			this.conicalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
 		}
 		public ConicalSurface(Dynamic.Tekla.Structures.Geometry3d.Arc baseArc, System.Double height, System.Double radiusAtHeight)
 		{
@@ -116,7 +108,7 @@ namespace Dynamic.Tekla.Structures.Model
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(baseArc);
 			args[1] = height;
 			args[2] = radiusAtHeight;
-			this.conicalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
 		}
 		public ConicalSurface(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2, Dynamic.Tekla.Structures.Geometry3d.Line centerLine, Dynamic.Tekla.Structures.Geometry3d.Vector rotationAxis)
 		{
@@ -125,7 +117,7 @@ namespace Dynamic.Tekla.Structures.Model
 			args[1] = lateralBoundary2;
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(centerLine);
 			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(rotationAxis);
-			this.conicalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConicalSurface", args);
 		}
 
 
@@ -138,12 +130,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ConicalSurface dynObject)
         {
-            return dynObject.conicalsurface;
+            return dynObject.teklaObject;
         }
 
         public static ConicalSurface FromTSObject(dynamic tsObject)
         {
-            return new ConicalSurface(tsObject);
+            return new ConicalSurface() { teklaObject = tsObject };
         }
     }
 

@@ -4,135 +4,127 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class BasePoint 
+    public  class BasePoint 
     {
 
 		public System.Int32 Id
 		{
-			get => basepoint.Id;
-			set { basepoint.Id = value; }
+			get => teklaObject.Id;
+			set { teklaObject.Id = value; }
 		}
 
 		public System.Guid Guid
 		{
-			get => basepoint.Guid;
-			set { basepoint.Guid = value; }
+			get => teklaObject.Guid;
+			set { teklaObject.Guid = value; }
 		}
 
 		public System.String InitialGuid
 		{
-			get => basepoint.InitialGuid;
-			set { basepoint.InitialGuid = value; }
+			get => teklaObject.InitialGuid;
+			set { teklaObject.InitialGuid = value; }
 		}
 
 		public System.String Name
 		{
-			get => basepoint.Name;
-			set { basepoint.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Description
 		{
-			get => basepoint.Description;
-			set { basepoint.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String CoordinateSystem
 		{
-			get => basepoint.CoordinateSystem;
-			set { basepoint.CoordinateSystem = value; }
+			get => teklaObject.CoordinateSystem;
+			set { teklaObject.CoordinateSystem = value; }
 		}
 
 		public System.Double NorthSouth
 		{
-			get => basepoint.NorthSouth;
-			set { basepoint.NorthSouth = value; }
+			get => teklaObject.NorthSouth;
+			set { teklaObject.NorthSouth = value; }
 		}
 
 		public System.Double EastWest
 		{
-			get => basepoint.EastWest;
-			set { basepoint.EastWest = value; }
+			get => teklaObject.EastWest;
+			set { teklaObject.EastWest = value; }
 		}
 
 		public System.Double Elevation
 		{
-			get => basepoint.Elevation;
-			set { basepoint.Elevation = value; }
+			get => teklaObject.Elevation;
+			set { teklaObject.Elevation = value; }
 		}
 
 		public System.Double Latitude
 		{
-			get => basepoint.Latitude;
-			set { basepoint.Latitude = value; }
+			get => teklaObject.Latitude;
+			set { teklaObject.Latitude = value; }
 		}
 
 		public System.Double Longitude
 		{
-			get => basepoint.Longitude;
-			set { basepoint.Longitude = value; }
+			get => teklaObject.Longitude;
+			set { teklaObject.Longitude = value; }
 		}
 
 		public System.Double LocationInModelX
 		{
-			get => basepoint.LocationInModelX;
-			set { basepoint.LocationInModelX = value; }
+			get => teklaObject.LocationInModelX;
+			set { teklaObject.LocationInModelX = value; }
 		}
 
 		public System.Double LocationInModelY
 		{
-			get => basepoint.LocationInModelY;
-			set { basepoint.LocationInModelY = value; }
+			get => teklaObject.LocationInModelY;
+			set { teklaObject.LocationInModelY = value; }
 		}
 
 		public System.Double LocationInModelZ
 		{
-			get => basepoint.LocationInModelZ;
-			set { basepoint.LocationInModelZ = value; }
+			get => teklaObject.LocationInModelZ;
+			set { teklaObject.LocationInModelZ = value; }
 		}
 
 		public System.Double AngleToNorth
 		{
-			get => basepoint.AngleToNorth;
-			set { basepoint.AngleToNorth = value; }
+			get => teklaObject.AngleToNorth;
+			set { teklaObject.AngleToNorth = value; }
 		}
 
 		public System.Boolean IsProjectBasePoint
 		{
-			get => basepoint.IsProjectBasePoint;
-			set { basepoint.IsProjectBasePoint = value; }
+			get => teklaObject.IsProjectBasePoint;
+			set { teklaObject.IsProjectBasePoint = value; }
 		}
 
 		public System.Boolean IsCurrentBasePoint
 		{
-			get => basepoint.IsCurrentBasePoint;
-			set { basepoint.IsCurrentBasePoint = value; }
+			get => teklaObject.IsCurrentBasePoint;
+			set { teklaObject.IsCurrentBasePoint = value; }
 		}
 
 		public System.Boolean IsScopedCurrentBasePoint
 		{
-			get => basepoint.IsScopedCurrentBasePoint;
-			set { basepoint.IsScopedCurrentBasePoint = value; }
+			get => teklaObject.IsScopedCurrentBasePoint;
+			set { teklaObject.IsScopedCurrentBasePoint = value; }
 		}
 
         
 
-        internal dynamic basepoint;
-        
-        public BasePoint()
-        {
-            this.basepoint =  TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint");
-        }
+        internal dynamic teklaObject;
 
-        internal BasePoint(dynamic tsObject)
-        {
-            this.basepoint = tsObject;
-        }
+		internal BasePoint() {}
 		public BasePoint(System.String name)
 		{
 			var args = new object[1];
 			args[0] = name;
-			this.basepoint = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
 		}
 		public BasePoint(System.Int32 id, System.Guid guid, System.String initialGuid, System.String name, System.String description, System.String coordinateSystem, System.Double northSouth, System.Double eastWest, System.Double elevation, System.Double latitude, System.Double longitude, System.Double locationInModelX, System.Double locationInModelY, System.Double locationInModelZ, System.Double angleToNorth, System.Boolean isProjectBasePoint, System.Boolean isCurrentBasePoint)
 		{
@@ -154,38 +146,38 @@ namespace Dynamic.Tekla.Structures.Model
 			args[14] = angleToNorth;
 			args[15] = isProjectBasePoint;
 			args[16] = isCurrentBasePoint;
-			this.basepoint = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
 		}
 
 		public System.Boolean Insert()
-			 => basepoint.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Modify()
-			 => basepoint.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => basepoint.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType)
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(basepoint.GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType_.GetTSObject(CoordsysType)));
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType_.GetTSObject(CoordsysType)));
 
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
-			 => basepoint.GetCompoundPlaneAngleLatitude();
+			 => teklaObject.GetCompoundPlaneAngleLatitude();
 
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
-			 => basepoint.GetCompoundPlaneAngleLongitude();
+			 => teklaObject.GetCompoundPlaneAngleLongitude();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(basepoint.ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 
 
 
@@ -237,12 +229,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(BasePoint dynObject)
         {
-            return dynObject.basepoint;
+            return dynObject.teklaObject;
         }
 
         public static BasePoint FromTSObject(dynamic tsObject)
         {
-            return new BasePoint(tsObject);
+            return new BasePoint() { teklaObject = tsObject };
         }
     }
 

@@ -4,47 +4,31 @@
 namespace Dynamic.Tekla.Structures.Filtering.Categories
 {
 
-    public sealed class AssemblyFilterExpressions 
+    public  class AssemblyFilterExpressions 
     {
 
         
 
-        internal dynamic assemblyfilterexpressions;
-        
-        public AssemblyFilterExpressions()
-        {
-            this.assemblyfilterexpressions =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions");
-        }
+        internal dynamic teklaObject;
 
-        internal AssemblyFilterExpressions(dynamic tsObject)
-        {
-            this.assemblyfilterexpressions = tsObject;
-        }
+		internal AssemblyFilterExpressions() {}
 
 
 
 
-    public sealed class CustomBoolean 
+    public  class CustomBoolean  : Dynamic.Tekla.Structures.Filtering.BooleanFilterExpression
     {
 
         
 
-        internal dynamic customboolean;
-        
-        public CustomBoolean()
-        {
-            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomBoolean");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomBoolean(dynamic tsObject)
-        {
-            this.customboolean = tsObject;
-        }
+		internal CustomBoolean() {}
 		public CustomBoolean(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customboolean = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomBoolean", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomBoolean", args);
 		}
 
 
@@ -57,38 +41,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomBoolean dynObject)
         {
-            return dynObject.customboolean;
+            return dynObject.teklaObject;
         }
 
         public static CustomBoolean FromTSObject(dynamic tsObject)
         {
-            return new CustomBoolean(tsObject);
+            return new CustomBoolean() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomDateTime 
+    public  class CustomDateTime  : Dynamic.Tekla.Structures.Filtering.DateTimeFilterExpression
     {
 
         
 
-        internal dynamic customdatetime;
-        
-        public CustomDateTime()
-        {
-            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomDateTime");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomDateTime(dynamic tsObject)
-        {
-            this.customdatetime = tsObject;
-        }
+		internal CustomDateTime() {}
 		public CustomDateTime(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customdatetime = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomDateTime", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomDateTime", args);
 		}
 
 
@@ -101,38 +77,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomDateTime dynObject)
         {
-            return dynObject.customdatetime;
+            return dynObject.teklaObject;
         }
 
         public static CustomDateTime FromTSObject(dynamic tsObject)
         {
-            return new CustomDateTime(tsObject);
+            return new CustomDateTime() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomNumber 
+    public  class CustomNumber  : Dynamic.Tekla.Structures.Filtering.NumericFilterExpression
     {
 
         
 
-        internal dynamic customnumber;
-        
-        public CustomNumber()
-        {
-            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomNumber");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomNumber(dynamic tsObject)
-        {
-            this.customnumber = tsObject;
-        }
+		internal CustomNumber() {}
 		public CustomNumber(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customnumber = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomNumber", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomNumber", args);
 		}
 
 
@@ -145,38 +113,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomNumber dynObject)
         {
-            return dynObject.customnumber;
+            return dynObject.teklaObject;
         }
 
         public static CustomNumber FromTSObject(dynamic tsObject)
         {
-            return new CustomNumber(tsObject);
+            return new CustomNumber() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomString 
+    public  class CustomString  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic customstring;
-        
-        public CustomString()
-        {
-            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomString");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomString(dynamic tsObject)
-        {
-            this.customstring = tsObject;
-        }
+		internal CustomString() {}
 		public CustomString(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customstring = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomString", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.CustomString", args);
 		}
 
 
@@ -189,33 +149,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomString dynObject)
         {
-            return dynObject.customstring;
+            return dynObject.teklaObject;
         }
 
         public static CustomString FromTSObject(dynamic tsObject)
         {
-            return new CustomString(tsObject);
+            return new CustomString() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class IdNumber 
+    public  class IdNumber  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic idnumber;
-        
-        public IdNumber()
-        {
-            this.idnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.IdNumber");
-        }
+        internal dynamic teklaObject;
 
-        internal IdNumber(dynamic tsObject)
-        {
-            this.idnumber = tsObject;
-        }
+		public IdNumber()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.IdNumber");
+		}
 
 
 
@@ -227,33 +182,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(IdNumber dynObject)
         {
-            return dynObject.idnumber;
+            return dynObject.teklaObject;
         }
 
         public static IdNumber FromTSObject(dynamic tsObject)
         {
-            return new IdNumber(tsObject);
+            return new IdNumber() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Guid 
+    public  class Guid  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic guid;
-        
-        public Guid()
-        {
-            this.guid =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Guid");
-        }
+        internal dynamic teklaObject;
 
-        internal Guid(dynamic tsObject)
-        {
-            this.guid = tsObject;
-        }
+		public Guid()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Guid");
+		}
 
 
 
@@ -265,33 +215,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Guid dynObject)
         {
-            return dynObject.guid;
+            return dynObject.teklaObject;
         }
 
         public static Guid FromTSObject(dynamic tsObject)
         {
-            return new Guid(tsObject);
+            return new Guid() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Level 
+    public  class Level  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic level;
-        
-        public Level()
-        {
-            this.level =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Level");
-        }
+        internal dynamic teklaObject;
 
-        internal Level(dynamic tsObject)
-        {
-            this.level = tsObject;
-        }
+		public Level()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Level");
+		}
 
 
 
@@ -303,33 +248,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Level dynObject)
         {
-            return dynObject.level;
+            return dynObject.teklaObject;
         }
 
         public static Level FromTSObject(dynamic tsObject)
         {
-            return new Level(tsObject);
+            return new Level() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Name 
+    public  class Name  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic name;
-        
-        public Name()
-        {
-            this.name =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Name");
-        }
+        internal dynamic teklaObject;
 
-        internal Name(dynamic tsObject)
-        {
-            this.name = tsObject;
-        }
+		public Name()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Name");
+		}
 
 
 
@@ -341,33 +281,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Name dynObject)
         {
-            return dynObject.name;
+            return dynObject.teklaObject;
         }
 
         public static Name FromTSObject(dynamic tsObject)
         {
-            return new Name(tsObject);
+            return new Name() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Phase 
+    public  class Phase  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic phase;
-        
-        public Phase()
-        {
-            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Phase");
-        }
+        internal dynamic teklaObject;
 
-        internal Phase(dynamic tsObject)
-        {
-            this.phase = tsObject;
-        }
+		public Phase()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Phase");
+		}
 
 
 
@@ -379,33 +314,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Phase dynObject)
         {
-            return dynObject.phase;
+            return dynObject.teklaObject;
         }
 
         public static Phase FromTSObject(dynamic tsObject)
         {
-            return new Phase(tsObject);
+            return new Phase() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class PositionNumber 
+    public  class PositionNumber  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic positionnumber;
-        
-        public PositionNumber()
-        {
-            this.positionnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.PositionNumber");
-        }
+        internal dynamic teklaObject;
 
-        internal PositionNumber(dynamic tsObject)
-        {
-            this.positionnumber = tsObject;
-        }
+		public PositionNumber()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.PositionNumber");
+		}
 
 
 
@@ -417,33 +347,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(PositionNumber dynObject)
         {
-            return dynObject.positionnumber;
+            return dynObject.teklaObject;
         }
 
         public static PositionNumber FromTSObject(dynamic tsObject)
         {
-            return new PositionNumber(tsObject);
+            return new PositionNumber() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Prefix 
+    public  class Prefix  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic prefix;
-        
-        public Prefix()
-        {
-            this.prefix =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Prefix");
-        }
+        internal dynamic teklaObject;
 
-        internal Prefix(dynamic tsObject)
-        {
-            this.prefix = tsObject;
-        }
+		public Prefix()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Prefix");
+		}
 
 
 
@@ -455,33 +380,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Prefix dynObject)
         {
-            return dynObject.prefix;
+            return dynObject.teklaObject;
         }
 
         public static Prefix FromTSObject(dynamic tsObject)
         {
-            return new Prefix(tsObject);
+            return new Prefix() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Series 
+    public  class Series  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic series;
-        
-        public Series()
-        {
-            this.series =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Series");
-        }
+        internal dynamic teklaObject;
 
-        internal Series(dynamic tsObject)
-        {
-            this.series = tsObject;
-        }
+		public Series()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Series");
+		}
 
 
 
@@ -493,33 +413,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Series dynObject)
         {
-            return dynObject.series;
+            return dynObject.teklaObject;
         }
 
         public static Series FromTSObject(dynamic tsObject)
         {
-            return new Series(tsObject);
+            return new Series() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class StartNumber 
+    public  class StartNumber  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic startnumber;
-        
-        public StartNumber()
-        {
-            this.startnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.StartNumber");
-        }
+        internal dynamic teklaObject;
 
-        internal StartNumber(dynamic tsObject)
-        {
-            this.startnumber = tsObject;
-        }
+		public StartNumber()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.StartNumber");
+		}
 
 
 
@@ -531,33 +446,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(StartNumber dynObject)
         {
-            return dynObject.startnumber;
+            return dynObject.teklaObject;
         }
 
         public static StartNumber FromTSObject(dynamic tsObject)
         {
-            return new StartNumber(tsObject);
+            return new StartNumber() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Type 
+    public  class Type  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic type;
-        
-        public Type()
-        {
-            this.type =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Type");
-        }
+        internal dynamic teklaObject;
 
-        internal Type(dynamic tsObject)
-        {
-            this.type = tsObject;
-        }
+		public Type()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.AssemblyFilterExpressions.Type");
+		}
 
 
 
@@ -569,12 +479,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Type dynObject)
         {
-            return dynObject.type;
+            return dynObject.teklaObject;
         }
 
         public static Type FromTSObject(dynamic tsObject)
         {
-            return new Type(tsObject);
+            return new Type() { teklaObject = tsObject };
         }
     }
 
@@ -587,12 +497,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(AssemblyFilterExpressions dynObject)
         {
-            return dynObject.assemblyfilterexpressions;
+            return dynObject.teklaObject;
         }
 
         public static AssemblyFilterExpressions FromTSObject(dynamic tsObject)
         {
-            return new AssemblyFilterExpressions(tsObject);
+            return new AssemblyFilterExpressions() { teklaObject = tsObject };
         }
     }
 

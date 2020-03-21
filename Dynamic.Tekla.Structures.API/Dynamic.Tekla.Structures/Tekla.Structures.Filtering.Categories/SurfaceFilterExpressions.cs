@@ -4,47 +4,31 @@
 namespace Dynamic.Tekla.Structures.Filtering.Categories
 {
 
-    public sealed class SurfaceFilterExpressions 
+    public  class SurfaceFilterExpressions 
     {
 
         
 
-        internal dynamic surfacefilterexpressions;
-        
-        public SurfaceFilterExpressions()
-        {
-            this.surfacefilterexpressions =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions");
-        }
+        internal dynamic teklaObject;
 
-        internal SurfaceFilterExpressions(dynamic tsObject)
-        {
-            this.surfacefilterexpressions = tsObject;
-        }
+		internal SurfaceFilterExpressions() {}
 
 
 
 
-    public sealed class CustomBoolean 
+    public  class CustomBoolean  : Dynamic.Tekla.Structures.Filtering.BooleanFilterExpression
     {
 
         
 
-        internal dynamic customboolean;
-        
-        public CustomBoolean()
-        {
-            this.customboolean =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomBoolean");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomBoolean(dynamic tsObject)
-        {
-            this.customboolean = tsObject;
-        }
+		internal CustomBoolean() {}
 		public CustomBoolean(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customboolean = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomBoolean", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomBoolean", args);
 		}
 
 
@@ -57,38 +41,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomBoolean dynObject)
         {
-            return dynObject.customboolean;
+            return dynObject.teklaObject;
         }
 
         public static CustomBoolean FromTSObject(dynamic tsObject)
         {
-            return new CustomBoolean(tsObject);
+            return new CustomBoolean() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomDateTime 
+    public  class CustomDateTime  : Dynamic.Tekla.Structures.Filtering.DateTimeFilterExpression
     {
 
         
 
-        internal dynamic customdatetime;
-        
-        public CustomDateTime()
-        {
-            this.customdatetime =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomDateTime");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomDateTime(dynamic tsObject)
-        {
-            this.customdatetime = tsObject;
-        }
+		internal CustomDateTime() {}
 		public CustomDateTime(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customdatetime = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomDateTime", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomDateTime", args);
 		}
 
 
@@ -101,38 +77,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomDateTime dynObject)
         {
-            return dynObject.customdatetime;
+            return dynObject.teklaObject;
         }
 
         public static CustomDateTime FromTSObject(dynamic tsObject)
         {
-            return new CustomDateTime(tsObject);
+            return new CustomDateTime() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomNumber 
+    public  class CustomNumber  : Dynamic.Tekla.Structures.Filtering.NumericFilterExpression
     {
 
         
 
-        internal dynamic customnumber;
-        
-        public CustomNumber()
-        {
-            this.customnumber =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomNumber");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomNumber(dynamic tsObject)
-        {
-            this.customnumber = tsObject;
-        }
+		internal CustomNumber() {}
 		public CustomNumber(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customnumber = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomNumber", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomNumber", args);
 		}
 
 
@@ -145,38 +113,30 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomNumber dynObject)
         {
-            return dynObject.customnumber;
+            return dynObject.teklaObject;
         }
 
         public static CustomNumber FromTSObject(dynamic tsObject)
         {
-            return new CustomNumber(tsObject);
+            return new CustomNumber() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class CustomString 
+    public  class CustomString  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic customstring;
-        
-        public CustomString()
-        {
-            this.customstring =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomString");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomString(dynamic tsObject)
-        {
-            this.customstring = tsObject;
-        }
+		internal CustomString() {}
 		public CustomString(System.String UserAttribute)
 		{
 			var args = new object[1];
 			args[0] = UserAttribute;
-			this.customstring = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomString", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.CustomString", args);
 		}
 
 
@@ -189,33 +149,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomString dynObject)
         {
-            return dynObject.customstring;
+            return dynObject.teklaObject;
         }
 
         public static CustomString FromTSObject(dynamic tsObject)
         {
-            return new CustomString(tsObject);
+            return new CustomString() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Name 
+    public  class Name  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic name;
-        
-        public Name()
-        {
-            this.name =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Name");
-        }
+        internal dynamic teklaObject;
 
-        internal Name(dynamic tsObject)
-        {
-            this.name = tsObject;
-        }
+		public Name()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Name");
+		}
 
 
 
@@ -227,33 +182,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Name dynObject)
         {
-            return dynObject.name;
+            return dynObject.teklaObject;
         }
 
         public static Name FromTSObject(dynamic tsObject)
         {
-            return new Name(tsObject);
+            return new Name() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Type 
+    public  class Type  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
     {
 
         
 
-        internal dynamic type;
-        
-        public Type()
-        {
-            this.type =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Type");
-        }
+        internal dynamic teklaObject;
 
-        internal Type(dynamic tsObject)
-        {
-            this.type = tsObject;
-        }
+		public Type()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Type");
+		}
 
 
 
@@ -265,33 +215,28 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Type dynObject)
         {
-            return dynObject.type;
+            return dynObject.teklaObject;
         }
 
         public static Type FromTSObject(dynamic tsObject)
         {
-            return new Type(tsObject);
+            return new Type() { teklaObject = tsObject };
         }
     }
 
 
 
-    public sealed class Class 
+    public  class Class  : Dynamic.Tekla.Structures.Filtering.NumericFilterExpression
     {
 
         
 
-        internal dynamic @class;
-        
-        public Class()
-        {
-            this.@class =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Class");
-        }
+        internal dynamic teklaObject;
 
-        internal Class(dynamic tsObject)
-        {
-            this.@class = tsObject;
-        }
+		public Class()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.SurfaceFilterExpressions.Class");
+		}
 
 
 
@@ -303,12 +248,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Class dynObject)
         {
-            return dynObject.@class;
+            return dynObject.teklaObject;
         }
 
         public static Class FromTSObject(dynamic tsObject)
         {
-            return new Class(tsObject);
+            return new Class() { teklaObject = tsObject };
         }
     }
 
@@ -321,12 +266,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(SurfaceFilterExpressions dynObject)
         {
-            return dynObject.surfacefilterexpressions;
+            return dynObject.teklaObject;
         }
 
         public static SurfaceFilterExpressions FromTSObject(dynamic tsObject)
         {
-            return new SurfaceFilterExpressions(tsObject);
+            return new SurfaceFilterExpressions() { teklaObject = tsObject };
         }
     }
 

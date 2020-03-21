@@ -4,40 +4,32 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarGeometry 
+    public  class RebarGeometry 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(rebargeometry.Shape);
-			set { rebargeometry.Shape = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
+			set { teklaObject.Shape = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
 		}
 
 		public System.Double Diameter
 		{
-			get => rebargeometry.Diameter;
-			set { rebargeometry.Diameter = value; }
+			get => teklaObject.Diameter;
+			set { teklaObject.Diameter = value; }
 		}
 
 		public System.Collections.ArrayList BendingRadiuses
 		{
-			get => rebargeometry.BendingRadiuses;
-			set { rebargeometry.BendingRadiuses = value; }
+			get => teklaObject.BendingRadiuses;
+			set { teklaObject.BendingRadiuses = value; }
 		}
 
         
 
-        internal dynamic rebargeometry;
-        
-        public RebarGeometry()
-        {
-            this.rebargeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGeometry");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarGeometry(dynamic tsObject)
-        {
-            this.rebargeometry = tsObject;
-        }
+		internal RebarGeometry() {}
 
 
 
@@ -49,12 +41,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarGeometry dynObject)
         {
-            return dynObject.rebargeometry;
+            return dynObject.teklaObject;
         }
 
         public static RebarGeometry FromTSObject(dynamic tsObject)
         {
-            return new RebarGeometry(tsObject);
+            return new RebarGeometry() { teklaObject = tsObject };
         }
     }
 

@@ -4,190 +4,185 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarEndDetailModifier 
+    public  class RebarEndDetailModifier  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
 		public Dynamic.Tekla.Structures.Model.RebarHookDataNullable RebarHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(rebarenddetailmodifier.RebarHook);
-			set { rebarenddetailmodifier.RebarHook = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(teklaObject.RebarHook);
+			set { teklaObject.RebarHook = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable RebarThreading
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(rebarenddetailmodifier.RebarThreading);
-			set { rebarenddetailmodifier.RebarThreading = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(teklaObject.RebarThreading);
+			set { teklaObject.RebarThreading = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable RebarLengthAdjustment
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(rebarenddetailmodifier.RebarLengthAdjustment);
-			set { rebarenddetailmodifier.RebarLengthAdjustment = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(teklaObject.RebarLengthAdjustment);
+			set { teklaObject.RebarLengthAdjustment = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarCrankingNullable RebarCranking
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(rebarenddetailmodifier.RebarCranking);
-			set { rebarenddetailmodifier.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(teklaObject.RebarCranking);
+			set { teklaObject.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value); }
 		}
 
 		public Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum EndType
 		{
-			get => rebarenddetailmodifier.EndType;
-			set { rebarenddetailmodifier.EndType = value; }
+			get => teklaObject.EndType;
+			set { teklaObject.EndType = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(rebarenddetailmodifier.Father);
-			set { rebarenddetailmodifier.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarenddetailmodifier.Curve);
-			set { rebarenddetailmodifier.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
+			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarenddetailmodifier.BarsAffected);
-			set { rebarenddetailmodifier.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
+			set { teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
 		{
-			get => rebarenddetailmodifier.FirstAffectedBar;
-			set { rebarenddetailmodifier.FirstAffectedBar = value; }
+			get => teklaObject.FirstAffectedBar;
+			set { teklaObject.FirstAffectedBar = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => rebarenddetailmodifier.ModificationTime;
-			set { rebarenddetailmodifier.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => rebarenddetailmodifier.IsUpToDate;
-			set { rebarenddetailmodifier.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarenddetailmodifier.Identifier);
-			set { rebarenddetailmodifier.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarenddetailmodifier;
-        
-        public RebarEndDetailModifier()
-        {
-            this.rebarenddetailmodifier =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarEndDetailModifier");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarEndDetailModifier(dynamic tsObject)
-        {
-            this.rebarenddetailmodifier = tsObject;
-        }
+		public RebarEndDetailModifier()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarEndDetailModifier");
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarenddetailmodifier.GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum_.GetTSObject(whichEnd)));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum_.GetTSObject(whichEnd)));
 
 		public System.Boolean Insert()
-			 => rebarenddetailmodifier.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Modify()
-			 => rebarenddetailmodifier.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => rebarenddetailmodifier.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean Select()
-			 => rebarenddetailmodifier.Select();
+			 => teklaObject.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarenddetailmodifier.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarenddetailmodifier.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarenddetailmodifier.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarenddetailmodifier.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => rebarenddetailmodifier.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => rebarenddetailmodifier.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => rebarenddetailmodifier.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => rebarenddetailmodifier.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => rebarenddetailmodifier.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => rebarenddetailmodifier.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => rebarenddetailmodifier.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => rebarenddetailmodifier.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => rebarenddetailmodifier.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => rebarenddetailmodifier.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => rebarenddetailmodifier.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarenddetailmodifier.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarenddetailmodifier.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarenddetailmodifier.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => rebarenddetailmodifier.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => rebarenddetailmodifier.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -239,12 +234,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarEndDetailModifier dynObject)
         {
-            return dynObject.rebarenddetailmodifier;
+            return dynObject.teklaObject;
         }
 
         public static RebarEndDetailModifier FromTSObject(dynamic tsObject)
         {
-            return new RebarEndDetailModifier(tsObject);
+            return new RebarEndDetailModifier() { teklaObject = tsObject };
         }
     }
 

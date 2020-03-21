@@ -4,22 +4,14 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class BooleanFilterExpression 
+    public  class BooleanFilterExpression  : Dynamic.Tekla.Structures.Filtering.DataFilterExpression
     {
 
         
 
-        internal dynamic booleanfilterexpression;
-        
-        public BooleanFilterExpression()
-        {
-            this.booleanfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanFilterExpression");
-        }
+        internal dynamic teklaObject;
 
-        internal BooleanFilterExpression(dynamic tsObject)
-        {
-            this.booleanfilterexpression = tsObject;
-        }
+		internal BooleanFilterExpression() {}
 
 
 
@@ -31,12 +23,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(BooleanFilterExpression dynObject)
         {
-            return dynObject.booleanfilterexpression;
+            return dynObject.teklaObject;
         }
 
         public static BooleanFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new BooleanFilterExpression(tsObject);
+            return new BooleanFilterExpression() { teklaObject = tsObject };
         }
     }
 

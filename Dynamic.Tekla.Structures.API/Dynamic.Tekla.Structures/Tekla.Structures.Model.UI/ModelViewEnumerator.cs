@@ -4,46 +4,38 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ModelViewEnumerator 
+    public  class ModelViewEnumerator 
     {
 
 		public Dynamic.Tekla.Structures.Model.UI.View Current
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(modelviewenumerator.Current);
-			set { modelviewenumerator.Current = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
+			set { teklaObject.Current = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
 		public System.Int32 Count
 		{
-			get => modelviewenumerator.Count;
-			set { modelviewenumerator.Count = value; }
+			get => teklaObject.Count;
+			set { teklaObject.Count = value; }
 		}
 
 		public System.Int32 CurrentViewId
 		{
-			get => modelviewenumerator.CurrentViewId;
-			set { modelviewenumerator.CurrentViewId = value; }
+			get => teklaObject.CurrentViewId;
+			set { teklaObject.CurrentViewId = value; }
 		}
 
         
 
-        internal dynamic modelviewenumerator;
-        
-        public ModelViewEnumerator()
-        {
-            this.modelviewenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelViewEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal ModelViewEnumerator(dynamic tsObject)
-        {
-            this.modelviewenumerator = tsObject;
-        }
+		internal ModelViewEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => modelviewenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => modelviewenumerator.Reset();
+			 => teklaObject.Reset();
 
 
 
@@ -55,12 +47,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ModelViewEnumerator dynObject)
         {
-            return dynObject.modelviewenumerator;
+            return dynObject.teklaObject;
         }
 
         public static ModelViewEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ModelViewEnumerator(tsObject);
+            return new ModelViewEnumerator() { teklaObject = tsObject };
         }
     }
 

@@ -4,193 +4,185 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class GridSurface 
+    public  class GridSurface  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.GridBase Parent
 		{
-			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(gridsurface.Parent);
-			set { gridsurface.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
+			set { teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
 		}
 
 		public System.String Label
 		{
-			get => gridsurface.Label;
-			set { gridsurface.Label = value; }
+			get => teklaObject.Label;
+			set { teklaObject.Label = value; }
 		}
 
 		public System.Boolean IsMagnetic
 		{
-			get => gridsurface.IsMagnetic;
-			set { gridsurface.IsMagnetic = value; }
+			get => teklaObject.IsMagnetic;
+			set { teklaObject.IsMagnetic = value; }
 		}
 
 		public System.Double ExtensionLeft
 		{
-			get => gridsurface.ExtensionLeft;
-			set { gridsurface.ExtensionLeft = value; }
+			get => teklaObject.ExtensionLeft;
+			set { teklaObject.ExtensionLeft = value; }
 		}
 
 		public System.Double ExtensionRight
 		{
-			get => gridsurface.ExtensionRight;
-			set { gridsurface.ExtensionRight = value; }
+			get => teklaObject.ExtensionRight;
+			set { teklaObject.ExtensionRight = value; }
 		}
 
 		public System.Double ExtensionBelow
 		{
-			get => gridsurface.ExtensionBelow;
-			set { gridsurface.ExtensionBelow = value; }
+			get => teklaObject.ExtensionBelow;
+			set { teklaObject.ExtensionBelow = value; }
 		}
 
 		public System.Double ExtensionAbove
 		{
-			get => gridsurface.ExtensionAbove;
-			set { gridsurface.ExtensionAbove = value; }
+			get => teklaObject.ExtensionAbove;
+			set { teklaObject.ExtensionAbove = value; }
 		}
 
 		public System.Boolean DrawingVisibility
 		{
-			get => gridsurface.DrawingVisibility;
-			set { gridsurface.DrawingVisibility = value; }
+			get => teklaObject.DrawingVisibility;
+			set { teklaObject.DrawingVisibility = value; }
 		}
 
 		public System.Boolean IsManual
 		{
-			get => gridsurface.IsManual;
-			set { gridsurface.IsManual = value; }
+			get => teklaObject.IsManual;
+			set { teklaObject.IsManual = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => gridsurface.ModificationTime;
-			set { gridsurface.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => gridsurface.IsUpToDate;
-			set { gridsurface.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(gridsurface.Identifier);
-			set { gridsurface.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic gridsurface;
-        
-        private GridSurface()
-        {
-            this.gridsurface =  TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface");
-        }
+        internal dynamic teklaObject;
 
-        internal GridSurface(dynamic tsObject)
-        {
-            this.gridsurface = tsObject;
-        }
+		internal GridSurface() {}
 		public GridSurface(System.String label)
 		{
 			var args = new object[1];
 			args[0] = label;
-			this.gridsurface = TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface", args);
 		}
 
 		public System.Boolean Insert()
-			 => gridsurface.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => gridsurface.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => gridsurface.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => gridsurface.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridsurface.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(gridsurface.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(gridsurface.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => gridsurface.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => gridsurface.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => gridsurface.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => gridsurface.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => gridsurface.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => gridsurface.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => gridsurface.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => gridsurface.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => gridsurface.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => gridsurface.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => gridsurface.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => gridsurface.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => gridsurface.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => gridsurface.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => gridsurface.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => gridsurface.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => gridsurface.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => gridsurface.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => gridsurface.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(gridsurface.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridsurface.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => gridsurface.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => gridsurface.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => gridsurface.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -202,12 +194,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(GridSurface dynObject)
         {
-            return dynObject.gridsurface;
+            return dynObject.teklaObject;
         }
 
         public static GridSurface FromTSObject(dynamic tsObject)
         {
-            return new GridSurface(tsObject);
+            return new GridSurface() { teklaObject = tsObject };
         }
     }
 

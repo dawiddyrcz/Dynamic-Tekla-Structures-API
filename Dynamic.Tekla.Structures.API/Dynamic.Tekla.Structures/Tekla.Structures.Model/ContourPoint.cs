@@ -4,65 +4,60 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ContourPoint 
+    public  class ContourPoint  : Dynamic.Tekla.Structures.Geometry3d.Point
     {
 
 		public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
 		{
-			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(contourpoint.Chamfer);
-			set { contourpoint.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(teklaObject.Chamfer);
+			set { teklaObject.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
 		}
 
 		public System.Double X
 		{
-			get => contourpoint.X;
-			set { contourpoint.X = value; }
+			get => teklaObject.X;
+			set { teklaObject.X = value; }
 		}
 
 		public System.Double Y
 		{
-			get => contourpoint.Y;
-			set { contourpoint.Y = value; }
+			get => teklaObject.Y;
+			set { teklaObject.Y = value; }
 		}
 
 		public System.Double Z
 		{
-			get => contourpoint.Z;
-			set { contourpoint.Z = value; }
+			get => teklaObject.Z;
+			set { teklaObject.Z = value; }
 		}
 
         
 
-        internal dynamic contourpoint;
-        
-        public ContourPoint()
-        {
-            this.contourpoint =  TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint");
-        }
+        internal dynamic teklaObject;
 
-        internal ContourPoint(dynamic tsObject)
-        {
-            this.contourpoint = tsObject;
-        }
+		public ContourPoint()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint");
+		}
 		public ContourPoint(Dynamic.Tekla.Structures.Geometry3d.Point P, Dynamic.Tekla.Structures.Model.Chamfer C)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P);
 			args[1] = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(C);
-			this.contourpoint = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint", args);
 		}
 
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => contourpoint.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+			 => teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
 
 		public void Zero()
-			 => contourpoint.Zero();
+			 => teklaObject.Zero();
 
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
-			 => contourpoint.Translate(X, Y, Z);
+			 => teklaObject.Translate(X, Y, Z);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => contourpoint.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -74,12 +69,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ContourPoint dynObject)
         {
-            return dynObject.contourpoint;
+            return dynObject.teklaObject;
         }
 
         public static ContourPoint FromTSObject(dynamic tsObject)
         {
-            return new ContourPoint(tsObject);
+            return new ContourPoint() { teklaObject = tsObject };
         }
     }
 

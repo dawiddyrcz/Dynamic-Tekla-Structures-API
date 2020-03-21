@@ -4,139 +4,131 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Boolean 
+    public  class Boolean  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(boolean.Father);
-			set { boolean.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => boolean.ModificationTime;
-			set { boolean.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => boolean.IsUpToDate;
-			set { boolean.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(boolean.Identifier);
-			set { boolean.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic boolean;
-        
-        private Boolean()
-        {
-            this.boolean =  TSActivator.CreateInstance("Tekla.Structures.Model.Boolean");
-        }
+        internal dynamic teklaObject;
 
-        internal Boolean(dynamic tsObject)
-        {
-            this.boolean = tsObject;
-        }
+		internal Boolean() {}
 
 		public System.Boolean Insert()
-			 => boolean.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => boolean.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => boolean.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => boolean.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boolean.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(boolean.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(boolean.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => boolean.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => boolean.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => boolean.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => boolean.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => boolean.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => boolean.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => boolean.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => boolean.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => boolean.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => boolean.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => boolean.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => boolean.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => boolean.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => boolean.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => boolean.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => boolean.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => boolean.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => boolean.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => boolean.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(boolean.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boolean.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => boolean.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => boolean.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => boolean.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -148,12 +140,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Boolean dynObject)
         {
-            return dynObject.boolean;
+            return dynObject.teklaObject;
         }
 
         public static Boolean FromTSObject(dynamic tsObject)
         {
-            return new Boolean(tsObject);
+            return new Boolean() { teklaObject = tsObject };
         }
     }
 

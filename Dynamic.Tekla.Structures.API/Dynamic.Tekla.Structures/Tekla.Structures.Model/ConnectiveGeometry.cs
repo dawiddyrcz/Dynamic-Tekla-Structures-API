@@ -4,40 +4,32 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ConnectiveGeometry 
+    public  class ConnectiveGeometry 
     {
 
         
 
-        internal dynamic connectivegeometry;
-        
-        public ConnectiveGeometry()
-        {
-            this.connectivegeometry =  TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry");
-        }
+        internal dynamic teklaObject;
 
-        internal ConnectiveGeometry(dynamic tsObject)
-        {
-            this.connectivegeometry = tsObject;
-        }
+		internal ConnectiveGeometry() {}
 		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.Contour contour)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
-			this.connectivegeometry = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
 		}
 		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.BendSurface bendSurface)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(bendSurface);
-			this.connectivegeometry = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
 		}
 
 		public System.Boolean IsEmpty()
-			 => connectivegeometry.IsEmpty();
+			 => teklaObject.IsEmpty();
 
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
-			 => Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(connectivegeometry.GetGeometryEnumerator());
+			 => Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(teklaObject.GetGeometryEnumerator());
 
 
 
@@ -49,12 +41,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ConnectiveGeometry dynObject)
         {
-            return dynObject.connectivegeometry;
+            return dynObject.teklaObject;
         }
 
         public static ConnectiveGeometry FromTSObject(dynamic tsObject)
         {
-            return new ConnectiveGeometry(tsObject);
+            return new ConnectiveGeometry() { teklaObject = tsObject };
         }
     }
 

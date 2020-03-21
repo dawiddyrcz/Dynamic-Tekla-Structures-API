@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ClipPlaneCollection 
+    public  class ClipPlaneCollection 
     {
 
 		public System.Int32 Count
 		{
-			get => clipplanecollection.Count;
-			set { clipplanecollection.Count = value; }
+			get => teklaObject.Count;
+			set { teklaObject.Count = value; }
 		}
 
 		public System.Boolean IsSynchronized
 		{
-			get => clipplanecollection.IsSynchronized;
-			set { clipplanecollection.IsSynchronized = value; }
+			get => teklaObject.IsSynchronized;
+			set { teklaObject.IsSynchronized = value; }
 		}
 
 		public System.Object SyncRoot
 		{
-			get => clipplanecollection.SyncRoot;
-			set { clipplanecollection.SyncRoot = value; }
+			get => teklaObject.SyncRoot;
+			set { teklaObject.SyncRoot = value; }
 		}
 
         
 
-        internal dynamic clipplanecollection;
-        
-        public ClipPlaneCollection()
-        {
-            this.clipplanecollection =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlaneCollection");
-        }
+        internal dynamic teklaObject;
 
-        internal ClipPlaneCollection(dynamic tsObject)
-        {
-            this.clipplanecollection = tsObject;
-        }
+		internal ClipPlaneCollection() {}
 
 		public void CopyTo(System.Array array, System.Int32 index)
-			 => clipplanecollection.CopyTo(array, index);
+			 => teklaObject.CopyTo(array, index);
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ClipPlaneCollection dynObject)
         {
-            return dynObject.clipplanecollection;
+            return dynObject.teklaObject;
         }
 
         public static ClipPlaneCollection FromTSObject(dynamic tsObject)
         {
-            return new ClipPlaneCollection(tsObject);
+            return new ClipPlaneCollection() { teklaObject = tsObject };
         }
     }
 

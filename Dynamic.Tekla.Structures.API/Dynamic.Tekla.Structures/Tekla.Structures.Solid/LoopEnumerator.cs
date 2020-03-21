@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class LoopEnumerator 
+    public  class LoopEnumerator 
     {
 
 		public Dynamic.Tekla.Structures.Solid.Loop Current
 		{
-			get => Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(loopenumerator.Current);
-			set { loopenumerator.Current = Dynamic.Tekla.Structures.Solid.Loop_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
+			set { teklaObject.Current = Dynamic.Tekla.Structures.Solid.Loop_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic loopenumerator;
-        
-        public LoopEnumerator()
-        {
-            this.loopenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.LoopEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal LoopEnumerator(dynamic tsObject)
-        {
-            this.loopenumerator = tsObject;
-        }
+		internal LoopEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => loopenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => loopenumerator.Reset();
+			 => teklaObject.Reset();
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(LoopEnumerator dynObject)
         {
-            return dynObject.loopenumerator;
+            return dynObject.teklaObject;
         }
 
         public static LoopEnumerator FromTSObject(dynamic tsObject)
         {
-            return new LoopEnumerator(tsObject);
+            return new LoopEnumerator() { teklaObject = tsObject };
         }
     }
 

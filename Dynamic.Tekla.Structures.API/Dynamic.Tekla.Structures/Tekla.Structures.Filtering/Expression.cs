@@ -4,22 +4,14 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class Expression 
+    public  class Expression 
     {
 
         
 
-        internal dynamic expression;
-        
-        private Expression()
-        {
-            this.expression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.Expression");
-        }
+        internal dynamic teklaObject;
 
-        internal Expression(dynamic tsObject)
-        {
-            this.expression = tsObject;
-        }
+		internal Expression() {}
 
 
 
@@ -31,12 +23,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(Expression dynObject)
         {
-            return dynObject.expression;
+            return dynObject.teklaObject;
         }
 
         public static Expression FromTSObject(dynamic tsObject)
         {
-            return new Expression(tsObject);
+            return new Expression() { teklaObject = tsObject };
         }
     }
 

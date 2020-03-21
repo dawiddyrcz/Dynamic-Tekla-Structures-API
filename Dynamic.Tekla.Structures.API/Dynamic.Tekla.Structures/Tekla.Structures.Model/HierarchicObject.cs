@@ -4,169 +4,164 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class HierarchicObject 
+    public  class HierarchicObject  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.String Name
 		{
-			get => hierarchicobject.Name;
-			set { hierarchicobject.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.HierarchicDefinition Definition
 		{
-			get => Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(hierarchicobject.Definition);
-			set { hierarchicobject.Definition = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(teklaObject.Definition);
+			set { teklaObject.Definition = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.HierarchicObject Father
 		{
-			get => Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(hierarchicobject.Father);
-			set { hierarchicobject.Father = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList HierarchicChildren
 		{
-			get => hierarchicobject.HierarchicChildren;
-			set { hierarchicobject.HierarchicChildren = value; }
+			get => teklaObject.HierarchicChildren;
+			set { teklaObject.HierarchicChildren = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => hierarchicobject.ModificationTime;
-			set { hierarchicobject.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => hierarchicobject.IsUpToDate;
-			set { hierarchicobject.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(hierarchicobject.Identifier);
-			set { hierarchicobject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic hierarchicobject;
-        
-        public HierarchicObject()
-        {
-            this.hierarchicobject =  TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject");
-        }
+        internal dynamic teklaObject;
 
-        internal HierarchicObject(dynamic tsObject)
-        {
-            this.hierarchicobject = tsObject;
-        }
+		public HierarchicObject()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject");
+		}
 		public HierarchicObject(Dynamic.Tekla.Structures.Identifier ID)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID);
-			this.hierarchicobject = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject", args);
 		}
 
 		public System.Boolean Insert()
-			 => hierarchicobject.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => hierarchicobject.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => hierarchicobject.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => hierarchicobject.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
-			 => hierarchicobject.AddObjects(Objects);
+			 => teklaObject.AddObjects(Objects);
 
 		public System.Boolean RemoveObjects(System.Collections.ArrayList Objects)
-			 => hierarchicobject.RemoveObjects(Objects);
+			 => teklaObject.RemoveObjects(Objects);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(hierarchicobject.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(hierarchicobject.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(hierarchicobject.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => hierarchicobject.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => hierarchicobject.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => hierarchicobject.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => hierarchicobject.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => hierarchicobject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => hierarchicobject.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => hierarchicobject.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => hierarchicobject.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => hierarchicobject.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => hierarchicobject.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => hierarchicobject.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => hierarchicobject.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => hierarchicobject.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => hierarchicobject.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => hierarchicobject.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => hierarchicobject.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => hierarchicobject.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => hierarchicobject.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => hierarchicobject.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(hierarchicobject.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => hierarchicobject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => hierarchicobject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => hierarchicobject.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => hierarchicobject.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -178,12 +173,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(HierarchicObject dynObject)
         {
-            return dynObject.hierarchicobject;
+            return dynObject.teklaObject;
         }
 
         public static HierarchicObject FromTSObject(dynamic tsObject)
         {
-            return new HierarchicObject(tsObject);
+            return new HierarchicObject() { teklaObject = tsObject };
         }
     }
 

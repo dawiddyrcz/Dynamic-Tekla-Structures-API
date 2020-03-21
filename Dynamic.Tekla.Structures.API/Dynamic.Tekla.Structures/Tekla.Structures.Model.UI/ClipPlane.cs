@@ -4,49 +4,44 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ClipPlane 
+    public  class ClipPlane 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(clipplane.Location);
-			set { clipplane.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Location);
+			set { teklaObject.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(clipplane.UpVector);
-			set { clipplane.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
+			set { teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(clipplane.View);
-			set { clipplane.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.View);
+			set { teklaObject.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic clipplane;
-        
-        public ClipPlane()
-        {
-            this.clipplane =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlane");
-        }
+        internal dynamic teklaObject;
 
-        internal ClipPlane(dynamic tsObject)
-        {
-            this.clipplane = tsObject;
-        }
+		public ClipPlane()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlane");
+		}
 
 		public System.Boolean Insert()
-			 => clipplane.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Delete()
-			 => clipplane.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean Modify()
-			 => clipplane.Modify();
+			 => teklaObject.Modify();
 
 
 
@@ -58,12 +53,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ClipPlane dynObject)
         {
-            return dynObject.clipplane;
+            return dynObject.teklaObject;
         }
 
         public static ClipPlane FromTSObject(dynamic tsObject)
         {
-            return new ClipPlane(tsObject);
+            return new ClipPlane() { teklaObject = tsObject };
         }
     }
 

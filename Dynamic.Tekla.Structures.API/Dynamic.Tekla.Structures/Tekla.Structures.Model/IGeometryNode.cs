@@ -4,31 +4,23 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class IGeometryNode 
+    public  class IGeometryNode 
     {
 
 		public System.Boolean IsAutomatic
 		{
-			get => igeometrynode.IsAutomatic;
-			set { igeometrynode.IsAutomatic = value; }
+			get => teklaObject.IsAutomatic;
+			set { teklaObject.IsAutomatic = value; }
 		}
 
         
 
-        internal dynamic igeometrynode;
-        
-        private IGeometryNode()
-        {
-            this.igeometrynode =  TSActivator.CreateInstance("Tekla.Structures.Model.IGeometryNode");
-        }
+        internal dynamic teklaObject;
 
-        internal IGeometryNode(dynamic tsObject)
-        {
-            this.igeometrynode = tsObject;
-        }
+		internal IGeometryNode() {}
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => igeometrynode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+			 => teklaObject.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
 
 
 
@@ -40,12 +32,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(IGeometryNode dynObject)
         {
-            return dynObject.igeometrynode;
+            return dynObject.teklaObject;
         }
 
         public static IGeometryNode FromTSObject(dynamic tsObject)
         {
-            return new IGeometryNode(tsObject);
+            return new IGeometryNode() { teklaObject = tsObject };
         }
     }
 

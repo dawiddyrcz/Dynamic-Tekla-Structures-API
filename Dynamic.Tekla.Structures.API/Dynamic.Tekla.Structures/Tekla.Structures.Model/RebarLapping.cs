@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarLapping 
+    public  class RebarLapping 
     {
 
 		public System.Double LapLength
 		{
-			get => rebarlapping.LapLength;
-			set { rebarlapping.LapLength = value; }
+			get => teklaObject.LapLength;
+			set { teklaObject.LapLength = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum LapSide
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(rebarlapping.LapSide);
-			set { rebarlapping.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(teklaObject.LapSide);
+			set { teklaObject.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum LapPlacement
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(rebarlapping.LapPlacement);
-			set { rebarlapping.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(teklaObject.LapPlacement);
+			set { teklaObject.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum LappingType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(rebarlapping.LappingType);
-			set { rebarlapping.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(teklaObject.LappingType);
+			set { teklaObject.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarlapping;
-        
-        public RebarLapping()
-        {
-            this.rebarlapping =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarLapping(dynamic tsObject)
-        {
-            this.rebarlapping = tsObject;
-        }
+		public RebarLapping()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLapping");
+		}
 
 
 
@@ -180,12 +175,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarLapping dynObject)
         {
-            return dynObject.rebarlapping;
+            return dynObject.teklaObject;
         }
 
         public static RebarLapping FromTSObject(dynamic tsObject)
         {
-            return new RebarLapping(tsObject);
+            return new RebarLapping() { teklaObject = tsObject };
         }
     }
 

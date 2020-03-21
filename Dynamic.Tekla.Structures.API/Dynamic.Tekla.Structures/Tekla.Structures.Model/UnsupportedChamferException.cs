@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class UnsupportedChamferException 
+    public  class UnsupportedChamferException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => unsupportedchamferexception.Message;
-			set { unsupportedchamferexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => unsupportedchamferexception.Data;
-			set { unsupportedchamferexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => unsupportedchamferexception.InnerException;
-			set { unsupportedchamferexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => unsupportedchamferexception.TargetSite;
-			set { unsupportedchamferexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => unsupportedchamferexception.StackTrace;
-			set { unsupportedchamferexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => unsupportedchamferexception.HelpLink;
-			set { unsupportedchamferexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => unsupportedchamferexception.Source;
-			set { unsupportedchamferexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => unsupportedchamferexception.HResult;
-			set { unsupportedchamferexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(unsupportedchamferexception.OperationStatus);
-			set { unsupportedchamferexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic unsupportedchamferexception;
-        
-        public UnsupportedChamferException()
-        {
-            this.unsupportedchamferexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UnsupportedChamferException");
-        }
+        internal dynamic teklaObject;
 
-        internal UnsupportedChamferException(dynamic tsObject)
-        {
-            this.unsupportedchamferexception = tsObject;
-        }
+		public UnsupportedChamferException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UnsupportedChamferException");
+		}
 
 		public System.Exception GetBaseException()
-			 => unsupportedchamferexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => unsupportedchamferexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(UnsupportedChamferException dynObject)
         {
-            return dynObject.unsupportedchamferexception;
+            return dynObject.teklaObject;
         }
 
         public static UnsupportedChamferException FromTSObject(dynamic tsObject)
         {
-            return new UnsupportedChamferException(tsObject);
+            return new UnsupportedChamferException() { teklaObject = tsObject };
         }
     }
 

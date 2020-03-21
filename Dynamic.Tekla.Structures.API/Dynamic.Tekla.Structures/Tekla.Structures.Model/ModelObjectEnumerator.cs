@@ -4,49 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ModelObjectEnumerator 
+    public  class ModelObjectEnumerator 
     {
 
 		public System.Boolean SelectInstances
 		{
-			get => modelobjectenumerator.SelectInstances;
-			set { modelobjectenumerator.SelectInstances = value; }
+			get => teklaObject.SelectInstances;
+			set { teklaObject.SelectInstances = value; }
 		}
 
 		public System.Boolean AutoFetch
 		{
-			get => modelobjectenumerator.AutoFetch;
-			set { modelobjectenumerator.AutoFetch = value; }
+			get => teklaObject.AutoFetch;
+			set { teklaObject.AutoFetch = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Current
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(modelobjectenumerator.Current);
-			set { modelobjectenumerator.Current = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);
+			set { teklaObject.Current = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic modelobjectenumerator;
-        
-        public ModelObjectEnumerator()
-        {
-            this.modelobjectenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal ModelObjectEnumerator(dynamic tsObject)
-        {
-            this.modelobjectenumerator = tsObject;
-        }
+		internal ModelObjectEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => modelobjectenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => modelobjectenumerator.Reset();
+			 => teklaObject.Reset();
 
 		public System.Int32 GetSize()
-			 => modelobjectenumerator.GetSize();
+			 => teklaObject.GetSize();
 
 
 
@@ -203,12 +195,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelObjectEnumerator dynObject)
         {
-            return dynObject.modelobjectenumerator;
+            return dynObject.teklaObject;
         }
 
         public static ModelObjectEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectEnumerator(tsObject);
+            return new ModelObjectEnumerator() { teklaObject = tsObject };
         }
     }
 

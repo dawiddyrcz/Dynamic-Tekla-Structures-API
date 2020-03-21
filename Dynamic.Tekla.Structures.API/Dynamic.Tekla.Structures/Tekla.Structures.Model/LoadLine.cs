@@ -4,271 +4,266 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class LoadLine 
+    public  class LoadLine  : Dynamic.Tekla.Structures.Model.Load
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadline.Position1);
-			set { loadline.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position1);
+			set { teklaObject.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadline.Position2);
-			set { loadline.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position2);
+			set { teklaObject.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.P1);
-			set { loadline.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P1);
+			set { teklaObject.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.P2);
-			set { loadline.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P2);
+			set { teklaObject.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double Torsion1
 		{
-			get => loadline.Torsion1;
-			set { loadline.Torsion1 = value; }
+			get => teklaObject.Torsion1;
+			set { teklaObject.Torsion1 = value; }
 		}
 
 		public System.Double Torsion2
 		{
-			get => loadline.Torsion2;
-			set { loadline.Torsion2 = value; }
+			get => teklaObject.Torsion2;
+			set { teklaObject.Torsion2 = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum LoadForm
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(loadline.LoadForm);
-			set { loadline.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(teklaObject.LoadForm);
+			set { teklaObject.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.GetTSObject(value); }
 		}
 
 		public System.Double DistanceA
 		{
-			get => loadline.DistanceA;
-			set { loadline.DistanceA = value; }
+			get => teklaObject.DistanceA;
+			set { teklaObject.DistanceA = value; }
 		}
 
 		public System.Double DistanceB
 		{
-			get => loadline.DistanceB;
-			set { loadline.DistanceB = value; }
+			get => teklaObject.DistanceB;
+			set { teklaObject.DistanceB = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadline.FatherId);
-			set { loadline.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.FatherId);
+			set { teklaObject.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadline.Spanning);
-			set { loadline.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(teklaObject.Spanning);
+			set { teklaObject.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadline.PrimaryAxisDirection);
-			set { loadline.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.PrimaryAxisDirection);
+			set { teklaObject.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
 		{
-			get => loadline.AutomaticPrimaryAxisWeight;
-			set { loadline.AutomaticPrimaryAxisWeight = value; }
+			get => teklaObject.AutomaticPrimaryAxisWeight;
+			set { teklaObject.AutomaticPrimaryAxisWeight = value; }
 		}
 
 		public System.Double Weight
 		{
-			get => loadline.Weight;
-			set { loadline.Weight = value; }
+			get => teklaObject.Weight;
+			set { teklaObject.Weight = value; }
 		}
 
 		public System.Double LoadDispersionAngle
 		{
-			get => loadline.LoadDispersionAngle;
-			set { loadline.LoadDispersionAngle = value; }
+			get => teklaObject.LoadDispersionAngle;
+			set { teklaObject.LoadDispersionAngle = value; }
 		}
 
 		public System.Boolean CreateFixedSupportConditionsAutomatically
 		{
-			get => loadline.CreateFixedSupportConditionsAutomatically;
-			set { loadline.CreateFixedSupportConditionsAutomatically = value; }
+			get => teklaObject.CreateFixedSupportConditionsAutomatically;
+			set { teklaObject.CreateFixedSupportConditionsAutomatically = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadline.LoadAttachment);
-			set { loadline.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(teklaObject.LoadAttachment);
+			set { teklaObject.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadline.PartNames);
-			set { loadline.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(teklaObject.PartNames);
+			set { teklaObject.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
 		{
-			get => loadline.PartFilter;
-			set { loadline.PartFilter = value; }
+			get => teklaObject.PartFilter;
+			set { teklaObject.PartFilter = value; }
 		}
 
 		public System.Double BoundingBoxDx
 		{
-			get => loadline.BoundingBoxDx;
-			set { loadline.BoundingBoxDx = value; }
+			get => teklaObject.BoundingBoxDx;
+			set { teklaObject.BoundingBoxDx = value; }
 		}
 
 		public System.Double BoundingBoxDy
 		{
-			get => loadline.BoundingBoxDy;
-			set { loadline.BoundingBoxDy = value; }
+			get => teklaObject.BoundingBoxDy;
+			set { teklaObject.BoundingBoxDy = value; }
 		}
 
 		public System.Double BoundingBoxDz
 		{
-			get => loadline.BoundingBoxDz;
-			set { loadline.BoundingBoxDz = value; }
+			get => teklaObject.BoundingBoxDz;
+			set { teklaObject.BoundingBoxDz = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(loadline.Group);
-			set { loadline.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(teklaObject.Group);
+			set { teklaObject.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => loadline.ModificationTime;
-			set { loadline.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => loadline.IsUpToDate;
-			set { loadline.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadline.Identifier);
-			set { loadline.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic loadline;
-        
-        public LoadLine()
-        {
-            this.loadline =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadLine");
-        }
+        internal dynamic teklaObject;
 
-        internal LoadLine(dynamic tsObject)
-        {
-            this.loadline = tsObject;
-        }
+		public LoadLine()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.LoadLine");
+		}
 
 		public System.Boolean Insert()
-			 => loadline.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => loadline.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => loadline.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => loadline.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadline.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loadline.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadline.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => loadline.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => loadline.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => loadline.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => loadline.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => loadline.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadline.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadline.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadline.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => loadline.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => loadline.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => loadline.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => loadline.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => loadline.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => loadline.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => loadline.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => loadline.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => loadline.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => loadline.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => loadline.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loadline.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadline.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadline.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => loadline.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => loadline.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -330,12 +325,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadLine dynObject)
         {
-            return dynObject.loadline;
+            return dynObject.teklaObject;
         }
 
         public static LoadLine FromTSObject(dynamic tsObject)
         {
-            return new LoadLine(tsObject);
+            return new LoadLine() { teklaObject = tsObject };
         }
     }
 

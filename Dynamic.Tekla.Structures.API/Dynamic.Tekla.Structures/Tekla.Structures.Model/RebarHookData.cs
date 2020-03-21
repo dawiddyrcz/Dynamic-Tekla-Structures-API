@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarHookData 
+    public  class RebarHookData 
     {
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum Shape
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(rebarhookdata.Shape);
-			set { rebarhookdata.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(teklaObject.Shape);
+			set { teklaObject.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double Angle
 		{
-			get => rebarhookdata.Angle;
-			set { rebarhookdata.Angle = value; }
+			get => teklaObject.Angle;
+			set { teklaObject.Angle = value; }
 		}
 
 		public System.Double Radius
 		{
-			get => rebarhookdata.Radius;
-			set { rebarhookdata.Radius = value; }
+			get => teklaObject.Radius;
+			set { teklaObject.Radius = value; }
 		}
 
 		public System.Double Length
 		{
-			get => rebarhookdata.Length;
-			set { rebarhookdata.Length = value; }
+			get => teklaObject.Length;
+			set { teklaObject.Length = value; }
 		}
 
         
 
-        internal dynamic rebarhookdata;
-        
-        public RebarHookData()
-        {
-            this.rebarhookdata =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookData");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarHookData(dynamic tsObject)
-        {
-            this.rebarhookdata = tsObject;
-        }
+		public RebarHookData()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookData");
+		}
 
 
 
@@ -110,12 +105,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarHookData dynObject)
         {
-            return dynObject.rebarhookdata;
+            return dynObject.teklaObject;
         }
 
         public static RebarHookData FromTSObject(dynamic tsObject)
         {
-            return new RebarHookData(tsObject);
+            return new RebarHookData() { teklaObject = tsObject };
         }
     }
 

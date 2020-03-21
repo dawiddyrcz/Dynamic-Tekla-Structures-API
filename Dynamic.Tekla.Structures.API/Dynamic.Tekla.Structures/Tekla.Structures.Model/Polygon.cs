@@ -4,28 +4,23 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Polygon 
+    public  class Polygon 
     {
 
 		public System.Collections.ArrayList Points
 		{
-			get => polygon.Points;
-			set { polygon.Points = value; }
+			get => teklaObject.Points;
+			set { teklaObject.Points = value; }
 		}
 
         
 
-        internal dynamic polygon;
-        
-        public Polygon()
-        {
-            this.polygon =  TSActivator.CreateInstance("Tekla.Structures.Model.Polygon");
-        }
+        internal dynamic teklaObject;
 
-        internal Polygon(dynamic tsObject)
-        {
-            this.polygon = tsObject;
-        }
+		public Polygon()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Polygon");
+		}
 
 
 
@@ -37,12 +32,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Polygon dynObject)
         {
-            return dynObject.polygon;
+            return dynObject.teklaObject;
         }
 
         public static Polygon FromTSObject(dynamic tsObject)
         {
-            return new Polygon(tsObject);
+            return new Polygon() { teklaObject = tsObject };
         }
     }
 

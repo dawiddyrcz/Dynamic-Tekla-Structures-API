@@ -4,127 +4,122 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class View 
+    public  class View 
     {
 
 		public System.String CurrentRepresentation
 		{
-			get => view.CurrentRepresentation;
-			set { view.CurrentRepresentation = value; }
+			get => teklaObject.CurrentRepresentation;
+			set { teklaObject.CurrentRepresentation = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(view.Identifier);
-			set { view.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem ViewCoordinateSystem
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(view.ViewCoordinateSystem);
-			set { view.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.ViewCoordinateSystem);
+			set { teklaObject.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem DisplayCoordinateSystem
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(view.DisplayCoordinateSystem);
-			set { view.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.DisplayCoordinateSystem);
+			set { teklaObject.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
 		}
 
 		public System.String Name
 		{
-			get => view.Name;
-			set { view.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB WorkArea
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(view.WorkArea);
-			set { view.WorkArea = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.WorkArea);
+			set { teklaObject.WorkArea = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value); }
 		}
 
 		public System.Double ViewDepthUp
 		{
-			get => view.ViewDepthUp;
-			set { view.ViewDepthUp = value; }
+			get => teklaObject.ViewDepthUp;
+			set { teklaObject.ViewDepthUp = value; }
 		}
 
 		public System.Double ViewDepthDown
 		{
-			get => view.ViewDepthDown;
-			set { view.ViewDepthDown = value; }
+			get => teklaObject.ViewDepthDown;
+			set { teklaObject.ViewDepthDown = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType ViewProjection
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(view.ViewProjection);
-			set { view.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(teklaObject.ViewProjection);
+			set { teklaObject.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(view.DisplayType);
-			set { view.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(teklaObject.DisplayType);
+			set { teklaObject.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType ViewRendering
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(view.ViewRendering);
-			set { view.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(teklaObject.ViewRendering);
+			set { teklaObject.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.GetTSObject(value); }
 		}
 
 		public System.String ViewFilter
 		{
-			get => view.ViewFilter;
-			set { view.ViewFilter = value; }
+			get => teklaObject.ViewFilter;
+			set { teklaObject.ViewFilter = value; }
 		}
 
 		public System.Boolean SharedView
 		{
-			get => view.SharedView;
-			set { view.SharedView = value; }
+			get => teklaObject.SharedView;
+			set { teklaObject.SharedView = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings VisibilitySettings
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.FromTSObject(view.VisibilitySettings);
-			set { view.VisibilitySettings = Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.FromTSObject(teklaObject.VisibilitySettings);
+			set { teklaObject.VisibilitySettings = Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic view;
-        
-        public View()
-        {
-            this.view =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.View");
-        }
+        internal dynamic teklaObject;
 
-        internal View(dynamic tsObject)
-        {
-            this.view = tsObject;
-        }
+		public View()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.View");
+		}
 
 		public System.Boolean Insert()
-			 => view.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Modify()
-			 => view.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Select()
-			 => view.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Delete()
-			 => view.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean IsPerspectiveViewProjection()
-			 => view.IsPerspectiveViewProjection();
+			 => teklaObject.IsPerspectiveViewProjection();
 
 		public System.Boolean IsVisible()
-			 => view.IsVisible();
+			 => teklaObject.IsVisible();
 
 		public Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection GetClipPlanes()
-			 => Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(view.GetClipPlanes());
+			 => Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(teklaObject.GetClipPlanes());
 
 
 
@@ -256,12 +251,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(View dynObject)
         {
-            return dynObject.view;
+            return dynObject.teklaObject;
         }
 
         public static View FromTSObject(dynamic tsObject)
         {
-            return new View(tsObject);
+            return new View() { teklaObject = tsObject };
         }
     }
 

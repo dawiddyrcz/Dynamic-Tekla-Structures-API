@@ -4,28 +4,20 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class IGeometryNodeVisitor 
+    public  class IGeometryNodeVisitor 
     {
 
         
 
-        internal dynamic igeometrynodevisitor;
-        
-        private IGeometryNodeVisitor()
-        {
-            this.igeometrynodevisitor =  TSActivator.CreateInstance("Tekla.Structures.Model.IGeometryNodeVisitor");
-        }
+        internal dynamic teklaObject;
 
-        internal IGeometryNodeVisitor(dynamic tsObject)
-        {
-            this.igeometrynodevisitor = tsObject;
-        }
+		internal IGeometryNodeVisitor() {}
 
 		public void Visit(Dynamic.Tekla.Structures.Model.PolygonNode node)
-			 => igeometrynodevisitor.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
+			 => teklaObject.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
 
 		public void Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node)
-			 => igeometrynodevisitor.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
+			 => teklaObject.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
 
 
 
@@ -37,12 +29,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(IGeometryNodeVisitor dynObject)
         {
-            return dynObject.igeometrynodevisitor;
+            return dynObject.teklaObject;
         }
 
         public static IGeometryNodeVisitor FromTSObject(dynamic tsObject)
         {
-            return new IGeometryNodeVisitor(tsObject);
+            return new IGeometryNodeVisitor() { teklaObject = tsObject };
         }
     }
 

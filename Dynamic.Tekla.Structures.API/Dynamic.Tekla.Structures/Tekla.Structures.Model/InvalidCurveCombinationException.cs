@@ -4,76 +4,71 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class InvalidCurveCombinationException 
+    public  class InvalidCurveCombinationException  : Dynamic.Tekla.Structures.Model.LoftedPlateOperationException
     {
 
 		public System.String Message
 		{
-			get => invalidcurvecombinationexception.Message;
-			set { invalidcurvecombinationexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => invalidcurvecombinationexception.Data;
-			set { invalidcurvecombinationexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => invalidcurvecombinationexception.InnerException;
-			set { invalidcurvecombinationexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => invalidcurvecombinationexception.TargetSite;
-			set { invalidcurvecombinationexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => invalidcurvecombinationexception.StackTrace;
-			set { invalidcurvecombinationexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => invalidcurvecombinationexception.HelpLink;
-			set { invalidcurvecombinationexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => invalidcurvecombinationexception.Source;
-			set { invalidcurvecombinationexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => invalidcurvecombinationexception.HResult;
-			set { invalidcurvecombinationexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic invalidcurvecombinationexception;
-        
-        public InvalidCurveCombinationException()
-        {
-            this.invalidcurvecombinationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidCurveCombinationException");
-        }
+        internal dynamic teklaObject;
 
-        internal InvalidCurveCombinationException(dynamic tsObject)
-        {
-            this.invalidcurvecombinationexception = tsObject;
-        }
+		public InvalidCurveCombinationException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.InvalidCurveCombinationException");
+		}
 
 		public System.Exception GetBaseException()
-			 => invalidcurvecombinationexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => invalidcurvecombinationexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -85,12 +80,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(InvalidCurveCombinationException dynObject)
         {
-            return dynObject.invalidcurvecombinationexception;
+            return dynObject.teklaObject;
         }
 
         public static InvalidCurveCombinationException FromTSObject(dynamic tsObject)
         {
-            return new InvalidCurveCombinationException(tsObject);
+            return new InvalidCurveCombinationException() { teklaObject = tsObject };
         }
     }
 

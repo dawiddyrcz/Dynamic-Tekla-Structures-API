@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class NumberingSeriesNullable 
+    public  class NumberingSeriesNullable 
     {
 
 		public System.String Prefix
 		{
-			get => numberingseriesnullable.Prefix;
-			set { numberingseriesnullable.Prefix = value; }
+			get => teklaObject.Prefix;
+			set { teklaObject.Prefix = value; }
 		}
 
 		public System.Int32 StartNumber
 		{
-			get => numberingseriesnullable.StartNumber;
-			set { numberingseriesnullable.StartNumber = value; }
+			get => teklaObject.StartNumber;
+			set { teklaObject.StartNumber = value; }
 		}
 
         
 
-        internal dynamic numberingseriesnullable;
-        
-        public NumberingSeriesNullable()
-        {
-            this.numberingseriesnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable");
-        }
+        internal dynamic teklaObject;
 
-        internal NumberingSeriesNullable(dynamic tsObject)
-        {
-            this.numberingseriesnullable = tsObject;
-        }
+		public NumberingSeriesNullable()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable");
+		}
 		public NumberingSeriesNullable(System.String prefix, System.Int32 number)
 		{
 			var args = new object[2];
 			args[0] = prefix;
 			args[1] = number;
-			this.numberingseriesnullable = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeriesNullable", args);
 		}
 
 
@@ -50,12 +45,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(NumberingSeriesNullable dynObject)
         {
-            return dynObject.numberingseriesnullable;
+            return dynObject.teklaObject;
         }
 
         public static NumberingSeriesNullable FromTSObject(dynamic tsObject)
         {
-            return new NumberingSeriesNullable(tsObject);
+            return new NumberingSeriesNullable() { teklaObject = tsObject };
         }
     }
 

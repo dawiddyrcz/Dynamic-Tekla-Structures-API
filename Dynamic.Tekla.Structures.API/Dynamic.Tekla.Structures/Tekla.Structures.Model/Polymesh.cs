@@ -4,37 +4,32 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Polymesh 
+    public  class Polymesh 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Brep
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(polymesh.Brep);
-			set { polymesh.Brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(teklaObject.Brep);
+			set { teklaObject.Brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic polymesh;
-        
-        public Polymesh()
-        {
-            this.polymesh =  TSActivator.CreateInstance("Tekla.Structures.Model.Polymesh");
-        }
+        internal dynamic teklaObject;
 
-        internal Polymesh(dynamic tsObject)
-        {
-            this.polymesh = tsObject;
-        }
+		public Polymesh()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Polymesh");
+		}
 
 		public System.String Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep)
-			 => polymesh.Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep));
+			 => teklaObject.Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep));
 
 		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
-			 => polymesh.CompareFingerprints(fingerprint1, fingerprint2);
+			 => teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
 
 		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
-			 => polymesh.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
+			 => teklaObject.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
 
 
 
@@ -311,12 +306,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Polymesh dynObject)
         {
-            return dynObject.polymesh;
+            return dynObject.teklaObject;
         }
 
         public static Polymesh FromTSObject(dynamic tsObject)
         {
-            return new Polymesh(tsObject);
+            return new Polymesh() { teklaObject = tsObject };
         }
     }
 

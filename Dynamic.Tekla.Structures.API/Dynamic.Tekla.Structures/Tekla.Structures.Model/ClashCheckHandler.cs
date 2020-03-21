@@ -4,31 +4,23 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ClashCheckHandler 
+    public  class ClashCheckHandler 
     {
 
         
 
-        internal dynamic clashcheckhandler;
-        
-        public ClashCheckHandler()
-        {
-            this.clashcheckhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckHandler");
-        }
+        internal dynamic teklaObject;
 
-        internal ClashCheckHandler(dynamic tsObject)
-        {
-            this.clashcheckhandler = tsObject;
-        }
+		internal ClashCheckHandler() {}
 
 		public System.Boolean RunClashCheck()
-			 => clashcheckhandler.RunClashCheck();
+			 => teklaObject.RunClashCheck();
 
 		public System.Boolean StopClashCheck()
-			 => clashcheckhandler.StopClashCheck();
+			 => teklaObject.StopClashCheck();
 
 		public System.Collections.ArrayList GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier ID1, Dynamic.Tekla.Structures.Identifier ID2)
-			 => clashcheckhandler.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+			 => teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
 
 
 
@@ -40,12 +32,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashCheckHandler dynObject)
         {
-            return dynObject.clashcheckhandler;
+            return dynObject.teklaObject;
         }
 
         public static ClashCheckHandler FromTSObject(dynamic tsObject)
         {
-            return new ClashCheckHandler(tsObject);
+            return new ClashCheckHandler() { teklaObject = tsObject };
         }
     }
 

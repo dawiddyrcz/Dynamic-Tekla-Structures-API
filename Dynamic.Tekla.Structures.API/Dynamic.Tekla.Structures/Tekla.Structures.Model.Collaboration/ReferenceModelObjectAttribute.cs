@@ -4,64 +4,56 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public sealed class ReferenceModelObjectAttribute 
+    public  class ReferenceModelObjectAttribute 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(referencemodelobjectattribute.Origin);
-			set { referencemodelobjectattribute.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(referencemodelobjectattribute.xDir);
-			set { referencemodelobjectattribute.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.xDir);
+			set { teklaObject.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(referencemodelobjectattribute.Extrusion);
-			set { referencemodelobjectattribute.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Extrusion);
+			set { teklaObject.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
 		{
-			get => referencemodelobjectattribute.ProfileName;
-			set { referencemodelobjectattribute.ProfileName = value; }
+			get => teklaObject.ProfileName;
+			set { teklaObject.ProfileName = value; }
 		}
 
 		public System.String Name
 		{
-			get => referencemodelobjectattribute.Name;
-			set { referencemodelobjectattribute.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Description
 		{
-			get => referencemodelobjectattribute.Description;
-			set { referencemodelobjectattribute.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String ObjectType
 		{
-			get => referencemodelobjectattribute.ObjectType;
-			set { referencemodelobjectattribute.ObjectType = value; }
+			get => teklaObject.ObjectType;
+			set { teklaObject.ObjectType = value; }
 		}
 
         
 
-        internal dynamic referencemodelobjectattribute;
-        
-        private ReferenceModelObjectAttribute()
-        {
-            this.referencemodelobjectattribute =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute");
-        }
+        internal dynamic teklaObject;
 
-        internal ReferenceModelObjectAttribute(dynamic tsObject)
-        {
-            this.referencemodelobjectattribute = tsObject;
-        }
+		internal ReferenceModelObjectAttribute() {}
 
 
 
@@ -173,12 +165,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(ReferenceModelObjectAttribute dynObject)
         {
-            return dynObject.referencemodelobjectattribute;
+            return dynObject.teklaObject;
         }
 
         public static ReferenceModelObjectAttribute FromTSObject(dynamic tsObject)
         {
-            return new ReferenceModelObjectAttribute(tsObject);
+            return new ReferenceModelObjectAttribute() { teklaObject = tsObject };
         }
     }
 

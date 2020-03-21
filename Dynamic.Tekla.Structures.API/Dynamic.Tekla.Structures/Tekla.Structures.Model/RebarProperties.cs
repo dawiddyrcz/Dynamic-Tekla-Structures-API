@@ -4,58 +4,53 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarProperties 
+    public  class RebarProperties 
     {
 
 		public System.String Size
 		{
-			get => rebarproperties.Size;
-			set { rebarproperties.Size = value; }
+			get => teklaObject.Size;
+			set { teklaObject.Size = value; }
 		}
 
 		public System.String Grade
 		{
-			get => rebarproperties.Grade;
-			set { rebarproperties.Grade = value; }
+			get => teklaObject.Grade;
+			set { teklaObject.Grade = value; }
 		}
 
 		public System.String Name
 		{
-			get => rebarproperties.Name;
-			set { rebarproperties.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.Int32 Class
 		{
-			get => rebarproperties.Class;
-			set { rebarproperties.Class = value; }
+			get => teklaObject.Class;
+			set { teklaObject.Class = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(rebarproperties.NumberingSeries);
-			set { rebarproperties.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(teklaObject.NumberingSeries);
+			set { teklaObject.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Double BendingRadius
 		{
-			get => rebarproperties.BendingRadius;
-			set { rebarproperties.BendingRadius = value; }
+			get => teklaObject.BendingRadius;
+			set { teklaObject.BendingRadius = value; }
 		}
 
         
 
-        internal dynamic rebarproperties;
-        
-        public RebarProperties()
-        {
-            this.rebarproperties =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarProperties");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarProperties(dynamic tsObject)
-        {
-            this.rebarproperties = tsObject;
-        }
+		public RebarProperties()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarProperties");
+		}
 
 
 
@@ -67,12 +62,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarProperties dynObject)
         {
-            return dynObject.rebarproperties;
+            return dynObject.teklaObject;
         }
 
         public static RebarProperties FromTSObject(dynamic tsObject)
         {
-            return new RebarProperties(tsObject);
+            return new RebarProperties() { teklaObject = tsObject };
         }
     }
 

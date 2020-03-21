@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class TeklaStructuresInfo 
+    public  class TeklaStructuresInfo 
     {
 
         
 
-        internal dynamic teklastructuresinfo;
-        
-        public TeklaStructuresInfo()
-        {
-            this.teklastructuresinfo =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresInfo");
-        }
+        internal dynamic teklaObject;
 
-        internal TeklaStructuresInfo(dynamic tsObject)
-        {
-            this.teklastructuresinfo = tsObject;
-        }
+		public TeklaStructuresInfo()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresInfo");
+		}
 
 		public System.String GetCurrentProgramVersion()
-			 => teklastructuresinfo.GetCurrentProgramVersion();
+			 => teklaObject.GetCurrentProgramVersion();
 
 		public System.String GetBuildNumber()
-			 => teklastructuresinfo.GetBuildNumber();
+			 => teklaObject.GetBuildNumber();
 
 		public System.String GetRevisionDate()
-			 => teklastructuresinfo.GetRevisionDate();
+			 => teklaObject.GetRevisionDate();
 
 		public System.String GetCopyRightText()
-			 => teklastructuresinfo.GetCopyRightText();
+			 => teklaObject.GetCopyRightText();
 
 		public System.String GetLocalAppDataFolder()
-			 => teklastructuresinfo.GetLocalAppDataFolder();
+			 => teklaObject.GetLocalAppDataFolder();
 
 		public System.String GetCommonAppDataFolder()
-			 => teklastructuresinfo.GetCommonAppDataFolder();
+			 => teklaObject.GetCommonAppDataFolder();
 
 		public System.String GetFullTSRegistryKeyText()
-			 => teklastructuresinfo.GetFullTSRegistryKeyText();
+			 => teklaObject.GetFullTSRegistryKeyText();
 
 		public System.String GetCurrentUser()
-			 => teklastructuresinfo.GetCurrentUser();
+			 => teklaObject.GetCurrentUser();
 
 
 
@@ -55,12 +50,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(TeklaStructuresInfo dynObject)
         {
-            return dynObject.teklastructuresinfo;
+            return dynObject.teklaObject;
         }
 
         public static TeklaStructuresInfo FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresInfo(tsObject);
+            return new TeklaStructuresInfo() { teklaObject = tsObject };
         }
     }
 

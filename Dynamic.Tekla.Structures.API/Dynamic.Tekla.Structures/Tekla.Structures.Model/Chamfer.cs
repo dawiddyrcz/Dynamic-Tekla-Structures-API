@@ -4,59 +4,54 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Chamfer 
+    public  class Chamfer 
     {
 
 		public Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(chamfer.Type);
-			set { chamfer.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double X
 		{
-			get => chamfer.X;
-			set { chamfer.X = value; }
+			get => teklaObject.X;
+			set { teklaObject.X = value; }
 		}
 
 		public System.Double Y
 		{
-			get => chamfer.Y;
-			set { chamfer.Y = value; }
+			get => teklaObject.Y;
+			set { teklaObject.Y = value; }
 		}
 
 		public System.Double DZ1
 		{
-			get => chamfer.DZ1;
-			set { chamfer.DZ1 = value; }
+			get => teklaObject.DZ1;
+			set { teklaObject.DZ1 = value; }
 		}
 
 		public System.Double DZ2
 		{
-			get => chamfer.DZ2;
-			set { chamfer.DZ2 = value; }
+			get => teklaObject.DZ2;
+			set { teklaObject.DZ2 = value; }
 		}
 
         
 
-        internal dynamic chamfer;
-        
-        public Chamfer()
-        {
-            this.chamfer =  TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer");
-        }
+        internal dynamic teklaObject;
 
-        internal Chamfer(dynamic tsObject)
-        {
-            this.chamfer = tsObject;
-        }
+		public Chamfer()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer");
+		}
 		public Chamfer(System.Double X, System.Double Y, Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type)
 		{
 			var args = new object[3];
 			args[0] = X;
 			args[1] = Y;
 			args[2] = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(Type);
-			this.chamfer = TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer", args);
 		}
 
 
@@ -139,12 +134,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Chamfer dynObject)
         {
-            return dynObject.chamfer;
+            return dynObject.teklaObject;
         }
 
         public static Chamfer FromTSObject(dynamic tsObject)
         {
-            return new Chamfer(tsObject);
+            return new Chamfer() { teklaObject = tsObject };
         }
     }
 

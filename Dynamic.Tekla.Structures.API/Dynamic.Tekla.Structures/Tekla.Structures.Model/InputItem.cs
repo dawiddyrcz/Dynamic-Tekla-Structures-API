@@ -4,28 +4,20 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class InputItem 
+    public  class InputItem 
     {
 
         
 
-        internal dynamic inputitem;
-        
-        public InputItem()
-        {
-            this.inputitem =  TSActivator.CreateInstance("Tekla.Structures.Model.InputItem");
-        }
+        internal dynamic teklaObject;
 
-        internal InputItem(dynamic tsObject)
-        {
-            this.inputitem = tsObject;
-        }
+		internal InputItem() {}
 
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-			 => Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(inputitem.GetInputType());
+			 => Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
 
 		public System.Object GetData()
-			 => inputitem.GetData();
+			 => teklaObject.GetData();
 
 
 
@@ -92,12 +84,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(InputItem dynObject)
         {
-            return dynObject.inputitem;
+            return dynObject.teklaObject;
         }
 
         public static InputItem FromTSObject(dynamic tsObject)
         {
-            return new InputItem(tsObject);
+            return new InputItem() { teklaObject = tsObject };
         }
     }
 

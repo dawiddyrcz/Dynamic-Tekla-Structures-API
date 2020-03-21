@@ -4,22 +4,14 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class DataFilterExpression 
+    public  class DataFilterExpression  : Dynamic.Tekla.Structures.Filtering.Expression
     {
 
         
 
-        internal dynamic datafilterexpression;
-        
-        private DataFilterExpression()
-        {
-            this.datafilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.DataFilterExpression");
-        }
+        internal dynamic teklaObject;
 
-        internal DataFilterExpression(dynamic tsObject)
-        {
-            this.datafilterexpression = tsObject;
-        }
+		internal DataFilterExpression() {}
 
 
 
@@ -31,12 +23,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(DataFilterExpression dynObject)
         {
-            return dynObject.datafilterexpression;
+            return dynObject.teklaObject;
         }
 
         public static DataFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new DataFilterExpression(tsObject);
+            return new DataFilterExpression() { teklaObject = tsObject };
         }
     }
 

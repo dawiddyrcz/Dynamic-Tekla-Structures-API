@@ -4,211 +4,206 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class SurfaceTreatment 
+    public  class SurfaceTreatment  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(surfacetreatment.Type);
-			set { surfacetreatment.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(surfacetreatment.Color);
-			set { surfacetreatment.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(teklaObject.Color);
+			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(surfacetreatment.Material);
-			set { surfacetreatment.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(teklaObject.Material);
+			set { teklaObject.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(surfacetreatment.Position);
-			set { surfacetreatment.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
+			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Polygon
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(surfacetreatment.Polygon);
-			set { surfacetreatment.Polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Polygon);
+			set { teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(surfacetreatment.StartPoint);
-			set { surfacetreatment.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(surfacetreatment.EndPoint);
-			set { surfacetreatment.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part Father
 		{
-			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(surfacetreatment.Father);
-			set { surfacetreatment.Father = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
 		public System.Double Thickness
 		{
-			get => surfacetreatment.Thickness;
-			set { surfacetreatment.Thickness = value; }
+			get => teklaObject.Thickness;
+			set { teklaObject.Thickness = value; }
 		}
 
 		public System.String Name
 		{
-			get => surfacetreatment.Name;
-			set { surfacetreatment.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Class
 		{
-			get => surfacetreatment.Class;
-			set { surfacetreatment.Class = value; }
+			get => teklaObject.Class;
+			set { teklaObject.Class = value; }
 		}
 
 		public System.Boolean CutByFatherBooleans
 		{
-			get => surfacetreatment.CutByFatherBooleans;
-			set { surfacetreatment.CutByFatherBooleans = value; }
+			get => teklaObject.CutByFatherBooleans;
+			set { teklaObject.CutByFatherBooleans = value; }
 		}
 
 		public System.String TypeName
 		{
-			get => surfacetreatment.TypeName;
-			set { surfacetreatment.TypeName = value; }
+			get => teklaObject.TypeName;
+			set { teklaObject.TypeName = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => surfacetreatment.ModificationTime;
-			set { surfacetreatment.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => surfacetreatment.IsUpToDate;
-			set { surfacetreatment.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(surfacetreatment.Identifier);
-			set { surfacetreatment.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic surfacetreatment;
-        
-        public SurfaceTreatment()
-        {
-            this.surfacetreatment =  TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTreatment");
-        }
+        internal dynamic teklaObject;
 
-        internal SurfaceTreatment(dynamic tsObject)
-        {
-            this.surfacetreatment = tsObject;
-        }
+		public SurfaceTreatment()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.SurfaceTreatment");
+		}
 
 		public System.Boolean Insert()
-			 => surfacetreatment.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => surfacetreatment.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => surfacetreatment.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => surfacetreatment.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfacetreatment.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(surfacetreatment.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(surfacetreatment.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => surfacetreatment.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => surfacetreatment.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => surfacetreatment.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => surfacetreatment.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => surfacetreatment.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => surfacetreatment.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => surfacetreatment.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => surfacetreatment.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => surfacetreatment.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => surfacetreatment.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => surfacetreatment.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => surfacetreatment.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => surfacetreatment.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => surfacetreatment.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => surfacetreatment.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => surfacetreatment.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => surfacetreatment.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => surfacetreatment.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => surfacetreatment.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(surfacetreatment.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfacetreatment.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => surfacetreatment.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => surfacetreatment.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => surfacetreatment.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -335,12 +330,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SurfaceTreatment dynObject)
         {
-            return dynObject.surfacetreatment;
+            return dynObject.teklaObject;
         }
 
         public static SurfaceTreatment FromTSObject(dynamic tsObject)
         {
-            return new SurfaceTreatment(tsObject);
+            return new SurfaceTreatment() { teklaObject = tsObject };
         }
     }
 

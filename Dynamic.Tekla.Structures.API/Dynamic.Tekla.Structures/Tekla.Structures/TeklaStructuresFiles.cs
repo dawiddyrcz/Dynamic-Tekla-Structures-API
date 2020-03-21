@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class TeklaStructuresFiles 
+    public  class TeklaStructuresFiles 
     {
 
 		public System.Collections.Generic.List<System.String> PropertyFileDirectories
 		{
-			get => teklastructuresfiles.PropertyFileDirectories;
-			set { teklastructuresfiles.PropertyFileDirectories = value; }
+			get => teklaObject.PropertyFileDirectories;
+			set { teklaObject.PropertyFileDirectories = value; }
 		}
 
         
 
-        internal dynamic teklastructuresfiles;
-        
-        public TeklaStructuresFiles()
-        {
-            this.teklastructuresfiles =  TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles");
-        }
+        internal dynamic teklaObject;
 
-        internal TeklaStructuresFiles(dynamic tsObject)
-        {
-            this.teklastructuresfiles = tsObject;
-        }
+		internal TeklaStructuresFiles() {}
 		public TeklaStructuresFiles(System.String modelpath)
 		{
 			var args = new object[1];
 			args[0] = modelpath;
-			this.teklastructuresfiles = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles", args);
 		}
 
 		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
-			 => teklastructuresfiles.GetMultiDirectoryFileList(fileExtension, fullpath);
+			 => teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
 
 		public System.IO.FileInfo GetAttributeFile(System.String fileName)
-			 => teklastructuresfiles.GetAttributeFile(fileName);
+			 => teklaObject.GetAttributeFile(fileName);
 
 		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.List<System.String> searchDirectories, System.String fileName)
-			 => teklastructuresfiles.GetAttributeFile(searchDirectories, fileName);
+			 => teklaObject.GetAttributeFile(searchDirectories, fileName);
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(TeklaStructuresFiles dynObject)
         {
-            return dynObject.teklastructuresfiles;
+            return dynObject.teklaObject;
         }
 
         public static TeklaStructuresFiles FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresFiles(tsObject);
+            return new TeklaStructuresFiles() { teklaObject = tsObject };
         }
     }
 

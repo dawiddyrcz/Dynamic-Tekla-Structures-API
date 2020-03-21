@@ -4,58 +4,53 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ComponentInput 
+    public  class ComponentInput 
     {
 
 		public System.Int32 Count
 		{
-			get => componentinput.Count;
-			set { componentinput.Count = value; }
+			get => teklaObject.Count;
+			set { teklaObject.Count = value; }
 		}
 
 		public System.Boolean IsSynchronized
 		{
-			get => componentinput.IsSynchronized;
-			set { componentinput.IsSynchronized = value; }
+			get => teklaObject.IsSynchronized;
+			set { teklaObject.IsSynchronized = value; }
 		}
 
 		public System.Object SyncRoot
 		{
-			get => componentinput.SyncRoot;
-			set { componentinput.SyncRoot = value; }
+			get => teklaObject.SyncRoot;
+			set { teklaObject.SyncRoot = value; }
 		}
 
         
 
-        internal dynamic componentinput;
-        
-        public ComponentInput()
-        {
-            this.componentinput =  TSActivator.CreateInstance("Tekla.Structures.Model.ComponentInput");
-        }
+        internal dynamic teklaObject;
 
-        internal ComponentInput(dynamic tsObject)
-        {
-            this.componentinput = tsObject;
-        }
+		public ComponentInput()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ComponentInput");
+		}
 
 		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
-			 => componentinput.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+			 => teklaObject.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
 
 		public System.Boolean AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point Position1, Dynamic.Tekla.Structures.Geometry3d.Point Position2)
-			 => componentinput.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
+			 => teklaObject.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
 
 		public System.Boolean AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon P)
-			 => componentinput.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
+			 => teklaObject.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
 
 		public System.Boolean AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => componentinput.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			 => teklaObject.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
-			 => componentinput.AddInputObjects(Objects);
+			 => teklaObject.AddInputObjects(Objects);
 
 		public void CopyTo(System.Array array, System.Int32 index)
-			 => componentinput.CopyTo(array, index);
+			 => teklaObject.CopyTo(array, index);
 
 
 
@@ -67,12 +62,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ComponentInput dynObject)
         {
-            return dynObject.componentinput;
+            return dynObject.teklaObject;
         }
 
         public static ComponentInput FromTSObject(dynamic tsObject)
         {
-            return new ComponentInput(tsObject);
+            return new ComponentInput() { teklaObject = tsObject };
         }
     }
 

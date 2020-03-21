@@ -4,44 +4,36 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class PolygonNode 
+    public  class PolygonNode 
     {
 
 		public System.Boolean IsAutomatic
 		{
-			get => polygonnode.IsAutomatic;
-			set { polygonnode.IsAutomatic = value; }
+			get => teklaObject.IsAutomatic;
+			set { teklaObject.IsAutomatic = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(polygonnode.Contour);
-			set { polygonnode.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+			set { teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic polygonnode;
-        
-        public PolygonNode()
-        {
-            this.polygonnode =  TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode");
-        }
+        internal dynamic teklaObject;
 
-        internal PolygonNode(dynamic tsObject)
-        {
-            this.polygonnode = tsObject;
-        }
+		internal PolygonNode() {}
 		public PolygonNode(Dynamic.Tekla.Structures.Model.Contour contour, System.Boolean isAutomaticNode)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
 			args[1] = isAutomaticNode;
-			this.polygonnode = TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode", args);
 		}
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => polygonnode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+			 => teklaObject.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
 
 
 
@@ -53,12 +45,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PolygonNode dynObject)
         {
-            return dynObject.polygonnode;
+            return dynObject.teklaObject;
         }
 
         public static PolygonNode FromTSObject(dynamic tsObject)
         {
-            return new PolygonNode(tsObject);
+            return new PolygonNode() { teklaObject = tsObject };
         }
     }
 

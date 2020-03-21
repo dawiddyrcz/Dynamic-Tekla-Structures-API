@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class FacesTooNearEachOtherException 
+    public  class FacesTooNearEachOtherException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => facestooneareachotherexception.Message;
-			set { facestooneareachotherexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => facestooneareachotherexception.Data;
-			set { facestooneareachotherexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => facestooneareachotherexception.InnerException;
-			set { facestooneareachotherexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => facestooneareachotherexception.TargetSite;
-			set { facestooneareachotherexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => facestooneareachotherexception.StackTrace;
-			set { facestooneareachotherexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => facestooneareachotherexception.HelpLink;
-			set { facestooneareachotherexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => facestooneareachotherexception.Source;
-			set { facestooneareachotherexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => facestooneareachotherexception.HResult;
-			set { facestooneareachotherexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(facestooneareachotherexception.OperationStatus);
-			set { facestooneareachotherexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic facestooneareachotherexception;
-        
-        public FacesTooNearEachOtherException()
-        {
-            this.facestooneareachotherexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacesTooNearEachOtherException");
-        }
+        internal dynamic teklaObject;
 
-        internal FacesTooNearEachOtherException(dynamic tsObject)
-        {
-            this.facestooneareachotherexception = tsObject;
-        }
+		public FacesTooNearEachOtherException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.FacesTooNearEachOtherException");
+		}
 
 		public System.Exception GetBaseException()
-			 => facestooneareachotherexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => facestooneareachotherexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(FacesTooNearEachOtherException dynObject)
         {
-            return dynObject.facestooneareachotherexception;
+            return dynObject.teklaObject;
         }
 
         public static FacesTooNearEachOtherException FromTSObject(dynamic tsObject)
         {
-            return new FacesTooNearEachOtherException(tsObject);
+            return new FacesTooNearEachOtherException() { teklaObject = tsObject };
         }
     }
 

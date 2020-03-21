@@ -4,76 +4,71 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class SelfIntersectingSurfaceException 
+    public  class SelfIntersectingSurfaceException  : Dynamic.Tekla.Structures.Model.LoftedPlateOperationException
     {
 
 		public System.String Message
 		{
-			get => selfintersectingsurfaceexception.Message;
-			set { selfintersectingsurfaceexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => selfintersectingsurfaceexception.Data;
-			set { selfintersectingsurfaceexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => selfintersectingsurfaceexception.InnerException;
-			set { selfintersectingsurfaceexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => selfintersectingsurfaceexception.TargetSite;
-			set { selfintersectingsurfaceexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => selfintersectingsurfaceexception.StackTrace;
-			set { selfintersectingsurfaceexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => selfintersectingsurfaceexception.HelpLink;
-			set { selfintersectingsurfaceexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => selfintersectingsurfaceexception.Source;
-			set { selfintersectingsurfaceexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => selfintersectingsurfaceexception.HResult;
-			set { selfintersectingsurfaceexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic selfintersectingsurfaceexception;
-        
-        public SelfIntersectingSurfaceException()
-        {
-            this.selfintersectingsurfaceexception =  TSActivator.CreateInstance("Tekla.Structures.Model.SelfIntersectingSurfaceException");
-        }
+        internal dynamic teklaObject;
 
-        internal SelfIntersectingSurfaceException(dynamic tsObject)
-        {
-            this.selfintersectingsurfaceexception = tsObject;
-        }
+		public SelfIntersectingSurfaceException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.SelfIntersectingSurfaceException");
+		}
 
 		public System.Exception GetBaseException()
-			 => selfintersectingsurfaceexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => selfintersectingsurfaceexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -85,12 +80,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SelfIntersectingSurfaceException dynObject)
         {
-            return dynObject.selfintersectingsurfaceexception;
+            return dynObject.teklaObject;
         }
 
         public static SelfIntersectingSurfaceException FromTSObject(dynamic tsObject)
         {
-            return new SelfIntersectingSurfaceException(tsObject);
+            return new SelfIntersectingSurfaceException() { teklaObject = tsObject };
         }
     }
 

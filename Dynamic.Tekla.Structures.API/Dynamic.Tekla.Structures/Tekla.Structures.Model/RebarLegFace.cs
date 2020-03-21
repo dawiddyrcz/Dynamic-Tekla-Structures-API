@@ -4,57 +4,52 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarLegFace 
+    public  class RebarLegFace 
     {
 
 		public System.Int32 Id
 		{
-			get => rebarlegface.Id;
-			set { rebarlegface.Id = value; }
+			get => teklaObject.Id;
+			set { teklaObject.Id = value; }
 		}
 
 		public System.Double AdditonalOffset
 		{
-			get => rebarlegface.AdditonalOffset;
-			set { rebarlegface.AdditonalOffset = value; }
+			get => teklaObject.AdditonalOffset;
+			set { teklaObject.AdditonalOffset = value; }
 		}
 
 		public System.Int32 LayerOrderNumber
 		{
-			get => rebarlegface.LayerOrderNumber;
-			set { rebarlegface.LayerOrderNumber = value; }
+			get => teklaObject.LayerOrderNumber;
+			set { teklaObject.LayerOrderNumber = value; }
 		}
 
 		public System.Boolean Reversed
 		{
-			get => rebarlegface.Reversed;
-			set { rebarlegface.Reversed = value; }
+			get => teklaObject.Reversed;
+			set { teklaObject.Reversed = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarlegface.Contour);
-			set { rebarlegface.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+			set { teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarlegface;
-        
-        public RebarLegFace()
-        {
-            this.rebarlegface =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarLegFace(dynamic tsObject)
-        {
-            this.rebarlegface = tsObject;
-        }
+		public RebarLegFace()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace");
+		}
 		public RebarLegFace(Dynamic.Tekla.Structures.Model.Contour contour)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
-			this.rebarlegface = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace", args);
 		}
 
 
@@ -67,12 +62,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarLegFace dynObject)
         {
-            return dynObject.rebarlegface;
+            return dynObject.teklaObject;
         }
 
         public static RebarLegFace FromTSObject(dynamic tsObject)
         {
-            return new RebarLegFace(tsObject);
+            return new RebarLegFace() { teklaObject = tsObject };
         }
     }
 

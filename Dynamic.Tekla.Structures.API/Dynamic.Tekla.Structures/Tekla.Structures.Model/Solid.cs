@@ -4,52 +4,44 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Solid 
+    public  class Solid 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(solid.MinimumPoint);
-			set { solid.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinimumPoint);
+			set { teklaObject.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(solid.MaximumPoint);
-			set { solid.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaximumPoint);
+			set { teklaObject.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic solid;
-        
-        public Solid()
-        {
-            this.solid =  TSActivator.CreateInstance("Tekla.Structures.Model.Solid");
-        }
+        internal dynamic teklaObject;
 
-        internal Solid(dynamic tsObject)
-        {
-            this.solid = tsObject;
-        }
+		internal Solid() {}
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment line)
-			 => solid.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
+			 => teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2)
-			 => solid.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
+			 => teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
-			 => solid.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
+			 => teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(solid.GetFaceEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(solid.GetEdgeEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(teklaObject.GetEdgeEnumerator());
 
 		public Dynamic.Tekla.Structures.Solid.ShellEnumerator GetCutPart(Dynamic.Tekla.Structures.Model.Solid CuttingPart)
-			 => Dynamic.Tekla.Structures.Solid.ShellEnumerator_.FromTSObject(solid.GetCutPart(Dynamic.Tekla.Structures.Model.Solid_.GetTSObject(CuttingPart)));
+			 => Dynamic.Tekla.Structures.Solid.ShellEnumerator_.FromTSObject(teklaObject.GetCutPart(Dynamic.Tekla.Structures.Model.Solid_.GetTSObject(CuttingPart)));
 
 
 
@@ -126,12 +118,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Solid dynObject)
         {
-            return dynObject.solid;
+            return dynObject.teklaObject;
         }
 
         public static Solid FromTSObject(dynamic tsObject)
         {
-            return new Solid(tsObject);
+            return new Solid() { teklaObject = tsObject };
         }
     }
 

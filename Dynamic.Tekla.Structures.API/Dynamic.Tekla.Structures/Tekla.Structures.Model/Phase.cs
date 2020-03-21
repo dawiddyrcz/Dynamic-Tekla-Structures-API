@@ -4,51 +4,46 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Phase 
+    public  class Phase 
     {
 
 		public System.Int32 PhaseNumber
 		{
-			get => phase.PhaseNumber;
-			set { phase.PhaseNumber = value; }
+			get => teklaObject.PhaseNumber;
+			set { teklaObject.PhaseNumber = value; }
 		}
 
 		public System.String PhaseName
 		{
-			get => phase.PhaseName;
-			set { phase.PhaseName = value; }
+			get => teklaObject.PhaseName;
+			set { teklaObject.PhaseName = value; }
 		}
 
 		public System.String PhaseComment
 		{
-			get => phase.PhaseComment;
-			set { phase.PhaseComment = value; }
+			get => teklaObject.PhaseComment;
+			set { teklaObject.PhaseComment = value; }
 		}
 
 		public System.Int32 IsCurrentPhase
 		{
-			get => phase.IsCurrentPhase;
-			set { phase.IsCurrentPhase = value; }
+			get => teklaObject.IsCurrentPhase;
+			set { teklaObject.IsCurrentPhase = value; }
 		}
 
         
 
-        internal dynamic phase;
-        
-        public Phase()
-        {
-            this.phase =  TSActivator.CreateInstance("Tekla.Structures.Model.Phase");
-        }
+        internal dynamic teklaObject;
 
-        internal Phase(dynamic tsObject)
-        {
-            this.phase = tsObject;
-        }
+		public Phase()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Phase");
+		}
 		public Phase(System.Int32 PhaseNumber)
 		{
 			var args = new object[1];
 			args[0] = PhaseNumber;
-			this.phase = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
 		}
 		public Phase(System.Int32 PhaseNumber, System.String PhaseName, System.String PhaseComment, System.Int32 IsCurrentPhase)
 		{
@@ -57,38 +52,38 @@ namespace Dynamic.Tekla.Structures.Model
 			args[1] = PhaseName;
 			args[2] = PhaseComment;
 			args[3] = IsCurrentPhase;
-			this.phase = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Phase", args);
 		}
 
 		public System.Boolean Insert()
-			 => phase.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => phase.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => phase.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => phase.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
-			 => phase.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
-			 => phase.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
-			 => phase.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean GetUserProperty(System.String Name, System.String Value)
-			 => phase.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
-			 => phase.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
-			 => phase.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 
 
@@ -100,12 +95,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Phase dynObject)
         {
-            return dynObject.phase;
+            return dynObject.teklaObject;
         }
 
         public static Phase FromTSObject(dynamic tsObject)
         {
-            return new Phase(tsObject);
+            return new Phase() { teklaObject = tsObject };
         }
     }
 

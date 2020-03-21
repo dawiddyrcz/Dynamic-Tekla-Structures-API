@@ -4,70 +4,62 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public sealed class IFC2X3_ParametricObject_CircleProfile 
+    public  class IFC2X3_ParametricObject_CircleProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
 		public System.Double Radius
 		{
-			get => ifc2x3_parametricobject_circleprofile.Radius;
-			set { ifc2x3_parametricobject_circleprofile.Radius = value; }
+			get => teklaObject.Radius;
+			set { teklaObject.Radius = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(ifc2x3_parametricobject_circleprofile.Origin);
-			set { ifc2x3_parametricobject_circleprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_circleprofile.xDir);
-			set { ifc2x3_parametricobject_circleprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.xDir);
+			set { teklaObject.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_circleprofile.Extrusion);
-			set { ifc2x3_parametricobject_circleprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Extrusion);
+			set { teklaObject.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
 		{
-			get => ifc2x3_parametricobject_circleprofile.ProfileName;
-			set { ifc2x3_parametricobject_circleprofile.ProfileName = value; }
+			get => teklaObject.ProfileName;
+			set { teklaObject.ProfileName = value; }
 		}
 
 		public System.String Name
 		{
-			get => ifc2x3_parametricobject_circleprofile.Name;
-			set { ifc2x3_parametricobject_circleprofile.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Description
 		{
-			get => ifc2x3_parametricobject_circleprofile.Description;
-			set { ifc2x3_parametricobject_circleprofile.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String ObjectType
 		{
-			get => ifc2x3_parametricobject_circleprofile.ObjectType;
-			set { ifc2x3_parametricobject_circleprofile.ObjectType = value; }
+			get => teklaObject.ObjectType;
+			set { teklaObject.ObjectType = value; }
 		}
 
         
 
-        internal dynamic ifc2x3_parametricobject_circleprofile;
-        
-        public IFC2X3_ParametricObject_CircleProfile()
-        {
-            this.ifc2x3_parametricobject_circleprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_CircleProfile");
-        }
+        internal dynamic teklaObject;
 
-        internal IFC2X3_ParametricObject_CircleProfile(dynamic tsObject)
-        {
-            this.ifc2x3_parametricobject_circleprofile = tsObject;
-        }
+		internal IFC2X3_ParametricObject_CircleProfile() {}
 
 
 
@@ -79,12 +71,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(IFC2X3_ParametricObject_CircleProfile dynObject)
         {
-            return dynObject.ifc2x3_parametricobject_circleprofile;
+            return dynObject.teklaObject;
         }
 
         public static IFC2X3_ParametricObject_CircleProfile FromTSObject(dynamic tsObject)
         {
-            return new IFC2X3_ParametricObject_CircleProfile(tsObject);
+            return new IFC2X3_ParametricObject_CircleProfile() { teklaObject = tsObject };
         }
     }
 

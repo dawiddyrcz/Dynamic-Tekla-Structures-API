@@ -4,39 +4,34 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class TransformationPlane 
+    public  class TransformationPlane 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToGlobal
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(transformationplane.TransformationMatrixToGlobal);
-			set { transformationplane.TransformationMatrixToGlobal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToGlobal);
+			set { teklaObject.TransformationMatrixToGlobal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToLocal
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(transformationplane.TransformationMatrixToLocal);
-			set { transformationplane.TransformationMatrixToLocal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToLocal);
+			set { teklaObject.TransformationMatrixToLocal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic transformationplane;
-        
-        public TransformationPlane()
-        {
-            this.transformationplane =  TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane");
-        }
+        internal dynamic teklaObject;
 
-        internal TransformationPlane(dynamic tsObject)
-        {
-            this.transformationplane = tsObject;
-        }
+		public TransformationPlane()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane");
+		}
 		public TransformationPlane(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordinateSystem)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordinateSystem);
-			this.transformationplane = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
 		}
 		public TransformationPlane(Dynamic.Tekla.Structures.Geometry3d.Point Origo, Dynamic.Tekla.Structures.Geometry3d.Vector Xvector, Dynamic.Tekla.Structures.Geometry3d.Vector Yvector)
 		{
@@ -44,7 +39,7 @@ namespace Dynamic.Tekla.Structures.Model
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origo);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Xvector);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Yvector);
-			this.transformationplane = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
 		}
 
 
@@ -57,12 +52,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TransformationPlane dynObject)
         {
-            return dynObject.transformationplane;
+            return dynObject.teklaObject;
         }
 
         public static TransformationPlane FromTSObject(dynamic tsObject)
         {
-            return new TransformationPlane(tsObject);
+            return new TransformationPlane() { teklaObject = tsObject };
         }
     }
 

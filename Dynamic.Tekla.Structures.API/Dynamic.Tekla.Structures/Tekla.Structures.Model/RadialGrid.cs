@@ -4,241 +4,236 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RadialGrid 
+    public  class RadialGrid  : Dynamic.Tekla.Structures.Model.GridBase
     {
 
 		public System.Boolean IsMagnetic
 		{
-			get => radialgrid.IsMagnetic;
-			set { radialgrid.IsMagnetic = value; }
+			get => teklaObject.IsMagnetic;
+			set { teklaObject.IsMagnetic = value; }
 		}
 
 		public System.String RadialCoordinates
 		{
-			get => radialgrid.RadialCoordinates;
-			set { radialgrid.RadialCoordinates = value; }
+			get => teklaObject.RadialCoordinates;
+			set { teklaObject.RadialCoordinates = value; }
 		}
 
 		public System.String AngularCoordinates
 		{
-			get => radialgrid.AngularCoordinates;
-			set { radialgrid.AngularCoordinates = value; }
+			get => teklaObject.AngularCoordinates;
+			set { teklaObject.AngularCoordinates = value; }
 		}
 
 		public System.String CoordinateZ
 		{
-			get => radialgrid.CoordinateZ;
-			set { radialgrid.CoordinateZ = value; }
+			get => teklaObject.CoordinateZ;
+			set { teklaObject.CoordinateZ = value; }
 		}
 
 		public System.String RadialLabels
 		{
-			get => radialgrid.RadialLabels;
-			set { radialgrid.RadialLabels = value; }
+			get => teklaObject.RadialLabels;
+			set { teklaObject.RadialLabels = value; }
 		}
 
 		public System.String AngularLabels
 		{
-			get => radialgrid.AngularLabels;
-			set { radialgrid.AngularLabels = value; }
+			get => teklaObject.AngularLabels;
+			set { teklaObject.AngularLabels = value; }
 		}
 
 		public System.String LabelZ
 		{
-			get => radialgrid.LabelZ;
-			set { radialgrid.LabelZ = value; }
+			get => teklaObject.LabelZ;
+			set { teklaObject.LabelZ = value; }
 		}
 
 		public System.Double ArcStartExtension
 		{
-			get => radialgrid.ArcStartExtension;
-			set { radialgrid.ArcStartExtension = value; }
+			get => teklaObject.ArcStartExtension;
+			set { teklaObject.ArcStartExtension = value; }
 		}
 
 		public System.Double AngularLinesStartExtension
 		{
-			get => radialgrid.AngularLinesStartExtension;
-			set { radialgrid.AngularLinesStartExtension = value; }
+			get => teklaObject.AngularLinesStartExtension;
+			set { teklaObject.AngularLinesStartExtension = value; }
 		}
 
 		public System.Double ExtensionBelowZ
 		{
-			get => radialgrid.ExtensionBelowZ;
-			set { radialgrid.ExtensionBelowZ = value; }
+			get => teklaObject.ExtensionBelowZ;
+			set { teklaObject.ExtensionBelowZ = value; }
 		}
 
 		public System.Double ArcEndExtension
 		{
-			get => radialgrid.ArcEndExtension;
-			set { radialgrid.ArcEndExtension = value; }
+			get => teklaObject.ArcEndExtension;
+			set { teklaObject.ArcEndExtension = value; }
 		}
 
 		public System.Double AngularLinesEndExtension
 		{
-			get => radialgrid.AngularLinesEndExtension;
-			set { radialgrid.AngularLinesEndExtension = value; }
+			get => teklaObject.AngularLinesEndExtension;
+			set { teklaObject.AngularLinesEndExtension = value; }
 		}
 
 		public System.Double ExtensionAboveZ
 		{
-			get => radialgrid.ExtensionAboveZ;
-			set { radialgrid.ExtensionAboveZ = value; }
+			get => teklaObject.ExtensionAboveZ;
+			set { teklaObject.ExtensionAboveZ = value; }
 		}
 
 		public System.Drawing.Color Color
 		{
-			get => radialgrid.Color;
-			set { radialgrid.Color = value; }
+			get => teklaObject.Color;
+			set { teklaObject.Color = value; }
 		}
 
 		public System.String Name
 		{
-			get => radialgrid.Name;
-			set { radialgrid.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.Int32 FontSize
 		{
-			get => radialgrid.FontSize;
-			set { radialgrid.FontSize = value; }
+			get => teklaObject.FontSize;
+			set { teklaObject.FontSize = value; }
 		}
 
 		public System.Drawing.Color FontColor
 		{
-			get => radialgrid.FontColor;
-			set { radialgrid.FontColor = value; }
+			get => teklaObject.FontColor;
+			set { teklaObject.FontColor = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(radialgrid.Origin);
-			set { radialgrid.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => radialgrid.ModificationTime;
-			set { radialgrid.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => radialgrid.IsUpToDate;
-			set { radialgrid.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(radialgrid.Identifier);
-			set { radialgrid.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic radialgrid;
-        
-        public RadialGrid()
-        {
-            this.radialgrid =  TSActivator.CreateInstance("Tekla.Structures.Model.RadialGrid");
-        }
+        internal dynamic teklaObject;
 
-        internal RadialGrid(dynamic tsObject)
-        {
-            this.radialgrid = tsObject;
-        }
+		public RadialGrid()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RadialGrid");
+		}
 
 		public System.Boolean Insert()
-			 => radialgrid.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => radialgrid.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => radialgrid.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => radialgrid.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(radialgrid.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(radialgrid.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(radialgrid.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => radialgrid.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => radialgrid.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => radialgrid.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => radialgrid.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => radialgrid.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => radialgrid.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => radialgrid.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => radialgrid.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => radialgrid.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => radialgrid.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => radialgrid.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => radialgrid.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => radialgrid.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => radialgrid.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => radialgrid.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => radialgrid.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => radialgrid.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => radialgrid.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => radialgrid.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(radialgrid.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => radialgrid.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => radialgrid.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => radialgrid.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => radialgrid.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -250,12 +245,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RadialGrid dynObject)
         {
-            return dynObject.radialgrid;
+            return dynObject.teklaObject;
         }
 
         public static RadialGrid FromTSObject(dynamic tsObject)
         {
-            return new RadialGrid(tsObject);
+            return new RadialGrid() { teklaObject = tsObject };
         }
     }
 

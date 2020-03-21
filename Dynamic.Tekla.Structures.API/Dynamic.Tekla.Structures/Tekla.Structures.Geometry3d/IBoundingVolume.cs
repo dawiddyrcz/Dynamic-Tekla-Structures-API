@@ -4,22 +4,14 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class IBoundingVolume 
+    public  class IBoundingVolume 
     {
 
         
 
-        internal dynamic iboundingvolume;
-        
-        private IBoundingVolume()
-        {
-            this.iboundingvolume =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.IBoundingVolume");
-        }
+        internal dynamic teklaObject;
 
-        internal IBoundingVolume(dynamic tsObject)
-        {
-            this.iboundingvolume = tsObject;
-        }
+		internal IBoundingVolume() {}
 
 
 
@@ -31,12 +23,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(IBoundingVolume dynObject)
         {
-            return dynObject.iboundingvolume;
+            return dynObject.teklaObject;
         }
 
         public static IBoundingVolume FromTSObject(dynamic tsObject)
         {
-            return new IBoundingVolume(tsObject);
+            return new IBoundingVolume() { teklaObject = tsObject };
         }
     }
 

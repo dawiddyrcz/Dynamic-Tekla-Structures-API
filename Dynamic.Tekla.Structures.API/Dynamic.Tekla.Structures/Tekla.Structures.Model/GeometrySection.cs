@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class GeometrySection 
+    public  class GeometrySection 
     {
 
 		public System.Int32 Index
 		{
-			get => geometrysection.Index;
-			set { geometrysection.Index = value; }
+			get => teklaObject.Index;
+			set { teklaObject.Index = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
 		{
-			get => Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(geometrysection.GeometryNode);
-			set { geometrysection.GeometryNode = Dynamic.Tekla.Structures.Model.IGeometryNode_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
+			set { teklaObject.GeometryNode = Dynamic.Tekla.Structures.Model.IGeometryNode_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic geometrysection;
-        
-        public GeometrySection()
-        {
-            this.geometrysection =  TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySection");
-        }
+        internal dynamic teklaObject;
 
-        internal GeometrySection(dynamic tsObject)
-        {
-            this.geometrysection = tsObject;
-        }
+		internal GeometrySection() {}
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(GeometrySection dynObject)
         {
-            return dynObject.geometrysection;
+            return dynObject.teklaObject;
         }
 
         public static GeometrySection FromTSObject(dynamic tsObject)
         {
-            return new GeometrySection(tsObject);
+            return new GeometrySection() { teklaObject = tsObject };
         }
     }
 

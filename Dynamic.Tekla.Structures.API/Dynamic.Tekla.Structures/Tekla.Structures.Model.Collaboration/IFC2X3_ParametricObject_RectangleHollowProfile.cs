@@ -4,94 +4,86 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public sealed class IFC2X3_ParametricObject_RectangleHollowProfile 
+    public  class IFC2X3_ParametricObject_RectangleHollowProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
 		public System.Double XDim
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.XDim;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.XDim = value; }
+			get => teklaObject.XDim;
+			set { teklaObject.XDim = value; }
 		}
 
 		public System.Double YDim
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.YDim;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.YDim = value; }
+			get => teklaObject.YDim;
+			set { teklaObject.YDim = value; }
 		}
 
 		public System.Double WallThickness
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.WallThickness;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.WallThickness = value; }
+			get => teklaObject.WallThickness;
+			set { teklaObject.WallThickness = value; }
 		}
 
 		public System.Double InnerFilletRadius
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.InnerFilletRadius;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.InnerFilletRadius = value; }
+			get => teklaObject.InnerFilletRadius;
+			set { teklaObject.InnerFilletRadius = value; }
 		}
 
 		public System.Double OuterFilletRadius
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.OuterFilletRadius;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.OuterFilletRadius = value; }
+			get => teklaObject.OuterFilletRadius;
+			set { teklaObject.OuterFilletRadius = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(ifc2x3_parametricobject_rectanglehollowprofile.Origin);
-			set { ifc2x3_parametricobject_rectanglehollowprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_rectanglehollowprofile.xDir);
-			set { ifc2x3_parametricobject_rectanglehollowprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.xDir);
+			set { teklaObject.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_rectanglehollowprofile.Extrusion);
-			set { ifc2x3_parametricobject_rectanglehollowprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Extrusion);
+			set { teklaObject.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.ProfileName;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.ProfileName = value; }
+			get => teklaObject.ProfileName;
+			set { teklaObject.ProfileName = value; }
 		}
 
 		public System.String Name
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.Name;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Description
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.Description;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String ObjectType
 		{
-			get => ifc2x3_parametricobject_rectanglehollowprofile.ObjectType;
-			set { ifc2x3_parametricobject_rectanglehollowprofile.ObjectType = value; }
+			get => teklaObject.ObjectType;
+			set { teklaObject.ObjectType = value; }
 		}
 
         
 
-        internal dynamic ifc2x3_parametricobject_rectanglehollowprofile;
-        
-        public IFC2X3_ParametricObject_RectangleHollowProfile()
-        {
-            this.ifc2x3_parametricobject_rectanglehollowprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_RectangleHollowProfile");
-        }
+        internal dynamic teklaObject;
 
-        internal IFC2X3_ParametricObject_RectangleHollowProfile(dynamic tsObject)
-        {
-            this.ifc2x3_parametricobject_rectanglehollowprofile = tsObject;
-        }
+		internal IFC2X3_ParametricObject_RectangleHollowProfile() {}
 
 
 
@@ -103,12 +95,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(IFC2X3_ParametricObject_RectangleHollowProfile dynObject)
         {
-            return dynObject.ifc2x3_parametricobject_rectanglehollowprofile;
+            return dynObject.teklaObject;
         }
 
         public static IFC2X3_ParametricObject_RectangleHollowProfile FromTSObject(dynamic tsObject)
         {
-            return new IFC2X3_ParametricObject_RectangleHollowProfile(tsObject);
+            return new IFC2X3_ParametricObject_RectangleHollowProfile() { teklaObject = tsObject };
         }
     }
 

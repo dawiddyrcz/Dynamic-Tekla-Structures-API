@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class FacePerpendicularToIntersectionLineException 
+    public  class FacePerpendicularToIntersectionLineException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => faceperpendiculartointersectionlineexception.Message;
-			set { faceperpendiculartointersectionlineexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => faceperpendiculartointersectionlineexception.Data;
-			set { faceperpendiculartointersectionlineexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => faceperpendiculartointersectionlineexception.InnerException;
-			set { faceperpendiculartointersectionlineexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => faceperpendiculartointersectionlineexception.TargetSite;
-			set { faceperpendiculartointersectionlineexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => faceperpendiculartointersectionlineexception.StackTrace;
-			set { faceperpendiculartointersectionlineexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => faceperpendiculartointersectionlineexception.HelpLink;
-			set { faceperpendiculartointersectionlineexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => faceperpendiculartointersectionlineexception.Source;
-			set { faceperpendiculartointersectionlineexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => faceperpendiculartointersectionlineexception.HResult;
-			set { faceperpendiculartointersectionlineexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(faceperpendiculartointersectionlineexception.OperationStatus);
-			set { faceperpendiculartointersectionlineexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic faceperpendiculartointersectionlineexception;
-        
-        public FacePerpendicularToIntersectionLineException()
-        {
-            this.faceperpendiculartointersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacePerpendicularToIntersectionLineException");
-        }
+        internal dynamic teklaObject;
 
-        internal FacePerpendicularToIntersectionLineException(dynamic tsObject)
-        {
-            this.faceperpendiculartointersectionlineexception = tsObject;
-        }
+		public FacePerpendicularToIntersectionLineException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.FacePerpendicularToIntersectionLineException");
+		}
 
 		public System.Exception GetBaseException()
-			 => faceperpendiculartointersectionlineexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => faceperpendiculartointersectionlineexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(FacePerpendicularToIntersectionLineException dynObject)
         {
-            return dynObject.faceperpendiculartointersectionlineexception;
+            return dynObject.teklaObject;
         }
 
         public static FacePerpendicularToIntersectionLineException FromTSObject(dynamic tsObject)
         {
-            return new FacePerpendicularToIntersectionLineException(tsObject);
+            return new FacePerpendicularToIntersectionLineException() { teklaObject = tsObject };
         }
     }
 

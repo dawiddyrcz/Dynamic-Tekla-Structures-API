@@ -4,49 +4,44 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class Matrix 
+    public  class Matrix 
     {
 
 		public System.Double Item
 		{
-			get => matrix.Item;
-			set { matrix.Item = value; }
+			get => teklaObject.Item;
+			set { teklaObject.Item = value; }
 		}
 
         
 
-        internal dynamic matrix;
-        
-        public Matrix()
-        {
-            this.matrix =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix");
-        }
+        internal dynamic teklaObject;
 
-        internal Matrix(dynamic tsObject)
-        {
-            this.matrix = tsObject;
-        }
+		public Matrix()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix");
+		}
 		public Matrix(Dynamic.Tekla.Structures.Geometry3d.Matrix m)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(m);
-			this.matrix = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix", args);
 		}
 
 		public void Transpose()
-			 => matrix.Transpose();
+			 => teklaObject.Transpose();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
-			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(matrix.GetTranspose());
+			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.GetTranspose());
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix B, Dynamic.Tekla.Structures.Geometry3d.Matrix A)
-			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(matrix.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(B), Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(B), Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Transform(Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(matrix.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix A, Dynamic.Tekla.Structures.Geometry3d.Point p)
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(matrix.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(A), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
 
 
 
@@ -58,12 +53,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(Matrix dynObject)
         {
-            return dynObject.matrix;
+            return dynObject.teklaObject;
         }
 
         public static Matrix FromTSObject(dynamic tsObject)
         {
-            return new Matrix(tsObject);
+            return new Matrix() { teklaObject = tsObject };
         }
     }
 

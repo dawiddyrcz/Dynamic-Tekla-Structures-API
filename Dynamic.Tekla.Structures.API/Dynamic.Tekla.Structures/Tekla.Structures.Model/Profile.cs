@@ -4,34 +4,29 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Profile 
+    public  class Profile 
     {
 
 		public System.String ProfileString
 		{
-			get => profile.ProfileString;
-			set { profile.ProfileString = value; }
+			get => teklaObject.ProfileString;
+			set { teklaObject.ProfileString = value; }
 		}
 
         
 
-        internal dynamic profile;
-        
-        public Profile()
-        {
-            this.profile =  TSActivator.CreateInstance("Tekla.Structures.Model.Profile");
-        }
+        internal dynamic teklaObject;
 
-        internal Profile(dynamic tsObject)
-        {
-            this.profile = tsObject;
-        }
+		public Profile()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Profile");
+		}
 
 		public System.String ParseProfileString(System.String profileString)
-			 => profile.ParseProfileString(profileString);
+			 => teklaObject.ParseProfileString(profileString);
 
 		public System.String FormatProfileString(System.String profileString)
-			 => profile.FormatProfileString(profileString);
+			 => teklaObject.FormatProfileString(profileString);
 
 
 
@@ -43,12 +38,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Profile dynObject)
         {
-            return dynObject.profile;
+            return dynObject.teklaObject;
         }
 
         public static Profile FromTSObject(dynamic tsObject)
         {
-            return new Profile(tsObject);
+            return new Profile() { teklaObject = tsObject };
         }
     }
 

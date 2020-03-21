@@ -4,82 +4,74 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class LoftedPlateOperationException 
+    public  class LoftedPlateOperationException 
     {
 
 		public System.String Message
 		{
-			get => loftedplateoperationexception.Message;
-			set { loftedplateoperationexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => loftedplateoperationexception.Data;
-			set { loftedplateoperationexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => loftedplateoperationexception.InnerException;
-			set { loftedplateoperationexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => loftedplateoperationexception.TargetSite;
-			set { loftedplateoperationexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => loftedplateoperationexception.StackTrace;
-			set { loftedplateoperationexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => loftedplateoperationexception.HelpLink;
-			set { loftedplateoperationexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => loftedplateoperationexception.Source;
-			set { loftedplateoperationexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => loftedplateoperationexception.HResult;
-			set { loftedplateoperationexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic loftedplateoperationexception;
-        
-        private LoftedPlateOperationException()
-        {
-            this.loftedplateoperationexception =  TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException");
-        }
+        internal dynamic teklaObject;
 
-        internal LoftedPlateOperationException(dynamic tsObject)
-        {
-            this.loftedplateoperationexception = tsObject;
-        }
+		internal LoftedPlateOperationException() {}
 		public LoftedPlateOperationException(System.String message)
 		{
 			var args = new object[1];
 			args[0] = message;
-			this.loftedplateoperationexception = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException", args);
 		}
 
 		public System.Exception GetBaseException()
-			 => loftedplateoperationexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => loftedplateoperationexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +83,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoftedPlateOperationException dynObject)
         {
-            return dynObject.loftedplateoperationexception;
+            return dynObject.teklaObject;
         }
 
         public static LoftedPlateOperationException FromTSObject(dynamic tsObject)
         {
-            return new LoftedPlateOperationException(tsObject);
+            return new LoftedPlateOperationException() { teklaObject = tsObject };
         }
     }
 

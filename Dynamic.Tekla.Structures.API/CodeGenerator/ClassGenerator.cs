@@ -16,6 +16,11 @@ namespace CodeGenerator
 
             string outputText = String.Copy(text);
 
+            //if (type.IsAbstract)
+            //    outputText = outputText.Replace("$abstract", "abstract");
+            //else
+                outputText = outputText.Replace("$abstract", "");
+
             outputText = outputText.Replace("$constructors", ConstructorsText(type));
             outputText = outputText.Replace("$dproperties", PropertiesAndFieldsText(type));
             outputText = outputText.Replace("$dmethods", MethodsText(type));
@@ -24,16 +29,18 @@ namespace CodeGenerator
             var accessor = "public";
             if (type.IsAbstract) accessor = "private";
             outputText = outputText.Replace("$firstConstructorAccessor", accessor);
-            
-            if (type.Name.ToLower().Equals("object", StringComparison.InvariantCulture))
-                outputText = outputText.Replace("$dfield", "@object");
-            else if (type.Name.ToLower().Equals("class", StringComparison.InvariantCulture))
-                outputText = outputText.Replace("$dfield", "@class");
-            else
-                outputText = outputText.Replace("$dfield", type.Name.ToLower());
-            
-            //TODO abstractions!!!
-            outputText = outputText.Replace("$fatherClass", "");
+
+            outputText = outputText.Replace("$dfield", "teklaObject");
+
+            string baseClassText = string.Empty;
+
+            if (type.BaseType != null)
+            {
+                if (IsTeklaType(type.BaseType))
+                    baseClassText = " : " + GetTypeFullName(type.BaseType); 
+            }
+
+            outputText = outputText.Replace("$baseClass", baseClassText);
 
             var nestedTypeGenerator = new TypeGenerator();
             var nestedTypeText = new StringBuilder(1000);
@@ -51,13 +58,20 @@ namespace CodeGenerator
         
         private string ConstructorsText(Type type)
         {
+            var sb = new StringBuilder(500);
+            
+            if (type.GetConstructors().Any(c => c.GetParameters().Count() == 0) && !type.IsAbstract)
+            {
+                sb.Append("\t\tpublic $classname()\n\t\t{\n");
+                sb.Append("\t\t\tthis.$dfield = TSActivator.CreateInstance(\"$typeFullName\");\n");
+                sb.Append("\t\t}\n");
+            }
+            else sb.Append("\t\tinternal $classname() {}\n");
+
             var constructors = type.GetConstructors()
-                .Where(c => c.GetParameters().Count() > 0
-               // && c.GetParameters().Any(p => p.ParameterType.Namespace.Contains("Tekla.Structures")) == false
-                )
+                .Where(c => c.GetParameters().Count() > 0)
                 .ToList();
 
-            var sb = new StringBuilder(500);
 
             foreach (var constructor in constructors)
             {
@@ -248,7 +262,7 @@ namespace CodeGenerator
 
         private bool IsTeklaType(Type type)
         {
-            return type.FullName?.StartsWith("Tekla.Structures") ?? false;
+            return type?.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
         
         /// <summary>Generates text from properties and fields. Public fields are made as properties</summary>
@@ -310,22 +324,13 @@ namespace CodeGenerator
 
 
         private readonly string text = @"
-    public sealed class $classname $fatherClass
+    public $abstract class $classname $baseClass
     {
 
 $dproperties        
 
         internal dynamic $dfield;
-        
-        $firstConstructorAccessor $classname()
-        {
-            this.$dfield =  TSActivator.CreateInstance(""$typeFullName"");
-        }
 
-        internal $classname(dynamic tsObject)
-        {
-            this.$dfield = tsObject;
-        }
 $constructors
 $dmethods
 
@@ -342,7 +347,7 @@ $nestedTypes
 
         public static $classname FromTSObject(dynamic tsObject)
         {
-            return new $classname(tsObject);
+            return new $classname() { teklaObject = tsObject };
         }
     }
 

@@ -4,194 +4,189 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class EdgeChamfer 
+    public  class EdgeChamfer  : Dynamic.Tekla.Structures.Model.Boolean
     {
 
 		public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
 		{
-			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(edgechamfer.Chamfer);
-			set { edgechamfer.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(teklaObject.Chamfer);
+			set { teklaObject.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point FirstEnd
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edgechamfer.FirstEnd);
-			set { edgechamfer.FirstEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.FirstEnd);
+			set { teklaObject.FirstEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point SecondEnd
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edgechamfer.SecondEnd);
-			set { edgechamfer.SecondEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.SecondEnd);
+			set { teklaObject.SecondEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum FirstChamferEndType
 		{
-			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.FirstChamferEndType);
-			set { edgechamfer.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.FirstChamferEndType);
+			set { teklaObject.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum SecondChamferEndType
 		{
-			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(edgechamfer.SecondChamferEndType);
-			set { edgechamfer.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.SecondChamferEndType);
+			set { teklaObject.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double SecondBevelDimension
 		{
-			get => edgechamfer.SecondBevelDimension;
-			set { edgechamfer.SecondBevelDimension = value; }
+			get => teklaObject.SecondBevelDimension;
+			set { teklaObject.SecondBevelDimension = value; }
 		}
 
 		public System.Double FirstBevelDimension
 		{
-			get => edgechamfer.FirstBevelDimension;
-			set { edgechamfer.FirstBevelDimension = value; }
+			get => teklaObject.FirstBevelDimension;
+			set { teklaObject.FirstBevelDimension = value; }
 		}
 
 		public System.String Name
 		{
-			get => edgechamfer.Name;
-			set { edgechamfer.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(edgechamfer.Father);
-			set { edgechamfer.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => edgechamfer.ModificationTime;
-			set { edgechamfer.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => edgechamfer.IsUpToDate;
-			set { edgechamfer.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(edgechamfer.Identifier);
-			set { edgechamfer.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic edgechamfer;
-        
-        public EdgeChamfer()
-        {
-            this.edgechamfer =  TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer");
-        }
+        internal dynamic teklaObject;
 
-        internal EdgeChamfer(dynamic tsObject)
-        {
-            this.edgechamfer = tsObject;
-        }
+		public EdgeChamfer()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer");
+		}
 		public EdgeChamfer(Dynamic.Tekla.Structures.Geometry3d.Point FirstEnd, Dynamic.Tekla.Structures.Geometry3d.Point SecondEnd)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(FirstEnd);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SecondEnd);
-			this.edgechamfer = TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer", args);
 		}
 
 		public System.Boolean Insert()
-			 => edgechamfer.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => edgechamfer.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => edgechamfer.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => edgechamfer.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(edgechamfer.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(edgechamfer.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(edgechamfer.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => edgechamfer.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => edgechamfer.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => edgechamfer.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => edgechamfer.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => edgechamfer.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => edgechamfer.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => edgechamfer.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => edgechamfer.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => edgechamfer.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => edgechamfer.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => edgechamfer.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => edgechamfer.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => edgechamfer.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => edgechamfer.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => edgechamfer.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => edgechamfer.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => edgechamfer.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => edgechamfer.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => edgechamfer.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(edgechamfer.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => edgechamfer.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => edgechamfer.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => edgechamfer.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => edgechamfer.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -248,12 +243,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(EdgeChamfer dynObject)
         {
-            return dynObject.edgechamfer;
+            return dynObject.teklaObject;
         }
 
         public static EdgeChamfer FromTSObject(dynamic tsObject)
         {
-            return new EdgeChamfer(tsObject);
+            return new EdgeChamfer() { teklaObject = tsObject };
         }
     }
 

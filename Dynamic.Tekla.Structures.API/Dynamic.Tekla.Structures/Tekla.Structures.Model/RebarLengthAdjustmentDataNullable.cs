@@ -4,34 +4,29 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarLengthAdjustmentDataNullable 
+    public  class RebarLengthAdjustmentDataNullable 
     {
 
 		public Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum AdjustmentType
 		{
-			get => rebarlengthadjustmentdatanullable.AdjustmentType;
-			set { rebarlengthadjustmentdatanullable.AdjustmentType = value; }
+			get => teklaObject.AdjustmentType;
+			set { teklaObject.AdjustmentType = value; }
 		}
 
 		public System.Double AdjustmentLength
 		{
-			get => rebarlengthadjustmentdatanullable.AdjustmentLength;
-			set { rebarlengthadjustmentdatanullable.AdjustmentLength = value; }
+			get => teklaObject.AdjustmentLength;
+			set { teklaObject.AdjustmentLength = value; }
 		}
 
         
 
-        internal dynamic rebarlengthadjustmentdatanullable;
-        
-        public RebarLengthAdjustmentDataNullable()
-        {
-            this.rebarlengthadjustmentdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarLengthAdjustmentDataNullable");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarLengthAdjustmentDataNullable(dynamic tsObject)
-        {
-            this.rebarlengthadjustmentdatanullable = tsObject;
-        }
+		public RebarLengthAdjustmentDataNullable()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLengthAdjustmentDataNullable");
+		}
 
 
 
@@ -88,12 +83,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarLengthAdjustmentDataNullable dynObject)
         {
-            return dynObject.rebarlengthadjustmentdatanullable;
+            return dynObject.teklaObject;
         }
 
         public static RebarLengthAdjustmentDataNullable FromTSObject(dynamic tsObject)
         {
-            return new RebarLengthAdjustmentDataNullable(tsObject);
+            return new RebarLengthAdjustmentDataNullable() { teklaObject = tsObject };
         }
     }
 

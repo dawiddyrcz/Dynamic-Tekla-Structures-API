@@ -4,253 +4,248 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class LoadTemperature 
+    public  class LoadTemperature  : Dynamic.Tekla.Structures.Model.Load
     {
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(loadtemperature.Spanning);
-			set { loadtemperature.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(teklaObject.Spanning);
+			set { teklaObject.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(loadtemperature.PrimaryAxisDirection);
-			set { loadtemperature.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.PrimaryAxisDirection);
+			set { teklaObject.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
 		{
-			get => loadtemperature.AutomaticPrimaryAxisWeight;
-			set { loadtemperature.AutomaticPrimaryAxisWeight = value; }
+			get => teklaObject.AutomaticPrimaryAxisWeight;
+			set { teklaObject.AutomaticPrimaryAxisWeight = value; }
 		}
 
 		public System.Double Weight
 		{
-			get => loadtemperature.Weight;
-			set { loadtemperature.Weight = value; }
+			get => teklaObject.Weight;
+			set { teklaObject.Weight = value; }
 		}
 
 		public System.Double LoadDispersionAngle
 		{
-			get => loadtemperature.LoadDispersionAngle;
-			set { loadtemperature.LoadDispersionAngle = value; }
+			get => teklaObject.LoadDispersionAngle;
+			set { teklaObject.LoadDispersionAngle = value; }
 		}
 
 		public System.Boolean CreateFixedSupportConditionsAutomatically
 		{
-			get => loadtemperature.CreateFixedSupportConditionsAutomatically;
-			set { loadtemperature.CreateFixedSupportConditionsAutomatically = value; }
+			get => teklaObject.CreateFixedSupportConditionsAutomatically;
+			set { teklaObject.CreateFixedSupportConditionsAutomatically = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadtemperature.Position1);
-			set { loadtemperature.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position1);
+			set { teklaObject.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(loadtemperature.Position2);
-			set { loadtemperature.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position2);
+			set { teklaObject.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double TemperatureChangeForAxialElongation
 		{
-			get => loadtemperature.TemperatureChangeForAxialElongation;
-			set { loadtemperature.TemperatureChangeForAxialElongation = value; }
+			get => teklaObject.TemperatureChangeForAxialElongation;
+			set { teklaObject.TemperatureChangeForAxialElongation = value; }
 		}
 
 		public System.Double TemperatureDifferentialTopToBottom
 		{
-			get => loadtemperature.TemperatureDifferentialTopToBottom;
-			set { loadtemperature.TemperatureDifferentialTopToBottom = value; }
+			get => teklaObject.TemperatureDifferentialTopToBottom;
+			set { teklaObject.TemperatureDifferentialTopToBottom = value; }
 		}
 
 		public System.Double TemperatureDifferentialSideToSide
 		{
-			get => loadtemperature.TemperatureDifferentialSideToSide;
-			set { loadtemperature.TemperatureDifferentialSideToSide = value; }
+			get => teklaObject.TemperatureDifferentialSideToSide;
+			set { teklaObject.TemperatureDifferentialSideToSide = value; }
 		}
 
 		public System.Double InitialAxialElongation
 		{
-			get => loadtemperature.InitialAxialElongation;
-			set { loadtemperature.InitialAxialElongation = value; }
+			get => teklaObject.InitialAxialElongation;
+			set { teklaObject.InitialAxialElongation = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadtemperature.FatherId);
-			set { loadtemperature.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.FatherId);
+			set { teklaObject.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(loadtemperature.LoadAttachment);
-			set { loadtemperature.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(teklaObject.LoadAttachment);
+			set { teklaObject.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(loadtemperature.PartNames);
-			set { loadtemperature.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(teklaObject.PartNames);
+			set { teklaObject.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
 		}
 
 		public System.String PartFilter
 		{
-			get => loadtemperature.PartFilter;
-			set { loadtemperature.PartFilter = value; }
+			get => teklaObject.PartFilter;
+			set { teklaObject.PartFilter = value; }
 		}
 
 		public System.Double BoundingBoxDx
 		{
-			get => loadtemperature.BoundingBoxDx;
-			set { loadtemperature.BoundingBoxDx = value; }
+			get => teklaObject.BoundingBoxDx;
+			set { teklaObject.BoundingBoxDx = value; }
 		}
 
 		public System.Double BoundingBoxDy
 		{
-			get => loadtemperature.BoundingBoxDy;
-			set { loadtemperature.BoundingBoxDy = value; }
+			get => teklaObject.BoundingBoxDy;
+			set { teklaObject.BoundingBoxDy = value; }
 		}
 
 		public System.Double BoundingBoxDz
 		{
-			get => loadtemperature.BoundingBoxDz;
-			set { loadtemperature.BoundingBoxDz = value; }
+			get => teklaObject.BoundingBoxDz;
+			set { teklaObject.BoundingBoxDz = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(loadtemperature.Group);
-			set { loadtemperature.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(teklaObject.Group);
+			set { teklaObject.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => loadtemperature.ModificationTime;
-			set { loadtemperature.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => loadtemperature.IsUpToDate;
-			set { loadtemperature.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadtemperature.Identifier);
-			set { loadtemperature.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic loadtemperature;
-        
-        public LoadTemperature()
-        {
-            this.loadtemperature =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadTemperature");
-        }
+        internal dynamic teklaObject;
 
-        internal LoadTemperature(dynamic tsObject)
-        {
-            this.loadtemperature = tsObject;
-        }
+		public LoadTemperature()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.LoadTemperature");
+		}
 
 		public System.Boolean Insert()
-			 => loadtemperature.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => loadtemperature.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => loadtemperature.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => loadtemperature.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadtemperature.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loadtemperature.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadtemperature.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => loadtemperature.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => loadtemperature.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => loadtemperature.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => loadtemperature.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => loadtemperature.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadtemperature.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadtemperature.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadtemperature.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => loadtemperature.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => loadtemperature.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => loadtemperature.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => loadtemperature.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => loadtemperature.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => loadtemperature.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => loadtemperature.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => loadtemperature.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => loadtemperature.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => loadtemperature.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => loadtemperature.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loadtemperature.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadtemperature.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadtemperature.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => loadtemperature.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => loadtemperature.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -262,12 +257,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadTemperature dynObject)
         {
-            return dynObject.loadtemperature;
+            return dynObject.teklaObject;
         }
 
         public static LoadTemperature FromTSObject(dynamic tsObject)
         {
-            return new LoadTemperature(tsObject);
+            return new LoadTemperature() { teklaObject = tsObject };
         }
     }
 

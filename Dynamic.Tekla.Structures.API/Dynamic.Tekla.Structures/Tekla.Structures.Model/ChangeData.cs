@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ChangeData 
+    public  class ChangeData 
     {
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Object
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(changedata.Object);
-			set { changedata.Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object);
+			set { teklaObject.Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(changedata.Type);
-			set { changedata.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic changedata;
-        
-        public ChangeData()
-        {
-            this.changedata =  TSActivator.CreateInstance("Tekla.Structures.Model.ChangeData");
-        }
+        internal dynamic teklaObject;
 
-        internal ChangeData(dynamic tsObject)
-        {
-            this.changedata = tsObject;
-        }
+		internal ChangeData() {}
 
 
 
@@ -93,12 +85,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ChangeData dynObject)
         {
-            return dynObject.changedata;
+            return dynObject.teklaObject;
         }
 
         public static ChangeData FromTSObject(dynamic tsObject)
         {
-            return new ChangeData(tsObject);
+            return new ChangeData() { teklaObject = tsObject };
         }
     }
 

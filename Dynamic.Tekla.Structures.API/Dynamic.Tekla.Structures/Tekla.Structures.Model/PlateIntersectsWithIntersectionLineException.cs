@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class PlateIntersectsWithIntersectionLineException 
+    public  class PlateIntersectsWithIntersectionLineException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => plateintersectswithintersectionlineexception.Message;
-			set { plateintersectswithintersectionlineexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => plateintersectswithintersectionlineexception.Data;
-			set { plateintersectswithintersectionlineexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => plateintersectswithintersectionlineexception.InnerException;
-			set { plateintersectswithintersectionlineexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => plateintersectswithintersectionlineexception.TargetSite;
-			set { plateintersectswithintersectionlineexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => plateintersectswithintersectionlineexception.StackTrace;
-			set { plateintersectswithintersectionlineexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => plateintersectswithintersectionlineexception.HelpLink;
-			set { plateintersectswithintersectionlineexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => plateintersectswithintersectionlineexception.Source;
-			set { plateintersectswithintersectionlineexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => plateintersectswithintersectionlineexception.HResult;
-			set { plateintersectswithintersectionlineexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(plateintersectswithintersectionlineexception.OperationStatus);
-			set { plateintersectswithintersectionlineexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic plateintersectswithintersectionlineexception;
-        
-        public PlateIntersectsWithIntersectionLineException()
-        {
-            this.plateintersectswithintersectionlineexception =  TSActivator.CreateInstance("Tekla.Structures.Model.PlateIntersectsWithIntersectionLineException");
-        }
+        internal dynamic teklaObject;
 
-        internal PlateIntersectsWithIntersectionLineException(dynamic tsObject)
-        {
-            this.plateintersectswithintersectionlineexception = tsObject;
-        }
+		public PlateIntersectsWithIntersectionLineException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.PlateIntersectsWithIntersectionLineException");
+		}
 
 		public System.Exception GetBaseException()
-			 => plateintersectswithintersectionlineexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => plateintersectswithintersectionlineexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PlateIntersectsWithIntersectionLineException dynObject)
         {
-            return dynObject.plateintersectswithintersectionlineexception;
+            return dynObject.teklaObject;
         }
 
         public static PlateIntersectsWithIntersectionLineException FromTSObject(dynamic tsObject)
         {
-            return new PlateIntersectsWithIntersectionLineException(tsObject);
+            return new PlateIntersectsWithIntersectionLineException() { teklaObject = tsObject };
         }
     }
 

@@ -4,222 +4,217 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ReferenceModel 
+    public  class ReferenceModel  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.String Filename
 		{
-			get => referencemodel.Filename;
-			set { referencemodel.Filename = value; }
+			get => teklaObject.Filename;
+			set { teklaObject.Filename = value; }
 		}
 
 		public System.String ActiveFilePath
 		{
-			get => referencemodel.ActiveFilePath;
-			set { referencemodel.ActiveFilePath = value; }
+			get => teklaObject.ActiveFilePath;
+			set { teklaObject.ActiveFilePath = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(referencemodel.Position);
-			set { referencemodel.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position);
+			set { teklaObject.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double Scale
 		{
-			get => referencemodel.Scale;
-			set { referencemodel.Scale = value; }
+			get => teklaObject.Scale;
+			set { teklaObject.Scale = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum Visibility
 		{
-			get => Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(referencemodel.Visibility);
-			set { referencemodel.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.FromTSObject(teklaObject.Visibility);
+			set { teklaObject.Visibility = Dynamic.Tekla.Structures.Model.ReferenceModel.VisibilityEnum_.GetTSObject(value); }
 		}
 
 		public System.Guid BasePointGuid
 		{
-			get => referencemodel.BasePointGuid;
-			set { referencemodel.BasePointGuid = value; }
+			get => teklaObject.BasePointGuid;
+			set { teklaObject.BasePointGuid = value; }
 		}
 
 		public System.Double Rotation
 		{
-			get => referencemodel.Rotation;
-			set { referencemodel.Rotation = value; }
+			get => teklaObject.Rotation;
+			set { teklaObject.Rotation = value; }
 		}
 
 		public System.Guid ProjectGUID
 		{
-			get => referencemodel.ProjectGUID;
-			set { referencemodel.ProjectGUID = value; }
+			get => teklaObject.ProjectGUID;
+			set { teklaObject.ProjectGUID = value; }
 		}
 
 		public System.Guid ModelGUID
 		{
-			get => referencemodel.ModelGUID;
-			set { referencemodel.ModelGUID = value; }
+			get => teklaObject.ModelGUID;
+			set { teklaObject.ModelGUID = value; }
 		}
 
 		public System.Guid VersionGUID
 		{
-			get => referencemodel.VersionGUID;
-			set { referencemodel.VersionGUID = value; }
+			get => teklaObject.VersionGUID;
+			set { teklaObject.VersionGUID = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => referencemodel.ModificationTime;
-			set { referencemodel.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => referencemodel.IsUpToDate;
-			set { referencemodel.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(referencemodel.Identifier);
-			set { referencemodel.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic referencemodel;
-        
-        public ReferenceModel()
-        {
-            this.referencemodel =  TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel");
-        }
+        internal dynamic teklaObject;
 
-        internal ReferenceModel(dynamic tsObject)
-        {
-            this.referencemodel = tsObject;
-        }
+		public ReferenceModel()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel");
+		}
 		public ReferenceModel(System.String filename, Dynamic.Tekla.Structures.Geometry3d.Point position, System.Double scale)
 		{
 			var args = new object[3];
 			args[0] = filename;
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(position);
 			args[2] = scale;
-			this.referencemodel = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel", args);
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetConvertedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetConvertedObjects());
 
 		public System.Boolean RefreshFile()
-			 => referencemodel.RefreshFile();
+			 => teklaObject.RefreshFile();
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
-			 => referencemodel.GetRevisions();
+			 => teklaObject.GetRevisions();
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
-			 => Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(referencemodel.GetReferenceModelObjectByExternalGuid(externalGuid));
+			 => Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid));
 
 		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
-			 => referencemodel.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
+			 => teklaObject.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
 
 		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
-			 => referencemodel.SetAsCurrentRevision(modelId, revisionId);
+			 => teklaObject.SetAsCurrentRevision(modelId, revisionId);
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
-			 => Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(referencemodel.GetCurrentRevision());
+			 => Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(teklaObject.GetCurrentRevision());
 
 		public System.Boolean Insert()
-			 => referencemodel.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => referencemodel.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => referencemodel.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => referencemodel.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(referencemodel.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => referencemodel.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => referencemodel.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => referencemodel.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => referencemodel.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => referencemodel.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => referencemodel.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => referencemodel.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => referencemodel.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => referencemodel.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => referencemodel.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => referencemodel.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => referencemodel.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => referencemodel.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => referencemodel.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => referencemodel.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => referencemodel.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => referencemodel.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => referencemodel.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => referencemodel.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(referencemodel.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodel.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => referencemodel.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => referencemodel.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => referencemodel.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -294,12 +289,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ReferenceModel dynObject)
         {
-            return dynObject.referencemodel;
+            return dynObject.teklaObject;
         }
 
         public static ReferenceModel FromTSObject(dynamic tsObject)
         {
-            return new ReferenceModel(tsObject);
+            return new ReferenceModel() { teklaObject = tsObject };
         }
     }
 

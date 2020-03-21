@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class IndirectPolymeshEdge 
+    public  class IndirectPolymeshEdge 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum EdgeType
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(indirectpolymeshedge.EdgeType);
-			set { indirectpolymeshedge.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(teklaObject.EdgeType);
+			set { teklaObject.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 StartPoint
 		{
-			get => indirectpolymeshedge.StartPoint;
-			set { indirectpolymeshedge.StartPoint = value; }
+			get => teklaObject.StartPoint;
+			set { teklaObject.StartPoint = value; }
 		}
 
 		public System.Int32 EndPoint
 		{
-			get => indirectpolymeshedge.EndPoint;
-			set { indirectpolymeshedge.EndPoint = value; }
+			get => teklaObject.EndPoint;
+			set { teklaObject.EndPoint = value; }
 		}
 
 		public System.Int32 ShellIndex
 		{
-			get => indirectpolymeshedge.ShellIndex;
-			set { indirectpolymeshedge.ShellIndex = value; }
+			get => teklaObject.ShellIndex;
+			set { teklaObject.ShellIndex = value; }
 		}
 
         
 
-        internal dynamic indirectpolymeshedge;
-        
-        public IndirectPolymeshEdge()
-        {
-            this.indirectpolymeshedge =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.IndirectPolymeshEdge");
-        }
+        internal dynamic teklaObject;
 
-        internal IndirectPolymeshEdge(dynamic tsObject)
-        {
-            this.indirectpolymeshedge = tsObject;
-        }
+		public IndirectPolymeshEdge()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.IndirectPolymeshEdge");
+		}
 
 
 
@@ -55,12 +50,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(IndirectPolymeshEdge dynObject)
         {
-            return dynObject.indirectpolymeshedge;
+            return dynObject.teklaObject;
         }
 
         public static IndirectPolymeshEdge FromTSObject(dynamic tsObject)
         {
-            return new IndirectPolymeshEdge(tsObject);
+            return new IndirectPolymeshEdge() { teklaObject = tsObject };
         }
     }
 

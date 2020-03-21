@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class InvalidRadiusException 
+    public  class InvalidRadiusException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => invalidradiusexception.Message;
-			set { invalidradiusexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => invalidradiusexception.Data;
-			set { invalidradiusexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => invalidradiusexception.InnerException;
-			set { invalidradiusexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => invalidradiusexception.TargetSite;
-			set { invalidradiusexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => invalidradiusexception.StackTrace;
-			set { invalidradiusexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => invalidradiusexception.HelpLink;
-			set { invalidradiusexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => invalidradiusexception.Source;
-			set { invalidradiusexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => invalidradiusexception.HResult;
-			set { invalidradiusexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(invalidradiusexception.OperationStatus);
-			set { invalidradiusexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic invalidradiusexception;
-        
-        public InvalidRadiusException()
-        {
-            this.invalidradiusexception =  TSActivator.CreateInstance("Tekla.Structures.Model.InvalidRadiusException");
-        }
+        internal dynamic teklaObject;
 
-        internal InvalidRadiusException(dynamic tsObject)
-        {
-            this.invalidradiusexception = tsObject;
-        }
+		public InvalidRadiusException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.InvalidRadiusException");
+		}
 
 		public System.Exception GetBaseException()
-			 => invalidradiusexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => invalidradiusexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(InvalidRadiusException dynObject)
         {
-            return dynObject.invalidradiusexception;
+            return dynObject.teklaObject;
         }
 
         public static InvalidRadiusException FromTSObject(dynamic tsObject)
         {
-            return new InvalidRadiusException(tsObject);
+            return new InvalidRadiusException() { teklaObject = tsObject };
         }
     }
 

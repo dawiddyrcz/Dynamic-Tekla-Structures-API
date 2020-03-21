@@ -4,170 +4,165 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class TaskDependency 
+    public  class TaskDependency  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.Int32 Lag
 		{
-			get => taskdependency.Lag;
-			set { taskdependency.Lag = value; }
+			get => teklaObject.Lag;
+			set { teklaObject.Lag = value; }
 		}
 
 		public System.Boolean Local
 		{
-			get => taskdependency.Local;
-			set { taskdependency.Local = value; }
+			get => teklaObject.Local;
+			set { teklaObject.Local = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Task Primary
 		{
-			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(taskdependency.Primary);
-			set { taskdependency.Primary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Primary);
+			set { teklaObject.Primary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Task Secondary
 		{
-			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(taskdependency.Secondary);
-			set { taskdependency.Secondary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Secondary);
+			set { teklaObject.Secondary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
 		{
-			get => Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(taskdependency.DependencyType);
-			set { taskdependency.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(teklaObject.DependencyType);
+			set { teklaObject.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => taskdependency.ModificationTime;
-			set { taskdependency.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => taskdependency.IsUpToDate;
-			set { taskdependency.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(taskdependency.Identifier);
-			set { taskdependency.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic taskdependency;
-        
-        public TaskDependency()
-        {
-            this.taskdependency =  TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency");
-        }
+        internal dynamic teklaObject;
 
-        internal TaskDependency(dynamic tsObject)
-        {
-            this.taskdependency = tsObject;
-        }
+		public TaskDependency()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency");
+		}
 		public TaskDependency(Dynamic.Tekla.Structures.Model.Task primary, Dynamic.Tekla.Structures.Model.Task secondary)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(primary);
 			args[1] = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(secondary);
-			this.taskdependency = TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency", args);
 		}
 
 		public System.Boolean Insert()
-			 => taskdependency.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => taskdependency.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => taskdependency.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => taskdependency.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskdependency.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(taskdependency.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(taskdependency.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => taskdependency.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => taskdependency.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => taskdependency.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => taskdependency.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => taskdependency.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => taskdependency.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => taskdependency.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => taskdependency.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => taskdependency.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => taskdependency.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => taskdependency.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => taskdependency.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => taskdependency.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => taskdependency.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => taskdependency.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => taskdependency.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => taskdependency.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => taskdependency.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => taskdependency.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(taskdependency.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskdependency.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => taskdependency.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => taskdependency.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => taskdependency.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -229,12 +224,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TaskDependency dynObject)
         {
-            return dynObject.taskdependency;
+            return dynObject.teklaObject;
         }
 
         public static TaskDependency FromTSObject(dynamic tsObject)
         {
-            return new TaskDependency(tsObject);
+            return new TaskDependency() { teklaObject = tsObject };
         }
     }
 

@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class VertexEnumerator 
+    public  class VertexEnumerator 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Current
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(vertexenumerator.Current);
-			set { vertexenumerator.Current = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Current);
+			set { teklaObject.Current = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic vertexenumerator;
-        
-        public VertexEnumerator()
-        {
-            this.vertexenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.VertexEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal VertexEnumerator(dynamic tsObject)
-        {
-            this.vertexenumerator = tsObject;
-        }
+		internal VertexEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => vertexenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => vertexenumerator.Reset();
+			 => teklaObject.Reset();
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(VertexEnumerator dynObject)
         {
-            return dynObject.vertexenumerator;
+            return dynObject.teklaObject;
         }
 
         public static VertexEnumerator FromTSObject(dynamic tsObject)
         {
-            return new VertexEnumerator(tsObject);
+            return new VertexEnumerator() { teklaObject = tsObject };
         }
     }
 

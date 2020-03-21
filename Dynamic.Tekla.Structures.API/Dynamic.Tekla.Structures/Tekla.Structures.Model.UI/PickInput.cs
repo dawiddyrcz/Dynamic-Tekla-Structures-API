@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class PickInput 
+    public  class PickInput 
     {
 
 		public System.Int32 Count
 		{
-			get => pickinput.Count;
-			set { pickinput.Count = value; }
+			get => teklaObject.Count;
+			set { teklaObject.Count = value; }
 		}
 
 		public System.Boolean IsSynchronized
 		{
-			get => pickinput.IsSynchronized;
-			set { pickinput.IsSynchronized = value; }
+			get => teklaObject.IsSynchronized;
+			set { teklaObject.IsSynchronized = value; }
 		}
 
 		public System.Object SyncRoot
 		{
-			get => pickinput.SyncRoot;
-			set { pickinput.SyncRoot = value; }
+			get => teklaObject.SyncRoot;
+			set { teklaObject.SyncRoot = value; }
 		}
 
         
 
-        internal dynamic pickinput;
-        
-        public PickInput()
-        {
-            this.pickinput =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.PickInput");
-        }
+        internal dynamic teklaObject;
 
-        internal PickInput(dynamic tsObject)
-        {
-            this.pickinput = tsObject;
-        }
+		internal PickInput() {}
 
 		public void CopyTo(System.Array array, System.Int32 index)
-			 => pickinput.CopyTo(array, index);
+			 => teklaObject.CopyTo(array, index);
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(PickInput dynObject)
         {
-            return dynObject.pickinput;
+            return dynObject.teklaObject;
         }
 
         public static PickInput FromTSObject(dynamic tsObject)
         {
-            return new PickInput(tsObject);
+            return new PickInput() { teklaObject = tsObject };
         }
     }
 

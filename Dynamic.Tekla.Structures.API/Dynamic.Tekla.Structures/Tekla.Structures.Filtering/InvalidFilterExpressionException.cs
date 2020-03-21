@@ -4,106 +4,98 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class InvalidFilterExpressionException 
+    public  class InvalidFilterExpressionException 
     {
 
 		public Dynamic.Tekla.Structures.Filtering.Expression Expression
 		{
-			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.Expression);
-			set { invalidfilterexpressionexception.Expression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.Expression);
+			set { teklaObject.Expression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType
 		{
-			get => Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType);
-			set { invalidfilterexpressionexception.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(teklaObject.InvalidFilterExpressionExceptionReasonsType);
+			set { teklaObject.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression LeftExpression
 		{
-			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.LeftExpression);
-			set { invalidfilterexpressionexception.LeftExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.LeftExpression);
+			set { teklaObject.LeftExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression RightExpression
 		{
-			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(invalidfilterexpressionexception.RightExpression);
-			set { invalidfilterexpressionexception.RightExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.RightExpression);
+			set { teklaObject.RightExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.OperatorType OperatorType
 		{
-			get => Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(invalidfilterexpressionexception.OperatorType);
-			set { invalidfilterexpressionexception.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(teklaObject.OperatorType);
+			set { teklaObject.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(value); }
 		}
 
 		public System.String Message
 		{
-			get => invalidfilterexpressionexception.Message;
-			set { invalidfilterexpressionexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => invalidfilterexpressionexception.Data;
-			set { invalidfilterexpressionexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => invalidfilterexpressionexception.InnerException;
-			set { invalidfilterexpressionexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => invalidfilterexpressionexception.TargetSite;
-			set { invalidfilterexpressionexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => invalidfilterexpressionexception.StackTrace;
-			set { invalidfilterexpressionexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => invalidfilterexpressionexception.HelpLink;
-			set { invalidfilterexpressionexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => invalidfilterexpressionexception.Source;
-			set { invalidfilterexpressionexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => invalidfilterexpressionexception.HResult;
-			set { invalidfilterexpressionexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic invalidfilterexpressionexception;
-        
-        public InvalidFilterExpressionException()
-        {
-            this.invalidfilterexpressionexception =  TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException");
-        }
+        internal dynamic teklaObject;
 
-        internal InvalidFilterExpressionException(dynamic tsObject)
-        {
-            this.invalidfilterexpressionexception = tsObject;
-        }
+		internal InvalidFilterExpressionException() {}
 		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression Expression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(Expression);
 			args[1] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
-			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
 		}
 		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression LeftExpression, Dynamic.Tekla.Structures.Filtering.OperatorType OperatorType, Dynamic.Tekla.Structures.Filtering.Expression RightExpression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType)
 		{
@@ -112,7 +104,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 			args[1] = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(OperatorType);
 			args[2] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(RightExpression);
 			args[3] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
-			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
 		}
 		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression Expression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType, System.Int32 MaximumExpressionNumber)
 		{
@@ -120,14 +112,14 @@ namespace Dynamic.Tekla.Structures.Filtering
 			args[0] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(Expression);
 			args[1] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
 			args[2] = MaximumExpressionNumber;
-			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
 		}
 
 		public System.Exception GetBaseException()
-			 => invalidfilterexpressionexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => invalidfilterexpressionexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -139,12 +131,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(InvalidFilterExpressionException dynObject)
         {
-            return dynObject.invalidfilterexpressionexception;
+            return dynObject.teklaObject;
         }
 
         public static InvalidFilterExpressionException FromTSObject(dynamic tsObject)
         {
-            return new InvalidFilterExpressionException(tsObject);
+            return new InvalidFilterExpressionException() { teklaObject = tsObject };
         }
     }
 

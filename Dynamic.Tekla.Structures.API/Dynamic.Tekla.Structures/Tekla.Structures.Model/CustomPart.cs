@@ -4,191 +4,186 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class CustomPart 
+    public  class CustomPart  : Dynamic.Tekla.Structures.Model.BaseComponent
     {
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(custompart.Position);
-			set { custompart.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
+			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
 		}
 
 		public System.String Name
 		{
-			get => custompart.Name;
-			set { custompart.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.Int32 Number
 		{
-			get => custompart.Number;
-			set { custompart.Number = value; }
+			get => teklaObject.Number;
+			set { teklaObject.Number = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => custompart.ModificationTime;
-			set { custompart.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => custompart.IsUpToDate;
-			set { custompart.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(custompart.Identifier);
-			set { custompart.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic custompart;
-        
-        public CustomPart()
-        {
-            this.custompart =  TSActivator.CreateInstance("Tekla.Structures.Model.CustomPart");
-        }
+        internal dynamic teklaObject;
 
-        internal CustomPart(dynamic tsObject)
-        {
-            this.custompart = tsObject;
-        }
+		public CustomPart()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.CustomPart");
+		}
 		public CustomPart(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint);
-			this.custompart = TSActivator.CreateInstance("Tekla.Structures.Model.CustomPart", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.CustomPart", args);
 		}
 
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => custompart.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			 => teklaObject.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public System.Boolean GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-			 => custompart.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			 => teklaObject.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(custompart.GetAssembly());
+			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
 
 		public System.Boolean Insert()
-			 => custompart.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => custompart.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => custompart.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => custompart.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetComponents());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetComponents());
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
-			 => custompart.SetAttribute(AttrName, StrValue);
+			 => teklaObject.SetAttribute(AttrName, StrValue);
 
 		public void SetAttribute(System.String AttrName, System.Int32 Value)
-			 => custompart.SetAttribute(AttrName, Value);
+			 => teklaObject.SetAttribute(AttrName, Value);
 
 		public void SetAttribute(System.String AttrName, System.Double DValue)
-			 => custompart.SetAttribute(AttrName, DValue);
+			 => teklaObject.SetAttribute(AttrName, DValue);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.String StrValue)
-			 => custompart.GetAttribute(AttrName, StrValue);
+			 => teklaObject.GetAttribute(AttrName, StrValue);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.Int32 Value)
-			 => custompart.GetAttribute(AttrName, Value);
+			 => teklaObject.GetAttribute(AttrName, Value);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.Double DValue)
-			 => custompart.GetAttribute(AttrName, DValue);
+			 => teklaObject.GetAttribute(AttrName, DValue);
 
 		public System.Boolean LoadAttributesFromFile(System.String Filename)
-			 => custompart.LoadAttributesFromFile(Filename);
+			 => teklaObject.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(custompart.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(custompart.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => custompart.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => custompart.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => custompart.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => custompart.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => custompart.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => custompart.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => custompart.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => custompart.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => custompart.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => custompart.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => custompart.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => custompart.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => custompart.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => custompart.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => custompart.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => custompart.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => custompart.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => custompart.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => custompart.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(custompart.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => custompart.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => custompart.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => custompart.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => custompart.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -200,12 +195,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CustomPart dynObject)
         {
-            return dynObject.custompart;
+            return dynObject.teklaObject;
         }
 
         public static CustomPart FromTSObject(dynamic tsObject)
         {
-            return new CustomPart(tsObject);
+            return new CustomPart() { teklaObject = tsObject };
         }
     }
 

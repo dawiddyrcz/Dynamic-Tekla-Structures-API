@@ -4,196 +4,191 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarSplitter 
+    public  class RebarSplitter  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum StaggerType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(rebarsplitter.StaggerType);
-			set { rebarsplitter.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
+			set { teklaObject.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StaggerOffset
 		{
-			get => rebarsplitter.StaggerOffset;
-			set { rebarsplitter.StaggerOffset = value; }
+			get => teklaObject.StaggerOffset;
+			set { teklaObject.StaggerOffset = value; }
 		}
 
 		public System.Double SplitOffset
 		{
-			get => rebarsplitter.SplitOffset;
-			set { rebarsplitter.SplitOffset = value; }
+			get => teklaObject.SplitOffset;
+			set { teklaObject.SplitOffset = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(rebarsplitter.SplitType);
-			set { rebarsplitter.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
+			set { teklaObject.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping Lapping
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(rebarsplitter.Lapping);
-			set { rebarsplitter.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
+			set { teklaObject.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking Cranking
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(rebarsplitter.Cranking);
-			set { rebarsplitter.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
+			set { teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(rebarsplitter.Father);
-			set { rebarsplitter.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarsplitter.Curve);
-			set { rebarsplitter.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
+			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(rebarsplitter.BarsAffected);
-			set { rebarsplitter.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
+			set { teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
 		}
 
 		public System.Int32 FirstAffectedBar
 		{
-			get => rebarsplitter.FirstAffectedBar;
-			set { rebarsplitter.FirstAffectedBar = value; }
+			get => teklaObject.FirstAffectedBar;
+			set { teklaObject.FirstAffectedBar = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => rebarsplitter.ModificationTime;
-			set { rebarsplitter.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => rebarsplitter.IsUpToDate;
-			set { rebarsplitter.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarsplitter.Identifier);
-			set { rebarsplitter.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarsplitter;
-        
-        public RebarSplitter()
-        {
-            this.rebarsplitter =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplitter");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarSplitter(dynamic tsObject)
-        {
-            this.rebarsplitter = tsObject;
-        }
+		public RebarSplitter()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplitter");
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum whichEnd)
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum_.GetTSObject(whichEnd)));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAffectedBars(Dynamic.Tekla.Structures.Model.BaseRebarModifier.AffectedRebarEnum_.GetTSObject(whichEnd)));
 
 		public System.Boolean Insert()
-			 => rebarsplitter.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Modify()
-			 => rebarsplitter.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => rebarsplitter.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean Select()
-			 => rebarsplitter.Select();
+			 => teklaObject.Select();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarsplitter.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarsplitter.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => rebarsplitter.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => rebarsplitter.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => rebarsplitter.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => rebarsplitter.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => rebarsplitter.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarsplitter.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarsplitter.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarsplitter.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => rebarsplitter.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => rebarsplitter.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => rebarsplitter.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => rebarsplitter.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => rebarsplitter.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => rebarsplitter.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => rebarsplitter.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => rebarsplitter.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => rebarsplitter.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => rebarsplitter.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => rebarsplitter.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarsplitter.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplitter.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarsplitter.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => rebarsplitter.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => rebarsplitter.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -295,12 +290,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarSplitter dynObject)
         {
-            return dynObject.rebarsplitter;
+            return dynObject.teklaObject;
         }
 
         public static RebarSplitter FromTSObject(dynamic tsObject)
         {
-            return new RebarSplitter(tsObject);
+            return new RebarSplitter() { teklaObject = tsObject };
         }
     }
 

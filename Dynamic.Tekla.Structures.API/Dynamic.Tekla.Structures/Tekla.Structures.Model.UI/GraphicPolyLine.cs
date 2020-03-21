@@ -4,53 +4,48 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class GraphicPolyLine 
+    public  class GraphicPolyLine 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(graphicpolyline.PolyLine);
-			set { graphicpolyline.PolyLine = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.PolyLine);
+			set { teklaObject.PolyLine = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.Color Color
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(graphicpolyline.Color);
-			set { graphicpolyline.Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(teklaObject.Color);
+			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(value); }
 		}
 
 		public System.Int32 Width
 		{
-			get => graphicpolyline.Width;
-			set { graphicpolyline.Width = value; }
+			get => teklaObject.Width;
+			set { teklaObject.Width = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType Type
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(graphicpolyline.Type);
-			set { graphicpolyline.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic graphicpolyline;
-        
-        public GraphicPolyLine()
-        {
-            this.graphicpolyline =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine");
-        }
+        internal dynamic teklaObject;
 
-        internal GraphicPolyLine(dynamic tsObject)
-        {
-            this.graphicpolyline = tsObject;
-        }
+		public GraphicPolyLine()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine");
+		}
 		public GraphicPolyLine(Dynamic.Tekla.Structures.Model.UI.Color color, System.Int32 width, Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType type)
 		{
 			var args = new object[3];
 			args[0] = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color);
 			args[1] = width;
 			args[2] = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(type);
-			this.graphicpolyline = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
 		}
 		public GraphicPolyLine(Dynamic.Tekla.Structures.Geometry3d.PolyLine polyLine, Dynamic.Tekla.Structures.Model.UI.Color color, System.Int32 width, Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType type)
 		{
@@ -59,7 +54,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			args[1] = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color);
 			args[2] = width;
 			args[3] = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(type);
-			this.graphicpolyline = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
 		}
 
 
@@ -127,12 +122,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(GraphicPolyLine dynObject)
         {
-            return dynObject.graphicpolyline;
+            return dynObject.teklaObject;
         }
 
         public static GraphicPolyLine FromTSObject(dynamic tsObject)
         {
-            return new GraphicPolyLine(tsObject);
+            return new GraphicPolyLine() { teklaObject = tsObject };
         }
     }
 

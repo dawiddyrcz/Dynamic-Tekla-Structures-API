@@ -4,76 +4,71 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class NullRulingException 
+    public  class NullRulingException  : Dynamic.Tekla.Structures.Model.LoftedPlateOperationException
     {
 
 		public System.String Message
 		{
-			get => nullrulingexception.Message;
-			set { nullrulingexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => nullrulingexception.Data;
-			set { nullrulingexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => nullrulingexception.InnerException;
-			set { nullrulingexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => nullrulingexception.TargetSite;
-			set { nullrulingexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => nullrulingexception.StackTrace;
-			set { nullrulingexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => nullrulingexception.HelpLink;
-			set { nullrulingexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => nullrulingexception.Source;
-			set { nullrulingexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => nullrulingexception.HResult;
-			set { nullrulingexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic nullrulingexception;
-        
-        public NullRulingException()
-        {
-            this.nullrulingexception =  TSActivator.CreateInstance("Tekla.Structures.Model.NullRulingException");
-        }
+        internal dynamic teklaObject;
 
-        internal NullRulingException(dynamic tsObject)
-        {
-            this.nullrulingexception = tsObject;
-        }
+		public NullRulingException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.NullRulingException");
+		}
 
 		public System.Exception GetBaseException()
-			 => nullrulingexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => nullrulingexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -85,12 +80,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(NullRulingException dynObject)
         {
-            return dynObject.nullrulingexception;
+            return dynObject.teklaObject;
         }
 
         public static NullRulingException FromTSObject(dynamic tsObject)
         {
-            return new NullRulingException(tsObject);
+            return new NullRulingException() { teklaObject = tsObject };
         }
     }
 

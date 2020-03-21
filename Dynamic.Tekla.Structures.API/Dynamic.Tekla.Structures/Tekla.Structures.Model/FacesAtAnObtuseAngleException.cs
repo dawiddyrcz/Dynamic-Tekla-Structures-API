@@ -4,82 +4,77 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class FacesAtAnObtuseAngleException 
+    public  class FacesAtAnObtuseAngleException  : Dynamic.Tekla.Structures.Model.ConnectiveGeometryException
     {
 
 		public System.String Message
 		{
-			get => facesatanobtuseangleexception.Message;
-			set { facesatanobtuseangleexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => facesatanobtuseangleexception.Data;
-			set { facesatanobtuseangleexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => facesatanobtuseangleexception.InnerException;
-			set { facesatanobtuseangleexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => facesatanobtuseangleexception.TargetSite;
-			set { facesatanobtuseangleexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => facesatanobtuseangleexception.StackTrace;
-			set { facesatanobtuseangleexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => facesatanobtuseangleexception.HelpLink;
-			set { facesatanobtuseangleexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => facesatanobtuseangleexception.Source;
-			set { facesatanobtuseangleexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => facesatanobtuseangleexception.HResult;
-			set { facesatanobtuseangleexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(facesatanobtuseangleexception.OperationStatus);
-			set { facesatanobtuseangleexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic facesatanobtuseangleexception;
-        
-        public FacesAtAnObtuseAngleException()
-        {
-            this.facesatanobtuseangleexception =  TSActivator.CreateInstance("Tekla.Structures.Model.FacesAtAnObtuseAngleException");
-        }
+        internal dynamic teklaObject;
 
-        internal FacesAtAnObtuseAngleException(dynamic tsObject)
-        {
-            this.facesatanobtuseangleexception = tsObject;
-        }
+		public FacesAtAnObtuseAngleException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.FacesAtAnObtuseAngleException");
+		}
 
 		public System.Exception GetBaseException()
-			 => facesatanobtuseangleexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => facesatanobtuseangleexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -91,12 +86,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(FacesAtAnObtuseAngleException dynObject)
         {
-            return dynObject.facesatanobtuseangleexception;
+            return dynObject.teklaObject;
         }
 
         public static FacesAtAnObtuseAngleException FromTSObject(dynamic tsObject)
         {
-            return new FacesAtAnObtuseAngleException(tsObject);
+            return new FacesAtAnObtuseAngleException() { teklaObject = tsObject };
         }
     }
 

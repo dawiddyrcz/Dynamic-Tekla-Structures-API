@@ -4,70 +4,65 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class ModuleManager 
+    public  class ModuleManager 
     {
 
 		public Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
 		{
-			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(modulemanager.Configuration);
-			set { modulemanager.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(teklaObject.Configuration);
+			set { teklaObject.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean MultimaterialModeling
 		{
-			get => modulemanager.MultimaterialModeling;
-			set { modulemanager.MultimaterialModeling = value; }
+			get => teklaObject.MultimaterialModeling;
+			set { teklaObject.MultimaterialModeling = value; }
 		}
 
 		public System.Boolean LoadModeling
 		{
-			get => modulemanager.LoadModeling;
-			set { modulemanager.LoadModeling = value; }
+			get => teklaObject.LoadModeling;
+			set { teklaObject.LoadModeling = value; }
 		}
 
 		public System.Boolean SteelDetailing
 		{
-			get => modulemanager.SteelDetailing;
-			set { modulemanager.SteelDetailing = value; }
+			get => teklaObject.SteelDetailing;
+			set { teklaObject.SteelDetailing = value; }
 		}
 
 		public System.Boolean ConcreteDetailing
 		{
-			get => modulemanager.ConcreteDetailing;
-			set { modulemanager.ConcreteDetailing = value; }
+			get => teklaObject.ConcreteDetailing;
+			set { teklaObject.ConcreteDetailing = value; }
 		}
 
 		public System.Boolean RebarModeling
 		{
-			get => modulemanager.RebarModeling;
-			set { modulemanager.RebarModeling = value; }
+			get => teklaObject.RebarModeling;
+			set { teklaObject.RebarModeling = value; }
 		}
 
 		public System.Boolean AnalysisAndDesign
 		{
-			get => modulemanager.AnalysisAndDesign;
-			set { modulemanager.AnalysisAndDesign = value; }
+			get => teklaObject.AnalysisAndDesign;
+			set { teklaObject.AnalysisAndDesign = value; }
 		}
 
 		public System.Boolean TaskManagement
 		{
-			get => modulemanager.TaskManagement;
-			set { modulemanager.TaskManagement = value; }
+			get => teklaObject.TaskManagement;
+			set { teklaObject.TaskManagement = value; }
 		}
 
         
 
-        internal dynamic modulemanager;
-        
-        public ModuleManager()
-        {
-            this.modulemanager =  TSActivator.CreateInstance("Tekla.Structures.ModuleManager");
-        }
+        internal dynamic teklaObject;
 
-        internal ModuleManager(dynamic tsObject)
-        {
-            this.modulemanager = tsObject;
-        }
+		public ModuleManager()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.ModuleManager");
+		}
 
 
 
@@ -184,12 +179,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ModuleManager dynObject)
         {
-            return dynObject.modulemanager;
+            return dynObject.teklaObject;
         }
 
         public static ModuleManager FromTSObject(dynamic tsObject)
         {
-            return new ModuleManager(tsObject);
+            return new ModuleManager() { teklaObject = tsObject };
         }
     }
 

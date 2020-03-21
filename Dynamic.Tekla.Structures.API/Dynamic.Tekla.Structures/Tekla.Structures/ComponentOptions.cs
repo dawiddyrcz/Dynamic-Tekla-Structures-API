@@ -4,112 +4,107 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class ComponentOptions 
+    public  class ComponentOptions 
     {
 
 		public System.String PlateProfileName
 		{
-			get => componentoptions.PlateProfileName;
-			set { componentoptions.PlateProfileName = value; }
+			get => teklaObject.PlateProfileName;
+			set { teklaObject.PlateProfileName = value; }
 		}
 
 		public System.String FoldedPlateProfileName
 		{
-			get => componentoptions.FoldedPlateProfileName;
-			set { componentoptions.FoldedPlateProfileName = value; }
+			get => teklaObject.FoldedPlateProfileName;
+			set { teklaObject.FoldedPlateProfileName = value; }
 		}
 
 		public System.Double BoltEdgeDistanceFactor
 		{
-			get => componentoptions.BoltEdgeDistanceFactor;
-			set { componentoptions.BoltEdgeDistanceFactor = value; }
+			get => teklaObject.BoltEdgeDistanceFactor;
+			set { teklaObject.BoltEdgeDistanceFactor = value; }
 		}
 
 		public Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
 		{
-			get => Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(componentoptions.BoltEdgeDistanceReference);
-			set { componentoptions.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(teklaObject.BoltEdgeDistanceReference);
+			set { teklaObject.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value); }
 		}
 
 		public System.String BoltStandard
 		{
-			get => componentoptions.BoltStandard;
-			set { componentoptions.BoltStandard = value; }
+			get => teklaObject.BoltStandard;
+			set { teklaObject.BoltStandard = value; }
 		}
 
 		public System.String BoltSize
 		{
-			get => componentoptions.BoltSize;
-			set { componentoptions.BoltSize = value; }
+			get => teklaObject.BoltSize;
+			set { teklaObject.BoltSize = value; }
 		}
 
 		public System.String PartMaterial
 		{
-			get => componentoptions.PartMaterial;
-			set { componentoptions.PartMaterial = value; }
+			get => teklaObject.PartMaterial;
+			set { teklaObject.PartMaterial = value; }
 		}
 
 		public System.Int32 PartWeldedToPrimaryStartNumber
 		{
-			get => componentoptions.PartWeldedToPrimaryStartNumber;
-			set { componentoptions.PartWeldedToPrimaryStartNumber = value; }
+			get => teklaObject.PartWeldedToPrimaryStartNumber;
+			set { teklaObject.PartWeldedToPrimaryStartNumber = value; }
 		}
 
 		public System.String PartWeldedToPrimaryPositionPrefix
 		{
-			get => componentoptions.PartWeldedToPrimaryPositionPrefix;
-			set { componentoptions.PartWeldedToPrimaryPositionPrefix = value; }
+			get => teklaObject.PartWeldedToPrimaryPositionPrefix;
+			set { teklaObject.PartWeldedToPrimaryPositionPrefix = value; }
 		}
 
 		public System.Int32 PartWeldedToSecondaryStartNumber
 		{
-			get => componentoptions.PartWeldedToSecondaryStartNumber;
-			set { componentoptions.PartWeldedToSecondaryStartNumber = value; }
+			get => teklaObject.PartWeldedToSecondaryStartNumber;
+			set { teklaObject.PartWeldedToSecondaryStartNumber = value; }
 		}
 
 		public System.String PartWeldedToSecondaryPositionPrefix
 		{
-			get => componentoptions.PartWeldedToSecondaryPositionPrefix;
-			set { componentoptions.PartWeldedToSecondaryPositionPrefix = value; }
+			get => teklaObject.PartWeldedToSecondaryPositionPrefix;
+			set { teklaObject.PartWeldedToSecondaryPositionPrefix = value; }
 		}
 
 		public System.Int32 LoosePartStartNumber
 		{
-			get => componentoptions.LoosePartStartNumber;
-			set { componentoptions.LoosePartStartNumber = value; }
+			get => teklaObject.LoosePartStartNumber;
+			set { teklaObject.LoosePartStartNumber = value; }
 		}
 
 		public System.String LoosePartPositionPrefix
 		{
-			get => componentoptions.LoosePartPositionPrefix;
-			set { componentoptions.LoosePartPositionPrefix = value; }
+			get => teklaObject.LoosePartPositionPrefix;
+			set { teklaObject.LoosePartPositionPrefix = value; }
 		}
 
 		public System.Int32 AssemblyLoosePartStartNumber
 		{
-			get => componentoptions.AssemblyLoosePartStartNumber;
-			set { componentoptions.AssemblyLoosePartStartNumber = value; }
+			get => teklaObject.AssemblyLoosePartStartNumber;
+			set { teklaObject.AssemblyLoosePartStartNumber = value; }
 		}
 
 		public System.String AssemblyLoosePartPositionPrefix
 		{
-			get => componentoptions.AssemblyLoosePartPositionPrefix;
-			set { componentoptions.AssemblyLoosePartPositionPrefix = value; }
+			get => teklaObject.AssemblyLoosePartPositionPrefix;
+			set { teklaObject.AssemblyLoosePartPositionPrefix = value; }
 		}
 
         
 
-        internal dynamic componentoptions;
-        
-        public ComponentOptions()
-        {
-            this.componentoptions =  TSActivator.CreateInstance("Tekla.Structures.ComponentOptions");
-        }
+        internal dynamic teklaObject;
 
-        internal ComponentOptions(dynamic tsObject)
-        {
-            this.componentoptions = tsObject;
-        }
+		public ComponentOptions()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.ComponentOptions");
+		}
 
 
 
@@ -161,12 +156,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ComponentOptions dynObject)
         {
-            return dynObject.componentoptions;
+            return dynObject.teklaObject;
         }
 
         public static ComponentOptions FromTSObject(dynamic tsObject)
         {
-            return new ComponentOptions(tsObject);
+            return new ComponentOptions() { teklaObject = tsObject };
         }
     }
 

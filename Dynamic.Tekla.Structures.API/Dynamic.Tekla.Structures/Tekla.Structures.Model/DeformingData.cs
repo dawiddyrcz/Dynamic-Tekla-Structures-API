@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class DeformingData 
+    public  class DeformingData 
     {
 
 		public System.Double Angle
 		{
-			get => deformingdata.Angle;
-			set { deformingdata.Angle = value; }
+			get => teklaObject.Angle;
+			set { teklaObject.Angle = value; }
 		}
 
 		public System.Double Angle2
 		{
-			get => deformingdata.Angle2;
-			set { deformingdata.Angle2 = value; }
+			get => teklaObject.Angle2;
+			set { teklaObject.Angle2 = value; }
 		}
 
 		public System.Double Cambering
 		{
-			get => deformingdata.Cambering;
-			set { deformingdata.Cambering = value; }
+			get => teklaObject.Cambering;
+			set { teklaObject.Cambering = value; }
 		}
 
 		public System.Double Shortening
 		{
-			get => deformingdata.Shortening;
-			set { deformingdata.Shortening = value; }
+			get => teklaObject.Shortening;
+			set { teklaObject.Shortening = value; }
 		}
 
         
 
-        internal dynamic deformingdata;
-        
-        public DeformingData()
-        {
-            this.deformingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.DeformingData");
-        }
+        internal dynamic teklaObject;
 
-        internal DeformingData(dynamic tsObject)
-        {
-            this.deformingdata = tsObject;
-        }
+		public DeformingData()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.DeformingData");
+		}
 
 
 
@@ -55,12 +50,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DeformingData dynObject)
         {
-            return dynObject.deformingdata;
+            return dynObject.teklaObject;
         }
 
         public static DeformingData FromTSObject(dynamic tsObject)
         {
-            return new DeformingData(tsObject);
+            return new DeformingData() { teklaObject = tsObject };
         }
     }
 

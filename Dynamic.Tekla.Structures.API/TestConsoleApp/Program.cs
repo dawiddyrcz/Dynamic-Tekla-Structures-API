@@ -9,7 +9,7 @@ using Dynamic.Tekla.Structures.Model;
 
 namespace TestConsoleApp
 {
-    class Program
+    static class Program
     {   
         static void Main(string[] args)
         {
@@ -48,6 +48,13 @@ namespace TestConsoleApp
             while (objects.MoveNext())
             {
                 Console.WriteLine(objects.Current.Identifier.ID);
+
+                if (objects.Current is Beam b)
+                {
+                    Console.WriteLine(b.Name);
+                    Console.WriteLine(b.StartPoint.ToString());
+                    Console.WriteLine(b.EndPoint.ToString());
+                }
             }
 
 

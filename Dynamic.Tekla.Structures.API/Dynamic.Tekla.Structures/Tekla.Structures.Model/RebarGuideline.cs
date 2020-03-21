@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarGuideline 
+    public  class RebarGuideline 
     {
 
 		public System.Int32 Id
 		{
-			get => rebarguideline.Id;
-			set { rebarguideline.Id = value; }
+			get => teklaObject.Id;
+			set { teklaObject.Id = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(rebarguideline.Curve);
-			set { rebarguideline.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
+			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing Spacing
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(rebarguideline.Spacing);
-			set { rebarguideline.Spacing = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(teklaObject.Spacing);
+			set { teklaObject.Spacing = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarguideline;
-        
-        public RebarGuideline()
-        {
-            this.rebarguideline =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarGuideline");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarGuideline(dynamic tsObject)
-        {
-            this.rebarguideline = tsObject;
-        }
+		public RebarGuideline()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarGuideline");
+		}
 
 
 
@@ -49,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarGuideline dynObject)
         {
-            return dynObject.rebarguideline;
+            return dynObject.teklaObject;
         }
 
         public static RebarGuideline FromTSObject(dynamic tsObject)
         {
-            return new RebarGuideline(tsObject);
+            return new RebarGuideline() { teklaObject = tsObject };
         }
     }
 

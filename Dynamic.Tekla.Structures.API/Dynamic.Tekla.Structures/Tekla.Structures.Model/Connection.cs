@@ -4,217 +4,212 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Connection 
+    public  class Connection  : Dynamic.Tekla.Structures.Model.BaseComponent
     {
 
 		public System.Int32 Class
 		{
-			get => connection.Class;
-			set { connection.Class = value; }
+			get => teklaObject.Class;
+			set { teklaObject.Class = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(connection.UpVector);
-			set { connection.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
+			set { teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
 		{
-			get => Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(connection.AutoDirectionType);
-			set { connection.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(teklaObject.AutoDirectionType);
+			set { teklaObject.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.PositionTypeEnum PositionType
 		{
-			get => Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(connection.PositionType);
-			set { connection.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(teklaObject.PositionType);
+			set { teklaObject.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.String Code
 		{
-			get => connection.Code;
-			set { connection.Code = value; }
+			get => teklaObject.Code;
+			set { teklaObject.Code = value; }
 		}
 
 		public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
 		{
-			get => Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(connection.Status);
-			set { connection.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(teklaObject.Status);
+			set { teklaObject.Status = Dynamic.Tekla.Structures.ConnectionStatusEnum_.GetTSObject(value); }
 		}
 
 		public System.String Name
 		{
-			get => connection.Name;
-			set { connection.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.Int32 Number
 		{
-			get => connection.Number;
-			set { connection.Number = value; }
+			get => teklaObject.Number;
+			set { teklaObject.Number = value; }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => connection.ModificationTime;
-			set { connection.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => connection.IsUpToDate;
-			set { connection.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(connection.Identifier);
-			set { connection.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic connection;
-        
-        public Connection()
-        {
-            this.connection =  TSActivator.CreateInstance("Tekla.Structures.Model.Connection");
-        }
+        internal dynamic teklaObject;
 
-        internal Connection(dynamic tsObject)
-        {
-            this.connection = tsObject;
-        }
+		public Connection()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Connection");
+		}
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => connection.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			 => teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
-			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(connection.GetPrimaryObject());
+			 => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-			 => connection.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			 => teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
-			 => connection.SetSecondaryObjects(Secondaries);
+			 => teklaObject.SetSecondaryObjects(Secondaries);
 
 		public System.Collections.ArrayList GetSecondaryObjects()
-			 => connection.GetSecondaryObjects();
+			 => teklaObject.GetSecondaryObjects();
 
 		public System.Boolean Insert()
-			 => connection.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => connection.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => connection.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => connection.Delete();
+			 => teklaObject.Delete();
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
-			 => connection.SetAttribute(AttrName, StrValue);
+			 => teklaObject.SetAttribute(AttrName, StrValue);
 
 		public void SetAttribute(System.String AttrName, System.Int32 Value)
-			 => connection.SetAttribute(AttrName, Value);
+			 => teklaObject.SetAttribute(AttrName, Value);
 
 		public void SetAttribute(System.String AttrName, System.Double DValue)
-			 => connection.SetAttribute(AttrName, DValue);
+			 => teklaObject.SetAttribute(AttrName, DValue);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.String StrValue)
-			 => connection.GetAttribute(AttrName, StrValue);
+			 => teklaObject.GetAttribute(AttrName, StrValue);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.Int32 Value)
-			 => connection.GetAttribute(AttrName, Value);
+			 => teklaObject.GetAttribute(AttrName, Value);
 
 		public System.Boolean GetAttribute(System.String AttrName, System.Double DValue)
-			 => connection.GetAttribute(AttrName, DValue);
+			 => teklaObject.GetAttribute(AttrName, DValue);
 
 		public System.Boolean LoadAttributesFromFile(System.String Filename)
-			 => connection.LoadAttributesFromFile(Filename);
+			 => teklaObject.LoadAttributesFromFile(Filename);
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(connection.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(connection.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(connection.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => connection.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => connection.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => connection.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => connection.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => connection.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => connection.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => connection.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => connection.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => connection.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => connection.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => connection.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => connection.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => connection.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => connection.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => connection.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => connection.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => connection.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => connection.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => connection.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(connection.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => connection.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => connection.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => connection.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => connection.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -226,12 +221,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Connection dynObject)
         {
-            return dynObject.connection;
+            return dynObject.teklaObject;
         }
 
         public static Connection FromTSObject(dynamic tsObject)
         {
-            return new Connection(tsObject);
+            return new Connection() { teklaObject = tsObject };
         }
     }
 

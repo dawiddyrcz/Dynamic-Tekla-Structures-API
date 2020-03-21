@@ -4,412 +4,407 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class PolygonWeld 
+    public  class PolygonWeld  : Dynamic.Tekla.Structures.Model.BaseWeld
     {
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(polygonweld.Polygon);
-			set { polygonweld.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
+			set { teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject MainObject
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(polygonweld.MainObject);
-			set { polygonweld.MainObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.MainObject);
+			set { teklaObject.MainObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject SecondaryObject
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(polygonweld.SecondaryObject);
-			set { polygonweld.SecondaryObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.SecondaryObject);
+			set { teklaObject.SecondaryObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.Double SizeAbove
 		{
-			get => polygonweld.SizeAbove;
-			set { polygonweld.SizeAbove = value; }
+			get => teklaObject.SizeAbove;
+			set { teklaObject.SizeAbove = value; }
 		}
 
 		public System.Double AdditionalSizeAbove
 		{
-			get => polygonweld.AdditionalSizeAbove;
-			set { polygonweld.AdditionalSizeAbove = value; }
+			get => teklaObject.AdditionalSizeAbove;
+			set { teklaObject.AdditionalSizeAbove = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum TypeAbove
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(polygonweld.TypeAbove);
-			set { polygonweld.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(teklaObject.TypeAbove);
+			set { teklaObject.TypeAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double AngleAbove
 		{
-			get => polygonweld.AngleAbove;
-			set { polygonweld.AngleAbove = value; }
+			get => teklaObject.AngleAbove;
+			set { teklaObject.AngleAbove = value; }
 		}
 
 		public System.Double LengthAbove
 		{
-			get => polygonweld.LengthAbove;
-			set { polygonweld.LengthAbove = value; }
+			get => teklaObject.LengthAbove;
+			set { teklaObject.LengthAbove = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum ContourAbove
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(polygonweld.ContourAbove);
-			set { polygonweld.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(teklaObject.ContourAbove);
+			set { teklaObject.ContourAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum FinishAbove
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(polygonweld.FinishAbove);
-			set { polygonweld.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(teklaObject.FinishAbove);
+			set { teklaObject.FinishAbove = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
 		}
 
 		public System.Double PitchAbove
 		{
-			get => polygonweld.PitchAbove;
-			set { polygonweld.PitchAbove = value; }
+			get => teklaObject.PitchAbove;
+			set { teklaObject.PitchAbove = value; }
 		}
 
 		public System.Double SizeBelow
 		{
-			get => polygonweld.SizeBelow;
-			set { polygonweld.SizeBelow = value; }
+			get => teklaObject.SizeBelow;
+			set { teklaObject.SizeBelow = value; }
 		}
 
 		public System.Double AdditionalSizeBelow
 		{
-			get => polygonweld.AdditionalSizeBelow;
-			set { polygonweld.AdditionalSizeBelow = value; }
+			get => teklaObject.AdditionalSizeBelow;
+			set { teklaObject.AdditionalSizeBelow = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum TypeBelow
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(polygonweld.TypeBelow);
-			set { polygonweld.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.FromTSObject(teklaObject.TypeBelow);
+			set { teklaObject.TypeBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double AngleBelow
 		{
-			get => polygonweld.AngleBelow;
-			set { polygonweld.AngleBelow = value; }
+			get => teklaObject.AngleBelow;
+			set { teklaObject.AngleBelow = value; }
 		}
 
 		public System.Double LengthBelow
 		{
-			get => polygonweld.LengthBelow;
-			set { polygonweld.LengthBelow = value; }
+			get => teklaObject.LengthBelow;
+			set { teklaObject.LengthBelow = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum ContourBelow
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(polygonweld.ContourBelow);
-			set { polygonweld.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.FromTSObject(teklaObject.ContourBelow);
+			set { teklaObject.ContourBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldContourEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum FinishBelow
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(polygonweld.FinishBelow);
-			set { polygonweld.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.FromTSObject(teklaObject.FinishBelow);
+			set { teklaObject.FinishBelow = Dynamic.Tekla.Structures.Model.BaseWeld.WeldFinishEnum_.GetTSObject(value); }
 		}
 
 		public System.Double PitchBelow
 		{
-			get => polygonweld.PitchBelow;
-			set { polygonweld.PitchBelow = value; }
+			get => teklaObject.PitchBelow;
+			set { teklaObject.PitchBelow = value; }
 		}
 
 		public System.Boolean ShopWeld
 		{
-			get => polygonweld.ShopWeld;
-			set { polygonweld.ShopWeld = value; }
+			get => teklaObject.ShopWeld;
+			set { teklaObject.ShopWeld = value; }
 		}
 
 		public System.Boolean AroundWeld
 		{
-			get => polygonweld.AroundWeld;
-			set { polygonweld.AroundWeld = value; }
+			get => teklaObject.AroundWeld;
+			set { teklaObject.AroundWeld = value; }
 		}
 
 		public System.Boolean StitchWeld
 		{
-			get => polygonweld.StitchWeld;
-			set { polygonweld.StitchWeld = value; }
+			get => teklaObject.StitchWeld;
+			set { teklaObject.StitchWeld = value; }
 		}
 
 		public System.Double RootOpeningAbove
 		{
-			get => polygonweld.RootOpeningAbove;
-			set { polygonweld.RootOpeningAbove = value; }
+			get => teklaObject.RootOpeningAbove;
+			set { teklaObject.RootOpeningAbove = value; }
 		}
 
 		public System.Double RootFaceAbove
 		{
-			get => polygonweld.RootFaceAbove;
-			set { polygonweld.RootFaceAbove = value; }
+			get => teklaObject.RootFaceAbove;
+			set { teklaObject.RootFaceAbove = value; }
 		}
 
 		public System.Double EffectiveThroatAbove
 		{
-			get => polygonweld.EffectiveThroatAbove;
-			set { polygonweld.EffectiveThroatAbove = value; }
+			get => teklaObject.EffectiveThroatAbove;
+			set { teklaObject.EffectiveThroatAbove = value; }
 		}
 
 		public System.Int32 IncrementAmountAbove
 		{
-			get => polygonweld.IncrementAmountAbove;
-			set { polygonweld.IncrementAmountAbove = value; }
+			get => teklaObject.IncrementAmountAbove;
+			set { teklaObject.IncrementAmountAbove = value; }
 		}
 
 		public System.Double RootOpeningBelow
 		{
-			get => polygonweld.RootOpeningBelow;
-			set { polygonweld.RootOpeningBelow = value; }
+			get => teklaObject.RootOpeningBelow;
+			set { teklaObject.RootOpeningBelow = value; }
 		}
 
 		public System.Double RootFaceBelow
 		{
-			get => polygonweld.RootFaceBelow;
-			set { polygonweld.RootFaceBelow = value; }
+			get => teklaObject.RootFaceBelow;
+			set { teklaObject.RootFaceBelow = value; }
 		}
 
 		public System.Double EffectiveThroatBelow
 		{
-			get => polygonweld.EffectiveThroatBelow;
-			set { polygonweld.EffectiveThroatBelow = value; }
+			get => teklaObject.EffectiveThroatBelow;
+			set { teklaObject.EffectiveThroatBelow = value; }
 		}
 
 		public System.Int32 IncrementAmountBelow
 		{
-			get => polygonweld.IncrementAmountBelow;
-			set { polygonweld.IncrementAmountBelow = value; }
+			get => teklaObject.IncrementAmountBelow;
+			set { teklaObject.IncrementAmountBelow = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum ElectrodeClassification
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(polygonweld.ElectrodeClassification);
-			set { polygonweld.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.FromTSObject(teklaObject.ElectrodeClassification);
+			set { teklaObject.ElectrodeClassification = Dynamic.Tekla.Structures.Model.BaseWeld.WeldElectrodeClassificationEnum_.GetTSObject(value); }
 		}
 
 		public System.Double ElectrodeStrength
 		{
-			get => polygonweld.ElectrodeStrength;
-			set { polygonweld.ElectrodeStrength = value; }
+			get => teklaObject.ElectrodeStrength;
+			set { teklaObject.ElectrodeStrength = value; }
 		}
 
 		public System.Double ElectrodeCoefficient
 		{
-			get => polygonweld.ElectrodeCoefficient;
-			set { polygonweld.ElectrodeCoefficient = value; }
+			get => teklaObject.ElectrodeCoefficient;
+			set { teklaObject.ElectrodeCoefficient = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum ProcessType
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(polygonweld.ProcessType);
-			set { polygonweld.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.FromTSObject(teklaObject.ProcessType);
+			set { teklaObject.ProcessType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldProcessTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum NDTInspection
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(polygonweld.NDTInspection);
-			set { polygonweld.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.FromTSObject(teklaObject.NDTInspection);
+			set { teklaObject.NDTInspection = Dynamic.Tekla.Structures.Model.BaseWeld.WeldNDTInspectionEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean ConnectAssemblies
 		{
-			get => polygonweld.ConnectAssemblies;
-			set { polygonweld.ConnectAssemblies = value; }
+			get => teklaObject.ConnectAssemblies;
+			set { teklaObject.ConnectAssemblies = value; }
 		}
 
 		public System.String ReferenceText
 		{
-			get => polygonweld.ReferenceText;
-			set { polygonweld.ReferenceText = value; }
+			get => teklaObject.ReferenceText;
+			set { teklaObject.ReferenceText = value; }
 		}
 
 		public System.String PrefixAboveLine
 		{
-			get => polygonweld.PrefixAboveLine;
-			set { polygonweld.PrefixAboveLine = value; }
+			get => teklaObject.PrefixAboveLine;
+			set { teklaObject.PrefixAboveLine = value; }
 		}
 
 		public System.String PrefixBelowLine
 		{
-			get => polygonweld.PrefixBelowLine;
-			set { polygonweld.PrefixBelowLine = value; }
+			get => teklaObject.PrefixBelowLine;
+			set { teklaObject.PrefixBelowLine = value; }
 		}
 
 		public System.String Standard
 		{
-			get => polygonweld.Standard;
-			set { polygonweld.Standard = value; }
+			get => teklaObject.Standard;
+			set { teklaObject.Standard = value; }
 		}
 
 		public System.Int32 WeldNumber
 		{
-			get => polygonweld.WeldNumber;
-			set { polygonweld.WeldNumber = value; }
+			get => teklaObject.WeldNumber;
+			set { teklaObject.WeldNumber = value; }
 		}
 
 		public System.String WeldNumberPrefix
 		{
-			get => polygonweld.WeldNumberPrefix;
-			set { polygonweld.WeldNumberPrefix = value; }
+			get => teklaObject.WeldNumberPrefix;
+			set { teklaObject.WeldNumberPrefix = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum IntermittentType
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(polygonweld.IntermittentType);
-			set { polygonweld.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.FromTSObject(teklaObject.IntermittentType);
+			set { teklaObject.IntermittentType = Dynamic.Tekla.Structures.Model.BaseWeld.WeldIntermittentTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum Placement
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(polygonweld.Placement);
-			set { polygonweld.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.FromTSObject(teklaObject.Placement);
+			set { teklaObject.Placement = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPlacementTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum Preparation
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(polygonweld.Preparation);
-			set { polygonweld.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.FromTSObject(teklaObject.Preparation);
+			set { teklaObject.Preparation = Dynamic.Tekla.Structures.Model.BaseWeld.WeldPreparationTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => polygonweld.ModificationTime;
-			set { polygonweld.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => polygonweld.IsUpToDate;
-			set { polygonweld.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(polygonweld.Identifier);
-			set { polygonweld.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic polygonweld;
-        
-        public PolygonWeld()
-        {
-            this.polygonweld =  TSActivator.CreateInstance("Tekla.Structures.Model.PolygonWeld");
-        }
+        internal dynamic teklaObject;
 
-        internal PolygonWeld(dynamic tsObject)
-        {
-            this.polygonweld = tsObject;
-        }
+		public PolygonWeld()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.PolygonWeld");
+		}
 
 		public System.Boolean Insert()
-			 => polygonweld.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => polygonweld.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => polygonweld.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => polygonweld.Delete();
+			 => teklaObject.Delete();
 
 		public System.Boolean GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld LogicalWeld)
-			 => polygonweld.GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld));
+			 => teklaObject.GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld));
 
 		public System.Collections.ArrayList GetWeldGeometries()
-			 => polygonweld.GetWeldGeometries();
+			 => teklaObject.GetWeldGeometries();
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(polygonweld.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polygonweld.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(polygonweld.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(polygonweld.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => polygonweld.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => polygonweld.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => polygonweld.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => polygonweld.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => polygonweld.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => polygonweld.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => polygonweld.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => polygonweld.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => polygonweld.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => polygonweld.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => polygonweld.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => polygonweld.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => polygonweld.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => polygonweld.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => polygonweld.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => polygonweld.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => polygonweld.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => polygonweld.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => polygonweld.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(polygonweld.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => polygonweld.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => polygonweld.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => polygonweld.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => polygonweld.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -421,12 +416,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PolygonWeld dynObject)
         {
-            return dynObject.polygonweld;
+            return dynObject.teklaObject;
         }
 
         public static PolygonWeld FromTSObject(dynamic tsObject)
         {
-            return new PolygonWeld(tsObject);
+            return new PolygonWeld() { teklaObject = tsObject };
         }
     }
 

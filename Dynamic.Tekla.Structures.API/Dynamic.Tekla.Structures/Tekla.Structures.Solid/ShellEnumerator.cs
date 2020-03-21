@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class ShellEnumerator 
+    public  class ShellEnumerator 
     {
 
 		public System.Object Current
 		{
-			get => shellenumerator.Current;
-			set { shellenumerator.Current = value; }
+			get => teklaObject.Current;
+			set { teklaObject.Current = value; }
 		}
 
         
 
-        internal dynamic shellenumerator;
-        
-        public ShellEnumerator()
-        {
-            this.shellenumerator =  TSActivator.CreateInstance("Tekla.Structures.Solid.ShellEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal ShellEnumerator(dynamic tsObject)
-        {
-            this.shellenumerator = tsObject;
-        }
+		internal ShellEnumerator() {}
 
 		public System.Boolean MoveNext()
-			 => shellenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => shellenumerator.Reset();
+			 => teklaObject.Reset();
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(ShellEnumerator dynObject)
         {
-            return dynObject.shellenumerator;
+            return dynObject.teklaObject;
         }
 
         public static ShellEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ShellEnumerator(tsObject);
+            return new ShellEnumerator() { teklaObject = tsObject };
         }
     }
 

@@ -4,52 +4,44 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class FacetedBrepFace 
+    public  class FacetedBrepFace 
     {
 
 		public System.Boolean HasHoles
 		{
-			get => facetedbrepface.HasHoles;
-			set { facetedbrepface.HasHoles = value; }
+			get => teklaObject.HasHoles;
+			set { teklaObject.HasHoles = value; }
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFaceHole> Holes
 		{
-			get => facetedbrepface.Holes;
-			set { facetedbrepface.Holes = value; }
+			get => teklaObject.Holes;
+			set { teklaObject.Holes = value; }
 		}
 
 		public System.Boolean IsReadOnly
 		{
-			get => facetedbrepface.IsReadOnly;
-			set { facetedbrepface.IsReadOnly = value; }
+			get => teklaObject.IsReadOnly;
+			set { teklaObject.IsReadOnly = value; }
 		}
 
 		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
 		{
-			get => facetedbrepface.VerticeIndexes;
-			set { facetedbrepface.VerticeIndexes = value; }
+			get => teklaObject.VerticeIndexes;
+			set { teklaObject.VerticeIndexes = value; }
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
-			get => facetedbrepface.Vertices;
-			set { facetedbrepface.Vertices = value; }
+			get => teklaObject.Vertices;
+			set { teklaObject.Vertices = value; }
 		}
 
         
 
-        internal dynamic facetedbrepface;
-        
-        public FacetedBrepFace()
-        {
-            this.facetedbrepface =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepFace");
-        }
+        internal dynamic teklaObject;
 
-        internal FacetedBrepFace(dynamic tsObject)
-        {
-            this.facetedbrepface = tsObject;
-        }
+		internal FacetedBrepFace() {}
 
 
 
@@ -61,12 +53,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(FacetedBrepFace dynObject)
         {
-            return dynObject.facetedbrepface;
+            return dynObject.teklaObject;
         }
 
         public static FacetedBrepFace FromTSObject(dynamic tsObject)
         {
-            return new FacetedBrepFace(tsObject);
+            return new FacetedBrepFace() { teklaObject = tsObject };
         }
     }
 

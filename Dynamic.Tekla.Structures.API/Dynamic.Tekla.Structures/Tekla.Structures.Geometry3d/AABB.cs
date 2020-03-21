@@ -4,68 +4,63 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class AABB 
+    public  class AABB 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(aabb.MinPoint);
-			set { aabb.MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinPoint);
+			set { teklaObject.MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(aabb.MaxPoint);
-			set { aabb.MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaxPoint);
+			set { teklaObject.MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic aabb;
-        
-        public AABB()
-        {
-            this.aabb =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB");
-        }
+        internal dynamic teklaObject;
 
-        internal AABB(dynamic tsObject)
-        {
-            this.aabb = tsObject;
-        }
+		public AABB()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB");
+		}
 		public AABB(Dynamic.Tekla.Structures.Geometry3d.Point MinPoint, Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint);
-			this.aabb = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
 		}
 		public AABB(Dynamic.Tekla.Structures.Geometry3d.AABB AABB)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB);
-			this.aabb = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
 		}
 
 		public System.Boolean IsInside(Dynamic.Tekla.Structures.Geometry3d.Point Point)
-			 => aabb.IsInside(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
+			 => teklaObject.IsInside(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
 
 		public System.Boolean IsInside(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
-			 => aabb.IsInside(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
+			 => teklaObject.IsInside(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point GetCenterPoint()
-			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(aabb.GetCenterPoint());
+			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.GetCenterPoint());
 
 		public System.Boolean Collide(Dynamic.Tekla.Structures.Geometry3d.AABB Other)
-			 => aabb.Collide(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other));
+			 => teklaObject.Collide(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other));
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB AABB1, Dynamic.Tekla.Structures.Geometry3d.AABB AABB2)
-			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(aabb.op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB1), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB2)));
+			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB1), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB2)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB AABB, Dynamic.Tekla.Structures.Geometry3d.Point Point)
-			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(aabb.op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point)));
+			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point)));
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.AABB AABB)
-			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(aabb.op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB)));
+			 => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB)));
 
 
 
@@ -77,12 +72,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(AABB dynObject)
         {
-            return dynObject.aabb;
+            return dynObject.teklaObject;
         }
 
         public static AABB FromTSObject(dynamic tsObject)
         {
-            return new AABB(tsObject);
+            return new AABB() { teklaObject = tsObject };
         }
     }
 

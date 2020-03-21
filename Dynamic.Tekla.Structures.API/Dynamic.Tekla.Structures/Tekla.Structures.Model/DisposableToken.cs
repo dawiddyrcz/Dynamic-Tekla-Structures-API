@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class DisposableToken 
+    public  class DisposableToken 
     {
 
         
 
-        internal dynamic disposabletoken;
-        
-        public DisposableToken()
-        {
-            this.disposabletoken =  TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken");
-        }
+        internal dynamic teklaObject;
 
-        internal DisposableToken(dynamic tsObject)
-        {
-            this.disposabletoken = tsObject;
-        }
+		internal DisposableToken() {}
 		public DisposableToken(System.Action disposed)
 		{
 			var args = new object[1];
 			args[0] = disposed;
-			this.disposabletoken = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken", args);
 		}
 
 		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
-			 => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(disposabletoken.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
+			 => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
 
 		public void Dispose()
-			 => disposabletoken.Dispose();
+			 => teklaObject.Dispose();
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DisposableToken dynObject)
         {
-            return dynObject.disposabletoken;
+            return dynObject.teklaObject;
         }
 
         public static DisposableToken FromTSObject(dynamic tsObject)
         {
-            return new DisposableToken(tsObject);
+            return new DisposableToken() { teklaObject = tsObject };
         }
     }
 

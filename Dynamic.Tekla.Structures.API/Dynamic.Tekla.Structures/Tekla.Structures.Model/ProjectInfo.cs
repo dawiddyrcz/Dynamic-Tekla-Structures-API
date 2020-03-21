@@ -4,196 +4,188 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ProjectInfo 
+    public  class ProjectInfo 
     {
 
 		public System.String Description
 		{
-			get => projectinfo.Description;
-			set { projectinfo.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String StartDate
 		{
-			get => projectinfo.StartDate;
-			set { projectinfo.StartDate = value; }
+			get => teklaObject.StartDate;
+			set { teklaObject.StartDate = value; }
 		}
 
 		public System.String EndDate
 		{
-			get => projectinfo.EndDate;
-			set { projectinfo.EndDate = value; }
+			get => teklaObject.EndDate;
+			set { teklaObject.EndDate = value; }
 		}
 
 		public System.String Object
 		{
-			get => projectinfo.Object;
-			set { projectinfo.Object = value; }
+			get => teklaObject.Object;
+			set { teklaObject.Object = value; }
 		}
 
 		public System.String Designer
 		{
-			get => projectinfo.Designer;
-			set { projectinfo.Designer = value; }
+			get => teklaObject.Designer;
+			set { teklaObject.Designer = value; }
 		}
 
 		public System.String Location
 		{
-			get => projectinfo.Location;
-			set { projectinfo.Location = value; }
+			get => teklaObject.Location;
+			set { teklaObject.Location = value; }
 		}
 
 		public System.String Address
 		{
-			get => projectinfo.Address;
-			set { projectinfo.Address = value; }
+			get => teklaObject.Address;
+			set { teklaObject.Address = value; }
 		}
 
 		public System.String PostalBox
 		{
-			get => projectinfo.PostalBox;
-			set { projectinfo.PostalBox = value; }
+			get => teklaObject.PostalBox;
+			set { teklaObject.PostalBox = value; }
 		}
 
 		public System.String Town
 		{
-			get => projectinfo.Town;
-			set { projectinfo.Town = value; }
+			get => teklaObject.Town;
+			set { teklaObject.Town = value; }
 		}
 
 		public System.String Region
 		{
-			get => projectinfo.Region;
-			set { projectinfo.Region = value; }
+			get => teklaObject.Region;
+			set { teklaObject.Region = value; }
 		}
 
 		public System.String PostalCode
 		{
-			get => projectinfo.PostalCode;
-			set { projectinfo.PostalCode = value; }
+			get => teklaObject.PostalCode;
+			set { teklaObject.PostalCode = value; }
 		}
 
 		public System.String Country
 		{
-			get => projectinfo.Country;
-			set { projectinfo.Country = value; }
+			get => teklaObject.Country;
+			set { teklaObject.Country = value; }
 		}
 
 		public System.String Builder
 		{
-			get => projectinfo.Builder;
-			set { projectinfo.Builder = value; }
+			get => teklaObject.Builder;
+			set { teklaObject.Builder = value; }
 		}
 
 		public System.String Name
 		{
-			get => projectinfo.Name;
-			set { projectinfo.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String ProjectNumber
 		{
-			get => projectinfo.ProjectNumber;
-			set { projectinfo.ProjectNumber = value; }
+			get => teklaObject.ProjectNumber;
+			set { teklaObject.ProjectNumber = value; }
 		}
 
 		public System.IO.DirectoryInfo ModelSharingLocalPath
 		{
-			get => projectinfo.ModelSharingLocalPath;
-			set { projectinfo.ModelSharingLocalPath = value; }
+			get => teklaObject.ModelSharingLocalPath;
+			set { teklaObject.ModelSharingLocalPath = value; }
 		}
 
 		public System.Uri ModelSharingServerPath
 		{
-			get => projectinfo.ModelSharingServerPath;
-			set { projectinfo.ModelSharingServerPath = value; }
+			get => teklaObject.ModelSharingServerPath;
+			set { teklaObject.ModelSharingServerPath = value; }
 		}
 
 		public System.String Info1
 		{
-			get => projectinfo.Info1;
-			set { projectinfo.Info1 = value; }
+			get => teklaObject.Info1;
+			set { teklaObject.Info1 = value; }
 		}
 
 		public System.String Info2
 		{
-			get => projectinfo.Info2;
-			set { projectinfo.Info2 = value; }
+			get => teklaObject.Info2;
+			set { teklaObject.Info2 = value; }
 		}
 
 		public System.String GUID
 		{
-			get => projectinfo.GUID;
-			set { projectinfo.GUID = value; }
+			get => teklaObject.GUID;
+			set { teklaObject.GUID = value; }
 		}
 
         
 
-        internal dynamic projectinfo;
-        
-        public ProjectInfo()
-        {
-            this.projectinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ProjectInfo");
-        }
+        internal dynamic teklaObject;
 
-        internal ProjectInfo(dynamic tsObject)
-        {
-            this.projectinfo = tsObject;
-        }
+		internal ProjectInfo() {}
 
 		public System.Boolean Modify()
-			 => projectinfo.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean GetUserProperty(System.String Name, System.String Value)
-			 => projectinfo.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 		public System.Boolean GetUserProperty(System.String Name, System.Int32 Value)
-			 => projectinfo.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 		public System.Boolean GetUserProperty(System.String Name, System.Double Value)
-			 => projectinfo.GetUserProperty(Name, Value);
+			 => teklaObject.GetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
-			 => projectinfo.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
-			 => projectinfo.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
-			 => projectinfo.SetUserProperty(Name, Value);
+			 => teklaObject.SetUserProperty(Name, Value);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable Values)
-			 => projectinfo.GetIntegerUserProperties(Values);
+			 => teklaObject.GetIntegerUserProperties(Values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable Values)
-			 => projectinfo.GetDoubleUserProperties(Values);
+			 => teklaObject.GetDoubleUserProperties(Values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable Values)
-			 => projectinfo.GetStringUserProperties(Values);
+			 => teklaObject.GetStringUserProperties(Values);
 
 		public System.Boolean GetDynamicStringProperty(System.String Name, System.String Value)
-			 => projectinfo.GetDynamicStringProperty(Name, Value);
+			 => teklaObject.GetDynamicStringProperty(Name, Value);
 
 		public System.Boolean SetDynamicStringProperty(System.String Name, System.String Value)
-			 => projectinfo.SetDynamicStringProperty(Name, Value);
+			 => teklaObject.SetDynamicStringProperty(Name, Value);
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
-			 => projectinfo.GetBasePoints();
+			 => teklaObject.GetBasePoints();
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetBasePointByName(name));
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByName(name));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetBasePointByGuid(guid));
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByGuid(guid));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetCurrentCoordsysBasePoint());
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetCurrentCoordsysBasePoint());
 
 		public System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
-			 => projectinfo.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
+			 => teklaObject.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
 
 		public Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
-			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(projectinfo.GetProjectBasePoint());
+			 => Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetProjectBasePoint());
 
 
 
@@ -205,12 +197,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ProjectInfo dynObject)
         {
-            return dynObject.projectinfo;
+            return dynObject.teklaObject;
         }
 
         public static ProjectInfo FromTSObject(dynamic tsObject)
         {
-            return new ProjectInfo(tsObject);
+            return new ProjectInfo() { teklaObject = tsObject };
         }
     }
 

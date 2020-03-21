@@ -4,40 +4,32 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class ISolid 
+    public  class ISolid 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(isolid.MinimumPoint);
-			set { isolid.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinimumPoint);
+			set { teklaObject.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(isolid.MaximumPoint);
-			set { isolid.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaximumPoint);
+			set { teklaObject.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic isolid;
-        
-        private ISolid()
-        {
-            this.isolid =  TSActivator.CreateInstance("Tekla.Structures.Solid.ISolid");
-        }
+        internal dynamic teklaObject;
 
-        internal ISolid(dynamic tsObject)
-        {
-            this.isolid = tsObject;
-        }
+		internal ISolid() {}
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(isolid.GetFaceEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(isolid.GetEdgeEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(teklaObject.GetEdgeEnumerator());
 
 
 
@@ -49,12 +41,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(ISolid dynObject)
         {
-            return dynObject.isolid;
+            return dynObject.teklaObject;
         }
 
         public static ISolid FromTSObject(dynamic tsObject)
         {
-            return new ISolid(tsObject);
+            return new ISolid() { teklaObject = tsObject };
         }
     }
 

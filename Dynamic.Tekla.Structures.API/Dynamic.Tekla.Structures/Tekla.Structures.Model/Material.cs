@@ -4,28 +4,23 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Material 
+    public  class Material 
     {
 
 		public System.String MaterialString
 		{
-			get => material.MaterialString;
-			set { material.MaterialString = value; }
+			get => teklaObject.MaterialString;
+			set { teklaObject.MaterialString = value; }
 		}
 
         
 
-        internal dynamic material;
-        
-        public Material()
-        {
-            this.material =  TSActivator.CreateInstance("Tekla.Structures.Model.Material");
-        }
+        internal dynamic teklaObject;
 
-        internal Material(dynamic tsObject)
-        {
-            this.material = tsObject;
-        }
+		public Material()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Material");
+		}
 
 
 
@@ -37,12 +32,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Material dynObject)
         {
-            return dynObject.material;
+            return dynObject.teklaObject;
         }
 
         public static Material FromTSObject(dynamic tsObject)
         {
-            return new Material(tsObject);
+            return new Material() { teklaObject = tsObject };
         }
     }
 

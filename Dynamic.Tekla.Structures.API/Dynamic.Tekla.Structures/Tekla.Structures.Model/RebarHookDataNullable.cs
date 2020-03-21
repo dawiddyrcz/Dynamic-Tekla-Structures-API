@@ -4,52 +4,47 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarHookDataNullable 
+    public  class RebarHookDataNullable 
     {
 
 		public Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum Shape
 		{
-			get => rebarhookdatanullable.Shape;
-			set { rebarhookdatanullable.Shape = value; }
+			get => teklaObject.Shape;
+			set { teklaObject.Shape = value; }
 		}
 
 		public System.Double Angle
 		{
-			get => rebarhookdatanullable.Angle;
-			set { rebarhookdatanullable.Angle = value; }
+			get => teklaObject.Angle;
+			set { teklaObject.Angle = value; }
 		}
 
 		public System.Double Radius
 		{
-			get => rebarhookdatanullable.Radius;
-			set { rebarhookdatanullable.Radius = value; }
+			get => teklaObject.Radius;
+			set { teklaObject.Radius = value; }
 		}
 
 		public System.Double Length
 		{
-			get => rebarhookdatanullable.Length;
-			set { rebarhookdatanullable.Length = value; }
+			get => teklaObject.Length;
+			set { teklaObject.Length = value; }
 		}
 
 		public System.Double Rotation
 		{
-			get => rebarhookdatanullable.Rotation;
-			set { rebarhookdatanullable.Rotation = value; }
+			get => teklaObject.Rotation;
+			set { teklaObject.Rotation = value; }
 		}
 
         
 
-        internal dynamic rebarhookdatanullable;
-        
-        public RebarHookDataNullable()
-        {
-            this.rebarhookdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookDataNullable");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarHookDataNullable(dynamic tsObject)
-        {
-            this.rebarhookdatanullable = tsObject;
-        }
+		public RebarHookDataNullable()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarHookDataNullable");
+		}
 
 
 
@@ -61,12 +56,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarHookDataNullable dynObject)
         {
-            return dynObject.rebarhookdatanullable;
+            return dynObject.teklaObject;
         }
 
         public static RebarHookDataNullable FromTSObject(dynamic tsObject)
         {
-            return new RebarHookDataNullable(tsObject);
+            return new RebarHookDataNullable() { teklaObject = tsObject };
         }
     }
 

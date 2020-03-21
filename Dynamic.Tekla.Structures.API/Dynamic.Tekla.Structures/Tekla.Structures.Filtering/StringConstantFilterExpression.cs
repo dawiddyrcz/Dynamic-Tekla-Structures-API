@@ -4,33 +4,25 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class StringConstantFilterExpression 
+    public  class StringConstantFilterExpression  : Dynamic.Tekla.Structures.Filtering.DataFilterExpression
     {
 
         
 
-        internal dynamic stringconstantfilterexpression;
-        
-        public StringConstantFilterExpression()
-        {
-            this.stringconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression");
-        }
+        internal dynamic teklaObject;
 
-        internal StringConstantFilterExpression(dynamic tsObject)
-        {
-            this.stringconstantfilterexpression = tsObject;
-        }
+		internal StringConstantFilterExpression() {}
 		public StringConstantFilterExpression(System.String Value)
 		{
 			var args = new object[1];
 			args[0] = Value;
-			this.stringconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
 		}
 		public StringConstantFilterExpression(System.Collections.Generic.IEnumerable<System.String> Values)
 		{
 			var args = new object[1];
 			args[0] = Values;
-			this.stringconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.StringConstantFilterExpression", args);
 		}
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(StringConstantFilterExpression dynObject)
         {
-            return dynObject.stringconstantfilterexpression;
+            return dynObject.teklaObject;
         }
 
         public static StringConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new StringConstantFilterExpression(tsObject);
+            return new StringConstantFilterExpression() { teklaObject = tsObject };
         }
     }
 

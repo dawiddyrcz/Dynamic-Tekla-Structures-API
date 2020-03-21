@@ -4,57 +4,52 @@
 namespace Dynamic.Tekla.Structures.Forming
 {
 
-    public sealed class FormingStates 
+    public  class FormingStates 
     {
 
 		public Dynamic.Tekla.Structures.Forming.DeformingType Deforming
 		{
-			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(formingstates.Deforming);
-			set { formingstates.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.Deforming);
+			set { teklaObject.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Forming.FoldingType Folding
 		{
-			get => Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(formingstates.Folding);
-			set { formingstates.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(teklaObject.Folding);
+			set { teklaObject.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Forming.WrappingType Wrapping
 		{
-			get => Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(formingstates.Wrapping);
-			set { formingstates.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(teklaObject.Wrapping);
+			set { teklaObject.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic formingstates;
-        
-        public FormingStates()
-        {
-            this.formingstates =  TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates");
-        }
+        internal dynamic teklaObject;
 
-        internal FormingStates(dynamic tsObject)
-        {
-            this.formingstates = tsObject;
-        }
+		public FormingStates()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates");
+		}
 		public FormingStates(Dynamic.Tekla.Structures.Forming.DeformingType deforming)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(deforming);
-			this.formingstates = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
 		}
 		public FormingStates(Dynamic.Tekla.Structures.Forming.FoldingType folding)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(folding);
-			this.formingstates = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
 		}
 		public FormingStates(Dynamic.Tekla.Structures.Forming.WrappingType wrapping)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(wrapping);
-			this.formingstates = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
 		}
 		public FormingStates(Dynamic.Tekla.Structures.Forming.DeformingType deforming, Dynamic.Tekla.Structures.Forming.FoldingType folding, Dynamic.Tekla.Structures.Forming.WrappingType wrapping)
 		{
@@ -62,11 +57,11 @@ namespace Dynamic.Tekla.Structures.Forming
 			args[0] = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(deforming);
 			args[1] = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(folding);
 			args[2] = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(wrapping);
-			this.formingstates = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates", args);
 		}
 
 		public System.Object Clone()
-			 => formingstates.Clone();
+			 => teklaObject.Clone();
 
 
 
@@ -78,12 +73,12 @@ namespace Dynamic.Tekla.Structures.Forming
     {
         public static dynamic GetTSObject(FormingStates dynObject)
         {
-            return dynObject.formingstates;
+            return dynObject.teklaObject;
         }
 
         public static FormingStates FromTSObject(dynamic tsObject)
         {
-            return new FormingStates(tsObject);
+            return new FormingStates() { teklaObject = tsObject };
         }
     }
 

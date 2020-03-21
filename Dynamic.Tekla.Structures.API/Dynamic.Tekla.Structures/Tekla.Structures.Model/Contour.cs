@@ -4,34 +4,29 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Contour 
+    public  class Contour 
     {
 
 		public System.Collections.ArrayList ContourPoints
 		{
-			get => contour.ContourPoints;
-			set { contour.ContourPoints = value; }
+			get => teklaObject.ContourPoints;
+			set { teklaObject.ContourPoints = value; }
 		}
 
         
 
-        internal dynamic contour;
-        
-        public Contour()
-        {
-            this.contour =  TSActivator.CreateInstance("Tekla.Structures.Model.Contour");
-        }
+        internal dynamic teklaObject;
 
-        internal Contour(dynamic tsObject)
-        {
-            this.contour = tsObject;
-        }
+		public Contour()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Contour");
+		}
 
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
-			 => contour.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
+			 => teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
 
 		public System.Boolean CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon polygon)
-			 => contour.CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon));
+			 => teklaObject.CalculatePolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon));
 
 
 
@@ -43,12 +38,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Contour dynObject)
         {
-            return dynObject.contour;
+            return dynObject.teklaObject;
         }
 
         public static Contour FromTSObject(dynamic tsObject)
         {
-            return new Contour(tsObject);
+            return new Contour() { teklaObject = tsObject };
         }
     }
 

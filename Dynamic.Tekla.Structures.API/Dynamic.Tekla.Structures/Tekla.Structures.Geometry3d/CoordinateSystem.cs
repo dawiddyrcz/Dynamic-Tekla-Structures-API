@@ -4,47 +4,42 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class CoordinateSystem 
+    public  class CoordinateSystem 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(coordinatesystem.Origin);
-			set { coordinatesystem.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisX
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(coordinatesystem.AxisX);
-			set { coordinatesystem.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.AxisX);
+			set { teklaObject.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisY
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(coordinatesystem.AxisY);
-			set { coordinatesystem.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.AxisY);
+			set { teklaObject.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic coordinatesystem;
-        
-        public CoordinateSystem()
-        {
-            this.coordinatesystem =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem");
-        }
+        internal dynamic teklaObject;
 
-        internal CoordinateSystem(dynamic tsObject)
-        {
-            this.coordinatesystem = tsObject;
-        }
+		public CoordinateSystem()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem");
+		}
 		public CoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.Point Origin, Dynamic.Tekla.Structures.Geometry3d.Vector AxisX, Dynamic.Tekla.Structures.Geometry3d.Vector AxisY)
 		{
 			var args = new object[3];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origin);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(AxisX);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(AxisY);
-			this.coordinatesystem = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem", args);
 		}
 
 
@@ -57,12 +52,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(CoordinateSystem dynObject)
         {
-            return dynObject.coordinatesystem;
+            return dynObject.teklaObject;
         }
 
         public static CoordinateSystem FromTSObject(dynamic tsObject)
         {
-            return new CoordinateSystem(tsObject);
+            return new CoordinateSystem() { teklaObject = tsObject };
         }
     }
 

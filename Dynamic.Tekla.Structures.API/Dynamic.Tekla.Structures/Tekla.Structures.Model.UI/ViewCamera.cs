@@ -4,64 +4,59 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ViewCamera 
+    public  class ViewCamera 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(viewcamera.Location);
-			set { viewcamera.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Location);
+			set { teklaObject.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector DirectionVector
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(viewcamera.DirectionVector);
-			set { viewcamera.DirectionVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.DirectionVector);
+			set { teklaObject.DirectionVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(viewcamera.UpVector);
-			set { viewcamera.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
+			set { teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double FieldOfView
 		{
-			get => viewcamera.FieldOfView;
-			set { viewcamera.FieldOfView = value; }
+			get => teklaObject.FieldOfView;
+			set { teklaObject.FieldOfView = value; }
 		}
 
 		public System.Double ZoomFactor
 		{
-			get => viewcamera.ZoomFactor;
-			set { viewcamera.ZoomFactor = value; }
+			get => teklaObject.ZoomFactor;
+			set { teklaObject.ZoomFactor = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(viewcamera.View);
-			set { viewcamera.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.View);
+			set { teklaObject.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic viewcamera;
-        
-        public ViewCamera()
-        {
-            this.viewcamera =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewCamera");
-        }
+        internal dynamic teklaObject;
 
-        internal ViewCamera(dynamic tsObject)
-        {
-            this.viewcamera = tsObject;
-        }
+		public ViewCamera()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewCamera");
+		}
 
 		public System.Boolean Select()
-			 => viewcamera.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => viewcamera.Modify();
+			 => teklaObject.Modify();
 
 
 
@@ -73,12 +68,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ViewCamera dynObject)
         {
-            return dynObject.viewcamera;
+            return dynObject.teklaObject;
         }
 
         public static ViewCamera FromTSObject(dynamic tsObject)
         {
-            return new ViewCamera(tsObject);
+            return new ViewCamera() { teklaObject = tsObject };
         }
     }
 

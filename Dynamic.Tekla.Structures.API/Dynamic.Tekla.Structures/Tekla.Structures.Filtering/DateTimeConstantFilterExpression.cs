@@ -4,47 +4,39 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public sealed class DateTimeConstantFilterExpression 
+    public  class DateTimeConstantFilterExpression  : Dynamic.Tekla.Structures.Filtering.DataFilterExpression
     {
 
         
 
-        internal dynamic datetimeconstantfilterexpression;
-        
-        public DateTimeConstantFilterExpression()
-        {
-            this.datetimeconstantfilterexpression =  TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression");
-        }
+        internal dynamic teklaObject;
 
-        internal DateTimeConstantFilterExpression(dynamic tsObject)
-        {
-            this.datetimeconstantfilterexpression = tsObject;
-        }
+		internal DateTimeConstantFilterExpression() {}
 		public DateTimeConstantFilterExpression(System.DateTime Value)
 		{
 			var args = new object[1];
 			args[0] = Value;
-			this.datetimeconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
 		}
 		public DateTimeConstantFilterExpression(System.Collections.Generic.IEnumerable<System.DateTime> Values)
 		{
 			var args = new object[1];
 			args[0] = Values;
-			this.datetimeconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
 		}
 		public DateTimeConstantFilterExpression(System.DateTime Value, System.IFormatProvider Provider)
 		{
 			var args = new object[2];
 			args[0] = Value;
 			args[1] = Provider;
-			this.datetimeconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
 		}
 		public DateTimeConstantFilterExpression(System.Collections.Generic.IEnumerable<System.DateTime> Values, System.IFormatProvider Provider)
 		{
 			var args = new object[2];
 			args[0] = Values;
 			args[1] = Provider;
-			this.datetimeconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeConstantFilterExpression", args);
 		}
 
 
@@ -57,12 +49,12 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(DateTimeConstantFilterExpression dynObject)
         {
-            return dynObject.datetimeconstantfilterexpression;
+            return dynObject.teklaObject;
         }
 
         public static DateTimeConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new DateTimeConstantFilterExpression(tsObject);
+            return new DateTimeConstantFilterExpression() { teklaObject = tsObject };
         }
     }
 

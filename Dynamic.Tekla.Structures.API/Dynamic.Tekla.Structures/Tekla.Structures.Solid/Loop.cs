@@ -4,25 +4,17 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class Loop 
+    public  class Loop 
     {
 
         
 
-        internal dynamic loop;
-        
-        public Loop()
-        {
-            this.loop =  TSActivator.CreateInstance("Tekla.Structures.Solid.Loop");
-        }
+        internal dynamic teklaObject;
 
-        internal Loop(dynamic tsObject)
-        {
-            this.loop = tsObject;
-        }
+		internal Loop() {}
 
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(loop.GetVertexEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(teklaObject.GetVertexEnumerator());
 
 
 
@@ -34,12 +26,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(Loop dynObject)
         {
-            return dynObject.loop;
+            return dynObject.teklaObject;
         }
 
         public static Loop FromTSObject(dynamic tsObject)
         {
-            return new Loop(tsObject);
+            return new Loop() { teklaObject = tsObject };
         }
     }
 

@@ -4,89 +4,81 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class Arc 
+    public  class Arc 
     {
 
 		public System.Double Length
 		{
-			get => arc.Length;
-			set { arc.Length = value; }
+			get => teklaObject.Length;
+			set { teklaObject.Length = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(arc.StartPoint);
-			set { arc.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(arc.EndPoint);
-			set { arc.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(arc.CenterPoint);
-			set { arc.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
+			set { teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ArcMiddlePoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(arc.ArcMiddlePoint);
-			set { arc.ArcMiddlePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ArcMiddlePoint);
+			set { teklaObject.ArcMiddlePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(arc.Normal);
-			set { arc.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normal);
+			set { teklaObject.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Double Angle
 		{
-			get => arc.Angle;
-			set { arc.Angle = value; }
+			get => teklaObject.Angle;
+			set { teklaObject.Angle = value; }
 		}
 
 		public System.Double Radius
 		{
-			get => arc.Radius;
-			set { arc.Radius = value; }
+			get => teklaObject.Radius;
+			set { teklaObject.Radius = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector StartTangent
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(arc.StartTangent);
-			set { arc.StartTangent = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.StartTangent);
+			set { teklaObject.StartTangent = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector StartDirection
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(arc.StartDirection);
-			set { arc.StartDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.StartDirection);
+			set { teklaObject.StartDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic arc;
-        
-        public Arc()
-        {
-            this.arc =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc");
-        }
+        internal dynamic teklaObject;
 
-        internal Arc(dynamic tsObject)
-        {
-            this.arc = tsObject;
-        }
+		internal Arc() {}
 		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point pointOnArc)
 		{
 			var args = new object[3];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pointOnArc);
-			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
 		}
 		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point centerPoint, Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Vector normal, System.Double deltaAngleRadians)
 		{
@@ -95,7 +87,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(normal);
 			args[3] = deltaAngleRadians;
-			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
 		}
 		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point centerPoint, Dynamic.Tekla.Structures.Geometry3d.Vector startDirection, Dynamic.Tekla.Structures.Geometry3d.Vector startTangent, System.Double radius, System.Double deltaAngleRadians)
 		{
@@ -105,7 +97,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(startTangent);
 			args[3] = radius;
 			args[4] = deltaAngleRadians;
-			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
 		}
 
 
@@ -118,12 +110,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(Arc dynObject)
         {
-            return dynObject.arc;
+            return dynObject.teklaObject;
         }
 
         public static Arc FromTSObject(dynamic tsObject)
         {
-            return new Arc(tsObject);
+            return new Arc() { teklaObject = tsObject };
         }
     }
 

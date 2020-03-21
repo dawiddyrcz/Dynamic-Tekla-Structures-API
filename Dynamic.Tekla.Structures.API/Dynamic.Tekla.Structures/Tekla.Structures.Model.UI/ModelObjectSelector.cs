@@ -4,34 +4,29 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ModelObjectSelector 
+    public  class ModelObjectSelector 
     {
 
         
 
-        internal dynamic modelobjectselector;
-        
-        public ModelObjectSelector()
-        {
-            this.modelobjectselector =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectSelector");
-        }
+        internal dynamic teklaObject;
 
-        internal ModelObjectSelector(dynamic tsObject)
-        {
-            this.modelobjectselector = tsObject;
-        }
+		public ModelObjectSelector()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ModelObjectSelector");
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSelectedObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetSelectedObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetSelectedObjects());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point MinPoint, Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint, Dynamic.Tekla.Structures.Model.UI.View View)
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(modelobjectselector.GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint), Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(View)));
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetObjectsByBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint), Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(View)));
 
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects)
-			 => modelobjectselector.Select(ModelObjects);
+			 => teklaObject.Select(ModelObjects);
 
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects, System.Boolean ShowDimensions)
-			 => modelobjectselector.Select(ModelObjects, ShowDimensions);
+			 => teklaObject.Select(ModelObjects, ShowDimensions);
 
 
 
@@ -43,12 +38,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ModelObjectSelector dynObject)
         {
-            return dynObject.modelobjectselector;
+            return dynObject.teklaObject;
         }
 
         public static ModelObjectSelector FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectSelector(tsObject);
+            return new ModelObjectSelector() { teklaObject = tsObject };
         }
     }
 

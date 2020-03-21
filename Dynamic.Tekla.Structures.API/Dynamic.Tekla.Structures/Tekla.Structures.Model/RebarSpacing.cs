@@ -4,70 +4,65 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarSpacing 
+    public  class RebarSpacing 
     {
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
 		{
-			get => rebarspacing.Zones;
-			set { rebarspacing.Zones = value; }
+			get => teklaObject.Zones;
+			set { teklaObject.Zones = value; }
 		}
 
 		public System.Double StartOffset
 		{
-			get => rebarspacing.StartOffset;
-			set { rebarspacing.StartOffset = value; }
+			get => teklaObject.StartOffset;
+			set { teklaObject.StartOffset = value; }
 		}
 
 		public System.Double EndOffset
 		{
-			get => rebarspacing.EndOffset;
-			set { rebarspacing.EndOffset = value; }
+			get => teklaObject.EndOffset;
+			set { teklaObject.EndOffset = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum StartOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.StartOffsetType);
-			set { rebarspacing.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.StartOffsetType);
+			set { teklaObject.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum EndOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(rebarspacing.EndOffsetType);
-			set { rebarspacing.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.EndOffsetType);
+			set { teklaObject.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
 		}
 
 		public System.Boolean StartOffsetIsAutomatic
 		{
-			get => rebarspacing.StartOffsetIsAutomatic;
-			set { rebarspacing.StartOffsetIsAutomatic = value; }
+			get => teklaObject.StartOffsetIsAutomatic;
+			set { teklaObject.StartOffsetIsAutomatic = value; }
 		}
 
 		public System.Boolean EndOffsetIsAutomatic
 		{
-			get => rebarspacing.EndOffsetIsAutomatic;
-			set { rebarspacing.EndOffsetIsAutomatic = value; }
+			get => teklaObject.EndOffsetIsAutomatic;
+			set { teklaObject.EndOffsetIsAutomatic = value; }
 		}
 
 		public System.Boolean InheritFromPrimary
 		{
-			get => rebarspacing.InheritFromPrimary;
-			set { rebarspacing.InheritFromPrimary = value; }
+			get => teklaObject.InheritFromPrimary;
+			set { teklaObject.InheritFromPrimary = value; }
 		}
 
         
 
-        internal dynamic rebarspacing;
-        
-        public RebarSpacing()
-        {
-            this.rebarspacing =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarSpacing(dynamic tsObject)
-        {
-            this.rebarspacing = tsObject;
-        }
+		public RebarSpacing()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing");
+		}
 
 
 
@@ -119,12 +114,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarSpacing dynObject)
         {
-            return dynObject.rebarspacing;
+            return dynObject.teklaObject;
         }
 
         public static RebarSpacing FromTSObject(dynamic tsObject)
         {
-            return new RebarSpacing(tsObject);
+            return new RebarSpacing() { teklaObject = tsObject };
         }
     }
 

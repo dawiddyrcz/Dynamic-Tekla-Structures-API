@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarThreadingDataNullable 
+    public  class RebarThreadingDataNullable 
     {
 
 		public System.String ThreadingType
 		{
-			get => rebarthreadingdatanullable.ThreadingType;
-			set { rebarthreadingdatanullable.ThreadingType = value; }
+			get => teklaObject.ThreadingType;
+			set { teklaObject.ThreadingType = value; }
 		}
 
 		public System.Double Length
 		{
-			get => rebarthreadingdatanullable.Length;
-			set { rebarthreadingdatanullable.Length = value; }
+			get => teklaObject.Length;
+			set { teklaObject.Length = value; }
 		}
 
 		public System.Double ExtraFabricationLength
 		{
-			get => rebarthreadingdatanullable.ExtraFabricationLength;
-			set { rebarthreadingdatanullable.ExtraFabricationLength = value; }
+			get => teklaObject.ExtraFabricationLength;
+			set { teklaObject.ExtraFabricationLength = value; }
 		}
 
         
 
-        internal dynamic rebarthreadingdatanullable;
-        
-        public RebarThreadingDataNullable()
-        {
-            this.rebarthreadingdatanullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarThreadingDataNullable");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarThreadingDataNullable(dynamic tsObject)
-        {
-            this.rebarthreadingdatanullable = tsObject;
-        }
+		public RebarThreadingDataNullable()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarThreadingDataNullable");
+		}
 
 
 
@@ -49,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarThreadingDataNullable dynObject)
         {
-            return dynObject.rebarthreadingdatanullable;
+            return dynObject.teklaObject;
         }
 
         public static RebarThreadingDataNullable FromTSObject(dynamic tsObject)
         {
-            return new RebarThreadingDataNullable(tsObject);
+            return new RebarThreadingDataNullable() { teklaObject = tsObject };
         }
     }
 

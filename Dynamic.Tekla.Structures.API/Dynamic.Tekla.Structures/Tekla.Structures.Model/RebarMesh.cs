@@ -4,373 +4,368 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarMesh 
+    public  class RebarMesh  : Dynamic.Tekla.Structures.Model.Reinforcement
     {
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum MeshType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(rebarmesh.MeshType);
-			set { rebarmesh.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(teklaObject.MeshType);
+			set { teklaObject.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum LongitudinalSpacingMethod
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(rebarmesh.LongitudinalSpacingMethod);
-			set { rebarmesh.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(teklaObject.LongitudinalSpacingMethod);
+			set { teklaObject.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(rebarmesh.Polygon);
-			set { rebarmesh.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
+			set { teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList LongitudinalDistances
 		{
-			get => rebarmesh.LongitudinalDistances;
-			set { rebarmesh.LongitudinalDistances = value; }
+			get => teklaObject.LongitudinalDistances;
+			set { teklaObject.LongitudinalDistances = value; }
 		}
 
 		public System.Collections.ArrayList CrossDistances
 		{
-			get => rebarmesh.CrossDistances;
-			set { rebarmesh.CrossDistances = value; }
+			get => teklaObject.CrossDistances;
+			set { teklaObject.CrossDistances = value; }
 		}
 
 		public System.Double FromPlaneOffset
 		{
-			get => rebarmesh.FromPlaneOffset;
-			set { rebarmesh.FromPlaneOffset = value; }
+			get => teklaObject.FromPlaneOffset;
+			set { teklaObject.FromPlaneOffset = value; }
 		}
 
 		public System.Double StartFromPlaneOffset
 		{
-			get => rebarmesh.StartFromPlaneOffset;
-			set { rebarmesh.StartFromPlaneOffset = value; }
+			get => teklaObject.StartFromPlaneOffset;
+			set { teklaObject.StartFromPlaneOffset = value; }
 		}
 
 		public System.Double EndFromPlaneOffset
 		{
-			get => rebarmesh.EndFromPlaneOffset;
-			set { rebarmesh.EndFromPlaneOffset = value; }
+			get => teklaObject.EndFromPlaneOffset;
+			set { teklaObject.EndFromPlaneOffset = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarmesh.StartPoint);
-			set { rebarmesh.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(rebarmesh.EndPoint);
-			set { rebarmesh.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public System.Double LeftOverhangLongitudinal
 		{
-			get => rebarmesh.LeftOverhangLongitudinal;
-			set { rebarmesh.LeftOverhangLongitudinal = value; }
+			get => teklaObject.LeftOverhangLongitudinal;
+			set { teklaObject.LeftOverhangLongitudinal = value; }
 		}
 
 		public System.Double LeftOverhangCross
 		{
-			get => rebarmesh.LeftOverhangCross;
-			set { rebarmesh.LeftOverhangCross = value; }
+			get => teklaObject.LeftOverhangCross;
+			set { teklaObject.LeftOverhangCross = value; }
 		}
 
 		public System.Double RightOverhangLongitudinal
 		{
-			get => rebarmesh.RightOverhangLongitudinal;
-			set { rebarmesh.RightOverhangLongitudinal = value; }
+			get => teklaObject.RightOverhangLongitudinal;
+			set { teklaObject.RightOverhangLongitudinal = value; }
 		}
 
 		public System.Double RightOverhangCross
 		{
-			get => rebarmesh.RightOverhangCross;
-			set { rebarmesh.RightOverhangCross = value; }
+			get => teklaObject.RightOverhangCross;
+			set { teklaObject.RightOverhangCross = value; }
 		}
 
 		public System.String LongitudinalSize
 		{
-			get => rebarmesh.LongitudinalSize;
-			set { rebarmesh.LongitudinalSize = value; }
+			get => teklaObject.LongitudinalSize;
+			set { teklaObject.LongitudinalSize = value; }
 		}
 
 		public System.String CrossSize
 		{
-			get => rebarmesh.CrossSize;
-			set { rebarmesh.CrossSize = value; }
+			get => teklaObject.CrossSize;
+			set { teklaObject.CrossSize = value; }
 		}
 
 		public System.Double Width
 		{
-			get => rebarmesh.Width;
-			set { rebarmesh.Width = value; }
+			get => teklaObject.Width;
+			set { teklaObject.Width = value; }
 		}
 
 		public System.Double Length
 		{
-			get => rebarmesh.Length;
-			set { rebarmesh.Length = value; }
+			get => teklaObject.Length;
+			set { teklaObject.Length = value; }
 		}
 
 		public System.Boolean CutByFatherPartCuts
 		{
-			get => rebarmesh.CutByFatherPartCuts;
-			set { rebarmesh.CutByFatherPartCuts = value; }
+			get => teklaObject.CutByFatherPartCuts;
+			set { teklaObject.CutByFatherPartCuts = value; }
 		}
 
 		public System.String CatalogName
 		{
-			get => rebarmesh.CatalogName;
-			set { rebarmesh.CatalogName = value; }
+			get => teklaObject.CatalogName;
+			set { teklaObject.CatalogName = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum CrossBarLocation
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(rebarmesh.CrossBarLocation);
-			set { rebarmesh.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(teklaObject.CrossBarLocation);
+			set { teklaObject.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(rebarmesh.StartHook);
-			set { rebarmesh.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.StartHook);
+			set { teklaObject.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(rebarmesh.EndHook);
-			set { rebarmesh.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.EndHook);
+			set { teklaObject.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(rebarmesh.Father);
-			set { rebarmesh.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Father);
+			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public System.String Grade
 		{
-			get => rebarmesh.Grade;
-			set { rebarmesh.Grade = value; }
+			get => teklaObject.Grade;
+			set { teklaObject.Grade = value; }
 		}
 
 		public System.String Name
 		{
-			get => rebarmesh.Name;
-			set { rebarmesh.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.Int32 Class
 		{
-			get => rebarmesh.Class;
-			set { rebarmesh.Class = value; }
+			get => teklaObject.Class;
+			set { teklaObject.Class = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeries NumberingSeries
 		{
-			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(rebarmesh.NumberingSeries);
-			set { rebarmesh.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(teklaObject.NumberingSeries);
+			set { teklaObject.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value); }
 		}
 
 		public System.Collections.ArrayList OnPlaneOffsets
 		{
-			get => rebarmesh.OnPlaneOffsets;
-			set { rebarmesh.OnPlaneOffsets = value; }
+			get => teklaObject.OnPlaneOffsets;
+			set { teklaObject.OnPlaneOffsets = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum StartPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.StartPointOffsetType);
-			set { rebarmesh.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(teklaObject.StartPointOffsetType);
+			set { teklaObject.StartPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double StartPointOffsetValue
 		{
-			get => rebarmesh.StartPointOffsetValue;
-			set { rebarmesh.StartPointOffsetValue = value; }
+			get => teklaObject.StartPointOffsetValue;
+			set { teklaObject.StartPointOffsetValue = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum EndPointOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(rebarmesh.EndPointOffsetType);
-			set { rebarmesh.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.FromTSObject(teklaObject.EndPointOffsetType);
+			set { teklaObject.EndPointOffsetType = Dynamic.Tekla.Structures.Model.Reinforcement.RebarOffsetTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double EndPointOffsetValue
 		{
-			get => rebarmesh.EndPointOffsetValue;
-			set { rebarmesh.EndPointOffsetValue = value; }
+			get => teklaObject.EndPointOffsetValue;
+			set { teklaObject.EndPointOffsetValue = value; }
 		}
 
 		public System.Collections.ArrayList RadiusValues
 		{
-			get => rebarmesh.RadiusValues;
-			set { rebarmesh.RadiusValues = value; }
+			get => teklaObject.RadiusValues;
+			set { teklaObject.RadiusValues = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Forming.DeformingType InputPointDeformingState
 		{
-			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(rebarmesh.InputPointDeformingState);
-			set { rebarmesh.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.InputPointDeformingState);
+			set { teklaObject.InputPointDeformingState = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => rebarmesh.ModificationTime;
-			set { rebarmesh.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => rebarmesh.IsUpToDate;
-			set { rebarmesh.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(rebarmesh.Identifier);
-			set { rebarmesh.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic rebarmesh;
-        
-        public RebarMesh()
-        {
-            this.rebarmesh =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarMesh(dynamic tsObject)
-        {
-            this.rebarmesh = tsObject;
-        }
+		public RebarMesh()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarMesh");
+		}
 
 		public System.Boolean Insert()
-			 => rebarmesh.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => rebarmesh.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => rebarmesh.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => rebarmesh.Delete();
+			 => teklaObject.Delete();
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
-			 => rebarmesh.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
+			 => teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
-			 => rebarmesh.GetRebarGeometries(withHooks);
+			 => teklaObject.GetRebarGeometries(withHooks);
 
 		public System.Collections.ArrayList GetRebarGeometriesWithoutClashes(System.Boolean withHooks)
-			 => rebarmesh.GetRebarGeometriesWithoutClashes(withHooks);
+			 => teklaObject.GetRebarGeometriesWithoutClashes(withHooks);
 
 		public System.Boolean IsGeometryValid()
-			 => rebarmesh.IsGeometryValid();
+			 => teklaObject.IsGeometryValid();
 
 		public System.Int32 GetNumberOfRebars()
-			 => rebarmesh.GetNumberOfRebars();
+			 => teklaObject.GetNumberOfRebars();
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebar(System.Int32 index, System.Boolean withHooks)
-			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarmesh.GetSingleRebar(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(teklaObject.GetSingleRebar(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebarWithoutClash(System.Int32 index, System.Boolean withHooks)
-			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(rebarmesh.GetSingleRebarWithoutClash(index, withHooks));
+			 => Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(teklaObject.GetSingleRebarWithoutClash(index, withHooks));
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(rebarmesh.GetSolid());
+			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(rebarmesh.GetFatherPour());
+			 => Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetFatherPour());
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(rebarmesh.GetFatherPourUnit());
+			 => Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(teklaObject.GetFatherPourUnit());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarmesh.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(rebarmesh.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(rebarmesh.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => rebarmesh.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => rebarmesh.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => rebarmesh.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => rebarmesh.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => rebarmesh.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarmesh.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarmesh.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => rebarmesh.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => rebarmesh.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => rebarmesh.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => rebarmesh.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => rebarmesh.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => rebarmesh.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => rebarmesh.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => rebarmesh.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => rebarmesh.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => rebarmesh.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => rebarmesh.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => rebarmesh.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(rebarmesh.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarmesh.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => rebarmesh.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => rebarmesh.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => rebarmesh.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -522,12 +517,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarMesh dynObject)
         {
-            return dynObject.rebarmesh;
+            return dynObject.teklaObject;
         }
 
         public static RebarMesh FromTSObject(dynamic tsObject)
         {
-            return new RebarMesh(tsObject);
+            return new RebarMesh() { teklaObject = tsObject };
         }
     }
 

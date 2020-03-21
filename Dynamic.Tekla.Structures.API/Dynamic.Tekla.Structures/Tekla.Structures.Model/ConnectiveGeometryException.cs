@@ -4,89 +4,84 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ConnectiveGeometryException 
+    public  class ConnectiveGeometryException 
     {
 
 		public System.String Message
 		{
-			get => connectivegeometryexception.Message;
-			set { connectivegeometryexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => connectivegeometryexception.Data;
-			set { connectivegeometryexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => connectivegeometryexception.InnerException;
-			set { connectivegeometryexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => connectivegeometryexception.TargetSite;
-			set { connectivegeometryexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => connectivegeometryexception.StackTrace;
-			set { connectivegeometryexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => connectivegeometryexception.HelpLink;
-			set { connectivegeometryexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => connectivegeometryexception.Source;
-			set { connectivegeometryexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => connectivegeometryexception.HResult;
-			set { connectivegeometryexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(connectivegeometryexception.OperationStatus);
-			set { connectivegeometryexception.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+			set { teklaObject.OperationStatus = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic connectivegeometryexception;
-        
-        public ConnectiveGeometryException()
-        {
-            this.connectivegeometryexception =  TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometryException");
-        }
+        internal dynamic teklaObject;
 
-        internal ConnectiveGeometryException(dynamic tsObject)
-        {
-            this.connectivegeometryexception = tsObject;
-        }
+		public ConnectiveGeometryException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometryException");
+		}
 		public ConnectiveGeometryException(Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus status, System.String errorMessage)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(status);
 			args[1] = errorMessage;
-			this.connectivegeometryexception = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometryException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometryException", args);
 		}
 
 		public System.Exception GetBaseException()
-			 => connectivegeometryexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => connectivegeometryexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -98,12 +93,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ConnectiveGeometryException dynObject)
         {
-            return dynObject.connectivegeometryexception;
+            return dynObject.teklaObject;
         }
 
         public static ConnectiveGeometryException FromTSObject(dynamic tsObject)
         {
-            return new ConnectiveGeometryException(tsObject);
+            return new ConnectiveGeometryException() { teklaObject = tsObject };
         }
     }
 

@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Plane 
+    public  class Plane 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(plane.Origin);
-			set { plane.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisX
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(plane.AxisX);
-			set { plane.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.AxisX);
+			set { teklaObject.AxisX = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector AxisY
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(plane.AxisY);
-			set { plane.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.AxisY);
+			set { teklaObject.AxisY = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic plane;
-        
-        public Plane()
-        {
-            this.plane =  TSActivator.CreateInstance("Tekla.Structures.Model.Plane");
-        }
+        internal dynamic teklaObject;
 
-        internal Plane(dynamic tsObject)
-        {
-            this.plane = tsObject;
-        }
+		public Plane()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Plane");
+		}
 
 
 
@@ -49,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Plane dynObject)
         {
-            return dynObject.plane;
+            return dynObject.teklaObject;
         }
 
         public static Plane FromTSObject(dynamic tsObject)
         {
-            return new Plane(tsObject);
+            return new Plane() { teklaObject = tsObject };
         }
     }
 

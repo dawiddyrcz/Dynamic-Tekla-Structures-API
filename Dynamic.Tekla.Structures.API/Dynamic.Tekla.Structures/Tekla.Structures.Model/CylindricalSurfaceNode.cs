@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class CylindricalSurfaceNode 
+    public  class CylindricalSurfaceNode  : Dynamic.Tekla.Structures.Model.BendSurfaceNode
     {
 
 		public Dynamic.Tekla.Structures.Model.CylindricalSurface Surface
 		{
-			get => Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(cylindricalsurfacenode.Surface);
-			set { cylindricalsurfacenode.Surface = Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
+			set { teklaObject.Surface = Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(value); }
 		}
 
 		public System.Boolean IsAutomatic
 		{
-			get => cylindricalsurfacenode.IsAutomatic;
-			set { cylindricalsurfacenode.IsAutomatic = value; }
+			get => teklaObject.IsAutomatic;
+			set { teklaObject.IsAutomatic = value; }
 		}
 
         
 
-        internal dynamic cylindricalsurfacenode;
-        
-        public CylindricalSurfaceNode()
-        {
-            this.cylindricalsurfacenode =  TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurfaceNode");
-        }
+        internal dynamic teklaObject;
 
-        internal CylindricalSurfaceNode(dynamic tsObject)
-        {
-            this.cylindricalsurfacenode = tsObject;
-        }
+		internal CylindricalSurfaceNode() {}
 		public CylindricalSurfaceNode(Dynamic.Tekla.Structures.Model.CylindricalSurface surface)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(surface);
-			this.cylindricalsurfacenode = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurfaceNode", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurfaceNode", args);
 		}
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-			 => cylindricalsurfacenode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
+			 => teklaObject.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CylindricalSurfaceNode dynObject)
         {
-            return dynObject.cylindricalsurfacenode;
+            return dynObject.teklaObject;
         }
 
         public static CylindricalSurfaceNode FromTSObject(dynamic tsObject)
         {
-            return new CylindricalSurfaceNode(tsObject);
+            return new CylindricalSurfaceNode() { teklaObject = tsObject };
         }
     }
 

@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ClashCheckData 
+    public  class ClashCheckData 
     {
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Object1
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(clashcheckdata.Object1);
-			set { clashcheckdata.Object1 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object1);
+			set { teklaObject.Object1 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Object2
 		{
-			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(clashcheckdata.Object2);
-			set { clashcheckdata.Object2 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object2);
+			set { teklaObject.Object2 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(clashcheckdata.Type);
-			set { clashcheckdata.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.GetTSObject(value); }
 		}
 
 		public System.Double Overlap
 		{
-			get => clashcheckdata.Overlap;
-			set { clashcheckdata.Overlap = value; }
+			get => teklaObject.Overlap;
+			set { teklaObject.Overlap = value; }
 		}
 
         
 
-        internal dynamic clashcheckdata;
-        
-        public ClashCheckData()
-        {
-            this.clashcheckdata =  TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckData");
-        }
+        internal dynamic teklaObject;
 
-        internal ClashCheckData(dynamic tsObject)
-        {
-            this.clashcheckdata = tsObject;
-        }
+		public ClashCheckData()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckData");
+		}
 
 
 
@@ -130,12 +125,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashCheckData dynObject)
         {
-            return dynObject.clashcheckdata;
+            return dynObject.teklaObject;
         }
 
         public static ClashCheckData FromTSObject(dynamic tsObject)
         {
-            return new ClashCheckData(tsObject);
+            return new ClashCheckData() { teklaObject = tsObject };
         }
     }
 

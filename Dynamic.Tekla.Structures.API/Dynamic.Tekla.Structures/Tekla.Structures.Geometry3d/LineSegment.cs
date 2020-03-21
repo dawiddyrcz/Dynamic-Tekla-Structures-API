@@ -4,65 +4,60 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class LineSegment 
+    public  class LineSegment 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(linesegment.Point1);
-			set { linesegment.Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Point1);
+			set { teklaObject.Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Point2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(linesegment.Point2);
-			set { linesegment.Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Point2);
+			set { teklaObject.Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(linesegment.StartPoint);
-			set { linesegment.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(linesegment.EndPoint);
-			set { linesegment.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic linesegment;
-        
-        public LineSegment()
-        {
-            this.linesegment =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment");
-        }
+        internal dynamic teklaObject;
 
-        internal LineSegment(dynamic tsObject)
-        {
-            this.linesegment = tsObject;
-        }
+		public LineSegment()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment");
+		}
 		public LineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2);
-			this.linesegment = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment", args);
 		}
 
 		public System.Double Length()
-			 => linesegment.Length();
+			 => teklaObject.Length();
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
-			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(linesegment.GetDirectionVector());
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-			 => linesegment.op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+			 => teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-			 => linesegment.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+			 => teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
 
 
 
@@ -74,12 +69,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(LineSegment dynObject)
         {
-            return dynObject.linesegment;
+            return dynObject.teklaObject;
         }
 
         public static LineSegment FromTSObject(dynamic tsObject)
         {
-            return new LineSegment(tsObject);
+            return new LineSegment() { teklaObject = tsObject };
         }
     }
 

@@ -4,58 +4,50 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class FacetedBrepWithNormals 
+    public  class FacetedBrepWithNormals  : Dynamic.Tekla.Structures.Geometry3d.FacetedBrep
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normals
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(facetedbrepwithnormals.Normals);
-			set { facetedbrepwithnormals.Normals = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normals);
+			set { teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
 		{
-			get => facetedbrepwithnormals.Faces;
-			set { facetedbrepwithnormals.Faces = value; }
+			get => teklaObject.Faces;
+			set { teklaObject.Faces = value; }
 		}
 
 		public System.Collections.Generic.IDictionary<System.Int32, System.Int32> InnerWires
 		{
-			get => facetedbrepwithnormals.InnerWires;
-			set { facetedbrepwithnormals.InnerWires = value; }
+			get => teklaObject.InnerWires;
+			set { teklaObject.InnerWires = value; }
 		}
 
 		public System.Int32 OuterWires
 		{
-			get => facetedbrepwithnormals.OuterWires;
-			set { facetedbrepwithnormals.OuterWires = value; }
+			get => teklaObject.OuterWires;
+			set { teklaObject.OuterWires = value; }
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
 		{
-			get => facetedbrepwithnormals.GetEdges;
-			set { facetedbrepwithnormals.GetEdges = value; }
+			get => teklaObject.GetEdges;
+			set { teklaObject.GetEdges = value; }
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
-			get => facetedbrepwithnormals.Vertices;
-			set { facetedbrepwithnormals.Vertices = value; }
+			get => teklaObject.Vertices;
+			set { teklaObject.Vertices = value; }
 		}
 
         
 
-        internal dynamic facetedbrepwithnormals;
-        
-        public FacetedBrepWithNormals()
-        {
-            this.facetedbrepwithnormals =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals");
-        }
+        internal dynamic teklaObject;
 
-        internal FacetedBrepWithNormals(dynamic tsObject)
-        {
-            this.facetedbrepwithnormals = tsObject;
-        }
+		internal FacetedBrepWithNormals() {}
 		public FacetedBrepWithNormals(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires, Dynamic.Tekla.Structures.Geometry3d.Vector normals)
 		{
 			var args = new object[4];
@@ -63,20 +55,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[1] = outerWires;
 			args[2] = innerWires;
 			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(normals);
-			this.facetedbrepwithnormals = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals", args);
 		}
 
 		public System.Boolean CheckForTwoManifold()
-			 => facetedbrepwithnormals.CheckForTwoManifold();
+			 => teklaObject.CheckForTwoManifold();
 
 		public System.Int32 GetInnerFace(System.Int32 faceIndex)
-			 => facetedbrepwithnormals.GetInnerFace(faceIndex);
+			 => teklaObject.GetInnerFace(faceIndex);
 
 		public System.Int32 GetInnerFaceCount(System.Int32 faceIndex)
-			 => facetedbrepwithnormals.GetInnerFaceCount(faceIndex);
+			 => teklaObject.GetInnerFaceCount(faceIndex);
 
 		public System.Int32 GetOuterFace(System.Int32 faceIndex)
-			 => facetedbrepwithnormals.GetOuterFace(faceIndex);
+			 => teklaObject.GetOuterFace(faceIndex);
 
 
 
@@ -88,12 +80,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(FacetedBrepWithNormals dynObject)
         {
-            return dynObject.facetedbrepwithnormals;
+            return dynObject.teklaObject;
         }
 
         public static FacetedBrepWithNormals FromTSObject(dynamic tsObject)
         {
-            return new FacetedBrepWithNormals(tsObject);
+            return new FacetedBrepWithNormals() { teklaObject = tsObject };
         }
     }
 

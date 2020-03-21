@@ -4,76 +4,71 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class UnknownLoftedPlateErrorException 
+    public  class UnknownLoftedPlateErrorException  : Dynamic.Tekla.Structures.Model.LoftedPlateOperationException
     {
 
 		public System.String Message
 		{
-			get => unknownloftedplateerrorexception.Message;
-			set { unknownloftedplateerrorexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => unknownloftedplateerrorexception.Data;
-			set { unknownloftedplateerrorexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => unknownloftedplateerrorexception.InnerException;
-			set { unknownloftedplateerrorexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => unknownloftedplateerrorexception.TargetSite;
-			set { unknownloftedplateerrorexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => unknownloftedplateerrorexception.StackTrace;
-			set { unknownloftedplateerrorexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => unknownloftedplateerrorexception.HelpLink;
-			set { unknownloftedplateerrorexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => unknownloftedplateerrorexception.Source;
-			set { unknownloftedplateerrorexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => unknownloftedplateerrorexception.HResult;
-			set { unknownloftedplateerrorexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
         
 
-        internal dynamic unknownloftedplateerrorexception;
-        
-        public UnknownLoftedPlateErrorException()
-        {
-            this.unknownloftedplateerrorexception =  TSActivator.CreateInstance("Tekla.Structures.Model.UnknownLoftedPlateErrorException");
-        }
+        internal dynamic teklaObject;
 
-        internal UnknownLoftedPlateErrorException(dynamic tsObject)
-        {
-            this.unknownloftedplateerrorexception = tsObject;
-        }
+		public UnknownLoftedPlateErrorException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UnknownLoftedPlateErrorException");
+		}
 
 		public System.Exception GetBaseException()
-			 => unknownloftedplateerrorexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => unknownloftedplateerrorexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -85,12 +80,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(UnknownLoftedPlateErrorException dynObject)
         {
-            return dynObject.unknownloftedplateerrorexception;
+            return dynObject.teklaObject;
         }
 
         public static UnknownLoftedPlateErrorException FromTSObject(dynamic tsObject)
         {
-            return new UnknownLoftedPlateErrorException(tsObject);
+            return new UnknownLoftedPlateErrorException() { teklaObject = tsObject };
         }
     }
 

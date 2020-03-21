@@ -4,53 +4,48 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class Color 
+    public  class Color 
     {
 
 		public System.Double Red
 		{
-			get => color.Red;
-			set { color.Red = value; }
+			get => teklaObject.Red;
+			set { teklaObject.Red = value; }
 		}
 
 		public System.Double Green
 		{
-			get => color.Green;
-			set { color.Green = value; }
+			get => teklaObject.Green;
+			set { teklaObject.Green = value; }
 		}
 
 		public System.Double Blue
 		{
-			get => color.Blue;
-			set { color.Blue = value; }
+			get => teklaObject.Blue;
+			set { teklaObject.Blue = value; }
 		}
 
 		public System.Double Transparency
 		{
-			get => color.Transparency;
-			set { color.Transparency = value; }
+			get => teklaObject.Transparency;
+			set { teklaObject.Transparency = value; }
 		}
 
         
 
-        internal dynamic color;
-        
-        public Color()
-        {
-            this.color =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color");
-        }
+        internal dynamic teklaObject;
 
-        internal Color(dynamic tsObject)
-        {
-            this.color = tsObject;
-        }
+		public Color()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color");
+		}
 		public Color(System.Double Red, System.Double Green, System.Double Blue)
 		{
 			var args = new object[3];
 			args[0] = Red;
 			args[1] = Green;
 			args[2] = Blue;
-			this.color = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
 		}
 		public Color(System.Double Red, System.Double Green, System.Double Blue, System.Double Transparency)
 		{
@@ -59,7 +54,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			args[1] = Green;
 			args[2] = Blue;
 			args[3] = Transparency;
-			this.color = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Color", args);
 		}
 
 
@@ -72,12 +67,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(Color dynObject)
         {
-            return dynObject.color;
+            return dynObject.teklaObject;
         }
 
         public static Color FromTSObject(dynamic tsObject)
         {
-            return new Color(tsObject);
+            return new Color() { teklaObject = tsObject };
         }
     }
 

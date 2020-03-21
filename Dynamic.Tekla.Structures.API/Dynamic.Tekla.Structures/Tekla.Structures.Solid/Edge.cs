@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class Edge 
+    public  class Edge 
     {
 
 		public Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(edge.Type);
-			set { edge.Type = Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.FromTSObject(teklaObject.Type);
+			set { teklaObject.Type = Dynamic.Tekla.Structures.Solid.Edge.EdgeTypeEnum_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edge.StartPoint);
-			set { edge.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(edge.EndPoint);
-			set { edge.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic edge;
-        
-        public Edge()
-        {
-            this.edge =  TSActivator.CreateInstance("Tekla.Structures.Solid.Edge");
-        }
+        internal dynamic teklaObject;
 
-        internal Edge(dynamic tsObject)
-        {
-            this.edge = tsObject;
-        }
+		internal Edge() {}
 
 		public System.Object Clone()
-			 => edge.Clone();
+			 => teklaObject.Clone();
 
 
 
@@ -97,12 +89,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(Edge dynObject)
         {
-            return dynObject.edge;
+            return dynObject.teklaObject;
         }
 
         public static Edge FromTSObject(dynamic tsObject)
         {
-            return new Edge(tsObject);
+            return new Edge() { teklaObject = tsObject };
         }
     }
 

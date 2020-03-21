@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class NumberingSeries 
+    public  class NumberingSeries 
     {
 
 		public System.String Prefix
 		{
-			get => numberingseries.Prefix;
-			set { numberingseries.Prefix = value; }
+			get => teklaObject.Prefix;
+			set { teklaObject.Prefix = value; }
 		}
 
 		public System.Int32 StartNumber
 		{
-			get => numberingseries.StartNumber;
-			set { numberingseries.StartNumber = value; }
+			get => teklaObject.StartNumber;
+			set { teklaObject.StartNumber = value; }
 		}
 
         
 
-        internal dynamic numberingseries;
-        
-        public NumberingSeries()
-        {
-            this.numberingseries =  TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries");
-        }
+        internal dynamic teklaObject;
 
-        internal NumberingSeries(dynamic tsObject)
-        {
-            this.numberingseries = tsObject;
-        }
+		public NumberingSeries()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries");
+		}
 		public NumberingSeries(System.String Prefix, System.Int32 Number)
 		{
 			var args = new object[2];
 			args[0] = Prefix;
 			args[1] = Number;
-			this.numberingseries = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.NumberingSeries", args);
 		}
 
 
@@ -50,12 +45,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(NumberingSeries dynObject)
         {
-            return dynObject.numberingseries;
+            return dynObject.teklaObject;
         }
 
         public static NumberingSeries FromTSObject(dynamic tsObject)
         {
-            return new NumberingSeries(tsObject);
+            return new NumberingSeries() { teklaObject = tsObject };
         }
     }
 

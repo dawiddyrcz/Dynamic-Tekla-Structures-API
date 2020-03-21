@@ -4,64 +4,59 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class RebarCrankingNullable 
+    public  class RebarCrankingNullable 
     {
 
 		public System.Double CrankRotation
 		{
-			get => rebarcrankingnullable.CrankRotation;
-			set { rebarcrankingnullable.CrankRotation = value; }
+			get => teklaObject.CrankRotation;
+			set { teklaObject.CrankRotation = value; }
 		}
 
 		public System.Double CrankStraightLength
 		{
-			get => rebarcrankingnullable.CrankStraightLength;
-			set { rebarcrankingnullable.CrankStraightLength = value; }
+			get => teklaObject.CrankStraightLength;
+			set { teklaObject.CrankStraightLength = value; }
 		}
 
 		public Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum CrankedLengthType
 		{
-			get => rebarcrankingnullable.CrankedLengthType;
-			set { rebarcrankingnullable.CrankedLengthType = value; }
+			get => teklaObject.CrankedLengthType;
+			set { teklaObject.CrankedLengthType = value; }
 		}
 
 		public System.Double CrankedRatio
 		{
-			get => rebarcrankingnullable.CrankedRatio;
-			set { rebarcrankingnullable.CrankedRatio = value; }
+			get => teklaObject.CrankedRatio;
+			set { teklaObject.CrankedRatio = value; }
 		}
 
 		public System.Double CrankedDistance
 		{
-			get => rebarcrankingnullable.CrankedDistance;
-			set { rebarcrankingnullable.CrankedDistance = value; }
+			get => teklaObject.CrankedDistance;
+			set { teklaObject.CrankedDistance = value; }
 		}
 
 		public System.Double CrankedOffset
 		{
-			get => rebarcrankingnullable.CrankedOffset;
-			set { rebarcrankingnullable.CrankedOffset = value; }
+			get => teklaObject.CrankedOffset;
+			set { teklaObject.CrankedOffset = value; }
 		}
 
 		public Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum CrankingType
 		{
-			get => rebarcrankingnullable.CrankingType;
-			set { rebarcrankingnullable.CrankingType = value; }
+			get => teklaObject.CrankingType;
+			set { teklaObject.CrankingType = value; }
 		}
 
         
 
-        internal dynamic rebarcrankingnullable;
-        
-        public RebarCrankingNullable()
-        {
-            this.rebarcrankingnullable =  TSActivator.CreateInstance("Tekla.Structures.Model.RebarCrankingNullable");
-        }
+        internal dynamic teklaObject;
 
-        internal RebarCrankingNullable(dynamic tsObject)
-        {
-            this.rebarcrankingnullable = tsObject;
-        }
+		public RebarCrankingNullable()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarCrankingNullable");
+		}
 
 
 
@@ -118,12 +113,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(RebarCrankingNullable dynObject)
         {
-            return dynObject.rebarcrankingnullable;
+            return dynObject.teklaObject;
         }
 
         public static RebarCrankingNullable FromTSObject(dynamic tsObject)
         {
-            return new RebarCrankingNullable(tsObject);
+            return new RebarCrankingNullable() { teklaObject = tsObject };
         }
     }
 

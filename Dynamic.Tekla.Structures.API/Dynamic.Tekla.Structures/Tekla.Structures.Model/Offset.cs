@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class Offset 
+    public  class Offset 
     {
 
 		public System.Double Dx
 		{
-			get => offset.Dx;
-			set { offset.Dx = value; }
+			get => teklaObject.Dx;
+			set { teklaObject.Dx = value; }
 		}
 
 		public System.Double Dy
 		{
-			get => offset.Dy;
-			set { offset.Dy = value; }
+			get => teklaObject.Dy;
+			set { teklaObject.Dy = value; }
 		}
 
 		public System.Double Dz
 		{
-			get => offset.Dz;
-			set { offset.Dz = value; }
+			get => teklaObject.Dz;
+			set { teklaObject.Dz = value; }
 		}
 
         
 
-        internal dynamic offset;
-        
-        public Offset()
-        {
-            this.offset =  TSActivator.CreateInstance("Tekla.Structures.Model.Offset");
-        }
+        internal dynamic teklaObject;
 
-        internal Offset(dynamic tsObject)
-        {
-            this.offset = tsObject;
-        }
+		public Offset()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Offset");
+		}
 
 
 
@@ -49,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Offset dynObject)
         {
-            return dynObject.offset;
+            return dynObject.teklaObject;
         }
 
         public static Offset FromTSObject(dynamic tsObject)
         {
-            return new Offset(tsObject);
+            return new Offset() { teklaObject = tsObject };
         }
     }
 

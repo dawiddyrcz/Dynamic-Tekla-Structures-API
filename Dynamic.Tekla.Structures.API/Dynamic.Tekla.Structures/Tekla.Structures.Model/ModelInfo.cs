@@ -4,58 +4,50 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ModelInfo 
+    public  class ModelInfo 
     {
 
 		public System.Double NorthDirection
 		{
-			get => modelinfo.NorthDirection;
-			set { modelinfo.NorthDirection = value; }
+			get => teklaObject.NorthDirection;
+			set { teklaObject.NorthDirection = value; }
 		}
 
 		public System.String ModelPath
 		{
-			get => modelinfo.ModelPath;
-			set { modelinfo.ModelPath = value; }
+			get => teklaObject.ModelPath;
+			set { teklaObject.ModelPath = value; }
 		}
 
 		public System.String ModelName
 		{
-			get => modelinfo.ModelName;
-			set { modelinfo.ModelName = value; }
+			get => teklaObject.ModelName;
+			set { teklaObject.ModelName = value; }
 		}
 
 		public System.Int32 CurrentPhase
 		{
-			get => modelinfo.CurrentPhase;
-			set { modelinfo.CurrentPhase = value; }
+			get => teklaObject.CurrentPhase;
+			set { teklaObject.CurrentPhase = value; }
 		}
 
 		public System.Boolean SharedModel
 		{
-			get => modelinfo.SharedModel;
-			set { modelinfo.SharedModel = value; }
+			get => teklaObject.SharedModel;
+			set { teklaObject.SharedModel = value; }
 		}
 
 		public System.Boolean SingleUserModel
 		{
-			get => modelinfo.SingleUserModel;
-			set { modelinfo.SingleUserModel = value; }
+			get => teklaObject.SingleUserModel;
+			set { teklaObject.SingleUserModel = value; }
 		}
 
         
 
-        internal dynamic modelinfo;
-        
-        public ModelInfo()
-        {
-            this.modelinfo =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelInfo");
-        }
+        internal dynamic teklaObject;
 
-        internal ModelInfo(dynamic tsObject)
-        {
-            this.modelinfo = tsObject;
-        }
+		internal ModelInfo() {}
 
 
 
@@ -67,12 +59,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelInfo dynObject)
         {
-            return dynObject.modelinfo;
+            return dynObject.teklaObject;
         }
 
         public static ModelInfo FromTSObject(dynamic tsObject)
         {
-            return new ModelInfo(tsObject);
+            return new ModelInfo() { teklaObject = tsObject };
         }
     }
 

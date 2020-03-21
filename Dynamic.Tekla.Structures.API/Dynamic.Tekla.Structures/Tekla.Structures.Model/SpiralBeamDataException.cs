@@ -4,89 +4,81 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class SpiralBeamDataException 
+    public  class SpiralBeamDataException 
     {
 
 		public System.String Message
 		{
-			get => spiralbeamdataexception.Message;
-			set { spiralbeamdataexception.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.Collections.IDictionary Data
 		{
-			get => spiralbeamdataexception.Data;
-			set { spiralbeamdataexception.Data = value; }
+			get => teklaObject.Data;
+			set { teklaObject.Data = value; }
 		}
 
 		public System.Exception InnerException
 		{
-			get => spiralbeamdataexception.InnerException;
-			set { spiralbeamdataexception.InnerException = value; }
+			get => teklaObject.InnerException;
+			set { teklaObject.InnerException = value; }
 		}
 
 		public System.Reflection.MethodBase TargetSite
 		{
-			get => spiralbeamdataexception.TargetSite;
-			set { spiralbeamdataexception.TargetSite = value; }
+			get => teklaObject.TargetSite;
+			set { teklaObject.TargetSite = value; }
 		}
 
 		public System.String StackTrace
 		{
-			get => spiralbeamdataexception.StackTrace;
-			set { spiralbeamdataexception.StackTrace = value; }
+			get => teklaObject.StackTrace;
+			set { teklaObject.StackTrace = value; }
 		}
 
 		public System.String HelpLink
 		{
-			get => spiralbeamdataexception.HelpLink;
-			set { spiralbeamdataexception.HelpLink = value; }
+			get => teklaObject.HelpLink;
+			set { teklaObject.HelpLink = value; }
 		}
 
 		public System.String Source
 		{
-			get => spiralbeamdataexception.Source;
-			set { spiralbeamdataexception.Source = value; }
+			get => teklaObject.Source;
+			set { teklaObject.Source = value; }
 		}
 
 		public System.Int32 HResult
 		{
-			get => spiralbeamdataexception.HResult;
-			set { spiralbeamdataexception.HResult = value; }
+			get => teklaObject.HResult;
+			set { teklaObject.HResult = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(spiralbeamdataexception.ErrorStatus);
-			set { spiralbeamdataexception.ErrorStatus = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(teklaObject.ErrorStatus);
+			set { teklaObject.ErrorStatus = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic spiralbeamdataexception;
-        
-        public SpiralBeamDataException()
-        {
-            this.spiralbeamdataexception =  TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException");
-        }
+        internal dynamic teklaObject;
 
-        internal SpiralBeamDataException(dynamic tsObject)
-        {
-            this.spiralbeamdataexception = tsObject;
-        }
+		internal SpiralBeamDataException() {}
 		public SpiralBeamDataException(Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus status, System.String message)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.GetTSObject(status);
 			args[1] = message;
-			this.spiralbeamdataexception = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException", args);
 		}
 
 		public System.Exception GetBaseException()
-			 => spiralbeamdataexception.GetBaseException();
+			 => teklaObject.GetBaseException();
 
 		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => spiralbeamdataexception.GetObjectData(info, context);
+			 => teklaObject.GetObjectData(info, context);
 
 
 
@@ -98,12 +90,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SpiralBeamDataException dynObject)
         {
-            return dynObject.spiralbeamdataexception;
+            return dynObject.teklaObject;
         }
 
         public static SpiralBeamDataException FromTSObject(dynamic tsObject)
         {
-            return new SpiralBeamDataException(tsObject);
+            return new SpiralBeamDataException() { teklaObject = tsObject };
         }
     }
 

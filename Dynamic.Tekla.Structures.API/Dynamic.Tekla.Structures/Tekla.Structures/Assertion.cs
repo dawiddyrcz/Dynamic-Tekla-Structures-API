@@ -4,47 +4,39 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class Assertion 
+    public  class Assertion 
     {
 
 		public System.String Message
 		{
-			get => assertion.Message;
-			set { assertion.Message = value; }
+			get => teklaObject.Message;
+			set { teklaObject.Message = value; }
 		}
 
 		public System.String DetailedMessage
 		{
-			get => assertion.DetailedMessage;
-			set { assertion.DetailedMessage = value; }
+			get => teklaObject.DetailedMessage;
+			set { teklaObject.DetailedMessage = value; }
 		}
 
 		public System.String MethodName
 		{
-			get => assertion.MethodName;
-			set { assertion.MethodName = value; }
+			get => teklaObject.MethodName;
+			set { teklaObject.MethodName = value; }
 		}
 
         
 
-        internal dynamic assertion;
-        
-        public Assertion()
-        {
-            this.assertion =  TSActivator.CreateInstance("Tekla.Structures.Assertion");
-        }
+        internal dynamic teklaObject;
 
-        internal Assertion(dynamic tsObject)
-        {
-            this.assertion = tsObject;
-        }
+		internal Assertion() {}
 		public Assertion(System.String message, System.String detailedMessage, System.String methodName)
 		{
 			var args = new object[3];
 			args[0] = message;
 			args[1] = detailedMessage;
 			args[2] = methodName;
-			this.assertion = TSActivator.CreateInstance("Tekla.Structures.Assertion", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Assertion", args);
 		}
 
 
@@ -57,12 +49,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(Assertion dynObject)
         {
-            return dynObject.assertion;
+            return dynObject.teklaObject;
         }
 
         public static Assertion FromTSObject(dynamic tsObject)
         {
-            return new Assertion(tsObject);
+            return new Assertion() { teklaObject = tsObject };
         }
     }
 

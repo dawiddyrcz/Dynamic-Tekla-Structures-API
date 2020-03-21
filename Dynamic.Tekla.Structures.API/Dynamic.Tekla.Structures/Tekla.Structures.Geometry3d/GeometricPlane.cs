@@ -4,40 +4,35 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class GeometricPlane 
+    public  class GeometricPlane 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(geometricplane.Origin);
-			set { geometricplane.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(geometricplane.Normal);
-			set { geometricplane.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normal);
+			set { teklaObject.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic geometricplane;
-        
-        public GeometricPlane()
-        {
-            this.geometricplane =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane");
-        }
+        internal dynamic teklaObject;
 
-        internal GeometricPlane(dynamic tsObject)
-        {
-            this.geometricplane = tsObject;
-        }
+		public GeometricPlane()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane");
+		}
 		public GeometricPlane(Dynamic.Tekla.Structures.Geometry3d.Point Origin, Dynamic.Tekla.Structures.Geometry3d.Vector Normal)
 		{
 			var args = new object[2];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origin);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Normal);
-			this.geometricplane = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
 		}
 		public GeometricPlane(Dynamic.Tekla.Structures.Geometry3d.Point Origin, Dynamic.Tekla.Structures.Geometry3d.Vector Xaxis, Dynamic.Tekla.Structures.Geometry3d.Vector Yaxis)
 		{
@@ -45,17 +40,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origin);
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Xaxis);
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Yaxis);
-			this.geometricplane = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
 		}
 		public GeometricPlane(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys);
-			this.geometricplane = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
-			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(geometricplane.GetNormal());
+			 => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetNormal());
 
 
 
@@ -67,12 +62,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(GeometricPlane dynObject)
         {
-            return dynObject.geometricplane;
+            return dynObject.teklaObject;
         }
 
         public static GeometricPlane FromTSObject(dynamic tsObject)
         {
-            return new GeometricPlane(tsObject);
+            return new GeometricPlane() { teklaObject = tsObject };
         }
     }
 

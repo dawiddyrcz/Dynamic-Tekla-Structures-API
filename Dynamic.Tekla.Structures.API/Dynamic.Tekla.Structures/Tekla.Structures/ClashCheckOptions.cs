@@ -4,34 +4,29 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class ClashCheckOptions 
+    public  class ClashCheckOptions 
     {
 
 		public System.Double BoltHeadDiameter
 		{
-			get => clashcheckoptions.BoltHeadDiameter;
-			set { clashcheckoptions.BoltHeadDiameter = value; }
+			get => teklaObject.BoltHeadDiameter;
+			set { teklaObject.BoltHeadDiameter = value; }
 		}
 
 		public System.Double NutThickness
 		{
-			get => clashcheckoptions.NutThickness;
-			set { clashcheckoptions.NutThickness = value; }
+			get => teklaObject.NutThickness;
+			set { teklaObject.NutThickness = value; }
 		}
 
         
 
-        internal dynamic clashcheckoptions;
-        
-        public ClashCheckOptions()
-        {
-            this.clashcheckoptions =  TSActivator.CreateInstance("Tekla.Structures.ClashCheckOptions");
-        }
+        internal dynamic teklaObject;
 
-        internal ClashCheckOptions(dynamic tsObject)
-        {
-            this.clashcheckoptions = tsObject;
-        }
+		public ClashCheckOptions()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.ClashCheckOptions");
+		}
 
 
 
@@ -43,12 +38,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ClashCheckOptions dynObject)
         {
-            return dynObject.clashcheckoptions;
+            return dynObject.teklaObject;
         }
 
         public static ClashCheckOptions FromTSObject(dynamic tsObject)
         {
-            return new ClashCheckOptions(tsObject);
+            return new ClashCheckOptions() { teklaObject = tsObject };
         }
     }
 

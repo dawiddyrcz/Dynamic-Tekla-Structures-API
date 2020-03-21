@@ -4,169 +4,164 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class LoadGroup 
+    public  class LoadGroup  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.String GroupName
 		{
-			get => loadgroup.GroupName;
-			set { loadgroup.GroupName = value; }
+			get => teklaObject.GroupName;
+			set { teklaObject.GroupName = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType GroupType
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(loadgroup.GroupType);
-			set { loadgroup.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(teklaObject.GroupType);
+			set { teklaObject.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection Direction
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(loadgroup.Direction);
-			set { loadgroup.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(teklaObject.Direction);
+			set { teklaObject.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value); }
 		}
 
 		public System.Int32 Compatible
 		{
-			get => loadgroup.Compatible;
-			set { loadgroup.Compatible = value; }
+			get => teklaObject.Compatible;
+			set { teklaObject.Compatible = value; }
 		}
 
 		public System.Int32 Incompatible
 		{
-			get => loadgroup.Incompatible;
-			set { loadgroup.Incompatible = value; }
+			get => teklaObject.Incompatible;
+			set { teklaObject.Incompatible = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.Colors Color
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(loadgroup.Color);
-			set { loadgroup.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(teklaObject.Color);
+			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value); }
 		}
 
 		public System.DateTime ModificationTime
 		{
-			get => loadgroup.ModificationTime;
-			set { loadgroup.ModificationTime = value; }
+			get => teklaObject.ModificationTime;
+			set { teklaObject.ModificationTime = value; }
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => loadgroup.IsUpToDate;
-			set { loadgroup.IsUpToDate = value; }
+			get => teklaObject.IsUpToDate;
+			set { teklaObject.IsUpToDate = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(loadgroup.Identifier);
-			set { loadgroup.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
 		}
 
         
 
-        internal dynamic loadgroup;
-        
-        public LoadGroup()
-        {
-            this.loadgroup =  TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup");
-        }
+        internal dynamic teklaObject;
 
-        internal LoadGroup(dynamic tsObject)
-        {
-            this.loadgroup = tsObject;
-        }
+		public LoadGroup()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.LoadGroup");
+		}
 
 		public System.Boolean Insert()
-			 => loadgroup.Insert();
+			 => teklaObject.Insert();
 
 		public System.Boolean Select()
-			 => loadgroup.Select();
+			 => teklaObject.Select();
 
 		public System.Boolean Modify()
-			 => loadgroup.Modify();
+			 => teklaObject.Modify();
 
 		public System.Boolean Delete()
-			 => loadgroup.Delete();
+			 => teklaObject.Delete();
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetChildren()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadgroup.GetChildren());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetChildren());
 
 		public Dynamic.Tekla.Structures.Model.BaseComponent GetFatherComponent()
-			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(loadgroup.GetFatherComponent());
+			 => Dynamic.Tekla.Structures.Model.BaseComponent_.FromTSObject(teklaObject.GetFatherComponent());
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetHierarchicObjects()
-			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(loadgroup.GetHierarchicObjects());
+			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetHierarchicObjects());
 
 		public System.Boolean GetAllUserProperties(System.Collections.Hashtable values)
-			 => loadgroup.GetAllUserProperties(values);
+			 => teklaObject.GetAllUserProperties(values);
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Hashtable values)
-			 => loadgroup.GetIntegerUserProperties(values);
+			 => teklaObject.GetIntegerUserProperties(values);
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Hashtable values)
-			 => loadgroup.GetDoubleUserProperties(values);
+			 => teklaObject.GetDoubleUserProperties(values);
 
 		public System.Boolean GetStringUserProperties(System.Collections.Hashtable values)
-			 => loadgroup.GetStringUserProperties(values);
+			 => teklaObject.GetStringUserProperties(values);
 
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, System.Collections.Hashtable values)
-			 => loadgroup.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
+			 => teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, values);
 
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadgroup.GetIntegerReportProperties(names, values);
+			 => teklaObject.GetIntegerReportProperties(names, values);
 
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadgroup.GetDoubleReportProperties(names, values);
+			 => teklaObject.GetDoubleReportProperties(names, values);
 
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, System.Collections.Hashtable values)
-			 => loadgroup.GetStringReportProperties(names, values);
+			 => teklaObject.GetStringReportProperties(names, values);
 
 		public System.Boolean GetUserProperty(System.String name, System.String value)
-			 => loadgroup.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.String value)
-			 => loadgroup.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Double value)
-			 => loadgroup.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Double value)
-			 => loadgroup.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetUserProperty(System.String name, System.Int32 value)
-			 => loadgroup.GetUserProperty(name, value);
+			 => teklaObject.GetUserProperty(name, value);
 
 		public System.Boolean GetReportProperty(System.String name, System.Int32 value)
-			 => loadgroup.GetReportProperty(name, value);
+			 => teklaObject.GetReportProperty(name, value);
 
 		public System.Boolean GetDynamicStringProperty(System.String name, System.String value)
-			 => loadgroup.GetDynamicStringProperty(name, value);
+			 => teklaObject.GetDynamicStringProperty(name, value);
 
 		public System.Boolean SetDynamicStringProperty(System.String name, System.String value)
-			 => loadgroup.SetDynamicStringProperty(name, value);
+			 => teklaObject.SetDynamicStringProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.String value)
-			 => loadgroup.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Double value)
-			 => loadgroup.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public System.Boolean SetUserProperty(System.String name, System.Int32 value)
-			 => loadgroup.SetUserProperty(name, value);
+			 => teklaObject.SetUserProperty(name, value);
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
-			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(loadgroup.GetCoordinateSystem());
+			 => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem());
 
 		public System.Boolean SetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadgroup.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean GetPhase(Dynamic.Tekla.Structures.Model.Phase phase)
-			 => loadgroup.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
+			 => teklaObject.GetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 
 		public System.Boolean SetLabel(System.String label)
-			 => loadgroup.SetLabel(label);
+			 => teklaObject.SetLabel(label);
 
 		public System.Int32 CompareTo(System.Object obj)
-			 => loadgroup.CompareTo(obj);
+			 => teklaObject.CompareTo(obj);
 
 
 
@@ -738,12 +733,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(LoadGroup dynObject)
         {
-            return dynObject.loadgroup;
+            return dynObject.teklaObject;
         }
 
         public static LoadGroup FromTSObject(dynamic tsObject)
         {
-            return new LoadGroup(tsObject);
+            return new LoadGroup() { teklaObject = tsObject };
         }
     }
 

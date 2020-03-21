@@ -4,43 +4,35 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class PolyLine 
+    public  class PolyLine 
     {
 
 		public System.Collections.ArrayList Points
 		{
-			get => polyline.Points;
-			set { polyline.Points = value; }
+			get => teklaObject.Points;
+			set { teklaObject.Points = value; }
 		}
 
         
 
-        internal dynamic polyline;
-        
-        public PolyLine()
-        {
-            this.polyline =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine");
-        }
+        internal dynamic teklaObject;
 
-        internal PolyLine(dynamic tsObject)
-        {
-            this.polyline = tsObject;
-        }
+		internal PolyLine() {}
 		public PolyLine(System.Collections.IEnumerable Points)
 		{
 			var args = new object[1];
 			args[0] = Points;
-			this.polyline = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine", args);
 		}
 
 		public System.Double Length()
-			 => polyline.Length();
+			 => teklaObject.Length();
 
 		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => polyline.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+			 => teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
 
 		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
-			 => polyline.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+			 => teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
 
 
 
@@ -52,12 +44,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(PolyLine dynObject)
         {
-            return dynObject.polyline;
+            return dynObject.teklaObject;
         }
 
         public static PolyLine FromTSObject(dynamic tsObject)
         {
-            return new PolyLine(tsObject);
+            return new PolyLine() { teklaObject = tsObject };
         }
     }
 

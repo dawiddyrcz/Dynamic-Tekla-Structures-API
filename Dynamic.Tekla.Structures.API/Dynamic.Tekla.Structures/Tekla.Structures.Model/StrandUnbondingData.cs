@@ -4,52 +4,47 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class StrandUnbondingData 
+    public  class StrandUnbondingData 
     {
 
 		public System.Int32 StrandIndex
 		{
-			get => strandunbondingdata.StrandIndex;
-			set { strandunbondingdata.StrandIndex = value; }
+			get => teklaObject.StrandIndex;
+			set { teklaObject.StrandIndex = value; }
 		}
 
 		public System.Double FromStart
 		{
-			get => strandunbondingdata.FromStart;
-			set { strandunbondingdata.FromStart = value; }
+			get => teklaObject.FromStart;
+			set { teklaObject.FromStart = value; }
 		}
 
 		public System.Double MiddleToStart
 		{
-			get => strandunbondingdata.MiddleToStart;
-			set { strandunbondingdata.MiddleToStart = value; }
+			get => teklaObject.MiddleToStart;
+			set { teklaObject.MiddleToStart = value; }
 		}
 
 		public System.Double MiddleToEnd
 		{
-			get => strandunbondingdata.MiddleToEnd;
-			set { strandunbondingdata.MiddleToEnd = value; }
+			get => teklaObject.MiddleToEnd;
+			set { teklaObject.MiddleToEnd = value; }
 		}
 
 		public System.Double FromEnd
 		{
-			get => strandunbondingdata.FromEnd;
-			set { strandunbondingdata.FromEnd = value; }
+			get => teklaObject.FromEnd;
+			set { teklaObject.FromEnd = value; }
 		}
 
         
 
-        internal dynamic strandunbondingdata;
-        
-        public StrandUnbondingData()
-        {
-            this.strandunbondingdata =  TSActivator.CreateInstance("Tekla.Structures.Model.StrandUnbondingData");
-        }
+        internal dynamic teklaObject;
 
-        internal StrandUnbondingData(dynamic tsObject)
-        {
-            this.strandunbondingdata = tsObject;
-        }
+		public StrandUnbondingData()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.StrandUnbondingData");
+		}
 
 
 
@@ -61,12 +56,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(StrandUnbondingData dynObject)
         {
-            return dynObject.strandunbondingdata;
+            return dynObject.teklaObject;
         }
 
         public static StrandUnbondingData FromTSObject(dynamic tsObject)
         {
-            return new StrandUnbondingData(tsObject);
+            return new StrandUnbondingData() { teklaObject = tsObject };
         }
     }
 

@@ -4,34 +4,26 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public sealed class Distance 
+    public  class Distance 
     {
 
         
 
-        internal dynamic distance;
-        
-        private Distance()
-        {
-            this.distance =  TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Distance");
-        }
+        internal dynamic teklaObject;
 
-        internal Distance(dynamic tsObject)
-        {
-            this.distance = tsObject;
-        }
+		internal Distance() {}
 
 		public System.Double PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-			 => distance.PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
+			 => teklaObject.PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
 
 		public System.Double PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
-			 => distance.PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line));
+			 => teklaObject.PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line));
 
 		public System.Double PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
-			 => distance.PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
+			 => teklaObject.PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
 
 		public System.Double PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-			 => distance.PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
+			 => teklaObject.PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane));
 
 
 
@@ -43,12 +35,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(Distance dynObject)
         {
-            return dynObject.distance;
+            return dynObject.teklaObject;
         }
 
         public static Distance FromTSObject(dynamic tsObject)
         {
-            return new Distance(tsObject);
+            return new Distance() { teklaObject = tsObject };
         }
     }
 

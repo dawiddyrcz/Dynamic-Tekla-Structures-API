@@ -4,43 +4,38 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public sealed class ModelHandler 
+    public  class ModelHandler 
     {
 
         
 
-        internal dynamic modelhandler;
-        
-        public ModelHandler()
-        {
-            this.modelhandler =  TSActivator.CreateInstance("Tekla.Structures.Model.ModelHandler");
-        }
+        internal dynamic teklaObject;
 
-        internal ModelHandler(dynamic tsObject)
-        {
-            this.modelhandler = tsObject;
-        }
+		public ModelHandler()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ModelHandler");
+		}
 
 		public System.Boolean CreateNewSingleUserModel(System.String ModelName, System.String ModelFolder, System.String Template)
-			 => modelhandler.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
+			 => teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
 
 		public System.Boolean CreateNewMultiUserModel(System.String ModelName, System.String ModelFolder, System.String ServerName)
-			 => modelhandler.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
+			 => teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
 
 		public System.Boolean Save(System.String Comment, System.String User)
-			 => modelhandler.Save(Comment, User);
+			 => teklaObject.Save(Comment, User);
 
 		public System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
-			 => modelhandler.Open(ModelFolder, OpenAutoSaved);
+			 => teklaObject.Open(ModelFolder, OpenAutoSaved);
 
 		public void Close()
-			 => modelhandler.Close();
+			 => teklaObject.Close();
 
 		public System.Boolean IsModelSaved()
-			 => modelhandler.IsModelSaved();
+			 => teklaObject.IsModelSaved();
 
 		public System.Boolean IsModelAutoSaved(System.String ModelFolder)
-			 => modelhandler.IsModelAutoSaved(ModelFolder);
+			 => teklaObject.IsModelAutoSaved(ModelFolder);
 
 
 
@@ -52,12 +47,12 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelHandler dynObject)
         {
-            return dynObject.modelhandler;
+            return dynObject.teklaObject;
         }
 
         public static ModelHandler FromTSObject(dynamic tsObject)
         {
-            return new ModelHandler(tsObject);
+            return new ModelHandler() { teklaObject = tsObject };
         }
     }
 

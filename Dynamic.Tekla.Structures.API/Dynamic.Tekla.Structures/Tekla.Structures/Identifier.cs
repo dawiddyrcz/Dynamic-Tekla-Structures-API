@@ -4,61 +4,56 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public sealed class Identifier 
+    public  class Identifier 
     {
 
 		public System.Int32 ID
 		{
-			get => identifier.ID;
-			set { identifier.ID = value; }
+			get => teklaObject.ID;
+			set { teklaObject.ID = value; }
 		}
 
 		public System.Int32 ID2
 		{
-			get => identifier.ID2;
-			set { identifier.ID2 = value; }
+			get => teklaObject.ID2;
+			set { teklaObject.ID2 = value; }
 		}
 
 		public System.Guid GUID
 		{
-			get => identifier.GUID;
-			set { identifier.GUID = value; }
+			get => teklaObject.GUID;
+			set { teklaObject.GUID = value; }
 		}
 
         
 
-        internal dynamic identifier;
-        
-        public Identifier()
-        {
-            this.identifier =  TSActivator.CreateInstance("Tekla.Structures.Identifier");
-        }
+        internal dynamic teklaObject;
 
-        internal Identifier(dynamic tsObject)
-        {
-            this.identifier = tsObject;
-        }
+		public Identifier()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Identifier");
+		}
 		public Identifier(System.Int32 id)
 		{
 			var args = new object[1];
 			args[0] = id;
-			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
 		}
 		public Identifier(System.Guid guid)
 		{
 			var args = new object[1];
 			args[0] = guid;
-			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
 		}
 		public Identifier(System.String guid)
 		{
 			var args = new object[1];
 			args[0] = guid;
-			this.identifier = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
 		}
 
 		public System.Boolean IsValid()
-			 => identifier.IsValid();
+			 => teklaObject.IsValid();
 
 
 
@@ -70,12 +65,12 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(Identifier dynObject)
         {
-            return dynObject.identifier;
+            return dynObject.teklaObject;
         }
 
         public static Identifier FromTSObject(dynamic tsObject)
         {
-            return new Identifier(tsObject);
+            return new Identifier() { teklaObject = tsObject };
         }
     }
 

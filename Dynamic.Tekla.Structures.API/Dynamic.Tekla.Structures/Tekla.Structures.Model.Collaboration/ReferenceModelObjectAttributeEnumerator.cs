@@ -4,40 +4,32 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public sealed class ReferenceModelObjectAttributeEnumerator 
+    public  class ReferenceModelObjectAttributeEnumerator 
     {
 
 		public System.Object Current
 		{
-			get => referencemodelobjectattributeenumerator.Current;
-			set { referencemodelobjectattributeenumerator.Current = value; }
+			get => teklaObject.Current;
+			set { teklaObject.Current = value; }
 		}
 
         
 
-        internal dynamic referencemodelobjectattributeenumerator;
-        
-        public ReferenceModelObjectAttributeEnumerator()
-        {
-            this.referencemodelobjectattributeenumerator =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator");
-        }
+        internal dynamic teklaObject;
 
-        internal ReferenceModelObjectAttributeEnumerator(dynamic tsObject)
-        {
-            this.referencemodelobjectattributeenumerator = tsObject;
-        }
+		internal ReferenceModelObjectAttributeEnumerator() {}
 		public ReferenceModelObjectAttributeEnumerator(Dynamic.Tekla.Structures.Model.ReferenceModelObject RMO)
 		{
 			var args = new object[1];
 			args[0] = Dynamic.Tekla.Structures.Model.ReferenceModelObject_.GetTSObject(RMO);
-			this.referencemodelobjectattributeenumerator = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator", args);
 		}
 
 		public System.Boolean MoveNext()
-			 => referencemodelobjectattributeenumerator.MoveNext();
+			 => teklaObject.MoveNext();
 
 		public void Reset()
-			 => referencemodelobjectattributeenumerator.Reset();
+			 => teklaObject.Reset();
 
 
 
@@ -49,12 +41,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(ReferenceModelObjectAttributeEnumerator dynObject)
         {
-            return dynObject.referencemodelobjectattributeenumerator;
+            return dynObject.teklaObject;
         }
 
         public static ReferenceModelObjectAttributeEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ReferenceModelObjectAttributeEnumerator(tsObject);
+            return new ReferenceModelObjectAttributeEnumerator() { teklaObject = tsObject };
         }
     }
 

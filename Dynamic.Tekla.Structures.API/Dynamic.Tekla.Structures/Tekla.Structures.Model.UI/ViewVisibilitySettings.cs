@@ -4,184 +4,179 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public sealed class ViewVisibilitySettings 
+    public  class ViewVisibilitySettings 
     {
 
 		public System.Boolean PointsVisible
 		{
-			get => viewvisibilitysettings.PointsVisible;
-			set { viewvisibilitysettings.PointsVisible = value; }
+			get => teklaObject.PointsVisible;
+			set { teklaObject.PointsVisible = value; }
 		}
 
 		public System.Boolean PartsVisible
 		{
-			get => viewvisibilitysettings.PartsVisible;
-			set { viewvisibilitysettings.PartsVisible = value; }
+			get => teklaObject.PartsVisible;
+			set { teklaObject.PartsVisible = value; }
 		}
 
 		public System.Boolean BoltsVisible
 		{
-			get => viewvisibilitysettings.BoltsVisible;
-			set { viewvisibilitysettings.BoltsVisible = value; }
+			get => teklaObject.BoltsVisible;
+			set { teklaObject.BoltsVisible = value; }
 		}
 
 		public System.Boolean BoltHolesVisible
 		{
-			get => viewvisibilitysettings.BoltHolesVisible;
-			set { viewvisibilitysettings.BoltHolesVisible = value; }
+			get => teklaObject.BoltHolesVisible;
+			set { teklaObject.BoltHolesVisible = value; }
 		}
 
 		public System.Boolean WeldsVisible
 		{
-			get => viewvisibilitysettings.WeldsVisible;
-			set { viewvisibilitysettings.WeldsVisible = value; }
+			get => teklaObject.WeldsVisible;
+			set { teklaObject.WeldsVisible = value; }
 		}
 
 		public System.Boolean ConstructionPlanesVisible
 		{
-			get => viewvisibilitysettings.ConstructionPlanesVisible;
-			set { viewvisibilitysettings.ConstructionPlanesVisible = value; }
+			get => teklaObject.ConstructionPlanesVisible;
+			set { teklaObject.ConstructionPlanesVisible = value; }
 		}
 
 		public System.Boolean RebarsVisible
 		{
-			get => viewvisibilitysettings.RebarsVisible;
-			set { viewvisibilitysettings.RebarsVisible = value; }
+			get => teklaObject.RebarsVisible;
+			set { teklaObject.RebarsVisible = value; }
 		}
 
 		public System.Boolean SurfaceTreatmentsVisible
 		{
-			get => viewvisibilitysettings.SurfaceTreatmentsVisible;
-			set { viewvisibilitysettings.SurfaceTreatmentsVisible = value; }
+			get => teklaObject.SurfaceTreatmentsVisible;
+			set { teklaObject.SurfaceTreatmentsVisible = value; }
 		}
 
 		public System.Boolean PoursVisible
 		{
-			get => viewvisibilitysettings.PoursVisible;
-			set { viewvisibilitysettings.PoursVisible = value; }
+			get => teklaObject.PoursVisible;
+			set { teklaObject.PoursVisible = value; }
 		}
 
 		public System.Boolean PourBreaksVisible
 		{
-			get => viewvisibilitysettings.PourBreaksVisible;
-			set { viewvisibilitysettings.PourBreaksVisible = value; }
+			get => teklaObject.PourBreaksVisible;
+			set { teklaObject.PourBreaksVisible = value; }
 		}
 
 		public System.Boolean LoadsVisible
 		{
-			get => viewvisibilitysettings.LoadsVisible;
-			set { viewvisibilitysettings.LoadsVisible = value; }
+			get => teklaObject.LoadsVisible;
+			set { teklaObject.LoadsVisible = value; }
 		}
 
 		public System.Boolean CutsVisible
 		{
-			get => viewvisibilitysettings.CutsVisible;
-			set { viewvisibilitysettings.CutsVisible = value; }
+			get => teklaObject.CutsVisible;
+			set { teklaObject.CutsVisible = value; }
 		}
 
 		public System.Boolean FittingsVisible
 		{
-			get => viewvisibilitysettings.FittingsVisible;
-			set { viewvisibilitysettings.FittingsVisible = value; }
+			get => teklaObject.FittingsVisible;
+			set { teklaObject.FittingsVisible = value; }
 		}
 
 		public System.Boolean ComponentsVisible
 		{
-			get => viewvisibilitysettings.ComponentsVisible;
-			set { viewvisibilitysettings.ComponentsVisible = value; }
+			get => teklaObject.ComponentsVisible;
+			set { teklaObject.ComponentsVisible = value; }
 		}
 
 		public System.Boolean GridsVisible
 		{
-			get => viewvisibilitysettings.GridsVisible;
-			set { viewvisibilitysettings.GridsVisible = value; }
+			get => teklaObject.GridsVisible;
+			set { teklaObject.GridsVisible = value; }
 		}
 
 		public System.Boolean ConstructionLinesVisible
 		{
-			get => viewvisibilitysettings.ConstructionLinesVisible;
-			set { viewvisibilitysettings.ConstructionLinesVisible = value; }
+			get => teklaObject.ConstructionLinesVisible;
+			set { teklaObject.ConstructionLinesVisible = value; }
 		}
 
 		public System.Boolean ReferenceObjectsVisible
 		{
-			get => viewvisibilitysettings.ReferenceObjectsVisible;
-			set { viewvisibilitysettings.ReferenceObjectsVisible = value; }
+			get => teklaObject.ReferenceObjectsVisible;
+			set { teklaObject.ReferenceObjectsVisible = value; }
 		}
 
 		public System.Boolean PointsVisibleInComponents
 		{
-			get => viewvisibilitysettings.PointsVisibleInComponents;
-			set { viewvisibilitysettings.PointsVisibleInComponents = value; }
+			get => teklaObject.PointsVisibleInComponents;
+			set { teklaObject.PointsVisibleInComponents = value; }
 		}
 
 		public System.Boolean PartsVisibleInComponents
 		{
-			get => viewvisibilitysettings.PartsVisibleInComponents;
-			set { viewvisibilitysettings.PartsVisibleInComponents = value; }
+			get => teklaObject.PartsVisibleInComponents;
+			set { teklaObject.PartsVisibleInComponents = value; }
 		}
 
 		public System.Boolean BoltsVisibleInComponents
 		{
-			get => viewvisibilitysettings.BoltsVisibleInComponents;
-			set { viewvisibilitysettings.BoltsVisibleInComponents = value; }
+			get => teklaObject.BoltsVisibleInComponents;
+			set { teklaObject.BoltsVisibleInComponents = value; }
 		}
 
 		public System.Boolean BoltHolesVisibleInComponents
 		{
-			get => viewvisibilitysettings.BoltHolesVisibleInComponents;
-			set { viewvisibilitysettings.BoltHolesVisibleInComponents = value; }
+			get => teklaObject.BoltHolesVisibleInComponents;
+			set { teklaObject.BoltHolesVisibleInComponents = value; }
 		}
 
 		public System.Boolean WeldsVisibleInComponents
 		{
-			get => viewvisibilitysettings.WeldsVisibleInComponents;
-			set { viewvisibilitysettings.WeldsVisibleInComponents = value; }
+			get => teklaObject.WeldsVisibleInComponents;
+			set { teklaObject.WeldsVisibleInComponents = value; }
 		}
 
 		public System.Boolean ConstructionPlanesVisibleInComponents
 		{
-			get => viewvisibilitysettings.ConstructionPlanesVisibleInComponents;
-			set { viewvisibilitysettings.ConstructionPlanesVisibleInComponents = value; }
+			get => teklaObject.ConstructionPlanesVisibleInComponents;
+			set { teklaObject.ConstructionPlanesVisibleInComponents = value; }
 		}
 
 		public System.Boolean RebarsVisibleInComponents
 		{
-			get => viewvisibilitysettings.RebarsVisibleInComponents;
-			set { viewvisibilitysettings.RebarsVisibleInComponents = value; }
+			get => teklaObject.RebarsVisibleInComponents;
+			set { teklaObject.RebarsVisibleInComponents = value; }
 		}
 
 		public System.Boolean CutsVisibleInComponents
 		{
-			get => viewvisibilitysettings.CutsVisibleInComponents;
-			set { viewvisibilitysettings.CutsVisibleInComponents = value; }
+			get => teklaObject.CutsVisibleInComponents;
+			set { teklaObject.CutsVisibleInComponents = value; }
 		}
 
 		public System.Boolean FittingsVisibleInComponents
 		{
-			get => viewvisibilitysettings.FittingsVisibleInComponents;
-			set { viewvisibilitysettings.FittingsVisibleInComponents = value; }
+			get => teklaObject.FittingsVisibleInComponents;
+			set { teklaObject.FittingsVisibleInComponents = value; }
 		}
 
 		public System.Boolean ComponentsVisibleInComponents
 		{
-			get => viewvisibilitysettings.ComponentsVisibleInComponents;
-			set { viewvisibilitysettings.ComponentsVisibleInComponents = value; }
+			get => teklaObject.ComponentsVisibleInComponents;
+			set { teklaObject.ComponentsVisibleInComponents = value; }
 		}
 
         
 
-        internal dynamic viewvisibilitysettings;
-        
-        public ViewVisibilitySettings()
-        {
-            this.viewvisibilitysettings =  TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewVisibilitySettings");
-        }
+        internal dynamic teklaObject;
 
-        internal ViewVisibilitySettings(dynamic tsObject)
-        {
-            this.viewvisibilitysettings = tsObject;
-        }
+		public ViewVisibilitySettings()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ViewVisibilitySettings");
+		}
 
 
 
@@ -193,12 +188,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
     {
         public static dynamic GetTSObject(ViewVisibilitySettings dynObject)
         {
-            return dynObject.viewvisibilitysettings;
+            return dynObject.teklaObject;
         }
 
         public static ViewVisibilitySettings FromTSObject(dynamic tsObject)
         {
-            return new ViewVisibilitySettings(tsObject);
+            return new ViewVisibilitySettings() { teklaObject = tsObject };
         }
     }
 

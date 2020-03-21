@@ -4,100 +4,92 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public sealed class IFC2X3_ParametricObject_LShapeProfile 
+    public  class IFC2X3_ParametricObject_LShapeProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
 		public System.Double Depth
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.Depth;
-			set { ifc2x3_parametricobject_lshapeprofile.Depth = value; }
+			get => teklaObject.Depth;
+			set { teklaObject.Depth = value; }
 		}
 
 		public System.Double Width
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.Width;
-			set { ifc2x3_parametricobject_lshapeprofile.Width = value; }
+			get => teklaObject.Width;
+			set { teklaObject.Width = value; }
 		}
 
 		public System.Double Thickness
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.Thickness;
-			set { ifc2x3_parametricobject_lshapeprofile.Thickness = value; }
+			get => teklaObject.Thickness;
+			set { teklaObject.Thickness = value; }
 		}
 
 		public System.Double FilletRadius
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.FilletRadius;
-			set { ifc2x3_parametricobject_lshapeprofile.FilletRadius = value; }
+			get => teklaObject.FilletRadius;
+			set { teklaObject.FilletRadius = value; }
 		}
 
 		public System.Double EdgeRadius
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.EdgeRadius;
-			set { ifc2x3_parametricobject_lshapeprofile.EdgeRadius = value; }
+			get => teklaObject.EdgeRadius;
+			set { teklaObject.EdgeRadius = value; }
 		}
 
 		public System.Double LegSlope
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.LegSlope;
-			set { ifc2x3_parametricobject_lshapeprofile.LegSlope = value; }
+			get => teklaObject.LegSlope;
+			set { teklaObject.LegSlope = value; }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(ifc2x3_parametricobject_lshapeprofile.Origin);
-			set { ifc2x3_parametricobject_lshapeprofile.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+			set { teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector xDir
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_lshapeprofile.xDir);
-			set { ifc2x3_parametricobject_lshapeprofile.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.xDir);
+			set { teklaObject.xDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Extrusion
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(ifc2x3_parametricobject_lshapeprofile.Extrusion);
-			set { ifc2x3_parametricobject_lshapeprofile.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Extrusion);
+			set { teklaObject.Extrusion = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
 		}
 
 		public System.String ProfileName
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.ProfileName;
-			set { ifc2x3_parametricobject_lshapeprofile.ProfileName = value; }
+			get => teklaObject.ProfileName;
+			set { teklaObject.ProfileName = value; }
 		}
 
 		public System.String Name
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.Name;
-			set { ifc2x3_parametricobject_lshapeprofile.Name = value; }
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
 		}
 
 		public System.String Description
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.Description;
-			set { ifc2x3_parametricobject_lshapeprofile.Description = value; }
+			get => teklaObject.Description;
+			set { teklaObject.Description = value; }
 		}
 
 		public System.String ObjectType
 		{
-			get => ifc2x3_parametricobject_lshapeprofile.ObjectType;
-			set { ifc2x3_parametricobject_lshapeprofile.ObjectType = value; }
+			get => teklaObject.ObjectType;
+			set { teklaObject.ObjectType = value; }
 		}
 
         
 
-        internal dynamic ifc2x3_parametricobject_lshapeprofile;
-        
-        public IFC2X3_ParametricObject_LShapeProfile()
-        {
-            this.ifc2x3_parametricobject_lshapeprofile =  TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_LShapeProfile");
-        }
+        internal dynamic teklaObject;
 
-        internal IFC2X3_ParametricObject_LShapeProfile(dynamic tsObject)
-        {
-            this.ifc2x3_parametricobject_lshapeprofile = tsObject;
-        }
+		internal IFC2X3_ParametricObject_LShapeProfile() {}
 
 
 
@@ -109,12 +101,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(IFC2X3_ParametricObject_LShapeProfile dynObject)
         {
-            return dynObject.ifc2x3_parametricobject_lshapeprofile;
+            return dynObject.teklaObject;
         }
 
         public static IFC2X3_ParametricObject_LShapeProfile FromTSObject(dynamic tsObject)
         {
-            return new IFC2X3_ParametricObject_LShapeProfile(tsObject);
+            return new IFC2X3_ParametricObject_LShapeProfile() { teklaObject = tsObject };
         }
     }
 

@@ -4,46 +4,41 @@
 namespace Dynamic.Tekla.Structures.Model.History
 {
 
-    public sealed class ModificationStamp 
+    public  class ModificationStamp 
     {
 
 		public System.Int32 LocalStamp
 		{
-			get => modificationstamp.LocalStamp;
-			set { modificationstamp.LocalStamp = value; }
+			get => teklaObject.LocalStamp;
+			set { teklaObject.LocalStamp = value; }
 		}
 
 		public System.Int32 ServerStamp
 		{
-			get => modificationstamp.ServerStamp;
-			set { modificationstamp.ServerStamp = value; }
+			get => teklaObject.ServerStamp;
+			set { teklaObject.ServerStamp = value; }
 		}
 
 		public System.String Guid
 		{
-			get => modificationstamp.Guid;
-			set { modificationstamp.Guid = value; }
+			get => teklaObject.Guid;
+			set { teklaObject.Guid = value; }
 		}
 
         
 
-        internal dynamic modificationstamp;
-        
-        public ModificationStamp()
-        {
-            this.modificationstamp =  TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp");
-        }
+        internal dynamic teklaObject;
 
-        internal ModificationStamp(dynamic tsObject)
-        {
-            this.modificationstamp = tsObject;
-        }
+		public ModificationStamp()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp");
+		}
 		public ModificationStamp(System.Int32 LocalStamp, System.Int32 ServerStamp)
 		{
 			var args = new object[2];
 			args[0] = LocalStamp;
 			args[1] = ServerStamp;
-			this.modificationstamp = TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp", args);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.History.ModificationStamp", args);
 		}
 
 
@@ -56,12 +51,12 @@ namespace Dynamic.Tekla.Structures.Model.History
     {
         public static dynamic GetTSObject(ModificationStamp dynObject)
         {
-            return dynObject.modificationstamp;
+            return dynObject.teklaObject;
         }
 
         public static ModificationStamp FromTSObject(dynamic tsObject)
         {
-            return new ModificationStamp(tsObject);
+            return new ModificationStamp() { teklaObject = tsObject };
         }
     }
 

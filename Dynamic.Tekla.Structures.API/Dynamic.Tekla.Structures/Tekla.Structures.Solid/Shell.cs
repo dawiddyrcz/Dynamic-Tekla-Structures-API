@@ -4,28 +4,20 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public sealed class Shell 
+    public  class Shell 
     {
 
         
 
-        internal dynamic shell;
-        
-        public Shell()
-        {
-            this.shell =  TSActivator.CreateInstance("Tekla.Structures.Solid.Shell");
-        }
+        internal dynamic teklaObject;
 
-        internal Shell(dynamic tsObject)
-        {
-            this.shell = tsObject;
-        }
+		internal Shell() {}
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(shell.GetFaceEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
-			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(shell.GetEdgeEnumerator());
+			 => Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(teklaObject.GetEdgeEnumerator());
 
 
 
@@ -37,12 +29,12 @@ namespace Dynamic.Tekla.Structures.Solid
     {
         public static dynamic GetTSObject(Shell dynObject)
         {
-            return dynObject.shell;
+            return dynObject.teklaObject;
         }
 
         public static Shell FromTSObject(dynamic tsObject)
         {
-            return new Shell(tsObject);
+            return new Shell() { teklaObject = tsObject };
         }
     }
 

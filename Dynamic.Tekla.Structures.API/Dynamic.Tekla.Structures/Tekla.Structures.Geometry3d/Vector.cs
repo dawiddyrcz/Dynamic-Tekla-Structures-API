@@ -46,6 +46,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[2] = Z;
 			this.vector = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector", args);
 		}
+		public Vector(Dynamic.Tekla.Structures.Geometry3d.Point Point)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
+			this.vector = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector", args);
+		}
 
 		public System.Double Normalize()
 			 => vector.Normalize();

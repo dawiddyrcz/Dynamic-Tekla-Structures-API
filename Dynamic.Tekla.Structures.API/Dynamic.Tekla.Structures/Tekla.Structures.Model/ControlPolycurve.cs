@@ -56,6 +56,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlpolycurve = tsObject;
         }
+		public ControlPolycurve(Dynamic.Tekla.Structures.Geometry3d.Polycurve geometry)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(geometry);
+			this.controlpolycurve = TSActivator.CreateInstance("Tekla.Structures.Model.ControlPolycurve", args);
+		}
 
 		public System.Boolean Delete()
 			 => controlpolycurve.Delete();

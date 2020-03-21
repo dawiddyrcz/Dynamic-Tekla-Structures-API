@@ -80,6 +80,33 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.arc = tsObject;
         }
+		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point pointOnArc)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pointOnArc);
+			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+		}
+		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point centerPoint, Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Vector normal, System.Double deltaAngleRadians)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(centerPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(normal);
+			args[3] = deltaAngleRadians;
+			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+		}
+		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point centerPoint, Dynamic.Tekla.Structures.Geometry3d.Vector startDirection, Dynamic.Tekla.Structures.Geometry3d.Vector startTangent, System.Double radius, System.Double deltaAngleRadians)
+		{
+			var args = new object[5];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(centerPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(startDirection);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(startTangent);
+			args[3] = radius;
+			args[4] = deltaAngleRadians;
+			this.arc = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Arc", args);
+		}
 
 
 

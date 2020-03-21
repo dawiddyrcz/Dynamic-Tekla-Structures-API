@@ -56,6 +56,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlplane = tsObject;
         }
+		public ControlPlane(Dynamic.Tekla.Structures.Model.Plane P, System.Boolean IsMagnetic)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(P);
+			args[1] = IsMagnetic;
+			this.controlplane = TSActivator.CreateInstance("Tekla.Structures.Model.ControlPlane", args);
+		}
 
 		public System.Boolean Insert()
 			 => controlplane.Insert();

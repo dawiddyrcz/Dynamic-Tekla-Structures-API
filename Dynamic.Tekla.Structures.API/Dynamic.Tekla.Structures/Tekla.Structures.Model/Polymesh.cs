@@ -33,9 +33,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
 			 => polymesh.CompareFingerprints(fingerprint1, fingerprint2);
 
-		//public System.Boolean Validate(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep, Dynamic.Tekla.Structures.Model.Polymesh.PolymeshCheckerFlags checkCriteria, System.Collections.Generic.ListSystem.Collections.Generic.KeyValuePairSystem.Int32 invalidInfo)
-		//	 => polymesh.Validate(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep), Dynamic.Tekla.Structures.Model.Polymesh.PolymeshCheckerFlags_.GetTSObject(checkCriteria), invalidInfo);
-
 		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
 			 => polymesh.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
 

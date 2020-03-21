@@ -53,6 +53,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[1] = Y;
 			this.point = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Point", args);
 		}
+		public Point(Dynamic.Tekla.Structures.Geometry3d.Point Point)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
+			this.point = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Point", args);
+		}
 
 		public void Zero()
 			 => point.Zero();

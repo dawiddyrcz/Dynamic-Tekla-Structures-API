@@ -20,9 +20,6 @@ namespace TestConsoleApp
             var model = new Model();
             Console.WriteLine(model.GetInfo().ModelPath);
 
-            var beam = new Beam();
-            beam.Material.MaterialString = "S235JR";
-            beam.Profile.ProfileString = "HEB300";
 
             var p1 = new Point(0,0,0);
             var p2 = new Point(5000,5000,5000);
@@ -36,8 +33,12 @@ namespace TestConsoleApp
 
             //p2.Translate(5000, 5000, 5000);
 
-            beam.StartPoint = p1;
-            beam.EndPoint = p2;
+           // beam.StartPoint = p1;
+           // beam.EndPoint = p2;
+
+            var beam = new Beam(p1, p2);
+            beam.Material.MaterialString = "S235JR";
+            beam.Profile.ProfileString = "HEB300";
 
             beam.Insert();
 

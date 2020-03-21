@@ -62,6 +62,32 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.obb = tsObject;
         }
+		public OBB(Dynamic.Tekla.Structures.Geometry3d.Point center, Dynamic.Tekla.Structures.Geometry3d.Vector axis0, Dynamic.Tekla.Structures.Geometry3d.Vector axis1, Dynamic.Tekla.Structures.Geometry3d.Vector axis2, System.Double extent0, System.Double extent1, System.Double extent2)
+		{
+			var args = new object[7];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(center);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1);
+			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2);
+			args[4] = extent0;
+			args[5] = extent1;
+			args[6] = extent2;
+			this.obb = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
+		}
+		public OBB(Dynamic.Tekla.Structures.Geometry3d.Point center, Dynamic.Tekla.Structures.Geometry3d.Vector axis, System.Double extent)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(center);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis);
+			args[2] = extent;
+			this.obb = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
+		}
+		public OBB(Dynamic.Tekla.Structures.Geometry3d.OBB obb)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb);
+			this.obb = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
+		}
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis0, Dynamic.Tekla.Structures.Geometry3d.Vector axis1, Dynamic.Tekla.Structures.Geometry3d.Vector axis2)
 			 => obb.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2));

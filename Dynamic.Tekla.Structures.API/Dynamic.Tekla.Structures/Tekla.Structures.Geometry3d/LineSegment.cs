@@ -44,6 +44,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.linesegment = tsObject;
         }
+		public LineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2);
+			this.linesegment = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment", args);
+		}
 
 		public System.Double Length()
 			 => linesegment.Length();

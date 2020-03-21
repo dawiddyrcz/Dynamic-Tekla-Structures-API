@@ -62,6 +62,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.hierarchicobject = tsObject;
         }
+		public HierarchicObject(Dynamic.Tekla.Structures.Identifier ID)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID);
+			this.hierarchicobject = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject", args);
+		}
 
 		public System.Boolean Insert()
 			 => hierarchicobject.Insert();

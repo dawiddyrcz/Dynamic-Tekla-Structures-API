@@ -26,6 +26,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.matrix = tsObject;
         }
+		public Matrix(Dynamic.Tekla.Structures.Geometry3d.Matrix m)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(m);
+			this.matrix = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix", args);
+		}
 
 		public void Transpose()
 			 => matrix.Transpose();

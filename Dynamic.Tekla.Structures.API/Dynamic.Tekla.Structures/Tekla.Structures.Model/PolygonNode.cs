@@ -32,6 +32,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.polygonnode = tsObject;
         }
+		public PolygonNode(Dynamic.Tekla.Structures.Model.Contour contour, System.Boolean isAutomaticNode)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
+			args[1] = isAutomaticNode;
+			this.polygonnode = TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode", args);
+		}
 
 		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
 			 => polygonnode.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));

@@ -134,6 +134,19 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.beam = tsObject;
         }
+		public Beam(Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum beamType)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.GetTSObject(beamType);
+			this.beam = TSActivator.CreateInstance("Tekla.Structures.Model.Beam", args);
+		}
+		public Beam(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
+			this.beam = TSActivator.CreateInstance("Tekla.Structures.Model.Beam", args);
+		}
 
 		public System.Boolean Insert()
 			 => beam.Insert();

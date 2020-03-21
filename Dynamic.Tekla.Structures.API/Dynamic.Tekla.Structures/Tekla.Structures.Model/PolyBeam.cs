@@ -116,6 +116,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.polybeam = tsObject;
         }
+		public PolyBeam(Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum polyBeamType)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.PolyBeam.PolyBeamTypeEnum_.GetTSObject(polyBeamType);
+			this.polybeam = TSActivator.CreateInstance("Tekla.Structures.Model.PolyBeam", args);
+		}
 
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
 			 => polybeam.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));

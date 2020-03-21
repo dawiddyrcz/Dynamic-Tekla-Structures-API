@@ -74,6 +74,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.connectivegeometryexception = tsObject;
         }
+		public ConnectiveGeometryException(Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus status, System.String errorMessage)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.GetTSObject(status);
+			args[1] = errorMessage;
+			this.connectivegeometryexception = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometryException", args);
+		}
 
 		public System.Exception GetBaseException()
 			 => connectivegeometryexception.GetBaseException();

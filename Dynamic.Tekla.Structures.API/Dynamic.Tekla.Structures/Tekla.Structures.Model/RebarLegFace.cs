@@ -50,6 +50,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.rebarlegface = tsObject;
         }
+		public RebarLegFace(Dynamic.Tekla.Structures.Model.Contour contour)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
+			this.rebarlegface = TSActivator.CreateInstance("Tekla.Structures.Model.RebarLegFace", args);
+		}
 
 
 

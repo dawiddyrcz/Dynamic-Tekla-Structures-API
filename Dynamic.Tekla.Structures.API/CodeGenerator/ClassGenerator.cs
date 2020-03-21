@@ -53,7 +53,8 @@ namespace CodeGenerator
         {
             var constructors = type.GetConstructors()
                 .Where(c => c.GetParameters().Count() > 0
-                && c.GetParameters().Any(p => p.ParameterType.Namespace.Contains("Tekla.Structures")) == false)
+               // && c.GetParameters().Any(p => p.ParameterType.Namespace.Contains("Tekla.Structures")) == false
+                )
                 .ToList();
 
             var sb = new StringBuilder(500);

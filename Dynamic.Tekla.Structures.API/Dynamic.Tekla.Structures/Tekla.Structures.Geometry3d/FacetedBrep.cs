@@ -50,6 +50,23 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.facetedbrep = tsObject;
         }
+		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(vertices);
+			args[1] = outerWires;
+			args[2] = innerWires;
+			this.facetedbrep = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrep", args);
+		}
+		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> edges)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(vertices);
+			args[1] = outerWires;
+			args[2] = innerWires;
+			args[3] = edges;
+			this.facetedbrep = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrep", args);
+		}
 
 		public System.Boolean CheckForTwoManifold()
 			 => facetedbrep.CheckForTwoManifold();

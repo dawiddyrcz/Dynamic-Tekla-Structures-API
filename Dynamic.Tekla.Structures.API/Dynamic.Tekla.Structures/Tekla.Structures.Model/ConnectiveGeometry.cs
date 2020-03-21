@@ -20,6 +20,18 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.connectivegeometry = tsObject;
         }
+		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.Contour contour)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(contour);
+			this.connectivegeometry = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
+		}
+		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.BendSurface bendSurface)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(bendSurface);
+			this.connectivegeometry = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry", args);
+		}
 
 		public System.Boolean IsEmpty()
 			 => connectivegeometry.IsEmpty();

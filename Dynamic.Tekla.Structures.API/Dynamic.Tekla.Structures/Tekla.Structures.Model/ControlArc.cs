@@ -56,6 +56,14 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlarc = tsObject;
         }
+		public ControlArc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point pointOnArc)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pointOnArc);
+			this.controlarc = TSActivator.CreateInstance("Tekla.Structures.Model.ControlArc", args);
+		}
 
 		public System.Boolean Delete()
 			 => controlarc.Delete();

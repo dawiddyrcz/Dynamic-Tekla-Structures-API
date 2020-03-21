@@ -44,6 +44,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlpoint = tsObject;
         }
+		public ControlPoint(Dynamic.Tekla.Structures.Geometry3d.Point existPoint)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(existPoint);
+			this.controlpoint = TSActivator.CreateInstance("Tekla.Structures.Model.ControlPoint", args);
+		}
 
 		public System.Boolean Insert()
 			 => controlpoint.Insert();

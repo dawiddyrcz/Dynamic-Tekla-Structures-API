@@ -116,6 +116,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.gridplane = tsObject;
         }
+		public GridPlane(Dynamic.Tekla.Structures.Model.Plane Plane, System.String Label)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(Plane);
+			args[1] = Label;
+			this.gridplane = TSActivator.CreateInstance("Tekla.Structures.Model.GridPlane", args);
+		}
 
 		public System.Boolean Insert()
 			 => gridplane.Insert();

@@ -74,6 +74,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.spiralbeamdataexception = tsObject;
         }
+		public SpiralBeamDataException(Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus status, System.String message)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.GetTSObject(status);
+			args[1] = message;
+			this.spiralbeamdataexception = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeamDataException", args);
+		}
 
 		public System.Exception GetBaseException()
 			 => spiralbeamdataexception.GetBaseException();

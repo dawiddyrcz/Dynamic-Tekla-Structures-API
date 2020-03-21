@@ -98,6 +98,30 @@ namespace Dynamic.Tekla.Structures.Filtering
         {
             this.invalidfilterexpressionexception = tsObject;
         }
+		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression Expression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(Expression);
+			args[1] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
+			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+		}
+		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression LeftExpression, Dynamic.Tekla.Structures.Filtering.OperatorType OperatorType, Dynamic.Tekla.Structures.Filtering.Expression RightExpression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(LeftExpression);
+			args[1] = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(OperatorType);
+			args[2] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(RightExpression);
+			args[3] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
+			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+		}
+		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression Expression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType, System.Int32 MaximumExpressionNumber)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(Expression);
+			args[1] = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(InvalidFilterExpressionExceptionReasonsType);
+			args[2] = MaximumExpressionNumber;
+			this.invalidfilterexpressionexception = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException", args);
+		}
 
 		public System.Exception GetBaseException()
 			 => invalidfilterexpressionexception.GetBaseException();

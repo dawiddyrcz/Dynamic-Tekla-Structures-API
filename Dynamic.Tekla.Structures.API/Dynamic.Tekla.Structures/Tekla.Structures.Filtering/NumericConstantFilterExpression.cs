@@ -20,6 +20,12 @@ namespace Dynamic.Tekla.Structures.Filtering
         {
             this.numericconstantfilterexpression = tsObject;
         }
+		public NumericConstantFilterExpression(Dynamic.Tekla.Structures.TeklaStructuresDatabaseTypeEnum ObjectType)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.TeklaStructuresDatabaseTypeEnum_.GetTSObject(ObjectType);
+			this.numericconstantfilterexpression = TSActivator.CreateInstance("Tekla.Structures.Filtering.NumericConstantFilterExpression", args);
+		}
 		public NumericConstantFilterExpression(System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.TeklaStructuresDatabaseTypeEnum> ObjectTypes)
 		{
 			var args = new object[1];

@@ -80,6 +80,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.rebarsplice = tsObject;
         }
+		public RebarSplice(Dynamic.Tekla.Structures.Model.RebarGroup InputRebar1, Dynamic.Tekla.Structures.Model.RebarGroup InputRebar2)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(InputRebar1);
+			args[1] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(InputRebar2);
+			this.rebarsplice = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSplice", args);
+		}
 
 		public System.Boolean Insert()
 			 => rebarsplice.Insert();

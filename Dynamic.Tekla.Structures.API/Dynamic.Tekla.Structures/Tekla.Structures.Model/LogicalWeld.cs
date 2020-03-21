@@ -302,6 +302,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.logicalweld = tsObject;
         }
+		public LogicalWeld(Dynamic.Tekla.Structures.Model.BaseWeld MainWeld)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(MainWeld);
+			this.logicalweld = TSActivator.CreateInstance("Tekla.Structures.Model.LogicalWeld", args);
+		}
 
 		public System.Boolean AddWeld(Dynamic.Tekla.Structures.Model.BaseWeld Weld)
 			 => logicalweld.AddWeld(Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld));

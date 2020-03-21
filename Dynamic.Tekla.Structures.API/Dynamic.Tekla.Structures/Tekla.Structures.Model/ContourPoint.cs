@@ -44,6 +44,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.contourpoint = tsObject;
         }
+		public ContourPoint(Dynamic.Tekla.Structures.Geometry3d.Point P, Dynamic.Tekla.Structures.Model.Chamfer C)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P);
+			args[1] = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(C);
+			this.contourpoint = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint", args);
+		}
 
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
 			 => contourpoint.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));

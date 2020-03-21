@@ -26,6 +26,12 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         {
             this.referencemodelobjectattributeenumerator = tsObject;
         }
+		public ReferenceModelObjectAttributeEnumerator(Dynamic.Tekla.Structures.Model.ReferenceModelObject RMO)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.ReferenceModelObject_.GetTSObject(RMO);
+			this.referencemodelobjectattributeenumerator = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator", args);
+		}
 
 		public System.Boolean MoveNext()
 			 => referencemodelobjectattributeenumerator.MoveNext();

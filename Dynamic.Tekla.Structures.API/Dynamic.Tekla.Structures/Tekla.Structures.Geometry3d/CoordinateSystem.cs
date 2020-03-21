@@ -38,6 +38,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.coordinatesystem = tsObject;
         }
+		public CoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.Point Origin, Dynamic.Tekla.Structures.Geometry3d.Vector AxisX, Dynamic.Tekla.Structures.Geometry3d.Vector AxisY)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origin);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(AxisX);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(AxisY);
+			this.coordinatesystem = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.CoordinateSystem", args);
+		}
 
 
 

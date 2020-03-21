@@ -116,6 +116,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.task = tsObject;
         }
+		public Task(Dynamic.Tekla.Structures.Identifier ID)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID);
+			this.task = TSActivator.CreateInstance("Tekla.Structures.Model.Task", args);
+		}
 
 		public System.Boolean Insert()
 			 => task.Insert();

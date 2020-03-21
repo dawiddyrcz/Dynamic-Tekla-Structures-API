@@ -20,6 +20,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.polycurvegeometrybuilder = tsObject;
         }
+		public PolycurveGeometryBuilder(Dynamic.Tekla.Structures.Geometry3d.Polycurve geometries)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(geometries);
+			this.polycurvegeometrybuilder = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolycurveGeometryBuilder", args);
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Polycurve GetPolycurve()
 			 => Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(polycurvegeometrybuilder.GetPolycurve());

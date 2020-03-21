@@ -86,6 +86,40 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.cylindricalsurface = tsObject;
         }
+		public CylindricalSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary1, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary2)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal1);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary1);
+			args[3] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary2);
+			this.cylindricalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface", args);
+		}
+		public CylindricalSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal1);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
+			args[2] = lateralBoundary1;
+			args[3] = lateralBoundary2;
+			this.cylindricalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface", args);
+		}
+		public CylindricalSurface(Dynamic.Tekla.Structures.Geometry3d.Arc baseArc, System.Double height)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(baseArc);
+			args[1] = height;
+			this.cylindricalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface", args);
+		}
+		public CylindricalSurface(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2, Dynamic.Tekla.Structures.Geometry3d.Line centerLine, Dynamic.Tekla.Structures.Geometry3d.Vector rotationAxis)
+		{
+			var args = new object[4];
+			args[0] = lateralBoundary1;
+			args[1] = lateralBoundary2;
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(centerLine);
+			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(rotationAxis);
+			this.cylindricalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface", args);
+		}
 
 
 

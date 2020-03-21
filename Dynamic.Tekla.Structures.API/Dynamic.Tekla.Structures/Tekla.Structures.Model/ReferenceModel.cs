@@ -98,6 +98,14 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.referencemodel = tsObject;
         }
+		public ReferenceModel(System.String filename, Dynamic.Tekla.Structures.Geometry3d.Point position, System.Double scale)
+		{
+			var args = new object[3];
+			args[0] = filename;
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(position);
+			args[2] = scale;
+			this.referencemodel = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel", args);
+		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
 			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(referencemodel.GetConvertedObjects());

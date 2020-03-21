@@ -44,6 +44,23 @@ namespace Dynamic.Tekla.Structures.Model.UI
         {
             this.graphicpolyline = tsObject;
         }
+		public GraphicPolyLine(Dynamic.Tekla.Structures.Model.UI.Color color, System.Int32 width, Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType type)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color);
+			args[1] = width;
+			args[2] = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(type);
+			this.graphicpolyline = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
+		}
+		public GraphicPolyLine(Dynamic.Tekla.Structures.Geometry3d.PolyLine polyLine, Dynamic.Tekla.Structures.Model.UI.Color color, System.Int32 width, Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType type)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(polyLine);
+			args[1] = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color);
+			args[2] = width;
+			args[3] = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(type);
+			this.graphicpolyline = TSActivator.CreateInstance("Tekla.Structures.Model.UI.GraphicPolyLine", args);
+		}
 
 
 

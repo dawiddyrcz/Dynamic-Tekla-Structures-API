@@ -50,6 +50,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.component = tsObject;
         }
+		public Component(Dynamic.Tekla.Structures.Model.ComponentInput I)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I);
+			this.component = TSActivator.CreateInstance("Tekla.Structures.Model.Component", args);
+		}
 
 		public System.Boolean SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput I)
 			 => component.SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I));

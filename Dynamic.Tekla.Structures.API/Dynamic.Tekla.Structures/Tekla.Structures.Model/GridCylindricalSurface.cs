@@ -104,6 +104,14 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.gridcylindricalsurface = tsObject;
         }
+		public GridCylindricalSurface(Dynamic.Tekla.Structures.Geometry3d.Arc cylinderBase, System.Double cylinderHeight, System.String label)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(cylinderBase);
+			args[1] = cylinderHeight;
+			args[2] = label;
+			this.gridcylindricalsurface = TSActivator.CreateInstance("Tekla.Structures.Model.GridCylindricalSurface", args);
+		}
 
 		public System.Boolean Modify()
 			 => gridcylindricalsurface.Modify();

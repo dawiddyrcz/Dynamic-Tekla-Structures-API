@@ -68,6 +68,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.taskdependency = tsObject;
         }
+		public TaskDependency(Dynamic.Tekla.Structures.Model.Task primary, Dynamic.Tekla.Structures.Model.Task secondary)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(primary);
+			args[1] = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(secondary);
+			this.taskdependency = TSActivator.CreateInstance("Tekla.Structures.Model.TaskDependency", args);
+		}
 
 		public System.Boolean Insert()
 			 => taskdependency.Insert();

@@ -32,6 +32,26 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.line = tsObject;
         }
+		public Line(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2);
+			this.line = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Line", args);
+		}
+		public Line(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Vector Direction)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Direction);
+			this.line = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Line", args);
+		}
+		public Line(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment);
+			this.line = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Line", args);
+		}
 
 
 

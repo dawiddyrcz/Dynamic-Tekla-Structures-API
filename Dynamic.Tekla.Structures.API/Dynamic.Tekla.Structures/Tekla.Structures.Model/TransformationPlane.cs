@@ -32,6 +32,20 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.transformationplane = tsObject;
         }
+		public TransformationPlane(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordinateSystem)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordinateSystem);
+			this.transformationplane = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
+		}
+		public TransformationPlane(Dynamic.Tekla.Structures.Geometry3d.Point Origo, Dynamic.Tekla.Structures.Geometry3d.Vector Xvector, Dynamic.Tekla.Structures.Geometry3d.Vector Yvector)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Origo);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Xvector);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Yvector);
+			this.transformationplane = TSActivator.CreateInstance("Tekla.Structures.Model.TransformationPlane", args);
+		}
 
 
 

@@ -38,6 +38,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             this.polycurve = tsObject;
         }
+		public Polycurve(Dynamic.Tekla.Structures.Geometry3d.ICurve geometry)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.ICurve_.GetTSObject(geometry);
+			this.polycurve = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Polycurve", args);
+		}
+		public Polycurve(Dynamic.Tekla.Structures.Geometry3d.PolyLine polyLine)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(polyLine);
+			this.polycurve = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Polycurve", args);
+		}
 
 
 

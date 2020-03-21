@@ -74,6 +74,14 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlcircle = tsObject;
         }
+		public ControlCircle(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
+		{
+			var args = new object[3];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3);
+			this.controlcircle = TSActivator.CreateInstance("Tekla.Structures.Model.ControlCircle", args);
+		}
 
 		public System.Boolean Insert()
 			 => controlcircle.Insert();

@@ -128,6 +128,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.brep = tsObject;
         }
+		public Brep(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
+			this.brep = TSActivator.CreateInstance("Tekla.Structures.Model.Brep", args);
+		}
 
 		public System.Boolean Insert()
 			 => brep.Insert();

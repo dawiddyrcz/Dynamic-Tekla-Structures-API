@@ -68,6 +68,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.controlline = tsObject;
         }
+		public ControlLine(Dynamic.Tekla.Structures.Geometry3d.LineSegment Line, System.Boolean IsMagnetic)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Line);
+			args[1] = IsMagnetic;
+			this.controlline = TSActivator.CreateInstance("Tekla.Structures.Model.ControlLine", args);
+		}
 
 		public System.Boolean Insert()
 			 => controlline.Insert();

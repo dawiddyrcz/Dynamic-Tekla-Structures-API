@@ -164,6 +164,37 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.spiralbeam = tsObject;
         }
+		public SpiralBeam(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point rotationAxisBasePoint, Dynamic.Tekla.Structures.Geometry3d.Point rotationAxisUpPoint, System.Double totalRise, System.Double rotationAngle, System.Double twistAngleAtStart, System.Double twistAngleAtEnd)
+		{
+			var args = new object[7];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(rotationAxisBasePoint);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(rotationAxisUpPoint);
+			args[3] = totalRise;
+			args[4] = rotationAngle;
+			args[5] = twistAngleAtStart;
+			args[6] = twistAngleAtEnd;
+			this.spiralbeam = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeam", args);
+		}
+		public SpiralBeam(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point rotationAxisBasePoint, Dynamic.Tekla.Structures.Geometry3d.Point rotationAxisUpPoint, System.Double totalRise, System.Double rotationAngle)
+		{
+			var args = new object[5];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(rotationAxisBasePoint);
+			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(rotationAxisUpPoint);
+			args[3] = totalRise;
+			args[4] = rotationAngle;
+			this.spiralbeam = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeam", args);
+		}
+		public SpiralBeam(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point rotationAxisPoint, System.Double totalRise, System.Double rotationAngle)
+		{
+			var args = new object[4];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(rotationAxisPoint);
+			args[2] = totalRise;
+			args[3] = rotationAngle;
+			this.spiralbeam = TSActivator.CreateInstance("Tekla.Structures.Model.SpiralBeam", args);
+		}
 
 		public System.Boolean Insert()
 			 => spiralbeam.Insert();

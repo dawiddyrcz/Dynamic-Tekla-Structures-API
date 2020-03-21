@@ -50,6 +50,14 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.chamfer = tsObject;
         }
+		public Chamfer(System.Double X, System.Double Y, Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type)
+		{
+			var args = new object[3];
+			args[0] = X;
+			args[1] = Y;
+			args[2] = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(Type);
+			this.chamfer = TSActivator.CreateInstance("Tekla.Structures.Model.Chamfer", args);
+		}
 
 
 

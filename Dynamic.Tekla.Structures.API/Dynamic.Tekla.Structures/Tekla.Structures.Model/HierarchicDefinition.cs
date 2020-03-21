@@ -80,6 +80,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.hierarchicdefinition = tsObject;
         }
+		public HierarchicDefinition(Dynamic.Tekla.Structures.Identifier ID)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID);
+			this.hierarchicdefinition = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicDefinition", args);
+		}
 
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
 			 => hierarchicdefinition.AddObjects(Objects);

@@ -92,6 +92,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.edgechamfer = tsObject;
         }
+		public EdgeChamfer(Dynamic.Tekla.Structures.Geometry3d.Point FirstEnd, Dynamic.Tekla.Structures.Geometry3d.Point SecondEnd)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(FirstEnd);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SecondEnd);
+			this.edgechamfer = TSActivator.CreateInstance("Tekla.Structures.Model.EdgeChamfer", args);
+		}
 
 		public System.Boolean Insert()
 			 => edgechamfer.Insert();

@@ -20,6 +20,19 @@ namespace Dynamic.Tekla.Structures.Filtering
         {
             this.binaryfilterexpressionitem = tsObject;
         }
+		public BinaryFilterExpressionItem(Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression);
+			this.binaryfilterexpressionitem = TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpressionItem", args);
+		}
+		public BinaryFilterExpressionItem(Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression, Dynamic.Tekla.Structures.Filtering.BinaryFilterOperatorType BinaryFilterItemOperatorType)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression);
+			args[1] = Dynamic.Tekla.Structures.Filtering.BinaryFilterOperatorType_.GetTSObject(BinaryFilterItemOperatorType);
+			this.binaryfilterexpressionitem = TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpressionItem", args);
+		}
 
 
 

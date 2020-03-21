@@ -38,6 +38,13 @@ namespace Dynamic.Tekla.Structures.Model
         {
             this.referencemodelobject = tsObject;
         }
+		public ReferenceModelObject(System.Int32 ReferenceModelId, Dynamic.Tekla.Structures.Identifier ID)
+		{
+			var args = new object[2];
+			args[0] = ReferenceModelId;
+			args[1] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID);
+			this.referencemodelobject = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModelObject", args);
+		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
 			 => Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(referencemodelobject.GetReferenceModel());

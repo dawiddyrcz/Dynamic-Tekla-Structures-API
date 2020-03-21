@@ -13,10 +13,10 @@ namespace CodeGenerator
             if (!(type.IsClass || type.IsInterface)) return string.Empty;
 
             string outputText = String.Copy(text);
-            
-            outputText = AddProperties(type, outputText);
-            outputText = AddMethods(type, outputText);
 
+            outputText = outputText.Replace("$constructors", ConstructorsText(type));
+            outputText = outputText.Replace("$dproperties", PropertiesText(type));
+            outputText = outputText.Replace("$dmethods", MethodsText(type));
             outputText = outputText.Replace("$classname", type.Name);
 
             var accessor = "public";
@@ -46,8 +46,13 @@ namespace CodeGenerator
             return outputText;
         }
         
+        private string ConstructorsText(Type type)
+        {
+            return string.Empty;
+        }
 
-        private string AddMethods(Type type, string classText)
+
+        private string MethodsText(Type type)
         {
             var sb = new StringBuilder();
             var methods = type.GetMethods().Where(
@@ -173,8 +178,8 @@ namespace CodeGenerator
                 sb.Append("\n\n");
             }
 
-            classText = classText.Replace("$dmethods", sb.ToString());
-            return classText;
+            
+            return sb.ToString();
         }
 
         private bool IsTeklaType(Type type)
@@ -182,7 +187,7 @@ namespace CodeGenerator
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
         
-        private string AddProperties(Type type, string classText)
+        private string PropertiesText(Type type)
         {
             var sb = new StringBuilder();
             var properties = type.GetProperties().GroupBy(t => t.Name).Select(t => t.First());  //In one class returned two properties with the same value
@@ -191,30 +196,15 @@ namespace CodeGenerator
             {
                 if (IsTeklaType(property.PropertyType))
                 {
-                    //if (property.PropertyType.IsEnum)
-                    //{
-                        sb.Append("\t\tpublic ");
-                        sb.Append(GetTypeFullName(property.PropertyType));
-                        sb.Append(" ");
-                        sb.Append(property.Name);
-                        sb.Append("\n\t\t{" +
-                            "\n\t\t\tget => " + GetTypeFullName(property.PropertyType) + "_.FromTSObject($dfield." +
-                            "" + property.Name + ");" +
-                            "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.GetTSObject(value); }" +
-                            "\n\t\t}\n\n");
-                    //}
-                    //else
-                    //{
-                    //    sb.Append("\t\tpublic ");
-                    //    sb.Append(GetTypeFullName(property.PropertyType));
-                    //    sb.Append(" ");
-                    //    sb.Append(property.Name);
-                    //    sb.Append("\n\t\t{" +
-                    //        "\n\t\t\tget => new " + GetTypeFullName(property.PropertyType) + "($dfield." +
-                    //        "" + property.Name + ");" +
-                    //        "\n\t\t\tset { $dfield." + property.Name + " = value.GetTSObject(); }" +
-                    //        "\n\t\t}\n\n");
-                    //}
+                    sb.Append("\t\tpublic ");
+                    sb.Append(GetTypeFullName(property.PropertyType));
+                    sb.Append(" ");
+                    sb.Append(property.Name);
+                    sb.Append("\n\t\t{" +
+                        "\n\t\t\tget => " + GetTypeFullName(property.PropertyType) + "_.FromTSObject($dfield." +
+                        "" + property.Name + ");" +
+                        "\n\t\t\tset { $dfield." + property.Name + " = " + GetTypeFullName(property.PropertyType) + "_.GetTSObject(value); }" +
+                        "\n\t\t}\n\n");
                 }
                 else
                 {
@@ -227,61 +217,14 @@ namespace CodeGenerator
                         "\n\t\t\tset { $dfield." + property.Name + " = value; }" +
                         "\n\t\t}\n\n");
                 }
-
             }
-
-            classText = classText.Replace("$dproperties", sb.ToString());
-            return classText;
-        }
-
-        private string GetTypeFullName( Type type)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            if (IsTeklaType(type))
-            {
-                sb.Append("Dynamic.");
-            }
-
-            var fullName = type.FullName;
-            if (fullName.Contains(","))
-            {
-                fullName = fullName.Split(',')[0];
-                if (type.IsGenericType && !fullName.Contains("System.Nullable"))
-                {
-                    fullName = fullName.Split('[')[0];
-                }
-            }
-
-            string typeName = fullName.Replace("`1", "").Replace("`2", "").Replace("`3", "").Replace("`4", "").Replace("`5", "");
-            typeName = typeName.Replace("[", "").Replace("]", "");
-
-            if (type.IsGenericType && !typeName.StartsWith("System.Nullable"))
-            {
-                sb.Append(typeName);
-                sb.Append("<");
-
-                int i = 0;
-                foreach (var generictype in type.GetGenericArguments())
-                {
-                    if (i != 0)
-                        sb.Append(", ");
-                    sb.Append(GetTypeFullName(generictype));
-                    i++;
-                }
-                
-                sb.Append(">");
-            }
-            else
-            {
-                typeName = typeName.Replace("System.Nullable", "");
-                sb.Append(typeName);
-            }
-
-            sb.Replace("&", "");
-            sb.Replace("+", ".");
 
             return sb.ToString();
+        }
+
+        private string GetTypeFullName(Type type)
+        {
+            return TypeFullName.GetTypeFullName(type);
         }
 
 
@@ -302,7 +245,7 @@ $dproperties
         {
             this.$dfield = tsObject;
         }
-
+$constructors
 $dmethods
 
 $nestedTypes

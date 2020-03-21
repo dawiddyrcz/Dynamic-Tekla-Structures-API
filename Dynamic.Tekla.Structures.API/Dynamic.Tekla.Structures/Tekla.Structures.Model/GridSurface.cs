@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class GridSurface  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class GridSurface  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.GridBase Parent
@@ -83,13 +83,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal GridSurface() {}
-		public GridSurface(System.String label)
-		{
-			var args = new object[1];
-			args[0] = label;
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.GridSurface", args);
-		}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -199,7 +192,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static GridSurface FromTSObject(dynamic tsObject)
         {
-            return new GridSurface() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.GridSurface)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

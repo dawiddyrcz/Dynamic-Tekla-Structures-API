@@ -105,7 +105,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Vector FromTSObject(dynamic tsObject)
         {
-            return new Vector() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Vector)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

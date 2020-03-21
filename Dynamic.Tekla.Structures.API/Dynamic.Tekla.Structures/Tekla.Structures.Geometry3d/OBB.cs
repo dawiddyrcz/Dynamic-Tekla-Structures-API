@@ -165,7 +165,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static OBB FromTSObject(dynamic tsObject)
         {
-            return new OBB() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.OBB)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -83,7 +83,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		internal IFC2X3_ParametricObject_CShapeProfile() {}
+		public IFC2X3_ParametricObject_CShapeProfile() {}
 
 
 
@@ -100,7 +100,11 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static IFC2X3_ParametricObject_CShapeProfile FromTSObject(dynamic tsObject)
         {
-            return new IFC2X3_ParametricObject_CShapeProfile() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_CShapeProfile)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

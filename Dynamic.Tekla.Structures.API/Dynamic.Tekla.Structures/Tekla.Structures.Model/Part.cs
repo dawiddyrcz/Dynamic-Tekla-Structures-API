@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class Part  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class Part  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.Profile Profile
@@ -95,7 +95,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal Part() {}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 			 => Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
@@ -296,7 +295,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Part FromTSObject(dynamic tsObject)
         {
-            return new Part() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Part)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

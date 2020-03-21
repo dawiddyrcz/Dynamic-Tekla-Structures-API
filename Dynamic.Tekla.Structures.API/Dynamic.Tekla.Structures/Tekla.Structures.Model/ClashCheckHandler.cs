@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ClashCheckHandler() {}
+		public ClashCheckHandler() {}
 
 		public System.Boolean RunClashCheck()
 			 => teklaObject.RunClashCheck();
@@ -37,7 +37,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ClashCheckHandler FromTSObject(dynamic tsObject)
         {
-            return new ClashCheckHandler() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ClashCheckHandler)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

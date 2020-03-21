@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		internal ReferenceModelObjectAttributeEnumerator() {}
+		public ReferenceModelObjectAttributeEnumerator() {}
 		public ReferenceModelObjectAttributeEnumerator(Dynamic.Tekla.Structures.Model.ReferenceModelObject RMO)
 		{
 			var args = new object[1];
@@ -46,7 +46,11 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static ReferenceModelObjectAttributeEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ReferenceModelObjectAttributeEnumerator() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -23,7 +23,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal PolygonNode() {}
+		public PolygonNode() {}
 		public PolygonNode(Dynamic.Tekla.Structures.Model.Contour contour, System.Boolean isAutomaticNode)
 		{
 			var args = new object[2];
@@ -50,7 +50,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PolygonNode FromTSObject(dynamic tsObject)
         {
-            return new PolygonNode() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.PolygonNode)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

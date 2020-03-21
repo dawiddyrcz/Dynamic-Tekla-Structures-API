@@ -167,7 +167,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BentPlateGeometrySolver FromTSObject(dynamic tsObject)
         {
-            return new BentPlateGeometrySolver() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BentPlateGeometrySolver)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

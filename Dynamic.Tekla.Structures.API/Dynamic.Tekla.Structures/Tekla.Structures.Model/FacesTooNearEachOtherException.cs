@@ -91,7 +91,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static FacesTooNearEachOtherException FromTSObject(dynamic tsObject)
         {
-            return new FacesTooNearEachOtherException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.FacesTooNearEachOtherException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

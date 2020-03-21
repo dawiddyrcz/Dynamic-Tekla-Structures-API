@@ -227,7 +227,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static GridPlane FromTSObject(dynamic tsObject)
         {
-            return new GridPlane() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.GridPlane)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

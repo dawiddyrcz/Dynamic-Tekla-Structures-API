@@ -320,7 +320,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static LoadArea FromTSObject(dynamic tsObject)
         {
-            return new LoadArea() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.LoadArea)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

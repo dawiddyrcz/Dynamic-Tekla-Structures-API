@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BoltGroup  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class BoltGroup  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.Double BoltSize
@@ -227,7 +227,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BoltGroup() {}
 
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 			 => teklaObject.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
@@ -528,7 +527,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BoltGroup FromTSObject(dynamic tsObject)
         {
-            return new BoltGroup() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BoltGroup)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

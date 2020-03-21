@@ -55,7 +55,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static GraphicsDrawer FromTSObject(dynamic tsObject)
         {
-            return new GraphicsDrawer() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.GraphicsDrawer)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

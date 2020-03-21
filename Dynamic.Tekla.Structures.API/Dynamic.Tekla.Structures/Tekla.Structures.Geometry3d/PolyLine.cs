@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         internal dynamic teklaObject;
 
-		internal PolyLine() {}
+		public PolyLine() {}
 		public PolyLine(System.Collections.IEnumerable Points)
 		{
 			var args = new object[1];
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static PolyLine FromTSObject(dynamic tsObject)
         {
-            return new PolyLine() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.PolyLine)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

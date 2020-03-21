@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BaseRebarGroup  : Dynamic.Tekla.Structures.Model.Reinforcement
+    public abstract class BaseRebarGroup  : Dynamic.Tekla.Structures.Model.Reinforcement
     {
 
 		public System.String Size
@@ -167,7 +167,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BaseRebarGroup() {}
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 			 => teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
@@ -427,7 +426,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BaseRebarGroup FromTSObject(dynamic tsObject)
         {
-            return new BaseRebarGroup() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BaseRebarGroup)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

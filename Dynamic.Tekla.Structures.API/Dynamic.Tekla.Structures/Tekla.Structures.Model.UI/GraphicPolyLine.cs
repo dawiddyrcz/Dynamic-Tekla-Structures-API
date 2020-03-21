@@ -127,7 +127,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static GraphicPolyLine FromTSObject(dynamic tsObject)
         {
-            return new GraphicPolyLine() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.GraphicPolyLine)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

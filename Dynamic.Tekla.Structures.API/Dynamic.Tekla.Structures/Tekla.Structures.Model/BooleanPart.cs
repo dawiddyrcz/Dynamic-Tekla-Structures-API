@@ -208,7 +208,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BooleanPart FromTSObject(dynamic tsObject)
         {
-            return new BooleanPart() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BooleanPart)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Model.UI
 {
 
-    public  class ModelObjectVisualization 
+    public abstract class ModelObjectVisualization 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal ModelObjectVisualization() {}
 
 		public System.Boolean SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color color)
 			 => teklaObject.SetTemporaryStateForAll(Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color));
@@ -52,7 +51,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static ModelObjectVisualization FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectVisualization() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.ModelObjectVisualization)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

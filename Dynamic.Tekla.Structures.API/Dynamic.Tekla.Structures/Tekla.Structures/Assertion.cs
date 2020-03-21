@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures
 
         internal dynamic teklaObject;
 
-		internal Assertion() {}
+		public Assertion() {}
 		public Assertion(System.String message, System.String detailedMessage, System.String methodName)
 		{
 			var args = new object[3];
@@ -54,7 +54,11 @@ namespace Dynamic.Tekla.Structures
 
         public static Assertion FromTSObject(dynamic tsObject)
         {
-            return new Assertion() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Assertion)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

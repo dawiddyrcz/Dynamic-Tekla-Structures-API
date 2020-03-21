@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class Load  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class Load  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
@@ -113,7 +113,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal Load() {}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -343,7 +342,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Load FromTSObject(dynamic tsObject)
         {
-            return new Load() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Load)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

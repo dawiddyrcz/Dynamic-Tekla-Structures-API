@@ -187,7 +187,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PourObject FromTSObject(dynamic tsObject)
         {
-            return new PourObject() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.PourObject)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

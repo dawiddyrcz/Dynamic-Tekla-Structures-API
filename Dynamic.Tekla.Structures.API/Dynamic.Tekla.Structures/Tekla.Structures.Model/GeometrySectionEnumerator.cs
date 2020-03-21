@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal GeometrySectionEnumerator() {}
+		public GeometrySectionEnumerator() {}
 
 		public System.Boolean MoveNext()
 			 => teklaObject.MoveNext();
@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static GeometrySectionEnumerator FromTSObject(dynamic tsObject)
         {
-            return new GeometrySectionEnumerator() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.GeometrySectionEnumerator)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

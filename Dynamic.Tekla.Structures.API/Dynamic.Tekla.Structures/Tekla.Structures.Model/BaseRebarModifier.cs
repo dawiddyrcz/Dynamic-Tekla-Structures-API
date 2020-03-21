@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BaseRebarModifier  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class BaseRebarModifier  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
@@ -53,7 +53,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BaseRebarModifier() {}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -258,7 +257,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BaseRebarModifier FromTSObject(dynamic tsObject)
         {
-            return new BaseRebarModifier() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BaseRebarModifier)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

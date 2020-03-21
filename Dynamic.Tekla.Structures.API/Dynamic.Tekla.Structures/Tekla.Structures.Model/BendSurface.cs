@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BendSurface 
+    public abstract class BendSurface 
     {
 
 		public System.Boolean InwardCurved
@@ -71,42 +71,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BendSurface() {}
-		public BendSurface(Dynamic.Tekla.Structures.Geometry3d.Arc baseArc, System.Double height, System.Double radiusAtHeight)
-		{
-			var args = new object[3];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(baseArc);
-			args[1] = height;
-			args[2] = radiusAtHeight;
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface", args);
-		}
-		public BendSurface(System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2, Dynamic.Tekla.Structures.Geometry3d.Line centerLine, Dynamic.Tekla.Structures.Geometry3d.Vector rotationAxis)
-		{
-			var args = new object[4];
-			args[0] = lateralBoundary1;
-			args[1] = lateralBoundary2;
-			args[2] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(centerLine);
-			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(rotationAxis);
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface", args);
-		}
-		public BendSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary1, Dynamic.Tekla.Structures.Geometry3d.LineSegment sideBoundary2)
-		{
-			var args = new object[4];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal1);
-			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
-			args[2] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary1);
-			args[3] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(sideBoundary2);
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface", args);
-		}
-		public BendSurface(Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal1, Dynamic.Tekla.Structures.Geometry3d.Vector endFaceNormal2, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary1, System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> lateralBoundary2)
-		{
-			var args = new object[4];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal1);
-			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(endFaceNormal2);
-			args[2] = lateralBoundary1;
-			args[3] = lateralBoundary2;
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BendSurface", args);
-		}
 
 
 
@@ -123,7 +87,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BendSurface FromTSObject(dynamic tsObject)
         {
-            return new BendSurface() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BendSurface)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

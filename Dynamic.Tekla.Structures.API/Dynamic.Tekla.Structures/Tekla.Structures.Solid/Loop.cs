@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		internal Loop() {}
+		public Loop() {}
 
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
 			 => Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(teklaObject.GetVertexEnumerator());
@@ -31,7 +31,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
         public static Loop FromTSObject(dynamic tsObject)
         {
-            return new Loop() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Solid.Loop)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

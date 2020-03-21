@@ -77,7 +77,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static AABB FromTSObject(dynamic tsObject)
         {
-            return new AABB() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.AABB)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

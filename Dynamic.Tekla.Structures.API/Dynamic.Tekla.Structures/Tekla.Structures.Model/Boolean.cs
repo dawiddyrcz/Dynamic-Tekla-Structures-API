@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class Boolean  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class Boolean  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Father
@@ -35,7 +35,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal Boolean() {}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -145,7 +144,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Boolean FromTSObject(dynamic tsObject)
         {
-            return new Boolean() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Boolean)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

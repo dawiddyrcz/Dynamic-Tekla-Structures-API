@@ -31,7 +31,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static GeometryConstants FromTSObject(dynamic tsObject)
         {
-            return new GeometryConstants() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.GeometryConstants)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

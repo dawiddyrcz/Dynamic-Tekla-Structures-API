@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Model.Operations
 {
 
-    public  class Operation 
+    public abstract class Operation 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Operation() {}
 
 		public System.Boolean IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject InputModelObject)
 			 => teklaObject.IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(InputModelObject));
@@ -326,7 +325,11 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public static ProgressBar FromTSObject(dynamic tsObject)
         {
-            return new ProgressBar() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Operations.Operation.ProgressBar)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -344,7 +347,11 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public static Operation FromTSObject(dynamic tsObject)
         {
-            return new Operation() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Operations.Operation)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

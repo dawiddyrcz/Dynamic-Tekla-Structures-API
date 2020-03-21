@@ -37,7 +37,11 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public static GuidConversion FromTSObject(dynamic tsObject)
         {
-            return new GuidConversion() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Operations.GuidConversion)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		internal PartFilterExpressions() {}
+		public PartFilterExpressions() {}
 
 
 
@@ -23,7 +23,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		internal CustomBoolean() {}
+		public CustomBoolean() {}
 		public CustomBoolean(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -46,7 +46,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomBoolean FromTSObject(dynamic tsObject)
         {
-            return new CustomBoolean() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.CustomBoolean)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -59,7 +63,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		internal CustomDateTime() {}
+		public CustomDateTime() {}
 		public CustomDateTime(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -82,7 +86,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomDateTime FromTSObject(dynamic tsObject)
         {
-            return new CustomDateTime() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.CustomDateTime)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -95,7 +103,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		internal CustomNumber() {}
+		public CustomNumber() {}
 		public CustomNumber(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -118,7 +126,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomNumber FromTSObject(dynamic tsObject)
         {
-            return new CustomNumber() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.CustomNumber)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -131,7 +143,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		internal CustomString() {}
+		public CustomString() {}
 		public CustomString(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -154,7 +166,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomString FromTSObject(dynamic tsObject)
         {
-            return new CustomString() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.CustomString)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -187,7 +203,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Class FromTSObject(dynamic tsObject)
         {
-            return new Class() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Class)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -220,7 +240,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Finish FromTSObject(dynamic tsObject)
         {
-            return new Finish() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Finish)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -253,7 +277,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Lot FromTSObject(dynamic tsObject)
         {
-            return new Lot() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Lot)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -286,7 +314,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Material FromTSObject(dynamic tsObject)
         {
-            return new Material() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Material)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -319,7 +351,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Name FromTSObject(dynamic tsObject)
         {
-            return new Name() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Name)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -352,7 +388,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static NumberingSeries FromTSObject(dynamic tsObject)
         {
-            return new NumberingSeries() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.NumberingSeries)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -385,7 +425,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Phase FromTSObject(dynamic tsObject)
         {
-            return new Phase() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Phase)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -418,7 +462,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PositionNumber FromTSObject(dynamic tsObject)
         {
-            return new PositionNumber() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.PositionNumber)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -451,7 +499,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Prefix FromTSObject(dynamic tsObject)
         {
-            return new Prefix() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Prefix)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -484,7 +536,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PrimaryPart FromTSObject(dynamic tsObject)
         {
-            return new PrimaryPart() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.PrimaryPart)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -517,7 +573,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Profile FromTSObject(dynamic tsObject)
         {
-            return new Profile() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.Profile)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -550,7 +610,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static StartNumber FromTSObject(dynamic tsObject)
         {
-            return new StartNumber() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.StartNumber)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -583,7 +647,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PourPhase FromTSObject(dynamic tsObject)
         {
-            return new PourPhase() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions.PourPhase)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -601,7 +669,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PartFilterExpressions FromTSObject(dynamic tsObject)
         {
-            return new PartFilterExpressions() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Categories.PartFilterExpressions)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class GridBase  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class GridBase  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.Boolean IsMagnetic
@@ -59,7 +59,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal GridBase() {}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -169,7 +168,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static GridBase FromTSObject(dynamic tsObject)
         {
-            return new GridBase() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.GridBase)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -91,7 +91,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static UnsupportedChamferException FromTSObject(dynamic tsObject)
         {
-            return new UnsupportedChamferException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UnsupportedChamferException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

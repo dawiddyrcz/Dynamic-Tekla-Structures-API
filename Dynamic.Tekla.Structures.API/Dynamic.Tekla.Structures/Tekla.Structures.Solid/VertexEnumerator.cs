@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		internal VertexEnumerator() {}
+		public VertexEnumerator() {}
 
 		public System.Boolean MoveNext()
 			 => teklaObject.MoveNext();
@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
         public static VertexEnumerator FromTSObject(dynamic tsObject)
         {
-            return new VertexEnumerator() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Solid.VertexEnumerator)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

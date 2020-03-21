@@ -28,6 +28,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
 			 => teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
 
+		
 		public System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
 			 => teklaObject.GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep), Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep));
 
@@ -311,7 +312,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Polymesh FromTSObject(dynamic tsObject)
         {
-            return new Polymesh() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Polymesh)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

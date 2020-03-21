@@ -53,7 +53,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		internal ParametricObject_CustomProfile() {}
+		public ParametricObject_CustomProfile() {}
 
 
 
@@ -70,7 +70,11 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static ParametricObject_CustomProfile FromTSObject(dynamic tsObject)
         {
-            return new ParametricObject_CustomProfile() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Collaboration.ParametricObject_CustomProfile)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

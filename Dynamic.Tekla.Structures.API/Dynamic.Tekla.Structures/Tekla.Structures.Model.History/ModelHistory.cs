@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Model.History
 {
 
-    public  class ModelHistory 
+    public abstract class ModelHistory 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal ModelHistory() {}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetModifiedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp ModStamp)
 			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetModifiedObjects(Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(ModStamp)));
@@ -64,7 +63,11 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         public static ModelHistory FromTSObject(dynamic tsObject)
         {
-            return new ModelHistory() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.History.ModelHistory)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

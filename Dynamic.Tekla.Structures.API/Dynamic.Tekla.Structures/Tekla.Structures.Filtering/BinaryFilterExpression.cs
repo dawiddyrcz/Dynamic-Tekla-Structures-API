@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal BinaryFilterExpression() {}
+		public BinaryFilterExpression() {}
 		public BinaryFilterExpression(Dynamic.Tekla.Structures.Filtering.BooleanFilterExpression Left, Dynamic.Tekla.Structures.Filtering.BooleanOperatorType Oper, Dynamic.Tekla.Structures.Filtering.BooleanConstantFilterExpression Right)
 		{
 			var args = new object[3];
@@ -66,7 +66,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static BinaryFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new BinaryFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.BinaryFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

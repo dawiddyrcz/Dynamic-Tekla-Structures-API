@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal WorkPlaneHandler() {}
+		public WorkPlaneHandler() {}
 
 		public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
 			 => Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(teklaObject.GetCurrentTransformationPlane());
@@ -34,7 +34,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static WorkPlaneHandler FromTSObject(dynamic tsObject)
         {
-            return new WorkPlaneHandler() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.WorkPlaneHandler)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

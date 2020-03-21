@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         internal dynamic teklaObject;
 
-		internal ModelViewEnumerator() {}
+		public ModelViewEnumerator() {}
 
 		public System.Boolean MoveNext()
 			 => teklaObject.MoveNext();
@@ -52,7 +52,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static ModelViewEnumerator FromTSObject(dynamic tsObject)
         {
-            return new ModelViewEnumerator() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.ModelViewEnumerator)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

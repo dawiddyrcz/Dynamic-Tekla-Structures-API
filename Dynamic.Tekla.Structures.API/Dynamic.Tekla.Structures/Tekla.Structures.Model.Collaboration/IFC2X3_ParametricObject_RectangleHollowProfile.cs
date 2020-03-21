@@ -83,7 +83,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		internal IFC2X3_ParametricObject_RectangleHollowProfile() {}
+		public IFC2X3_ParametricObject_RectangleHollowProfile() {}
 
 
 
@@ -100,7 +100,11 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static IFC2X3_ParametricObject_RectangleHollowProfile FromTSObject(dynamic tsObject)
         {
-            return new IFC2X3_ParametricObject_RectangleHollowProfile() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_RectangleHollowProfile)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

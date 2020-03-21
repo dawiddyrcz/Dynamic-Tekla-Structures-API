@@ -226,7 +226,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Connection FromTSObject(dynamic tsObject)
         {
-            return new Connection() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Connection)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

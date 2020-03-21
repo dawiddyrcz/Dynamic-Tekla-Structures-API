@@ -226,7 +226,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarPropertyModifier FromTSObject(dynamic tsObject)
         {
-            return new RebarPropertyModifier() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarPropertyModifier)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

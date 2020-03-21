@@ -311,7 +311,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BentPlate FromTSObject(dynamic tsObject)
         {
-            return new BentPlate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BentPlate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal InputItem() {}
+		public InputItem() {}
 
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
 			 => Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
@@ -89,7 +89,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static InputItem FromTSObject(dynamic tsObject)
         {
-            return new InputItem() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.InputItem)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

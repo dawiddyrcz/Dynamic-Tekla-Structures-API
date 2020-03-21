@@ -56,7 +56,11 @@ namespace Dynamic.Tekla.Structures.Model.History
 
         public static ModificationStamp FromTSObject(dynamic tsObject)
         {
-            return new ModificationStamp() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.History.ModificationStamp)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

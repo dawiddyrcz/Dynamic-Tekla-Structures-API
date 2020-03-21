@@ -89,7 +89,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal InvalidFilterExpressionException() {}
+		public InvalidFilterExpressionException() {}
 		public InvalidFilterExpressionException(Dynamic.Tekla.Structures.Filtering.Expression Expression, Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType)
 		{
 			var args = new object[2];
@@ -136,7 +136,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static InvalidFilterExpressionException FromTSObject(dynamic tsObject)
         {
-            return new InvalidFilterExpressionException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.InvalidFilterExpressionException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

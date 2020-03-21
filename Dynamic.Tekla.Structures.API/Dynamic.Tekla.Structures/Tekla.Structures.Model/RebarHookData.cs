@@ -110,7 +110,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarHookData FromTSObject(dynamic tsObject)
         {
-            return new RebarHookData() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarHookData)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

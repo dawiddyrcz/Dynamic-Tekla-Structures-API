@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class ICurve 
+    public abstract class ICurve 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
@@ -29,7 +29,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         internal dynamic teklaObject;
 
-		internal ICurve() {}
 
 
 
@@ -46,7 +45,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static ICurve FromTSObject(dynamic tsObject)
         {
-            return new ICurve() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.ICurve)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

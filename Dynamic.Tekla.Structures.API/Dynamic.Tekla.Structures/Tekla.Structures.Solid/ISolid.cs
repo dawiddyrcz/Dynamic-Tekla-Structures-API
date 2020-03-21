@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Solid
 {
 
-    public  class ISolid 
+    public abstract class ISolid 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
@@ -23,7 +23,6 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		internal ISolid() {}
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
 			 => Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
@@ -46,7 +45,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
         public static ISolid FromTSObject(dynamic tsObject)
         {
-            return new ISolid() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Solid.ISolid)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

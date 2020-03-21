@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class Object 
+    public abstract class Object 
     {
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
@@ -17,7 +17,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal Object() {}
 
 
 
@@ -34,7 +33,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Object FromTSObject(dynamic tsObject)
         {
-            return new Object() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Object)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -37,7 +37,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Material FromTSObject(dynamic tsObject)
         {
-            return new Material() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Material)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

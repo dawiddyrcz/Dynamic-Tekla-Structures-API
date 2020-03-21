@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class Projection 
+    public abstract class Projection 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Projection() {}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
 			 => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line)));
@@ -40,7 +39,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Projection FromTSObject(dynamic tsObject)
         {
-            return new Projection() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Projection)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

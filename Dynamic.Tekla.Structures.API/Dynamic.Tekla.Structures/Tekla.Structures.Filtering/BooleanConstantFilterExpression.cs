@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal BooleanConstantFilterExpression() {}
+		public BooleanConstantFilterExpression() {}
 		public BooleanConstantFilterExpression(System.Boolean Value)
 		{
 			var args = new object[1];
@@ -41,7 +41,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static BooleanConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new BooleanConstantFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.BooleanConstantFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

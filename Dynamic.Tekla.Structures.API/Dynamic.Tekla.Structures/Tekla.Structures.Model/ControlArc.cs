@@ -168,7 +168,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ControlArc FromTSObject(dynamic tsObject)
         {
-            return new ControlArc() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ControlArc)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -293,7 +293,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal LogicalWeld() {}
+		public LogicalWeld() {}
 		public LogicalWeld(Dynamic.Tekla.Structures.Model.BaseWeld MainWeld)
 		{
 			var args = new object[1];
@@ -433,7 +433,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static LogicalWeld FromTSObject(dynamic tsObject)
         {
-            return new LogicalWeld() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.LogicalWeld)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

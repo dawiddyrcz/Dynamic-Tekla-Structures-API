@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal PhaseCollection() {}
+		public PhaseCollection() {}
 
 		public void CopyTo(System.Array Array, System.Int32 Index)
 			 => teklaObject.CopyTo(Array, Index);
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PhaseCollection FromTSObject(dynamic tsObject)
         {
-            return new PhaseCollection() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.PhaseCollection)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

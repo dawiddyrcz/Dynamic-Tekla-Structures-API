@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class Intersection 
+    public abstract class Intersection 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Intersection() {}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line line1, Dynamic.Tekla.Structures.Geometry3d.Line line2)
 			 => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineToLine(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line1), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line2)));
@@ -46,7 +45,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Intersection FromTSObject(dynamic tsObject)
         {
-            return new Intersection() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Intersection)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -391,7 +391,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BoltArray FromTSObject(dynamic tsObject)
         {
-            return new BoltArray() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BoltArray)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

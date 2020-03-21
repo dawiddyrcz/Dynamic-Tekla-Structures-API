@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class IGeometryNodeVisitor 
+    public abstract class IGeometryNodeVisitor 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal IGeometryNodeVisitor() {}
 
 		public void Visit(Dynamic.Tekla.Structures.Model.PolygonNode node)
 			 => teklaObject.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
@@ -34,7 +33,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static IGeometryNodeVisitor FromTSObject(dynamic tsObject)
         {
-            return new IGeometryNodeVisitor() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.IGeometryNodeVisitor)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

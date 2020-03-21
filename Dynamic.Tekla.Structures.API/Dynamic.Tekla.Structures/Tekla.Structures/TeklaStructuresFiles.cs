@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures
 
         internal dynamic teklaObject;
 
-		internal TeklaStructuresFiles() {}
+		public TeklaStructuresFiles() {}
 		public TeklaStructuresFiles(System.String modelpath)
 		{
 			var args = new object[1];
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures
 
         public static TeklaStructuresFiles FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresFiles() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.TeklaStructuresFiles)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

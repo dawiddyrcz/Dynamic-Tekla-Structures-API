@@ -175,7 +175,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarSet FromTSObject(dynamic tsObject)
         {
-            return new RebarSet() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarSet)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

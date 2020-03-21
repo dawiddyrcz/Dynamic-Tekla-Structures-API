@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal DateTimeConstantFilterExpression() {}
+		public DateTimeConstantFilterExpression() {}
 		public DateTimeConstantFilterExpression(System.DateTime Value)
 		{
 			var args = new object[1];
@@ -54,7 +54,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static DateTimeConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new DateTimeConstantFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.DateTimeConstantFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

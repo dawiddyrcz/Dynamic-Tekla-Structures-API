@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BaseComponent  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class BaseComponent  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public System.String Name
@@ -41,7 +41,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BaseComponent() {}
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 			 => teklaObject.SetAttribute(AttrName, StrValue);
@@ -172,7 +171,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BaseComponent FromTSObject(dynamic tsObject)
         {
-            return new BaseComponent() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BaseComponent)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

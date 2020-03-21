@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class MatrixFactory 
+    public abstract class MatrixFactory 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal MatrixFactory() {}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix Rotate(System.Double Angle, Dynamic.Tekla.Structures.Geometry3d.Vector Axis)
 			 => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.Rotate(Angle, Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Axis)));
@@ -40,7 +39,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static MatrixFactory FromTSObject(dynamic tsObject)
         {
-            return new MatrixFactory() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.MatrixFactory)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

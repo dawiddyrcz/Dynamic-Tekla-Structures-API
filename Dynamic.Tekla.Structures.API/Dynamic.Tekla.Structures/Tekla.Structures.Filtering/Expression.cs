@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public  class Expression 
+    public abstract class Expression 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Expression() {}
 
 
 
@@ -28,7 +27,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static Expression FromTSObject(dynamic tsObject)
         {
-            return new Expression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Expression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

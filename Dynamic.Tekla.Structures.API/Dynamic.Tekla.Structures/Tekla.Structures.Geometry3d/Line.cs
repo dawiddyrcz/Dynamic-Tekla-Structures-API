@@ -63,7 +63,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Line FromTSObject(dynamic tsObject)
         {
-            return new Line() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Line)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

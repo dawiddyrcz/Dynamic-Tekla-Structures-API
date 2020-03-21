@@ -23,7 +23,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		internal Face() {}
+		public Face() {}
 
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
 			 => Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(teklaObject.GetLoopEnumerator());
@@ -43,7 +43,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
         public static Face FromTSObject(dynamic tsObject)
         {
-            return new Face() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Solid.Face)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -16,9 +16,9 @@ namespace CodeGenerator
 
             string outputText = String.Copy(text);
 
-            //if (type.IsAbstract)
-            //    outputText = outputText.Replace("$abstract", "abstract");
-            //else
+            if (type.IsAbstract)
+                outputText = outputText.Replace("$abstract", "abstract");
+            else
                 outputText = outputText.Replace("$abstract", "");
 
             outputText = outputText.Replace("$constructors", ConstructorsText(type));
@@ -59,14 +59,17 @@ namespace CodeGenerator
         private string ConstructorsText(Type type)
         {
             var sb = new StringBuilder(500);
-            
-            if (type.GetConstructors().Any(c => c.GetParameters().Count() == 0) && !type.IsAbstract)
+
+            if (type.IsAbstract) return string.Empty;
+
+            if (type.GetConstructors().Any(c => c.GetParameters().Count() == 0))
             {
                 sb.Append("\t\tpublic $classname()\n\t\t{\n");
                 sb.Append("\t\t\tthis.$dfield = TSActivator.CreateInstance(\"$typeFullName\");\n");
                 sb.Append("\t\t}\n");
             }
-            else sb.Append("\t\tinternal $classname() {}\n");
+            else sb.Append("\t\tpublic $classname() {}\n"); 
+
 
             var constructors = type.GetConstructors()
                 .Where(c => c.GetParameters().Count() > 0)
@@ -359,7 +362,11 @@ $nestedTypes
 
         public static $classname FromTSObject(dynamic tsObject)
         {
-            return new $classname() { teklaObject = tsObject };
+            var typeName = ""Dynamic."" + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = ($typeFullName)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -229,7 +229,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TaskDependency FromTSObject(dynamic tsObject)
         {
-            return new TaskDependency() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.TaskDependency)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

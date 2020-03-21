@@ -118,7 +118,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarCrankingNullable FromTSObject(dynamic tsObject)
         {
-            return new RebarCrankingNullable() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarCrankingNullable)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

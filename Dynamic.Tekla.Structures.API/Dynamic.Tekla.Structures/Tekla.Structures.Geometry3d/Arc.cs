@@ -71,7 +71,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         internal dynamic teklaObject;
 
-		internal Arc() {}
+		public Arc() {}
 		public Arc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point pointOnArc)
 		{
 			var args = new object[3];
@@ -115,7 +115,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Arc FromTSObject(dynamic tsObject)
         {
-            return new Arc() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Arc)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

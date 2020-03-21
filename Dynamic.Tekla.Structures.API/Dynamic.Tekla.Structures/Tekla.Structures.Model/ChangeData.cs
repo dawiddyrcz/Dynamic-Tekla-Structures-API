@@ -23,7 +23,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ChangeData() {}
+		public ChangeData() {}
 
 
 
@@ -90,7 +90,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ChangeData FromTSObject(dynamic tsObject)
         {
-            return new ChangeData() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ChangeData)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

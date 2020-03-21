@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class BaseWeld  : Dynamic.Tekla.Structures.Model.ModelObject
+    public abstract class BaseWeld  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
 		public Dynamic.Tekla.Structures.Model.ModelObject MainObject
@@ -293,7 +293,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BaseWeld() {}
 
 		public System.Collections.ArrayList GetWeldGeometries()
 			 => teklaObject.GetWeldGeometries();
@@ -1019,7 +1018,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BaseWeld FromTSObject(dynamic tsObject)
         {
-            return new BaseWeld() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BaseWeld)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -65,7 +65,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal SpiralBeamDataException() {}
+		public SpiralBeamDataException() {}
 		public SpiralBeamDataException(Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus status, System.String message)
 		{
 			var args = new object[2];
@@ -95,7 +95,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static SpiralBeamDataException FromTSObject(dynamic tsObject)
         {
-            return new SpiralBeamDataException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.SpiralBeamDataException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

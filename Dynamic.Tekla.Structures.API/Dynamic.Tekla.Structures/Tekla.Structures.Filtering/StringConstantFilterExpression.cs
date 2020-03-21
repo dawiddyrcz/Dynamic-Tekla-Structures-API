@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal StringConstantFilterExpression() {}
+		public StringConstantFilterExpression() {}
 		public StringConstantFilterExpression(System.String Value)
 		{
 			var args = new object[1];
@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static StringConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new StringConstantFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.StringConstantFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

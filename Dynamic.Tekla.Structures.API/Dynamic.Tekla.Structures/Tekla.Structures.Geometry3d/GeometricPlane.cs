@@ -67,7 +67,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static GeometricPlane FromTSObject(dynamic tsObject)
         {
-            return new GeometricPlane() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.GeometricPlane)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

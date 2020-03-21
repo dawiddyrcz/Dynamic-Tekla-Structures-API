@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures
 {
 
-    public  class TeklaStructuresVariables 
+    public abstract class TeklaStructuresVariables 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal TeklaStructuresVariables() {}
 
 		public void Add(System.String key)
 			 => teklaObject.Add(key);
@@ -37,7 +36,11 @@ namespace Dynamic.Tekla.Structures
 
         public static TeklaStructuresVariables FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresVariables() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.TeklaStructuresVariables)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

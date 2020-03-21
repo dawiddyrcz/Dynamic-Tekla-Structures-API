@@ -70,7 +70,11 @@ namespace Dynamic.Tekla.Structures
 
         public static Identifier FromTSObject(dynamic tsObject)
         {
-            return new Identifier() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Identifier)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

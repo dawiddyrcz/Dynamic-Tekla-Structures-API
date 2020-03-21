@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class Distance 
+    public abstract class Distance 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Distance() {}
 
 		public System.Double PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
 			 => teklaObject.PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2));
@@ -40,7 +39,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Distance FromTSObject(dynamic tsObject)
         {
-            return new Distance() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Distance)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

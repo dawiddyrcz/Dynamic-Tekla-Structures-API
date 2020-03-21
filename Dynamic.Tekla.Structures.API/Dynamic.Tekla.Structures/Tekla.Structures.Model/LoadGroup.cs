@@ -738,7 +738,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static LoadGroup FromTSObject(dynamic tsObject)
         {
-            return new LoadGroup() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.LoadGroup)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

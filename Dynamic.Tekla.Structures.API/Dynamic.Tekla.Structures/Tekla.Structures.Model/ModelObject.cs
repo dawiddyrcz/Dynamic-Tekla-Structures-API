@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class ModelObject  : Dynamic.Tekla.Structures.Model.Object
+    public abstract class ModelObject  : Dynamic.Tekla.Structures.Model.Object
     {
 
 		public System.DateTime ModificationTime
@@ -29,7 +29,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelObject() {}
 
 		public System.Boolean Insert()
 			 => teklaObject.Insert();
@@ -511,7 +510,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (ModelObject) System.Activator.CreateInstance(type);
+            var dynObject = (Tekla.Structures.Model.ModelObject)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

@@ -256,7 +256,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Grid FromTSObject(dynamic tsObject)
         {
-            return new Grid() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Grid)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

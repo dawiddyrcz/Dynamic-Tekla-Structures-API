@@ -148,7 +148,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TaskWorktype FromTSObject(dynamic tsObject)
         {
-            return new TaskWorktype() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.TaskWorktype)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

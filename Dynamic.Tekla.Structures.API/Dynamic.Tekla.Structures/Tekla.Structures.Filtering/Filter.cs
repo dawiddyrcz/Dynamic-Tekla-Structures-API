@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal Filter() {}
+		public Filter() {}
 		public Filter(Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
 		{
 			var args = new object[1];
@@ -50,7 +50,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static Filter FromTSObject(dynamic tsObject)
         {
-            return new Filter() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.Filter)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

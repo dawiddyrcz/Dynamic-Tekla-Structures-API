@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal RebarGeometry() {}
+		public RebarGeometry() {}
 
 
 
@@ -46,7 +46,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarGeometry FromTSObject(dynamic tsObject)
         {
-            return new RebarGeometry() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarGeometry)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

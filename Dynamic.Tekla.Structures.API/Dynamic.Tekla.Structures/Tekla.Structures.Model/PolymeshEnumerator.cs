@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal PolymeshEnumerator() {}
+		public PolymeshEnumerator() {}
 
 		public System.Boolean MoveNext()
 			 => teklaObject.MoveNext();
@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PolymeshEnumerator FromTSObject(dynamic tsObject)
         {
-            return new PolymeshEnumerator() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.PolymeshEnumerator)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

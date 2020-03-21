@@ -119,7 +119,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal BasePoint() {}
+		public BasePoint() {}
 		public BasePoint(System.String name)
 		{
 			var args = new object[1];
@@ -234,7 +234,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static BasePoint FromTSObject(dynamic tsObject)
         {
-            return new BasePoint() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.BasePoint)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

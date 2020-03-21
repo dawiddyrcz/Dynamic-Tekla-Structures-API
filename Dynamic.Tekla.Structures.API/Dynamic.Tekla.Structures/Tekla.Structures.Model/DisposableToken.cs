@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal DisposableToken() {}
+		public DisposableToken() {}
 		public DisposableToken(System.Action disposed)
 		{
 			var args = new object[1];
@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static DisposableToken FromTSObject(dynamic tsObject)
         {
-            return new DisposableToken() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.DisposableToken)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -55,7 +55,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static DeformingData FromTSObject(dynamic tsObject)
         {
-            return new DeformingData() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.DeformingData)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

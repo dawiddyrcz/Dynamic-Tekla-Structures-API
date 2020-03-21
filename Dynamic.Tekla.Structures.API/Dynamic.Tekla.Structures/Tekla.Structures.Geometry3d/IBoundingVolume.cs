@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class IBoundingVolume 
+    public abstract class IBoundingVolume 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal IBoundingVolume() {}
 
 
 
@@ -28,7 +27,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static IBoundingVolume FromTSObject(dynamic tsObject)
         {
-            return new IBoundingVolume() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.IBoundingVolume)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

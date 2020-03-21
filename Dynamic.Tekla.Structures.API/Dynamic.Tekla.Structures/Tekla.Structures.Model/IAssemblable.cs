@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class IAssemblable 
+    public abstract class IAssemblable 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal IAssemblable() {}
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
 			 => Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
@@ -31,7 +30,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static IAssemblable FromTSObject(dynamic tsObject)
         {
-            return new IAssemblable() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.IAssemblable)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

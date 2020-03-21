@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class LoftedPlateOperationException 
+    public abstract class LoftedPlateOperationException 
     {
 
 		public System.String Message
@@ -59,13 +59,6 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal LoftedPlateOperationException() {}
-		public LoftedPlateOperationException(System.String message)
-		{
-			var args = new object[1];
-			args[0] = message;
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.LoftedPlateOperationException", args);
-		}
 
 		public System.Exception GetBaseException()
 			 => teklaObject.GetBaseException();
@@ -88,7 +81,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static LoftedPlateOperationException FromTSObject(dynamic tsObject)
         {
-            return new LoftedPlateOperationException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.LoftedPlateOperationException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -85,7 +85,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static NullRulingException FromTSObject(dynamic tsObject)
         {
-            return new NullRulingException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.NullRulingException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

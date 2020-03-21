@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal NumericFilterExpression() {}
+		public NumericFilterExpression() {}
 
 
 
@@ -28,7 +28,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static NumericFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new NumericFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.NumericFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

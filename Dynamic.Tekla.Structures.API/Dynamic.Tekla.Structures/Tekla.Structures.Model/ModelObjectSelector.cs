@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelObjectSelector() {}
+		public ModelObjectSelector() {}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjects()
 			 => Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllObjects());
@@ -52,7 +52,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObjectSelector FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectSelector() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ModelObjectSelector)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

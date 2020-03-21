@@ -261,7 +261,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ControlCircle FromTSObject(dynamic tsObject)
         {
-            return new ControlCircle() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ControlCircle)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

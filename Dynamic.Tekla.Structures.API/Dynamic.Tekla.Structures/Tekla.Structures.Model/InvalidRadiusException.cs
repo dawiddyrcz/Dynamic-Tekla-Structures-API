@@ -91,7 +91,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static InvalidRadiusException FromTSObject(dynamic tsObject)
         {
-            return new InvalidRadiusException() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.InvalidRadiusException)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

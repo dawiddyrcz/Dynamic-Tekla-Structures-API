@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ConnectiveGeometry() {}
+		public ConnectiveGeometry() {}
 		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.Contour contour)
 		{
 			var args = new object[1];
@@ -46,7 +46,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ConnectiveGeometry FromTSObject(dynamic tsObject)
         {
-            return new ConnectiveGeometry() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ConnectiveGeometry)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

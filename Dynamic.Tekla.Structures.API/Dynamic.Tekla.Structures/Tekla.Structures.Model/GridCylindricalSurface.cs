@@ -216,7 +216,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static GridCylindricalSurface FromTSObject(dynamic tsObject)
         {
-            return new GridCylindricalSurface() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.GridCylindricalSurface)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

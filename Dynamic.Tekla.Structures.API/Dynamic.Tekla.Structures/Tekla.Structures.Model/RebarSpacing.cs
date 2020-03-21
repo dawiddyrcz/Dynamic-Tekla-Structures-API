@@ -119,7 +119,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static RebarSpacing FromTSObject(dynamic tsObject)
         {
-            return new RebarSpacing() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.RebarSpacing)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

@@ -23,7 +23,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ConicalSurfaceNode() {}
+		public ConicalSurfaceNode() {}
 		public ConicalSurfaceNode(Dynamic.Tekla.Structures.Model.ConicalSurface surface)
 		{
 			var args = new object[1];
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ConicalSurfaceNode FromTSObject(dynamic tsObject)
         {
-            return new ConicalSurfaceNode() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ConicalSurfaceNode)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

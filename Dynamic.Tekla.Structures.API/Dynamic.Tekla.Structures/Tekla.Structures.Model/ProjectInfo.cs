@@ -131,7 +131,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ProjectInfo() {}
+		public ProjectInfo() {}
 
 		public System.Boolean Modify()
 			 => teklaObject.Modify();
@@ -202,7 +202,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ProjectInfo FromTSObject(dynamic tsObject)
         {
-            return new ProjectInfo() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.ProjectInfo)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

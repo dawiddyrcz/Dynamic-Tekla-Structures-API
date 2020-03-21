@@ -161,7 +161,11 @@ namespace Dynamic.Tekla.Structures
 
         public static ComponentOptions FromTSObject(dynamic tsObject)
         {
-            return new ComponentOptions() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.ComponentOptions)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

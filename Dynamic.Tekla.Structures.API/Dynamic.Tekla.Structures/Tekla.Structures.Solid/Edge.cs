@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		internal Edge() {}
+		public Edge() {}
 
 		public System.Object Clone()
 			 => teklaObject.Clone();
@@ -94,7 +94,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
         public static Edge FromTSObject(dynamic tsObject)
         {
-            return new Edge() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Solid.Edge)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

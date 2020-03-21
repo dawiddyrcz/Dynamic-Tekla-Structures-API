@@ -47,7 +47,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         internal dynamic teklaObject;
 
-		internal FacetedBrepWithNormals() {}
+		public FacetedBrepWithNormals() {}
 		public FacetedBrepWithNormals(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires, Dynamic.Tekla.Structures.Geometry3d.Vector normals)
 		{
 			var args = new object[4];
@@ -85,7 +85,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static FacetedBrepWithNormals FromTSObject(dynamic tsObject)
         {
-            return new FacetedBrepWithNormals() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.FacetedBrepWithNormals)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

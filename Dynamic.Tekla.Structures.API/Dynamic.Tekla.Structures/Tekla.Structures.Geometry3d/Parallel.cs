@@ -4,14 +4,13 @@
 namespace Dynamic.Tekla.Structures.Geometry3d
 {
 
-    public  class Parallel 
+    public abstract class Parallel 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal Parallel() {}
 
 		public System.Boolean VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
 			 => teklaObject.VectorToVector(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
@@ -70,7 +69,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static Parallel FromTSObject(dynamic tsObject)
         {
-            return new Parallel() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Geometry3d.Parallel)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

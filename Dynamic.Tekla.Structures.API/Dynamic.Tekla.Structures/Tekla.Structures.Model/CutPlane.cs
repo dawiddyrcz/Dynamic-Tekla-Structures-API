@@ -154,7 +154,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static CutPlane FromTSObject(dynamic tsObject)
         {
-            return new CutPlane() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.CutPlane)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

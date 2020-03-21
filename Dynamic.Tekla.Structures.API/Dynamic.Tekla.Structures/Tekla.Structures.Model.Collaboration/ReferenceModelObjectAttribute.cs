@@ -4,7 +4,7 @@
 namespace Dynamic.Tekla.Structures.Model.Collaboration
 {
 
-    public  class ReferenceModelObjectAttribute 
+    public abstract class ReferenceModelObjectAttribute 
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
@@ -53,7 +53,6 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		internal ReferenceModelObjectAttribute() {}
 
 
 
@@ -170,7 +169,11 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static ReferenceModelObjectAttribute FromTSObject(dynamic tsObject)
         {
-            return new ReferenceModelObjectAttribute() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

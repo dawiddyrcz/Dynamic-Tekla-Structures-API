@@ -68,7 +68,7 @@ namespace Dynamic.Tekla.Structures
 
         internal dynamic teklaObject;
 
-		internal InvalidPathCallback() {}
+		public InvalidPathCallback() {}
 		public InvalidPathCallback(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -110,20 +110,23 @@ namespace Dynamic.Tekla.Structures
 
         public static InvalidPathCallback FromTSObject(dynamic tsObject)
         {
-            return new InvalidPathCallback() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
 
 
-    public  class ToolOptionNames 
+    public abstract class ToolOptionNames 
     {
 
         
 
         internal dynamic teklaObject;
 
-		internal ToolOptionNames() {}
 
 
 
@@ -140,7 +143,11 @@ namespace Dynamic.Tekla.Structures
 
         public static ToolOptionNames FromTSObject(dynamic tsObject)
         {
-            return new ToolOptionNames() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.TeklaStructuresSettings.ToolOptionNames)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -158,7 +165,11 @@ namespace Dynamic.Tekla.Structures
 
         public static TeklaStructuresSettings FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresSettings() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.TeklaStructuresSettings)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

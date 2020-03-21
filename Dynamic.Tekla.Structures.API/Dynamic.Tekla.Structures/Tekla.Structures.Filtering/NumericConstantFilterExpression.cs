@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		internal NumericConstantFilterExpression() {}
+		public NumericConstantFilterExpression() {}
 		public NumericConstantFilterExpression(Dynamic.Tekla.Structures.TeklaStructuresDatabaseTypeEnum ObjectType)
 		{
 			var args = new object[1];
@@ -222,7 +222,11 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static NumericConstantFilterExpression FromTSObject(dynamic tsObject)
         {
-            return new NumericConstantFilterExpression() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Filtering.NumericConstantFilterExpression)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

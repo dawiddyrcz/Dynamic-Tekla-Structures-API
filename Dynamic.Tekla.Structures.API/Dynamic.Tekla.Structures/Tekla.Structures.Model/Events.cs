@@ -200,7 +200,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal SelectionChangeDelegate() {}
+		public SelectionChangeDelegate() {}
 		public SelectionChangeDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -242,7 +242,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static SelectionChangeDelegate FromTSObject(dynamic tsObject)
         {
-            return new SelectionChangeDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.SelectionChangeDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -267,7 +271,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal CommandStatusChangeDelegate() {}
+		public CommandStatusChangeDelegate() {}
 		public CommandStatusChangeDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -309,7 +313,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static CommandStatusChangeDelegate FromTSObject(dynamic tsObject)
         {
-            return new CommandStatusChangeDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.CommandStatusChangeDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -334,7 +342,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal TrackEventDelegate() {}
+		public TrackEventDelegate() {}
 		public TrackEventDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -376,7 +384,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TrackEventDelegate FromTSObject(dynamic tsObject)
         {
-            return new TrackEventDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.TrackEventDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -401,7 +413,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelSaveDelegate() {}
+		public ModelSaveDelegate() {}
 		public ModelSaveDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -443,7 +455,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelSaveDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelSaveDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelSaveDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -468,7 +484,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelSaveAsDelegate() {}
+		public ModelSaveAsDelegate() {}
 		public ModelSaveAsDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -510,7 +526,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelSaveAsDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelSaveAsDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelSaveAsDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -535,7 +555,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelLoadDelegate() {}
+		public ModelLoadDelegate() {}
 		public ModelLoadDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -577,7 +597,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelLoadDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelLoadDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelLoadDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -602,7 +626,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal NumberingDelegate() {}
+		public NumberingDelegate() {}
 		public NumberingDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -644,7 +668,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static NumberingDelegate FromTSObject(dynamic tsObject)
         {
-            return new NumberingDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.NumberingDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -669,7 +697,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelChangedDelegate() {}
+		public ModelChangedDelegate() {}
 		public ModelChangedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -711,7 +739,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelChangedDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelChangedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelChangedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -736,7 +768,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelObjectNumberedDelegate() {}
+		public ModelObjectNumberedDelegate() {}
 		public ModelObjectNumberedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -778,7 +810,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObjectNumberedDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectNumberedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelObjectNumberedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -803,7 +839,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ModelObjectChangedDelegate() {}
+		public ModelObjectChangedDelegate() {}
 		public ModelObjectChangedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -845,7 +881,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObjectChangedDelegate FromTSObject(dynamic tsObject)
         {
-            return new ModelObjectChangedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ModelObjectChangedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -870,7 +910,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal TeklaStructuresExitDelegate() {}
+		public TeklaStructuresExitDelegate() {}
 		public TeklaStructuresExitDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -912,7 +952,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TeklaStructuresExitDelegate FromTSObject(dynamic tsObject)
         {
-            return new TeklaStructuresExitDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.TeklaStructuresExitDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -937,7 +981,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ClashCheckDoneDelegate() {}
+		public ClashCheckDoneDelegate() {}
 		public ClashCheckDoneDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -979,7 +1023,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ClashCheckDoneDelegate FromTSObject(dynamic tsObject)
         {
-            return new ClashCheckDoneDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ClashCheckDoneDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -1004,7 +1052,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal ClashDetectedDelegate() {}
+		public ClashDetectedDelegate() {}
 		public ClashDetectedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -1046,7 +1094,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ClashDetectedDelegate FromTSObject(dynamic tsObject)
         {
-            return new ClashDetectedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.ClashDetectedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -1071,7 +1123,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal PointInputChangedDelegate() {}
+		public PointInputChangedDelegate() {}
 		public PointInputChangedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -1113,7 +1165,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PointInputChangedDelegate FromTSObject(dynamic tsObject)
         {
-            return new PointInputChangedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.PointInputChangedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -1138,7 +1194,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		internal InterruptedDelegate() {}
+		public InterruptedDelegate() {}
 		public InterruptedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -1180,7 +1236,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static InterruptedDelegate FromTSObject(dynamic tsObject)
         {
-            return new InterruptedDelegate() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events.InterruptedDelegate)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 
@@ -1198,7 +1258,11 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Events FromTSObject(dynamic tsObject)
         {
-            return new Events() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.Events)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

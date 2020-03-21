@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         internal dynamic teklaObject;
 
-		internal PickInput() {}
+		public PickInput() {}
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => teklaObject.CopyTo(array, index);
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static PickInput FromTSObject(dynamic tsObject)
         {
-            return new PickInput() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.PickInput)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

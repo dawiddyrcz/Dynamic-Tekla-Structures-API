@@ -232,7 +232,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static Picker FromTSObject(dynamic tsObject)
         {
-            return new Picker() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.Picker)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

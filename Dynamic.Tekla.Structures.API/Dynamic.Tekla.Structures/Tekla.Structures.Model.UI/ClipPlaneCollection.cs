@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         internal dynamic teklaObject;
 
-		internal ClipPlaneCollection() {}
+		public ClipPlaneCollection() {}
 
 		public void CopyTo(System.Array array, System.Int32 index)
 			 => teklaObject.CopyTo(array, index);
@@ -49,7 +49,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         public static ClipPlaneCollection FromTSObject(dynamic tsObject)
         {
-            return new ClipPlaneCollection() { teklaObject = tsObject };
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Model.UI.ClipPlaneCollection)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
         }
     }
 

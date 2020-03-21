@@ -16,12 +16,6 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UnsupportedChamferException");
 		}
 
-		public System.Exception GetBaseException()
-			 => teklaObject.GetBaseException();
-
-		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => teklaObject.GetObjectData(info, context);
-
 
 
 

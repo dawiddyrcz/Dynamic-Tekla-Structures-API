@@ -146,21 +146,19 @@ namespace CodeGenerator
         {
             var sb = new StringBuilder();
             var methods = type.GetMethods().Where(
-                m => m.IsPublic 
+                m => m.IsPublic
                 && !m.ReturnType.ToString().Contains("Tekla.Structures.ModelInternal")
                 && !m.GetParameters().Any(p => p.ParameterType.ToString().Contains("Tekla.Structures.ModelInternal"))
-                )
-                //.Where(m => m.DeclaringType.Equals(type))
+                && m.DeclaringType.Equals(type))
                 .ToList();
 
             foreach (var method in methods)
             {
+                if (type.Name.Equals("Polymesh", StringComparison.InvariantCulture) && method.Name.Equals("Validate", StringComparison.InvariantCulture)) continue;
                 if (method.ReturnType.IsInterface) continue;
 
                 var name = method.Name;
                 if (name.Equals("GetType")||name.Equals("Equals")||name.Equals("ToString") || name.Equals("GetHashCode")) continue;
-
-
                 if (name.Contains("get_") || name.Contains("set_")) continue;
                 
                 sb.Append("\t\t");

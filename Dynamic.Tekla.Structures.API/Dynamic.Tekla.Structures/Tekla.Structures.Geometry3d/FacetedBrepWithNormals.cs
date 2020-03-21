@@ -28,18 +28,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals", args);
 		}
 
-		public System.Boolean CheckForTwoManifold()
-			 => teklaObject.CheckForTwoManifold();
-
-		public System.Int32 GetInnerFace(System.Int32 faceIndex)
-			 => teklaObject.GetInnerFace(faceIndex);
-
-		public System.Int32 GetInnerFaceCount(System.Int32 faceIndex)
-			 => teklaObject.GetInnerFaceCount(faceIndex);
-
-		public System.Int32 GetOuterFace(System.Int32 faceIndex)
-			 => teklaObject.GetOuterFace(faceIndex);
-
 
 
 

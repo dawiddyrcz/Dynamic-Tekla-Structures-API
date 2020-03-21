@@ -32,15 +32,6 @@ namespace Dynamic.Tekla.Structures.Model
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
 			 => teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
 
-		public void Zero()
-			 => teklaObject.Zero();
-
-		public void Translate(System.Double X, System.Double Y, System.Double Z)
-			 => teklaObject.Translate(X, Y, Z);
-
-		public System.Int32 CompareTo(System.Object obj)
-			 => teklaObject.CompareTo(obj);
-
 
 
 

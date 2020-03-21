@@ -40,18 +40,6 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 		public void EndInvoke(System.IAsyncResult result)
 			 => teklaObject.EndInvoke(result);
 
-		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => teklaObject.GetObjectData(info, context);
-
-		public System.Delegate GetInvocationList()
-			 => teklaObject.GetInvocationList();
-
-		public System.Object DynamicInvoke(System.Object args)
-			 => teklaObject.DynamicInvoke(args);
-
-		public System.Object Clone()
-			 => teklaObject.Clone();
-
 
 
 
@@ -98,18 +86,6 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
 		public void EndInvoke(System.IAsyncResult result)
 			 => teklaObject.EndInvoke(result);
-
-		public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-			 => teklaObject.GetObjectData(info, context);
-
-		public System.Delegate GetInvocationList()
-			 => teklaObject.GetInvocationList();
-
-		public System.Object DynamicInvoke(System.Object args)
-			 => teklaObject.DynamicInvoke(args);
-
-		public System.Object Clone()
-			 => teklaObject.Clone();
 
 
 

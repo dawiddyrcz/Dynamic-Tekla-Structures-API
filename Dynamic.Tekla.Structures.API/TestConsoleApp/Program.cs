@@ -44,6 +44,11 @@ namespace TestConsoleApp
             //beam.GetPhase(out Phase phase);
             //Console.WriteLine("Phase: " + phase.PhaseNumber);
 
+            double weight = 0;
+            beam.GetReportProperty("WEIGHT", ref weight);
+
+            Console.WriteLine("Weight: "+weight);
+
             //Console.WriteLine("Objects");
             //var objects = model.GetModelObjectSelector().GetAllObjects();
 

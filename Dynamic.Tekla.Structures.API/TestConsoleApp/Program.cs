@@ -49,6 +49,13 @@ namespace TestConsoleApp
 
             Console.WriteLine("Weight: "+weight);
 
+
+            //var phases = model.GetPhases();
+            //foreach (var phase in phases)
+            //{
+
+            //}
+
             //Console.WriteLine("Objects");
             //var objects = model.GetModelObjectSelector().GetAllObjects();
 

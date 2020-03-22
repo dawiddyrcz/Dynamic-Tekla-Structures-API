@@ -33,6 +33,8 @@ namespace CodeGenerator
             }
             else System.Diagnostics.Debug.WriteLine("Type not supported " + type.FullName);
 
+             //TODO insert not typical elements to type
+
             return string.Empty;
         }
     }

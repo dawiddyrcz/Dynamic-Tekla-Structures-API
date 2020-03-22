@@ -312,16 +312,16 @@ namespace CodeGenerator
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
-                //if (param.IsOut)
-                //{
-                //    sb.Append("out ");
-                //    anyParameterIsRefOrOut = true;
-                //}
-                //else if (param.ParameterType.IsByRef)
-                //{
-                //    sb.Append("ref ");
-                //    anyParameterIsRefOrOut = true;
-                //}
+                if (param.IsOut)
+                {
+                    sb.Append("out ");
+                    anyParameterIsRefOrOut = true;
+                }
+                else if (param.ParameterType.IsByRef)
+                {
+                    sb.Append("ref ");
+                    anyParameterIsRefOrOut = true;
+                }
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
                 sb.Append(paramTypeFullName);
@@ -350,6 +350,37 @@ namespace CodeGenerator
             sb.Append("\", \"");
             sb.Append(method.Name);
             sb.Append("\", parameters);\n");
+
+            //ref out parameters            
+            int j = 0;
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                if (param.IsOut || param.ParameterType.IsByRef)
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append(paramName);
+                    sb.Append(" = ");
+
+                    var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                    if (IsTeklaType(param.ParameterType))
+                    {
+                        sb.Append(paramTypeFullName + "_.FromTSObject(");
+                        sb.Append("parameters[" + j + "]);\n");
+                    }
+                    else
+                    {
+                        sb.Append("(" + paramTypeFullName + ") ");
+                        sb.Append("parameters[" + j + "];\n");
+                    }
+
+                }
+                j++;
+            }
 
             sb.Append("\t\t\treturn ");
             sb.Append(GetTypeFullName(method.ReturnType) + "_.FromTSObject(result);\n");

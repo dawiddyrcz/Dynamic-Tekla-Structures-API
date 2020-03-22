@@ -94,7 +94,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 		{
 			var parameters = new object[1];
 			parameters[0] = modificationStampKey;
-			var result = (System.Void) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.History.ModelHistory", "UpdateModificationStampToLatest", parameters);
+			TSActivator.InvokeStaticMethod("Tekla.Structures.Model.History.ModelHistory", "UpdateModificationStampToLatest", parameters);
 		}
 
 		public static Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModifications(System.String Name, Dynamic.Tekla.Structures.Model.History.ModificationStamp PrevStamp)

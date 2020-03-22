@@ -145,19 +145,19 @@ namespace CodeGenerator
                 var paramName = param.Name;
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
-
-                //if (param.IsOut)
-                //{
-                //    sb.Append("out ");
-                //    anyParameterIsRefOrOut = true;
-                //}
-                //else if (param.ParameterType.IsByRef)
-                //{
-                //    sb.Append("ref ");
-                //    anyParameterIsRefOrOut = true;
-                //}
-
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                if (param.IsOut)
+                {
+                    sb.Append("out ");
+                    anyParameterIsRefOrOut = true;
+                }
+                else if (param.ParameterType.IsByRef)
+                {
+                    sb.Append("ref ");
+                    anyParameterIsRefOrOut = true;
+                }
+                
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
                 sb.Append(paramName);
@@ -170,26 +170,68 @@ namespace CodeGenerator
 
             for (int i = 0; i < parameters.Count(); i++)
             {
+                string paramTypeFullName = GetTypeFullName(parameters[i].ParameterType);
+
+                if (parameters[i].IsOut)
+                {
+                    if (paramTypeFullName.Equals("System.String", StringComparison.InvariantCulture))
+                        sb.Append("\t\t\t" + parameters[i].Name + " = string.Empty;\n");
+                    else
+                        sb.Append("\t\t\t" + parameters[i].Name + " = new " + paramTypeFullName + "();\n");
+                }
+
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(GetTypeFullName(parameters[i].ParameterType) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(paramTypeFullName + "_.GetTSObject(" + parameters[i].Name + ");\n");
                 }
                 else
                     sb.Append("\t\t\tparameters["+ i +"] = " + parameters[i].Name + ";\n");
             }
 
             sb.Append("\t\t\t");
-            sb.Append("var result = (" + GetTypeFullName(method.ReturnType) + ") ");
+            if (!typeFullName.Equals("void"))
+                sb.Append("var result = (" + GetTypeFullName(method.ReturnType) + ") ");
             sb.Append("TSActivator.InvokeStaticMethod(\"");
             sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
             sb.Append("\", \"");
             sb.Append(method.Name);
             sb.Append("\", parameters);\n");
 
+            //ref out parameters            
+            int j = 0;
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                if (param.IsOut || param.ParameterType.IsByRef)
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append(paramName);
+                    sb.Append(" = ");
+
+                    var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                    if (IsTeklaType(param.ParameterType))
+                    {
+                        sb.Append(paramTypeFullName + "_.FromTSObject(");
+                        sb.Append("parameters[" + j + "]);\n");
+                    }
+                    else
+                    {
+                        sb.Append("(" + paramTypeFullName + ") ");
+                        sb.Append("parameters[" + j + "];\n");
+                    }
+
+                }
+                j++;
+            }
+
             if (!typeFullName.Equals("void"))
             {
-                sb.Append("\t\t\treturn result;");
+                sb.Append("\t\t\treturn result;\n");
 
             }
             sb.Append("\t\t}");

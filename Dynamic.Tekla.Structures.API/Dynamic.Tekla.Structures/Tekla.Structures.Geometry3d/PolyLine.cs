@@ -40,7 +40,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Equality", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 		{
@@ -48,7 +49,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Inequality", parameters);
-			return result;		}
+			return result;
+		}
 
 
 

@@ -93,7 +93,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "op_Equality", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.Point p1, Dynamic.Tekla.Structures.Geometry3d.Point p2)
 		{
@@ -101,7 +102,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p2);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "op_Inequality", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.Boolean AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
 		{
@@ -109,7 +111,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "AreEqual", parameters);
-			return result;		}
+			return result;
+		}
 
 		public System.Int32 CompareTo(System.Object obj)
 		{

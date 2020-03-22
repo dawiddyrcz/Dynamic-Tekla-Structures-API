@@ -31,14 +31,16 @@ namespace Dynamic.Tekla.Structures.Model
 			var parameters = new object[1];
 			parameters[0] = profileString;
 			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.String FormatProfileString(System.String profileString)
 		{
 			var parameters = new object[1];
 			parameters[0] = profileString;
 			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", parameters);
-			return result;		}
+			return result;
+		}
 
 
 

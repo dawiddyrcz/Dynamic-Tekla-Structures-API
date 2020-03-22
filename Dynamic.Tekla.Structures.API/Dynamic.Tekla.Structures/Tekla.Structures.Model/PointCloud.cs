@@ -102,7 +102,8 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			var parameters = new object[0];
 			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.PointCloud", "GetPointClouds", parameters);
-			return result;		}
+			return result;
+		}
 
 
 

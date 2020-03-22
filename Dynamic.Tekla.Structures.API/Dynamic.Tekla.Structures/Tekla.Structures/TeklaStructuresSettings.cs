@@ -20,78 +20,94 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings");
 		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, System.Boolean Value)
+		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Boolean Value)
 		{
 			var parameters = new object[2];
 			parameters[0] = VariableName;
 			parameters[1] = Value;
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			return result;		}
+			Value = (System.Boolean) parameters[1];
+			return result;
+		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, System.Int32 Value)
+		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Int32 Value)
 		{
 			var parameters = new object[2];
 			parameters[0] = VariableName;
 			parameters[1] = Value;
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			return result;		}
+			Value = (System.Int32) parameters[1];
+			return result;
+		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, System.String Value)
+		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.String Value)
 		{
 			var parameters = new object[2];
 			parameters[0] = VariableName;
 			parameters[1] = Value;
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			return result;		}
+			Value = (System.String) parameters[1];
+			return result;
+		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, System.Double Value)
+		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Double Value)
 		{
 			var parameters = new object[2];
 			parameters[0] = VariableName;
 			parameters[1] = Value;
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			return result;		}
+			Value = (System.Double) parameters[1];
+			return result;
+		}
 
-		public static System.Boolean GetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
+		public static System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ClashCheckOptions Options)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", parameters);
-			return result;		}
+			Options = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(parameters[0]);
+			return result;
+		}
 
 		public static System.Boolean SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", parameters);
-			return result;		}
+			return result;
+		}
 
-		public static System.Boolean GetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
+		public static System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ComponentOptions Options)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", parameters);
-			return result;		}
+			Options = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(parameters[0]);
+			return result;
+		}
 
 		public static System.Boolean SetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.Boolean IsToolOptionOn(System.String toolOptionName)
 		{
 			var parameters = new object[1];
 			parameters[0] = toolOptionName;
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", parameters);
-			return result;		}
+			return result;
+		}
 
 		public static System.Boolean IsPourEnabled()
 		{
 			var parameters = new object[0];
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled", parameters);
-			return result;		}
+			return result;
+		}
 
 
 

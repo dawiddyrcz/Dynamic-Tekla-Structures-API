@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NotGenerated\DynamicAPIException.cs" />
     <Compile Include="NotGenerated\TeklaFileVersion.cs" />
     <Compile Include="NotGenerated\TeklaProcess.cs" />
     <Compile Include="NotGenerated\TSActivator.cs" />

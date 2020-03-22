@@ -62,7 +62,6 @@ namespace CodeGenerator
         {
             sb.Append("\t\t");
             sb.Append("public ");
-            //if (method.IsStatic) sb.Append("static "); //TODO static methods should have different template ;(
             var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
 
             sb.Append(typeFullName);
@@ -138,6 +137,7 @@ namespace CodeGenerator
             sb.Append(name);
             sb.Append("(");
 
+            bool anyParameterIsRefOrOut = false;
             var parameters = method.GetParameters();
             //params in method name
             foreach (var param in parameters)
@@ -145,6 +145,17 @@ namespace CodeGenerator
                 var paramName = param.Name;
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
+
+                //if (param.IsOut)
+                //{
+                //    sb.Append("out ");
+                //    anyParameterIsRefOrOut = true;
+                //}
+                //else if (param.ParameterType.IsByRef)
+                //{
+                //    sb.Append("ref ");
+                //    anyParameterIsRefOrOut = true;
+                //}
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
                 sb.Append(paramTypeFullName);
@@ -248,6 +259,7 @@ namespace CodeGenerator
             sb.Append(name);
             sb.Append("(");
 
+            bool anyParameterIsRefOrOut = false;
             var parameters = method.GetParameters();
             //params in method name
             foreach (var param in parameters)
@@ -255,6 +267,17 @@ namespace CodeGenerator
                 var paramName = param.Name;
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
+
+                //if (param.IsOut)
+                //{
+                //    sb.Append("out ");
+                //    anyParameterIsRefOrOut = true;
+                //}
+                //else if (param.ParameterType.IsByRef)
+                //{
+                //    sb.Append("ref ");
+                //    anyParameterIsRefOrOut = true;
+                //}
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
                 sb.Append(paramTypeFullName);
@@ -317,10 +340,8 @@ namespace CodeGenerator
                 return @"
         public System.Collections.IEnumerator GetEnumerator()
         {
-            var tsEnumerator = teklaObject.GetEnumerator();
             var list = new System.Collections.Generic.List<Phase>();
-
-            foreach (var tsPhase in tsEnumerator)
+            foreach (var tsPhase in teklaObject)
             {
                 list.Add(Phase_.FromTSObject(tsPhase));
             }

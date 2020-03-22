@@ -43,10 +43,8 @@ namespace Dynamic.Tekla.Structures.Model
 
         public System.Collections.IEnumerator GetEnumerator()
         {
-            var tsEnumerator = teklaObject.GetEnumerator();
             var list = new System.Collections.Generic.List<Phase>();
-
-            foreach (var tsPhase in tsEnumerator)
+            foreach (var tsPhase in teklaObject)
             {
                 list.Add(Phase_.FromTSObject(tsPhase));
             }

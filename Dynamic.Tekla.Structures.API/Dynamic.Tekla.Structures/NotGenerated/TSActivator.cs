@@ -27,15 +27,44 @@ namespace Dynamic.Tekla.Structures
             var assembly = Assembly.LoadFrom(fileTS);
             var type = assembly.GetType(typeName);
 
-            var parametersTypesList = parameters.Select(p => p.GetType()).ToList();
-
-            //TODO zastanowić się co jeżeli są przeciążenia metod z tą samą liczbą parametrów ale z różnymi parametrami
-            var method = type.GetMethods()
-                .Where(m => m.Name.Equals(methodName, StringComparison.InvariantCulture)
-                && m.GetParameters().Count().Equals(parameters.Count())
-                ).FirstOrDefault();
+            MethodInfo method = GetMethod(methodName, parameters, type);
 
             return method.Invoke(null, parameters);
+        }
+
+        private static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
+        {
+            var methods = type.GetMethods()
+                .Where(m => m.Name.Equals(methodName, StringComparison.InvariantCulture)
+                && m.GetParameters().Count().Equals(parameters.Count())
+                ).ToList();
+            int count = methods.Count();
+            
+            if (count.Equals(1)) return methods[0];
+            else
+            {
+                foreach (var method in methods)
+                {
+                    bool parametersMath = true;
+
+                    int i = 0;
+                    var methodParameters = method.GetParameters();
+                    foreach (var parameter in methodParameters)
+                    {
+                        if (!(parameter.ParameterType.Equals(parameters[i].GetType())
+                            || parameter.ParameterType.Equals(parameters[i].GetType().MakeByRefType())))
+                        {
+                            parametersMath = false;
+                            break;
+                        }
+                        i++;
+                    }
+
+                    if (parametersMath) return method;
+                }
+            }
+
+            throw new DynamicAPIException("Could not find method " + methodName + " in type " + type.Name);
         }
 
         public static dynamic CreateInstance(string typeName, object[] args)

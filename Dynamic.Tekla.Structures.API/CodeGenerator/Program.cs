@@ -118,6 +118,8 @@ namespace CodeGenerator
 
         private static Assembly LoadTeklaStructuresModel() => LoadAssembly("Tekla.Structures.Model.dll");
 
+        private static Assembly LoadTeklaStructuresDrawing() => LoadAssembly("Tekla.Structures.Drawing.dll");
+
         private static void GenerateAPICode()
         {
             Console.WriteLine("Generate API code");
@@ -148,9 +150,16 @@ namespace CodeGenerator
                 && t.Namespace.StartsWith("Tekla.Structures")
                 && !t.Namespace.Contains("Internal"));
 
+            var tsd = LoadTeklaStructuresDrawing();
+            var tsdTypes = tsd.GetTypes().Where(
+                t => t.IsPublic
+                && t.Namespace.StartsWith("Tekla.Structures")
+                && !t.Namespace.Contains("Internal"));
+
             var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
+           // output.AddRange(tsdTypes);
 
             return output;
         }

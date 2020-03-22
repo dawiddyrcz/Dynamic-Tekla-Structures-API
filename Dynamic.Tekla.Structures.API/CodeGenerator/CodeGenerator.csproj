@@ -65,7 +65,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Tekla.Structures.Catalogs.dll" />
     <Content Include="Tekla.Structures.dll" />
+    <Content Include="Tekla.Structures.Drawing.dll" />
     <Content Include="Tekla.Structures.Model.dll" />
     <Content Include="types.txt" />
   </ItemGroup>

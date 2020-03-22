@@ -12,7 +12,9 @@ namespace CodeGenerator
         {
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
-        
+
+        //TODO array types are not supported but should be
+        //TODO need better solution
         public static string GetTypeFullName2(Type type)
         {
             StringBuilder sb = new StringBuilder(50);

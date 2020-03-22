@@ -259,6 +259,7 @@ namespace CodeGenerator
                         if (paramName.Equals("object", StringComparison.InvariantCulture))
                             paramName = "@object";
 
+                        //it is not possible to out dynamic parameters so it will be moved to extension methods
                         // if (param.ParameterType.IsByRef) sb.Append("ref ");
                         //if (param.IsOut) sb.Append("out ");
 
@@ -272,7 +273,7 @@ namespace CodeGenerator
                         else
                         {
                             if (param.IsOut) sb.Append("out ");
-                            else if (param.ParameterType.IsByRef) sb.Append("ref "); //TODO a co z tym wyżej
+                            else if (param.ParameterType.IsByRef) sb.Append("ref "); 
                             sb.Append(paramName);
                         }
 
@@ -368,19 +369,6 @@ namespace CodeGenerator
         {
             return TypeFullName.GetTypeFullName(type);
         }
-
-
-        //TODO add from TSObject:
-        /*
-          public static ModelObject FromTSObject(dynamic tsObject)
-        {
-            var typeName = "Dynamic." + tsObject.GetType().FullName;
-            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (ModelObject) System.Activator.CreateInstance(type);
-            dynObject.teklaObject = tsObject;
-            return dynObject;
-        }
-         * */
 
         private readonly string text = @"
     public $abstract class $classname $baseClass

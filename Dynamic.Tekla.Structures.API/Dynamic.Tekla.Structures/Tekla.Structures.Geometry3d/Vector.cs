@@ -69,8 +69,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2);
-			return (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", parameters);
-		}
+			var result = (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", parameters);
+			return result;		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
 		{

@@ -200,8 +200,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
 		{
 			var parameters = new object[0];
-			return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints", parameters);
-		}
+			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints", parameters);
+			return result;		}
 
 		public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
 		{
@@ -230,8 +230,8 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "SetCurrentCoordsysToBasePoint", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "SetCurrentCoordsysToBasePoint", parameters);
+			return result;		}
 
 		public static Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
 		{

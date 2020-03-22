@@ -20,21 +20,21 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(InputModelObject);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDate", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDate", parameters);
+			return result;		}
 
 		public static System.Boolean IsNumberingUpToDateAll()
 		{
 			var parameters = new object[0];
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll", parameters);
+			return result;		}
 
 		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject ObjectToCompare)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ObjectToCompare);
-			return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetSimilarNumberedObjects", parameters);
-		}
+			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetSimilarNumberedObjects", parameters);
+			return result;		}
 
 		public static System.Boolean CreateReportFromSelected(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
 		{
@@ -44,15 +44,15 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[2] = Title1;
 			parameters[3] = Title2;
 			parameters[4] = Title3;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromSelected", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromSelected", parameters);
+			return result;		}
 
 		public static System.Boolean DisplayReport(System.String FileName)
 		{
 			var parameters = new object[1];
 			parameters[0] = FileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayReport", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayReport", parameters);
+			return result;		}
 
 		public static System.Boolean CreateReportFromAll(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
 		{
@@ -62,16 +62,16 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[2] = Title1;
 			parameters[3] = Title2;
 			parameters[4] = Title3;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromAll", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromAll", parameters);
+			return result;		}
 
 		public static System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder)
 		{
 			var parameters = new object[2];
 			parameters[0] = NCFileSettings;
 			parameters[1] = DestinationFolder;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
+			return result;		}
 
 		public static System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
@@ -82,16 +82,16 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[3] = PopMarkSettingsFileName;
 			parameters[4] = CreateContourMarking;
 			parameters[5] = ContourMarkingSettingsFileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
+			return result;		}
 
 		public static System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder)
 		{
 			var parameters = new object[2];
 			parameters[0] = NCFileSettings;
 			parameters[1] = DestinationFolder;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
+			return result;		}
 
 		public static System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
@@ -102,8 +102,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[3] = PopMarkSettingsFileName;
 			parameters[4] = CreateContourMarking;
 			parameters[5] = ContourMarkingSettingsFileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
+			return result;		}
 
 		public static System.Boolean CreateNCFilesByPartId(System.String NCFileSettings, System.String DestinationFolder, Dynamic.Tekla.Structures.Identifier PartID, System.String DstvOutput, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
@@ -116,81 +116,81 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[5] = PopMarkSettingsFileName;
 			parameters[6] = CreateContourMarking;
 			parameters[7] = ContourMarkingSettingsFileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesByPartId", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesByPartId", parameters);
+			return result;		}
 
 		public static System.Boolean CreateMISFileFromSelected(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType);
 			parameters[1] = FileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromSelected", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromSelected", parameters);
+			return result;		}
 
 		public static System.Boolean CreateMISFileFromAll(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType);
 			parameters[1] = FileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromAll", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromAll", parameters);
+			return result;		}
 
 		public static System.Boolean RunMacro(System.String FileName)
 		{
 			var parameters = new object[1];
 			parameters[0] = FileName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RunMacro", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RunMacro", parameters);
+			return result;		}
 
 		public static System.Boolean IsMacroRunning()
 		{
 			var parameters = new object[0];
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsMacroRunning", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsMacroRunning", parameters);
+			return result;		}
 
 		public static System.Boolean Open(System.String ModelFolder)
 		{
 			var parameters = new object[1];
 			parameters[0] = ModelFolder;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
+			return result;		}
 
 		public static System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
 		{
 			var parameters = new object[2];
 			parameters[0] = ModelFolder;
 			parameters[1] = OpenAutoSaved;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
+			return result;		}
 
 		public static System.Boolean IsModelAutoSaved(System.String ModelFolder)
 		{
 			var parameters = new object[1];
 			parameters[0] = ModelFolder;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsModelAutoSaved", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsModelAutoSaved", parameters);
+			return result;		}
 
 		public static System.Boolean SaveAsWebModel(System.String Filename)
 		{
 			var parameters = new object[1];
 			parameters[0] = Filename;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveAsWebModel", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveAsWebModel", parameters);
+			return result;		}
 
 		public static System.Boolean SaveSelectedAsWebModel(System.String Filename)
 		{
 			var parameters = new object[1];
 			parameters[0] = Filename;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", parameters);
+			return result;		}
 
 		public static System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector TranslationVector)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(TranslationVector);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
+			return result;		}
 
 		public static System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem StartCoordinateSystem, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem EndCoordinateSystem)
 		{
@@ -198,8 +198,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem);
 			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
+			return result;		}
 
 		public static Dynamic.Tekla.Structures.Model.ModelObject CopyObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector CopyVector)
 		{
@@ -329,7 +329,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum_.GetTSObject(UnselectedMode);
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ShowOnlySelected", parameters);
+			var result = (System.Void) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ShowOnlySelected", parameters);
 		}
 
 		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
@@ -483,52 +483,52 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.BentPlate_.GetTSObject(bentPlate);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ExplodeBentPlate", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ExplodeBentPlate", parameters);
+			return result;		}
 
 		public static System.Boolean AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit inputPourUnit, System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeAdded)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.PourUnit_.GetTSObject(inputPourUnit);
 			parameters[1] = objectsToBeAdded;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "AddToPourUnit", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "AddToPourUnit", parameters);
+			return result;		}
 
 		public static System.Boolean RemoveFromPourUnit(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved)
 		{
 			var parameters = new object[1];
 			parameters[0] = objectsToBeRemoved;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RemoveFromPourUnit", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RemoveFromPourUnit", parameters);
+			return result;		}
 
 		public static System.Boolean CalculatePourUnits()
 		{
 			var parameters = new object[0];
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CalculatePourUnits", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CalculatePourUnits", parameters);
+			return result;		}
 
 		public static System.Boolean DisplayPrompt(System.String Message)
 		{
 			var parameters = new object[1];
 			parameters[0] = Message;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", parameters);
+			return result;		}
 
 		public static System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, System.String FilterName)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject);
 			parameters[1] = FilterName;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
+			return result;		}
 
 		public static System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject);
 			parameters[1] = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
+			return result;		}
 
 
 

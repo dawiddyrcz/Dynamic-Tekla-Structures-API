@@ -30,16 +30,16 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep);
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "Fingerprint", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "Fingerprint", parameters);
+			return result;		}
 
 		public static System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
 		{
 			var parameters = new object[2];
 			parameters[0] = fingerprint1;
 			parameters[1] = fingerprint2;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "CompareFingerprints", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "CompareFingerprints", parameters);
+			return result;		}
 
 
 

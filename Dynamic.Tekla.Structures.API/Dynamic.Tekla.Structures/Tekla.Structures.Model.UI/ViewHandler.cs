@@ -59,50 +59,50 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", parameters);
+			return result;		}
 
 		public static System.Boolean HideView(Dynamic.Tekla.Structures.Model.UI.View view)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", parameters);
+			return result;		}
 
 		public static System.Boolean RedrawView(Dynamic.Tekla.Structures.Model.UI.View view)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", parameters);
+			return result;		}
 
 		public static System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View view, Dynamic.Tekla.Structures.Geometry3d.AABB B)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
+			return result;		}
 
 		public static System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB box)
 		{
 			var parameters = new object[1];
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
+			return result;		}
 
 		public static System.Boolean SetRepresentation(System.String Representation)
 		{
 			var parameters = new object[1];
 			parameters[0] = Representation;
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", parameters);
+			return result;		}
 
 		public static System.Boolean RedrawWorkplane()
 		{
 			var parameters = new object[0];
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane", parameters);
+			return result;		}
 
 
 

@@ -23,50 +23,50 @@ namespace Dynamic.Tekla.Structures
 		public static System.String GetCurrentProgramVersion()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCurrentProgramVersion", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCurrentProgramVersion", parameters);
+			return result;		}
 
 		public static System.String GetBuildNumber()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetBuildNumber", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetBuildNumber", parameters);
+			return result;		}
 
 		public static System.String GetRevisionDate()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetRevisionDate", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetRevisionDate", parameters);
+			return result;		}
 
 		public static System.String GetCopyRightText()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCopyRightText", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCopyRightText", parameters);
+			return result;		}
 
 		public static System.String GetLocalAppDataFolder()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetLocalAppDataFolder", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetLocalAppDataFolder", parameters);
+			return result;		}
 
 		public static System.String GetCommonAppDataFolder()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCommonAppDataFolder", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCommonAppDataFolder", parameters);
+			return result;		}
 
 		public static System.String GetFullTSRegistryKeyText()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetFullTSRegistryKeyText", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetFullTSRegistryKeyText", parameters);
+			return result;		}
 
 		public static System.String GetCurrentUser()
 		{
 			var parameters = new object[0];
-			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCurrentUser", parameters);
-		}
+			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCurrentUser", parameters);
+			return result;		}
 
 
 

@@ -39,16 +39,16 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Equality", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Equality", parameters);
+			return result;		}
 
 		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 		{
 			var parameters = new object[2];
 			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
 			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
-			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Inequality", parameters);
-		}
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Inequality", parameters);
+			return result;		}
 
 
 

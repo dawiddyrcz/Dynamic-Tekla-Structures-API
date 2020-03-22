@@ -180,16 +180,18 @@ namespace CodeGenerator
             }
 
             sb.Append("\t\t\t");
-            if (!typeFullName.Equals("void"))
-            {
-                sb.Append("return ");
-                sb.Append("(" + GetTypeFullName(method.ReturnType) + ") ");
-            }
+            sb.Append("var result = (" + GetTypeFullName(method.ReturnType) + ") ");
             sb.Append("TSActivator.InvokeStaticMethod(\"");
             sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
             sb.Append("\", \"");
             sb.Append(method.Name);
             sb.Append("\", parameters);\n");
+
+            if (!typeFullName.Equals("void"))
+            {
+                sb.Append("\t\t\treturn result;");
+
+            }
             sb.Append("\t\t}");
         }
 

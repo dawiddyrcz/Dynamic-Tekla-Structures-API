@@ -34,14 +34,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.Length();
 		}
 
-		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
+		public static System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 		{
-			return teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Equality", parameters);
 		}
 
-		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
+		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine1, Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine2)
 		{
-			return teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1), Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(PolyLine2);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.PolyLine", "op_Inequality", parameters);
 		}
 
 

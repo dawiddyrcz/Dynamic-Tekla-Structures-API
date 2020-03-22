@@ -193,14 +193,22 @@ namespace Dynamic.Tekla.Structures.Model
 			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
+		public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertToBasePoint", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
+		public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertFromBasePoint", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
 		}
 
 

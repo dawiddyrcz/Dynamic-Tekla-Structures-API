@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Dynamic.Tekla.Structures
@@ -18,7 +19,25 @@ namespace Dynamic.Tekla.Structures
 
             return Activator.CreateInstance(type);
         }
-        
+
+        public static object InvokeStaticMethod(string typeName, string methodName, object[] parameters)
+        {
+            string fileTS = GetFileName(typeName);
+
+            var assembly = Assembly.LoadFrom(fileTS);
+            var type = assembly.GetType(typeName);
+
+            var parametersTypesList = parameters.Select(p => p.GetType()).ToList();
+
+            //TODO zastanowić się co jeżeli są przeciążenia metod z tą samą liczbą parametrów ale z różnymi parametrami
+            var method = type.GetMethods()
+                .Where(m => m.Name.Equals(methodName, StringComparison.InvariantCulture)
+                && m.GetParameters().Count().Equals(parameters.Count())
+                ).FirstOrDefault();
+
+            return method.Invoke(null, parameters);
+        }
+
         public static dynamic CreateInstance(string typeName, object[] args)
         {
             string fileTS = GetFileName(typeName);
@@ -69,7 +88,7 @@ namespace Dynamic.Tekla.Structures
         {
             if (teklaProcess == null)
                 teklaProcess = new TeklaProcess();
-            
+
             if (teklaProcess.IsTeklaRunning() == false)
                 teklaProcess = new TeklaProcess();
 

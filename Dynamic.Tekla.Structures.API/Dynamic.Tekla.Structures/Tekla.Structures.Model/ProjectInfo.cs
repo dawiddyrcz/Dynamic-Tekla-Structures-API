@@ -197,34 +197,47 @@ namespace Dynamic.Tekla.Structures.Model
 			return teklaObject.SetDynamicStringProperty(Name, Value);
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
+		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
 		{
-			return teklaObject.GetBasePoints();
+			var parameters = new object[0];
+			return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints", parameters);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
+		public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
 		{
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByName(name));
+			var parameters = new object[1];
+			parameters[0] = name;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByName", parameters);
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
+		public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
 		{
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetBasePointByGuid(guid));
+			var parameters = new object[1];
+			parameters[0] = guid;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByGuid", parameters);
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
+		public static Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
 		{
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetCurrentCoordsysBasePoint());
+			var parameters = new object[0];
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetCurrentCoordsysBasePoint", parameters);
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
 		}
 
-		public System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
+		public static System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
 		{
-			return teklaObject.SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "SetCurrentCoordsysToBasePoint", parameters);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
+		public static Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
 		{
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(teklaObject.GetProjectBasePoint());
+			var parameters = new object[0];
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetProjectBasePoint", parameters);
+			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
 		}
 
 

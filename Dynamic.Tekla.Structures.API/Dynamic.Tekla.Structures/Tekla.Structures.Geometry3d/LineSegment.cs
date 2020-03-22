@@ -61,14 +61,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
 		}
 
-		public System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
+		public static System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
 		{
-			return teklaObject.op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.LineSegment", "op_Equality", parameters);
 		}
 
-		public System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
+		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
 		{
-			return teklaObject.op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.LineSegment", "op_Inequality", parameters);
 		}
 
 

@@ -16,9 +16,11 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         internal dynamic teklaObject;
 
 
-		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
+		public static Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
 		{
-			return Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+			var parameters = new object[0];
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ClashChecker.ClashChekerEvent", "GetClashCheckHandler", parameters);
+			return Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(result);
 		}
 
 

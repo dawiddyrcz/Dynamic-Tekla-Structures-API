@@ -16,289 +16,518 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         internal dynamic teklaObject;
 
 
-		public System.Boolean IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject InputModelObject)
+		public static System.Boolean IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject InputModelObject)
 		{
-			return teklaObject.IsNumberingUpToDate(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(InputModelObject));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(InputModelObject);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDate", parameters);
 		}
 
-		public System.Boolean IsNumberingUpToDateAll()
+		public static System.Boolean IsNumberingUpToDateAll()
 		{
-			return teklaObject.IsNumberingUpToDateAll();
+			var parameters = new object[0];
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll", parameters);
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject ObjectToCompare)
+		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject ObjectToCompare)
 		{
-			return teklaObject.GetSimilarNumberedObjects(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ObjectToCompare));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ObjectToCompare);
+			return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetSimilarNumberedObjects", parameters);
 		}
 
-		public System.Boolean CreateReportFromSelected(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
+		public static System.Boolean CreateReportFromSelected(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
 		{
-			return teklaObject.CreateReportFromSelected(TemplateName, FileName, Title1, Title2, Title3);
+			var parameters = new object[5];
+			parameters[0] = TemplateName;
+			parameters[1] = FileName;
+			parameters[2] = Title1;
+			parameters[3] = Title2;
+			parameters[4] = Title3;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromSelected", parameters);
 		}
 
-		public System.Boolean DisplayReport(System.String FileName)
+		public static System.Boolean DisplayReport(System.String FileName)
 		{
-			return teklaObject.DisplayReport(FileName);
+			var parameters = new object[1];
+			parameters[0] = FileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayReport", parameters);
 		}
 
-		public System.Boolean CreateReportFromAll(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
+		public static System.Boolean CreateReportFromAll(System.String TemplateName, System.String FileName, System.String Title1, System.String Title2, System.String Title3)
 		{
-			return teklaObject.CreateReportFromAll(TemplateName, FileName, Title1, Title2, Title3);
+			var parameters = new object[5];
+			parameters[0] = TemplateName;
+			parameters[1] = FileName;
+			parameters[2] = Title1;
+			parameters[3] = Title2;
+			parameters[4] = Title3;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromAll", parameters);
 		}
 
-		public System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder)
+		public static System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder)
 		{
-			return teklaObject.CreateNCFilesFromSelected(NCFileSettings, DestinationFolder);
+			var parameters = new object[2];
+			parameters[0] = NCFileSettings;
+			parameters[1] = DestinationFolder;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
 		}
 
-		public System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
+		public static System.Boolean CreateNCFilesFromSelected(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
-			return teklaObject.CreateNCFilesFromSelected(NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+			var parameters = new object[6];
+			parameters[0] = NCFileSettings;
+			parameters[1] = DestinationFolder;
+			parameters[2] = CreatePopMarks;
+			parameters[3] = PopMarkSettingsFileName;
+			parameters[4] = CreateContourMarking;
+			parameters[5] = ContourMarkingSettingsFileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", parameters);
 		}
 
-		public System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder)
+		public static System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder)
 		{
-			return teklaObject.CreateNCFilesFromAll(NCFileSettings, DestinationFolder);
+			var parameters = new object[2];
+			parameters[0] = NCFileSettings;
+			parameters[1] = DestinationFolder;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
 		}
 
-		public System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
+		public static System.Boolean CreateNCFilesFromAll(System.String NCFileSettings, System.String DestinationFolder, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
-			return teklaObject.CreateNCFilesFromAll(NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+			var parameters = new object[6];
+			parameters[0] = NCFileSettings;
+			parameters[1] = DestinationFolder;
+			parameters[2] = CreatePopMarks;
+			parameters[3] = PopMarkSettingsFileName;
+			parameters[4] = CreateContourMarking;
+			parameters[5] = ContourMarkingSettingsFileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", parameters);
 		}
 
-		public System.Boolean CreateNCFilesByPartId(System.String NCFileSettings, System.String DestinationFolder, Dynamic.Tekla.Structures.Identifier PartID, out System.String DstvOutput, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
+		public static System.Boolean CreateNCFilesByPartId(System.String NCFileSettings, System.String DestinationFolder, Dynamic.Tekla.Structures.Identifier PartID, System.String DstvOutput, System.Boolean CreatePopMarks, System.String PopMarkSettingsFileName, System.Boolean CreateContourMarking, System.String ContourMarkingSettingsFileName)
 		{
-			return teklaObject.CreateNCFilesByPartId(NCFileSettings, DestinationFolder, Dynamic.Tekla.Structures.Identifier_.GetTSObject(PartID), out DstvOutput, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+			var parameters = new object[8];
+			parameters[0] = NCFileSettings;
+			parameters[1] = DestinationFolder;
+			parameters[2] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(PartID);
+			parameters[3] = DstvOutput;
+			parameters[4] = CreatePopMarks;
+			parameters[5] = PopMarkSettingsFileName;
+			parameters[6] = CreateContourMarking;
+			parameters[7] = ContourMarkingSettingsFileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesByPartId", parameters);
 		}
 
-		public System.Boolean CreateMISFileFromSelected(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
+		public static System.Boolean CreateMISFileFromSelected(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
 		{
-			return teklaObject.CreateMISFileFromSelected(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType), FileName);
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType);
+			parameters[1] = FileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromSelected", parameters);
 		}
 
-		public System.Boolean CreateMISFileFromAll(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
+		public static System.Boolean CreateMISFileFromAll(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum MISType, System.String FileName)
 		{
-			return teklaObject.CreateMISFileFromAll(Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType), FileName);
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType);
+			parameters[1] = FileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromAll", parameters);
 		}
 
-		public System.Boolean RunMacro(System.String FileName)
+		public static System.Boolean RunMacro(System.String FileName)
 		{
-			return teklaObject.RunMacro(FileName);
+			var parameters = new object[1];
+			parameters[0] = FileName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RunMacro", parameters);
 		}
 
-		public System.Boolean IsMacroRunning()
+		public static System.Boolean IsMacroRunning()
 		{
-			return teklaObject.IsMacroRunning();
+			var parameters = new object[0];
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsMacroRunning", parameters);
 		}
 
-		public System.Boolean Open(System.String ModelFolder)
+		public static System.Boolean Open(System.String ModelFolder)
 		{
-			return teklaObject.Open(ModelFolder);
+			var parameters = new object[1];
+			parameters[0] = ModelFolder;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
 		}
 
-		public System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
+		public static System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
 		{
-			return teklaObject.Open(ModelFolder, OpenAutoSaved);
+			var parameters = new object[2];
+			parameters[0] = ModelFolder;
+			parameters[1] = OpenAutoSaved;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", parameters);
 		}
 
-		public System.Boolean IsModelAutoSaved(System.String ModelFolder)
+		public static System.Boolean IsModelAutoSaved(System.String ModelFolder)
 		{
-			return teklaObject.IsModelAutoSaved(ModelFolder);
+			var parameters = new object[1];
+			parameters[0] = ModelFolder;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsModelAutoSaved", parameters);
 		}
 
-		public System.Boolean SaveAsWebModel(System.String Filename)
+		public static System.Boolean SaveAsWebModel(System.String Filename)
 		{
-			return teklaObject.SaveAsWebModel(Filename);
+			var parameters = new object[1];
+			parameters[0] = Filename;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveAsWebModel", parameters);
 		}
 
-		public System.Boolean SaveSelectedAsWebModel(System.String Filename)
+		public static System.Boolean SaveSelectedAsWebModel(System.String Filename)
 		{
-			return teklaObject.SaveSelectedAsWebModel(Filename);
+			var parameters = new object[1];
+			parameters[0] = Filename;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", parameters);
 		}
 
-		public System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector TranslationVector)
+		public static System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector TranslationVector)
 		{
-			return teklaObject.MoveObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(TranslationVector));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(TranslationVector);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
 		}
 
-		public System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem StartCoordinateSystem, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem EndCoordinateSystem)
+		public static System.Boolean MoveObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem StartCoordinateSystem, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem EndCoordinateSystem)
 		{
-			return teklaObject.MoveObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem), Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem));
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem);
+			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", parameters);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObject CopyObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector CopyVector)
+		public static Dynamic.Tekla.Structures.Model.ModelObject CopyObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.Vector CopyVector)
 		{
-			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.CopyObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(CopyVector)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(CopyVector);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CopyObject", parameters);
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObject CopyObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem StartCoordinateSystem, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem EndCoordinateSystem)
+		public static Dynamic.Tekla.Structures.Model.ModelObject CopyObject(Dynamic.Tekla.Structures.Model.ModelObject Object, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem StartCoordinateSystem, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem EndCoordinateSystem)
 		{
-			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.CopyObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem), Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem)));
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem);
+			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CopyObject", parameters);
+			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.Beam Combine(Dynamic.Tekla.Structures.Model.Beam ObjectToCombineTo, Dynamic.Tekla.Structures.Model.Beam ObjectToBeCombined)
+		public static Dynamic.Tekla.Structures.Model.Beam Combine(Dynamic.Tekla.Structures.Model.Beam ObjectToCombineTo, Dynamic.Tekla.Structures.Model.Beam ObjectToBeCombined)
 		{
-			return Dynamic.Tekla.Structures.Model.Beam_.FromTSObject(teklaObject.Combine(Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(ObjectToCombineTo), Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(ObjectToBeCombined)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(ObjectToCombineTo);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(ObjectToBeCombined);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Combine", parameters);
+			return Dynamic.Tekla.Structures.Model.Beam_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.SingleRebar Combine(Dynamic.Tekla.Structures.Model.SingleRebar ObjectToCombineTo, Dynamic.Tekla.Structures.Model.SingleRebar ObjectToBeCombined)
+		public static Dynamic.Tekla.Structures.Model.SingleRebar Combine(Dynamic.Tekla.Structures.Model.SingleRebar ObjectToCombineTo, Dynamic.Tekla.Structures.Model.SingleRebar ObjectToBeCombined)
 		{
-			return Dynamic.Tekla.Structures.Model.SingleRebar_.FromTSObject(teklaObject.Combine(Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(ObjectToCombineTo), Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(ObjectToBeCombined)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(ObjectToCombineTo);
+			parameters[1] = Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(ObjectToBeCombined);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Combine", parameters);
+			return Dynamic.Tekla.Structures.Model.SingleRebar_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarGroup Combine(Dynamic.Tekla.Structures.Model.RebarGroup ObjectToCombineTo, Dynamic.Tekla.Structures.Model.RebarGroup ObjectToBeCombined)
+		public static Dynamic.Tekla.Structures.Model.RebarGroup Combine(Dynamic.Tekla.Structures.Model.RebarGroup ObjectToCombineTo, Dynamic.Tekla.Structures.Model.RebarGroup ObjectToBeCombined)
 		{
-			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(teklaObject.Combine(Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(ObjectToCombineTo), Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(ObjectToBeCombined)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(ObjectToCombineTo);
+			parameters[1] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(ObjectToBeCombined);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Combine", parameters);
+			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.Beam Split(Dynamic.Tekla.Structures.Model.Beam Object, Dynamic.Tekla.Structures.Geometry3d.Point SplitPoint)
+		public static Dynamic.Tekla.Structures.Model.Beam Split(Dynamic.Tekla.Structures.Model.Beam Object, Dynamic.Tekla.Structures.Geometry3d.Point SplitPoint)
 		{
-			return Dynamic.Tekla.Structures.Model.Beam_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SplitPoint)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Beam_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SplitPoint);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.Beam_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.SingleRebar Split(Dynamic.Tekla.Structures.Model.SingleRebar Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
+		public static Dynamic.Tekla.Structures.Model.SingleRebar Split(Dynamic.Tekla.Structures.Model.SingleRebar Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
 		{
-			return Dynamic.Tekla.Structures.Model.SingleRebar_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.SingleRebar_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.SingleRebar_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.CurvedRebarGroup Split(Dynamic.Tekla.Structures.Model.CurvedRebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
+		public static Dynamic.Tekla.Structures.Model.CurvedRebarGroup Split(Dynamic.Tekla.Structures.Model.CurvedRebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
 		{
-			return Dynamic.Tekla.Structures.Model.CurvedRebarGroup_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.CurvedRebarGroup_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.CurvedRebarGroup_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.CurvedRebarGroup_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.CircleRebarGroup Split(Dynamic.Tekla.Structures.Model.CircleRebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
+		public static Dynamic.Tekla.Structures.Model.CircleRebarGroup Split(Dynamic.Tekla.Structures.Model.CircleRebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
 		{
-			return Dynamic.Tekla.Structures.Model.CircleRebarGroup_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.CircleRebarGroup_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.CircleRebarGroup_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.CircleRebarGroup_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarGroup Split(Dynamic.Tekla.Structures.Model.RebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
+		public static Dynamic.Tekla.Structures.Model.RebarGroup Split(Dynamic.Tekla.Structures.Model.RebarGroup Object, Dynamic.Tekla.Structures.Geometry3d.Line SplitLine)
 		{
-			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(Object), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(SplitLine);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ContourPlate Split(Dynamic.Tekla.Structures.Model.ContourPlate Object, Dynamic.Tekla.Structures.Model.Polygon SplitPolygon)
+		public static Dynamic.Tekla.Structures.Model.ContourPlate Split(Dynamic.Tekla.Structures.Model.ContourPlate Object, Dynamic.Tekla.Structures.Model.Polygon SplitPolygon)
 		{
-			return Dynamic.Tekla.Structures.Model.ContourPlate_.FromTSObject(teklaObject.Split(Dynamic.Tekla.Structures.Model.ContourPlate_.GetTSObject(Object), Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(SplitPolygon)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ContourPlate_.GetTSObject(Object);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(SplitPolygon);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", parameters);
+			return Dynamic.Tekla.Structures.Model.ContourPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator Ungrouping(Dynamic.Tekla.Structures.Model.RebarGroup Reinforcement)
+		public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator Ungrouping(Dynamic.Tekla.Structures.Model.RebarGroup Reinforcement)
 		{
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.Ungrouping(Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(Reinforcement)));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.RebarGroup_.GetTSObject(Reinforcement);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Ungrouping", parameters);
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator Ungrouping(Dynamic.Tekla.Structures.Model.RebarMesh Reinforcement)
+		public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator Ungrouping(Dynamic.Tekla.Structures.Model.RebarMesh Reinforcement)
 		{
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.Ungrouping(Dynamic.Tekla.Structures.Model.RebarMesh_.GetTSObject(Reinforcement)));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.RebarMesh_.GetTSObject(Reinforcement);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Ungrouping", parameters);
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarGroup Group(System.Collections.IEnumerable RebarList)
+		public static Dynamic.Tekla.Structures.Model.RebarGroup Group(System.Collections.IEnumerable RebarList)
 		{
-			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(teklaObject.Group(RebarList));
+			var parameters = new object[1];
+			parameters[0] = RebarList;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Group", parameters);
+			return Dynamic.Tekla.Structures.Model.RebarGroup_.FromTSObject(result);
 		}
 
-		public void ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum UnselectedMode)
+		public static void ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum UnselectedMode)
 		{
-			teklaObject.ShowOnlySelected(Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum_.GetTSObject(UnselectedMode));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Operations.Operation.UnselectedModeEnum_.GetTSObject(UnselectedMode);
+			TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ShowOnlySelected", parameters);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[2] = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByParts", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByParts", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double radius)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double radius)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByParts(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), radius));
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[2] = radius;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByParts", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndAperture(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double largestRadius, System.Double halfAperture)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndAperture(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double largestRadius, System.Double halfAperture)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateConicalBentPlateByPartsAndAperture(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), largestRadius, halfAperture));
+			var parameters = new object[4];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[2] = largestRadius;
+			parameters[3] = halfAperture;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateConicalBentPlateByPartsAndAperture", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndTwoRadiuses(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double firstRadius, System.Double secondRadius)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByPartsAndTwoRadiuses(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Model.Part part2, System.Double firstRadius, System.Double secondRadius)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateConicalBentPlateByPartsAndTwoRadiuses(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), firstRadius, secondRadius));
+			var parameters = new object[4];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[2] = firstRadius;
+			parameters[3] = secondRadius;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateConicalBentPlateByPartsAndTwoRadiuses", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), face1, Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+			var parameters = new object[5];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = face1;
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = face2;
+			parameters[4] = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), face1, Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), face2));
+			var parameters = new object[4];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = face1;
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = face2;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
+			var parameters = new object[5];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1);
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2);
+			parameters[4] = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2)));
+			var parameters = new object[4];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1);
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double radius)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double radius)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), face1, Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), face2, radius));
+			var parameters = new object[5];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = face1;
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = face2;
+			parameters[4] = radius;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double radius)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double radius)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2), radius));
+			var parameters = new object[5];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1);
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2);
+			parameters[4] = radius;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double largestRadius, System.Double halfAperture)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face1, Dynamic.Tekla.Structures.Model.Part part2, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Point> face2, System.Double largestRadius, System.Double halfAperture)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), face1, Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), face2, largestRadius, halfAperture));
+			var parameters = new object[6];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = face1;
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = face2;
+			parameters[4] = largestRadius;
+			parameters[5] = halfAperture;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateConicalBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double largestRadius, System.Double halfAperture)
+		public static Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part part1, Dynamic.Tekla.Structures.Solid.Face face1, Dynamic.Tekla.Structures.Model.Part part2, Dynamic.Tekla.Structures.Solid.Face face2, System.Double largestRadius, System.Double halfAperture)
 		{
-			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(teklaObject.CreateConicalBentPlateByFaces(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1), Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2), Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2), largestRadius, halfAperture));
+			var parameters = new object[6];
+			parameters[0] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1);
+			parameters[1] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face1);
+			parameters[2] = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2);
+			parameters[3] = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(face2);
+			parameters[4] = largestRadius;
+			parameters[5] = halfAperture;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateConicalBentPlateByFaces", parameters);
+			return Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 		}
 
-		public System.Boolean ExplodeBentPlate(Dynamic.Tekla.Structures.Model.BentPlate bentPlate)
+		public static System.Boolean ExplodeBentPlate(Dynamic.Tekla.Structures.Model.BentPlate bentPlate)
 		{
-			return teklaObject.ExplodeBentPlate(Dynamic.Tekla.Structures.Model.BentPlate_.GetTSObject(bentPlate));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Model.BentPlate_.GetTSObject(bentPlate);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ExplodeBentPlate", parameters);
 		}
 
-		public System.Boolean AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit inputPourUnit, System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeAdded)
+		public static System.Boolean AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit inputPourUnit, System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeAdded)
 		{
-			return teklaObject.AddToPourUnit(Dynamic.Tekla.Structures.Model.PourUnit_.GetTSObject(inputPourUnit), objectsToBeAdded);
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.PourUnit_.GetTSObject(inputPourUnit);
+			parameters[1] = objectsToBeAdded;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "AddToPourUnit", parameters);
 		}
 
-		public System.Boolean RemoveFromPourUnit(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved)
+		public static System.Boolean RemoveFromPourUnit(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved)
 		{
-			return teklaObject.RemoveFromPourUnit(objectsToBeRemoved);
+			var parameters = new object[1];
+			parameters[0] = objectsToBeRemoved;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RemoveFromPourUnit", parameters);
 		}
 
-		public System.Boolean CalculatePourUnits()
+		public static System.Boolean CalculatePourUnits()
 		{
-			return teklaObject.CalculatePourUnits();
+			var parameters = new object[0];
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CalculatePourUnits", parameters);
 		}
 
-		public System.Boolean DisplayPrompt(System.String Message)
+		public static System.Boolean DisplayPrompt(System.String Message)
 		{
-			return teklaObject.DisplayPrompt(Message);
+			var parameters = new object[1];
+			parameters[0] = Message;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", parameters);
 		}
 
-		public System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, System.String FilterName)
+		public static System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, System.String FilterName)
 		{
-			return teklaObject.ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject), FilterName);
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject);
+			parameters[1] = FilterName;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
 		}
 
-		public System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
+		public static System.Boolean ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject ModelObject, Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression)
 		{
-			return teklaObject.ObjectMatchesToFilter(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject), Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject);
+			parameters[1] = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression);
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", parameters);
 		}
 
 

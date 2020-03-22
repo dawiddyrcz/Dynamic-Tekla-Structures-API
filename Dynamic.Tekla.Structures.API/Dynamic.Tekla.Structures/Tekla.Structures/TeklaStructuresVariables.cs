@@ -16,19 +16,25 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void Add(System.String key)
+		public static void Add(System.String key)
 		{
-			teklaObject.Add(key);
+			var parameters = new object[1];
+			parameters[0] = key;
+			TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Add", parameters);
 		}
 
-		public System.String Get(System.String key)
+		public static System.String Get(System.String key)
 		{
-			return teklaObject.Get(key);
+			var parameters = new object[1];
+			parameters[0] = key;
+			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Get", parameters);
 		}
 
-		public System.Boolean ContainsVariable(System.String key)
+		public static System.Boolean ContainsVariable(System.String key)
 		{
-			return teklaObject.ContainsVariable(key);
+			var parameters = new object[1];
+			parameters[0] = key;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "ContainsVariable", parameters);
 		}
 
 

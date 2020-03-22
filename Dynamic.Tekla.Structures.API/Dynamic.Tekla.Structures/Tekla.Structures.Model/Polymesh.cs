@@ -26,14 +26,19 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Polymesh");
 		}
 
-		public System.String Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep)
+		public static System.String Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep brep)
 		{
-			return teklaObject.Fingerprint(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep);
+			return (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "Fingerprint", parameters);
 		}
 
-		public System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
+		public static System.Boolean CompareFingerprints(System.String fingerprint1, System.String fingerprint2)
 		{
-			return teklaObject.CompareFingerprints(fingerprint1, fingerprint2);
+			var parameters = new object[2];
+			parameters[0] = fingerprint1;
+			parameters[1] = fingerprint2;
+			return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "CompareFingerprints", parameters);
 		}
 
 

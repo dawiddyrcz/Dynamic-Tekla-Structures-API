@@ -16,24 +16,40 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         internal dynamic teklaObject;
 
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
+		public static Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToLine", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
+		public static Dynamic.Tekla.Structures.Geometry3d.Point PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToPlane", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Line LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
+		public static Dynamic.Tekla.Structures.Geometry3d.Line LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineToPlane", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
+		public static Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineSegmentToPlane", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
 		}
 
 

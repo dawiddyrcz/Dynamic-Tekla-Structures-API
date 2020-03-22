@@ -98,9 +98,10 @@ namespace Dynamic.Tekla.Structures.Model
 			return teklaObject.GetVisibleInViews();
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
+		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
 		{
-			return teklaObject.GetPointClouds();
+			var parameters = new object[0];
+			return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.PointCloud", "GetPointClouds", parameters);
 		}
 
 

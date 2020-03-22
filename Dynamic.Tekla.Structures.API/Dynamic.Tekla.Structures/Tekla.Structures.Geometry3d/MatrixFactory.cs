@@ -16,24 +16,38 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         internal dynamic teklaObject;
 
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix Rotate(System.Double Angle, Dynamic.Tekla.Structures.Geometry3d.Vector Axis)
+		public static Dynamic.Tekla.Structures.Geometry3d.Matrix Rotate(System.Double Angle, Dynamic.Tekla.Structures.Geometry3d.Vector Axis)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.Rotate(Angle, Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Axis)));
+			var parameters = new object[2];
+			parameters[0] = Angle;
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Axis);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.MatrixFactory", "Rotate", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix ToCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys)
+		public static Dynamic.Tekla.Structures.Geometry3d.Matrix ToCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.ToCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys)));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.MatrixFactory", "ToCoordinateSystem", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix FromCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys)
+		public static Dynamic.Tekla.Structures.Geometry3d.Matrix FromCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.FromCoordinateSystem(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys)));
+			var parameters = new object[1];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.MatrixFactory", "FromCoordinateSystem", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix ByCoordinateSystems(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys1, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys2)
+		public static Dynamic.Tekla.Structures.Geometry3d.Matrix ByCoordinateSystems(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys1, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem CoordSys2)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.ByCoordinateSystems(Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys1), Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys2)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(CoordSys2);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.MatrixFactory", "ByCoordinateSystems", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
 		}
 
 

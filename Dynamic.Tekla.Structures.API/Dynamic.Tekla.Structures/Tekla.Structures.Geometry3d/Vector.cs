@@ -64,9 +64,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
 		}
 
-		public System.Double Dot(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
+		public static System.Double Dot(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
 		{
-			return teklaObject.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2);
+			return (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", parameters);
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
@@ -74,19 +77,31 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Cross(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector)));
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
+		public static Dynamic.Tekla.Structures.Geometry3d.Vector Cross(Dynamic.Tekla.Structures.Geometry3d.Vector Vector1, Dynamic.Tekla.Structures.Geometry3d.Vector Vector2)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Cross(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2)));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1);
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Cross", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, System.Double Multiplier)
+		public static Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, System.Double Multiplier)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector), Multiplier));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector);
+			parameters[1] = Multiplier;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "op_Multiply", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(System.Double Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
+		public static Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(System.Double Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.op_Multiply(Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector)));
+			var parameters = new object[2];
+			parameters[0] = Multiplier;
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector);
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "op_Multiply", parameters);
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
 		}
 
 

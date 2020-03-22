@@ -23,9 +23,13 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken", args);
 		}
 
-		public Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
+		public static Dynamic.Tekla.Structures.Model.DisposableToken op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken a, System.IDisposable b)
 		{
-			return Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(teklaObject.op_Addition(Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a), b));
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(a);
+			parameters[1] = b;
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.DisposableToken", "op_Addition", parameters);
+			return Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(result);
 		}
 
 		public void Dispose()

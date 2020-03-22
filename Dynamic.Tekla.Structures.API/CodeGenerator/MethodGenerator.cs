@@ -28,15 +28,27 @@ namespace CodeGenerator
                 if (name.Contains("get_") || name.Contains("set_")) continue;
                 if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
 
-                //if (method.IsStatic) sb.Append("static "); //TODO static methods should have different template ;(
-
-                if (IsTeklaType(method.ReturnType))
+                if (method.IsStatic)
                 {
-                    GenerateForTeklaReturnType(sb, method, name);
+                    if (IsTeklaType(method.ReturnType))
+                    {
+                        Static_GenerateForTeklaReturnType(sb, method, name, type);
+                    }
+                    else
+                    {
+                        Static_GenerateForNotTeklaReturnType(sb, method, name, type);
+                    }
                 }
                 else
                 {
-                    GenerateForNotTeklaReturnType(sb, method, name);
+                    if (IsTeklaType(method.ReturnType))
+                    {
+                        NonStatic_GenerateForTeklaReturnType(sb, method, name);
+                    }
+                    else
+                    {
+                        NonStatic_GenerateForNotTeklaReturnType(sb, method, name);
+                    }
                 }
 
                 sb.Append("\n\n");
@@ -46,10 +58,20 @@ namespace CodeGenerator
             return sb.ToString();
         }
 
-        private static void GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
+        /*
+        public static System.Boolean DisplayPrompt(System.String Message)
+		{
+            var parameters = new object[1];
+            parameters[0] = Message;
+            return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", parameters);
+		}
+    */
+
+        private static void NonStatic_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
         {
             sb.Append("\t\t");
             sb.Append("public ");
+            //if (method.IsStatic) sb.Append("static "); //TODO static methods should have different template ;(
             var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
 
             sb.Append(typeFullName);
@@ -114,10 +136,66 @@ namespace CodeGenerator
             sb.Append(");\n\t\t}");
         }
 
-        private static void GenerateForTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
+        private static void Static_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)
+        {
+            sb.Append("\t\t");
+            sb.Append("public static ");
+            var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
+
+            sb.Append(typeFullName);
+            sb.Append(" ");
+            sb.Append(name);
+            sb.Append("(");
+
+            var parameters = method.GetParameters();
+            //params in method name
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                sb.Append(paramTypeFullName);
+                sb.Append(" ");
+                sb.Append(paramName);
+                sb.Append(", ");
+            }
+            if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
+
+            sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\tvar parameters = new object[" + parameters.Count() + "];\n");
+
+            for (int i = 0; i < parameters.Count(); i++)
+            {
+                if (IsTeklaType(parameters[i].ParameterType))
+                {
+                    sb.Append("\t\t\tparameters[" + i + "] = ");
+                    sb.Append(GetTypeFullName(parameters[i].ParameterType) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                }
+                else
+                    sb.Append("\t\t\tparameters["+ i +"] = " + parameters[i].Name + ";\n");
+            }
+
+            sb.Append("\t\t\t");
+            if (!typeFullName.Equals("void"))
+            {
+                sb.Append("return ");
+                sb.Append("(" + GetTypeFullName(method.ReturnType) + ") ");
+            }
+            sb.Append("TSActivator.InvokeStaticMethod(\"");
+            sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
+            sb.Append("\", \"");
+            sb.Append(method.Name);
+            sb.Append("\", parameters);\n");
+            sb.Append("\t\t}");
+        }
+
+        private static void NonStatic_GenerateForTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
         {
             sb.Append("\t\t");
             sb.Append("public ");
+            //if (method.IsStatic) sb.Append("static "); //TODO static methods should have different template ;(
             sb.Append(GetTypeFullName(method.ReturnType).Replace("System.Void", "void"));
             sb.Append(" ");
             sb.Append(name);
@@ -167,6 +245,59 @@ namespace CodeGenerator
 
             sb.Append("));\n\t\t}");
         }
+
+        private static void Static_GenerateForTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)
+        {
+            sb.Append("\t\t");
+            sb.Append("public static ");
+            var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
+
+            sb.Append(typeFullName);
+            sb.Append(" ");
+            sb.Append(name);
+            sb.Append("(");
+
+            var parameters = method.GetParameters();
+            //params in method name
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                sb.Append(paramTypeFullName);
+                sb.Append(" ");
+                sb.Append(paramName);
+                sb.Append(", ");
+            }
+            if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
+
+            sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\tvar parameters = new object[" + parameters.Count() + "];\n");
+
+            for (int i = 0; i < parameters.Count(); i++)
+            {
+                if (IsTeklaType(parameters[i].ParameterType))
+                {
+                    sb.Append("\t\t\tparameters[" + i + "] = ");
+                    sb.Append(GetTypeFullName(parameters[i].ParameterType) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                }
+                else
+                    sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
+            }
+            
+            sb.Append("\t\t\tdynamic result = TSActivator.InvokeStaticMethod(\"");
+            sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
+            sb.Append("\", \"");
+            sb.Append(method.Name);
+            sb.Append("\", parameters);\n");
+
+            sb.Append("\t\t\treturn ");
+            sb.Append(GetTypeFullName(method.ReturnType) + "_.FromTSObject(result);\n");
+            sb.Append("\t\t}");
+        }
+
 
         private static List<MethodInfo> GetMethodsFromType(Type type)
         {

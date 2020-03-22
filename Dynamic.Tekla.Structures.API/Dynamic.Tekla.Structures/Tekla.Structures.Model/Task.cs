@@ -144,9 +144,11 @@ namespace Dynamic.Tekla.Structures.Model
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetDependencies());
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
+		public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
 		{
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllTasksOfSelectedObjects());
+			var parameters = new object[0];
+			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Task", "GetAllTasksOfSelectedObjects", parameters);
+			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
 		}
 
 

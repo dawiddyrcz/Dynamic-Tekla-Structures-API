@@ -49,6 +49,15 @@ namespace TestConsoleApp
 
             Console.WriteLine("Weight: "+weight);
 
+            var result = Dynamic.Tekla.Structures.Model.Operations.Operation.DisplayPrompt("Hello static method");
+            Console.WriteLine("Result from static method = "+result);
+
+            var result2 = Dynamic.Tekla.Structures.Model.Operations.Operation.CalculatePourUnits();
+            Console.WriteLine("Result from static method2 = " + result2);
+
+            var result3 = Dynamic.Tekla.Structures.Model.Operations.Operation.CopyObject(beam, new Vector(5000, 0, 0));
+            Console.WriteLine("Result from static method3 = " + result3.Identifier.ID);
+
 
             //var phases = model.GetPhases();
             //foreach (var phase in phases)

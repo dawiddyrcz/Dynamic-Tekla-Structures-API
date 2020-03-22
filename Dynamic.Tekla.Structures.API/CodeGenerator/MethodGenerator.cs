@@ -54,18 +54,9 @@ namespace CodeGenerator
                 sb.Append("\n\n");
             }
 
-
+            sb.Append(AditionalMethods(type));
             return sb.ToString();
         }
-
-        /*
-        public static System.Boolean DisplayPrompt(System.String Message)
-		{
-            var parameters = new object[1];
-            parameters[0] = Message;
-            return (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", parameters);
-		}
-    */
 
         private static void NonStatic_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
         {
@@ -298,7 +289,6 @@ namespace CodeGenerator
             sb.Append("\t\t}");
         }
 
-
         private static List<MethodInfo> GetMethodsFromType(Type type)
         {
             return type.GetMethods().Where(
@@ -317,6 +307,30 @@ namespace CodeGenerator
         private static string GetTypeFullName(Type type)
         {
             return TypeFullName.GetTypeFullName(type);
+        }
+
+
+        private static string AditionalMethods(Type type)
+        {
+            if (type.Name.Equals("PhaseCollection"))
+            {
+                return @"
+        public System.Collections.IEnumerator GetEnumerator()
+        {
+            var tsEnumerator = teklaObject.GetEnumerator();
+            var list = new System.Collections.Generic.List<Phase>();
+
+            foreach (var tsPhase in tsEnumerator)
+            {
+                list.Add(Phase_.FromTSObject(tsPhase));
+            }
+            return list.GetEnumerator();
+        }
+
+";
+            }
+
+            return string.Empty;
         }
 
     }

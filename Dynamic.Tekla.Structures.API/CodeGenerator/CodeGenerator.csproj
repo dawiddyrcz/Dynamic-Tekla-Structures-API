@@ -57,7 +57,6 @@
     <Compile Include="TypeGenerator.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="EnumGenerator.cs" />
-    <Compile Include="NamespaceTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

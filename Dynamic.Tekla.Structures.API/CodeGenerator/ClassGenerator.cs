@@ -173,14 +173,14 @@ namespace CodeGenerator
             var propertiesAndFields = type.GetProperties()
                 .GroupBy(t => t.Name)
                 .Select(t => t.First())//In one class returned two properties with the same value
-                .Where(p => p.DeclaringType.Equals(type))
+                .Where(p => p.DeclaringType.Equals(type) && !p.PropertyType.Namespace.Contains("Internal"))
                 .ToList<MemberInfo>();  
 
             var fields = type.GetFields()
                 .Where(f => f.IsPublic & f.IsStatic == false)
                 .GroupBy(t => t.Name)
                 .Select(t => t.First())
-                .Where(p => p.DeclaringType.Equals(type))
+                .Where(p => p.DeclaringType.Equals(type) && !p.FieldType.Namespace.Contains("Internal"))
                 .ToList<MemberInfo>();
             propertiesAndFields.AddRange(fields);
 

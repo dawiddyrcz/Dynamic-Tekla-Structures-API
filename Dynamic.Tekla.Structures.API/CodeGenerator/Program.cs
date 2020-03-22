@@ -153,13 +153,15 @@ namespace CodeGenerator
             var tsd = LoadTeklaStructuresDrawing();
             var tsdTypes = tsd.GetTypes().Where(
                 t => t.IsPublic
-                && t.Namespace.StartsWith("Tekla.Structures")
-                && !t.Namespace.Contains("Internal"));
+                && (t.Namespace?.StartsWith("Tekla.Structures") ?? false)
+                && !t.Namespace.Contains("Internal")
+                && !t.Name.Equals("InputDefinitionFactory")
+                );
 
             var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
-           // output.AddRange(tsdTypes);
+            output.AddRange(tsdTypes);
 
             return output;
         }

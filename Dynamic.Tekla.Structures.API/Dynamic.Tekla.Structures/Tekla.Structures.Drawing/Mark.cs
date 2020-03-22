@@ -1,0 +1,145 @@
+/*Copyright (C) Dawid Dyrcz 2020
+* This program is free software. You may use, distribute and modify 
+* this code under the terms of the LGPL3 license. This program is distributed 
+* in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+*/
+namespace Dynamic.Tekla.Structures.Drawing
+{
+
+    public  class Mark  : Dynamic.Tekla.Structures.Drawing.MarkBase
+    {
+
+		public Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes Attributes
+		{
+			get => Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.FromTSObject(teklaObject.Attributes);
+			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.GetTSObject(value); }
+		}
+
+        
+
+        
+
+		public Mark() {}
+		public Mark(Dynamic.Tekla.Structures.Drawing.ModelObject modelObject)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Drawing.ModelObject_.GetTSObject(modelObject);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark", args);
+		}
+
+		public System.Boolean Insert()
+		{
+			return teklaObject.Insert();
+		}
+
+		public System.Boolean Modify()
+		{
+			return teklaObject.Modify();
+		}
+
+		public System.Boolean Select()
+		{
+			return teklaObject.Select();
+		}
+
+		public System.Boolean Delete()
+		{
+			return teklaObject.Delete();
+		}
+
+		public System.Boolean IsEqual(System.Object ObjectToCompare)
+		{
+			return teklaObject.IsEqual(ObjectToCompare);
+		}
+
+
+
+
+    public  class MarkAttributes  : Dynamic.Tekla.Structures.Drawing.MarkBase.MarkBaseAttributes
+    {
+
+		public Dynamic.Tekla.Structures.Drawing.ContainerElement Content
+		{
+			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.Content);
+			set { teklaObject.Content = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+		}
+
+        
+
+        
+
+		public MarkAttributes() {}
+		public MarkAttributes(Dynamic.Tekla.Structures.Drawing.ModelObject modelObject)
+		{
+			var args = new object[1];
+			args[0] = Dynamic.Tekla.Structures.Drawing.ModelObject_.GetTSObject(modelObject);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark.MarkAttributes", args);
+		}
+		public MarkAttributes(Dynamic.Tekla.Structures.Drawing.ModelObject modelObject, System.String AttributesFile)
+		{
+			var args = new object[2];
+			args[0] = Dynamic.Tekla.Structures.Drawing.ModelObject_.GetTSObject(modelObject);
+			args[1] = AttributesFile;
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark.MarkAttributes", args);
+		}
+
+		public System.Boolean IsEqual(System.Object ObjectToCompare)
+		{
+			return teklaObject.IsEqual(ObjectToCompare);
+		}
+
+		public System.Boolean LoadAttributes(System.String attributeFilename)
+		{
+			return teklaObject.LoadAttributes(attributeFilename);
+		}
+
+
+
+
+
+    }
+
+    internal static class MarkAttributes_
+    {
+        public static dynamic GetTSObject(MarkAttributes dynObject)
+        {
+            return dynObject.teklaObject;
+        }
+
+        public static MarkAttributes FromTSObject(dynamic tsObject)
+        {
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Drawing.Mark.MarkAttributes)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
+        }
+    }
+
+
+
+
+    }
+
+    internal static class Mark_
+    {
+        public static dynamic GetTSObject(Mark dynObject)
+        {
+            return dynObject.teklaObject;
+        }
+
+        public static Mark FromTSObject(dynamic tsObject)
+        {
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Drawing.Mark)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
+        }
+    }
+
+
+}
+    

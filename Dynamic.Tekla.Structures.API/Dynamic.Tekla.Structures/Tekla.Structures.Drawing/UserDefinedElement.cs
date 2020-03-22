@@ -1,0 +1,97 @@
+/*Copyright (C) Dawid Dyrcz 2020
+* This program is free software. You may use, distribute and modify 
+* this code under the terms of the LGPL3 license. This program is distributed 
+* in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+*/
+namespace Dynamic.Tekla.Structures.Drawing
+{
+
+    public  class UserDefinedElement  : Dynamic.Tekla.Structures.Drawing.ElementBase
+    {
+
+		public System.String Name
+		{
+			get => teklaObject.Name;
+			set { teklaObject.Name = value; }
+		}
+
+		public System.String Value
+		{
+			get => teklaObject.Value;
+			set { teklaObject.Value = value; }
+		}
+
+		public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
+		{
+			get => Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
+			set { teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value); }
+		}
+
+		public Dynamic.Tekla.Structures.Drawing.UnitAttributes Unit
+		{
+			get => Dynamic.Tekla.Structures.Drawing.UnitAttributes_.FromTSObject(teklaObject.Unit);
+			set { teklaObject.Unit = Dynamic.Tekla.Structures.Drawing.UnitAttributes_.GetTSObject(value); }
+		}
+
+        
+
+        
+
+		public UserDefinedElement() {}
+		public UserDefinedElement(System.String Name)
+		{
+			var args = new object[1];
+			args[0] = Name;
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UserDefinedElement", args);
+		}
+		public UserDefinedElement(System.String Name, Dynamic.Tekla.Structures.Drawing.FontAttributes Font)
+		{
+			var args = new object[2];
+			args[0] = Name;
+			args[1] = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(Font);
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UserDefinedElement", args);
+		}
+
+		public System.Object Clone()
+		{
+			return teklaObject.Clone();
+		}
+
+		public System.Boolean IsEqual(System.Object ObjectToCompare)
+		{
+			return teklaObject.IsEqual(ObjectToCompare);
+		}
+
+		public System.String GetUnformattedString()
+		{
+			return teklaObject.GetUnformattedString();
+		}
+
+
+
+
+
+    }
+
+    internal static class UserDefinedElement_
+    {
+        public static dynamic GetTSObject(UserDefinedElement dynObject)
+        {
+            return dynObject.teklaObject;
+        }
+
+        public static UserDefinedElement FromTSObject(dynamic tsObject)
+        {
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            var dynObject = (Tekla.Structures.Drawing.UserDefinedElement)System.Activator.CreateInstance(type);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
+        }
+    }
+
+
+}
+    

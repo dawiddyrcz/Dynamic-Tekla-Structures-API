@@ -13,6 +13,39 @@ namespace CodeGenerator
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
         
+        public static string GetTypeFullName2(Type type)
+        {
+            StringBuilder sb = new StringBuilder(50);
+
+            sb.Append(type.ToString());
+
+            if (type.IsGenericType)
+            {
+                sb.Replace("[", "<");
+                sb.Replace("]", ">");
+            }
+
+            sb.Replace("`1", "")
+                .Replace("`2", "")
+                .Replace("`3", "")
+                .Replace("`4", "")
+                .Replace("`5", "")
+                .Replace("`6", "")
+                .Replace("`7", "");
+
+            sb.Replace("&", "");
+            sb.Replace("+", ".");
+            sb.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
+
+            if (sb.ToString().Contains("Dictionary["))
+            {
+                sb.Replace("[", "<");
+                sb.Replace("]", ">");
+            }
+
+            return sb.ToString();
+        }
+
         public static string GetTypeFullName(Type type)
         {
             StringBuilder sb = new StringBuilder();

@@ -12,10 +12,7 @@ namespace Dynamic.Tekla.Structures
             string fileTS = GetFileName(typeName);
 
             var assembly = Assembly.LoadFrom(fileTS);
-            var type = assembly.GetType(typeName);
-
-            if (type == null)
-                type = TryGetNestedType(typeName, ref assembly);
+            var type = GetTypeFromTypeName(typeName, ref assembly);
 
             return Activator.CreateInstance(type);
         }
@@ -25,7 +22,7 @@ namespace Dynamic.Tekla.Structures
             string fileTS = GetFileName(typeName);
 
             var assembly = Assembly.LoadFrom(fileTS);
-            var type = assembly.GetType(typeName);
+            var type = GetTypeFromTypeName(typeName, ref assembly);
 
             MethodInfo method = GetMethod(methodName, parameters, type);
 
@@ -72,18 +69,36 @@ namespace Dynamic.Tekla.Structures
             string fileTS = GetFileName(typeName);
 
             var assembly = Assembly.LoadFrom(fileTS);
-            var type = assembly.GetType(typeName);
+            var type = GetTypeFromTypeName(typeName, ref assembly);
+
             return Activator.CreateInstance(type, args);
+        }
+
+        private static Type GetTypeFromTypeName(string typeName,ref  Assembly assembly)
+        {
+            var type =  assembly.GetType(typeName);
+            if (type == null)
+                type = TryGetNestedType(typeName, ref assembly);
+            return type;
         }
 
         private static Type TryGetNestedType(string typeName, ref Assembly assembly)
         {
-            string output = string.Copy(typeName);
-            var lastDotPosition = typeName.LastIndexOf('.');
-            output = typeName.Insert(lastDotPosition, "+");
-            output = output.Remove(lastDotPosition + 1, 1);
+            if (typeName.Contains('.'))
+            {
+                string output = string.Copy(typeName);
+                var lastDotPosition = typeName.LastIndexOf('.');
+                output = typeName.Insert(lastDotPosition, "+");
+                output = output.Remove(lastDotPosition + 1, 1);
 
-            return assembly.GetType(output);
+                var type = assembly.GetType(output);  
+
+                if (type != null)
+                    return type;
+                else
+                    return TryGetNestedType(output, ref assembly);
+            }
+            else return assembly.GetType(typeName);
         }
 
         private static string GetFileName(string typeName)

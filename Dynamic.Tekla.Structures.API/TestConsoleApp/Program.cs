@@ -25,10 +25,20 @@ namespace TestConsoleApp
             {
                 var drawing = drawings.Current as TSD.Drawing;
                 Console.WriteLine("Name: {0}, Title1: {1}, Title2: {2}, Title3 {3}", drawing.Name, drawing.Title1, drawing.Title2, drawing.Title3);
+
+                dh.SetActiveDrawing(drawing);
+
+                var p1 = new Point(0, 0, 0);
+                var p2 = new Point(200, 200, 0);
+                var line = new TSD.Line(drawing.GetSheet(), p1, p2);
+                line.Attributes = new TSD.Line.LineAttributes("standard");
+                line.Insert();
+                drawing.CommitChanges();
+
+                break;
             }
 
             //var gaDrawing = new Tekla.Structures.Drawing.GADrawing();
-
 
             Console.WriteLine("end");
             Console.ReadKey();

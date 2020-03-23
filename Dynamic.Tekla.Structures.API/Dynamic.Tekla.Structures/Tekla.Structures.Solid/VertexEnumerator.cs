@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Geometry3d.Point Current
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
         

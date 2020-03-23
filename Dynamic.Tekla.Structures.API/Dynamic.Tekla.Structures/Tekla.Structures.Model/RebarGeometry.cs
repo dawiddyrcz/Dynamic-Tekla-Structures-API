@@ -14,19 +14,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
-			set { teklaObject.Shape = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
+
 		}
 
 		public System.Double Diameter
 		{
 			get => teklaObject.Diameter;
-			set { teklaObject.Diameter = value; }
+
 		}
 
 		public System.Collections.ArrayList BendingRadiuses
 		{
 			get => teklaObject.BendingRadiuses;
-			set { teklaObject.BendingRadiuses = value; }
+
 		}
 
         

@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToGlobal
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToGlobal);
-			set { teklaObject.TransformationMatrixToGlobal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToLocal
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToLocal);
-			set { teklaObject.TransformationMatrixToLocal = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(value); }
+
 		}
 
         

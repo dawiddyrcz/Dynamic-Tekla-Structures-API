@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double Radius
 		{
 			get => teklaObject.Radius;
-			set { teklaObject.Radius = value; }
+
 		}
 
         

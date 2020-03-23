@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObject Object
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object);
-			set { teklaObject.Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.GetTSObject(value); }
+
 		}
 
         

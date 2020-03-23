@@ -20,19 +20,19 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis0
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Axis0);
-			set { teklaObject.Axis0 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis1
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Axis1);
-			set { teklaObject.Axis1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Axis2
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Axis2);
-			set { teklaObject.Axis2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public System.Double Extent0

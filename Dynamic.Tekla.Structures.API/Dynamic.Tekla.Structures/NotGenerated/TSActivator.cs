@@ -101,11 +101,11 @@ namespace Dynamic.Tekla.Structures
                 else if (typeName.StartsWith("Tekla.Structures"))
                     fileTS = dll.TS;
                 else
-                    throw new Exception("Unknown namespace: " + typeName); //TODO exception
+                    throw new DynamicAPIException("Unknown namespace: " + typeName); 
             }
             else
             {
-                throw new Exception("Tekla is not running");//TODO exception
+                throw new DynamicAPIException("Tekla is not running");
             }
 
             return fileTS;

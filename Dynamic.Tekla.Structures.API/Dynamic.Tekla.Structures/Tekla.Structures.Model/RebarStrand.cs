@@ -50,7 +50,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList OnPlaneOffsets
 		{
 			get => teklaObject.OnPlaneOffsets;
-			set { teklaObject.OnPlaneOffsets = value; }
+
 		}
 
         

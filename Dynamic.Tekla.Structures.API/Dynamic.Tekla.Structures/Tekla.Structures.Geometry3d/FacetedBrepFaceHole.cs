@@ -14,25 +14,25 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Int32 Count
 		{
 			get => teklaObject.Count;
-			set { teklaObject.Count = value; }
+
 		}
 
 		public System.Boolean IsReadOnly
 		{
 			get => teklaObject.IsReadOnly;
-			set { teklaObject.IsReadOnly = value; }
+
 		}
 
 		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
 		{
 			get => teklaObject.VerticeIndexes;
-			set { teklaObject.VerticeIndexes = value; }
+
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => teklaObject.Vertices;
-			set { teklaObject.Vertices = value; }
+
 		}
 
         

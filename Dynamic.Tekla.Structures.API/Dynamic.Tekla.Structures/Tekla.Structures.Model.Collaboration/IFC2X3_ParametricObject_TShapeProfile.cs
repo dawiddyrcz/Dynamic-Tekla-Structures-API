@@ -14,55 +14,55 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double Depth
 		{
 			get => teklaObject.Depth;
-			set { teklaObject.Depth = value; }
+
 		}
 
 		public System.Double FlangeWidth
 		{
 			get => teklaObject.FlangeWidth;
-			set { teklaObject.FlangeWidth = value; }
+
 		}
 
 		public System.Double WebThickness
 		{
 			get => teklaObject.WebThickness;
-			set { teklaObject.WebThickness = value; }
+
 		}
 
 		public System.Double FlangeThickness
 		{
 			get => teklaObject.FlangeThickness;
-			set { teklaObject.FlangeThickness = value; }
+
 		}
 
 		public System.Double FilletRadius
 		{
 			get => teklaObject.FilletRadius;
-			set { teklaObject.FilletRadius = value; }
+
 		}
 
 		public System.Double FlangeEdgeRadius
 		{
 			get => teklaObject.FlangeEdgeRadius;
-			set { teklaObject.FlangeEdgeRadius = value; }
+
 		}
 
 		public System.Double WebEdgeRadius
 		{
 			get => teklaObject.WebEdgeRadius;
-			set { teklaObject.WebEdgeRadius = value; }
+
 		}
 
 		public System.Double WebSlope
 		{
 			get => teklaObject.WebSlope;
-			set { teklaObject.WebSlope = value; }
+
 		}
 
 		public System.Double FlangeSlope
 		{
 			get => teklaObject.FlangeSlope;
-			set { teklaObject.FlangeSlope = value; }
+
 		}
 
         

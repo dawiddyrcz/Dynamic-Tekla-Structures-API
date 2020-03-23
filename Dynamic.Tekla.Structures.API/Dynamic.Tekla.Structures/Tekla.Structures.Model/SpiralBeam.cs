@@ -56,19 +56,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Geometry3d.Point RotationCenterPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.RotationCenterPoint);
-			set { teklaObject.RotationCenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector RotationAxisDirection
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.RotationAxisDirection);
-			set { teklaObject.RotationAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
         

@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Solid
 		public System.Object Current
 		{
 			get => teklaObject.Current;
-			set { teklaObject.Current = value; }
+
 		}
 
         

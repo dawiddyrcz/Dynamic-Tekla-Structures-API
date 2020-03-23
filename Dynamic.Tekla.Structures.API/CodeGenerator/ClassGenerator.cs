@@ -180,10 +180,21 @@ namespace CodeGenerator
             {
                 Type currentType = null;
 
+                var hasGet = false;
+                var hasSet = false;
+
                 if (propertyOrField is PropertyInfo pi)
+                {
                     currentType = pi.PropertyType;
+                    hasGet = pi.GetMethod != null;
+                    hasSet = pi.SetMethod != null;
+                }
                 else if (propertyOrField is FieldInfo fi)
+                {
                     currentType = fi.FieldType;
+                    hasGet = true;
+                    hasSet = true;
+                }
 
                 if (IsTeklaType(currentType))
                 {
@@ -191,11 +202,18 @@ namespace CodeGenerator
                     sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
                     sb.Append(propertyOrField.Name);
-                    sb.Append("\n\t\t{" +
+
+                    if (hasGet)
+                    {
+                        sb.Append("\n\t\t{" +
                         "\n\t\t\tget => " + CorrectIfArray(GetTypeFullName(currentType)) + "_.FromTSObject($dfield." +
-                        "" + propertyOrField.Name + ");" +
-                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = " + CorrectIfArray(GetTypeFullName(currentType)) + "_.GetTSObject(value); }" +
-                        "\n\t\t}\n\n");
+                        "" + propertyOrField.Name + ");\n");
+                    }
+                    if (hasSet)
+                    {
+                        sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = " + CorrectIfArray(GetTypeFullName(currentType)) + "_.GetTSObject(value); }");
+                    }
+                    sb.Append("\n\t\t}\n\n");
                 }
                 else
                 {
@@ -203,10 +221,16 @@ namespace CodeGenerator
                     sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
                     sb.Append(propertyOrField.Name);
-                    sb.Append("\n\t\t{" +
-                        "\n\t\t\tget => $dfield." + propertyOrField.Name + ";" +
-                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = value; }" +
-                        "\n\t\t}\n\n");
+
+                    if (hasGet)
+                    {
+                        sb.Append("\n\t\t{" + "\n\t\t\tget => $dfield." + propertyOrField.Name + ";\n"); 
+                    }
+                    if (hasSet)
+                    {
+                        sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = value; }");
+                    }
+                    sb.Append("\n\t\t}\n\n");
                 }
             }
 

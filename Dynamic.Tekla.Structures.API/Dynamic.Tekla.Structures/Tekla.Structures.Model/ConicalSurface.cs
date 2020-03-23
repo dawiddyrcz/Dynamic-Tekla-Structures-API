@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Tuple<System.Double, System.Double> Radiuses
 		{
 			get => teklaObject.Radiuses;
-			set { teklaObject.Radiuses = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Apex
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Apex);
-			set { teklaObject.Apex = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
         

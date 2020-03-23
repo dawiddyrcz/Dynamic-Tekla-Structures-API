@@ -20,7 +20,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Double Thickness
 		{
 			get => teklaObject.Thickness;
-			set { teklaObject.Thickness = value; }
+
 		}
 
         

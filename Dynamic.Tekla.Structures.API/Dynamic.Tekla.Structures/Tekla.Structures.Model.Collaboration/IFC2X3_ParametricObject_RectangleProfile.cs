@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double XDim
 		{
 			get => teklaObject.XDim;
-			set { teklaObject.XDim = value; }
+
 		}
 
 		public System.Double YDim
 		{
 			get => teklaObject.YDim;
-			set { teklaObject.YDim = value; }
+
 		}
 
         

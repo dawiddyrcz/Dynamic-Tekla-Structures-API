@@ -62,7 +62,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType ViewProjection
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(teklaObject.ViewProjection);
-			set { teklaObject.ViewProjection = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType
@@ -74,7 +74,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType ViewRendering
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(teklaObject.ViewRendering);
-			set { teklaObject.ViewRendering = Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.GetTSObject(value); }
+
 		}
 
 		public System.String ViewFilter

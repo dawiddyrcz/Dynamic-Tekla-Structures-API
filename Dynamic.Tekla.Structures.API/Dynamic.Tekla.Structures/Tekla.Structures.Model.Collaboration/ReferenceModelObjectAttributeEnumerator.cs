@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Object Current
 		{
 			get => teklaObject.Current;
-			set { teklaObject.Current = value; }
+
 		}
 
         

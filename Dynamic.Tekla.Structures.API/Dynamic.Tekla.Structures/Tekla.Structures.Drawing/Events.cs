@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean HasDrawingUpdatedListeners
 		{
 			get => teklaObject.HasDrawingUpdatedListeners;
-			set { teklaObject.HasDrawingUpdatedListeners = value; }
+
 		}
 
         

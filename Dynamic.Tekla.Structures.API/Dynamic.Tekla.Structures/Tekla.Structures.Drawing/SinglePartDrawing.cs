@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public Dynamic.Tekla.Structures.Identifier PartIdentifier
 		{
 			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.PartIdentifier);
-			set { teklaObject.PartIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+
 		}
 
 		public System.Int32 SheetNumber
 		{
 			get => teklaObject.SheetNumber;
-			set { teklaObject.SheetNumber = value; }
+
 		}
 
         

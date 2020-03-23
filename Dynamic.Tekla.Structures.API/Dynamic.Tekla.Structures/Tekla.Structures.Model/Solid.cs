@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinimumPoint);
-			set { teklaObject.MinimumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaximumPoint);
-			set { teklaObject.MaximumPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
         

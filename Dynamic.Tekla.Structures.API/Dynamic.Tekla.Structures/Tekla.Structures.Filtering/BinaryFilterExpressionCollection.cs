@@ -14,25 +14,25 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public System.Boolean IsSynchronized
 		{
 			get => teklaObject.IsSynchronized;
-			set { teklaObject.IsSynchronized = value; }
+
 		}
 
 		public System.Object SyncRoot
 		{
 			get => teklaObject.SyncRoot;
-			set { teklaObject.SyncRoot = value; }
+
 		}
 
 		public System.Int32 Count
 		{
 			get => teklaObject.Count;
-			set { teklaObject.Count = value; }
+
 		}
 
 		public System.Boolean IsReadOnly
 		{
 			get => teklaObject.IsReadOnly;
-			set { teklaObject.IsReadOnly = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item

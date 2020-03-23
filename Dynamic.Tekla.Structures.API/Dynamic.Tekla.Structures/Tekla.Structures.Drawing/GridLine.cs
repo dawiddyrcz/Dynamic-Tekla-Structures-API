@@ -98,19 +98,19 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Double TextHeight
 		{
 			get => teklaObject.TextHeight;
-			set { teklaObject.TextHeight = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point GridPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.GridPoint);
-			set { teklaObject.GridPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point OffsetGridPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.OffsetGridPoint);
-			set { teklaObject.OffsetGridPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point GridLabelPoint

@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public Dynamic.Tekla.Structures.Filtering.Expression Expression
 		{
 			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.Expression);
-			set { teklaObject.Expression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType InvalidFilterExpressionExceptionReasonsType
 		{
 			get => Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.FromTSObject(teklaObject.InvalidFilterExpressionExceptionReasonsType);
-			set { teklaObject.InvalidFilterExpressionExceptionReasonsType = Dynamic.Tekla.Structures.Filtering.InvalidFilterExpressionExceptionReasonsType_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression LeftExpression
 		{
 			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.LeftExpression);
-			set { teklaObject.LeftExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.Expression RightExpression
 		{
 			get => Dynamic.Tekla.Structures.Filtering.Expression_.FromTSObject(teklaObject.RightExpression);
-			set { teklaObject.RightExpression = Dynamic.Tekla.Structures.Filtering.Expression_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Filtering.OperatorType OperatorType
 		{
 			get => Dynamic.Tekla.Structures.Filtering.OperatorType_.FromTSObject(teklaObject.OperatorType);
-			set { teklaObject.OperatorType = Dynamic.Tekla.Structures.Filtering.OperatorType_.GetTSObject(value); }
+
 		}
 
         

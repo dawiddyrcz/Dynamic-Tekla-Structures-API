@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Nullable<System.DateTime> ModificationTime
 		{
 			get => teklaObject.ModificationTime;
-			set { teklaObject.ModificationTime = value; }
+
 		}
 
 		public System.Boolean IsUpToDate
 		{
 			get => teklaObject.IsUpToDate;
-			set { teklaObject.IsUpToDate = value; }
+
 		}
 
         

@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.String Name
 		{
 			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+
 		}
 
 		public System.String Description
 		{
 			get => teklaObject.Description;
-			set { teklaObject.Description = value; }
+
 		}
 
 		public System.Collections.Generic.List<System.Double> LineDescription

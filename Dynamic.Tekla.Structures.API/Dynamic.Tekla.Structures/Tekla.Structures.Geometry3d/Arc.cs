@@ -14,61 +14,61 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double Length
 		{
 			get => teklaObject.Length;
-			set { teklaObject.Length = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
-			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
-			set { teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ArcMiddlePoint
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ArcMiddlePoint);
-			set { teklaObject.ArcMiddlePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normal);
-			set { teklaObject.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public System.Double Angle
 		{
 			get => teklaObject.Angle;
-			set { teklaObject.Angle = value; }
+
 		}
 
 		public System.Double Radius
 		{
 			get => teklaObject.Radius;
-			set { teklaObject.Radius = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector StartTangent
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.StartTangent);
-			set { teklaObject.StartTangent = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector StartDirection
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.StartDirection);
-			set { teklaObject.StartDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
         

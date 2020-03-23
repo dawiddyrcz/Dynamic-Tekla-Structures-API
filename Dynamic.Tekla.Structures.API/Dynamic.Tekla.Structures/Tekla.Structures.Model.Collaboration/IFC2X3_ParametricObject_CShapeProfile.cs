@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double Depth
 		{
 			get => teklaObject.Depth;
-			set { teklaObject.Depth = value; }
+
 		}
 
 		public System.Double Width
 		{
 			get => teklaObject.Width;
-			set { teklaObject.Width = value; }
+
 		}
 
 		public System.Double WallThickness
 		{
 			get => teklaObject.WallThickness;
-			set { teklaObject.WallThickness = value; }
+
 		}
 
 		public System.Double Girth
 		{
 			get => teklaObject.Girth;
-			set { teklaObject.Girth = value; }
+
 		}
 
 		public System.Double InternalFilletRadius
 		{
 			get => teklaObject.InternalFilletRadius;
-			set { teklaObject.InternalFilletRadius = value; }
+
 		}
 
         

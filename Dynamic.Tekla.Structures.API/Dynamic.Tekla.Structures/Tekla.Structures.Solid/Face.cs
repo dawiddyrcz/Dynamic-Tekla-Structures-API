@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normal);
-			set { teklaObject.Normal = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Identifier OriginPartId
 		{
 			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.OriginPartId);
-			set { teklaObject.OriginPartId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+
 		}
 
         

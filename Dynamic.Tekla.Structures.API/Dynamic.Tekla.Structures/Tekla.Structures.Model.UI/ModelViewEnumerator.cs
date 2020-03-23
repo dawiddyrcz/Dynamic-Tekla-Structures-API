@@ -14,19 +14,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public Dynamic.Tekla.Structures.Model.UI.View Current
 		{
 			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
+
 		}
 
 		public System.Int32 Count
 		{
 			get => teklaObject.Count;
-			set { teklaObject.Count = value; }
+
 		}
 
 		public System.Int32 CurrentViewId
 		{
 			get => teklaObject.CurrentViewId;
-			set { teklaObject.CurrentViewId = value; }
+
 		}
 
         

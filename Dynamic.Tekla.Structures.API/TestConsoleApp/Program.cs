@@ -10,7 +10,6 @@ using TSD = Dynamic.Tekla.Structures.Drawing;
 
 namespace TestConsoleApp
 {
-    //TODO get set w properties
     //TODO ref out in methods
     
     static class Program

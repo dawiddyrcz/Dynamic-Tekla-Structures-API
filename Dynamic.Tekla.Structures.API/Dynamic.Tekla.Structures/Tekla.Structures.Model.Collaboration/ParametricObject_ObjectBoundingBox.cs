@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
 		{
 			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.yDir);
-			set { teklaObject.yDir = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+
 		}
 
         

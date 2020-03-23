@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
 		{
 			get => teklaObject.Faces;
-			set { teklaObject.Faces = value; }
+
 		}
 
 		public System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> InnerWires
 		{
 			get => teklaObject.InnerWires;
-			set { teklaObject.InnerWires = value; }
+
 		}
 
 		public System.Int32[][] OuterWires
 		{
 			get => teklaObject.OuterWires;
-			set { teklaObject.OuterWires = value; }
+
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
 		{
 			get => teklaObject.GetEdges;
-			set { teklaObject.GetEdges = value; }
+
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => teklaObject.Vertices;
-			set { teklaObject.Vertices = value; }
+
 		}
 
         

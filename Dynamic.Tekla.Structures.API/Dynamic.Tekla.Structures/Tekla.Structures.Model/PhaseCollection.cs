@@ -14,19 +14,19 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 Count
 		{
 			get => teklaObject.Count;
-			set { teklaObject.Count = value; }
+
 		}
 
 		public System.Boolean IsSynchronized
 		{
 			get => teklaObject.IsSynchronized;
-			set { teklaObject.IsSynchronized = value; }
+
 		}
 
 		public System.Object SyncRoot
 		{
 			get => teklaObject.SyncRoot;
-			set { teklaObject.SyncRoot = value; }
+
 		}
 
         

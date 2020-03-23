@@ -182,7 +182,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList OtherPartsToBolt
 		{
 			get => teklaObject.OtherPartsToBolt;
-			set { teklaObject.OtherPartsToBolt = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
@@ -206,7 +206,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList BoltPositions
 		{
 			get => teklaObject.BoltPositions;
-			set { teklaObject.BoltPositions = value; }
+
 		}
 
         

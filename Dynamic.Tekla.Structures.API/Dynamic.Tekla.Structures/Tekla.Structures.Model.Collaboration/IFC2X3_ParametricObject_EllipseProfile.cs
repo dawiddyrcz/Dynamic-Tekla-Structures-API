@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double SemiAxis1
 		{
 			get => teklaObject.SemiAxis1;
-			set { teklaObject.SemiAxis1 = value; }
+
 		}
 
 		public System.Double SemiAxis2
 		{
 			get => teklaObject.SemiAxis2;
-			set { teklaObject.SemiAxis2 = value; }
+
 		}
 
         

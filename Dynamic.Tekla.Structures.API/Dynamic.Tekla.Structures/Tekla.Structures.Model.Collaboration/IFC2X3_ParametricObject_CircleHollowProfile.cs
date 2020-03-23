@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double Radius
 		{
 			get => teklaObject.Radius;
-			set { teklaObject.Radius = value; }
+
 		}
 
 		public System.Double WallThickness
 		{
 			get => teklaObject.WallThickness;
-			set { teklaObject.WallThickness = value; }
+
 		}
 
         

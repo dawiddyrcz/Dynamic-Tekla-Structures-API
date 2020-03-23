@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public Dynamic.Tekla.Structures.Drawing.DrawingObject Current
 		{
 			get => Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(value); }
+
 		}
 
         

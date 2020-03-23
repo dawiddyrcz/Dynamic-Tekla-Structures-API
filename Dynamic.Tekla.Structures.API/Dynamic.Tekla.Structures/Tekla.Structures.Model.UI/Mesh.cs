@@ -14,19 +14,19 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Collections.ArrayList Points
 		{
 			get => teklaObject.Points;
-			set { teklaObject.Points = value; }
+
 		}
 
 		public System.Collections.ArrayList Triangles
 		{
 			get => teklaObject.Triangles;
-			set { teklaObject.Triangles = value; }
+
 		}
 
 		public System.Collections.ArrayList Lines
 		{
 			get => teklaObject.Lines;
-			set { teklaObject.Lines = value; }
+
 		}
 
         

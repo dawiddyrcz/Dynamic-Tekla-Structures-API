@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 Index
 		{
 			get => teklaObject.Index;
-			set { teklaObject.Index = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
 		{
 			get => Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
-			set { teklaObject.GeometryNode = Dynamic.Tekla.Structures.Model.IGeometryNode_.GetTSObject(value); }
+
 		}
 
         

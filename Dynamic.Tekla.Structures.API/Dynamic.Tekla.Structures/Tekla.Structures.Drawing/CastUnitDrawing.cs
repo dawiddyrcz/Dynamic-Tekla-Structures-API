@@ -14,19 +14,19 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public Dynamic.Tekla.Structures.Identifier CastUnitIdentifier
 		{
 			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.CastUnitIdentifier);
-			set { teklaObject.CastUnitIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+
 		}
 
 		public System.Int32 SheetNumber
 		{
 			get => teklaObject.SheetNumber;
-			set { teklaObject.SheetNumber = value; }
+
 		}
 
 		public System.Boolean CastUnitById
 		{
 			get => teklaObject.CastUnitById;
-			set { teklaObject.CastUnitById = value; }
+
 		}
 
         

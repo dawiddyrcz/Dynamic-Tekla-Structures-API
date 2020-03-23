@@ -14,13 +14,13 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 		public Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum Position
 		{
 			get => Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
-			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.GetTSObject(value); }
+
 		}
 
 		public System.Collections.ArrayList Polygons
 		{
 			get => teklaObject.Polygons;
-			set { teklaObject.Polygons = value; }
+
 		}
 
         

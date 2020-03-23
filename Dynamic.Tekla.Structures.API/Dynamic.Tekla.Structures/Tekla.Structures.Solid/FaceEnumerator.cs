@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Solid
 		public Dynamic.Tekla.Structures.Solid.Face Current
 		{
 			get => Dynamic.Tekla.Structures.Solid.Face_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Solid.Face_.GetTSObject(value); }
+
 		}
 
         

@@ -26,7 +26,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObject Current
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+
 		}
 
         

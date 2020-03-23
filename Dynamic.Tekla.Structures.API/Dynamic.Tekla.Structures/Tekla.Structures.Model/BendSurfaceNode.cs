@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean IsAutomatic
 		{
 			get => teklaObject.IsAutomatic;
-			set { teklaObject.IsAutomatic = value; }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.BendSurface Surface

@@ -26,7 +26,7 @@ namespace Dynamic.Tekla.Structures.Model.History
 		public System.String Guid
 		{
 			get => teklaObject.Guid;
-			set { teklaObject.Guid = value; }
+
 		}
 
         

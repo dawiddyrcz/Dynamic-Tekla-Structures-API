@@ -14,49 +14,49 @@ namespace Dynamic.Tekla.Structures
 		public Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
 		{
 			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(teklaObject.Configuration);
-			set { teklaObject.Configuration = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.GetTSObject(value); }
+
 		}
 
 		public System.Boolean MultimaterialModeling
 		{
 			get => teklaObject.MultimaterialModeling;
-			set { teklaObject.MultimaterialModeling = value; }
+
 		}
 
 		public System.Boolean LoadModeling
 		{
 			get => teklaObject.LoadModeling;
-			set { teklaObject.LoadModeling = value; }
+
 		}
 
 		public System.Boolean SteelDetailing
 		{
 			get => teklaObject.SteelDetailing;
-			set { teklaObject.SteelDetailing = value; }
+
 		}
 
 		public System.Boolean ConcreteDetailing
 		{
 			get => teklaObject.ConcreteDetailing;
-			set { teklaObject.ConcreteDetailing = value; }
+
 		}
 
 		public System.Boolean RebarModeling
 		{
 			get => teklaObject.RebarModeling;
-			set { teklaObject.RebarModeling = value; }
+
 		}
 
 		public System.Boolean AnalysisAndDesign
 		{
 			get => teklaObject.AnalysisAndDesign;
-			set { teklaObject.AnalysisAndDesign = value; }
+
 		}
 
 		public System.Boolean TaskManagement
 		{
 			get => teklaObject.TaskManagement;
-			set { teklaObject.TaskManagement = value; }
+
 		}
 
         

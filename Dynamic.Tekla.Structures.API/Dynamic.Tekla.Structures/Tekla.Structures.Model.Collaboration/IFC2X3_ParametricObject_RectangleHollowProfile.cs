@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 		public System.Double XDim
 		{
 			get => teklaObject.XDim;
-			set { teklaObject.XDim = value; }
+
 		}
 
 		public System.Double YDim
 		{
 			get => teklaObject.YDim;
-			set { teklaObject.YDim = value; }
+
 		}
 
 		public System.Double WallThickness
 		{
 			get => teklaObject.WallThickness;
-			set { teklaObject.WallThickness = value; }
+
 		}
 
 		public System.Double InnerFilletRadius
 		{
 			get => teklaObject.InnerFilletRadius;
-			set { teklaObject.InnerFilletRadius = value; }
+
 		}
 
 		public System.Double OuterFilletRadius
 		{
 			get => teklaObject.OuterFilletRadius;
-			set { teklaObject.OuterFilletRadius = value; }
+
 		}
 
         

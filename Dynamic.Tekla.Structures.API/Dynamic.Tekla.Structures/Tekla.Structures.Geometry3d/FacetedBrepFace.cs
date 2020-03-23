@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean HasHoles
 		{
 			get => teklaObject.HasHoles;
-			set { teklaObject.HasHoles = value; }
+
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFaceHole> Holes
 		{
 			get => teklaObject.Holes;
-			set { teklaObject.Holes = value; }
+
 		}
 
 		public System.Boolean IsReadOnly
 		{
 			get => teklaObject.IsReadOnly;
-			set { teklaObject.IsReadOnly = value; }
+
 		}
 
 		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
 		{
 			get => teklaObject.VerticeIndexes;
-			set { teklaObject.VerticeIndexes = value; }
+
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
 			get => teklaObject.Vertices;
-			set { teklaObject.Vertices = value; }
+
 		}
 
         

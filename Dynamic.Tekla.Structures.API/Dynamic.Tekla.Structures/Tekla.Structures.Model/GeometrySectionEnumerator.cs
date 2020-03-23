@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.GeometrySection Current
 		{
 			get => Dynamic.Tekla.Structures.Model.GeometrySection_.FromTSObject(teklaObject.Current);
-			set { teklaObject.Current = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(value); }
+
 		}
 
         

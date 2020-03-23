@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean IsHidden
 		{
 			get => teklaObject.IsHidden;
-			set { teklaObject.IsHidden = value; }
+
 		}
 
         

@@ -38,13 +38,13 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SharedModel
 		{
 			get => teklaObject.SharedModel;
-			set { teklaObject.SharedModel = value; }
+
 		}
 
 		public System.Boolean SingleUserModel
 		{
 			get => teklaObject.SingleUserModel;
-			set { teklaObject.SingleUserModel = value; }
+
 		}
 
         

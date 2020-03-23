@@ -38,7 +38,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.Beam.BeamTypeEnum_.GetTSObject(value); }
+
 		}
 
         

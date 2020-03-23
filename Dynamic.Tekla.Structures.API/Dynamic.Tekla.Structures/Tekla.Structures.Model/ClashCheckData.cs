@@ -14,25 +14,25 @@ namespace Dynamic.Tekla.Structures.Model
 		public Dynamic.Tekla.Structures.Model.ModelObject Object1
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object1);
-			set { teklaObject.Object1 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject Object2
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object2);
-			set { teklaObject.Object2 = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value); }
+
 		}
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum Type
 		{
 			get => Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.GetTSObject(value); }
+
 		}
 
 		public System.Double Overlap
 		{
 			get => teklaObject.Overlap;
-			set { teklaObject.Overlap = value; }
+
 		}
 
         

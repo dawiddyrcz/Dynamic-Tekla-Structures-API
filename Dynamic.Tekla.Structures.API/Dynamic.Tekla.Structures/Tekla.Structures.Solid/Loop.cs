@@ -16,6 +16,11 @@ namespace Dynamic.Tekla.Structures.Solid
         internal dynamic teklaObject;
 
 		public Loop() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Loop(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
 		{
@@ -39,7 +44,12 @@ namespace Dynamic.Tekla.Structures.Solid
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Solid.Loop)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Solid.Loop)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

@@ -25,6 +25,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Events");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Events(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public void add_DrawingInserted(Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate value)
 		{
@@ -172,6 +177,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 		public DrawingInsertedDelegate() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public DrawingInsertedDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public DrawingInsertedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -207,7 +217,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -246,6 +261,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 		public DrawingDeletedDelegate() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public DrawingDeletedDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public DrawingDeletedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -281,7 +301,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -320,6 +345,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 		public DrawingStatusChangedDelegate() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public DrawingStatusChangedDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public DrawingStatusChangedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -355,7 +385,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -394,6 +429,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 		public DrawingUpdatedDelegate() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public DrawingUpdatedDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public DrawingUpdatedDelegate(System.Object @object, System.IntPtr method)
 		{
 			var args = new object[2];
@@ -429,7 +469,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -474,7 +519,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

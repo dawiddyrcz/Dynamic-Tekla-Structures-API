@@ -25,6 +25,11 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Profile");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Profile(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public static System.String ParseProfileString(System.String profileString)
 		{
@@ -59,7 +64,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Model.Profile)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Model.Profile)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

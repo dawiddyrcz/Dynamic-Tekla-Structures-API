@@ -19,6 +19,11 @@ namespace Dynamic.Tekla.Structures.Drawing.Tools
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public DrawingCoordinateConverter(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public static Dynamic.Tekla.Structures.Geometry3d.Point Convert(Dynamic.Tekla.Structures.Drawing.ViewBase fromView, Dynamic.Tekla.Structures.Drawing.ViewBase toView, Dynamic.Tekla.Structures.Geometry3d.Point point)
 		{
@@ -57,7 +62,12 @@ namespace Dynamic.Tekla.Structures.Drawing.Tools
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

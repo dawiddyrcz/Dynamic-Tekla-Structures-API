@@ -40,6 +40,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 		public PropertyElement() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public PropertyElement(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public PropertyElement(Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PropertyType)
 		{
 			var args = new object[1];
@@ -73,6 +78,11 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 		public PropertyElementType() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public PropertyElementType(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
@@ -226,7 +236,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -387,7 +402,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -541,7 +561,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -737,7 +762,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -821,7 +851,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -912,7 +947,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -996,7 +1036,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1101,7 +1146,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1178,7 +1228,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1255,7 +1310,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1346,7 +1406,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1437,7 +1502,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1528,7 +1598,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1626,7 +1701,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1671,7 +1751,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1716,7 +1801,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

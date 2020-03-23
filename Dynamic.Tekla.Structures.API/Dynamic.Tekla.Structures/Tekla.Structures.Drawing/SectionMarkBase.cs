@@ -91,6 +91,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public SectionMarkSymbol(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public SectionMarkSymbol(Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes shape, System.Double size, Dynamic.Tekla.Structures.Geometry3d.Point position)
 		{
 			var args = new object[3];
@@ -202,7 +207,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -310,6 +320,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public SectionMarkAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public SectionMarkAttributes(System.String AttributesFile)
 		{
 			var args = new object[1];
@@ -344,7 +359,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -397,6 +417,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public SectionMarkTagAttributes()
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes");
+		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public SectionMarkTagAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
 		}
 		public SectionMarkTagAttributes(Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide showOnSide, Dynamic.Tekla.Structures.Drawing.TagLocation location, Dynamic.Tekla.Structures.Geometry3d.Vector offset, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation rotation, Dynamic.Tekla.Structures.Drawing.ContainerElement tagContent)
 		{
@@ -526,7 +551,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -598,6 +628,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public SectionMarkTagsAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public SectionMarkTagsAttributes(Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes tagA1, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes tagA2, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes tagA3, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes tagA4, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes tagA5)
 		{
 			var args = new object[5];
@@ -631,7 +666,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -676,7 +716,12 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

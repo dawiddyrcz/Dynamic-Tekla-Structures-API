@@ -79,8 +79,12 @@ namespace CodeGenerator
                 sb.Append("\t\t\tthis.$dfield = TSActivator.CreateInstance(\"$typeFullName\");\n");
                 sb.Append("\t\t}\n");
             }
-            else sb.Append("\t\tpublic $classname() {}\n"); 
+            else sb.Append("\t\tpublic $classname() {}\n");
 
+            sb.Append("\t\t//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument\n");
+            sb.Append("\t\tpublic $classname(dynamic tsObject, System.DateTime nonConflictParameter)\n\t\t{\n");
+            sb.Append("\t\t\tthis.$dfield = tsObject;\n");
+            sb.Append("\t\t}\n");
 
             var constructors = type.GetConstructors()
                 .Where(c => c.GetParameters().Count() > 0)
@@ -253,7 +257,12 @@ $nestedTypes
         {
             var typeName = ""Dynamic."" + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = ($typeDFullDNameDynamic)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = ($typeDFullDNameDynamic)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

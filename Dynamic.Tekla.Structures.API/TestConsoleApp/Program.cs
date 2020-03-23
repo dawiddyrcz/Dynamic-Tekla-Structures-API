@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dynamic.Tekla.Structures;
 using Dynamic.Tekla.Structures.Geometry3d;
 using Dynamic.Tekla.Structures.Model;
+using TSD = Dynamic.Tekla.Structures.Drawing;
 
 namespace TestConsoleApp
 {
@@ -13,13 +14,33 @@ namespace TestConsoleApp
     {   
         static void Main(string[] args)
         {
+            //InsertBeam();
+
+            var dh = new TSD.DrawingHandler();
+            var drawings = dh.GetDrawings();
+
+            while (drawings.MoveNext())
+            {
+                var drawing = drawings.Current as TSD.Drawing;
+                Console.WriteLine("Name: {0}, Title1: {1}, Title2: {2}, Title3 {3}", drawing.Name, drawing.Title1, drawing.Title2, drawing.Title3);
+            }
+
+            //var gaDrawing = new Tekla.Structures.Drawing.GADrawing();
+
+
+            Console.WriteLine("end");
+            Console.ReadKey();
+        }
+
+        private static void InsertBeam()
+        {
             Console.WriteLine("started test");
             var model = new Model();
             Console.WriteLine(model.GetInfo().ModelPath);
 
 
-            var p1 = new Point(0,0,0);
-            var p2 = new Point(5000,5000,5000);
+            var p1 = new Point(0, 0, 0);
+            var p2 = new Point(5000, 5000, 5000);
             //p1.X = 0;
             //p1.Y = 0;
             //p1.Z = 0;
@@ -30,8 +51,8 @@ namespace TestConsoleApp
 
             //p2.Translate(5000, 5000, 5000);
 
-           // beam.StartPoint = p1;
-           // beam.EndPoint = p2;
+            // beam.StartPoint = p1;
+            // beam.EndPoint = p2;
 
             var beam = new Beam(p1, p2);
             beam.Material.MaterialString = "S235JR";
@@ -47,7 +68,7 @@ namespace TestConsoleApp
             double weight = 0;
             beam.GetReportProperty("WEIGHT", ref weight);
 
-            Console.WriteLine("Weight: "+weight);
+            Console.WriteLine("Weight: " + weight);
 
             //var result = Dynamic.Tekla.Structures.Model.Operations.Operation.DisplayPrompt("Hello static method");
             //Console.WriteLine("Result from static method = "+result);
@@ -59,7 +80,7 @@ namespace TestConsoleApp
             //Console.WriteLine("Result from static method3 = " + result3.Identifier.ID);
 
             string value = String.Empty;
-            var result4 = Dynamic.Tekla.Structures.TeklaStructuresSettings.GetAdvancedOption("XS_MACRO_DIRECTORY",ref value);
+            var result4 = Dynamic.Tekla.Structures.TeklaStructuresSettings.GetAdvancedOption("XS_MACRO_DIRECTORY", ref value);
             Console.WriteLine("Macro directory: " + value + " result: " + result4);
 
             //var phases = model.GetPhases();
@@ -94,9 +115,6 @@ namespace TestConsoleApp
             //{
             //    Console.WriteLine(beams.Current.Identifier.ID);
             //}
-
-            Console.WriteLine("end");
-            Console.ReadKey();
         }
     }
 }

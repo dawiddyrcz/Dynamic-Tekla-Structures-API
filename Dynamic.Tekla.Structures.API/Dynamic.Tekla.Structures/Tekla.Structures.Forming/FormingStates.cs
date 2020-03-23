@@ -37,6 +37,11 @@ namespace Dynamic.Tekla.Structures.Forming
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Forming.FormingStates");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public FormingStates(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public FormingStates(Dynamic.Tekla.Structures.Forming.DeformingType deforming)
 		{
 			var args = new object[1];
@@ -86,7 +91,12 @@ namespace Dynamic.Tekla.Structures.Forming
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Forming.FormingStates)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Forming.FormingStates)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

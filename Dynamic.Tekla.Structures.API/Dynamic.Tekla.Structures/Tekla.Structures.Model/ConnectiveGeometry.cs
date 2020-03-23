@@ -16,6 +16,11 @@ namespace Dynamic.Tekla.Structures.Model
         internal dynamic teklaObject;
 
 		public ConnectiveGeometry() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public ConnectiveGeometry(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public ConnectiveGeometry(Dynamic.Tekla.Structures.Model.Contour contour)
 		{
 			var args = new object[1];
@@ -56,7 +61,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Model.ConnectiveGeometry)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Model.ConnectiveGeometry)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

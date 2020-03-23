@@ -16,6 +16,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         internal dynamic teklaObject;
 
 		public ReinforcingBarFilterExpressions() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public ReinforcingBarFilterExpressions(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -28,6 +33,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
 
 		public CustomBoolean() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public CustomBoolean(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public CustomBoolean(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -52,7 +62,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomBoolean)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomBoolean)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -91,6 +106,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
 
 		public CustomDateTime() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public CustomDateTime(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public CustomDateTime(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -115,7 +135,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomDateTime)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomDateTime)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -154,6 +179,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
 
 		public CustomNumber() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public CustomNumber(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public CustomNumber(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -178,7 +208,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomNumber)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomNumber)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -217,6 +252,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         
 
 		public CustomString() {}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public CustomString(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public CustomString(System.String UserAttribute)
 		{
 			var args = new object[1];
@@ -241,7 +281,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomString)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.CustomString)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -283,6 +328,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Class");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Class(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -301,7 +351,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Class)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Class)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -343,6 +398,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Diameter");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Diameter(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -361,7 +421,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Diameter)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Diameter)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -403,6 +468,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.JoinType");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public JoinType(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -421,7 +491,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.JoinType)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.JoinType)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -463,6 +538,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Length");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Length(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -481,7 +561,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Length)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Length)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -523,6 +608,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Material");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Material(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -541,7 +631,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Material)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Material)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -583,6 +678,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Name");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Name(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -601,7 +701,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Name)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Name)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -643,6 +748,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.NumberingSeries");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public NumberingSeries(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -661,7 +771,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.NumberingSeries)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.NumberingSeries)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -703,6 +818,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Phase");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Phase(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -721,7 +841,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Phase)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Phase)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -763,6 +888,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Position");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Position(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -781,7 +911,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Position)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Position)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -823,6 +958,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.PositionNumber");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public PositionNumber(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -841,7 +981,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.PositionNumber)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.PositionNumber)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -883,6 +1028,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Prefix");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Prefix(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -901,7 +1051,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Prefix)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Prefix)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -943,6 +1098,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Shape");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Shape(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -961,7 +1121,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Shape)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Shape)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1003,6 +1168,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Size");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Size(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -1021,7 +1191,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Size)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.Size)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1063,6 +1238,11 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.StartNumber");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public StartNumber(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 
 
@@ -1081,7 +1261,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.StartNumber)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions.StartNumber)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -1126,7 +1311,12 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.ReinforcingBarFilterExpressions)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

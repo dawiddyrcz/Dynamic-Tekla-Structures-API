@@ -43,6 +43,11 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Phase");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Phase(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public Phase(System.Int32 PhaseNumber)
 		{
 			var args = new object[1];
@@ -126,7 +131,12 @@ namespace Dynamic.Tekla.Structures.Model
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Model.Phase)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Model.Phase)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

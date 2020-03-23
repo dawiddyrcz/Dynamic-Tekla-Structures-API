@@ -19,6 +19,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Vector");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Vector(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 		public Vector(System.Double X, System.Double Y, System.Double Z)
 		{
 			var args = new object[3];
@@ -122,7 +127,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Geometry3d.Vector)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Geometry3d.Vector)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

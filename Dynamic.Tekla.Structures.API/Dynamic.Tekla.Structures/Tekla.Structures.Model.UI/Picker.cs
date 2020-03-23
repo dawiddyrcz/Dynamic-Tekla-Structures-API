@@ -19,6 +19,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		{
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Picker");
 		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public Picker(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint()
 		{
@@ -262,7 +267,12 @@ namespace Dynamic.Tekla.Structures.Model.UI
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Dynamic.Tekla.Structures.Model.UI.Picker)System.Activator.CreateInstance(type);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Model.UI.Picker)System.Activator.CreateInstance(type, parameters);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

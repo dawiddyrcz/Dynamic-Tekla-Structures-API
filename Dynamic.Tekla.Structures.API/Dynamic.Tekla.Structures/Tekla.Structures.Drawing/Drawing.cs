@@ -197,6 +197,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Drawing FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             

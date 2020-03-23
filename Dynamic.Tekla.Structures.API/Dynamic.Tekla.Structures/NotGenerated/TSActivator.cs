@@ -36,7 +36,7 @@ namespace Dynamic.Tekla.Structures
                 && m.GetParameters().Count().Equals(parameters.Count())
                 ).ToList();
             int count = methods.Count();
-            
+
             if (count.Equals(1)) return methods[0];
             else
             {
@@ -74,9 +74,9 @@ namespace Dynamic.Tekla.Structures
             return Activator.CreateInstance(type, args);
         }
 
-        private static Type GetTypeFromTypeName(string typeName,ref  Assembly assembly)
+        private static Type GetTypeFromTypeName(string typeName, ref Assembly assembly)
         {
-            var type =  assembly.GetType(typeName);
+            var type = assembly.GetType(typeName);
             if (type == null)
                 type = TryGetNestedType(typeName, ref assembly);
             return type;
@@ -91,7 +91,7 @@ namespace Dynamic.Tekla.Structures
                 output = typeName.Insert(lastDotPosition, "+");
                 output = output.Remove(lastDotPosition + 1, 1);
 
-                var type = assembly.GetType(output);  
+                var type = assembly.GetType(output);
 
                 if (type != null)
                     return type;
@@ -109,14 +109,16 @@ namespace Dynamic.Tekla.Structures
             {
                 var dll = new DLLFiles(pluginPath);
 
-                if (typeName.StartsWith("Tekla.Structures.Model"))
+                if (IsInTeklaApplicationLibrary(typeName))
+                    fileTS = dll.TAL;
+                else if (typeName.StartsWith("Tekla.Structures.Model"))
                     fileTS = dll.TSM;
                 else if (typeName.StartsWith("Tekla.Structures.Drawing"))
                     fileTS = dll.TSD;
                 else if (typeName.StartsWith("Tekla.Structures"))
                     fileTS = dll.TS;
                 else
-                    throw new DynamicAPIException("Unknown namespace: " + typeName); 
+                    throw new DynamicAPIException("Unknown namespace: " + typeName);
             }
             else
             {
@@ -124,6 +126,23 @@ namespace Dynamic.Tekla.Structures
             }
 
             return fileTS;
+        }
+
+        //TODO need better solution for assembly loading
+        private static bool IsInTeklaApplicationLibrary(string typeName)
+        {
+            return typeName.Equals("Tekla.Structures.MacroBuilder", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.TeklaStructures", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IConnection", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IRegistry", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IModel", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IMainWindow", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IEnvironment", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.IDrawing", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.Configuration", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.ICommonTasks", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.ModelFolder", StringComparison.InvariantCulture)
+                 || typeName.Equals("Tekla.Structures.VirtualFolder", StringComparison.InvariantCulture);
         }
 
         private static TeklaProcess teklaProcess;
@@ -151,12 +170,14 @@ namespace Dynamic.Tekla.Structures
             public string TS { get; set; } = string.Empty;
             public string TSM { get; set; } = string.Empty;
             public string TSD { get; set; } = string.Empty;
+            public string TAL { get; set; } = string.Empty;
 
             public DLLFiles(string pluginPath)
             {
                 this.TS = Path.Combine(pluginPath, "Tekla.Structures.dll");
                 this.TSM = Path.Combine(pluginPath, "Tekla.Structures.Model.dll");
                 this.TSD = Path.Combine(pluginPath, "Tekla.Structures.Drawing.dll");
+                this.TAL = Path.Combine(pluginPath, "..", "applications", "Tekla", "Common", "Tekla.Application.Library.dll");
             }
         }
     }

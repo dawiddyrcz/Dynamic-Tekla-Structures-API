@@ -157,8 +157,6 @@ namespace CodeGenerator
                 || t.Name.Equals("ICommonTasks", StringComparison.InvariantCulture)
                 || t.Name.Equals("ModelFolder", StringComparison.InvariantCulture)
                 || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
-                || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
-                || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
                 );
 
             var output = new List<Type>();

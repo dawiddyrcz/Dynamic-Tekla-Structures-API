@@ -13,41 +13,6 @@ namespace CodeGenerator
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
 
-        //TODO array types are not supported but should be
-        //TODO need better solution
-        public static string GetTypeFullName2(Type type)
-        {
-            StringBuilder sb = new StringBuilder(50);
-
-            sb.Append(type.ToString());
-
-            if (type.IsGenericType)
-            {
-                sb.Replace("[", "<");
-                sb.Replace("]", ">");
-            }
-
-            sb.Replace("`1", "")
-                .Replace("`2", "")
-                .Replace("`3", "")
-                .Replace("`4", "")
-                .Replace("`5", "")
-                .Replace("`6", "")
-                .Replace("`7", "");
-
-            sb.Replace("&", "");
-            sb.Replace("+", ".");
-            sb.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
-
-            if (sb.ToString().Contains("Dictionary["))
-            {
-                sb.Replace("[", "<");
-                sb.Replace("]", ">");
-            }
-
-            return sb.ToString();
-        }
-
         public static string GetTypeFullName(Type type)
         {
             StringBuilder sb = new StringBuilder();
@@ -96,6 +61,81 @@ namespace CodeGenerator
             sb.Replace("+", ".");
 
             return sb.ToString();
+        }
+
+        public static string GetTypeFullName5(Type type)
+        {
+            var result =  GetCSharpRepresentation(type, true);
+            result = result.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
+            return result;
+        }
+
+        private static string FullName(Type type)
+        {
+            var result = type.Namespace + ".";
+
+            var currentType = type;
+            while (currentType.DeclaringType != null)
+            {
+                currentType = currentType.DeclaringType;
+                result = result + currentType.Name + ".";
+            }
+
+            result = result + type.Name;
+            return result;
+        }
+
+        //From stack overflow
+        private static string GetCSharpRepresentation(Type t, bool trimArgCount)
+        {
+            if (t.IsGenericType)
+            {
+                var genericArgs = t.GetGenericArguments().ToList();
+
+                return GetCSharpRepresentation(t, trimArgCount, genericArgs);
+            }
+
+            return FullName(t);
+        }
+
+        //From stack overflow
+        private static string GetCSharpRepresentation(Type t, bool trimArgCount, List<Type> availableArguments)
+        {
+            if (t.IsGenericType)
+            {
+                string value = FullName(t);
+                if (trimArgCount && value.IndexOf("`") > -1)
+                {
+                    value = value.Substring(0, value.IndexOf("`"));
+                }
+
+                if (t.DeclaringType != null)
+                {
+                    // This is a nested type, build the nesting type first
+                    value = GetCSharpRepresentation(t.DeclaringType, trimArgCount, availableArguments) + "+" + value;
+                }
+
+                // Build the type arguments (if any)
+                string argString = "";
+                var thisTypeArgs = t.GetGenericArguments();
+                for (int i = 0; i < thisTypeArgs.Length && availableArguments.Count > 0; i++)
+                {
+                    if (i != 0) argString += ", ";
+
+                    argString += GetCSharpRepresentation(availableArguments[0], trimArgCount);
+                    availableArguments.RemoveAt(0);
+                }
+
+                // If there are type arguments, add them with < >
+                if (argString.Length > 0)
+                {
+                    value += "<" + argString + ">";
+                }
+
+                return value;
+            }
+
+            return FullName(t);
         }
     }
 }

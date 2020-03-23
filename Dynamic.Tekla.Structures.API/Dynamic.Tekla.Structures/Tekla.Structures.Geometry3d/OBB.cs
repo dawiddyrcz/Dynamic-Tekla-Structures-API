@@ -77,7 +77,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		{
 			var args = new object[3];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(center);
-			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(axis);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(axis);
 			args[2] = extent;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
 		}
@@ -95,7 +95,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector[] axis)
 		{
-			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(axis));
+			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(axis));
 		}
 
 		public void SetExtent(System.Double extent0, System.Double extent1, System.Double extent2)
@@ -110,7 +110,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point[] ComputeVertices()
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.ComputeVertices());
+			return Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(teklaObject.ComputeVertices());
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
@@ -145,12 +145,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line line)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
+			return Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
+			return Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.Line line)

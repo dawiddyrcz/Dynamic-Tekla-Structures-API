@@ -119,7 +119,7 @@ namespace CodeGenerator
                     if (IsTeklaType(parameter.ParameterType))
                     {
                         sb.Append("\t\t\targs["+i+"] = ");
-                        sb.Append(GetTypeFullName(parameter.ParameterType));
+                        sb.Append(CorrectIfArray(GetTypeFullName(parameter.ParameterType)));
                         sb.Append("_.GetTSObject(");
                         sb.Append(parameterName);
                         sb.Append(");\n");
@@ -148,21 +148,7 @@ namespace CodeGenerator
         {
             return MethodGenerator.GetText(type);
         }
-
-        /*
-         
-            
-         public System.Boolean GetPhase(out Dynamic.Tekla.Structures.Model.Phase phase)
-		{
-            dynamic ph = null;
-            var result = teklaObject.GetPhase(out ph);
-            phase = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(ph);
-            return result;
-		}
-
-         */
-
-
+        
         private bool IsTeklaType(Type type)
         {
             return type?.FullName?.StartsWith("Tekla.Structures") ?? false;
@@ -202,9 +188,9 @@ namespace CodeGenerator
                     sb.Append(" ");
                     sb.Append(propertyOrField.Name);
                     sb.Append("\n\t\t{" +
-                        "\n\t\t\tget => " + GetTypeFullName(currentType) + "_.FromTSObject($dfield." +
+                        "\n\t\t\tget => " + CorrectIfArray(GetTypeFullName(currentType)) + "_.FromTSObject($dfield." +
                         "" + propertyOrField.Name + ");" +
-                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = " + GetTypeFullName(currentType) + "_.GetTSObject(value); }" +
+                        "\n\t\t\tset { $dfield." + propertyOrField.Name + " = " + CorrectIfArray(GetTypeFullName(currentType)) + "_.GetTSObject(value); }" +
                         "\n\t\t}\n\n");
                 }
                 else
@@ -221,6 +207,19 @@ namespace CodeGenerator
             }
 
             return sb.ToString();
+        }
+
+        private string CorrectIfArray(string dynamicTypeFullName)
+        {
+            if (dynamicTypeFullName.StartsWith("Dynamic."))
+            {
+                if (dynamicTypeFullName.EndsWith("[]"))
+                {
+                    return dynamicTypeFullName.Substring(0, dynamicTypeFullName.Length - 2) + "Array";
+                }
+                else return dynamicTypeFullName;
+            }
+            else return dynamicTypeFullName;
         }
 
         private string GetTypeFullName(Type type)

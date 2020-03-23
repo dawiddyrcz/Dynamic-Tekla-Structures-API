@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector[] vertices, System.Int32[][] outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> innerWires)
 		{
 			var args = new object[3];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(vertices);
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(vertices);
 			args[1] = outerWires;
 			args[2] = innerWires;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrep", args);
@@ -57,7 +57,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector[] vertices, System.Int32[][] outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> innerWires, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> edges)
 		{
 			var args = new object[4];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(vertices);
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(vertices);
 			args[1] = outerWires;
 			args[2] = innerWires;
 			args[3] = edges;

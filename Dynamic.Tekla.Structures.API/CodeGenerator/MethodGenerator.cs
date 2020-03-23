@@ -107,7 +107,7 @@ namespace CodeGenerator
 
                 if (IsTeklaType(param.ParameterType))
                 {
-                    sb.Append(GetTypeFullName(param.ParameterType));
+                    sb.Append(CorrectIfArray(GetTypeFullName(param.ParameterType)));
                     sb.Append("_.GetTSObject(");
                     sb.Append(paramName);
                     sb.Append(")");
@@ -124,6 +124,19 @@ namespace CodeGenerator
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
             sb.Append(");\n\t\t}");
+        }
+
+        private static string CorrectIfArray(string dynamicTypeFullName)
+        {
+            if (dynamicTypeFullName.StartsWith("Dynamic."))
+            {
+                if (dynamicTypeFullName.EndsWith("[]"))
+                {
+                    return dynamicTypeFullName.Substring(0, dynamicTypeFullName.Length - 2) + "Array";
+                }
+                else return dynamicTypeFullName;
+            }
+            else return dynamicTypeFullName;
         }
 
         private static void Static_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)
@@ -183,7 +196,7 @@ namespace CodeGenerator
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(paramTypeFullName + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(CorrectIfArray(paramTypeFullName) + "_.GetTSObject(" + parameters[i].Name + ");\n");
                 }
                 else
                     sb.Append("\t\t\tparameters["+ i +"] = " + parameters[i].Name + ";\n");
@@ -216,7 +229,7 @@ namespace CodeGenerator
 
                     if (IsTeklaType(param.ParameterType))
                     {
-                        sb.Append(paramTypeFullName + "_.FromTSObject(");
+                        sb.Append(CorrectIfArray(paramTypeFullName) + "_.FromTSObject(");
                         sb.Append("parameters[" + j + "]);\n");
                     }
                     else
@@ -263,7 +276,7 @@ namespace CodeGenerator
 
             sb.Append(")\n\t\t{\n");
             sb.Append("\t\t\treturn ");
-            sb.Append(GetTypeFullName(method.ReturnType));
+            sb.Append(CorrectIfArray(GetTypeFullName(method.ReturnType)));
             sb.Append("_.FromTSObject($dfield.");
             sb.Append(name);
             sb.Append("(");
@@ -273,7 +286,7 @@ namespace CodeGenerator
             {
                 if (IsTeklaType(param.ParameterType))
                 {
-                    sb.Append(GetTypeFullName(param.ParameterType));
+                    sb.Append(CorrectIfArray(GetTypeFullName(param.ParameterType)));
                     sb.Append("_.GetTSObject(");
                     sb.Append(param.Name);
                     sb.Append(")");
@@ -339,7 +352,7 @@ namespace CodeGenerator
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(GetTypeFullName(parameters[i].ParameterType) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + parameters[i].Name + ");\n");
                 }
                 else
                     sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
@@ -369,7 +382,7 @@ namespace CodeGenerator
 
                     if (IsTeklaType(param.ParameterType))
                     {
-                        sb.Append(paramTypeFullName + "_.FromTSObject(");
+                        sb.Append(CorrectIfArray(paramTypeFullName) + "_.FromTSObject(");
                         sb.Append("parameters[" + j + "]);\n");
                     }
                     else
@@ -383,7 +396,7 @@ namespace CodeGenerator
             }
 
             sb.Append("\t\t\treturn ");
-            sb.Append(GetTypeFullName(method.ReturnType) + "_.FromTSObject(result);\n");
+            sb.Append(CorrectIfArray(GetTypeFullName(method.ReturnType)) + "_.FromTSObject(result);\n");
             sb.Append("\t\t}");
         }
 

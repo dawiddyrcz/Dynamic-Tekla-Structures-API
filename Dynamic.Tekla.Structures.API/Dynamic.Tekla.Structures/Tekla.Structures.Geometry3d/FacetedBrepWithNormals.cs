@@ -13,8 +13,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector[] Normals
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector[]_.FromTSObject(teklaObject.Normals);
-			set { teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(value); }
+			get => Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(teklaObject.Normals);
+			set { teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(value); }
 		}
 
         
@@ -25,10 +25,10 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public FacetedBrepWithNormals(Dynamic.Tekla.Structures.Geometry3d.Vector[] vertices, System.Int32[][] outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> innerWires, Dynamic.Tekla.Structures.Geometry3d.Vector[] normals)
 		{
 			var args = new object[4];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(vertices);
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(vertices);
 			args[1] = outerWires;
 			args[2] = innerWires;
-			args[3] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(normals);
+			args[3] = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(normals);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals", args);
 		}
 

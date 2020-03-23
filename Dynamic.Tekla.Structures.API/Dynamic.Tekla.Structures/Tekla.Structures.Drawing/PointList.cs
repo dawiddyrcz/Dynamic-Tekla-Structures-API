@@ -93,7 +93,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point[] ToArray()
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.ToArray());
+			return Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(teklaObject.ToArray());
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)

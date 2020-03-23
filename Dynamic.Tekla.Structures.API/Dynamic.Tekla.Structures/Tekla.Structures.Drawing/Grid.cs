@@ -169,11 +169,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(GridAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static GridAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -191,6 +193,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(GridAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -201,6 +204,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static GridAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<GridAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -219,11 +223,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Grid dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static Grid FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -241,6 +247,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Grid[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -251,6 +258,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Grid[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<Grid>();
             foreach(var tsItem in tsArray)
             {

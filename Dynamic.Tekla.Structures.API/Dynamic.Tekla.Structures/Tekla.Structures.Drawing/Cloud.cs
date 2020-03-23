@@ -126,11 +126,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(CloudAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static CloudAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -148,6 +150,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(CloudAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -158,6 +161,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static CloudAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<CloudAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -176,11 +180,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Cloud dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static Cloud FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -198,6 +204,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Cloud[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -208,6 +215,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Cloud[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<Cloud>();
             foreach(var tsItem in tsArray)
             {

@@ -38,11 +38,13 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(ParametricObject_ObjectBoundingBox dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ParametricObject_ObjectBoundingBox FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -60,6 +62,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
         public static dynamic GetTSObject(ParametricObject_ObjectBoundingBox[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -70,6 +73,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         public static ParametricObject_ObjectBoundingBox[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ParametricObject_ObjectBoundingBox>();
             foreach(var tsItem in tsArray)
             {

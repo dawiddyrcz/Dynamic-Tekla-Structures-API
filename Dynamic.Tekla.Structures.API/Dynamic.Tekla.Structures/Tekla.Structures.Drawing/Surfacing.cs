@@ -195,11 +195,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(SurfacingAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static SurfacingAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -217,6 +219,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(SurfacingAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -227,6 +230,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static SurfacingAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<SurfacingAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -245,11 +249,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Surfacing dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static Surfacing FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -267,6 +273,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Surfacing[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -277,6 +284,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Surfacing[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<Surfacing>();
             foreach(var tsItem in tsArray)
             {

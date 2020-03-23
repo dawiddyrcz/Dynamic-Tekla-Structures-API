@@ -257,11 +257,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(StraightDimensionSetAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static StraightDimensionSetAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -279,6 +281,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(StraightDimensionSetAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -289,6 +292,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static StraightDimensionSetAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<StraightDimensionSetAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -307,11 +311,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(StraightDimensionSet dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static StraightDimensionSet FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -329,6 +335,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(StraightDimensionSet[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -339,6 +346,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static StraightDimensionSet[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<StraightDimensionSet>();
             foreach(var tsItem in tsArray)
             {

@@ -158,11 +158,13 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(InvalidPathCallback dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static InvalidPathCallback FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -180,6 +182,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(InvalidPathCallback[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -190,6 +193,7 @@ namespace Dynamic.Tekla.Structures
 
         public static InvalidPathCallback[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<InvalidPathCallback>();
             foreach(var tsItem in tsArray)
             {
@@ -219,11 +223,13 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ToolOptionNames dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ToolOptionNames FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -241,6 +247,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(ToolOptionNames[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -251,6 +258,7 @@ namespace Dynamic.Tekla.Structures
 
         public static ToolOptionNames[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ToolOptionNames>();
             foreach(var tsItem in tsArray)
             {
@@ -269,11 +277,13 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(TeklaStructuresSettings dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static TeklaStructuresSettings FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -291,6 +301,7 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic GetTSObject(TeklaStructuresSettings[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -301,6 +312,7 @@ namespace Dynamic.Tekla.Structures
 
         public static TeklaStructuresSettings[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<TeklaStructuresSettings>();
             foreach(var tsItem in tsArray)
             {

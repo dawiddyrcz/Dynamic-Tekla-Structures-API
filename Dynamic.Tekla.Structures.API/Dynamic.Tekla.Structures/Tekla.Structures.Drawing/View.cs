@@ -641,11 +641,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ViewAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -663,6 +665,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -673,6 +676,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ViewAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ViewAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -756,11 +760,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewShorteningAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ViewShorteningAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -778,6 +784,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewShorteningAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -788,6 +795,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ViewShorteningAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ViewShorteningAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -852,11 +860,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkSymbolAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ViewMarkSymbolAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -874,6 +884,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkSymbolAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -884,6 +895,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ViewMarkSymbolAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ViewMarkSymbolAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -942,11 +954,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkTagAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ViewMarkTagAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -964,6 +978,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkTagAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -974,6 +989,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ViewMarkTagAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ViewMarkTagAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -1057,11 +1073,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkTagsAttributes dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ViewMarkTagsAttributes FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1079,6 +1097,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ViewMarkTagsAttributes[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1089,6 +1108,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ViewMarkTagsAttributes[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ViewMarkTagsAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -1107,11 +1127,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(View dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static View FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1129,6 +1151,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(View[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1139,6 +1162,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static View[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<View>();
             foreach(var tsItem in tsArray)
             {

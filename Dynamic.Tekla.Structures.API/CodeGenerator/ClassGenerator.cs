@@ -276,11 +276,13 @@ $nestedTypes
     {
         public static dynamic GetTSObject($classname dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.$dfield;
         }
 
         public static $classname FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = ""Dynamic."" + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -298,6 +300,7 @@ $nestedTypes
     {
         public static dynamic GetTSObject($classname[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -308,6 +311,7 @@ $nestedTypes
 
         public static $classname[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<$classname>();
             foreach(var tsItem in tsArray)
             {

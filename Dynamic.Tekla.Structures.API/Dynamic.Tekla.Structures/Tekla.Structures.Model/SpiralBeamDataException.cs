@@ -45,11 +45,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SpiralBeamDataException dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static SpiralBeamDataException FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -67,6 +69,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SpiralBeamDataException[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -77,6 +80,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static SpiralBeamDataException[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<SpiralBeamDataException>();
             foreach(var tsItem in tsArray)
             {

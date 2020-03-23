@@ -226,11 +226,13 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(NumericConstantFilterExpression dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static NumericConstantFilterExpression FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -248,6 +250,7 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
         public static dynamic GetTSObject(NumericConstantFilterExpression[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -258,6 +261,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         public static NumericConstantFilterExpression[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<NumericConstantFilterExpression>();
             foreach(var tsItem in tsArray)
             {

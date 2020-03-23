@@ -329,11 +329,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SelectionChangeDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static SelectionChangeDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -351,6 +353,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(SelectionChangeDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -361,6 +364,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static SelectionChangeDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<SelectionChangeDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -413,11 +417,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CommandStatusChangeDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static CommandStatusChangeDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -435,6 +441,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(CommandStatusChangeDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -445,6 +452,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static CommandStatusChangeDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<CommandStatusChangeDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -497,11 +505,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TrackEventDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static TrackEventDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -519,6 +529,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TrackEventDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -529,6 +540,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TrackEventDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<TrackEventDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -581,11 +593,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelSaveDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelSaveDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -603,6 +617,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelSaveDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -613,6 +628,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelSaveDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelSaveDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -665,11 +681,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelSaveAsDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelSaveAsDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -687,6 +705,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelSaveAsDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -697,6 +716,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelSaveAsDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelSaveAsDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -749,11 +769,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelLoadDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelLoadDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -771,6 +793,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelLoadDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -781,6 +804,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelLoadDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelLoadDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -833,11 +857,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(NumberingDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static NumberingDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -855,6 +881,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(NumberingDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -865,6 +892,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static NumberingDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<NumberingDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -917,11 +945,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelChangedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelChangedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -939,6 +969,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelChangedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -949,6 +980,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelChangedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelChangedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1001,11 +1033,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelObjectNumberedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelObjectNumberedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1023,6 +1057,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelObjectNumberedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1033,6 +1068,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObjectNumberedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelObjectNumberedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1085,11 +1121,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelObjectChangedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ModelObjectChangedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1107,6 +1145,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ModelObjectChangedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1117,6 +1156,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ModelObjectChangedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ModelObjectChangedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1169,11 +1209,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TeklaStructuresExitDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static TeklaStructuresExitDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1191,6 +1233,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(TeklaStructuresExitDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1201,6 +1244,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static TeklaStructuresExitDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<TeklaStructuresExitDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1253,11 +1297,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashCheckDoneDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ClashCheckDoneDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1275,6 +1321,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashCheckDoneDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1285,6 +1332,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ClashCheckDoneDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ClashCheckDoneDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1337,11 +1385,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashDetectedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static ClashDetectedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1359,6 +1409,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(ClashDetectedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1369,6 +1420,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static ClashDetectedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<ClashDetectedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1421,11 +1473,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PointInputChangedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static PointInputChangedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1443,6 +1497,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(PointInputChangedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1453,6 +1508,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static PointInputChangedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<PointInputChangedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1505,11 +1561,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(InterruptedDelegate dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static InterruptedDelegate FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1527,6 +1585,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(InterruptedDelegate[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1537,6 +1596,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static InterruptedDelegate[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<InterruptedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -1555,11 +1615,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Events dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
         public static Events FromTSObject(dynamic tsObject)
         {
+            if (tsObject == null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1577,6 +1639,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(Events[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1587,6 +1650,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static Events[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<Events>();
             foreach(var tsItem in tsArray)
             {

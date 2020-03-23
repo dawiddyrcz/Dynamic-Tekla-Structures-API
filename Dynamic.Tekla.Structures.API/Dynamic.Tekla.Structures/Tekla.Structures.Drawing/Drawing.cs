@@ -192,6 +192,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Drawing dynObject)
         {
+            if (dynObject == null) return null;
             return dynObject.teklaObject;
         }
 
@@ -215,6 +216,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Drawing[] dynArray)
         {
+            if (dynArray == null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -225,6 +227,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Drawing[] FromTSObject(dynamic[] tsArray)
         {
+            if (tsArray == null) return null;
             var list = new System.Collections.Generic.List<Drawing>();
             foreach(var tsItem in tsArray)
             {

@@ -80,27 +80,27 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			teklaObject.remove_Interrupted(Dynamic.Tekla.Structures.Drawing.UI.Events.InterruptedDelegate_.GetTSObject(value));
 		}
 
-		public void OnSelectionChange(System.String EventName, System.Object Parameters)
+		public void OnSelectionChange(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnSelectionChange(EventName, Parameters);
 		}
 
-		public void OnDrawingEditorOpen(System.String EventName, System.Object Parameters)
+		public void OnDrawingEditorOpen(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingEditorOpen(EventName, Parameters);
 		}
 
-		public void OnDrawingEditorClose(System.String EventName, System.Object Parameters)
+		public void OnDrawingEditorClose(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingEditorClose(EventName, Parameters);
 		}
 
-		public void OnDrawingLoaded(System.String EventName, System.Object Parameters)
+		public void OnDrawingLoaded(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingLoaded(EventName, Parameters);
 		}
 
-		public void OnDrawingListSelectionChanged(System.String EventName, System.Object Parameters)
+		public void OnDrawingListSelectionChanged(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingListSelectionChanged(EventName, Parameters);
 		}

@@ -41,7 +41,7 @@ namespace CodeGenerator
             {
                 sb.Append("\t\t\t");
                 sb.Append("public ");
-                sb.Append(TypeFullName.GetTypeFullName(field.FieldType));
+                sb.Append(TypeFullName.GetTypeFullName_WithDynamic(field.FieldType));
                 sb.Append(" ");
                 sb.Append(field.Name);
                 sb.Append(";\n");

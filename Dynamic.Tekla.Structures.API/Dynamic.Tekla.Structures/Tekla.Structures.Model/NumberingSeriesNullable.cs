@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Prefix = value; }
 		}
 
-		public System.Int32 StartNumber
+		public System.Nullable<System.Int32> StartNumber
 		{
 			get => teklaObject.StartNumber;
 			set { teklaObject.StartNumber = value; }

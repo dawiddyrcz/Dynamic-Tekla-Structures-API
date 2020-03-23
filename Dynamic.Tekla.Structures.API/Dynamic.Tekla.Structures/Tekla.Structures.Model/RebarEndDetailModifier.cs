@@ -35,7 +35,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value); }
 		}
 
-		public Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum EndType
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType
 		{
 			get => teklaObject.EndType;
 			set { teklaObject.EndType = value; }

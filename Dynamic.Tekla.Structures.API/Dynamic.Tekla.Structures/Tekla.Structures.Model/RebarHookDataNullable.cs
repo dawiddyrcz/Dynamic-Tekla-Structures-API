@@ -11,31 +11,31 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarHookDataNullable 
     {
 
-		public Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum Shape
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum> Shape
 		{
 			get => teklaObject.Shape;
 			set { teklaObject.Shape = value; }
 		}
 
-		public System.Double Angle
+		public System.Nullable<System.Double> Angle
 		{
 			get => teklaObject.Angle;
 			set { teklaObject.Angle = value; }
 		}
 
-		public System.Double Radius
+		public System.Nullable<System.Double> Radius
 		{
 			get => teklaObject.Radius;
 			set { teklaObject.Radius = value; }
 		}
 
-		public System.Double Length
+		public System.Nullable<System.Double> Length
 		{
 			get => teklaObject.Length;
 			set { teklaObject.Length = value; }
 		}
 
-		public System.Double Rotation
+		public System.Nullable<System.Double> Rotation
 		{
 			get => teklaObject.Rotation;
 			set { teklaObject.Rotation = value; }

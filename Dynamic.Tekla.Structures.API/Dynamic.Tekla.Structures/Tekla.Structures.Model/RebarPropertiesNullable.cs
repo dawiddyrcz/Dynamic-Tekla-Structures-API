@@ -29,7 +29,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Name = value; }
 		}
 
-		public System.Int32 Class
+		public System.Nullable<System.Int32> Class
 		{
 			get => teklaObject.Class;
 			set { teklaObject.Class = value; }
@@ -41,7 +41,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.GetTSObject(value); }
 		}
 
-		public System.Double BendingRadius
+		public System.Nullable<System.Double> BendingRadius
 		{
 			get => teklaObject.BendingRadius;
 			set { teklaObject.BendingRadius = value; }

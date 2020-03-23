@@ -27,7 +27,7 @@ namespace Dynamic.Tekla.Structures.Model
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllObjectsWithType(Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum)));
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(System.Type TypeFilter)
+		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(System.Type[] TypeFilter)
 		{
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAllObjectsWithType(TypeFilter));
 		}

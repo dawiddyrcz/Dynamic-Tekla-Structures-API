@@ -22,7 +22,7 @@ namespace CodeGenerator
             sb.Replace("$switch2Values", GetSwitch2Values(type));
             
             sb.Replace("$classname", type.Name);
-            sb.Replace("$typeFullName", TypeFullName.GetTypeFullName(type).Replace("Dynamic.",""));
+            sb.Replace("$typeFullName", TypeFullName.GetTypeFullName_WithDynamic(type).Replace("Dynamic.",""));
             
             return sb.ToString();
         }

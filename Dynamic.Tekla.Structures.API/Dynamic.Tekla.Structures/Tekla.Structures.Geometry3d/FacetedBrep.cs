@@ -17,13 +17,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { teklaObject.Faces = value; }
 		}
 
-		public System.Collections.Generic.IDictionary<System.Int32, System.Int32> InnerWires
+		public System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> InnerWires
 		{
 			get => teklaObject.InnerWires;
 			set { teklaObject.InnerWires = value; }
 		}
 
-		public System.Int32 OuterWires
+		public System.Int32[][] OuterWires
 		{
 			get => teklaObject.OuterWires;
 			set { teklaObject.OuterWires = value; }
@@ -46,18 +46,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         internal dynamic teklaObject;
 
 		public FacetedBrep() {}
-		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires)
+		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector[] vertices, System.Int32[][] outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> innerWires)
 		{
 			var args = new object[3];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(vertices);
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(vertices);
 			args[1] = outerWires;
 			args[2] = innerWires;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrep", args);
 		}
-		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector vertices, System.Int32 outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32> innerWires, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> edges)
+		public FacetedBrep(Dynamic.Tekla.Structures.Geometry3d.Vector[] vertices, System.Int32[][] outerWires, System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> innerWires, System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> edges)
 		{
 			var args = new object[4];
-			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(vertices);
+			args[0] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(vertices);
 			args[1] = outerWires;
 			args[2] = innerWires;
 			args[3] = edges;
@@ -69,7 +69,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.CheckForTwoManifold();
 		}
 
-		public System.Int32 GetInnerFace(System.Int32 faceIndex)
+		public System.Int32[] GetInnerFace(System.Int32 faceIndex)
 		{
 			return teklaObject.GetInnerFace(faceIndex);
 		}
@@ -79,7 +79,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.GetInnerFaceCount(faceIndex);
 		}
 
-		public System.Int32 GetOuterFace(System.Int32 faceIndex)
+		public System.Int32[] GetOuterFace(System.Int32 faceIndex)
 		{
 			return teklaObject.GetOuterFace(faceIndex);
 		}

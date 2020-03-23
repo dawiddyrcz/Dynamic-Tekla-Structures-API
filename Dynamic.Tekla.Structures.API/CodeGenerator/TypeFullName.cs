@@ -13,7 +13,7 @@ namespace CodeGenerator
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }
 
-        public static string GetTypeFullName(Type type)
+        public static string GetTypeFullName_old(Type type)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -45,7 +45,7 @@ namespace CodeGenerator
                 {
                     if (i != 0)
                         sb.Append(", ");
-                    sb.Append(GetTypeFullName(generictype));
+                    sb.Append(GetTypeFullName_WithDynamic(generictype));
                     i++;
                 }
 
@@ -63,25 +63,39 @@ namespace CodeGenerator
             return sb.ToString();
         }
 
-        public static string GetTypeFullName5(Type type)
+        public static string GetTypeFullName_WithDynamic(Type type)
         {
-            var result =  GetCSharpRepresentation(type, true);
+            var result = GetTypeFullName(type);
             result = result.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
+            return result;
+        }
+
+        public static string GetTypeFullName(Type type)
+        {
+            if (type.IsByRef)
+                type = type.GetElementType();
+
+            var result = GetCSharpRepresentation(type, true);
             return result;
         }
 
         private static string FullName(Type type)
         {
-            var result = type.Namespace + ".";
+            if (type.Name.Contains("Dictionary"))
+            {
+                int a = 0;
+            }
+            var result = type.Name;
 
             var currentType = type;
             while (currentType.DeclaringType != null)
             {
                 currentType = currentType.DeclaringType;
-                result = result + currentType.Name + ".";
+                result =  currentType.Name + "." + result;
             }
 
-            result = result + type.Name;
+            result = type.Namespace + "." + result;
+            result = result.Replace("&", "");
             return result;
         }
 

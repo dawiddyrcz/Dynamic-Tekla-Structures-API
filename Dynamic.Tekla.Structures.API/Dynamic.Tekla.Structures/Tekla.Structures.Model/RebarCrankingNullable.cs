@@ -11,43 +11,43 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarCrankingNullable 
     {
 
-		public System.Double CrankRotation
+		public System.Nullable<System.Double> CrankRotation
 		{
 			get => teklaObject.CrankRotation;
 			set { teklaObject.CrankRotation = value; }
 		}
 
-		public System.Double CrankStraightLength
+		public System.Nullable<System.Double> CrankStraightLength
 		{
 			get => teklaObject.CrankStraightLength;
 			set { teklaObject.CrankStraightLength = value; }
 		}
 
-		public Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum CrankedLengthType
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum> CrankedLengthType
 		{
 			get => teklaObject.CrankedLengthType;
 			set { teklaObject.CrankedLengthType = value; }
 		}
 
-		public System.Double CrankedRatio
+		public System.Nullable<System.Double> CrankedRatio
 		{
 			get => teklaObject.CrankedRatio;
 			set { teklaObject.CrankedRatio = value; }
 		}
 
-		public System.Double CrankedDistance
+		public System.Nullable<System.Double> CrankedDistance
 		{
 			get => teklaObject.CrankedDistance;
 			set { teklaObject.CrankedDistance = value; }
 		}
 
-		public System.Double CrankedOffset
+		public System.Nullable<System.Double> CrankedOffset
 		{
 			get => teklaObject.CrankedOffset;
 			set { teklaObject.CrankedOffset = value; }
 		}
 
-		public Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum CrankingType
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum> CrankingType
 		{
 			get => teklaObject.CrankingType;
 			set { teklaObject.CrankingType = value; }

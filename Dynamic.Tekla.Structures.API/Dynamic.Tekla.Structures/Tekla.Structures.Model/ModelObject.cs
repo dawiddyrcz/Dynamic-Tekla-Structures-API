@@ -11,7 +11,7 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class ModelObject  : Dynamic.Tekla.Structures.Model.Object
     {
 
-		public System.DateTime ModificationTime
+		public System.Nullable<System.DateTime> ModificationTime
 		{
 			get => teklaObject.ModificationTime;
 			set { teklaObject.ModificationTime = value; }

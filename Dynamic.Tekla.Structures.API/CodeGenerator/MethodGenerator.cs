@@ -404,7 +404,7 @@ namespace CodeGenerator
 
         private static string GetTypeFullName(Type type)
         {
-            return TypeFullName.GetTypeFullName(type);
+            return TypeFullName.GetTypeFullName_WithDynamic(type);
         }
 
 

@@ -82,7 +82,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects(System.Type TypeFilter)
+		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects(System.Type[] TypeFilter)
 		{
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects(TypeFilter));
 		}
@@ -92,7 +92,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetAllObjects());
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllObjects(System.Type TypeFilter)
+		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllObjects(System.Type[] TypeFilter)
 		{
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetAllObjects(TypeFilter));
 		}

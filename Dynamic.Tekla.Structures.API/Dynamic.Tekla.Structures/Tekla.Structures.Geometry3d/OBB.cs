@@ -73,11 +73,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[6] = extent2;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
 		}
-		public OBB(Dynamic.Tekla.Structures.Geometry3d.Point center, Dynamic.Tekla.Structures.Geometry3d.Vector axis, System.Double extent)
+		public OBB(Dynamic.Tekla.Structures.Geometry3d.Point center, Dynamic.Tekla.Structures.Geometry3d.Vector[] axis, System.Double[] extent)
 		{
 			var args = new object[3];
 			args[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(center);
-			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis);
+			args[1] = Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(axis);
 			args[2] = extent;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.OBB", args);
 		}
@@ -93,9 +93,9 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2));
 		}
 
-		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector axis)
+		public void SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector[] axis)
 		{
-			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis));
+			teklaObject.SetAxis(Dynamic.Tekla.Structures.Geometry3d.Vector[]_.GetTSObject(axis));
 		}
 
 		public void SetExtent(System.Double extent0, System.Double extent1, System.Double extent2)
@@ -103,14 +103,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			teklaObject.SetExtent(extent0, extent1, extent2);
 		}
 
-		public void SetExtent(System.Double extent)
+		public void SetExtent(System.Double[] extent)
 		{
 			teklaObject.SetExtent(extent);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ComputeVertices()
+		public Dynamic.Tekla.Structures.Geometry3d.Point[] ComputeVertices()
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ComputeVertices());
+			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.ComputeVertices());
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
@@ -143,14 +143,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line line)
+		public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line line)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
+			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line)));
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
+		public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
+			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.IntersectionPointsWith(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment)));
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(Dynamic.Tekla.Structures.Geometry3d.Line line)

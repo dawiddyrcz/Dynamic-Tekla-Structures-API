@@ -76,27 +76,27 @@ namespace Dynamic.Tekla.Structures.Drawing
 			teklaObject.remove_DrawingUpdated(Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate_.GetTSObject(value));
 		}
 
-		public void OnDrawingInserted(System.String EventName, System.Object Parameters)
+		public void OnDrawingInserted(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingInserted(EventName, Parameters);
 		}
 
-		public void OnDrawingDeleted(System.String EventName, System.Object Parameters)
+		public void OnDrawingDeleted(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingDeleted(EventName, Parameters);
 		}
 
-		public void OnDrawingStatusChanged(System.String EventName, System.Object Parameters)
+		public void OnDrawingStatusChanged(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingStatusChanged(EventName, Parameters);
 		}
 
-		public void OnDrawingChanged(System.String eventName, System.Object parameters)
+		public void OnDrawingChanged(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnDrawingChanged(eventName, parameters);
 		}
 
-		public void OnDrawingUpdated(System.String eventName, System.Object parameters)
+		public void OnDrawingUpdated(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnDrawingUpdated(eventName, parameters);
 		}

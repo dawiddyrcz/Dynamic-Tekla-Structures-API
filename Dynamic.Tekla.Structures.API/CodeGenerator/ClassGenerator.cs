@@ -223,7 +223,7 @@ namespace CodeGenerator
 
         private string GetTypeFullName(Type type)
         {
-            return TypeFullName.GetTypeFullName(type);
+            return TypeFullName.GetTypeFullName_WithDynamic(type);
         }
 
         private readonly string text = @"

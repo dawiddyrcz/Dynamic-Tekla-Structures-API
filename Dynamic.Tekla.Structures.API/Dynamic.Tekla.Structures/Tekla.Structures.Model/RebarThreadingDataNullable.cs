@@ -17,13 +17,13 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.ThreadingType = value; }
 		}
 
-		public System.Double Length
+		public System.Nullable<System.Double> Length
 		{
 			get => teklaObject.Length;
 			set { teklaObject.Length = value; }
 		}
 
-		public System.Double ExtraFabricationLength
+		public System.Nullable<System.Double> ExtraFabricationLength
 		{
 			get => teklaObject.ExtraFabricationLength;
 			set { teklaObject.ExtraFabricationLength = value; }

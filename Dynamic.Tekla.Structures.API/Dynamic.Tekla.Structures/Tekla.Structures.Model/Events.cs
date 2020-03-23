@@ -180,82 +180,82 @@ namespace Dynamic.Tekla.Structures.Model
 			teklaObject.remove_Interrupted(Dynamic.Tekla.Structures.Model.Events.InterruptedDelegate_.GetTSObject(value));
 		}
 
-		public void OnSelectionChange(System.String eventName, System.Object parameters)
+		public void OnSelectionChange(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnSelectionChange(eventName, parameters);
 		}
 
-		public void OnAnnotationSelectionChange(System.String eventName, System.Object parameters)
+		public void OnAnnotationSelectionChange(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnAnnotationSelectionChange(eventName, parameters);
 		}
 
-		public void OnCommandStatusChange(System.String eventName, System.Object parameters)
+		public void OnCommandStatusChange(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnCommandStatusChange(eventName, parameters);
 		}
 
-		public void OnTrackEvent(System.String eventName, System.Object parameters)
+		public void OnTrackEvent(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnTrackEvent(eventName, parameters);
 		}
 
-		public void OnPointInputChangedEvent(System.String eventName, System.Object parameters)
+		public void OnPointInputChangedEvent(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnPointInputChangedEvent(eventName, parameters);
 		}
 
-		public void OnModelSave(System.String eventName, System.Object parameters)
+		public void OnModelSave(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelSave(eventName, parameters);
 		}
 
-		public void OnModelSaveAs(System.String eventName, System.Object parameters)
+		public void OnModelSaveAs(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelSaveAs(eventName, parameters);
 		}
 
-		public void OnModelLoad(System.String eventName, System.Object parameters)
+		public void OnModelLoad(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelLoad(eventName, parameters);
 		}
 
-		public void OnModelUnloading(System.String eventName, System.Object parameters)
+		public void OnModelUnloading(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelUnloading(eventName, parameters);
 		}
 
-		public void OnNumbering(System.String eventName, System.Object parameters)
+		public void OnNumbering(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnNumbering(eventName, parameters);
 		}
 
-		public void OnModelObjectNumbered(System.String eventName, System.Object parameters)
+		public void OnModelObjectNumbered(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelObjectNumbered(eventName, parameters);
 		}
 
-		public void OnModelObjectChanged(System.String eventName, System.Object parameters)
+		public void OnModelObjectChanged(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnModelObjectChanged(eventName, parameters);
 		}
 
-		public void OnDbCommit(System.String eventName, System.Object parameters)
+		public void OnDbCommit(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnDbCommit(eventName, parameters);
 		}
 
-		public void OnTeklaStructuresExit(System.String eventName, System.Object parameters)
+		public void OnTeklaStructuresExit(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnTeklaStructuresExit(eventName, parameters);
 		}
 
-		public void OnClashCheckDone(System.String eventName, System.Object parameters)
+		public void OnClashCheckDone(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnClashCheckDone(eventName, parameters);
 		}
 
-		public void OnClashDetected(System.String eventName, System.Object parameters)
+		public void OnClashDetected(System.String eventName, System.Object[] parameters)
 		{
 			teklaObject.OnClashDetected(eventName, parameters);
 		}

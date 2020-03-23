@@ -91,9 +91,9 @@ namespace Dynamic.Tekla.Structures.Drawing
 			teklaObject.RemoveRange(index, count);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ToArray()
+		public Dynamic.Tekla.Structures.Geometry3d.Point[] ToArray()
 		{
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ToArray());
+			return Dynamic.Tekla.Structures.Geometry3d.Point[]_.FromTSObject(teklaObject.ToArray());
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)

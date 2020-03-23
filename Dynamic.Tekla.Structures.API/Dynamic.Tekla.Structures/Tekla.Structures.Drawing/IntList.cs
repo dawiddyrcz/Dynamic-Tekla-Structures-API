@@ -86,7 +86,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 			teklaObject.RemoveRange(index, count);
 		}
 
-		public System.Int32 ToArray()
+		public System.Int32[] ToArray()
 		{
 			return teklaObject.ToArray();
 		}

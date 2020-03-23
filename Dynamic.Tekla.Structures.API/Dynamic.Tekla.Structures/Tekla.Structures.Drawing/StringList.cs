@@ -92,7 +92,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 			teklaObject.RemoveRange(index, count);
 		}
 
-		public System.String ToArray()
+		public System.String[] ToArray()
 		{
 			return teklaObject.ToArray();
 		}

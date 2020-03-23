@@ -11,13 +11,13 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarLengthAdjustmentDataNullable 
     {
 
-		public Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum AdjustmentType
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum> AdjustmentType
 		{
 			get => teklaObject.AdjustmentType;
 			set { teklaObject.AdjustmentType = value; }
 		}
 
-		public System.Double AdjustmentLength
+		public System.Nullable<System.Double> AdjustmentLength
 		{
 			get => teklaObject.AdjustmentLength;
 			set { teklaObject.AdjustmentLength = value; }

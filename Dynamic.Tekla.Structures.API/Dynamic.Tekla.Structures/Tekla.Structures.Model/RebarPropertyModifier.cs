@@ -17,7 +17,7 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value); }
 		}
 
-		public Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum GroupingType
+		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType
 		{
 			get => teklaObject.GroupingType;
 			set { teklaObject.GroupingType = value; }

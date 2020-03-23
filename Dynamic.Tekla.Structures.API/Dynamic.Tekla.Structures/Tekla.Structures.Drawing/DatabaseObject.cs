@@ -71,32 +71,32 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return teklaObject.GetUserProperty(Name, ref Value);
 		}
 
-		public System.Boolean GetStringUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetStringUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.String> values)
 		{
 			return teklaObject.GetStringUserProperties(names, out values);
 		}
 
-		public System.Boolean GetDoubleUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetDoubleUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.Double> values)
 		{
 			return teklaObject.GetDoubleUserProperties(names, out values);
 		}
 
-		public System.Boolean GetIntegerUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetIntegerUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.Int32> values)
 		{
 			return teklaObject.GetIntegerUserProperties(names, out values);
 		}
 
-		public System.Boolean GetStringUserProperties(out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetStringUserProperties(out System.Collections.Generic.Dictionary<System.String, System.String> values)
 		{
 			return teklaObject.GetStringUserProperties(out values);
 		}
 
-		public System.Boolean GetDoubleUserProperties(out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetDoubleUserProperties(out System.Collections.Generic.Dictionary<System.String, System.Double> values)
 		{
 			return teklaObject.GetDoubleUserProperties(out values);
 		}
 
-		public System.Boolean GetIntegerUserProperties(out System.Collections.Generic.DictionarySystem.String values)
+		public System.Boolean GetIntegerUserProperties(out System.Collections.Generic.Dictionary<System.String, System.Int32> values)
 		{
 			return teklaObject.GetIntegerUserProperties(out values);
 		}

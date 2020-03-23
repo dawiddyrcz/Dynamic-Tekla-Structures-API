@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -565,17 +566,29 @@
     <Compile Include="Tekla.Structures\ClashCheckOptions.cs" />
     <Compile Include="Tekla.Structures\ComponentDefinitionTypeEnum.cs" />
     <Compile Include="Tekla.Structures\ComponentOptions.cs" />
+    <Compile Include="Tekla.Structures\Configuration.cs" />
     <Compile Include="Tekla.Structures\ConnectionStatusEnum.cs" />
     <Compile Include="Tekla.Structures\DetailTypeEnum.cs" />
+    <Compile Include="Tekla.Structures\ICommonTasks.cs" />
+    <Compile Include="Tekla.Structures\IConnection.cs" />
     <Compile Include="Tekla.Structures\Identifier.cs" />
+    <Compile Include="Tekla.Structures\IDrawing.cs" />
+    <Compile Include="Tekla.Structures\IEnvironment.cs" />
+    <Compile Include="Tekla.Structures\IMainWindow.cs" />
+    <Compile Include="Tekla.Structures\IModel.cs" />
+    <Compile Include="Tekla.Structures\IRegistry.cs" />
+    <Compile Include="Tekla.Structures\MacroBuilder.cs" />
+    <Compile Include="Tekla.Structures\ModelFolder.cs" />
     <Compile Include="Tekla.Structures\ModuleManager.cs" />
     <Compile Include="Tekla.Structures\PositionTypeEnum.cs" />
     <Compile Include="Tekla.Structures\PropertyTypeEnum.cs" />
+    <Compile Include="Tekla.Structures\TeklaStructures.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresDatabaseTypeEnum.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresFiles.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresInfo.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresSettings.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresVariables.cs" />
+    <Compile Include="Tekla.Structures\VirtualFolder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

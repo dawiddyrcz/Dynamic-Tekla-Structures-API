@@ -178,6 +178,8 @@ namespace CodeGenerator
 
             foreach (var propertyOrField in propertiesAndFields)
             {
+                if (type.Name.Equals("IEnvironment") && propertyOrField.Name.Equals("Localization")) continue;
+
                 Type currentType = null;
 
                 var hasGet = false;

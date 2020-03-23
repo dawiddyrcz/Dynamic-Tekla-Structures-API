@@ -11,13 +11,21 @@ using TSD = Dynamic.Tekla.Structures.Drawing;
 namespace TestConsoleApp
 {
     //TODO ref out in methods
-    
+    //TODO events
+
     static class Program
     {   
         static void Main(string[] args)
         {
             //InsertBeam();
+            OpenDrawingAndInsertLine();
+            
+            Console.WriteLine("end");
+            Console.ReadKey();
+        }
 
+        private static void OpenDrawingAndInsertLine()
+        {
             var dh = new TSD.DrawingHandler();
             var drawings = dh.GetDrawings();
 
@@ -37,11 +45,6 @@ namespace TestConsoleApp
 
                 break;
             }
-
-            //var gaDrawing = new Tekla.Structures.Drawing.GADrawing();
-
-            Console.WriteLine("end");
-            Console.ReadKey();
         }
 
         private static void InsertBeam()

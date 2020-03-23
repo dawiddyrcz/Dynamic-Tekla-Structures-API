@@ -27,24 +27,6 @@ namespace CodeGenerator
             {
                 ShowAllTypes();
             }
-            
-            //hide private get set accessors in properties
-            //new Tekla.Structures.Geometry3d.Point().
-
-            if (input.Equals("n", StringComparison.InvariantCulture))
-            {
-                var type = typeof(TSM.Beam);
-                Console.WriteLine(type);
-                Console.WriteLine(type.BaseType);
-                Console.WriteLine(type.BaseType.BaseType);
-                Console.WriteLine(type.BaseType.BaseType.BaseType);
-                Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType);
-                Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType.BaseType);
-                //Console.WriteLine(type.BaseType.BaseType.BaseType.BaseType.BaseType.BaseType);
-                Console.WriteLine();
-
-                Console.ReadKey(); 
-            }
         }
 
         private static void ShowAllTypes()
@@ -120,6 +102,9 @@ namespace CodeGenerator
 
         private static Assembly LoadTeklaStructuresDrawing() => LoadAssembly("Tekla.Structures.Drawing.dll");
 
+        private static Assembly LoadTeklaApplicationLibrary() => LoadAssembly("Tekla.Application.Library.dll");
+
+
         private static void GenerateAPICode()
         {
             Console.WriteLine("Generate API code");
@@ -158,10 +143,29 @@ namespace CodeGenerator
                 && !t.Name.Equals("InputDefinitionFactory")
                 );
 
+            var tal = LoadTeklaApplicationLibrary();
+            var talTypes = tal.GetTypes().Where(
+                t => t.Name.Equals("MacroBuilder", StringComparison.InvariantCulture) 
+                || t.Name.Equals("TeklaStructures", StringComparison.InvariantCulture)
+                || t.Name.Equals("IConnection", StringComparison.InvariantCulture)
+                || t.Name.Equals("IRegistry", StringComparison.InvariantCulture)
+                || t.Name.Equals("IModel", StringComparison.InvariantCulture)
+                || t.Name.Equals("IMainWindow", StringComparison.InvariantCulture)
+                || t.Name.Equals("IEnvironment", StringComparison.InvariantCulture)
+                || t.Name.Equals("IDrawing", StringComparison.InvariantCulture)
+                || t.Name.Equals("Configuration", StringComparison.InvariantCulture)
+                || t.Name.Equals("ICommonTasks", StringComparison.InvariantCulture)
+                || t.Name.Equals("ModelFolder", StringComparison.InvariantCulture)
+                || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
+                || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
+                || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
+                );
+
             var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
             output.AddRange(tsdTypes);
+            output.AddRange(talTypes);
 
             return output;
         }

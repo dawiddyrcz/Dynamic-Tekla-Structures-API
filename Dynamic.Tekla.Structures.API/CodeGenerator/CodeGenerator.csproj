@@ -41,6 +41,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tekla.Application.Library, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Tekla.Application.Library.dll</HintPath>
+    </Reference>
     <Reference Include="Tekla.Structures, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Tekla.Structures.dll</HintPath>
@@ -65,6 +69,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Tekla.Application.Library.dll" />
     <Content Include="Tekla.Structures.Catalogs.dll" />
     <Content Include="Tekla.Structures.dll" />
     <Content Include="Tekla.Structures.Drawing.dll" />

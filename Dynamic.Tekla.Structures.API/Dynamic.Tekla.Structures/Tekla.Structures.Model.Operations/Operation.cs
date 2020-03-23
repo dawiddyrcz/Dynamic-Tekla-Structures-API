@@ -713,7 +713,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.Operations.Operation.ProgressBar)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.Operations.Operation.ProgressBar)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -735,7 +735,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.Operations.Operation)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.Operations.Operation)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

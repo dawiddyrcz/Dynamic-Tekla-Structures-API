@@ -61,6 +61,8 @@ namespace CodeGenerator
             }
             outputText = outputText.Replace("$nestedTypes", nestedTypeText.ToString());
             outputText = outputText.Replace("$typeFullName", GetTypeFullName(type).Replace("Dynamic.",""));
+            outputText = outputText.Replace("$typeDFullDNameDynamic", GetTypeFullName(type));
+            
             //
             return outputText;
         }
@@ -252,7 +254,7 @@ $nestedTypes
         {
             var typeName = ""Dynamic."" + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = ($typeFullName)System.Activator.CreateInstance(type);
+            var dynObject = ($typeDFullDNameDynamic)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

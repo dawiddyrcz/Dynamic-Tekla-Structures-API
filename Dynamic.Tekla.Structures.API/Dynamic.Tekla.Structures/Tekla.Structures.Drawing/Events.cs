@@ -207,7 +207,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.Events.DrawingInsertedDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -258,7 +258,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.Events.DrawingDeletedDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -309,7 +309,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -360,7 +360,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -382,7 +382,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.Events)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.Events)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

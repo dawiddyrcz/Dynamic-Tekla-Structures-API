@@ -64,7 +64,7 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.UI.Picker)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.UI.Picker)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

@@ -69,7 +69,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashCheckDoneDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashCheckDoneDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -120,7 +120,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashDetectedDelegate)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashDetectedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }
@@ -142,7 +142,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.ClashChecker.ClashChekerEvent)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.ClashChecker.ClashChekerEvent)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

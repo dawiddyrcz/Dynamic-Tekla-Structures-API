@@ -39,7 +39,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Drawing.IPlacing)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Drawing.IPlacing)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

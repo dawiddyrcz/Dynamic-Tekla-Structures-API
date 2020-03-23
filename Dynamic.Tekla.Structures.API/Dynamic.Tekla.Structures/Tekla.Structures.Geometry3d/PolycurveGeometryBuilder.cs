@@ -123,7 +123,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Geometry3d.PolycurveGeometryBuilder)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

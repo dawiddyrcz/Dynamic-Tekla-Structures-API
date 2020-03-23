@@ -116,7 +116,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
-            var dynObject = (Tekla.Structures.Model.RebarHookData)System.Activator.CreateInstance(type);
+            var dynObject = (Dynamic.Tekla.Structures.Model.RebarHookData)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
         }

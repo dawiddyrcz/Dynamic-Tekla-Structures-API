@@ -88,6 +88,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ControlPlaneArray_
+    {
+        public static dynamic GetTSObject(ControlPlane[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ControlPlane_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ControlPlane[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ControlPlane>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ControlPlane_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

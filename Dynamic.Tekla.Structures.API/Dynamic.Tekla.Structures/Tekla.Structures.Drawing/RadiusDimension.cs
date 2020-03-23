@@ -126,6 +126,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class RadiusDimensionArray_
+    {
+        public static dynamic GetTSObject(RadiusDimension[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RadiusDimension_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RadiusDimension[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RadiusDimension>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RadiusDimension_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -719,6 +719,29 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         }
     }
 
+    internal static class ProgressBarArray_
+    {
+        public static dynamic GetTSObject(ProgressBar[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ProgressBar_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ProgressBar[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ProgressBar>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ProgressBar_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -738,6 +761,29 @@ namespace Dynamic.Tekla.Structures.Model.Operations
             var dynObject = (Dynamic.Tekla.Structures.Model.Operations.Operation)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class OperationArray_
+    {
+        public static dynamic GetTSObject(Operation[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Operation_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Operation[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Operation>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Operation_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

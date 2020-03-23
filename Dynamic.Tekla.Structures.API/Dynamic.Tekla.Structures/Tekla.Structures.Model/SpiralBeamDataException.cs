@@ -53,6 +53,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class SpiralBeamDataExceptionArray_
+    {
+        public static dynamic GetTSObject(SpiralBeamDataException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SpiralBeamDataException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SpiralBeamDataException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SpiralBeamDataException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SpiralBeamDataException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

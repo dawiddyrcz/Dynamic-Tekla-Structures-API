@@ -205,6 +205,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ViewVisibilitySettingsArray_
+    {
+        public static dynamic GetTSObject(ViewVisibilitySettings[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewVisibilitySettings_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewVisibilitySettings[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewVisibilitySettings>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewVisibilitySettings_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

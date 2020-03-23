@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class SelfIntersectingSurfaceExceptionArray_
+    {
+        public static dynamic GetTSObject(SelfIntersectingSurfaceException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SelfIntersectingSurfaceException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SelfIntersectingSurfaceException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SelfIntersectingSurfaceException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SelfIntersectingSurfaceException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

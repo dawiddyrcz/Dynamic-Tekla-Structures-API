@@ -172,6 +172,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class GridAttributesArray_
+    {
+        public static dynamic GetTSObject(GridAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GridAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GridAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GridAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GridAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -191,6 +214,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Grid)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class GridArray_
+    {
+        public static dynamic GetTSObject(Grid[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Grid_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Grid[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Grid>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Grid_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

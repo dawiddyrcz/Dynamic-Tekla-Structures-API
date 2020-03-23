@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotCreateSectionViewFrom3dViewArray_
+    {
+        public static dynamic GetTSObject(CannotCreateSectionViewFrom3dView[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotCreateSectionViewFrom3dView_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotCreateSectionViewFrom3dView[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotCreateSectionViewFrom3dView>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotCreateSectionViewFrom3dView_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

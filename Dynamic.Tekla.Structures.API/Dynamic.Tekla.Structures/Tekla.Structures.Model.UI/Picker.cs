@@ -268,6 +268,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class PickerArray_
+    {
+        public static dynamic GetTSObject(Picker[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Picker_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Picker[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Picker>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Picker_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

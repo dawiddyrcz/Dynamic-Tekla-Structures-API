@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class TeklaStructuresDrawingsApplicationExceptionArray_
+    {
+        public static dynamic GetTSObject(TeklaStructuresDrawingsApplicationException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TeklaStructuresDrawingsApplicationException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TeklaStructuresDrawingsApplicationException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TeklaStructuresDrawingsApplicationException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TeklaStructuresDrawingsApplicationException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

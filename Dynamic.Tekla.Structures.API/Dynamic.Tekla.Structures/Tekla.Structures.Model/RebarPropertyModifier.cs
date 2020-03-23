@@ -105,6 +105,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarPropertyModifierArray_
+    {
+        public static dynamic GetTSObject(RebarPropertyModifier[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarPropertyModifier_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarPropertyModifier[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarPropertyModifier>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarPropertyModifier_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

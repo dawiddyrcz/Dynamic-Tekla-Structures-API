@@ -81,6 +81,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class LoadPointArray_
+    {
+        public static dynamic GetTSObject(LoadPoint[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LoadPoint_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LoadPoint[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LoadPoint>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LoadPoint_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

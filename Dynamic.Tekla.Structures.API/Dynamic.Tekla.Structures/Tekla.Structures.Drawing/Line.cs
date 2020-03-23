@@ -156,6 +156,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class LineAttributesArray_
+    {
+        public static dynamic GetTSObject(LineAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LineAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LineAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LineAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LineAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -175,6 +198,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Line)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class LineArray_
+    {
+        public static dynamic GetTSObject(Line[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Line_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Line[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Line>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Line_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

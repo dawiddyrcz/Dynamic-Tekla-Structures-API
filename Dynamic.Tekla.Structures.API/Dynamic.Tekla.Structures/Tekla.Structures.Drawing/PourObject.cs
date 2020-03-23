@@ -144,6 +144,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PourAttributesArray_
+    {
+        public static dynamic GetTSObject(PourAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -163,6 +186,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PourObject)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PourObjectArray_
+    {
+        public static dynamic GetTSObject(PourObject[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourObject_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourObject[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourObject>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourObject_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

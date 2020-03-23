@@ -208,6 +208,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SectionMarkSymbolArray_
+    {
+        public static dynamic GetTSObject(SectionMarkSymbol[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkSymbol_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkSymbol[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkSymbol>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkSymbol_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class SectionMarkAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
@@ -324,6 +347,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SectionMarkAttributesArray_
+    {
+        public static dynamic GetTSObject(SectionMarkAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -486,6 +532,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SectionMarkTagAttributesArray_
+    {
+        public static dynamic GetTSObject(SectionMarkTagAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkTagAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkTagAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkTagAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkTagAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class SectionMarkTagsAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
@@ -568,6 +637,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SectionMarkTagsAttributesArray_
+    {
+        public static dynamic GetTSObject(SectionMarkTagsAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkTagsAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkTagsAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkTagsAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkTagsAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -587,6 +679,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.SectionMarkBase)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SectionMarkBaseArray_
+    {
+        public static dynamic GetTSObject(SectionMarkBase[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkBase_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkBase[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkBase>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkBase_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

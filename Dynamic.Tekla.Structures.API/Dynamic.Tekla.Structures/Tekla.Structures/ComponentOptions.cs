@@ -173,6 +173,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class ComponentOptionsArray_
+    {
+        public static dynamic GetTSObject(ComponentOptions[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ComponentOptions_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ComponentOptions[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ComponentOptions>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ComponentOptions_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

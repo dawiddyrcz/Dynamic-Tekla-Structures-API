@@ -644,6 +644,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ViewShorteningAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
@@ -726,6 +749,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewShorteningAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewShorteningAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewShorteningAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewShorteningAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewShorteningAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewShorteningAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ViewMarkSymbolAttributes  : Dynamic.Tekla.Structures.Drawing.ViewMarkBasicSymbolAttributes
@@ -789,6 +835,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewMarkSymbolAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewMarkSymbolAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewMarkSymbolAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewMarkSymbolAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewMarkSymbolAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewMarkSymbolAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ViewMarkTagAttributes  : Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes
@@ -843,6 +912,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ViewMarkTagAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewMarkTagAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewMarkTagAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewMarkTagAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewMarkTagAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewMarkTagAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -928,6 +1020,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewMarkTagsAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewMarkTagsAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewMarkTagsAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewMarkTagsAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewMarkTagsAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewMarkTagsAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -947,6 +1062,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.View)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ViewArray_
+    {
+        public static dynamic GetTSObject(View[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(View_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static View[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<View>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(View_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

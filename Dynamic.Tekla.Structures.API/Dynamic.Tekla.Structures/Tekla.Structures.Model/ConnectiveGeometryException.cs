@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ConnectiveGeometryExceptionArray_
+    {
+        public static dynamic GetTSObject(ConnectiveGeometryException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ConnectiveGeometryException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ConnectiveGeometryException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ConnectiveGeometryException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ConnectiveGeometryException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

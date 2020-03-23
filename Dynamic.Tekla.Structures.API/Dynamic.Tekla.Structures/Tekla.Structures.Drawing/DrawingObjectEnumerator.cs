@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DrawingObjectEnumeratorArray_
+    {
+        public static dynamic GetTSObject(DrawingObjectEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingObjectEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingObjectEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingObjectEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingObjectEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

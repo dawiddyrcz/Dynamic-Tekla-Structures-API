@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewMarkBasicSymbolAttributesArray_
+    {
+        public static dynamic GetTSObject(ViewMarkBasicSymbolAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewMarkBasicSymbolAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewMarkBasicSymbolAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewMarkBasicSymbolAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewMarkBasicSymbolAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

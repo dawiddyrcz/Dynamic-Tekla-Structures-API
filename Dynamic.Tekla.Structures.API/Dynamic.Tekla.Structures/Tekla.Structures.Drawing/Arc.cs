@@ -158,6 +158,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ArcAttributesArray_
+    {
+        public static dynamic GetTSObject(ArcAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ArcAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ArcAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ArcAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ArcAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -177,6 +200,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Arc)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ArcArray_
+    {
+        public static dynamic GetTSObject(Arc[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Arc_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Arc[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Arc>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Arc_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

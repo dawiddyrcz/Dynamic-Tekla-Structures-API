@@ -213,6 +213,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DrawingInsertedDelegateArray_
+    {
+        public static dynamic GetTSObject(DrawingInsertedDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingInsertedDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingInsertedDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingInsertedDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingInsertedDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class DrawingDeletedDelegate 
@@ -261,6 +284,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class DrawingDeletedDelegateArray_
+    {
+        public static dynamic GetTSObject(DrawingDeletedDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingDeletedDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingDeletedDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingDeletedDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingDeletedDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -315,6 +361,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DrawingStatusChangedDelegateArray_
+    {
+        public static dynamic GetTSObject(DrawingStatusChangedDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingStatusChangedDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingStatusChangedDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingStatusChangedDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingStatusChangedDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class DrawingUpdatedDelegate 
@@ -366,6 +435,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DrawingUpdatedDelegateArray_
+    {
+        public static dynamic GetTSObject(DrawingUpdatedDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingUpdatedDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingUpdatedDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingUpdatedDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingUpdatedDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -385,6 +477,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Events)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class EventsArray_
+    {
+        public static dynamic GetTSObject(Events[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Events_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Events[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Events>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Events_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class InvalidPluginPickerInputExceptionArray_
+    {
+        public static dynamic GetTSObject(InvalidPluginPickerInputException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InvalidPluginPickerInputException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InvalidPluginPickerInputException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InvalidPluginPickerInputException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InvalidPluginPickerInputException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

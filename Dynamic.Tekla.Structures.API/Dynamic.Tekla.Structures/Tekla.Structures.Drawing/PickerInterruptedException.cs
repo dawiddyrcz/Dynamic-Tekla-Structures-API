@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PickerInterruptedExceptionArray_
+    {
+        public static dynamic GetTSObject(PickerInterruptedException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PickerInterruptedException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PickerInterruptedException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PickerInterruptedException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PickerInterruptedException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -259,6 +259,29 @@ $nestedTypes
         }
     }
 
+    internal static class $classnameArray_
+    {
+        public static dynamic GetTSObject($classname[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add($classname_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static $classname[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<$classname>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add($classname_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 ";
     }
 }

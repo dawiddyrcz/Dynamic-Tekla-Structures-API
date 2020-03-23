@@ -208,6 +208,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementPulloutElementArray_
+    {
+        public static dynamic GetTSObject(ReinforcementPulloutElement[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementPulloutElement_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementPulloutElement[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementPulloutElement>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementPulloutElement_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

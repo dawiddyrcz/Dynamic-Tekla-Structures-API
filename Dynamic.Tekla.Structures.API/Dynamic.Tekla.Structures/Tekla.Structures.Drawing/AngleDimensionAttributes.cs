@@ -71,6 +71,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class AngleDimensionAttributesArray_
+    {
+        public static dynamic GetTSObject(AngleDimensionAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AngleDimensionAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AngleDimensionAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AngleDimensionAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AngleDimensionAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

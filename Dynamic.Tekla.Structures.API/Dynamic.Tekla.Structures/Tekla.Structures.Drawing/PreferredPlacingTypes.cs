@@ -137,6 +137,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PreferredPlacingTypesArray_
+    {
+        public static dynamic GetTSObject(PreferredPlacingTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PreferredPlacingTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PreferredPlacingTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PreferredPlacingTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PreferredPlacingTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

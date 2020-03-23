@@ -74,6 +74,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PhaseCollectionArray_
+    {
+        public static dynamic GetTSObject(PhaseCollection[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PhaseCollection_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PhaseCollection[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PhaseCollection>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PhaseCollection_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

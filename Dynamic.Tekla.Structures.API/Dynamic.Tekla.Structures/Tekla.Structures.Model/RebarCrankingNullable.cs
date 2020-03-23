@@ -130,6 +130,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarCrankingNullableArray_
+    {
+        public static dynamic GetTSObject(RebarCrankingNullable[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarCrankingNullable_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarCrankingNullable[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarCrankingNullable>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarCrankingNullable_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

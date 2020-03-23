@@ -115,6 +115,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class AABBArray_
+    {
+        public static dynamic GetTSObject(AABB[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AABB_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AABB[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AABB>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AABB_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

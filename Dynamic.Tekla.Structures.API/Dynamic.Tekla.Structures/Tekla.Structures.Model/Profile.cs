@@ -65,6 +65,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ProfileArray_
+    {
+        public static dynamic GetTSObject(Profile[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Profile_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Profile[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Profile>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Profile_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -167,6 +167,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class GridLabelArray_
+    {
+        public static dynamic GetTSObject(GridLabel[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GridLabel_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GridLabel[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GridLabel>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GridLabel_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class GridLineAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
@@ -274,6 +297,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class GridLineAttributesArray_
+    {
+        public static dynamic GetTSObject(GridLineAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GridLineAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GridLineAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GridLineAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GridLineAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -293,6 +339,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.GridLine)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class GridLineArray_
+    {
+        public static dynamic GetTSObject(GridLine[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GridLine_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GridLine[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GridLine>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GridLine_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

@@ -181,6 +181,29 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         }
     }
 
+    internal static class ReferenceModelObjectAttributeArray_
+    {
+        public static dynamic GetTSObject(ReferenceModelObjectAttribute[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReferenceModelObjectAttribute_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReferenceModelObjectAttribute[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReferenceModelObjectAttribute>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReferenceModelObjectAttribute_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

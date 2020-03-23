@@ -161,6 +161,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class InvalidPathCallbackArray_
+    {
+        public static dynamic GetTSObject(InvalidPathCallback[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InvalidPathCallback_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InvalidPathCallback[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InvalidPathCallback>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InvalidPathCallback_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class ToolOptionNames 
@@ -194,6 +217,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class ToolOptionNamesArray_
+    {
+        public static dynamic GetTSObject(ToolOptionNames[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ToolOptionNames_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ToolOptionNames[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ToolOptionNames>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ToolOptionNames_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -213,6 +259,29 @@ namespace Dynamic.Tekla.Structures
             var dynObject = (Dynamic.Tekla.Structures.TeklaStructuresSettings)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class TeklaStructuresSettingsArray_
+    {
+        public static dynamic GetTSObject(TeklaStructuresSettings[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TeklaStructuresSettings_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TeklaStructuresSettings[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TeklaStructuresSettings>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TeklaStructuresSettings_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

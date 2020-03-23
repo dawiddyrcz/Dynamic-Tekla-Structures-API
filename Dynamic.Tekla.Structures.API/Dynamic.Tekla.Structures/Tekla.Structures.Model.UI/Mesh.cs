@@ -84,6 +84,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class MeshArray_
+    {
+        public static dynamic GetTSObject(Mesh[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Mesh_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Mesh[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Mesh>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Mesh_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

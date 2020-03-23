@@ -198,6 +198,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SurfacingAttributesArray_
+    {
+        public static dynamic GetTSObject(SurfacingAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SurfacingAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SurfacingAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SurfacingAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SurfacingAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -217,6 +240,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Surfacing)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SurfacingArray_
+    {
+        public static dynamic GetTSObject(Surfacing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Surfacing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Surfacing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Surfacing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Surfacing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

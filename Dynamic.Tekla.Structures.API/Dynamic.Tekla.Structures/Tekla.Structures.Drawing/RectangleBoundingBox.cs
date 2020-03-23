@@ -98,6 +98,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class RectangleBoundingBoxArray_
+    {
+        public static dynamic GetTSObject(RectangleBoundingBox[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RectangleBoundingBox_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RectangleBoundingBox[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RectangleBoundingBox>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RectangleBoundingBox_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

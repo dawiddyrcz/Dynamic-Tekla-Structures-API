@@ -67,6 +67,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class TeklaStructuresFilesArray_
+    {
+        public static dynamic GetTSObject(TeklaStructuresFiles[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TeklaStructuresFiles_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TeklaStructuresFiles[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TeklaStructuresFiles>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TeklaStructuresFiles_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -44,6 +44,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class IResizeableArray_
+    {
+        public static dynamic GetTSObject(IResizeable[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IResizeable_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IResizeable[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IResizeable>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IResizeable_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

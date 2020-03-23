@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class InsidePartHorizontalOrWithLeaderLinePlacingTypeArray_
+    {
+        public static dynamic GetTSObject(InsidePartHorizontalOrWithLeaderLinePlacingType[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InsidePartHorizontalOrWithLeaderLinePlacingType_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InsidePartHorizontalOrWithLeaderLinePlacingType[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InsidePartHorizontalOrWithLeaderLinePlacingType>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InsidePartHorizontalOrWithLeaderLinePlacingType_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

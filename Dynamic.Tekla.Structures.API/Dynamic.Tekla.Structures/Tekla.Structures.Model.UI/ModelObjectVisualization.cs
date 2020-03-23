@@ -108,6 +108,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ModelObjectVisualizationArray_
+    {
+        public static dynamic GetTSObject(ModelObjectVisualization[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ModelObjectVisualization_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ModelObjectVisualization[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ModelObjectVisualization>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ModelObjectVisualization_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

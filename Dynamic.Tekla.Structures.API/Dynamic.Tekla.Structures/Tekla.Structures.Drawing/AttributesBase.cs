@@ -49,6 +49,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class AttributesBaseArray_
+    {
+        public static dynamic GetTSObject(AttributesBase[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AttributesBase_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AttributesBase[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AttributesBase>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AttributesBase_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

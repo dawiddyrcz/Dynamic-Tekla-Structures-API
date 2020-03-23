@@ -150,6 +150,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class TaskDependencyArray_
+    {
+        public static dynamic GetTSObject(TaskDependency[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TaskDependency_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TaskDependency[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TaskDependency>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TaskDependency_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

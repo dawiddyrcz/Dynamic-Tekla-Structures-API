@@ -213,6 +213,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BentPlateGeometrySolverArray_
+    {
+        public static dynamic GetTSObject(BentPlateGeometrySolver[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BentPlateGeometrySolver_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BentPlateGeometrySolver[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BentPlateGeometrySolver>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BentPlateGeometrySolver_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

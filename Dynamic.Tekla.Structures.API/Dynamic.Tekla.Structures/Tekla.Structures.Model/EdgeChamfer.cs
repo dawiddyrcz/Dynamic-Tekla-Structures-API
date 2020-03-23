@@ -163,6 +163,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class EdgeChamferArray_
+    {
+        public static dynamic GetTSObject(EdgeChamfer[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(EdgeChamfer_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static EdgeChamfer[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<EdgeChamfer>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(EdgeChamfer_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

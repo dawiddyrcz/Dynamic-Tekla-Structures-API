@@ -127,6 +127,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class ArcArray_
+    {
+        public static dynamic GetTSObject(Arc[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Arc_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Arc[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Arc>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Arc_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

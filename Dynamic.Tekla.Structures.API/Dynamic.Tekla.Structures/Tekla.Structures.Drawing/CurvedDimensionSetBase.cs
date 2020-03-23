@@ -106,6 +106,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CurvedDimensionSetBaseAttributesArray_
+    {
+        public static dynamic GetTSObject(CurvedDimensionSetBaseAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedDimensionSetBaseAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedDimensionSetBaseAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedDimensionSetBaseAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedDimensionSetBaseAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -125,6 +148,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetBase)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CurvedDimensionSetBaseArray_
+    {
+        public static dynamic GetTSObject(CurvedDimensionSetBase[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedDimensionSetBase_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedDimensionSetBase[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedDimensionSetBase>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedDimensionSetBase_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

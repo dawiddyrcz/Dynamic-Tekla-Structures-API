@@ -73,6 +73,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class MatrixFactoryArray_
+    {
+        public static dynamic GetTSObject(MatrixFactory[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(MatrixFactory_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static MatrixFactory[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<MatrixFactory>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(MatrixFactory_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -64,6 +64,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class FacetedBrepFaceHoleArray_
+    {
+        public static dynamic GetTSObject(FacetedBrepFaceHole[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(FacetedBrepFaceHole_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static FacetedBrepFaceHole[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<FacetedBrepFaceHole>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(FacetedBrepFaceHole_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -60,6 +60,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class DisposableTokenArray_
+    {
+        public static dynamic GetTSObject(DisposableToken[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DisposableToken_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DisposableToken[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DisposableToken>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DisposableToken_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

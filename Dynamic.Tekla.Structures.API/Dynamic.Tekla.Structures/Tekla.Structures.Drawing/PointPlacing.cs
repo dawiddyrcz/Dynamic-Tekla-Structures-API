@@ -48,6 +48,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PointPlacingArray_
+    {
+        public static dynamic GetTSObject(PointPlacing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PointPlacing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PointPlacing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PointPlacing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PointPlacing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

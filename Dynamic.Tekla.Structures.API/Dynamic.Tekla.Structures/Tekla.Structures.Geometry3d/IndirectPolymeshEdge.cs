@@ -67,6 +67,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class IndirectPolymeshEdgeArray_
+    {
+        public static dynamic GetTSObject(IndirectPolymeshEdge[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IndirectPolymeshEdge_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IndirectPolymeshEdge[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IndirectPolymeshEdge>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IndirectPolymeshEdge_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

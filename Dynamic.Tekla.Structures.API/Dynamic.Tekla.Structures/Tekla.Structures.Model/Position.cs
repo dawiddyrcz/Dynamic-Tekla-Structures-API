@@ -219,6 +219,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PositionArray_
+    {
+        public static dynamic GetTSObject(Position[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Position_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Position[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Position>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Position_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -50,6 +50,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class WorkPlaneHandlerArray_
+    {
+        public static dynamic GetTSObject(WorkPlaneHandler[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(WorkPlaneHandler_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static WorkPlaneHandler[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<WorkPlaneHandler>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(WorkPlaneHandler_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

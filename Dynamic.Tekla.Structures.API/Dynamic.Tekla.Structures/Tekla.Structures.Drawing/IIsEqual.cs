@@ -44,6 +44,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class IIsEqualArray_
+    {
+        public static dynamic GetTSObject(IIsEqual[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IIsEqual_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IIsEqual[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IIsEqual>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IIsEqual_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -125,6 +125,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BooleanPartArray_
+    {
+        public static dynamic GetTSObject(BooleanPart[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BooleanPart_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BooleanPart[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BooleanPart>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BooleanPart_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

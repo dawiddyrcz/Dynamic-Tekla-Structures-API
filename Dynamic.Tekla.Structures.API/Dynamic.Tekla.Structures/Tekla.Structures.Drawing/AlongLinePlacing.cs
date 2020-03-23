@@ -64,6 +64,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class AlongLinePlacingArray_
+    {
+        public static dynamic GetTSObject(AlongLinePlacing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AlongLinePlacing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AlongLinePlacing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AlongLinePlacing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AlongLinePlacing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

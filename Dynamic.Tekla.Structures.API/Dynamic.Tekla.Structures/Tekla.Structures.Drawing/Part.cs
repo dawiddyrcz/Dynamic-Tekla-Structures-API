@@ -275,6 +275,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PartAttributesArray_
+    {
+        public static dynamic GetTSObject(PartAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PartAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PartAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PartAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PartAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -294,6 +317,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Part)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PartArray_
+    {
+        public static dynamic GetTSObject(Part[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Part_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Part[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Part>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Part_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

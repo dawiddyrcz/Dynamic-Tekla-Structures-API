@@ -53,6 +53,29 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         }
     }
 
+    internal static class GuidConversionArray_
+    {
+        public static dynamic GetTSObject(GuidConversion[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GuidConversion_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GuidConversion[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GuidConversion>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GuidConversion_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

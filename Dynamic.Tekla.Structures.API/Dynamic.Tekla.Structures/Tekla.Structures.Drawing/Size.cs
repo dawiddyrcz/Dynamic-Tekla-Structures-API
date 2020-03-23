@@ -62,6 +62,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SizeArray_
+    {
+        public static dynamic GetTSObject(Size[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Size_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Size[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Size>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Size_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

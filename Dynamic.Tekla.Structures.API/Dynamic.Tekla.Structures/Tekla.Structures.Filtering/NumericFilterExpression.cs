@@ -40,6 +40,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class NumericFilterExpressionArray_
+    {
+        public static dynamic GetTSObject(NumericFilterExpression[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(NumericFilterExpression_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static NumericFilterExpression[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<NumericFilterExpression>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(NumericFilterExpression_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

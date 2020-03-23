@@ -169,6 +169,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class HideableArray_
+    {
+        public static dynamic GetTSObject(Hideable[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Hideable_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Hideable[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Hideable>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Hideable_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

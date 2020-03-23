@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class InvalidCurveCombinationExceptionArray_
+    {
+        public static dynamic GetTSObject(InvalidCurveCombinationException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InvalidCurveCombinationException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InvalidCurveCombinationException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InvalidCurveCombinationException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InvalidCurveCombinationException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

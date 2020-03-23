@@ -133,6 +133,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class BinaryFilterExpressionCollectionArray_
+    {
+        public static dynamic GetTSObject(BinaryFilterExpressionCollection[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BinaryFilterExpressionCollection_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BinaryFilterExpressionCollection[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BinaryFilterExpressionCollection>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BinaryFilterExpressionCollection_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

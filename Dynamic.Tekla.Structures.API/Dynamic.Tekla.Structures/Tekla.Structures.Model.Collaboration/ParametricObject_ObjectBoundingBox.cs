@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         }
     }
 
+    internal static class ParametricObject_ObjectBoundingBoxArray_
+    {
+        public static dynamic GetTSObject(ParametricObject_ObjectBoundingBox[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ParametricObject_ObjectBoundingBox_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ParametricObject_ObjectBoundingBox[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ParametricObject_ObjectBoundingBox>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ParametricObject_ObjectBoundingBox_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -144,6 +144,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class SeamArray_
+    {
+        public static dynamic GetTSObject(Seam[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Seam_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Seam[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Seam>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Seam_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

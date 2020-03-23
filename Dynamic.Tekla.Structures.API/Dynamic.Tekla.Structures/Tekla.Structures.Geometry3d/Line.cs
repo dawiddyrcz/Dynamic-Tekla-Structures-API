@@ -75,6 +75,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class LineArray_
+    {
+        public static dynamic GetTSObject(Line[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Line_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Line[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Line>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Line_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

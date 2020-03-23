@@ -67,6 +67,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class DeformingDataArray_
+    {
+        public static dynamic GetTSObject(DeformingData[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DeformingData_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DeformingData[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DeformingData>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DeformingData_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

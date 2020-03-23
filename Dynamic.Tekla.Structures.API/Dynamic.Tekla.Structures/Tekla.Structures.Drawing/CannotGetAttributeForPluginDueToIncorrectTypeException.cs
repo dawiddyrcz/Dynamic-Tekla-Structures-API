@@ -47,6 +47,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotGetAttributeForPluginDueToIncorrectTypeExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotGetAttributeForPluginDueToIncorrectTypeException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotGetAttributeForPluginDueToIncorrectTypeException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotGetAttributeForPluginDueToIncorrectTypeException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotGetAttributeForPluginDueToIncorrectTypeException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotGetAttributeForPluginDueToIncorrectTypeException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

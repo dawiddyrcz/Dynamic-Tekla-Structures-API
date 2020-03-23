@@ -57,6 +57,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SectionMarkArray_
+    {
+        public static dynamic GetTSObject(SectionMark[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMark_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMark[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMark>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMark_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

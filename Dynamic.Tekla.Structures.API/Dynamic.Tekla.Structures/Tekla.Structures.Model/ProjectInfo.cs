@@ -265,6 +265,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ProjectInfoArray_
+    {
+        public static dynamic GetTSObject(ProjectInfo[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ProjectInfo_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ProjectInfo[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ProjectInfo>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ProjectInfo_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

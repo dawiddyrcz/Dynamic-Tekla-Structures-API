@@ -73,6 +73,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class StrandUnbondingDataArray_
+    {
+        public static dynamic GetTSObject(StrandUnbondingData[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(StrandUnbondingData_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static StrandUnbondingData[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<StrandUnbondingData>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(StrandUnbondingData_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

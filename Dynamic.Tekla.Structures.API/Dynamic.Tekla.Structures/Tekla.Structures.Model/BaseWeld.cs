@@ -923,6 +923,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BaseWeldArray_
+    {
+        public static dynamic GetTSObject(BaseWeld[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BaseWeld_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BaseWeld[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BaseWeld>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BaseWeld_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

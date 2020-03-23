@@ -122,6 +122,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarHookDataArray_
+    {
+        public static dynamic GetTSObject(RebarHookData[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarHookData_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarHookData[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarHookData>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarHookData_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

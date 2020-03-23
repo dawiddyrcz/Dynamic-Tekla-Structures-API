@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class GeometrySectionEnumeratorArray_
+    {
+        public static dynamic GetTSObject(GeometrySectionEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GeometrySectionEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GeometrySectionEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GeometrySectionEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GeometrySectionEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

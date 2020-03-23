@@ -114,6 +114,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DPMPrinterAttributesArray_
+    {
+        public static dynamic GetTSObject(DPMPrinterAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DPMPrinterAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DPMPrinterAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DPMPrinterAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DPMPrinterAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

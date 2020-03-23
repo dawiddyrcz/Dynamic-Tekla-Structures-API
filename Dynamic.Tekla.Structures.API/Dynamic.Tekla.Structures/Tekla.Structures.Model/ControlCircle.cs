@@ -182,6 +182,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ControlCircleArray_
+    {
+        public static dynamic GetTSObject(ControlCircle[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ControlCircle_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ControlCircle[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ControlCircle>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ControlCircle_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -86,6 +86,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PlacingQuarterAttributesArray_
+    {
+        public static dynamic GetTSObject(PlacingQuarterAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PlacingQuarterAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PlacingQuarterAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PlacingQuarterAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PlacingQuarterAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

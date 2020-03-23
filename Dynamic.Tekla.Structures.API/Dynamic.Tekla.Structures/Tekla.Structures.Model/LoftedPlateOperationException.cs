@@ -39,6 +39,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class LoftedPlateOperationExceptionArray_
+    {
+        public static dynamic GetTSObject(LoftedPlateOperationException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LoftedPlateOperationException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LoftedPlateOperationException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LoftedPlateOperationException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LoftedPlateOperationException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

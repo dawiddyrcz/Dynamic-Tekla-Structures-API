@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotSetAttributeForPluginDueToInexistantFieldExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotSetAttributeForPluginDueToInexistantFieldException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotSetAttributeForPluginDueToInexistantFieldException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotSetAttributeForPluginDueToInexistantFieldException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotSetAttributeForPluginDueToInexistantFieldException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotSetAttributeForPluginDueToInexistantFieldException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

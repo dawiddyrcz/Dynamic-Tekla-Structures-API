@@ -68,6 +68,29 @@ namespace Dynamic.Tekla.Structures.Model.History
         }
     }
 
+    internal static class ModificationStampArray_
+    {
+        public static dynamic GetTSObject(ModificationStamp[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ModificationStamp_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ModificationStamp[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ModificationStamp>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ModificationStamp_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

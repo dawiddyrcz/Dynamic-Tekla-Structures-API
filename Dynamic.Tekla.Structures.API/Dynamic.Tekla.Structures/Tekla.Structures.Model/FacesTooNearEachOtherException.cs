@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class FacesTooNearEachOtherExceptionArray_
+    {
+        public static dynamic GetTSObject(FacesTooNearEachOtherException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(FacesTooNearEachOtherException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static FacesTooNearEachOtherException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<FacesTooNearEachOtherException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(FacesTooNearEachOtherException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

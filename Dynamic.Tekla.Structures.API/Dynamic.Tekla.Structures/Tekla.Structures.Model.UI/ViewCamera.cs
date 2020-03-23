@@ -89,6 +89,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ViewCameraArray_
+    {
+        public static dynamic GetTSObject(ViewCamera[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewCamera_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewCamera[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewCamera>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewCamera_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

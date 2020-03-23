@@ -79,6 +79,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarLegFaceArray_
+    {
+        public static dynamic GetTSObject(RebarLegFace[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarLegFace_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarLegFace[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarLegFace>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarLegFace_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

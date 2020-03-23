@@ -75,6 +75,29 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         }
     }
 
+    internal static class ClashCheckDoneDelegateArray_
+    {
+        public static dynamic GetTSObject(ClashCheckDoneDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClashCheckDoneDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClashCheckDoneDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClashCheckDoneDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClashCheckDoneDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ClashDetectedDelegate 
@@ -126,6 +149,29 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
         }
     }
 
+    internal static class ClashDetectedDelegateArray_
+    {
+        public static dynamic GetTSObject(ClashDetectedDelegate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClashDetectedDelegate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClashDetectedDelegate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClashDetectedDelegate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClashDetectedDelegate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -145,6 +191,29 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
             var dynObject = (Dynamic.Tekla.Structures.Model.ClashChecker.ClashChekerEvent)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ClashChekerEventArray_
+    {
+        public static dynamic GetTSObject(ClashChekerEvent[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClashChekerEvent_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClashChekerEvent[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClashChekerEvent>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClashChekerEvent_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

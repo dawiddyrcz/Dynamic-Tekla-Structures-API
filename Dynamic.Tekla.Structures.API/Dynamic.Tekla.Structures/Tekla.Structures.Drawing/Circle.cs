@@ -131,6 +131,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CircleAttributesArray_
+    {
+        public static dynamic GetTSObject(CircleAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CircleAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CircleAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CircleAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CircleAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -150,6 +173,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Circle)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CircleArray_
+    {
+        public static dynamic GetTSObject(Circle[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Circle_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Circle[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Circle>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Circle_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

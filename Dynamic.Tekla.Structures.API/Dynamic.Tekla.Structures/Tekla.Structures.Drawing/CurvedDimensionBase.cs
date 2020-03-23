@@ -111,6 +111,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CurvedDimensionBaseArray_
+    {
+        public static dynamic GetTSObject(CurvedDimensionBase[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedDimensionBase_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedDimensionBase[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedDimensionBase>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedDimensionBase_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -61,6 +61,29 @@ namespace Dynamic.Tekla.Structures.Solid
         }
     }
 
+    internal static class ISolidArray_
+    {
+        public static dynamic GetTSObject(ISolid[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ISolid_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ISolid[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ISolid>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ISolid_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

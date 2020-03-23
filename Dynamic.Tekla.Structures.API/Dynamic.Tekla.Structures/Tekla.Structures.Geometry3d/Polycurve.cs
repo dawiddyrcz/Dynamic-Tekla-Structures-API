@@ -73,6 +73,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class PolycurveArray_
+    {
+        public static dynamic GetTSObject(Polycurve[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Polycurve_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Polycurve[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Polycurve>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Polycurve_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

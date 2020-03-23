@@ -94,6 +94,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BrepArray_
+    {
+        public static dynamic GetTSObject(Brep[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Brep_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Brep[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Brep>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Brep_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

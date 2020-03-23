@@ -88,6 +88,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DetailMarkTagsAttributesArray_
+    {
+        public static dynamic GetTSObject(DetailMarkTagsAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DetailMarkTagsAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DetailMarkTagsAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DetailMarkTagsAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DetailMarkTagsAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

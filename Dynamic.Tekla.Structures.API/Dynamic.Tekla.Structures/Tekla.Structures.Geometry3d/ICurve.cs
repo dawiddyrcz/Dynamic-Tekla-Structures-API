@@ -57,6 +57,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class ICurveArray_
+    {
+        public static dynamic GetTSObject(ICurve[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ICurve_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ICurve[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ICurve>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ICurve_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

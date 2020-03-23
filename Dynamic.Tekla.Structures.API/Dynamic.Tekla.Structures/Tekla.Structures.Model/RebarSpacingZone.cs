@@ -159,6 +159,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarSpacingZoneArray_
+    {
+        public static dynamic GetTSObject(RebarSpacingZone[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarSpacingZone_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarSpacingZone[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarSpacingZone>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarSpacingZone_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

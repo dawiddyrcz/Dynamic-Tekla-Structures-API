@@ -128,6 +128,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PointCloudArray_
+    {
+        public static dynamic GetTSObject(PointCloud[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PointCloud_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PointCloud[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PointCloud>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PointCloud_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

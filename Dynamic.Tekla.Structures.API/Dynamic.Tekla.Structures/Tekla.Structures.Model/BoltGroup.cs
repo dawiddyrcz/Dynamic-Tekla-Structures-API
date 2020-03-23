@@ -442,6 +442,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BoltGroupArray_
+    {
+        public static dynamic GetTSObject(BoltGroup[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BoltGroup_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BoltGroup[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BoltGroup>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BoltGroup_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

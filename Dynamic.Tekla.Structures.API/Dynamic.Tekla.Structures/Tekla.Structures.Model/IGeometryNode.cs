@@ -50,6 +50,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class IGeometryNodeArray_
+    {
+        public static dynamic GetTSObject(IGeometryNode[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IGeometryNode_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IGeometryNode[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IGeometryNode>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IGeometryNode_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

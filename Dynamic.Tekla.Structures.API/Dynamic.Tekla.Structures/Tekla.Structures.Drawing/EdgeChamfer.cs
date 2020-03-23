@@ -108,6 +108,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class EdgeChamferAttributesArray_
+    {
+        public static dynamic GetTSObject(EdgeChamferAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(EdgeChamferAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static EdgeChamferAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<EdgeChamferAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(EdgeChamferAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -127,6 +150,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.EdgeChamfer)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class EdgeChamferArray_
+    {
+        public static dynamic GetTSObject(EdgeChamfer[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(EdgeChamfer_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static EdgeChamfer[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<EdgeChamfer>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(EdgeChamfer_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

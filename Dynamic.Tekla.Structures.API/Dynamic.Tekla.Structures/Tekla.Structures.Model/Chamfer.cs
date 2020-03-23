@@ -151,6 +151,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ChamferArray_
+    {
+        public static dynamic GetTSObject(Chamfer[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Chamfer_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Chamfer[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Chamfer>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Chamfer_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

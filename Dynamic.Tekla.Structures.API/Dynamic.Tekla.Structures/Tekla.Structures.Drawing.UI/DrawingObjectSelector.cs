@@ -70,6 +70,29 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
         }
     }
 
+    internal static class DrawingObjectSelectorArray_
+    {
+        public static dynamic GetTSObject(DrawingObjectSelector[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingObjectSelector_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingObjectSelector[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingObjectSelector>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingObjectSelector_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

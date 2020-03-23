@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class BaseLineWithArrowAtStartPointPlacingTypeArray_
+    {
+        public static dynamic GetTSObject(BaseLineWithArrowAtStartPointPlacingType[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BaseLineWithArrowAtStartPointPlacingType_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BaseLineWithArrowAtStartPointPlacingType[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BaseLineWithArrowAtStartPointPlacingType>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BaseLineWithArrowAtStartPointPlacingType_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

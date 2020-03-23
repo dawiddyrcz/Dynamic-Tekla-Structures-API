@@ -57,6 +57,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementSingleArray_
+    {
+        public static dynamic GetTSObject(ReinforcementSingle[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementSingle_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementSingle[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementSingle>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementSingle_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

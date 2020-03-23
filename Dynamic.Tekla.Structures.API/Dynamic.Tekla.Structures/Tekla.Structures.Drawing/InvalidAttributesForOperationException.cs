@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class InvalidAttributesForOperationExceptionArray_
+    {
+        public static dynamic GetTSObject(InvalidAttributesForOperationException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InvalidAttributesForOperationException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InvalidAttributesForOperationException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InvalidAttributesForOperationException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InvalidAttributesForOperationException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

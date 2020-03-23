@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Solid
         }
     }
 
+    internal static class VertexEnumeratorArray_
+    {
+        public static dynamic GetTSObject(VertexEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(VertexEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static VertexEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<VertexEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(VertexEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

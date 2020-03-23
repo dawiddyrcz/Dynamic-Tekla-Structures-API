@@ -114,6 +114,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReferenceModelAttributesArray_
+    {
+        public static dynamic GetTSObject(ReferenceModelAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReferenceModelAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReferenceModelAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReferenceModelAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReferenceModelAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -133,6 +156,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ReferenceModel)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReferenceModelArray_
+    {
+        public static dynamic GetTSObject(ReferenceModel[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReferenceModel_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReferenceModel[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReferenceModel>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReferenceModel_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

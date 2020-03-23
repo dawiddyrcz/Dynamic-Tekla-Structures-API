@@ -175,6 +175,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ControlLineArray_
+    {
+        public static dynamic GetTSObject(ControlLine[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ControlLine_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ControlLine[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ControlLine>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ControlLine_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

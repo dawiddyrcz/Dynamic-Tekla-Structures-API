@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotPerformOperationNumberingNotUpToDateArray_
+    {
+        public static dynamic GetTSObject(CannotPerformOperationNumberingNotUpToDate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotPerformOperationNumberingNotUpToDate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotPerformOperationNumberingNotUpToDate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotPerformOperationNumberingNotUpToDate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotPerformOperationNumberingNotUpToDate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

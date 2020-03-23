@@ -39,6 +39,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class IBoundingVolumeArray_
+    {
+        public static dynamic GetTSObject(IBoundingVolume[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IBoundingVolume_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IBoundingVolume[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IBoundingVolume>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IBoundingVolume_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

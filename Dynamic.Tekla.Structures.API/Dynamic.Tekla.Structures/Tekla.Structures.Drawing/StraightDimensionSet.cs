@@ -260,6 +260,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class StraightDimensionSetAttributesArray_
+    {
+        public static dynamic GetTSObject(StraightDimensionSetAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(StraightDimensionSetAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static StraightDimensionSetAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<StraightDimensionSetAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(StraightDimensionSetAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -279,6 +302,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.StraightDimensionSet)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class StraightDimensionSetArray_
+    {
+        public static dynamic GetTSObject(StraightDimensionSet[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(StraightDimensionSet_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static StraightDimensionSet[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<StraightDimensionSet>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(StraightDimensionSet_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

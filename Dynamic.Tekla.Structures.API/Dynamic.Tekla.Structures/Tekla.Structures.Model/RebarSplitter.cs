@@ -174,6 +174,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RebarSplitterArray_
+    {
+        public static dynamic GetTSObject(RebarSplitter[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RebarSplitter_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RebarSplitter[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RebarSplitter>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RebarSplitter_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

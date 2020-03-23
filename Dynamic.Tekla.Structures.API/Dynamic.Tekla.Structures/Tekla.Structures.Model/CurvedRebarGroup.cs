@@ -69,6 +69,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class CurvedRebarGroupArray_
+    {
+        public static dynamic GetTSObject(CurvedRebarGroup[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedRebarGroup_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedRebarGroup[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedRebarGroup>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedRebarGroup_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

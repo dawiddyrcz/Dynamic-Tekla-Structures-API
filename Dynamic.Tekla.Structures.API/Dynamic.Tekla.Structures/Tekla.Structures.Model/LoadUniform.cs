@@ -81,6 +81,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class LoadUniformArray_
+    {
+        public static dynamic GetTSObject(LoadUniform[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LoadUniform_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LoadUniform[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LoadUniform>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LoadUniform_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

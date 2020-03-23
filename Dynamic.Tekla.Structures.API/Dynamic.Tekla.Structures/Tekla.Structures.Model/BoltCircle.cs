@@ -75,6 +75,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BoltCircleArray_
+    {
+        public static dynamic GetTSObject(BoltCircle[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BoltCircle_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BoltCircle[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BoltCircle>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BoltCircle_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

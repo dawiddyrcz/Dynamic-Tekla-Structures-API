@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class FacePerpendicularToIntersectionLineExceptionArray_
+    {
+        public static dynamic GetTSObject(FacePerpendicularToIntersectionLineException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(FacePerpendicularToIntersectionLineException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static FacePerpendicularToIntersectionLineException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<FacePerpendicularToIntersectionLineException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(FacePerpendicularToIntersectionLineException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -78,6 +78,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class GADrawingArray_
+    {
+        public static dynamic GetTSObject(GADrawing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GADrawing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GADrawing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GADrawing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GADrawing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

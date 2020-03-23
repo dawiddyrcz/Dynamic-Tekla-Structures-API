@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class UndefinedCurveDirectionExceptionArray_
+    {
+        public static dynamic GetTSObject(UndefinedCurveDirectionException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(UndefinedCurveDirectionException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static UndefinedCurveDirectionException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<UndefinedCurveDirectionException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(UndefinedCurveDirectionException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

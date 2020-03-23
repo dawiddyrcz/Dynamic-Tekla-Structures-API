@@ -135,6 +135,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PolygonAttributesArray_
+    {
+        public static dynamic GetTSObject(PolygonAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PolygonAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PolygonAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PolygonAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PolygonAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -154,6 +177,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Polygon)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PolygonArray_
+    {
+        public static dynamic GetTSObject(Polygon[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Polygon_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Polygon[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Polygon>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Polygon_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

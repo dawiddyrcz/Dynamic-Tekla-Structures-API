@@ -62,6 +62,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ClosedGraphicObjectAttributesArray_
+    {
+        public static dynamic GetTSObject(ClosedGraphicObjectAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClosedGraphicObjectAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClosedGraphicObjectAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClosedGraphicObjectAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClosedGraphicObjectAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -81,6 +104,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ClosedGraphicObject)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ClosedGraphicObjectArray_
+    {
+        public static dynamic GetTSObject(ClosedGraphicObject[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClosedGraphicObject_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClosedGraphicObject[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClosedGraphicObject>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClosedGraphicObject_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

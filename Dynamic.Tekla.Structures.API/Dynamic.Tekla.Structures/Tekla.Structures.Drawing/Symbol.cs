@@ -232,6 +232,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SymbolAttributesArray_
+    {
+        public static dynamic GetTSObject(SymbolAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SymbolAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SymbolAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SymbolAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SymbolAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -251,6 +274,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Symbol)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SymbolArray_
+    {
+        public static dynamic GetTSObject(Symbol[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Symbol_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Symbol[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Symbol>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Symbol_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

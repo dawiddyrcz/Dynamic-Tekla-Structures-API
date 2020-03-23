@@ -140,6 +140,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class WeldArray_
+    {
+        public static dynamic GetTSObject(Weld[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Weld_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Weld[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Weld>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Weld_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

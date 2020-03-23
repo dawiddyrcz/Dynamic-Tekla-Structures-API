@@ -127,6 +127,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class RadialGridArray_
+    {
+        public static dynamic GetTSObject(RadialGrid[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RadialGrid_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RadialGrid[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RadialGrid>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RadialGrid_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

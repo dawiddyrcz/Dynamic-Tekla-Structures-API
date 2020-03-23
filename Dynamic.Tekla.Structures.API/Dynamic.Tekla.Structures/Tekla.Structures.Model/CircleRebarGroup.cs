@@ -115,6 +115,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class CircleRebarGroupArray_
+    {
+        public static dynamic GetTSObject(CircleRebarGroup[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CircleRebarGroup_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CircleRebarGroup[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CircleRebarGroup>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CircleRebarGroup_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

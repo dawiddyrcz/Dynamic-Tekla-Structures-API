@@ -124,6 +124,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ConnectionArray_
+    {
+        public static dynamic GetTSObject(Connection[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Connection_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Connection[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Connection>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Connection_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

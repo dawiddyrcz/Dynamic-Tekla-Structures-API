@@ -52,6 +52,29 @@ namespace Dynamic.Tekla.Structures.Model.Welding
         }
     }
 
+    internal static class WeldGeometryArray_
+    {
+        public static dynamic GetTSObject(WeldGeometry[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(WeldGeometry_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static WeldGeometry[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<WeldGeometry>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(WeldGeometry_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

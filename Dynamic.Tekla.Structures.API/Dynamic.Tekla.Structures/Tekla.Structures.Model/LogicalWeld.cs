@@ -96,6 +96,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class LogicalWeldArray_
+    {
+        public static dynamic GetTSObject(LogicalWeld[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LogicalWeld_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LogicalWeld[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LogicalWeld>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LogicalWeld_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

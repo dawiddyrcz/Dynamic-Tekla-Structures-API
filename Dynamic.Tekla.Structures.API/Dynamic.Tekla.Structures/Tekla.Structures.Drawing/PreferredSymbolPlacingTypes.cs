@@ -60,6 +60,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PreferredSymbolPlacingTypesArray_
+    {
+        public static dynamic GetTSObject(PreferredSymbolPlacingTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PreferredSymbolPlacingTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PreferredSymbolPlacingTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PreferredSymbolPlacingTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PreferredSymbolPlacingTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

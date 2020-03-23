@@ -221,6 +221,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class OBBArray_
+    {
+        public static dynamic GetTSObject(OBB[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(OBB_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static OBB[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<OBB>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(OBB_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

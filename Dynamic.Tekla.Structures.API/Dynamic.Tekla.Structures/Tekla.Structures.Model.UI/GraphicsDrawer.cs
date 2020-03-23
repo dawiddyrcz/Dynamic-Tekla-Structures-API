@@ -83,6 +83,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class GraphicsDrawerArray_
+    {
+        public static dynamic GetTSObject(GraphicsDrawer[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GraphicsDrawer_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GraphicsDrawer[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GraphicsDrawer>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GraphicsDrawer_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

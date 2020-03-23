@@ -174,6 +174,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class RectangleAttributesArray_
+    {
+        public static dynamic GetTSObject(RectangleAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(RectangleAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static RectangleAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<RectangleAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(RectangleAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -193,6 +216,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Rectangle)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class RectangleArray_
+    {
+        public static dynamic GetTSObject(Rectangle[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Rectangle_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Rectangle[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Rectangle>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Rectangle_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotDeleteActiveDrawingExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotDeleteActiveDrawingException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotDeleteActiveDrawingException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotDeleteActiveDrawingException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotDeleteActiveDrawingException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotDeleteActiveDrawingException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

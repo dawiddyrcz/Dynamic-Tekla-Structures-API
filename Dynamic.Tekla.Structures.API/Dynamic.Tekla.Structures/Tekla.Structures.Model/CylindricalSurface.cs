@@ -80,6 +80,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class CylindricalSurfaceArray_
+    {
+        public static dynamic GetTSObject(CylindricalSurface[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CylindricalSurface_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CylindricalSurface[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CylindricalSurface>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CylindricalSurface_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

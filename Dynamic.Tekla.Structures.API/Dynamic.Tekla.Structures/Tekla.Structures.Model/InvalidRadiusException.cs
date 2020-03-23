@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class InvalidRadiusExceptionArray_
+    {
+        public static dynamic GetTSObject(InvalidRadiusException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(InvalidRadiusException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static InvalidRadiusException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<InvalidRadiusException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(InvalidRadiusException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Solid
         }
     }
 
+    internal static class EdgeEnumeratorArray_
+    {
+        public static dynamic GetTSObject(EdgeEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(EdgeEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static EdgeEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<EdgeEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(EdgeEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

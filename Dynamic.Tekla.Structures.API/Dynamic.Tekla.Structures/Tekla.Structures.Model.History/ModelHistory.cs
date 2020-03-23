@@ -139,6 +139,29 @@ namespace Dynamic.Tekla.Structures.Model.History
         }
     }
 
+    internal static class ModelHistoryArray_
+    {
+        public static dynamic GetTSObject(ModelHistory[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ModelHistory_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ModelHistory[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ModelHistory>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ModelHistory_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

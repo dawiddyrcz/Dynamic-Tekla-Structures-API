@@ -232,6 +232,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class BoltMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(BoltMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BoltMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BoltMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BoltMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BoltMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class PartMarkPropertyElementTypes 
@@ -370,6 +393,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PartMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(PartMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PartMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PartMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PartMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PartMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class ReinforcementMarkPropertyElementTypes 
@@ -498,6 +544,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReinforcementMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -674,6 +743,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementMeshMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementMeshMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementMeshMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementMeshMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementMeshMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementMeshMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class MergedMarkPropertyElementTypes 
@@ -732,6 +824,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class MergedMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(MergedMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(MergedMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static MergedMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<MergedMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(MergedMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -803,6 +918,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SurfacingMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(SurfacingMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SurfacingMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SurfacingMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SurfacingMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SurfacingMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class ChamferMarkPropertyElementTypes 
@@ -861,6 +999,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ChamferMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(ChamferMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ChamferMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ChamferMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ChamferMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ChamferMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -946,6 +1107,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ConnectionMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(ConnectionMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ConnectionMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ConnectionMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ConnectionMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ConnectionMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class DetailMarkPropertyElementTypes 
@@ -1000,6 +1184,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DetailMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(DetailMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DetailMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DetailMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DetailMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DetailMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class SectionMarkPropertyElementTypes 
@@ -1051,6 +1258,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SectionMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(SectionMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -1122,6 +1352,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ViewLabelMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(ViewLabelMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewLabelMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewLabelMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewLabelMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewLabelMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class DetailViewLabelMarkPropertyElementTypes 
@@ -1190,6 +1443,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DetailViewLabelMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(DetailViewLabelMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DetailViewLabelMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DetailViewLabelMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DetailViewLabelMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DetailViewLabelMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public abstract class SectionViewLabelMarkPropertyElementTypes 
@@ -1255,6 +1531,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class SectionViewLabelMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(SectionViewLabelMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SectionViewLabelMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SectionViewLabelMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SectionViewLabelMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SectionViewLabelMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -1333,6 +1632,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PourMarkPropertyElementTypesArray_
+    {
+        public static dynamic GetTSObject(PourMarkPropertyElementTypes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourMarkPropertyElementTypes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourMarkPropertyElementTypes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourMarkPropertyElementTypes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourMarkPropertyElementTypes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -1355,6 +1677,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PropertyElementTypeArray_
+    {
+        public static dynamic GetTSObject(PropertyElementType[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PropertyElementType_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PropertyElementType[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PropertyElementType>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PropertyElementType_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -1374,6 +1719,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PropertyElement)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PropertyElementArray_
+    {
+        public static dynamic GetTSObject(PropertyElement[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PropertyElement_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PropertyElement[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PropertyElement>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PropertyElement_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

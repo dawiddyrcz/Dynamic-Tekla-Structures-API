@@ -52,6 +52,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotLoadAttributesExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotLoadAttributesException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotLoadAttributesException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotLoadAttributesException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotLoadAttributesException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotLoadAttributesException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

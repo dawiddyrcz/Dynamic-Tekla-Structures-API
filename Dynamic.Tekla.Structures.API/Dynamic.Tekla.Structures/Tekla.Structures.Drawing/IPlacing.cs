@@ -45,6 +45,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class IPlacingArray_
+    {
+        public static dynamic GetTSObject(IPlacing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IPlacing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IPlacing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IPlacing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IPlacing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

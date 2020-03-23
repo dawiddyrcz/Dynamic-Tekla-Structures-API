@@ -79,6 +79,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PourUnitArray_
+    {
+        public static dynamic GetTSObject(PourUnit[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourUnit_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourUnit[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourUnit>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourUnit_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

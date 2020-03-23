@@ -40,6 +40,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class DateTimeFilterExpressionArray_
+    {
+        public static dynamic GetTSObject(DateTimeFilterExpression[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DateTimeFilterExpression_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DateTimeFilterExpression[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DateTimeFilterExpression>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DateTimeFilterExpression_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

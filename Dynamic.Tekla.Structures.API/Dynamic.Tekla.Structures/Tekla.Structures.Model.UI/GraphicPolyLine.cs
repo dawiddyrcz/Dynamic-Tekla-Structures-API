@@ -139,6 +139,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class GraphicPolyLineArray_
+    {
+        public static dynamic GetTSObject(GraphicPolyLine[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GraphicPolyLine_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GraphicPolyLine[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GraphicPolyLine>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GraphicPolyLine_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

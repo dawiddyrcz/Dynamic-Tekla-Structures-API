@@ -234,6 +234,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class NumericConstantFilterExpressionArray_
+    {
+        public static dynamic GetTSObject(NumericConstantFilterExpression[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(NumericConstantFilterExpression_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static NumericConstantFilterExpression[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<NumericConstantFilterExpression>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(NumericConstantFilterExpression_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

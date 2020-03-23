@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class AlongPartCenteredPlacingTypeArray_
+    {
+        public static dynamic GetTSObject(AlongPartCenteredPlacingType[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AlongPartCenteredPlacingType_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AlongPartCenteredPlacingType[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AlongPartCenteredPlacingType>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AlongPartCenteredPlacingType_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

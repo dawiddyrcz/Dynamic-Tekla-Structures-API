@@ -136,6 +136,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class GridPlaneArray_
+    {
+        public static dynamic GetTSObject(GridPlane[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GridPlane_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GridPlane[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GridPlane>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GridPlane_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -63,6 +63,29 @@ namespace Dynamic.Tekla.Structures.Drawing.Tools
         }
     }
 
+    internal static class DrawingCoordinateConverterArray_
+    {
+        public static dynamic GetTSObject(DrawingCoordinateConverter[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingCoordinateConverter_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingCoordinateConverter[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingCoordinateConverter>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingCoordinateConverter_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

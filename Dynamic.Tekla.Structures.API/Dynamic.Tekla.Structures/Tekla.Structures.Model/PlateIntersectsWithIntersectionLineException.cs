@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PlateIntersectsWithIntersectionLineExceptionArray_
+    {
+        public static dynamic GetTSObject(PlateIntersectsWithIntersectionLineException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PlateIntersectsWithIntersectionLineException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PlateIntersectsWithIntersectionLineException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PlateIntersectsWithIntersectionLineException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PlateIntersectsWithIntersectionLineException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

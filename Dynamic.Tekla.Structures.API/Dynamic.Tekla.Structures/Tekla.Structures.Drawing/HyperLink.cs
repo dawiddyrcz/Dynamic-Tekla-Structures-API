@@ -111,6 +111,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class HyperLinkArray_
+    {
+        public static dynamic GetTSObject(HyperLink[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(HyperLink_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static HyperLink[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<HyperLink>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(HyperLink_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

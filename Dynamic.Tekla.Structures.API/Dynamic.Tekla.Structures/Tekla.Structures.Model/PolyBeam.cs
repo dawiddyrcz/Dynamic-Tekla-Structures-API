@@ -141,6 +141,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PolyBeamArray_
+    {
+        public static dynamic GetTSObject(PolyBeam[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PolyBeam_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PolyBeam[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PolyBeam>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PolyBeam_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

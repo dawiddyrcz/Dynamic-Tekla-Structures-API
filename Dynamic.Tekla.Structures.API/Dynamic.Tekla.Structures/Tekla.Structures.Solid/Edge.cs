@@ -108,6 +108,29 @@ namespace Dynamic.Tekla.Structures.Solid
         }
     }
 
+    internal static class EdgeArray_
+    {
+        public static dynamic GetTSObject(Edge[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Edge_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Edge[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Edge>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Edge_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

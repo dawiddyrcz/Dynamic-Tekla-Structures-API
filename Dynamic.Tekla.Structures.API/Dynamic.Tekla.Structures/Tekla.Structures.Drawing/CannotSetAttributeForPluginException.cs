@@ -49,6 +49,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotSetAttributeForPluginExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotSetAttributeForPluginException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotSetAttributeForPluginException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotSetAttributeForPluginException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotSetAttributeForPluginException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotSetAttributeForPluginException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

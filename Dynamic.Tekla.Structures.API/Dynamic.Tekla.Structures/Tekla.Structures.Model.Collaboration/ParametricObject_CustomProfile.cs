@@ -40,6 +40,29 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         }
     }
 
+    internal static class ParametricObject_CustomProfileArray_
+    {
+        public static dynamic GetTSObject(ParametricObject_CustomProfile[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ParametricObject_CustomProfile_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ParametricObject_CustomProfile[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ParametricObject_CustomProfile>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ParametricObject_CustomProfile_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

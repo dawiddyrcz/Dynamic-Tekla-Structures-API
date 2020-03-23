@@ -46,6 +46,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CannotInsertDrawingExceptionArray_
+    {
+        public static dynamic GetTSObject(CannotInsertDrawingException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CannotInsertDrawingException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CannotInsertDrawingException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CannotInsertDrawingException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CannotInsertDrawingException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

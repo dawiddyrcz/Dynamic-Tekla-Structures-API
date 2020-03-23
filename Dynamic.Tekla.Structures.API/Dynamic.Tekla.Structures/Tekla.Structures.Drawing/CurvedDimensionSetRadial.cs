@@ -100,6 +100,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class CurvedDimensionSetRadialAttributesArray_
+    {
+        public static dynamic GetTSObject(CurvedDimensionSetRadialAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedDimensionSetRadialAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedDimensionSetRadialAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedDimensionSetRadialAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedDimensionSetRadialAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -119,6 +142,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CurvedDimensionSetRadialArray_
+    {
+        public static dynamic GetTSObject(CurvedDimensionSetRadial[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CurvedDimensionSetRadial_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CurvedDimensionSetRadial[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CurvedDimensionSetRadial>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CurvedDimensionSetRadial_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

@@ -125,6 +125,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ContourPlateArray_
+    {
+        public static dynamic GetTSObject(ContourPlate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ContourPlate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ContourPlate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ContourPlate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ContourPlate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

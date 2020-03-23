@@ -44,6 +44,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class IObjectAlignedBoundingBoxArray_
+    {
+        public static dynamic GetTSObject(IObjectAlignedBoundingBox[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IObjectAlignedBoundingBox_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IObjectAlignedBoundingBox[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IObjectAlignedBoundingBox>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IObjectAlignedBoundingBox_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

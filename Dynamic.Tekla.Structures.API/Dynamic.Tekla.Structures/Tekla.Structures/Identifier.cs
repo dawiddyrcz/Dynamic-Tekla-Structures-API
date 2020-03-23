@@ -84,6 +84,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class IdentifierArray_
+    {
+        public static dynamic GetTSObject(Identifier[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Identifier_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Identifier[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Identifier>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Identifier_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

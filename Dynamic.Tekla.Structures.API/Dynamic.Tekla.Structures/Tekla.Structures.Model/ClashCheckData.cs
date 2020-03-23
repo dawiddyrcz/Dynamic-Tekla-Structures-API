@@ -142,6 +142,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ClashCheckDataArray_
+    {
+        public static dynamic GetTSObject(ClashCheckData[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClashCheckData_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClashCheckData[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClashCheckData>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClashCheckData_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -78,6 +78,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ModelHandlerArray_
+    {
+        public static dynamic GetTSObject(ModelHandler[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ModelHandler_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ModelHandler[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ModelHandler>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ModelHandler_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

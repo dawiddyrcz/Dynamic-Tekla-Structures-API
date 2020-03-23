@@ -84,6 +84,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ColorArray_
+    {
+        public static dynamic GetTSObject(Color[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Color_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Color[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Color>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Color_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

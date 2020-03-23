@@ -63,6 +63,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ClipPlaneCollectionArray_
+    {
+        public static dynamic GetTSObject(ClipPlaneCollection[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ClipPlaneCollection_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ClipPlaneCollection[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ClipPlaneCollection>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ClipPlaneCollection_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

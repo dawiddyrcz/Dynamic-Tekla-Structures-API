@@ -153,6 +153,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PluginArray_
+    {
+        public static dynamic GetTSObject(Plugin[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Plugin_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Plugin[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Plugin>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Plugin_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

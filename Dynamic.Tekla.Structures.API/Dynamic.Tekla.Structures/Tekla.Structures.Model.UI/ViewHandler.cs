@@ -134,6 +134,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class ViewHandlerArray_
+    {
+        public static dynamic GetTSObject(ViewHandler[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ViewHandler_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ViewHandler[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ViewHandler>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ViewHandler_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

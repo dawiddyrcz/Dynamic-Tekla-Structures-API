@@ -63,6 +63,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
         }
     }
 
+    internal static class PickInputArray_
+    {
+        public static dynamic GetTSObject(PickInput[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PickInput_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PickInput[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PickInput>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PickInput_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

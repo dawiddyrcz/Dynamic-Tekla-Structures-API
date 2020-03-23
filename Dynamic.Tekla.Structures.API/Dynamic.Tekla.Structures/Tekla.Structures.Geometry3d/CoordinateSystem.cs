@@ -69,6 +69,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class CoordinateSystemArray_
+    {
+        public static dynamic GetTSObject(CoordinateSystem[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CoordinateSystem_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CoordinateSystem[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CoordinateSystem>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CoordinateSystem_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -57,6 +57,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class GraphicObjectHatchAttributesArray_
+    {
+        public static dynamic GetTSObject(GraphicObjectHatchAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GraphicObjectHatchAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GraphicObjectHatchAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GraphicObjectHatchAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GraphicObjectHatchAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

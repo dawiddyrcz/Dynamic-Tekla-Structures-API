@@ -62,6 +62,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class NumberingSeriesNullableArray_
+    {
+        public static dynamic GetTSObject(NumberingSeriesNullable[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(NumberingSeriesNullable_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static NumberingSeriesNullable[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<NumberingSeriesNullable>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(NumberingSeriesNullable_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

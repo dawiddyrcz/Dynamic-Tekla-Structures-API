@@ -99,6 +99,29 @@ namespace Dynamic.Tekla.Structures
         }
     }
 
+    internal static class TeklaStructuresInfoArray_
+    {
+        public static dynamic GetTSObject(TeklaStructuresInfo[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TeklaStructuresInfo_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TeklaStructuresInfo[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TeklaStructuresInfo>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TeklaStructuresInfo_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

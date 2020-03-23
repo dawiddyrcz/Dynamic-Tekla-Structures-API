@@ -48,6 +48,29 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
         }
     }
 
+    internal static class DrawingCreatorArray_
+    {
+        public static dynamic GetTSObject(DrawingCreator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DrawingCreator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DrawingCreator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DrawingCreator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DrawingCreator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

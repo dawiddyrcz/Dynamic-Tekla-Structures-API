@@ -253,6 +253,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class TextAttributesArray_
+    {
+        public static dynamic GetTSObject(TextAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TextAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TextAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TextAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TextAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -272,6 +295,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Text)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class TextArray_
+    {
+        public static dynamic GetTSObject(Text[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Text_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Text[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Text>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Text_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

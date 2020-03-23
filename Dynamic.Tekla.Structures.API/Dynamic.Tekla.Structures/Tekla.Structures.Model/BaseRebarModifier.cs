@@ -178,6 +178,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BaseRebarModifierArray_
+    {
+        public static dynamic GetTSObject(BaseRebarModifier[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BaseRebarModifier_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BaseRebarModifier[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BaseRebarModifier>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BaseRebarModifier_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

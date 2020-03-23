@@ -178,6 +178,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class WeldAttributesArray_
+    {
+        public static dynamic GetTSObject(WeldAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(WeldAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static WeldAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<WeldAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(WeldAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -197,6 +220,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Weld)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class WeldArray_
+    {
+        public static dynamic GetTSObject(Weld[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Weld_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Weld[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Weld>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Weld_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

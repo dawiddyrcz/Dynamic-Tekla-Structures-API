@@ -99,6 +99,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class BendSurfaceArray_
+    {
+        public static dynamic GetTSObject(BendSurface[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BendSurface_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BendSurface[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BendSurface>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BendSurface_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

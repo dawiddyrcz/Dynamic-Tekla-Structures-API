@@ -256,6 +256,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class SurfaceTreatmentArray_
+    {
+        public static dynamic GetTSObject(SurfaceTreatment[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SurfaceTreatment_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SurfaceTreatment[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SurfaceTreatment>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SurfaceTreatment_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

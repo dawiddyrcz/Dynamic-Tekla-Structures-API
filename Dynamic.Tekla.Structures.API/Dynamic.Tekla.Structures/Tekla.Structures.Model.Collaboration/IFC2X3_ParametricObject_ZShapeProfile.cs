@@ -76,6 +76,29 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
         }
     }
 
+    internal static class IFC2X3_ParametricObject_ZShapeProfileArray_
+    {
+        public static dynamic GetTSObject(IFC2X3_ParametricObject_ZShapeProfile[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(IFC2X3_ParametricObject_ZShapeProfile_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static IFC2X3_ParametricObject_ZShapeProfile[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<IFC2X3_ParametricObject_ZShapeProfile>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(IFC2X3_ParametricObject_ZShapeProfile_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

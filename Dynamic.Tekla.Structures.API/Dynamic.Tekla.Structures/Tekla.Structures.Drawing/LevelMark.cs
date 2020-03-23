@@ -361,6 +361,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class LevelMarkAttributesArray_
+    {
+        public static dynamic GetTSObject(LevelMarkAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LevelMarkAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LevelMarkAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LevelMarkAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LevelMarkAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -380,6 +403,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.LevelMark)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class LevelMarkArray_
+    {
+        public static dynamic GetTSObject(LevelMark[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LevelMark_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LevelMark[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LevelMark>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LevelMark_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

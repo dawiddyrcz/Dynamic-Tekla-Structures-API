@@ -52,6 +52,29 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
         }
     }
 
+    internal static class AutoDrawingRuleArray_
+    {
+        public static dynamic GetTSObject(AutoDrawingRule[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(AutoDrawingRule_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static AutoDrawingRule[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<AutoDrawingRule>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(AutoDrawingRule_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -172,6 +172,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class ParallelArray_
+    {
+        public static dynamic GetTSObject(Parallel[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Parallel_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Parallel[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Parallel>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Parallel_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -118,6 +118,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class MarkAttributesArray_
+    {
+        public static dynamic GetTSObject(MarkAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(MarkAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static MarkAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<MarkAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(MarkAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -137,6 +160,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Mark)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class MarkArray_
+    {
+        public static dynamic GetTSObject(Mark[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Mark_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Mark[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Mark>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Mark_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

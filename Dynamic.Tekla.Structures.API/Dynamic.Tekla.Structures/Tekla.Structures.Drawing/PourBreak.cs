@@ -120,6 +120,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PourBreakAttributesArray_
+    {
+        public static dynamic GetTSObject(PourBreakAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourBreakAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourBreakAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourBreakAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourBreakAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -139,6 +162,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.PourBreak)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PourBreakArray_
+    {
+        public static dynamic GetTSObject(PourBreak[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PourBreak_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PourBreak[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PourBreak>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PourBreak_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

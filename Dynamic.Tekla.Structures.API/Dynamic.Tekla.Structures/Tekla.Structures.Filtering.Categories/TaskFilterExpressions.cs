@@ -58,6 +58,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class CustomBooleanArray_
+    {
+        public static dynamic GetTSObject(CustomBoolean[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CustomBoolean_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CustomBoolean[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CustomBoolean>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CustomBoolean_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class CustomDateTime  : Dynamic.Tekla.Structures.Filtering.DateTimeFilterExpression
@@ -95,6 +118,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions.CustomDateTime)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CustomDateTimeArray_
+    {
+        public static dynamic GetTSObject(CustomDateTime[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CustomDateTime_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CustomDateTime[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CustomDateTime>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CustomDateTime_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -138,6 +184,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class CustomNumberArray_
+    {
+        public static dynamic GetTSObject(CustomNumber[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CustomNumber_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CustomNumber[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CustomNumber>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CustomNumber_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class CustomString  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
@@ -178,6 +247,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class CustomStringArray_
+    {
+        public static dynamic GetTSObject(CustomString[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CustomString_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CustomString[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CustomString>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CustomString_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ActualEndDate  : Dynamic.Tekla.Structures.Filtering.DateTimeFilterExpression
@@ -212,6 +304,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions.ActualEndDate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ActualEndDateArray_
+    {
+        public static dynamic GetTSObject(ActualEndDate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ActualEndDate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ActualEndDate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ActualEndDate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ActualEndDate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -252,6 +367,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class ActualStartDateArray_
+    {
+        public static dynamic GetTSObject(ActualStartDate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ActualStartDate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ActualStartDate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ActualStartDate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ActualStartDate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class Completeness  : Dynamic.Tekla.Structures.Filtering.NumericFilterExpression
@@ -286,6 +424,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Completeness)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CompletenessArray_
+    {
+        public static dynamic GetTSObject(Completeness[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Completeness_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Completeness[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Completeness>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Completeness_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -326,6 +487,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class CriticalArray_
+    {
+        public static dynamic GetTSObject(Critical[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Critical_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Critical[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Critical>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Critical_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class Local  : Dynamic.Tekla.Structures.Filtering.StringFilterExpression
@@ -360,6 +544,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions.Local)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class LocalArray_
+    {
+        public static dynamic GetTSObject(Local[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Local_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Local[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Local>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Local_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -400,6 +607,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class NameArray_
+    {
+        public static dynamic GetTSObject(Name[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Name_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Name[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Name>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Name_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class PlannedEndDate  : Dynamic.Tekla.Structures.Filtering.DateTimeFilterExpression
@@ -434,6 +664,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions.PlannedEndDate)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class PlannedEndDateArray_
+    {
+        public static dynamic GetTSObject(PlannedEndDate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PlannedEndDate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PlannedEndDate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PlannedEndDate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PlannedEndDate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -474,6 +727,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
         }
     }
 
+    internal static class PlannedStartDateArray_
+    {
+        public static dynamic GetTSObject(PlannedStartDate[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PlannedStartDate_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PlannedStartDate[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PlannedStartDate>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PlannedStartDate_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -493,6 +769,29 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
             var dynObject = (Dynamic.Tekla.Structures.Filtering.Categories.TaskFilterExpressions)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class TaskFilterExpressionsArray_
+    {
+        public static dynamic GetTSObject(TaskFilterExpressions[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TaskFilterExpressions_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TaskFilterExpressions[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TaskFilterExpressions>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TaskFilterExpressions_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

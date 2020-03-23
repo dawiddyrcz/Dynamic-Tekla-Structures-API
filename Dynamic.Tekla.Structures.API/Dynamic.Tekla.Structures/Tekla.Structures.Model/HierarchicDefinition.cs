@@ -121,6 +121,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class HierarchicDefinitionArray_
+    {
+        public static dynamic GetTSObject(HierarchicDefinition[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(HierarchicDefinition_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static HierarchicDefinition[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<HierarchicDefinition>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(HierarchicDefinition_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

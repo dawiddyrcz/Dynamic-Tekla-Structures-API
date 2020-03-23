@@ -197,6 +197,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class BoltAttributesArray_
+    {
+        public static dynamic GetTSObject(BoltAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BoltAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BoltAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BoltAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BoltAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -216,6 +239,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.Bolt)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class BoltArray_
+    {
+        public static dynamic GetTSObject(Bolt[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Bolt_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Bolt[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Bolt>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Bolt_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

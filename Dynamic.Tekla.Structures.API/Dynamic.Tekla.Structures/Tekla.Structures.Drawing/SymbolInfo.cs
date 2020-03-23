@@ -67,6 +67,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SymbolInfoArray_
+    {
+        public static dynamic GetTSObject(SymbolInfo[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SymbolInfo_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SymbolInfo[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SymbolInfo>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SymbolInfo_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

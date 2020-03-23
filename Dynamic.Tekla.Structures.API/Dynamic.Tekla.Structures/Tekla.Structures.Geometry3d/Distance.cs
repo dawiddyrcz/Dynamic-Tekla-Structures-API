@@ -75,6 +75,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class DistanceArray_
+    {
+        public static dynamic GetTSObject(Distance[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Distance_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Distance[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Distance>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Distance_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

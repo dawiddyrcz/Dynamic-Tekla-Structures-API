@@ -95,6 +95,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class SinglePartDrawingArray_
+    {
+        public static dynamic GetTSObject(SinglePartDrawing[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(SinglePartDrawing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static SinglePartDrawing[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<SinglePartDrawing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(SinglePartDrawing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

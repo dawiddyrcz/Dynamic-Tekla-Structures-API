@@ -344,6 +344,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementSingleAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementSingleAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementSingleAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementSingleAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementSingleAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementSingleAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ReinforcementGroupAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
@@ -410,6 +433,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementGroupAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementGroupAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementGroupAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementGroupAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementGroupAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementGroupAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class ReinforcementSetGroupAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
@@ -473,6 +519,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReinforcementSetGroupAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementSetGroupAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementSetGroupAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementSetGroupAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementSetGroupAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementSetGroupAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -545,6 +614,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReinforcementStrandAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementStrandAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementStrandAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementStrandAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementStrandAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementStrandAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -623,6 +715,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementMeshAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReinforcementMeshAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementMeshAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementMeshAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementMeshAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementMeshAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementMeshAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -705,6 +820,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class ReinforcementBaseAttributesArray_
+    {
+        public static dynamic GetTSObject(ReinforcementBaseAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementBaseAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementBaseAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementBaseAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementBaseAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -724,6 +862,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.ReinforcementBase)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class ReinforcementBaseArray_
+    {
+        public static dynamic GetTSObject(ReinforcementBase[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ReinforcementBase_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ReinforcementBase[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ReinforcementBase>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ReinforcementBase_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

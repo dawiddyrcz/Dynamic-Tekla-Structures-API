@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Solid
         }
     }
 
+    internal static class LoopEnumeratorArray_
+    {
+        public static dynamic GetTSObject(LoopEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LoopEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LoopEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LoopEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LoopEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

@@ -66,6 +66,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class DateTimeConstantFilterExpressionArray_
+    {
+        public static dynamic GetTSObject(DateTimeConstantFilterExpression[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DateTimeConstantFilterExpression_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DateTimeConstantFilterExpression[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DateTimeConstantFilterExpression>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DateTimeConstantFilterExpression_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

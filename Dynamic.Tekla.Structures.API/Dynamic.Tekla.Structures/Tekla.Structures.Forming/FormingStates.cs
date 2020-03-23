@@ -92,6 +92,29 @@ namespace Dynamic.Tekla.Structures.Forming
         }
     }
 
+    internal static class FormingStatesArray_
+    {
+        public static dynamic GetTSObject(FormingStates[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(FormingStates_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static FormingStates[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<FormingStates>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(FormingStates_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

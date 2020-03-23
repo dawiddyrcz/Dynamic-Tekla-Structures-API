@@ -49,6 +49,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PolygonArray_
+    {
+        public static dynamic GetTSObject(Polygon[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Polygon_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Polygon[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Polygon>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Polygon_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

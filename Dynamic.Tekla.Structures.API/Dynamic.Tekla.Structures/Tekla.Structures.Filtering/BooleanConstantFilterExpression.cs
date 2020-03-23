@@ -53,6 +53,29 @@ namespace Dynamic.Tekla.Structures.Filtering
         }
     }
 
+    internal static class BooleanConstantFilterExpressionArray_
+    {
+        public static dynamic GetTSObject(BooleanConstantFilterExpression[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(BooleanConstantFilterExpression_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static BooleanConstantFilterExpression[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<BooleanConstantFilterExpression>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(BooleanConstantFilterExpression_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

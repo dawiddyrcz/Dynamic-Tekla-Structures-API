@@ -93,6 +93,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class FontAttributesArray_
+    {
+        public static dynamic GetTSObject(FontAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(FontAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static FontAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<FontAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(FontAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

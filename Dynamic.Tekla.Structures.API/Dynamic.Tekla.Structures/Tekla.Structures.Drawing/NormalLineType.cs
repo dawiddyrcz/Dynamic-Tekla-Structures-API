@@ -68,6 +68,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class NormalLineTypeArray_
+    {
+        public static dynamic GetTSObject(NormalLineType[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(NormalLineType_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static NormalLineType[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<NormalLineType>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(NormalLineType_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

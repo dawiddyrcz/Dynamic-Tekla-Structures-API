@@ -43,6 +43,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class NullRulingExceptionArray_
+    {
+        public static dynamic GetTSObject(NullRulingException[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(NullRulingException_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static NullRulingException[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<NullRulingException>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(NullRulingException_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

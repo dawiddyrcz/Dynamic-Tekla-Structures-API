@@ -87,6 +87,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class ConicalSurfaceArray_
+    {
+        public static dynamic GetTSObject(ConicalSurface[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ConicalSurface_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ConicalSurface[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<ConicalSurface>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ConicalSurface_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

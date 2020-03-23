@@ -79,6 +79,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class FrameArray_
+    {
+        public static dynamic GetTSObject(Frame[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(Frame_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static Frame[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<Frame>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(Frame_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

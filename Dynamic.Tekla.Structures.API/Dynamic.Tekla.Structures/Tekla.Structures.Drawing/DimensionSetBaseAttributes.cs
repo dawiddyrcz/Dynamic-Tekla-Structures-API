@@ -797,6 +797,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DimensionFormatAttributesArray_
+    {
+        public static dynamic GetTSObject(DimensionFormatAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DimensionFormatAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DimensionFormatAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DimensionFormatAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DimensionFormatAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class DimensionPlacingAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
@@ -862,6 +885,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionPlacingAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class DimensionPlacingAttributesArray_
+    {
+        public static dynamic GetTSObject(DimensionPlacingAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DimensionPlacingAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DimensionPlacingAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DimensionPlacingAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DimensionPlacingAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -933,6 +979,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DimensionTextAttributesArray_
+    {
+        public static dynamic GetTSObject(DimensionTextAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DimensionTextAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DimensionTextAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DimensionTextAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DimensionTextAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
     public  class CombinedDimensionAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
@@ -991,6 +1060,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombinedDimensionAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class CombinedDimensionAttributesArray_
+    {
+        public static dynamic GetTSObject(CombinedDimensionAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(CombinedDimensionAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static CombinedDimensionAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<CombinedDimensionAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(CombinedDimensionAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 
@@ -1083,6 +1175,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class DimensionExaggerationAttributesArray_
+    {
+        public static dynamic GetTSObject(DimensionExaggerationAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DimensionExaggerationAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DimensionExaggerationAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DimensionExaggerationAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DimensionExaggerationAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 
@@ -1102,6 +1217,29 @@ namespace Dynamic.Tekla.Structures.Drawing
             var dynObject = (Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes)System.Activator.CreateInstance(type);
             dynObject.teklaObject = tsObject;
             return dynObject;
+        }
+    }
+
+    internal static class DimensionSetBaseAttributesArray_
+    {
+        public static dynamic GetTSObject(DimensionSetBaseAttributes[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(DimensionSetBaseAttributes_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static DimensionSetBaseAttributes[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<DimensionSetBaseAttributes>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(DimensionSetBaseAttributes_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
         }
     }
 

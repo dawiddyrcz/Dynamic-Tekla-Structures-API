@@ -81,6 +81,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         }
     }
 
+    internal static class GeometricPlaneArray_
+    {
+        public static dynamic GetTSObject(GeometricPlane[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(GeometricPlane_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static GeometricPlane[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<GeometricPlane>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(GeometricPlane_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

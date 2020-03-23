@@ -56,6 +56,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class PolymeshEnumeratorArray_
+    {
+        public static dynamic GetTSObject(PolymeshEnumerator[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PolymeshEnumerator_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PolymeshEnumerator[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PolymeshEnumerator>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PolymeshEnumerator_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

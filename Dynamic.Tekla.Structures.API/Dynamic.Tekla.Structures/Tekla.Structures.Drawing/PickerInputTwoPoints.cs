@@ -65,6 +65,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class PickerInputTwoPointsArray_
+    {
+        public static dynamic GetTSObject(PickerInputTwoPoints[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(PickerInputTwoPoints_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static PickerInputTwoPoints[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<PickerInputTwoPoints>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(PickerInputTwoPoints_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

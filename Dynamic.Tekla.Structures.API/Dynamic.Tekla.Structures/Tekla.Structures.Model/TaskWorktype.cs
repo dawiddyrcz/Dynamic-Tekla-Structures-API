@@ -69,6 +69,29 @@ namespace Dynamic.Tekla.Structures.Model
         }
     }
 
+    internal static class TaskWorktypeArray_
+    {
+        public static dynamic GetTSObject(TaskWorktype[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(TaskWorktype_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static TaskWorktype[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<TaskWorktype>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(TaskWorktype_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

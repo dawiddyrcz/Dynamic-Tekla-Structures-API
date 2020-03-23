@@ -139,6 +139,29 @@ namespace Dynamic.Tekla.Structures.Drawing
         }
     }
 
+    internal static class LeaderLineArray_
+    {
+        public static dynamic GetTSObject(LeaderLine[] dynArray)
+        {
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(LeaderLine_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static LeaderLine[] FromTSObject(dynamic[] tsArray)
+        {
+            var list = new System.Collections.Generic.List<LeaderLine>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(LeaderLine_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 }
     

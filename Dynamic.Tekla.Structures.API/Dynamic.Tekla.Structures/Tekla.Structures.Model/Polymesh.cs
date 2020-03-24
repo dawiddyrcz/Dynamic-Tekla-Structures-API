@@ -48,6 +48,17 @@ namespace Dynamic.Tekla.Structures.Model
 			return result;
 		}
 
+		public static System.Boolean GetSolidBrep(Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep, out Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep)
+		{
+			var parameters = new object[2];
+			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep);
+			outBrep = new Dynamic.Tekla.Structures.Geometry3d.FacetedBrep();
+			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep);
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "GetSolidBrep", parameters);
+			outBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(parameters[1]);
+			return result;
+		}
+
 
 
 

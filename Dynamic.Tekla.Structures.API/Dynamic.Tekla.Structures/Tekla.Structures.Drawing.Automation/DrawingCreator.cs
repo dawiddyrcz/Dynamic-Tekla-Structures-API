@@ -16,6 +16,30 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
         internal dynamic teklaObject;
 
 
+		public static System.Boolean CreateDrawings(Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule Rule, System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> aModelObjectIdentifier, out Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum OperationStatus)
+		{
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule);
+			parameters[1] = aModelObjectIdentifier;
+			OperationStatus = new Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum();
+			parameters[2] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus);
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", parameters);
+			OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(parameters[2]);
+			return result;
+		}
+
+		public static System.Boolean CreateDrawings(Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule Rule, Dynamic.Tekla.Structures.Identifier ModelObjectIdentifier, out Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum OperationStatus)
+		{
+			var parameters = new object[3];
+			parameters[0] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule);
+			parameters[1] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelObjectIdentifier);
+			OperationStatus = new Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum();
+			parameters[2] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus);
+			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", parameters);
+			OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(parameters[2]);
+			return result;
+		}
+
 		public static System.Boolean CreateDrawings(Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule Rule, Dynamic.Tekla.Structures.Identifier ModelObjectIdentifier)
 		{
 			var parameters = new object[2];

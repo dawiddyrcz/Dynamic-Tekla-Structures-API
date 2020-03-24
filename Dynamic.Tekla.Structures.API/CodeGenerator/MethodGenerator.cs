@@ -25,7 +25,7 @@ namespace CodeGenerator
 
                 var name = method.Name;
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
-                if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
+               
 
                 if (method.IsStatic)
                 {
@@ -40,6 +40,8 @@ namespace CodeGenerator
                 }
                 else
                 {
+                    if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
+
                     if (IsTeklaType(method.ReturnType))
                     {
                         NonStatic_GenerateForTeklaReturnType(sb, method, name);

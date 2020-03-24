@@ -204,7 +204,8 @@ namespace CodeGenerator
                     if (paramTypeFullName.Equals("System.String", StringComparison.InvariantCulture))
                         sb.Append("\t\t\t" + parameters[i].Name + " = string.Empty;\n");
                     else
-                        sb.Append("\t\t\t" + parameters[i].Name + " = new " + paramTypeFullName + "();\n");
+                       // sb.Append("\t\t\t" + parameters[i].Name + " = new " + paramTypeFullName + "();\n");
+                    sb.Append("\t\t\t" + parameters[i].Name + " = null;\n");
                 }
 
                 if (IsTeklaType(parameters[i].ParameterType))

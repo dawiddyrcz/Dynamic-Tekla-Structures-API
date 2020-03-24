@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
 			var parameters = new object[3];
 			parameters[0] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule);
 			parameters[1] = aModelObjectIdentifier;
-			OperationStatus = new Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum();
+			OperationStatus = null;
 			parameters[2] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", parameters);
 			OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(parameters[2]);
@@ -33,7 +33,7 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
 			var parameters = new object[3];
 			parameters[0] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule);
 			parameters[1] = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelObjectIdentifier);
-			OperationStatus = new Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum();
+			OperationStatus = null;
 			parameters[2] = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus);
 			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", parameters);
 			OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(parameters[2]);

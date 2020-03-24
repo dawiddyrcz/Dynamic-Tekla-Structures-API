@@ -21,11 +21,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetRelatedObjects());
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects(System.Type[] TypeFilter)
-		{
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetRelatedObjects(TypeFilter));
-		}
-
 
 
 

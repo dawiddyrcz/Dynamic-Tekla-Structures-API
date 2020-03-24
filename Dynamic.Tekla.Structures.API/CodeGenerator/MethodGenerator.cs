@@ -23,6 +23,14 @@ namespace CodeGenerator
                 if (type.Name.Equals("Polymesh", StringComparison.InvariantCulture) && method.Name.Equals("Validate", StringComparison.InvariantCulture)) continue;
                 if (method.ReturnType.IsInterface) continue;
 
+                if (method.GetParameters().Count() == 1)
+                {
+                    if (method.GetParameters()[0].ParameterType.Equals(typeof(System.Type[])))
+                    {
+                        continue;
+                    }
+                }
+
                 var name = method.Name;
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
                

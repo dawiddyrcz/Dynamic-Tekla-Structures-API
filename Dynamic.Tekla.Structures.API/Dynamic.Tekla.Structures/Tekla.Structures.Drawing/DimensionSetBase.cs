@@ -33,11 +33,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects(System.Type[] TypeFilter)
-		{
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects(TypeFilter));
-		}
-
 		public System.Boolean AddToDimensionSet(Dynamic.Tekla.Structures.Drawing.DimensionSetBase SetToAdd)
 		{
 			return teklaObject.AddToDimensionSet(Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.GetTSObject(SetToAdd));

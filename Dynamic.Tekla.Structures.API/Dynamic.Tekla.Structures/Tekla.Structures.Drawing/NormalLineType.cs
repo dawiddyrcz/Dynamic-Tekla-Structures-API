@@ -27,24 +27,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
-		public static System.Boolean op_Equality(Dynamic.Tekla.Structures.Drawing.NormalLineType a, Dynamic.Tekla.Structures.Drawing.NormalLineType b)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(a);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(b);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.NormalLineType", "op_Equality", parameters);
-			return result;
-		}
-
-		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Drawing.NormalLineType a, Dynamic.Tekla.Structures.Drawing.NormalLineType b)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(a);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(b);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.NormalLineType", "op_Inequality", parameters);
-			return result;
-		}
-
 		public System.Object Clone()
 		{
 			return teklaObject.Clone();

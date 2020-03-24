@@ -92,24 +92,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
 		}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(Dynamic.Tekla.Structures.Geometry3d.Vector Vector, System.Double Multiplier)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector);
-			parameters[1] = Multiplier;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "op_Multiply", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
-		}
-
-		public static Dynamic.Tekla.Structures.Geometry3d.Vector op_Multiply(System.Double Multiplier, Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
-		{
-			var parameters = new object[2];
-			parameters[0] = Multiplier;
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "op_Multiply", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
-		}
-
 
 
 

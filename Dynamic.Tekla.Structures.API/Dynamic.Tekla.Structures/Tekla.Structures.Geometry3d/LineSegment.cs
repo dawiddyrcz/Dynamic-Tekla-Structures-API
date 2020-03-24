@@ -66,24 +66,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
 		}
 
-		public static System.Boolean op_Equality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.LineSegment", "op_Equality", parameters);
-			return result;
-		}
-
-		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment1, Dynamic.Tekla.Structures.Geometry3d.LineSegment Segment2)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment1);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(Segment2);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.LineSegment", "op_Inequality", parameters);
-			return result;
-		}
-
 
 
 

@@ -25,66 +25,6 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			this.teklaObject = tsObject;
 		}
 
-		public void add_SelectionChange(Dynamic.Tekla.Structures.Drawing.UI.Events.SelectionChangeDelegate value)
-		{
-			teklaObject.add_SelectionChange(Dynamic.Tekla.Structures.Drawing.UI.Events.SelectionChangeDelegate_.GetTSObject(value));
-		}
-
-		public void remove_SelectionChange(Dynamic.Tekla.Structures.Drawing.UI.Events.SelectionChangeDelegate value)
-		{
-			teklaObject.remove_SelectionChange(Dynamic.Tekla.Structures.Drawing.UI.Events.SelectionChangeDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingEditorOpened(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorOpenedDelegate value)
-		{
-			teklaObject.add_DrawingEditorOpened(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorOpenedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingEditorOpened(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorOpenedDelegate value)
-		{
-			teklaObject.remove_DrawingEditorOpened(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorOpenedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingEditorClosed(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorClosedDelegate value)
-		{
-			teklaObject.add_DrawingEditorClosed(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorClosedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingEditorClosed(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorClosedDelegate value)
-		{
-			teklaObject.remove_DrawingEditorClosed(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingEditorClosedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingLoaded(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingLoadedDelegate value)
-		{
-			teklaObject.add_DrawingLoaded(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingLoadedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingLoaded(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingLoadedDelegate value)
-		{
-			teklaObject.remove_DrawingLoaded(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingLoadedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingListSelectionChanged(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingListSelectionChangedDelegate value)
-		{
-			teklaObject.add_DrawingListSelectionChanged(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingListSelectionChangedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingListSelectionChanged(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingListSelectionChangedDelegate value)
-		{
-			teklaObject.remove_DrawingListSelectionChanged(Dynamic.Tekla.Structures.Drawing.UI.Events.DrawingListSelectionChangedDelegate_.GetTSObject(value));
-		}
-
-		public void add_Interrupted(Dynamic.Tekla.Structures.Drawing.UI.Events.InterruptedDelegate value)
-		{
-			teklaObject.add_Interrupted(Dynamic.Tekla.Structures.Drawing.UI.Events.InterruptedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_Interrupted(Dynamic.Tekla.Structures.Drawing.UI.Events.InterruptedDelegate value)
-		{
-			teklaObject.remove_Interrupted(Dynamic.Tekla.Structures.Drawing.UI.Events.InterruptedDelegate_.GetTSObject(value));
-		}
-
 		public void OnSelectionChange(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnSelectionChange(EventName, Parameters);

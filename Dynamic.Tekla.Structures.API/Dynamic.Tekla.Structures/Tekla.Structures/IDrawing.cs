@@ -34,36 +34,6 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void add_DrawingLoaded(System.EventHandler value)
-		{
-			teklaObject.add_DrawingLoaded(value);
-		}
-
-		public void remove_DrawingLoaded(System.EventHandler value)
-		{
-			teklaObject.remove_DrawingLoaded(value);
-		}
-
-		public void add_EditorClosed(System.EventHandler value)
-		{
-			teklaObject.add_EditorClosed(value);
-		}
-
-		public void remove_EditorClosed(System.EventHandler value)
-		{
-			teklaObject.remove_EditorClosed(value);
-		}
-
-		public void add_EditorOpened(System.EventHandler value)
-		{
-			teklaObject.add_EditorOpened(value);
-		}
-
-		public void remove_EditorOpened(System.EventHandler value)
-		{
-			teklaObject.remove_EditorOpened(value);
-		}
-
 		public System.Boolean Close()
 		{
 			return teklaObject.Close();

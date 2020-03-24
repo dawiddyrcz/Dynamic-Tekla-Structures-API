@@ -16,7 +16,7 @@ namespace CodeGenerator
         public static string GetText(Type type)
         {
             var sb = new StringBuilder();
-            var methods = GetMethodsFromType(type);
+            var methods = GetMethodsFromType(type).Where(m=>!m.IsSpecialName);
 
             foreach (var method in methods)
             {
@@ -25,7 +25,6 @@ namespace CodeGenerator
 
                 var name = method.Name;
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
-                if (name.Contains("get_") || name.Contains("set_")) continue;
                 if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
 
                 if (method.IsStatic)

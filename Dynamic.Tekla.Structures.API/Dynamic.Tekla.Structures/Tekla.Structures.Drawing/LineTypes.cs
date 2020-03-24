@@ -24,43 +24,9 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
 		}
 
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes op_Explicit(System.Int32 value)
-		{
-			var parameters = new object[1];
-			parameters[0] = value;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "op_Explicit", parameters);
-			return Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
-		}
-
-		public static System.Int32 op_Explicit(Dynamic.Tekla.Structures.Drawing.LineTypes lineType)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(lineType);
-			var result = (System.Int32) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "op_Explicit", parameters);
-			return result;
-		}
-
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
 			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public static System.Boolean op_Equality(Dynamic.Tekla.Structures.Drawing.LineTypes a, Dynamic.Tekla.Structures.Drawing.LineTypes b)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(a);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(b);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "op_Equality", parameters);
-			return result;
-		}
-
-		public static System.Boolean op_Inequality(Dynamic.Tekla.Structures.Drawing.LineTypes a, Dynamic.Tekla.Structures.Drawing.LineTypes b)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(a);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(b);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "op_Inequality", parameters);
-			return result;
 		}
 
 		public System.Object Clone()

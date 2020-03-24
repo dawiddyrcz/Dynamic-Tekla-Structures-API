@@ -31,56 +31,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public void add_DrawingInserted(Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate value)
-		{
-			teklaObject.add_DrawingInserted(Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingInserted(Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate value)
-		{
-			teklaObject.remove_DrawingInserted(Dynamic.Tekla.Structures.Drawing.Events.DrawingInsertedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingDeleted(Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate value)
-		{
-			teklaObject.add_DrawingDeleted(Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingDeleted(Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate value)
-		{
-			teklaObject.remove_DrawingDeleted(Dynamic.Tekla.Structures.Drawing.Events.DrawingDeletedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingStatusChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate value)
-		{
-			teklaObject.add_DrawingStatusChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingStatusChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate value)
-		{
-			teklaObject.remove_DrawingStatusChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate value)
-		{
-			teklaObject.add_DrawingChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate value)
-		{
-			teklaObject.remove_DrawingChanged(Dynamic.Tekla.Structures.Drawing.Events.DrawingStatusChangedDelegate_.GetTSObject(value));
-		}
-
-		public void add_DrawingUpdated(Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate value)
-		{
-			teklaObject.add_DrawingUpdated(Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate_.GetTSObject(value));
-		}
-
-		public void remove_DrawingUpdated(Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate value)
-		{
-			teklaObject.remove_DrawingUpdated(Dynamic.Tekla.Structures.Drawing.Events.DrawingUpdatedDelegate_.GetTSObject(value));
-		}
-
 		public void OnDrawingInserted(System.String EventName, System.Object[] Parameters)
 		{
 			teklaObject.OnDrawingInserted(EventName, Parameters);

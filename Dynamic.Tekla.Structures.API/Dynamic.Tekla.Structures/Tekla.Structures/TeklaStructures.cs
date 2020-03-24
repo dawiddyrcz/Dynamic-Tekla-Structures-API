@@ -76,20 +76,6 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public static void add_Closed(System.EventHandler value)
-		{
-			var parameters = new object[1];
-			parameters[0] = value;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "add_Closed", parameters);
-		}
-
-		public static void remove_Closed(System.EventHandler value)
-		{
-			var parameters = new object[1];
-			parameters[0] = value;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "remove_Closed", parameters);
-		}
-
 		public static System.Boolean Connect()
 		{
 			var parameters = new object[0];

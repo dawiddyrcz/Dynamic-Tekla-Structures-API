@@ -28,46 +28,6 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void add_Changed(System.EventHandler value)
-		{
-			teklaObject.add_Changed(value);
-		}
-
-		public void remove_Changed(System.EventHandler value)
-		{
-			teklaObject.remove_Changed(value);
-		}
-
-		public void add_Loaded(System.EventHandler value)
-		{
-			teklaObject.add_Loaded(value);
-		}
-
-		public void remove_Loaded(System.EventHandler value)
-		{
-			teklaObject.remove_Loaded(value);
-		}
-
-		public void add_Numbering(System.EventHandler value)
-		{
-			teklaObject.add_Numbering(value);
-		}
-
-		public void remove_Numbering(System.EventHandler value)
-		{
-			teklaObject.remove_Numbering(value);
-		}
-
-		public void add_Saved(System.EventHandler value)
-		{
-			teklaObject.add_Saved(value);
-		}
-
-		public void remove_Saved(System.EventHandler value)
-		{
-			teklaObject.remove_Saved(value);
-		}
-
 
 
 

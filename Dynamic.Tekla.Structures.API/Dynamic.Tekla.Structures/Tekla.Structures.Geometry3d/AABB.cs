@@ -70,33 +70,6 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			return teklaObject.Collide(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other));
 		}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB AABB1, Dynamic.Tekla.Structures.Geometry3d.AABB AABB2)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB1);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB2);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.AABB", "op_Addition", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(result);
-		}
-
-		public static Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.AABB AABB, Dynamic.Tekla.Structures.Geometry3d.Point Point)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.AABB", "op_Addition", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(result);
-		}
-
-		public static Dynamic.Tekla.Structures.Geometry3d.AABB op_Addition(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.AABB AABB)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(AABB);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.AABB", "op_Addition", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(result);
-		}
-
 
 
 

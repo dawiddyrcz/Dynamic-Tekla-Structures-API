@@ -48,15 +48,27 @@ namespace CodeGenerator
                 }
                 else
                 {
-                    if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType))) continue;
-
-                    if (IsTeklaType(method.ReturnType))
+                    if (method.GetParameters().Any(p => p.IsOut && IsTeklaType(p.ParameterType)))
                     {
-                        NonStatic_GenerateForTeklaReturnType(sb, method, name);
+                        if (IsTeklaType(method.ReturnType))
+                        {
+                            Ref_Out_GenerateForTeklaReturnType(sb, method, name, type);
+                        }
+                        else
+                        {
+                            Ref_Out_GenerateForNotTeklaReturnType(sb, method, name, type);
+                        }
                     }
                     else
                     {
-                        NonStatic_GenerateForNotTeklaReturnType(sb, method, name);
+                        if (IsTeklaType(method.ReturnType))
+                        {
+                            NonStatic_GenerateForTeklaReturnType(sb, method, name);
+                        }
+                        else
+                        {
+                            NonStatic_GenerateForNotTeklaReturnType(sb, method, name);
+                        }
                     }
                 }
 
@@ -158,8 +170,7 @@ namespace CodeGenerator
             sb.Append(" ");
             sb.Append(name);
             sb.Append("(");
-
-            bool anyParameterIsRefOrOut = false;
+            
             var parameters = method.GetParameters();
             //params in method name
             foreach (var param in parameters)
@@ -170,15 +181,9 @@ namespace CodeGenerator
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
 
                 if (param.IsOut)
-                {
                     sb.Append("out ");
-                    anyParameterIsRefOrOut = true;
-                }
                 else if (param.ParameterType.IsByRef)
-                {
                     sb.Append("ref ");
-                    anyParameterIsRefOrOut = true;
-                }
                 
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
@@ -215,6 +220,111 @@ namespace CodeGenerator
             if (!typeFullName.Equals("void"))
                 sb.Append("var result = (" + GetTypeFullName(method.ReturnType) + ") ");
             sb.Append("TSActivator.InvokeStaticMethod(\"");
+            sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
+            sb.Append("\", \"");
+            sb.Append(method.Name);
+            sb.Append("\", parameters);\n");
+
+            //ref out parameters            
+            int j = 0;
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                if (param.IsOut || param.ParameterType.IsByRef)
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append(paramName);
+                    sb.Append(" = ");
+
+                    var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                    if (IsTeklaType(param.ParameterType))
+                    {
+                        sb.Append(CorrectIfArray(paramTypeFullName) + "_.FromTSObject(");
+                        sb.Append("parameters[" + j + "]);\n");
+                    }
+                    else
+                    {
+                        sb.Append("(" + paramTypeFullName + ") ");
+                        sb.Append("parameters[" + j + "];\n");
+                    }
+
+                }
+                j++;
+            }
+
+            if (!typeFullName.Equals("void"))
+            {
+                sb.Append("\t\t\treturn result;\n");
+
+            }
+            sb.Append("\t\t}");
+        }
+
+        private static void Ref_Out_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)
+        {
+            sb.Append("\t\t");
+            sb.Append("public ");
+            var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
+
+            sb.Append(typeFullName);
+            sb.Append(" ");
+            sb.Append(name);
+            sb.Append("(");
+
+            var parameters = method.GetParameters();
+            //params in method name
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+                var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                if (param.IsOut)
+                    sb.Append("out ");
+                else if (param.ParameterType.IsByRef)
+                    sb.Append("ref ");
+
+                sb.Append(paramTypeFullName);
+                sb.Append(" ");
+                sb.Append(paramName);
+                sb.Append(", ");
+            }
+            if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
+
+            sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\tvar parameters = new object[" + parameters.Count() + "];\n");
+
+            for (int i = 0; i < parameters.Count(); i++)
+            {
+                string paramTypeFullName = GetTypeFullName(parameters[i].ParameterType);
+
+                if (parameters[i].IsOut)
+                {
+                    if (paramTypeFullName.Equals("System.String", StringComparison.InvariantCulture))
+                        sb.Append("\t\t\t" + parameters[i].Name + " = string.Empty;\n");
+                    else
+                        sb.Append("\t\t\t" + parameters[i].Name + " = null;\n");
+                    //sb.Append("\t\t\t" + parameters[i].Name + " = new " + paramTypeFullName + "();\n"); 
+                }
+
+                if (IsTeklaType(parameters[i].ParameterType))
+                {
+                    sb.Append("\t\t\tparameters[" + i + "] = ");
+                    sb.Append(CorrectIfArray(paramTypeFullName) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                }
+                else
+                    sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
+            }
+
+            sb.Append("\t\t\t");
+            if (!typeFullName.Equals("void"))
+                sb.Append("var result = (" + GetTypeFullName(method.ReturnType) + ") ");
+            sb.Append("TSActivator.InvokeMethod(teklaObject, \"");
             sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
             sb.Append("\", \"");
             sb.Append(method.Name);
@@ -324,8 +434,7 @@ namespace CodeGenerator
             sb.Append(" ");
             sb.Append(name);
             sb.Append("(");
-
-            bool anyParameterIsRefOrOut = false;
+            
             var parameters = method.GetParameters();
             //params in method name
             foreach (var param in parameters)
@@ -335,15 +444,9 @@ namespace CodeGenerator
                     paramName = "@object";
 
                 if (param.IsOut)
-                {
                     sb.Append("out ");
-                    anyParameterIsRefOrOut = true;
-                }
                 else if (param.ParameterType.IsByRef)
-                {
                     sb.Append("ref ");
-                    anyParameterIsRefOrOut = true;
-                }
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
                 sb.Append(paramTypeFullName);
@@ -368,6 +471,94 @@ namespace CodeGenerator
             }
             
             sb.Append("\t\t\tdynamic result = TSActivator.InvokeStaticMethod(\"");
+            sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
+            sb.Append("\", \"");
+            sb.Append(method.Name);
+            sb.Append("\", parameters);\n");
+
+            //ref out parameters            
+            int j = 0;
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                if (param.IsOut || param.ParameterType.IsByRef)
+                {
+                    sb.Append("\t\t\t");
+                    sb.Append(paramName);
+                    sb.Append(" = ");
+
+                    var paramTypeFullName = GetTypeFullName(param.ParameterType);
+
+                    if (IsTeklaType(param.ParameterType))
+                    {
+                        sb.Append(CorrectIfArray(paramTypeFullName) + "_.FromTSObject(");
+                        sb.Append("parameters[" + j + "]);\n");
+                    }
+                    else
+                    {
+                        sb.Append("(" + paramTypeFullName + ") ");
+                        sb.Append("parameters[" + j + "];\n");
+                    }
+
+                }
+                j++;
+            }
+
+            sb.Append("\t\t\treturn ");
+            sb.Append(CorrectIfArray(GetTypeFullName(method.ReturnType)) + "_.FromTSObject(result);\n");
+            sb.Append("\t\t}");
+        }
+
+        private static void Ref_Out_GenerateForTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)
+        {
+            sb.Append("\t\t");
+            sb.Append("public ");
+            var typeFullName = GetTypeFullName(method.ReturnType).Replace("System.Void", "void");
+
+            sb.Append(typeFullName);
+            sb.Append(" ");
+            sb.Append(name);
+            sb.Append("(");
+
+            var parameters = method.GetParameters();
+            //params in method name
+            foreach (var param in parameters)
+            {
+                var paramName = param.Name;
+                if (paramName.Equals("object", StringComparison.InvariantCulture))
+                    paramName = "@object";
+
+                if (param.IsOut)
+                    sb.Append("out ");
+                else if (param.ParameterType.IsByRef)
+                    sb.Append("ref ");
+
+                var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                sb.Append(paramTypeFullName);
+                sb.Append(" ");
+                sb.Append(paramName);
+                sb.Append(", ");
+            }
+            if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
+
+            sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\tvar parameters = new object[" + parameters.Count() + "];\n");
+
+            for (int i = 0; i < parameters.Count(); i++)
+            {
+                if (IsTeklaType(parameters[i].ParameterType))
+                {
+                    sb.Append("\t\t\tparameters[" + i + "] = ");
+                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                }
+                else
+                    sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
+            }
+
+            sb.Append("\t\t\tdynamic result = TSActivator.InvokeMethod(teklaObject, \"");
             sb.Append(GetTypeFullName(type).Replace("Dynamic.", ""));
             sb.Append("\", \"");
             sb.Append(method.Name);

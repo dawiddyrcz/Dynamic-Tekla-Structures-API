@@ -168,6 +168,16 @@ namespace Dynamic.Tekla.Structures.Model
 			return teklaObject.SetPhase(Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase));
 		}
 
+		public System.Boolean GetPhase(out Dynamic.Tekla.Structures.Model.Phase phase)
+		{
+			var parameters = new object[1];
+			phase = null;
+			parameters[0] = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase);
+			var result = (System.Boolean) TSActivator.InvokeMethod(teklaObject, "Tekla.Structures.Model.ModelObject", "GetPhase", parameters);
+			phase = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(parameters[0]);
+			return result;
+		}
+
 		public System.Boolean SetLabel(System.String label)
 		{
 			return teklaObject.SetLabel(label);

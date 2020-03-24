@@ -36,6 +36,16 @@ namespace Dynamic.Tekla.Structures.Model
 			teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
 		}
 
+		public System.Boolean CalculatePolygon(out Dynamic.Tekla.Structures.Model.Polygon polygon)
+		{
+			var parameters = new object[1];
+			polygon = null;
+			parameters[0] = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon);
+			var result = (System.Boolean) TSActivator.InvokeMethod(teklaObject, "Tekla.Structures.Model.Contour", "CalculatePolygon", parameters);
+			polygon = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(parameters[0]);
+			return result;
+		}
+
 
 
 

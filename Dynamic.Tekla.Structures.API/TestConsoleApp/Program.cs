@@ -17,8 +17,8 @@ namespace TestConsoleApp
     {   
         static void Main(string[] args)
         {
-            //InsertBeam();
-            OpenDrawingAndInsertLine();
+            InsertBeam();
+            //OpenDrawingAndInsertLine();
             
             Console.WriteLine("end");
             Console.ReadKey();
@@ -77,8 +77,8 @@ namespace TestConsoleApp
 
             model.CommitChanges();
 
-            //beam.GetPhase(out Phase phase);
-            //Console.WriteLine("Phase: " + phase.PhaseNumber);
+            beam.GetPhase(out Phase phase);
+            Console.WriteLine("Phase: " + phase.PhaseNumber);
 
             double weight = 0;
             beam.GetReportProperty("WEIGHT", ref weight);

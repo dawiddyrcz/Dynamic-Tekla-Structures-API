@@ -17,6 +17,18 @@ namespace Dynamic.Tekla.Structures
             return Activator.CreateInstance(type);
         }
 
+        public static object InvokeMethod(object instance, string typeName, string methodName, object[] parameters)
+        {
+            string fileTS = GetFileName(typeName);
+
+            var assembly = Assembly.LoadFrom(fileTS);
+            var type = GetTypeFromTypeName(typeName, ref assembly);
+
+            MethodInfo method = GetMethod(methodName, parameters, type);
+
+            return method.Invoke(instance, parameters);
+        }
+
         public static object InvokeStaticMethod(string typeName, string methodName, object[] parameters)
         {
             string fileTS = GetFileName(typeName);

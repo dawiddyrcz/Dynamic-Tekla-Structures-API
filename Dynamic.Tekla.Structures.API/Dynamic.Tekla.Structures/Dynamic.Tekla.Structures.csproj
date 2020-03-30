@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NotGenerated\DynamicAPIException.cs" />
+    <Compile Include="NotGenerated\ModelEvents.cs" />
     <Compile Include="NotGenerated\TeklaFileVersion.cs" />
     <Compile Include="NotGenerated\TeklaProcess.cs" />
     <Compile Include="NotGenerated\TSActivator.cs" />
@@ -442,7 +443,6 @@
     <Compile Include="Tekla.Structures.Model\Detail.cs" />
     <Compile Include="Tekla.Structures.Model\DisposableToken.cs" />
     <Compile Include="Tekla.Structures.Model\EdgeChamfer.cs" />
-    <Compile Include="Tekla.Structures.Model\Events.cs" />
     <Compile Include="Tekla.Structures.Model\ExtensionIntersectsWithPlateException.cs" />
     <Compile Include="Tekla.Structures.Model\FacePerpendicularToIntersectionLineException.cs" />
     <Compile Include="Tekla.Structures.Model\FacesAtAnObtuseAngleException.cs" />

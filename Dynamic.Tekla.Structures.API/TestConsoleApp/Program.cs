@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Dynamic.Tekla.Structures;
 using Dynamic.Tekla.Structures.Geometry3d;
@@ -10,17 +11,47 @@ using TSD = Dynamic.Tekla.Structures.Drawing;
 
 namespace TestConsoleApp
 {
-    //TODO events
+    //TODO remove event class from generator
 
     static class Program
-    {   
+    {
+        [STAThread]
         static void Main(string[] args)
         {
-            InsertBeam();
+            //InsertBeam();
             //OpenDrawingAndInsertLine();
+
+            Events();
+
             
+
             Console.WriteLine("end");
             Console.ReadKey();
+        }
+
+        private static void Events()
+        {
+            System.Threading.Tasks.Task.Factory.StartNew(() =>
+            {
+                var events = new Events();
+                events.Register();
+
+                events.SelectionChange += () =>
+                {
+                    Console.WriteLine("selectionnn change");
+                };
+
+                events.ModelObjectChanged += (x) =>
+                {
+                    Console.WriteLine("ModelObject changed: " + x.Count);
+                };
+
+                while (true)
+                {
+                    Thread.Sleep(5000);
+                    Console.WriteLine("Waiting");
+                }
+            });
         }
 
         private static void OpenDrawingAndInsertLine()

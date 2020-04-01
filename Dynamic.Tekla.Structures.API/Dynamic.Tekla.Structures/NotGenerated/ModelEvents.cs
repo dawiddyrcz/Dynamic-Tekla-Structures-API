@@ -27,8 +27,8 @@ namespace Dynamic.Tekla.Structures.Model
         public delegate void ClashDetectedDelegate(ClashCheckData ClashData);
         public delegate void ClashCheckDoneDelegate(int NumbersOfClashes);
 
-        public event Events.TeklaStructuresExitDelegate TeklaStructuresExit;
         public event Events.SelectionChangeDelegate SelectionChange;
+        public event Events.TeklaStructuresExitDelegate TeklaStructuresExit;
         public event Events.NumberingDelegate Numbering;
         public event Events.ModelLoadDelegate ModelUnloading;
         public event Events.ModelSaveAsDelegate ModelSaveAs;
@@ -73,6 +73,8 @@ namespace Dynamic.Tekla.Structures.Model
             if (ModelSave != null) BindEventToMethod("ModelSave", "TeklaObject_ModelSave");
             if (ModelObjectNumbered != null) BindEventToMethod("ModelObjectNumbered", "TeklaObject_ModelObjectNumbered");
             if (ModelObjectChanged != null) BindEventToMethod("ModelObjectChanged", "TeklaObject_ModelObjectChanged");
+            if (ModelLoad != null) BindEventToMethod("ModelLoad", "TeklaObject_ModelLoad");
+            if (ModelChanged != null) BindEventToMethod("ModelChanged", "TeklaObject_ModelChanged");
             if (Interrupted != null) BindEventToMethod("Interrupted", "TeklaObject_Interrupted");
             if (CommandStatusChange != null) BindEventToMethod("CommandStatusChange", "TeklaObject_CommandStatusChange");
             if (ClashDetected != null) BindEventToMethod("ClashDetected", "TeklaObject_ClashDetected");

@@ -44,8 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CodeGenerator\TypeFullName.cs">
+      <Link>TypeFullName.cs</Link>
+    </Compile>
     <Compile Include="NotGenerated\DrawingEvents.cs" />
     <Compile Include="NotGenerated\DrawingUIEvents.cs" />
+    <Compile Include="NotGenerated\DynamicAPINotFoundException.cs" />
     <Compile Include="NotGenerated\DynamicAPIException.cs" />
     <Compile Include="NotGenerated\ModelEvents.cs" />
     <Compile Include="NotGenerated\TeklaFileVersion.cs" />

@@ -17,9 +17,9 @@ namespace TestConsoleApp
         static void Main(string[] args)
         {
             //InsertBeam();
-            //OpenDrawingAndInsertLine();
+            OpenDrawingAndInsertLine();
 
-            Events();
+           // Events();
 
             
 

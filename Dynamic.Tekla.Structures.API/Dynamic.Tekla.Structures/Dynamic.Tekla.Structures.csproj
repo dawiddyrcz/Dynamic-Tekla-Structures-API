@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NotGenerated\DrawingEvents.cs" />
+    <Compile Include="NotGenerated\DrawingUIEvents.cs" />
     <Compile Include="NotGenerated\DynamicAPIException.cs" />
     <Compile Include="NotGenerated\ModelEvents.cs" />
     <Compile Include="NotGenerated\TeklaFileVersion.cs" />

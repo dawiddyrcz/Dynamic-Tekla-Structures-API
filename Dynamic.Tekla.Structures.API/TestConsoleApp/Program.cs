@@ -11,8 +11,6 @@ using TSD = Dynamic.Tekla.Structures.Drawing;
 
 namespace TestConsoleApp
 {
-    //TODO remove event class from generator
-
     static class Program
     {
         [STAThread]

@@ -127,13 +127,16 @@ namespace CodeGenerator
             var tsTypes = ts.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
-                && !t.Namespace.Contains("Internal"));
+                && !t.Namespace.Contains("Internal")
+                );
 
             var tsm = LoadTeklaStructuresModel();
             var tsmTypes = tsm.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
-                && !t.Namespace.Contains("Internal"));
+                && !t.Namespace.Contains("Internal")
+                && !t.Name.Equals("Events")
+                );
 
             var tsd = LoadTeklaStructuresDrawing();
             var tsdTypes = tsd.GetTypes().Where(
@@ -141,6 +144,7 @@ namespace CodeGenerator
                 && (t.Namespace?.StartsWith("Tekla.Structures") ?? false)
                 && !t.Namespace.Contains("Internal")
                 && !t.Name.Equals("InputDefinitionFactory")
+                && !t.Name.Equals("Events")
                 );
 
             var tal = LoadTeklaApplicationLibrary();

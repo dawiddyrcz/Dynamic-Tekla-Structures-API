@@ -56,7 +56,6 @@
     <Compile Include="Tekla.Structures.Drawing.Tools\DrawingCoordinateConverter.cs" />
     <Compile Include="Tekla.Structures.Drawing.UI\DrawingObjectSelector.cs" />
     <Compile Include="Tekla.Structures.Drawing.UI\DrawingSelector.cs" />
-    <Compile Include="Tekla.Structures.Drawing.UI\Events.cs" />
     <Compile Include="Tekla.Structures.Drawing.UI\Picker.cs" />
     <Compile Include="Tekla.Structures.Drawing\AlongLineOrWithLeaderLineAndParentObjectAlongPartPlacingType.cs" />
     <Compile Include="Tekla.Structures.Drawing\AlongLineOrWithLeaderLinePlacingType.cs" />
@@ -144,7 +143,6 @@
     <Compile Include="Tekla.Structures.Drawing\EmbeddedObjectBase.cs" />
     <Compile Include="Tekla.Structures.Drawing\EmbeddedObjectFrame.cs" />
     <Compile Include="Tekla.Structures.Drawing\EmbeddedObjectScalingOptions.cs" />
-    <Compile Include="Tekla.Structures.Drawing\Events.cs" />
     <Compile Include="Tekla.Structures.Drawing\FontAttributes.cs" />
     <Compile Include="Tekla.Structures.Drawing\FormatTypes.cs" />
     <Compile Include="Tekla.Structures.Drawing\Frame.cs" />

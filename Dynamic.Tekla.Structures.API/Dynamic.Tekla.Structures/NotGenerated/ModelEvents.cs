@@ -43,19 +43,12 @@ namespace Dynamic.Tekla.Structures.Model
 
         public Events()
         {
+            NewTeklaObject();
+        }
+
+        private void NewTeklaObject()
+        {
             teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Events");
-            BindEventToMethod("SelectionChange", "TeklaObject_SelectionChange");
-            BindEventToMethod("TeklaStructuresExit", "TeklaObject_TeklaStructuresExit");
-            BindEventToMethod("Numbering", "TeklaObject_Numbering");
-            BindEventToMethod("ModelUnloading", "TeklaObject_ModelUnloading");
-            BindEventToMethod("ModelSaveAs", "TeklaObject_ModelSaveAs");
-            BindEventToMethod("ModelSave", "TeklaObject_ModelSave");
-            BindEventToMethod("ModelObjectNumbered", "TeklaObject_ModelObjectNumbered");
-            BindEventToMethod("ModelObjectChanged", "TeklaObject_ModelObjectChanged");
-            BindEventToMethod("Interrupted", "TeklaObject_Interrupted");
-            BindEventToMethod("CommandStatusChange", "TeklaObject_CommandStatusChange");
-            BindEventToMethod("ClashDetected", "TeklaObject_ClashDetected");
-            BindEventToMethod("ClashCheckDone", "TeklaObject_ClashCheckDone");
         }
 
         private void BindEventToMethod(string eventName, string methodName)
@@ -69,12 +62,25 @@ namespace Dynamic.Tekla.Structures.Model
 
         public void Register()
         {
+            if (SelectionChange != null) BindEventToMethod("SelectionChange", "TeklaObject_SelectionChange");
+            if (TeklaStructuresExit != null) BindEventToMethod("TeklaStructuresExit", "TeklaObject_TeklaStructuresExit");
+            if (Numbering != null) BindEventToMethod("Numbering", "TeklaObject_Numbering");
+            if (ModelUnloading != null) BindEventToMethod("ModelUnloading", "TeklaObject_ModelUnloading");
+            if (ModelSaveAs != null) BindEventToMethod("ModelSaveAs", "TeklaObject_ModelSaveAs");
+            if (ModelSave != null) BindEventToMethod("ModelSave", "TeklaObject_ModelSave");
+            if (ModelObjectNumbered != null) BindEventToMethod("ModelObjectNumbered", "TeklaObject_ModelObjectNumbered");
+            if (ModelObjectChanged != null) BindEventToMethod("ModelObjectChanged", "TeklaObject_ModelObjectChanged");
+            if (Interrupted != null) BindEventToMethod("Interrupted", "TeklaObject_Interrupted");
+            if (CommandStatusChange != null) BindEventToMethod("CommandStatusChange", "TeklaObject_CommandStatusChange");
+            if (ClashDetected != null) BindEventToMethod("ClashDetected", "TeklaObject_ClashDetected");
+            if (ClashCheckDone != null) BindEventToMethod("ClashCheckDone", "TeklaObject_ClashCheckDone");
             teklaObject.Register();
         }
 
         public void UnRegister()
         {
             teklaObject.UnRegister();
+            NewTeklaObject();
         }
 
         private void TeklaObject_ClashCheckDone(int NumbersOfClashes)

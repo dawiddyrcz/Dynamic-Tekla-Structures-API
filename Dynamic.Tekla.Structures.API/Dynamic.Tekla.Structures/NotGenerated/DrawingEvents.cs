@@ -24,12 +24,28 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public Events()
         {
+            NewTeklaObject();
+        }
+
+        private void NewTeklaObject()
+        {
             teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Events");
-            BindEventToMethod("DrawingChanged", "TeklaObject_DrawingChanged");
-            BindEventToMethod("DrawingDeleted", "TeklaObject_DrawingDeleted");
-            BindEventToMethod("DrawingInserted", "TeklaObject_DrawingInserted");
-            BindEventToMethod("DrawingStatusChanged", "TeklaObject_DrawingStatusChanged");
-            BindEventToMethod("DrawingUpdated", "TeklaObject_DrawingUpdated");
+        }
+
+        public void Register()
+        {
+            if (DrawingChanged != null) BindEventToMethod("DrawingChanged", "TeklaObject_DrawingChanged");
+            if (DrawingDeleted != null) BindEventToMethod("DrawingDeleted", "TeklaObject_DrawingDeleted");
+            if (DrawingInserted != null) BindEventToMethod("DrawingInserted", "TeklaObject_DrawingInserted");
+            if (DrawingStatusChanged != null) BindEventToMethod("DrawingStatusChanged", "TeklaObject_DrawingStatusChanged");
+            if (DrawingUpdated != null) BindEventToMethod("DrawingUpdated", "TeklaObject_DrawingUpdated");
+            teklaObject.Register();
+        }
+
+        public void UnRegister()
+        {
+            teklaObject.UnRegister();
+            NewTeklaObject();
         }
 
         private void BindEventToMethod(string eventName, string methodName)
@@ -41,22 +57,12 @@ namespace Dynamic.Tekla.Structures.Drawing
             eventInfo.AddEventHandler(teklaObject, delegateInstance);
         }
 
-        public void Register()
-        {
-            teklaObject.Register();
-        }
-
-        public void UnRegister()
-        {
-            teklaObject.UnRegister();
-        }
-
-        private void TeklaObject_DrawingUpdated(dynamic tsDrawing, dynamic tsDrawingUpdateTypeEnum)
+        private void TeklaObject_DrawingUpdated(dynamic tsDrawing, int tsDrawingUpdateTypeEnum)
         {
             if (DrawingUpdated != null)
             {
                 var drawing = Drawing_.FromTSObject(tsDrawing);
-                var drawingUpdateTypeEnum = DrawingUpdateTypeEnum_.FromTSObject(tsDrawingUpdateTypeEnum);
+                var drawingUpdateTypeEnum = DrawingUpdateTypeEnum_.FromInt(tsDrawingUpdateTypeEnum);
                 DrawingUpdated?.Invoke(drawing, drawingUpdateTypeEnum);
             }
         }
@@ -121,6 +127,19 @@ namespace Dynamic.Tekla.Structures.Drawing
                     return DrawingUpdateTypeEnum.DELETED;
                 else
                     throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+
+            }
+
+            public static DrawingUpdateTypeEnum FromInt(int value)
+            {
+                if (value.Equals(0))
+                    return DrawingUpdateTypeEnum.INSERTED;
+                else if (value.Equals(1))
+                    return DrawingUpdateTypeEnum.MODIFIED;
+                else if (value.Equals(2))
+                    return DrawingUpdateTypeEnum.DELETED;
+                else
+                    throw new System.NotImplementedException(value + "- enum value is not implemented");
 
             }
         }

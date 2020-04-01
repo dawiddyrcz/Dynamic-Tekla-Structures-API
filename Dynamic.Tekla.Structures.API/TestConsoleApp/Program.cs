@@ -31,18 +31,34 @@ namespace TestConsoleApp
         {
             System.Threading.Tasks.Task.Factory.StartNew(() =>
             {
-                var events = new Events();
-                events.Register();
+                var modelEvents = new Events();
+                modelEvents.SelectionChange += () =>Console.WriteLine("SelectionChange");
+                modelEvents.ModelObjectChanged += (x) => Console.WriteLine("ModelObjectChanged: " + x.Count);
+                modelEvents.ClashCheckDone += (x) => Console.WriteLine("ClashCheckDone");
+                modelEvents.ClashDetected += (x) => Console.WriteLine("ClashDetected");
+                modelEvents.ModelSave += () => Console.WriteLine("ModelSave");
+                modelEvents.Interrupted += () => Console.WriteLine("Interrupted");
+                modelEvents.Numbering += () => Console.WriteLine("Numbering");
+                modelEvents.TeklaStructuresExit += () => Console.WriteLine("TeklaStructuresExit");
+                modelEvents.Register();
 
-                events.SelectionChange += () =>
-                {
-                    Console.WriteLine("selectionnn change");
-                };
+                var drawingEvents = new TSD.Events();
+                drawingEvents.DrawingChanged += () => Console.WriteLine("DrawingChanged");
+                drawingEvents.DrawingDeleted += () => Console.WriteLine("DrawingDeleted");
+                drawingEvents.DrawingInserted += () => Console.WriteLine("DrawingInserted");
+                drawingEvents.DrawingStatusChanged += () => Console.WriteLine("DrawingStatusChanged");
+                drawingEvents.DrawingUpdated += (x, y) => Console.WriteLine("DrawingUpdated");
+                drawingEvents.Register();
 
-                events.ModelObjectChanged += (x) =>
-                {
-                    Console.WriteLine("ModelObject changed: " + x.Count);
-                };
+                var drawingUIEvents = new TSD.UI.Events();
+                drawingUIEvents.DrawingEditorClosed += () => Console.WriteLine("DrawingEditorClosed");
+                drawingUIEvents.DrawingEditorOpened += () => Console.WriteLine("DrawingEditorOpened");
+                drawingUIEvents.DrawingListSelectionChanged += () => Console.WriteLine("DrawingListSelectionChanged");
+                drawingUIEvents.DrawingLoaded += () => Console.WriteLine("DrawingLoaded");
+                drawingUIEvents.Interrupted += () => Console.WriteLine("DrawingInterrupted");
+                drawingUIEvents.SelectionChange += () => Console.WriteLine("DrawingSelectionChange");
+                drawingUIEvents.Register();
+
 
                 while (true)
                 {

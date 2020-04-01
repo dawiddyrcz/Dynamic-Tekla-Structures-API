@@ -27,12 +27,12 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 
         public Events()
         {
-            teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Events");
-            BindEventToMethod("SelectionChange", "TeklaObject_SelectionChange");
-            BindEventToMethod("Interrupted", "TeklaObject_Interrupted");
-            BindEventToMethod("DrawingLoaded", "TeklaObject_DrawingLoaded");
-            BindEventToMethod("DrawingListSelectionChanged", "TeklaObject_DrawingEditorOpened");
-            BindEventToMethod("DrawingEditorOpened", "TeklaObject_DrawingEditorClosed");
+            NewTeklaObject();
+        }
+
+        private void NewTeklaObject()
+        {
+            teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UI.Events");
         }
 
         private void BindEventToMethod(string eventName, string methodName)
@@ -46,12 +46,18 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 
         public void Register()
         {
+            if (SelectionChange != null) BindEventToMethod("SelectionChange", "TeklaObject_SelectionChange");
+            if (Interrupted != null) BindEventToMethod("Interrupted", "TeklaObject_Interrupted");
+            if (DrawingLoaded != null) BindEventToMethod("DrawingLoaded", "TeklaObject_DrawingLoaded");
+            if (DrawingListSelectionChanged != null) BindEventToMethod("DrawingListSelectionChanged", "TeklaObject_DrawingEditorOpened");
+            if (DrawingEditorOpened != null) BindEventToMethod("DrawingEditorOpened", "TeklaObject_DrawingEditorClosed");
             teklaObject.Register();
         }
 
         public void UnRegister()
         {
             teklaObject.UnRegister();
+            NewTeklaObject();
         }
 
         private void TeklaObject_SelectionChange()

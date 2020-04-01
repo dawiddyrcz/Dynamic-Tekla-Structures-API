@@ -5,7 +5,6 @@
 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
-
 namespace Dynamic.Tekla.Structures
 {
     internal struct TeklaFileVersion

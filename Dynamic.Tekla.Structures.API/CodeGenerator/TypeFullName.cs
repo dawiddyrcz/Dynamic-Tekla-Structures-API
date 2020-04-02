@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator
 {
-    public static class TypeFullName
+    internal static class TypeFullName
     {
         private static bool IsTeklaType(Type type)
         {

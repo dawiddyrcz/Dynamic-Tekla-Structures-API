@@ -52,9 +52,9 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			teklaObject.Invoke(nClashes);
 		}
 
-		public void EndInvoke(System.IAsyncResult result)
+		public void EndInvoke(System.IAsyncResult resultt)
 		{
-			teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(resultt);
 		}
 
 
@@ -140,9 +140,9 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
 		}
 
-		public void EndInvoke(System.IAsyncResult result)
+		public void EndInvoke(System.IAsyncResult resultt)
 		{
-			teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(resultt);
 		}
 
 

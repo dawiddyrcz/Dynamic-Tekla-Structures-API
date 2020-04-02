@@ -75,6 +75,19 @@ namespace CodeGenerator
                 sb.Append("\n\n");
             }
 
+            if (type.Name.Equals("Settings"))
+            {
+                sb.Replace("public static System.Boolean TryGetValue(System.String name, out Dynamic.Tekla.Structures.Datatype.Settings.T obj)"
+                    ,
+                    "public static System.Boolean TryGetValue<T>(System.String name, out T obj)");
+                sb.Replace("obj = new Dynamic.Tekla.Structures.Datatype.Settings.T();"
+                    ,
+                    "obj = default(T);");
+                sb.Replace("obj = (Dynamic.Tekla.Structures.Datatype.Settings.T) parameters[1];"
+                    ,
+                    "obj = (T) parameters[1];");
+            }
+
             sb.Append(AditionalMethods(type));
             return sb.ToString();
         }
@@ -93,7 +106,7 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in method.GetParameters())
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result","resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -118,7 +131,7 @@ namespace CodeGenerator
             //params in method body
             foreach (var param in method.GetParameters())
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -175,7 +188,7 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
@@ -197,25 +210,26 @@ namespace CodeGenerator
 
             for (int i = 0; i < parameters.Count(); i++)
             {
+                var paramName = parameters[i].Name.Replace("result", "resultt");
                 string paramTypeFullName = GetTypeFullName(parameters[i].ParameterType);
 
                 if (parameters[i].IsOut)
                 {
                     if (paramTypeFullName.Equals("System.String", StringComparison.InvariantCulture))
-                        sb.Append("\t\t\t" + parameters[i].Name + " = string.Empty;\n");
+                        sb.Append("\t\t\t" + paramName + " = string.Empty;\n");
                     else
                     {
-                        sb.Append("\t\t\t" + parameters[i].Name + " = new " + paramTypeFullName + "();\n");
+                        sb.Append("\t\t\t" + paramName + " = new " + paramTypeFullName + "();\n");
                     }
                 }
 
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(CorrectIfArray(paramTypeFullName) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(CorrectIfArray(paramTypeFullName) + "_.GetTSObject(" + paramName + ");\n");
                 }
                 else
-                    sb.Append("\t\t\tparameters["+ i +"] = " + parameters[i].Name + ";\n");
+                    sb.Append("\t\t\tparameters["+ i +"] = " + paramName + ";\n");
             }
 
             sb.Append("\t\t\t");
@@ -231,7 +245,7 @@ namespace CodeGenerator
             int j = 0;
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -281,7 +295,7 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
@@ -386,13 +400,13 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in method.GetParameters())
             {
-
+                var paramName = param.Name.Replace("result", "resultt");
                 if (param.IsOut) sb.Append("out ");
                 else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
                 sb.Append(GetTypeFullName(param.ParameterType));
                 sb.Append(" ");
-                sb.Append(param.Name);
+                sb.Append(paramName);
                 sb.Append(", ");
             }
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
@@ -407,11 +421,12 @@ namespace CodeGenerator
             //params in method body
             foreach (var param in method.GetParameters())
             {
+                var paramName = param.Name.Replace("result", "resultt");
                 if (IsTeklaType(param.ParameterType))
                 {
                     sb.Append(CorrectIfArray(GetTypeFullName(param.ParameterType)));
                     sb.Append("_.GetTSObject(");
-                    sb.Append(param.Name);
+                    sb.Append(paramName);
                     sb.Append(")");
                 }
                 else
@@ -419,7 +434,7 @@ namespace CodeGenerator
                     if (param.IsOut) sb.Append("out ");
                     else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
-                    sb.Append(param.Name);
+                    sb.Append(paramName);
                 }
                 sb.Append(", ");
             }
@@ -443,7 +458,7 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -465,13 +480,14 @@ namespace CodeGenerator
 
             for (int i = 0; i < parameters.Count(); i++)
             {
+                var paramName = parameters[i].Name.Replace("result", "resultt");
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + paramName + ");\n");
                 }
                 else
-                    sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
+                    sb.Append("\t\t\tparameters[" + i + "] = " + paramName + ";\n");
             }
             
             sb.Append("\t\t\tdynamic result = TSActivator.InvokeStaticMethod(\"");
@@ -484,7 +500,8 @@ namespace CodeGenerator
             int j = 0;
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt"); 
+
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -531,7 +548,7 @@ namespace CodeGenerator
             //params in method name
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 
@@ -553,13 +570,14 @@ namespace CodeGenerator
 
             for (int i = 0; i < parameters.Count(); i++)
             {
+                var paramName = parameters[i].Name.Replace("result", "resultt");
                 if (IsTeklaType(parameters[i].ParameterType))
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
-                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + parameters[i].Name + ");\n");
+                    sb.Append(CorrectIfArray(GetTypeFullName(parameters[i].ParameterType)) + "_.GetTSObject(" + paramName + ");\n");
                 }
                 else
-                    sb.Append("\t\t\tparameters[" + i + "] = " + parameters[i].Name + ";\n");
+                    sb.Append("\t\t\tparameters[" + i + "] = " + paramName + ";\n");
             }
 
             sb.Append("\t\t\tdynamic result = TSActivator.InvokeMethod(teklaObject, \"");
@@ -572,7 +590,7 @@ namespace CodeGenerator
             int j = 0;
             foreach (var param in parameters)
             {
-                var paramName = param.Name;
+                var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
 

@@ -129,9 +129,9 @@ namespace Dynamic.Tekla.Structures.Dialog
 			teklaObject.Invoke(Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization), obj);
 		}
 
-		public void EndInvoke(System.IAsyncResult result)
+		public void EndInvoke(System.IAsyncResult resultt)
 		{
-			teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(resultt);
 		}
 
 

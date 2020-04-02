@@ -114,6 +114,13 @@ namespace CodeGenerator
                   && !t.Namespace.Contains("Internal")
                  );
 
+            var tsdt = LoadAssembly("Tekla.Structures.Datatype.dll");
+            var tsdtTypes = tsdt.GetTypes().Where(
+                 t => t.IsPublic
+                 && (t.Namespace?.StartsWith("Tekla.Structures") ?? false)
+                  && !t.Namespace.Contains("Internal")
+                );
+
             var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
@@ -121,6 +128,7 @@ namespace CodeGenerator
             output.AddRange(talTypes);
             output.AddRange(tsdiTypes);
             output.AddRange(tscTypes);
+            output.AddRange(tsdtTypes);
 
             return output;
         }

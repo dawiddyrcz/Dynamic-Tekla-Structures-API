@@ -143,9 +143,9 @@ namespace Dynamic.Tekla.Structures
 			teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
 		}
 
-		public void EndInvoke(System.IAsyncResult result)
+		public void EndInvoke(System.IAsyncResult resultt)
 		{
-			teklaObject.EndInvoke(result);
+			teklaObject.EndInvoke(resultt);
 		}
 
 

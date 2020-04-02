@@ -11,54 +11,6 @@ namespace Dynamic.Tekla.Structures
     public  class ModuleManager 
     {
 
-		public Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
-		{
-			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(teklaObject.Configuration);
-
-		}
-
-		public System.Boolean MultimaterialModeling
-		{
-			get => teklaObject.MultimaterialModeling;
-
-		}
-
-		public System.Boolean LoadModeling
-		{
-			get => teklaObject.LoadModeling;
-
-		}
-
-		public System.Boolean SteelDetailing
-		{
-			get => teklaObject.SteelDetailing;
-
-		}
-
-		public System.Boolean ConcreteDetailing
-		{
-			get => teklaObject.ConcreteDetailing;
-
-		}
-
-		public System.Boolean RebarModeling
-		{
-			get => teklaObject.RebarModeling;
-
-		}
-
-		public System.Boolean AnalysisAndDesign
-		{
-			get => teklaObject.AnalysisAndDesign;
-
-		}
-
-		public System.Boolean TaskManagement
-		{
-			get => teklaObject.TaskManagement;
-
-		}
-
         
 
         internal dynamic teklaObject;

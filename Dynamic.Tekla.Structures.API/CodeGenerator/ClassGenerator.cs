@@ -169,7 +169,7 @@ namespace CodeGenerator
                 .ToList<MemberInfo>();  
 
             var fields = type.GetFields()
-                .Where(f => f.IsPublic & f.IsStatic == false)
+                //.Where(f => f.IsPublic & f.IsStatic == false)
                 .GroupBy(t => t.Name)
                 .Select(t => t.First())
                 .Where(p => p.DeclaringType.Equals(type) && !p.FieldType.Namespace.Contains("Internal"))
@@ -199,47 +199,57 @@ namespace CodeGenerator
                     isStatic = fi.IsStatic;
                 }
 
-                if (IsTeklaType(currentType))
+                if (isStatic)
                 {
-                    sb.Append("\t\tpublic ");
-                   // if (isStatic) sb.Append("static ");  //TODO static properties cannot be like other 
-                    sb.Append(GetTypeFullName(currentType));
-                    sb.Append(" ");
-                    sb.Append(propertyOrField.Name);
 
-                    if (hasGet)
-                    {
-                        sb.Append("\n\t\t{" +
-                        "\n\t\t\tget => " + CorrectIfArray(GetTypeFullName(currentType)) + "_.FromTSObject($dfield." +
-                        "" + propertyOrField.Name + ");\n");
-                    }
-                    if (hasSet)
-                    {
-                        sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = " + CorrectIfArray(GetTypeFullName(currentType)) + "_.GetTSObject(value); }");
-                    }
-                    sb.Append("\n\t\t}\n\n");
                 }
                 else
                 {
-                    sb.Append("\t\tpublic ");
-                   // if (isStatic) sb.Append("static ");
-                    sb.Append(GetTypeFullName(currentType));
-                    sb.Append(" ");
-                    sb.Append(propertyOrField.Name);
-
-                    if (hasGet)
-                    {
-                        sb.Append("\n\t\t{" + "\n\t\t\tget => $dfield." + propertyOrField.Name + ";\n"); 
-                    }
-                    if (hasSet)
-                    {
-                        sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = value; }");
-                    }
-                    sb.Append("\n\t\t}\n\n");
+                    GenerateNonStatic_FieldOrProperty(ref sb, propertyOrField, currentType, hasGet, hasSet);
                 }
             }
 
             return sb.ToString();
+        }
+
+        private void GenerateNonStatic_FieldOrProperty(ref StringBuilder sb, MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
+        {
+            if (IsTeklaType(currentType))
+            {
+                sb.Append("\t\tpublic ");
+                sb.Append(GetTypeFullName(currentType));
+                sb.Append(" ");
+                sb.Append(propertyOrField.Name);
+
+                if (hasGet)
+                {
+                    sb.Append("\n\t\t{" +
+                    "\n\t\t\tget => " + CorrectIfArray(GetTypeFullName(currentType)) + "_.FromTSObject($dfield." +
+                    "" + propertyOrField.Name + ");\n");
+                }
+                if (hasSet)
+                {
+                    sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = " + CorrectIfArray(GetTypeFullName(currentType)) + "_.GetTSObject(value); }");
+                }
+                sb.Append("\n\t\t}\n\n");
+            }
+            else
+            {
+                sb.Append("\t\tpublic ");
+                sb.Append(GetTypeFullName(currentType));
+                sb.Append(" ");
+                sb.Append(propertyOrField.Name);
+
+                if (hasGet)
+                {
+                    sb.Append("\n\t\t{" + "\n\t\t\tget => $dfield." + propertyOrField.Name + ";\n");
+                }
+                if (hasSet)
+                {
+                    sb.Append("\t\t\tset { $dfield." + propertyOrField.Name + " = value; }");
+                }
+                sb.Append("\n\t\t}\n\n");
+            }
         }
 
         private string CorrectIfArray(string dynamicTypeFullName)

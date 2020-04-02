@@ -11,18 +11,6 @@ namespace Dynamic.Tekla.Structures.Dialog
     public  class Localization 
     {
 
-		public System.String DefaultLocalizationFile
-		{
-			get => teklaObject.DefaultLocalizationFile;
-
-		}
-
-		public System.String DefaultLocalizationPath
-		{
-			get => teklaObject.DefaultLocalizationPath;
-
-		}
-
 		public System.String Language
 		{
 			get => teklaObject.Language;

@@ -17,12 +17,6 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.SelectInstances = value; }
 		}
 
-		public System.Boolean AutoFetch
-		{
-			get => teklaObject.AutoFetch;
-			set { teklaObject.AutoFetch = value; }
-		}
-
 		public Dynamic.Tekla.Structures.Model.ModelObject Current
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);

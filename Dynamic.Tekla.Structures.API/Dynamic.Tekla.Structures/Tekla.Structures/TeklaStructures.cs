@@ -11,66 +11,6 @@ namespace Dynamic.Tekla.Structures
     public abstract class TeklaStructures 
     {
 
-		public Dynamic.Tekla.Structures.ICommonTasks CommonTasks
-		{
-			get => Dynamic.Tekla.Structures.ICommonTasks_.FromTSObject(teklaObject.CommonTasks);
-
-		}
-
-		public Dynamic.Tekla.Structures.Configuration Configuration
-		{
-			get => Dynamic.Tekla.Structures.Configuration_.FromTSObject(teklaObject.Configuration);
-
-		}
-
-		public Dynamic.Tekla.Structures.IConnection Connection
-		{
-			get => Dynamic.Tekla.Structures.IConnection_.FromTSObject(teklaObject.Connection);
-
-		}
-
-		public Dynamic.Tekla.Structures.IDrawing Drawing
-		{
-			get => Dynamic.Tekla.Structures.IDrawing_.FromTSObject(teklaObject.Drawing);
-
-		}
-
-		public Dynamic.Tekla.Structures.IEnvironment Environment
-		{
-			get => Dynamic.Tekla.Structures.IEnvironment_.FromTSObject(teklaObject.Environment);
-
-		}
-
-		public System.Boolean IsRunning
-		{
-			get => teklaObject.IsRunning;
-
-		}
-
-		public Dynamic.Tekla.Structures.IMainWindow MainWindow
-		{
-			get => Dynamic.Tekla.Structures.IMainWindow_.FromTSObject(teklaObject.MainWindow);
-
-		}
-
-		public Dynamic.Tekla.Structures.IModel Model
-		{
-			get => Dynamic.Tekla.Structures.IModel_.FromTSObject(teklaObject.Model);
-
-		}
-
-		public Dynamic.Tekla.Structures.IRegistry Registry
-		{
-			get => Dynamic.Tekla.Structures.IRegistry_.FromTSObject(teklaObject.Registry);
-
-		}
-
-		public System.String Version
-		{
-			get => teklaObject.Version;
-
-		}
-
         
 
         internal dynamic teklaObject;

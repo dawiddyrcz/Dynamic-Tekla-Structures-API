@@ -11,12 +11,6 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class DrawingEnumeratorBase 
     {
 
-		public System.Boolean AutoFetch
-		{
-			get => teklaObject.AutoFetch;
-			set { teklaObject.AutoFetch = value; }
-		}
-
 		public System.Boolean SelectInstances
 		{
 			get => teklaObject.SelectInstances;

@@ -11,6 +11,10 @@ namespace CodeGenerator
 {
     static class Program
     {
+        //TODO static classes and properties
+        //TeklaStructures.MainWindow
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Project directory: " + GetProjectDirectory());
@@ -168,7 +172,7 @@ namespace CodeGenerator
             output.AddRange(tsmTypes);
             output.AddRange(tsdTypes);
             output.AddRange(talTypes);
-
+            
             return output;
         }
     }

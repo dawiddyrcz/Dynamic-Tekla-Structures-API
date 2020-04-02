@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="Tekla.Application.Library.dll" />
     <Content Include="Tekla.Structures.Catalogs.dll" />
+    <Content Include="Tekla.Structures.Datatype.dll" />
     <Content Include="Tekla.Structures.dll" />
     <Content Include="Tekla.Structures.Drawing.dll" />
     <Content Include="Tekla.Structures.Model.dll" />

@@ -178,29 +178,33 @@ namespace CodeGenerator
 
             foreach (var propertyOrField in propertiesAndFields)
             {
-                if (type.Name.Equals("IEnvironment") && propertyOrField.Name.Equals("Localization")) continue;
-
+                if (type.Name.Equals("IEnvironment") && propertyOrField.Name.Equals("Localization")) continue;  //TODO attach internal window to tekla
+               
                 Type currentType = null;
 
                 var hasGet = false;
                 var hasSet = false;
+                var isStatic = false;
 
                 if (propertyOrField is PropertyInfo pi)
                 {
                     currentType = pi.PropertyType;
                     hasGet = pi.GetMethod != null;
                     hasSet = pi.SetMethod != null;
+                    isStatic = pi.GetMethod.IsStatic;
                 }
                 else if (propertyOrField is FieldInfo fi)
                 {
                     currentType = fi.FieldType;
                     hasGet = true;
                     hasSet = true;
+                    isStatic = fi.IsStatic;
                 }
 
                 if (IsTeklaType(currentType))
                 {
                     sb.Append("\t\tpublic ");
+                   // if (isStatic) sb.Append("static ");  //TODO static properties cannot be like other 
                     sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
                     sb.Append(propertyOrField.Name);
@@ -220,6 +224,7 @@ namespace CodeGenerator
                 else
                 {
                     sb.Append("\t\tpublic ");
+                   // if (isStatic) sb.Append("static ");
                     sb.Append(GetTypeFullName(currentType));
                     sb.Append(" ");
                     sb.Append(propertyOrField.Name);

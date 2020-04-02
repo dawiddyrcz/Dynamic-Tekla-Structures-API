@@ -14,7 +14,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.String AttributeFile
 		{
 			get => teklaObject.AttributeFile;
-			set { teklaObject.AttributeFile = value; }
+
 		}
 
         

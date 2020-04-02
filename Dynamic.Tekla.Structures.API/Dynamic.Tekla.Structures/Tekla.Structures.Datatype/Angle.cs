@@ -11,6 +11,18 @@ namespace Dynamic.Tekla.Structures.Datatype
     public  class Angle 
     {
 
+		public static Dynamic.Tekla.Structures.Datatype.Angle.UnitType CurrentUnitType
+		{
+			get => Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","CurrentUnitType"));
+			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","CurrentUnitType",Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(value)); }
+		}
+
+		public static System.Int32 DecimalPlaces
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","DecimalPlaces");
+			set { TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","DecimalPlaces", value); }
+		}
+
 		public System.Double Degrees
 		{
 			get => teklaObject.Degrees;

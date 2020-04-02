@@ -23,6 +23,12 @@ namespace Dynamic.Tekla.Structures.Drawing
 			set { teklaObject.SymbolFile = value; }
 		}
 
+		public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default
+		{
+			get => Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo","Default"));
+			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo","Default",Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value)); }
+		}
+
         
 
         internal dynamic teklaObject;

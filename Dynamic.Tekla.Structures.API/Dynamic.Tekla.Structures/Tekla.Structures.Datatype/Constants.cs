@@ -11,6 +11,12 @@ namespace Dynamic.Tekla.Structures.Datatype
     public abstract class Constants 
     {
 
+		public static System.Int32 XS_DEFAULT
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Constants","XS_DEFAULT");
+
+		}
+
         
 
         internal dynamic teklaObject;

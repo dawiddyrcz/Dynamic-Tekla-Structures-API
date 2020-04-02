@@ -131,6 +131,42 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			set { teklaObject.CrankExtraOffset = value; }
 		}
 
+		public static System.String MAIN_USAGE
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","MAIN_USAGE");
+
+		}
+
+		public static System.String TIE_STIRRUP_USAGE
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","TIE_STIRRUP_USAGE");
+
+		}
+
+		public static System.String DIAGONAL_RATIO_STRING
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","DIAGONAL_RATIO_STRING");
+
+		}
+
+		public static System.String DIAGONAL_DISTANCE_STRING
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","DIAGONAL_DISTANCE_STRING");
+
+		}
+
+		public static System.String HORIZONTAL_RATIO_STRING
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","HORIZONTAL_RATIO_STRING");
+
+		}
+
+		public static System.String HORIZONTAL_DISTANCE_STRING
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Catalogs.RebarItem","HORIZONTAL_DISTANCE_STRING");
+
+		}
+
         
 
         internal dynamic teklaObject;

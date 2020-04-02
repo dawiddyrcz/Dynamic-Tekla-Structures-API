@@ -208,6 +208,192 @@ namespace Dynamic.Tekla.Structures
     public abstract class ToolOptionNames 
     {
 
+		public static System.String All
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","All");
+
+		}
+
+		public static System.String Joints
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Joints");
+
+		}
+
+		public static System.String Parts
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Parts");
+
+		}
+
+		public static System.String Surfaces
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Surfaces");
+
+		}
+
+		public static System.String Points
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Points");
+
+		}
+
+		public static System.String ConstructionLines
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","ConstructionLines");
+
+		}
+
+		public static System.String ReferenceModels
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","ReferenceModels");
+
+		}
+
+		public static System.String Grid
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Grid");
+
+		}
+
+		public static System.String GridLine
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","GridLine");
+
+		}
+
+		public static System.String Weldings
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Weldings");
+
+		}
+
+		public static System.String Cuts
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Cuts");
+
+		}
+
+		public static System.String Views
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Views");
+
+		}
+
+		public static System.String Screws
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Screws");
+
+		}
+
+		public static System.String SingleScrews
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","SingleScrews");
+
+		}
+
+		public static System.String Rebars
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Rebars");
+
+		}
+
+		public static System.String RebarGroup
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","RebarGroup");
+
+		}
+
+		public static System.String RebarSingle
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","RebarSingle");
+
+		}
+
+		public static System.String PourBreaks
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","PourBreaks");
+
+		}
+
+		public static System.String Planes
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Planes");
+
+		}
+
+		public static System.String Distances
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Distances");
+
+		}
+
+		public static System.String Loads
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","Loads");
+
+		}
+
+		public static System.String AnalysisParts
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","AnalysisParts");
+
+		}
+
+		public static System.String AnalysisNodes
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","AnalysisNodes");
+
+		}
+
+		public static System.String AnalysisNodeLinks
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","AnalysisNodeLinks");
+
+		}
+
+		public static System.String CustomObjects
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","CustomObjects");
+
+		}
+
+		public static System.String ObjectsInJoints
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","ObjectsInJoints");
+
+		}
+
+		public static System.String SelectAssemblies
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","SelectAssemblies");
+
+		}
+
+		public static System.String SelectObjectsInAssemblies
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","SelectObjectsInAssemblies");
+
+		}
+
+		public static System.String SelectTasks
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","SelectTasks");
+
+		}
+
+		public static System.String DisplaySelectionFilterDialog
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","DisplaySelectionFilterDialog");
+
+		}
+
+		public static System.String DirectManipulation
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames","DirectManipulation");
+
+		}
+
         
 
         internal dynamic teklaObject;

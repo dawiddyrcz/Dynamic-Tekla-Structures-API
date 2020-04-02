@@ -11,6 +11,66 @@ namespace Dynamic.Tekla.Structures
     public abstract class TeklaStructures 
     {
 
+		public static Dynamic.Tekla.Structures.ICommonTasks CommonTasks
+		{
+			get => Dynamic.Tekla.Structures.ICommonTasks_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","CommonTasks"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.Configuration Configuration
+		{
+			get => Dynamic.Tekla.Structures.Configuration_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Configuration"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.IConnection Connection
+		{
+			get => Dynamic.Tekla.Structures.IConnection_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Connection"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.IDrawing Drawing
+		{
+			get => Dynamic.Tekla.Structures.IDrawing_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Drawing"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.IEnvironment Environment
+		{
+			get => Dynamic.Tekla.Structures.IEnvironment_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Environment"));
+
+		}
+
+		public static System.Boolean IsRunning
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","IsRunning");
+
+		}
+
+		public static Dynamic.Tekla.Structures.IMainWindow MainWindow
+		{
+			get => Dynamic.Tekla.Structures.IMainWindow_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","MainWindow"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.IModel Model
+		{
+			get => Dynamic.Tekla.Structures.IModel_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Model"));
+
+		}
+
+		public static Dynamic.Tekla.Structures.IRegistry Registry
+		{
+			get => Dynamic.Tekla.Structures.IRegistry_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Registry"));
+
+		}
+
+		public static System.String Version
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures","Version");
+
+		}
+
         
 
         internal dynamic teklaObject;

@@ -29,6 +29,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			set { teklaObject.Z = value; }
 		}
 
+		public static System.Double EPSILON_SQUARED
+		{
+			get => (System.Double) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.Point","EPSILON_SQUARED");
+
+		}
+
+		public static System.Int32 HASH_SEED
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.Point","HASH_SEED");
+
+		}
+
         
 
         internal dynamic teklaObject;

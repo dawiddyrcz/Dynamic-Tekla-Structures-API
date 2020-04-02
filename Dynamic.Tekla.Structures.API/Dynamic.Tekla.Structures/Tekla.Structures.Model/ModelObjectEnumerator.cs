@@ -17,6 +17,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.SelectInstances = value; }
 		}
 
+		public static System.Boolean AutoFetch
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator","AutoFetch");
+			set { TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator","AutoFetch", value); }
+		}
+
 		public Dynamic.Tekla.Structures.Model.ModelObject Current
 		{
 			get => Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);

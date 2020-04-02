@@ -17,6 +17,12 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		}
 
+		public static Dynamic.Tekla.Structures.Dialog.MainWindow Frame
+		{
+			get => Dynamic.Tekla.Structures.Dialog.MainWindow_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.MainWindow","Frame"));
+
+		}
+
         
 
         internal dynamic teklaObject;

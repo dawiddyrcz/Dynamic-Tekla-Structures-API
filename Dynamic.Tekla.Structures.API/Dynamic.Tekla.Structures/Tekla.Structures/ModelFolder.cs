@@ -23,6 +23,84 @@ namespace Dynamic.Tekla.Structures
 
 		}
 
+		public static System.String AssemblyFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","AssemblyFileExtension");
+
+		}
+
+		public static System.String AttributesFolderName
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","AttributesFolderName");
+
+		}
+
+		public static System.String CastUnitFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","CastUnitFileExtension");
+
+		}
+
+		public static System.String DatabaseFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","DatabaseFileExtension");
+
+		}
+
+		public static System.String DrawingsFolderName
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","DrawingsFolderName");
+
+		}
+
+		public static System.String ExtendedRulesetFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","ExtendedRulesetFileExtension");
+
+		}
+
+		public static System.String GeneralArrangementFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","GeneralArrangementFileExtension");
+
+		}
+
+		public static System.String ObjectDefinitionFile
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","ObjectDefinitionFile");
+
+		}
+
+		public static System.String ObjectSettingsFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","ObjectSettingsFileExtension");
+
+		}
+
+		public static System.String RulesetFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","RulesetFileExtension");
+
+		}
+
+		public static System.String SelectFilterFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","SelectFilterFileExtension");
+
+		}
+
+		public static System.String SinglePartFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","SinglePartFileExtension");
+
+		}
+
+		public static System.String ViewFilterFileExtension
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModelFolder","ViewFilterFileExtension");
+
+		}
+
         
 
         

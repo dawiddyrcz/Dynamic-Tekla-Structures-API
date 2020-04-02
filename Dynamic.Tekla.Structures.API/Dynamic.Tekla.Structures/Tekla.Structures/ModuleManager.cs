@@ -11,6 +11,54 @@ namespace Dynamic.Tekla.Structures
     public  class ModuleManager 
     {
 
+		public static Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
+		{
+			get => Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","Configuration"));
+
+		}
+
+		public static System.Boolean MultimaterialModeling
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","MultimaterialModeling");
+
+		}
+
+		public static System.Boolean LoadModeling
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","LoadModeling");
+
+		}
+
+		public static System.Boolean SteelDetailing
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","SteelDetailing");
+
+		}
+
+		public static System.Boolean ConcreteDetailing
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","ConcreteDetailing");
+
+		}
+
+		public static System.Boolean RebarModeling
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","RebarModeling");
+
+		}
+
+		public static System.Boolean AnalysisAndDesign
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","AnalysisAndDesign");
+
+		}
+
+		public static System.Boolean TaskManagement
+		{
+			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.ModuleManager","TaskManagement");
+
+		}
+
         
 
         internal dynamic teklaObject;

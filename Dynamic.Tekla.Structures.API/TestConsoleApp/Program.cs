@@ -16,15 +16,20 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
+            //StaticFieldsOrProperties();
            // InsertBeam();
-            OpenDrawingAndInsertLine();
-
+           // OpenDrawingAndInsertLine();
            // Events();
-
-            
-
+           
             Console.WriteLine("end");
             Console.ReadKey();
+        }
+
+        private static void StaticFieldsOrProperties()
+        {
+            Console.WriteLine(BaseComponent.PLUGIN_OBJECT_NUMBER);
+            Console.WriteLine(Dynamic.Tekla.Structures.Dialog.MainWindow.Frame.Handle);
+            TSD.DrawingEnumeratorBase.AutoFetch = true;
         }
 
         private static void Events()

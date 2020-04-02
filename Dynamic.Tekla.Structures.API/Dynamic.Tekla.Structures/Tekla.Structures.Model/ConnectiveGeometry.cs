@@ -11,6 +11,12 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ConnectiveGeometry 
     {
 
+		public static System.Int32 InvalidGeometrySectionIndex
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.ConnectiveGeometry","InvalidGeometrySectionIndex");
+
+		}
+
         
 
         internal dynamic teklaObject;

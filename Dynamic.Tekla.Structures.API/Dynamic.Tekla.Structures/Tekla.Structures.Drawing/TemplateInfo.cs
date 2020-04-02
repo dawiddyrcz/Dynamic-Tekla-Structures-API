@@ -17,6 +17,12 @@ namespace Dynamic.Tekla.Structures.Drawing
 			set { teklaObject.Name = value; }
 		}
 
+		public static Dynamic.Tekla.Structures.Drawing.TemplateInfo Default
+		{
+			get => Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo","Default"));
+			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo","Default",Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value)); }
+		}
+
         
 
         

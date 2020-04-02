@@ -23,6 +23,12 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.OperativePart = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
 		}
 
+		public static System.String BooleanOperativeClassName
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BooleanPart","BooleanOperativeClassName");
+
+		}
+
         
 
         

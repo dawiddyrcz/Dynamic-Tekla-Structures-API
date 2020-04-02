@@ -11,6 +11,12 @@ namespace Dynamic.Tekla.Structures.Model
     public  class DisposableToken 
     {
 
+		public static Dynamic.Tekla.Structures.Model.DisposableToken None
+		{
+			get => Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.DisposableToken","None"));
+
+		}
+
         
 
         internal dynamic teklaObject;

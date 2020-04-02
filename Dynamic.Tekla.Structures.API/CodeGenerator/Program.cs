@@ -11,7 +11,7 @@ namespace CodeGenerator
 {
     static class Program
     {
-        //TODO static classes and properties
+        //TODO add exceptions to other TSActivator types
 
         static void Main(string[] args)
         {
@@ -45,15 +45,10 @@ namespace CodeGenerator
         {
             Console.WriteLine("Generate API code");
             var generator = new FileGenerator();
-
-            var allTypes = GetTypesFromDll();
-
-            foreach (var type in allTypes)
+            
+            foreach (var type in GetTypesFromDll())
             {
-                //if (type.Name.Contains("Beam"))
-                {
-                    generator.SaveToFile(type);
-                }
+                generator.SaveToFile(type);
             }
         }
 

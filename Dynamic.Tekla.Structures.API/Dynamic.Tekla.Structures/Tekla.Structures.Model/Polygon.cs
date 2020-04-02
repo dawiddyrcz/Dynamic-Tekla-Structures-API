@@ -17,6 +17,18 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Points = value; }
 		}
 
+		public static System.Int32 MAX_POLYGON_POINTS
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon","MAX_POLYGON_POINTS");
+
+		}
+
+		public static System.Int32 MIN_POLYGON_POINTS
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon","MIN_POLYGON_POINTS");
+
+		}
+
         
 
         internal dynamic teklaObject;

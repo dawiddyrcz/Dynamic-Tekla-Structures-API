@@ -39,6 +39,39 @@ namespace Dynamic.Tekla.Structures
             return method.Invoke(null, parameters);
         }
 
+        public static object Get_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName)
+        {
+            var type = GetTypeFromTypeName(typeName);
+            var fieldInfo = type.GetField(fieldOrPropertyName);
+            if (fieldInfo != null)
+                return fieldInfo.GetValue(null);
+
+            var propertyInfo = type.GetProperty(fieldOrPropertyName);
+            if (propertyInfo != null)
+                return propertyInfo.GetValue(null);
+
+            throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
+        }
+
+        public static void Set_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName, object value)
+        {
+            var type = GetTypeFromTypeName(typeName);
+            var fieldInfo = type.GetField(fieldOrPropertyName);
+
+            if (fieldInfo != null)
+            {
+                fieldInfo.SetValue(null, value);
+                return;
+            }
+            var propertyInfo = type.GetProperty(fieldOrPropertyName);
+            if (propertyInfo != null)
+            {
+                propertyInfo.SetValue(null, value);
+                return;
+            }
+            throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
+        }
+
         private static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
         {
             var methods = type.GetMethods()

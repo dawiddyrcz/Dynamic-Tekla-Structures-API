@@ -23,6 +23,30 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.Number = value; }
 		}
 
+		public static System.Int32 CUSTOM_OBJECT_NUMBER
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","CUSTOM_OBJECT_NUMBER");
+
+		}
+
+		public static System.Int32 PLUGIN_OBJECT_NUMBER
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","PLUGIN_OBJECT_NUMBER");
+
+		}
+
+		public static System.String ConnectionCodeFromAttributeFile
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","ConnectionCodeFromAttributeFile");
+
+		}
+
+		public static System.Int32 ClassFromAttributeFile
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","ClassFromAttributeFile");
+
+		}
+
         
 
         

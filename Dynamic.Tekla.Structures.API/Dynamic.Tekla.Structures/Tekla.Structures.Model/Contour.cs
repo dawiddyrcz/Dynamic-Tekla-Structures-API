@@ -17,6 +17,18 @@ namespace Dynamic.Tekla.Structures.Model
 			set { teklaObject.ContourPoints = value; }
 		}
 
+		public static System.Int32 MAX_CONTOUR_POINTS
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Contour","MAX_CONTOUR_POINTS");
+
+		}
+
+		public static System.Int32 MIN_CONTOUR_POINTS
+		{
+			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Contour","MIN_CONTOUR_POINTS");
+
+		}
+
         
 
         internal dynamic teklaObject;

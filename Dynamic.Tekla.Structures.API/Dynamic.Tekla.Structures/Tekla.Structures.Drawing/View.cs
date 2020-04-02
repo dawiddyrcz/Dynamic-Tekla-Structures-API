@@ -745,6 +745,18 @@ namespace Dynamic.Tekla.Structures.Drawing
 			set { teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes_.GetTSObject(value); }
 		}
 
+		public static System.String LocationByModelOrigin
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes","LocationByModelOrigin");
+
+		}
+
+		public static System.String LocationByProjectBasePoint
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes","LocationByProjectBasePoint");
+
+		}
+
         
 
         

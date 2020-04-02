@@ -11,6 +11,18 @@ namespace Dynamic.Tekla.Structures.Dialog
     public  class Localization 
     {
 
+		public static System.String DefaultLocalizationFile
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization","DefaultLocalizationFile");
+
+		}
+
+		public static System.String DefaultLocalizationPath
+		{
+			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization","DefaultLocalizationPath");
+
+		}
+
 		public System.String Language
 		{
 			get => teklaObject.Language;

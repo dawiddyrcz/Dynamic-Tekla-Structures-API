@@ -49,6 +49,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Tekla.Structures.dll</HintPath>
     </Reference>
+    <Reference Include="Tekla.Structures.Dialog, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Tekla.Structures.Dialog.dll</HintPath>
+    </Reference>
     <Reference Include="Tekla.Structures.Model, Version=2019.1.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Tekla.Structures.Model.dll</HintPath>
@@ -72,6 +76,7 @@
     <Content Include="Tekla.Application.Library.dll" />
     <Content Include="Tekla.Structures.Catalogs.dll" />
     <Content Include="Tekla.Structures.Datatype.dll" />
+    <Content Include="Tekla.Structures.Dialog.dll" />
     <Content Include="Tekla.Structures.dll" />
     <Content Include="Tekla.Structures.Drawing.dll" />
     <Content Include="Tekla.Structures.Model.dll" />

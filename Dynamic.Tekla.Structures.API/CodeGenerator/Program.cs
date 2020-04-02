@@ -12,78 +12,19 @@ namespace CodeGenerator
     static class Program
     {
         //TODO static classes and properties
-        //TeklaStructures.MainWindow
-
 
         static void Main(string[] args)
         {
             Console.WriteLine("Project directory: " + GetProjectDirectory());
 
-            Console.WriteLine("Do you want to generate API codes?\ny - yes\nn - no\nt - show all types");
+            Console.WriteLine("Do you want to generate API codes?\ny - yes\nn - no\n");
             var input = Console.ReadLine();
 
             if (input.Equals("y", StringComparison.InvariantCulture))
             {
                 GenerateAPICode();
             }
-
-            if (input.Equals("t", StringComparison.InvariantCulture))
-            {
-                ShowAllTypes();
-            }
-        }
-
-        private static void ShowAllTypes()
-        {
-            Console.WriteLine("Shows all types");
-
-            var sb = new StringBuilder();
-
-            var ts = LoadTeklaStructures();
-
-            var tsTypes = ts.GetTypes().Where(
-                t => t.IsPublic
-                && t.Namespace.StartsWith("Tekla.Structures")
-                && !t.Namespace.Contains("Internal"));
-
-            foreach (var type in tsTypes)
-            {
-                Console.WriteLine(type.Name);
-                sb.AppendLine(type.Name);
-
-                Console.WriteLine(type.Name);
-                sb.AppendLine(type.Name + "\t" + type.IsNested);
-
-                foreach (var nestedType in type.GetNestedTypes())
-                {
-                    Console.WriteLine(nestedType.Name);
-                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.IsNested);
-                }
-            }
-
-
-            var tsm = LoadTeklaStructuresModel();
-            var tsmTypes = tsm.GetTypes().Where(
-                t => t.IsPublic
-                && t.Namespace.StartsWith("Tekla.Structures")
-                && !t.Namespace.Contains("Internal"));
-
-
-            foreach (var type in tsmTypes)
-            {
-                Console.WriteLine(type.Name);
-                sb.AppendLine(type.Name + "\t" +type.IsNested);
-
-                foreach (var nestedType in type.GetNestedTypes())
-                {
-                    Console.WriteLine(nestedType.Name);
-                    sb.AppendLine("\t" + nestedType.Name + "\t" + nestedType.IsNested);
-                }
-
-            }
-
-            File.WriteAllText("..\\..\\types.txt", sb.ToString());
-
+            
         }
 
         public static string GetProjectDirectory()
@@ -99,15 +40,6 @@ namespace CodeGenerator
             string filePath = Path.Combine(GetProjectDirectory(), fileName);
             return Assembly.LoadFile(filePath);
         }
-
-        private static Assembly LoadTeklaStructures() => LoadAssembly("Tekla.Structures.dll");
-
-        private static Assembly LoadTeklaStructuresModel() => LoadAssembly("Tekla.Structures.Model.dll");
-
-        private static Assembly LoadTeklaStructuresDrawing() => LoadAssembly("Tekla.Structures.Drawing.dll");
-
-        private static Assembly LoadTeklaApplicationLibrary() => LoadAssembly("Tekla.Application.Library.dll");
-
 
         private static void GenerateAPICode()
         {
@@ -127,14 +59,14 @@ namespace CodeGenerator
 
         private static List<Type> GetTypesFromDll()
         {
-            var ts = LoadTeklaStructures();
+            var ts = LoadAssembly("Tekla.Structures.dll");
             var tsTypes = ts.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
                 && !t.Namespace.Contains("Internal")
                 );
 
-            var tsm = LoadTeklaStructuresModel();
+            var tsm = LoadAssembly("Tekla.Structures.Model.dll");
             var tsmTypes = tsm.GetTypes().Where(
                 t => t.IsPublic
                 && t.Namespace.StartsWith("Tekla.Structures")
@@ -142,7 +74,7 @@ namespace CodeGenerator
                 && !t.Name.Equals("Events")
                 );
 
-            var tsd = LoadTeklaStructuresDrawing();
+            var tsd = LoadAssembly("Tekla.Structures.Drawing.dll");
             var tsdTypes = tsd.GetTypes().Where(
                 t => t.IsPublic
                 && (t.Namespace?.StartsWith("Tekla.Structures") ?? false)
@@ -151,7 +83,7 @@ namespace CodeGenerator
                 && !t.Name.Equals("Events")
                 );
 
-            var tal = LoadTeklaApplicationLibrary();
+            var tal = LoadAssembly("Tekla.Application.Library.dll");
             var talTypes = tal.GetTypes().Where(
                 t => t.Name.Equals("MacroBuilder", StringComparison.InvariantCulture) 
                 || t.Name.Equals("TeklaStructures", StringComparison.InvariantCulture)
@@ -167,11 +99,20 @@ namespace CodeGenerator
                 || t.Name.Equals("VirtualFolder", StringComparison.InvariantCulture)
                 );
 
-            var output = new List<Type>();
+            var tsdi = LoadAssembly("Tekla.Structures.Dialog.dll");
+            var tsdiTypes = tsdi.GetTypes().Where(
+                t => t.Name.Equals("MainWindow") 
+                || t.Name.Equals("HelpViewer")
+                || t.Name.Equals("Localization")
+
+                );
+
+           var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
             output.AddRange(tsdTypes);
             output.AddRange(talTypes);
+            output.AddRange(tsdiTypes);
             
             return output;
         }

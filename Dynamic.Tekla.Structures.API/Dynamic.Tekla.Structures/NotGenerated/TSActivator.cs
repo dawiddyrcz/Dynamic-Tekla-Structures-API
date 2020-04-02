@@ -155,9 +155,8 @@ namespace Dynamic.Tekla.Structures
         private static Dictionary<string, Assembly> GetAssemblies()
         {
             var output = new Dictionary<string, Assembly>();
-            var pluginPath = Path.Combine(teklaProcess.GetTeklaProcessDirectoryPath(), "plugins");
 
-            foreach (var dllPath in GetDllPathes(pluginPath))
+            foreach (var dllPath in GetDllPathes(teklaProcess.GetTeklaProcessDirectoryPath()))
             {
                 var assembly = Assembly.LoadFrom(dllPath);
 
@@ -189,14 +188,16 @@ namespace Dynamic.Tekla.Structures
             return output;
         }
 
-        private static List<string> GetDllPathes(string pluginPath)
+        private static List<string> GetDllPathes(string binPath)
         {
             return new List<string>()
             {
-                Path.Combine(pluginPath, "Tekla.Structures.dll"),
-                Path.Combine(pluginPath, "Tekla.Structures.Model.dll"),
-                Path.Combine(pluginPath, "Tekla.Structures.Drawing.dll"),
-                Path.Combine(pluginPath, "..", "applications", "Tekla", "Common", "Tekla.Application.Library.dll")
+                Path.Combine(binPath, "plugins", "Tekla.Structures.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Model.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Datatype.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Drawing.dll"),
+                Path.Combine(binPath, "applications", "Tekla", "Common", "Tekla.Application.Library.dll"),
+                Path.Combine(binPath, "dialogs", "Tekla.Structures.Dialog.dll"),
             };
 
         }

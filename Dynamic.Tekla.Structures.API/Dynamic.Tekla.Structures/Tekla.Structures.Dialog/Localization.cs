@@ -70,7 +70,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 			teklaObject.LoadXMLFile(fileName);
 		}
 
-		public void RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb, System.Type[] types)
+		public void RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb,  params System.Type[] types)
 		{
 			teklaObject.RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb), types);
 		}

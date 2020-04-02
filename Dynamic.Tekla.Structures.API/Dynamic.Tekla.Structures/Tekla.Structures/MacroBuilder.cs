@@ -66,12 +66,12 @@ namespace Dynamic.Tekla.Structures
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.CommandStart(command, parameter, frame));
 		}
 
-		public Dynamic.Tekla.Structures.MacroBuilder FileSelection(System.String[] items)
+		public Dynamic.Tekla.Structures.MacroBuilder FileSelection( params System.String[] items)
 		{
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.FileSelection(items));
 		}
 
-		public Dynamic.Tekla.Structures.MacroBuilder ListSelect(System.String dialog, System.String field, System.String[] items)
+		public Dynamic.Tekla.Structures.MacroBuilder ListSelect(System.String dialog, System.String field,  params System.String[] items)
 		{
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.ListSelect(dialog, field, items));
 		}
@@ -111,7 +111,7 @@ namespace Dynamic.Tekla.Structures
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.TabChange(dialog, field, item));
 		}
 
-		public Dynamic.Tekla.Structures.MacroBuilder TableSelect(System.String dialog, System.String field, System.Int32[] items)
+		public Dynamic.Tekla.Structures.MacroBuilder TableSelect(System.String dialog, System.String field,  params System.Int32[] items)
 		{
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.TableSelect(dialog, field, items));
 		}

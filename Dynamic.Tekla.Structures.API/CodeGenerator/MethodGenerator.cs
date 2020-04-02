@@ -92,6 +92,11 @@ namespace CodeGenerator
             return sb.ToString();
         }
 
+        private static bool IsParams(ParameterInfo parameter)
+        {
+            return parameter.GetCustomAttributes(typeof(ParamArrayAttribute), false).Length > 0;
+        }
+
         private static void NonStatic_GenerateForNotTeklaReturnType(StringBuilder sb, MethodInfo method, string name)
         {
             sb.Append("\t\t");
@@ -113,6 +118,7 @@ namespace CodeGenerator
                 if (param.IsOut) sb.Append("out ");
                 else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
+                if (IsParams(param)) sb.Append(" params ");
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
@@ -197,7 +203,8 @@ namespace CodeGenerator
                     sb.Append("out ");
                 else if (param.ParameterType.IsByRef)
                     sb.Append("ref ");
-                
+
+                if (IsParams(param)) sb.Append(" params ");
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
                 sb.Append(paramName);
@@ -305,6 +312,7 @@ namespace CodeGenerator
                 else if (param.ParameterType.IsByRef)
                     sb.Append("ref ");
 
+                if (IsParams(param)) sb.Append(" params ");
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
                 sb.Append(paramName);
@@ -404,6 +412,7 @@ namespace CodeGenerator
                 if (param.IsOut) sb.Append("out ");
                 else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
+                if (IsParams(param)) sb.Append(" params ");
                 sb.Append(GetTypeFullName(param.ParameterType));
                 sb.Append(" ");
                 sb.Append(paramName);
@@ -468,6 +477,7 @@ namespace CodeGenerator
                     sb.Append("ref ");
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                if (IsParams(param)) sb.Append(" params ");
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
                 sb.Append(paramName);
@@ -558,6 +568,7 @@ namespace CodeGenerator
                     sb.Append("ref ");
 
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
+                if (IsParams(param)) sb.Append(" params ");
                 sb.Append(paramTypeFullName);
                 sb.Append(" ");
                 sb.Append(paramName);

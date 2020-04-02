@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
         internal dynamic teklaObject;
 
-		public PrinterItemEnumerator() {}
+		public PrinterItemEnumerator()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Catalogs.PrinterItemEnumerator");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PrinterItemEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

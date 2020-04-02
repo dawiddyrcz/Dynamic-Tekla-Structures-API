@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public PickerInputObject() {}
+		public PickerInputObject()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.PickerInputObject");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PickerInputObject(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

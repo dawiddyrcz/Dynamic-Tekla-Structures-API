@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotDeleteActiveDrawingException() {}
+		public CannotDeleteActiveDrawingException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotDeleteActiveDrawingException");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotDeleteActiveDrawingException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

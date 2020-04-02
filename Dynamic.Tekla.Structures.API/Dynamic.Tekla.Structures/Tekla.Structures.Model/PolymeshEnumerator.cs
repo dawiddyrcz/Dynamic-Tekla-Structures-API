@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public PolymeshEnumerator() {}
+		public PolymeshEnumerator()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.PolymeshEnumerator");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PolymeshEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

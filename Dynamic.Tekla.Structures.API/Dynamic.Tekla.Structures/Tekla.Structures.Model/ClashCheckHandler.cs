@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public ClashCheckHandler() {}
+		public ClashCheckHandler()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ClashCheckHandler");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ClashCheckHandler(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

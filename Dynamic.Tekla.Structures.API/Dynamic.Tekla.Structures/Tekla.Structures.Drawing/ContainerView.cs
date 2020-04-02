@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public ContainerView() {}
+		public ContainerView()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ContainerView");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ContainerView(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

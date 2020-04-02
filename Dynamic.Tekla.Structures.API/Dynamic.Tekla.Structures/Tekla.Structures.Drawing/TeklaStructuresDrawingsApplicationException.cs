@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         internal dynamic teklaObject;
 
-		public TeklaStructuresDrawingsApplicationException() {}
+		public TeklaStructuresDrawingsApplicationException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.TeklaStructuresDrawingsApplicationException");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public TeklaStructuresDrawingsApplicationException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

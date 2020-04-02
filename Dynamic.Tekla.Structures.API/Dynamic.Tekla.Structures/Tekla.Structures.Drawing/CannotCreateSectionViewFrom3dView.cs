@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotCreateSectionViewFrom3dView() {}
+		public CannotCreateSectionViewFrom3dView()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotCreateSectionViewFrom3dView");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotCreateSectionViewFrom3dView(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

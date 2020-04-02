@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-		public DateTimeFilterExpression() {}
+		public DateTimeFilterExpression()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.DateTimeFilterExpression");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DateTimeFilterExpression(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

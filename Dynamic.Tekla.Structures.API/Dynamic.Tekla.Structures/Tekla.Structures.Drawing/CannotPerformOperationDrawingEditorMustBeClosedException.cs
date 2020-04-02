@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotPerformOperationDrawingEditorMustBeClosedException() {}
+		public CannotPerformOperationDrawingEditorMustBeClosedException()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotPerformOperationDrawingEditorMustBeClosedException");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotPerformOperationDrawingEditorMustBeClosedException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

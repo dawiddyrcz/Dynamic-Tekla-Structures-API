@@ -45,7 +45,10 @@ namespace Dynamic.Tekla.Structures.Datatype
 
         internal dynamic teklaObject;
 
-		public Angle() {}
+		public Angle()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Datatype.Angle");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Angle(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

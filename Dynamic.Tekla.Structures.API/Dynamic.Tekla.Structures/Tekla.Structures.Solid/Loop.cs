@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public Loop() {}
+		public Loop()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.Loop");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Loop(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public DrawingEnumerator() {}
+		public DrawingEnumerator()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DrawingEnumerator");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DrawingEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

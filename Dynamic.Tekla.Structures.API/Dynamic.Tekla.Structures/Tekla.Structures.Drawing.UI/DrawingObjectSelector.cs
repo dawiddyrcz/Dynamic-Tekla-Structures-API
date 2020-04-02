@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 
         internal dynamic teklaObject;
 
-		public DrawingObjectSelector() {}
+		public DrawingObjectSelector()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UI.DrawingObjectSelector");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DrawingObjectSelector(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

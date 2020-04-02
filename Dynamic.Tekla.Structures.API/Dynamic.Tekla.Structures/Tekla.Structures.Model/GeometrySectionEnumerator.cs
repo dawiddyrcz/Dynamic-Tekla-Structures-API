@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public GeometrySectionEnumerator() {}
+		public GeometrySectionEnumerator()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.GeometrySectionEnumerator");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public GeometrySectionEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

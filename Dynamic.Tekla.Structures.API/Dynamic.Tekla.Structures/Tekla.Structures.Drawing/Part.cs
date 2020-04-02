@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Part() {}
+		public Part()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Part");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Part(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-		public ParametricObject_ObjectBoundingBox() {}
+		public ParametricObject_ObjectBoundingBox()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_ObjectBoundingBox");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ParametricObject_ObjectBoundingBox(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

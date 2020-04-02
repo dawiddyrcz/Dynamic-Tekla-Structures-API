@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public Shell() {}
+		public Shell()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.Shell");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Shell(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

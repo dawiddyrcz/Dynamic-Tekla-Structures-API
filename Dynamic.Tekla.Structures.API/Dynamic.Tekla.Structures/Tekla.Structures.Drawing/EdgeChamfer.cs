@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public EdgeChamfer() {}
+		public EdgeChamfer()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.EdgeChamfer");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public EdgeChamfer(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

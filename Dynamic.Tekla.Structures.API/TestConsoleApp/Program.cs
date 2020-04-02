@@ -16,7 +16,7 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-            //InsertBeam();
+           // InsertBeam();
             OpenDrawingAndInsertLine();
 
            // Events();

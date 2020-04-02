@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public DwgObject() {}
+		public DwgObject()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DwgObject");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DwgObject(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

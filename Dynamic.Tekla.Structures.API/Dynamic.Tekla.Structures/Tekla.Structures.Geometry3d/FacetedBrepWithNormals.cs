@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         
 
-		public FacetedBrepWithNormals() {}
+		public FacetedBrepWithNormals()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepWithNormals");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public FacetedBrepWithNormals(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

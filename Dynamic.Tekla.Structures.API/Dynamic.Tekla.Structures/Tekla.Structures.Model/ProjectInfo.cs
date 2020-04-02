@@ -135,7 +135,10 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public ProjectInfo() {}
+		public ProjectInfo()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ProjectInfo");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ProjectInfo(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

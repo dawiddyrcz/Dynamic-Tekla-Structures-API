@@ -27,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public ReinforcementStrand() {}
+		public ReinforcementStrand()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementStrand");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ReinforcementStrand(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

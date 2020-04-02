@@ -27,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
         internal dynamic teklaObject;
 
-		public MaterialMarketSizesItem() {}
+		public MaterialMarketSizesItem()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Catalogs.MaterialMarketSizesItem");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public MaterialMarketSizesItem(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

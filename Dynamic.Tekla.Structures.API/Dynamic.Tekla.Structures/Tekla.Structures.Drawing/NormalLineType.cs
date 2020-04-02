@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public NormalLineType() {}
+		public NormalLineType()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.NormalLineType");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public NormalLineType(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

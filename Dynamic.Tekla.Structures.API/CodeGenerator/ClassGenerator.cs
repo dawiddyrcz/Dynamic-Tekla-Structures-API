@@ -73,13 +73,13 @@ namespace CodeGenerator
 
             if (type.IsAbstract) return string.Empty;
 
-            if (type.GetConstructors().Any(c => c.GetParameters().Count() == 0))
-            {
+           // if (type.GetConstructors().Any(c => c.GetParameters().Length == 0))
+            //{
                 sb.Append("\t\tpublic $classname()\n\t\t{\n");
                 sb.Append("\t\t\tthis.$dfield = TSActivator.CreateInstance(\"$typeFullName\");\n");
-                sb.Append("\t\t}\n");
-            }
-            else sb.Append("\t\tpublic $classname() {}\n");
+            sb.Append("\t\t}\n");
+           //}
+            //else sb.Append("\t\tpublic $classname() {}\n");
 
             sb.Append("\t\t//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument\n");
             sb.Append("\t\tpublic $classname(dynamic tsObject, System.DateTime nonConflictParameter)\n\t\t{\n");

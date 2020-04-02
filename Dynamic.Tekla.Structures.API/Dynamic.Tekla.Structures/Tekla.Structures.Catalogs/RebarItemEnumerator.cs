@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
         internal dynamic teklaObject;
 
-		public RebarItemEnumerator() {}
+		public RebarItemEnumerator()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Catalogs.RebarItemEnumerator");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public RebarItemEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

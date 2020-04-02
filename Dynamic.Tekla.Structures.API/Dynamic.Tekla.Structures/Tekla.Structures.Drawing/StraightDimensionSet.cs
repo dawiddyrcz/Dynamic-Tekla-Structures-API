@@ -39,7 +39,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public StraightDimensionSet() {}
+		public StraightDimensionSet()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.StraightDimensionSet");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public StraightDimensionSet(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

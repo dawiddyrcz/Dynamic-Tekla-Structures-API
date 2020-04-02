@@ -33,7 +33,10 @@ namespace Dynamic.Tekla.Structures
 
         internal dynamic teklaObject;
 
-		public Assertion() {}
+		public Assertion()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Assertion");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Assertion(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

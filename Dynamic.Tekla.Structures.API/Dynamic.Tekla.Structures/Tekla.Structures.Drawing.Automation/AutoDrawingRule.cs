@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
 
         internal dynamic teklaObject;
 
-		public AutoDrawingRule() {}
+		public AutoDrawingRule()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Automation.AutoDrawingRule");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public AutoDrawingRule(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

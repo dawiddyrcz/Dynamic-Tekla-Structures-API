@@ -27,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         internal dynamic teklaObject;
 
-		public Frame() {}
+		public Frame()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Frame");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Frame(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

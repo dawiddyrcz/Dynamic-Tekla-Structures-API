@@ -45,7 +45,10 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-		public IFC2X3_ParametricObject_IShapeProfile() {}
+		public IFC2X3_ParametricObject_IShapeProfile()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_IShapeProfile");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public IFC2X3_ParametricObject_IShapeProfile(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

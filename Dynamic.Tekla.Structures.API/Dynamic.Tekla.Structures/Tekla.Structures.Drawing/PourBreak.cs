@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public PourBreak() {}
+		public PourBreak()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.PourBreak");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PourBreak(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

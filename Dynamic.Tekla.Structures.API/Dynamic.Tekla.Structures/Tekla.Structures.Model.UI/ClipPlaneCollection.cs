@@ -33,7 +33,10 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
         internal dynamic teklaObject;
 
-		public ClipPlaneCollection() {}
+		public ClipPlaneCollection()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.ClipPlaneCollection");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ClipPlaneCollection(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

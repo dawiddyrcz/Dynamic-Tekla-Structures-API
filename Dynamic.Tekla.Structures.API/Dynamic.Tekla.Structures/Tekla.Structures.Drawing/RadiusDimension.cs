@@ -45,7 +45,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public RadiusDimension() {}
+		public RadiusDimension()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.RadiusDimension");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public RadiusDimension(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

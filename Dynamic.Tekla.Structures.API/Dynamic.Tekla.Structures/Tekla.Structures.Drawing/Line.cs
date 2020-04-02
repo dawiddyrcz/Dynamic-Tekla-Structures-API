@@ -39,7 +39,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Line() {}
+		public Line()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Line");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Line(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

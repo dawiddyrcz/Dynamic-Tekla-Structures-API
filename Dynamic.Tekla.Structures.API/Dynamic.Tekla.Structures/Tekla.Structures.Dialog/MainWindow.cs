@@ -21,7 +21,10 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         internal dynamic teklaObject;
 
-		public MainWindow() {}
+		public MainWindow()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.MainWindow");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public MainWindow(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

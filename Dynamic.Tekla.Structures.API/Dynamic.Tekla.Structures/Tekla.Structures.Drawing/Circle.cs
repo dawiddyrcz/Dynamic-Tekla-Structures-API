@@ -33,7 +33,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Circle() {}
+		public Circle()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Circle");
+		}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Circle(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

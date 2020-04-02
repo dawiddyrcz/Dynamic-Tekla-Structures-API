@@ -120,6 +120,7 @@
     <Compile Include="Tekla.Structures.Dialog\HelpViewer.cs" />
     <Compile Include="Tekla.Structures.Dialog\Localization.cs" />
     <Compile Include="Tekla.Structures.Dialog\MainWindow.cs" />
+    <Compile Include="Tekla.Structures.Dialog\StructuresInstallation.cs" />
     <Compile Include="Tekla.Structures.Drawing.Automation\AutoDrawingRule.cs" />
     <Compile Include="Tekla.Structures.Drawing.Automation\AutoDrawingsStatusEnum.cs" />
     <Compile Include="Tekla.Structures.Drawing.Automation\DrawingCreator.cs" />

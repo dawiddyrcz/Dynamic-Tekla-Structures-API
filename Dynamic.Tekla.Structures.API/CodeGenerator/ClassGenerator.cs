@@ -36,12 +36,17 @@ namespace CodeGenerator
 
             if (type.BaseType != null)
             {
-                if (IsTeklaType(type.BaseType))
-                {
-                    baseClassText = " : " + GetTypeFullName(type.BaseType);
-                }
-                else
+                baseClassText = " : " + GetTypeFullName(type.BaseType);
+                
+                if (!IsTeklaType(type.BaseType))
                     dfieldDeclaration = "internal dynamic $dfield;";
+
+                //if (IsTeklaType(type.BaseType))
+                //{
+                //    baseClassText = " : " + GetTypeFullName(type.BaseType);
+                //}
+                //else
+                //    dfieldDeclaration = "internal dynamic $dfield;";
             }
             else
                 dfieldDeclaration = "internal dynamic $dfield;";

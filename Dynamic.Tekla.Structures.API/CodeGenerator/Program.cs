@@ -99,6 +99,7 @@ namespace CodeGenerator
                 t => t.Name.Equals("MainWindow") 
                 || t.Name.Equals("HelpViewer")
                 || t.Name.Equals("Localization")
+                || t.Name.Equals("StructuresInstallation")
 
                 );
 

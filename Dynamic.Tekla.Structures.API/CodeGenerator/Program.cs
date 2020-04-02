@@ -107,13 +107,21 @@ namespace CodeGenerator
 
                 );
 
-           var output = new List<Type>();
+            var tsc = LoadAssembly("Tekla.Structures.Catalogs.dll");
+            var tscTypes = tsc.GetTypes().Where(
+                 t => t.IsPublic
+                 && (t.Namespace?.StartsWith("Tekla.Structures") ?? false)
+                  && !t.Namespace.Contains("Internal")
+                 );
+
+            var output = new List<Type>();
             output.AddRange(tsTypes);
             output.AddRange(tsmTypes);
             output.AddRange(tsdTypes);
             output.AddRange(talTypes);
             output.AddRange(tsdiTypes);
-            
+            output.AddRange(tscTypes);
+
             return output;
         }
     }

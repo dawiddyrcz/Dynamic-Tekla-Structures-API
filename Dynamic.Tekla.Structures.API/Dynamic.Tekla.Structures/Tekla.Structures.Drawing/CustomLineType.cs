@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CustomLineType()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CustomLineType");
-		}
+		internal CustomLineType() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CustomLineType(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

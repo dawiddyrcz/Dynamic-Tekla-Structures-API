@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Cloud()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Cloud");
-		}
+		internal Cloud() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Cloud(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

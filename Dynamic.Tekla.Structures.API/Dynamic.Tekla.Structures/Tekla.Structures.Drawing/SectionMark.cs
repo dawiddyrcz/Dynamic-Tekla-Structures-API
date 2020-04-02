@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public SectionMark()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMark");
-		}
+		internal SectionMark() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public SectionMark(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -39,10 +39,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         internal dynamic teklaObject;
 
-		public FacetedBrepFaceHole()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrepFaceHole");
-		}
+		internal FacetedBrepFaceHole() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public FacetedBrepFaceHole(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

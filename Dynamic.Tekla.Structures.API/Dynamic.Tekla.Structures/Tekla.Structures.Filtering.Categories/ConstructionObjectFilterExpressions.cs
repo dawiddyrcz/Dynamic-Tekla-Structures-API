@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         internal dynamic teklaObject;
 
-		public ConstructionObjectFilterExpressions()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConstructionObjectFilterExpressions");
-		}
+		internal ConstructionObjectFilterExpressions() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ConstructionObjectFilterExpressions(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -35,10 +32,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-		public CustomBoolean()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConstructionObjectFilterExpressions.CustomBoolean");
-		}
+		internal CustomBoolean() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CustomBoolean(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -115,10 +109,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-		public CustomDateTime()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConstructionObjectFilterExpressions.CustomDateTime");
-		}
+		internal CustomDateTime() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CustomDateTime(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -195,10 +186,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-		public CustomNumber()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConstructionObjectFilterExpressions.CustomNumber");
-		}
+		internal CustomNumber() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CustomNumber(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -275,10 +263,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         
 
-		public CustomString()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.Categories.ConstructionObjectFilterExpressions.CustomString");
-		}
+		internal CustomString() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CustomString(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

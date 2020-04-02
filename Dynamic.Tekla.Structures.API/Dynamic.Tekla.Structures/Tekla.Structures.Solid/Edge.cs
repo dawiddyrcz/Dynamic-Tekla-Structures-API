@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public Edge()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.Edge");
-		}
+		internal Edge() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Edge(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

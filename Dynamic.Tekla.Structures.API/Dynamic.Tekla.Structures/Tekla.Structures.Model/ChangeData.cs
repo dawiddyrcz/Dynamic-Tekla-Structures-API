@@ -27,10 +27,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public ChangeData()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ChangeData");
-		}
+		internal ChangeData() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ChangeData(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -27,10 +27,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public Face()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.Face");
-		}
+		internal Face() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Face(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

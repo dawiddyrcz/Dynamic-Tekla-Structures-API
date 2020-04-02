@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Mark()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark");
-		}
+		internal Mark() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Mark(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -78,10 +75,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public MarkAttributes()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark.MarkAttributes");
-		}
+		internal MarkAttributes() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public MarkAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

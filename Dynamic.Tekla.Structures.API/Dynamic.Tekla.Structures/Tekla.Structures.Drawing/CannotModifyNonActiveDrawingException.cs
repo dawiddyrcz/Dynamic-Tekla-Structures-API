@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotModifyNonActiveDrawingException()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotModifyNonActiveDrawingException");
-		}
+		internal CannotModifyNonActiveDrawingException() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotModifyNonActiveDrawingException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

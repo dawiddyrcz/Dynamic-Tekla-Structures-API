@@ -57,10 +57,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public RectangleBoundingBox()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.RectangleBoundingBox");
-		}
+		internal RectangleBoundingBox() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public RectangleBoundingBox(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Grid()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Grid");
-		}
+		internal Grid() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Grid(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

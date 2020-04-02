@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-		public NumericFilterExpression()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.NumericFilterExpression");
-		}
+		internal NumericFilterExpression() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public NumericFilterExpression(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

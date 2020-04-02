@@ -123,10 +123,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public BasePoint()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint");
-		}
+		internal BasePoint() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public BasePoint(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

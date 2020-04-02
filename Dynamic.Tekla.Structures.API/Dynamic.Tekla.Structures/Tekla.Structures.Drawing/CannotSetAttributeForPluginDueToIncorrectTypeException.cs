@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotSetAttributeForPluginDueToIncorrectTypeException()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotSetAttributeForPluginDueToIncorrectTypeException");
-		}
+		internal CannotSetAttributeForPluginDueToIncorrectTypeException() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotSetAttributeForPluginDueToIncorrectTypeException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

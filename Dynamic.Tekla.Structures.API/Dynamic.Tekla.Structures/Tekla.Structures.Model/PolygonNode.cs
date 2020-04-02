@@ -27,10 +27,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public PolygonNode()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.PolygonNode");
-		}
+		internal PolygonNode() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PolygonNode(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

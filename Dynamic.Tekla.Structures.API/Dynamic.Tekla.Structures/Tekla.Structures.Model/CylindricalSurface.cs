@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         
 
-		public CylindricalSurface()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.CylindricalSurface");
-		}
+		internal CylindricalSurface() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CylindricalSurface(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

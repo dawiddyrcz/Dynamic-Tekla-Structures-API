@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Surfacing()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Surfacing");
-		}
+		internal Surfacing() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Surfacing(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

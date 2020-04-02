@@ -27,10 +27,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public AssemblyDrawing()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.AssemblyDrawing");
-		}
+		internal AssemblyDrawing() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public AssemblyDrawing(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

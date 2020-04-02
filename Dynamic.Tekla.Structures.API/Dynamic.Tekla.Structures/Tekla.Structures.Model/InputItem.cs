@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public InputItem()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.InputItem");
-		}
+		internal InputItem() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public InputItem(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

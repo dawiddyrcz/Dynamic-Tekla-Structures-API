@@ -57,10 +57,7 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
         internal dynamic teklaObject;
 
-		public CrossSection()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Catalogs.CrossSection");
-		}
+		internal CrossSection() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CrossSection(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

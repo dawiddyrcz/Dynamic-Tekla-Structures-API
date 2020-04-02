@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotPerformOperationDrawingIsActiveException()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotPerformOperationDrawingIsActiveException");
-		}
+		internal CannotPerformOperationDrawingIsActiveException() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotPerformOperationDrawingIsActiveException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

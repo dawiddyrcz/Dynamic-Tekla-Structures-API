@@ -45,10 +45,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public Text()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Text");
-		}
+		internal Text() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public Text(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public ModelObjectHatchAttributes()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ModelObjectHatchAttributes");
-		}
+		internal ModelObjectHatchAttributes() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ModelObjectHatchAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

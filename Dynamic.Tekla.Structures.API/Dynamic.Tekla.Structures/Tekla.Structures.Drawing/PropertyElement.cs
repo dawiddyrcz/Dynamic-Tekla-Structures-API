@@ -39,10 +39,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public PropertyElement()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.PropertyElement");
-		}
+		internal PropertyElement() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PropertyElement(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -80,10 +77,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         internal dynamic teklaObject;
 
-		public PropertyElementType()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.PropertyElement.PropertyElementType");
-		}
+		internal PropertyElementType() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PropertyElementType(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

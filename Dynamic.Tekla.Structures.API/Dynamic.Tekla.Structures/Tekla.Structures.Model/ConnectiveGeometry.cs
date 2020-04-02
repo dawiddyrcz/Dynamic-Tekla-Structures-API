@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public ConnectiveGeometry()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ConnectiveGeometry");
-		}
+		internal ConnectiveGeometry() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ConnectiveGeometry(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

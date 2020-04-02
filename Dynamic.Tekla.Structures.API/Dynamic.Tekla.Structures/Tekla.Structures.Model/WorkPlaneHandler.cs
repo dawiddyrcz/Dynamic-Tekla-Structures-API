@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public WorkPlaneHandler()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.WorkPlaneHandler");
-		}
+		internal WorkPlaneHandler() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public WorkPlaneHandler(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

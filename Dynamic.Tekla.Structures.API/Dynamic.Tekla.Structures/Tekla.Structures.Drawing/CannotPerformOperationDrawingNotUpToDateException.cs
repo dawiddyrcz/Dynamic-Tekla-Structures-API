@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CannotPerformOperationDrawingNotUpToDateException()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CannotPerformOperationDrawingNotUpToDateException");
-		}
+		internal CannotPerformOperationDrawingNotUpToDateException() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CannotPerformOperationDrawingNotUpToDateException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

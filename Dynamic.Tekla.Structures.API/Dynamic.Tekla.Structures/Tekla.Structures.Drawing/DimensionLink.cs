@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public DimensionLink()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionLink");
-		}
+		internal DimensionLink() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DimensionLink(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

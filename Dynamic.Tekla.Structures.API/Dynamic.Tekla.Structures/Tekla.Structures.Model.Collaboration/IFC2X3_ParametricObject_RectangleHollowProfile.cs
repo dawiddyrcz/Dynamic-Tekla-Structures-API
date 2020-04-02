@@ -45,10 +45,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-		public IFC2X3_ParametricObject_RectangleHollowProfile()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.IFC2X3_ParametricObject_RectangleHollowProfile");
-		}
+		internal IFC2X3_ParametricObject_RectangleHollowProfile() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public IFC2X3_ParametricObject_RectangleHollowProfile(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

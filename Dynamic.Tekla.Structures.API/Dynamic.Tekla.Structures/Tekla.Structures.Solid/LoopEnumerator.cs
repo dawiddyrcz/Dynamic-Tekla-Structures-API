@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public LoopEnumerator()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.LoopEnumerator");
-		}
+		internal LoopEnumerator() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public LoopEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

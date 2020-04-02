@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-		public BooleanConstantFilterExpression()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.BooleanConstantFilterExpression");
-		}
+		internal BooleanConstantFilterExpression() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public BooleanConstantFilterExpression(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

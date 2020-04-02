@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public CurvedDimensionSetRadial()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CurvedDimensionSetRadial");
-		}
+		internal CurvedDimensionSetRadial() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public CurvedDimensionSetRadial(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

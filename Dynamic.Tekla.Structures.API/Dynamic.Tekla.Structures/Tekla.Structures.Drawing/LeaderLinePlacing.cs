@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public LeaderLinePlacing()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.LeaderLinePlacing");
-		}
+		internal LeaderLinePlacing() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public LeaderLinePlacing(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

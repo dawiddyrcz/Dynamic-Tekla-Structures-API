@@ -39,10 +39,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public UserDefinedElement()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UserDefinedElement");
-		}
+		internal UserDefinedElement() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public UserDefinedElement(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

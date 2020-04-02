@@ -27,10 +27,7 @@ namespace Dynamic.Tekla.Structures
 
         
 
-		public ModelFolder()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.ModelFolder");
-		}
+		internal ModelFolder() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ModelFolder(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

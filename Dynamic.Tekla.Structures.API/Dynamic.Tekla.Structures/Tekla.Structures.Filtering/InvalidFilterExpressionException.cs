@@ -45,10 +45,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         internal dynamic teklaObject;
 
-		public InvalidFilterExpressionException()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.InvalidFilterExpressionException");
-		}
+		internal InvalidFilterExpressionException() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public InvalidFilterExpressionException(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public ModelObjectEnumerator()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ModelObjectEnumerator");
-		}
+		internal ModelObjectEnumerator() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ModelObjectEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

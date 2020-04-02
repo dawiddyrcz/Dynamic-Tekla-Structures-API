@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-		public GridLine()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.GridLine");
-		}
+		internal GridLine() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public GridLine(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

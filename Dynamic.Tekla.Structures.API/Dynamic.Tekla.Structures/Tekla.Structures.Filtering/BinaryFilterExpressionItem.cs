@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 
         
 
-		public BinaryFilterExpressionItem()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Filtering.BinaryFilterExpressionItem");
-		}
+		internal BinaryFilterExpressionItem() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public BinaryFilterExpressionItem(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

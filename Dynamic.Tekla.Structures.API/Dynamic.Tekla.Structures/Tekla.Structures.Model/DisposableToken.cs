@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         internal dynamic teklaObject;
 
-		public DisposableToken()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken");
-		}
+		internal DisposableToken() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public DisposableToken(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

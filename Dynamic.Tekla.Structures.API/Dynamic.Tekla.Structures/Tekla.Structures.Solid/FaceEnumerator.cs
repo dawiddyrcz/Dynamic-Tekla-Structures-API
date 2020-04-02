@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Solid
 
         internal dynamic teklaObject;
 
-		public FaceEnumerator()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Solid.FaceEnumerator");
-		}
+		internal FaceEnumerator() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public FaceEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

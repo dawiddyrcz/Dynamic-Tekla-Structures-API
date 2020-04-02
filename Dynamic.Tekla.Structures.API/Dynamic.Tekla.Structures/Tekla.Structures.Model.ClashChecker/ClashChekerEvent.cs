@@ -33,10 +33,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         internal dynamic teklaObject;
 
-		public ClashCheckDoneDelegate()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashCheckDoneDelegate");
-		}
+		internal ClashCheckDoneDelegate() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ClashCheckDoneDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -124,10 +121,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         internal dynamic teklaObject;
 
-		public ClashDetectedDelegate()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ClashChecker.ClashChekerEvent.ClashDetectedDelegate");
-		}
+		internal ClashDetectedDelegate() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ClashDetectedDelegate(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

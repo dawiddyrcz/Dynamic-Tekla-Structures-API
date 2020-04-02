@@ -15,10 +15,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         
 
-		public ParametricObject_CustomProfile()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ParametricObject_CustomProfile");
-		}
+		internal ParametricObject_CustomProfile() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ParametricObject_CustomProfile(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

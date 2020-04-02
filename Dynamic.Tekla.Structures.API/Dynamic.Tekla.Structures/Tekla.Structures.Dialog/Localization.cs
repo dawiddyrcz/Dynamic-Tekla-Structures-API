@@ -110,10 +110,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         internal dynamic teklaObject;
 
-		public LocalizationCallback()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.Localization.LocalizationCallback");
-		}
+		internal LocalizationCallback() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public LocalizationCallback(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
@@ -253,10 +250,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         internal dynamic teklaObject;
 
-		public PropertyLocalizer()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.Localization.Util.PropertyLocalizer");
-		}
+		internal PropertyLocalizer() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public PropertyLocalizer(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

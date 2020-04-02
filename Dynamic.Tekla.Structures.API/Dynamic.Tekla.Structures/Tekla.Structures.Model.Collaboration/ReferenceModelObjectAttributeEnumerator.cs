@@ -21,10 +21,7 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
         internal dynamic teklaObject;
 
-		public ReferenceModelObjectAttributeEnumerator()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator");
-		}
+		internal ReferenceModelObjectAttributeEnumerator() {}
 		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
 		public ReferenceModelObjectAttributeEnumerator(dynamic tsObject, System.DateTime nonConflictParameter)
 		{

@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Datatype
 {
 
-    public  class DistanceConverter 
+    public  class DistanceConverter  : System.ComponentModel.TypeConverter
     {
 
         

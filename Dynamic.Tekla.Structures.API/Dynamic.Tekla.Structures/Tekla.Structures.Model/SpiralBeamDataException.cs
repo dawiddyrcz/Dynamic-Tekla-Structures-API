@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class SpiralBeamDataException 
+    public  class SpiralBeamDataException  : System.Exception
     {
 
 		public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus

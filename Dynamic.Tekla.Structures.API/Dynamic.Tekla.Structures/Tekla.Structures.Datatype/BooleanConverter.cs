@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Datatype
 {
 
-    public  class BooleanConverter 
+    public  class BooleanConverter  : System.ComponentModel.TypeConverter
     {
 
         

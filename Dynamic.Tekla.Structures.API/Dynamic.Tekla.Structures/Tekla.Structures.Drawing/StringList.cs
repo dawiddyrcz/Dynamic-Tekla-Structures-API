@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Drawing
 {
 
-    public  class StringList 
+    public  class StringList  : System.Collections.CollectionBase
     {
 
 		public System.String Item

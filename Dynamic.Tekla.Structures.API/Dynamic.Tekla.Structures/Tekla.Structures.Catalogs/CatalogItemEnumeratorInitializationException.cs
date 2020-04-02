@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Catalogs
 {
 
-    public  class CatalogItemEnumeratorInitializationException 
+    public  class CatalogItemEnumeratorInitializationException  : System.Exception
     {
 
         

@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Drawing
 {
 
-    public  class PointList 
+    public  class PointList  : System.Collections.CollectionBase
     {
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Item

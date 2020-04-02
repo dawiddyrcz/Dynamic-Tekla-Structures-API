@@ -36,17 +36,17 @@ namespace CodeGenerator
 
             if (type.BaseType != null)
             {
-                baseClassText = " : " + GetTypeFullName(type.BaseType);
+                if (
+                    !(
+                    type.BaseType.Equals(typeof(System.Object)) || type.BaseType.Equals(typeof(System.MulticastDelegate))  //TODO what is the MulticastDelegate
+                    )
+                    )
+                    baseClassText = " : " + GetTypeFullName(type.BaseType);
                 
+
+
                 if (!IsTeklaType(type.BaseType))
                     dfieldDeclaration = "internal dynamic $dfield;";
-
-                //if (IsTeklaType(type.BaseType))
-                //{
-                //    baseClassText = " : " + GetTypeFullName(type.BaseType);
-                //}
-                //else
-                //    dfieldDeclaration = "internal dynamic $dfield;";
             }
             else
                 dfieldDeclaration = "internal dynamic $dfield;";

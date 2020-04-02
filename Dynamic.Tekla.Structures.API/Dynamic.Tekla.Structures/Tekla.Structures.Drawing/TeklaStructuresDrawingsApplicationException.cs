@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Drawing
 {
 
-    public  class TeklaStructuresDrawingsApplicationException 
+    public  class TeklaStructuresDrawingsApplicationException  : System.ApplicationException
     {
 
         

@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Datatype
 {
 
-    public  class DoubleConverter 
+    public  class DoubleConverter  : System.ComponentModel.TypeConverter
     {
 
         

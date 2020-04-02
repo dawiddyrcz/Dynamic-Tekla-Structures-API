@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Drawing
 {
 
-    public  class IntList 
+    public  class IntList  : System.Collections.CollectionBase
     {
 
 		public System.Int32 Item

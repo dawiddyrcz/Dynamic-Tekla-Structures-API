@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class ConnectiveGeometryException 
+    public  class ConnectiveGeometryException  : System.Exception
     {
 
 		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus

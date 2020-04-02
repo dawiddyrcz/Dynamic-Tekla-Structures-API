@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Dialog
 {
 
-    public  class Localization 
+    public  class Localization  : System.MarshalByRefObject
     {
 
 		public static System.String DefaultLocalizationFile

@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Datatype
 {
 
-    public  class SettingsProxy 
+    public  class SettingsProxy  : System.MarshalByRefObject
     {
 
         

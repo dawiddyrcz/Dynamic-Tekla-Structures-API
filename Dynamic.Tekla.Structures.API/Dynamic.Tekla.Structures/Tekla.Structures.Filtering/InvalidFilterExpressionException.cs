@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Filtering
 {
 
-    public  class InvalidFilterExpressionException 
+    public  class InvalidFilterExpressionException  : System.Exception
     {
 
 		public Dynamic.Tekla.Structures.Filtering.Expression Expression

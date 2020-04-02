@@ -8,7 +8,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public abstract class LoftedPlateOperationException 
+    public abstract class LoftedPlateOperationException  : System.Exception
     {
 
         

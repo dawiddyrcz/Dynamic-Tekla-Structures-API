@@ -32,9 +32,6 @@ namespace CodeGenerator
                 return generator.GetTextFromType(type);
             }
             else System.Diagnostics.Debug.WriteLine("Type not supported " + type.FullName);
-
-             //TODO insert not typical elements to type
-
             return string.Empty;
         }
     }

@@ -178,8 +178,6 @@ namespace CodeGenerator
 
             foreach (var propertyOrField in propertiesAndFields)
             {
-                if (type.Name.Equals("IEnvironment") && propertyOrField.Name.Equals("Localization")) continue;  //TODO attach internal window to tekla
-               
                 Type currentType = null;
 
                 var hasGet = false;

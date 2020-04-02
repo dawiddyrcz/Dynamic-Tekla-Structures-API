@@ -41,6 +41,12 @@ namespace Dynamic.Tekla.Structures
 
 		}
 
+		public Dynamic.Tekla.Structures.Dialog.Localization Localization
+		{
+			get => Dynamic.Tekla.Structures.Dialog.Localization_.FromTSObject(teklaObject.Localization);
+
+		}
+
 		public System.String MacrosFolder
 		{
 			get => teklaObject.MacrosFolder;

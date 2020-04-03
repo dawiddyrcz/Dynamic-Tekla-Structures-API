@@ -6,10 +6,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TSM = Tekla.Structures.Model;
+using T3D = Tekla.Structures.Geometry3d;
 
 namespace CodeGenerator
 {
-    static class Program
+    internal static class Program
     {
         //TODO add exceptions to other TSActivator types
 
@@ -23,6 +24,28 @@ namespace CodeGenerator
             if (input.Equals("y", StringComparison.InvariantCulture))
             {
                 GenerateAPICode();
+
+                System.Diagnostics.Debug.WriteLine("op names: ");
+                foreach (var item in ClassGenerator.opStrings)
+                {
+                    System.Diagnostics.Debug.WriteLine(item);
+                }
+            }
+            else
+            {
+                var operatorMethods = typeof(Tekla.Structures.Geometry3d.Point).GetMethods().Where(m => m.Name.StartsWith("op_"));
+
+                foreach (var method in operatorMethods)
+                {
+                    System.Diagnostics.Debug.WriteLine(method.Name);
+
+                    foreach (var parameter in method.GetParameters())
+                    {
+                        System.Diagnostics.Debug.WriteLine("\t" + parameter.ParameterType.Name + " " +parameter.Name);
+                    }
+                }
+
+                Console.ReadKey();
             }
             
         }

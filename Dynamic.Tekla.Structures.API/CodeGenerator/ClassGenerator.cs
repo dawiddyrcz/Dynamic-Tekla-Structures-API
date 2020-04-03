@@ -64,6 +64,8 @@ namespace CodeGenerator
             {
                 nestedTypeText.AppendLine(nestedTypeGenerator.GetTextFromType(nestedType));
             }
+
+            outputText = outputText.Replace("$overloadedOperators", GetOverLoadedOperatorsText(type));
             outputText = outputText.Replace("$nestedTypes", nestedTypeText.ToString());
             outputText = outputText.Replace("$typeFullName", GetTypeFullName(type).Replace("Dynamic.",""));
             outputText = outputText.Replace("$typeDFullDNameDynamic", GetTypeFullName(type));
@@ -318,6 +320,36 @@ namespace CodeGenerator
             return TypeFullName.GetTypeFullName_WithDynamic(type);
         }
 
+        public static HashSet<string> opStrings = new HashSet<string>();
+
+        private string GetOverLoadedOperatorsText(Type type)
+        {
+            var opMethods = type.GetMethods().Where(m => m.Name.StartsWith("op_", StringComparison.InvariantCulture));
+
+            foreach (var opMethod in opMethods)
+            {
+                switch (opMethod.Name)
+                {
+                    case ("op_Equality"):
+                        break;
+                    case ("op_Inequality"):
+                        break;
+                    case ("op_Addition"):
+                        break;
+                    case ("op_Multiply"):
+                        break;
+                    case ("op_Subtraction"):
+                        break;
+                    case ("op_Explicit"):
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return string.Empty;
+        }
+
         private readonly string text = @"
     public $abstract class $classname $baseClass
     {
@@ -328,7 +360,7 @@ $dproperties
 
 $constructors
 $dmethods
-
+$overloadedOperators
 $nestedTypes
 
     }

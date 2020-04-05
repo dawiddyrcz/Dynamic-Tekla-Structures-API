@@ -33,17 +33,8 @@ namespace CodeGenerator
             }
             else
             {
-                var operatorMethods = typeof(Tekla.Structures.Geometry3d.Point).GetMethods().Where(m => m.Name.StartsWith("op_"));
-
-                foreach (var method in operatorMethods)
-                {
-                    System.Diagnostics.Debug.WriteLine(method.Name);
-
-                    foreach (var parameter in method.GetParameters())
-                    {
-                        System.Diagnostics.Debug.WriteLine("\t" + parameter.ParameterType.Name + " " +parameter.Name);
-                    }
-                }
+                dynamic beam = new Tekla.Structures.Model.Beam();
+                beam.Something();
 
                 Console.ReadKey();
             }

@@ -17,12 +17,29 @@ namespace Dynamic.Tekla.Structures
     {
         private static Dictionary<string, Assembly> assemblies;
 
+        /// <summary>Creates instance of type with typeName. TypeName should be c# full name like: Tekla.Structures.Model.Beam.BeamTypeEnum</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static dynamic CreateInstance(string typeName)
         {
             var type = GetTypeFromTypeName(typeName);
             return Activator.CreateInstance(type);
         }
 
+        /// <summary>Creates instance of type with typeName. TypeName should be c# full name like: Tekla.Structures.Model.Beam.BeamTypeEnum</summary>
+        /// <param name="args">Constructor parameters</param>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
+        public static dynamic CreateInstance(string typeName, object[] args)
+        {
+            var type = GetTypeFromTypeName(typeName);
+            return Activator.CreateInstance(type, args);
+        }
+
+
+        ///<summary>Invoke method in the instance of the object</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static object InvokeMethod(object instance, string typeName, string methodName, object[] parameters)
         {
             var type = GetTypeFromTypeName(typeName);
@@ -31,6 +48,9 @@ namespace Dynamic.Tekla.Structures
             return method.Invoke(instance, parameters);
         }
 
+        ///<summary>Invoke static method in the type with typeName</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static object InvokeStaticMethod(string typeName, string methodName, object[] parameters)
         {
             var type = GetTypeFromTypeName(typeName);
@@ -39,6 +59,9 @@ namespace Dynamic.Tekla.Structures
             return method.Invoke(null, parameters);
         }
 
+        ///<summary>Gets value of static field or property in type with typeName</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static object Get_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName)
         {
             var type = GetTypeFromTypeName(typeName);
@@ -53,6 +76,9 @@ namespace Dynamic.Tekla.Structures
             throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
         }
 
+        ///<summary>Sets value of static field or property in type with typeName</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static void Set_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName, object value)
         {
             var type = GetTypeFromTypeName(typeName);
@@ -72,6 +98,8 @@ namespace Dynamic.Tekla.Structures
             throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
         }
 
+        /// <summary>Gets the method from the type</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find metod</exception>
         private static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
         {
             var methods = type.GetMethods()
@@ -107,15 +135,13 @@ namespace Dynamic.Tekla.Structures
                 }
             }
 
-            throw new DynamicAPIException("Could not find method " + methodName + " in type " + type.Name);
+            throw new DynamicAPINotFoundException("Could not find method " + methodName + " in type " + type.Name);
         }
 
-        public static dynamic CreateInstance(string typeName, object[] args)
-        {
-            var type = GetTypeFromTypeName(typeName);
-            return Activator.CreateInstance(type, args);
-        }
-
+        
+        /// <summary>Finds type from loaded Tekla API assemblies</summary>
+        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
+        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception>
         public static Type GetTypeFromTypeName(string typeName)
         {
             if (IsTeklaRunning())

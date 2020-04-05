@@ -15,8 +15,9 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Current);
+				try
+                {   //TODO throw exception but why???
+                    return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Current); 
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
 			}

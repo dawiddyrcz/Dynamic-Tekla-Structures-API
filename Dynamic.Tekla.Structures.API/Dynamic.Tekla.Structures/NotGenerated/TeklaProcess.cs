@@ -5,88 +5,127 @@
 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace Dynamic.Tekla.Structures
 {
-    internal class TeklaProcess
+    internal static class TeklaProcess
     {
         private const string TEKLA_PROCESS_NAME = "TeklaStructures";
 
-        private bool isTeklaRunning = false;
-        private Process teklaProcess;
-        private readonly int teklaProcessesCount;
+        public static Dictionary<string, Assembly> APIAssemblies { get; private set; } = new Dictionary<string, Assembly>();
+        public static string BinPath { get; private set; } = string.Empty;
+        public static TeklaFileVersion TeklaFileVersion { get; private set; }
 
-        public TeklaProcess()
-        {
-            var teklaProcesses = Process.GetProcessesByName(TEKLA_PROCESS_NAME);
-            teklaProcessesCount = teklaProcesses.Length;
-            this.teklaProcess = GetFirstActiveTeklaProcess(teklaProcesses);
-        }
+        private static Process teklaProcess;
 
-        public bool IsTeklaRunning()
+        public static bool IsTeklaRunning()
         {
-            return isTeklaRunning;
-        }
-
-        public TeklaFileVersion GetTeklaStructuresVersion()
-        {
-            if (isTeklaRunning)
+            if (teklaProcess is null)
             {
-                string teklaFilePath = GetFilePathOfTeklaProcess();
-                var fileVersion = GetFileVersion(teklaFilePath);
-                return fileVersion;
+                return GetTeklaProcess();
             }
             else
             {
-                return new TeklaFileVersion();
+                if (teklaProcess.HasExited)
+                {
+                    return GetTeklaProcess();
+                }
+                else return true;
             }
         }
 
-        public string GetTeklaProcessDirectoryPath()
+        private static bool GetTeklaProcess()
         {
-            if (isTeklaRunning) return Path.GetDirectoryName(GetFilePathOfTeklaProcess());
-            else return "";
+            var teklaProcesses = Process.GetProcessesByName(TEKLA_PROCESS_NAME);
+
+            if (teklaProcesses.Length != 0)
+            {
+                teklaProcess = teklaProcesses[0];
+
+                var teklaFilePath = GetProcessFilename(teklaProcess);
+                BinPath = Path.GetDirectoryName(teklaFilePath);
+                TeklaFileVersion = GetFileVersion(teklaFilePath);
+                APIAssemblies = GetAssemblies();
+                return true;
+            }
+            return false;
         }
 
-        public int GetTeklaProcessesCount()
+
+        private static string GetProcessFilename(Process process)
         {
-            return teklaProcessesCount;
+            return process.MainModule.FileName; //TODO for 32 bits
         }
 
-        private string GetFilePathOfTeklaProcess()
+        private static TeklaFileVersion GetFileVersion(string teklaFilePath)
         {
-            return teklaProcess.MainModule.FileName; //TODO for 32 bits
-        }
-
-        private TeklaFileVersion GetFileVersion(string teklaFilePath)
-        {
-            var fvinfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(teklaFilePath);
+            var fvinfo = FileVersionInfo.GetVersionInfo(teklaFilePath);
             var sb = new StringBuilder();
-            var teklaFileVersion = new TeklaFileVersion
+
+            return new TeklaFileVersion
             {
                 Major = fvinfo.FileMajorPart,
                 Minor = fvinfo.FileMinorPart,
                 Build = fvinfo.FileBuildPart,
                 Build2 = fvinfo.FilePrivatePart,
             };
-            return teklaFileVersion;
         }
 
-        private Process GetFirstActiveTeklaProcess(Process[] teklaProcesses)
+        private static Dictionary<string, Assembly> GetAssemblies()
         {
-            if (teklaProcesses.Length == 0)
+            var output = new Dictionary<string, Assembly>();
+
+            foreach (var dllPath in GetDllPathes(BinPath))
             {
-                isTeklaRunning = false;
-                return null;
+                var assembly = Assembly.LoadFrom(dllPath);
+
+                foreach (var tsType in assembly.GetTypes().Where(t => t.IsPublic))
+                {
+                    var typeFullName = CodeGenerator.TypeFullName.GetTypeFullName(tsType);
+                    output.Add(typeFullName, assembly);
+
+                    foreach (var nestedType in NestedTypes(tsType))
+                    {
+                        var nestedTypeFullName = CodeGenerator.TypeFullName.GetTypeFullName(nestedType);
+                        output.Add(nestedTypeFullName, assembly);
+                    }
+                }
             }
-            else
+
+            return output;
+        }
+
+        private static List<Type> NestedTypes(Type type)
+        {
+            var output = new List<Type>();
+
+            foreach (var nestedType in type.GetNestedTypes())
             {
-                isTeklaRunning = true;
-                return teklaProcesses[0];
+                output.Add(nestedType);
+                output.AddRange(NestedTypes(nestedType));
             }
+            return output;
+        }
+
+        private static List<string> GetDllPathes(string binPath)
+        {
+            return new List<string>()
+            {
+                Path.Combine(binPath, "plugins", "Tekla.Structures.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Model.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Datatype.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Drawing.dll"),
+                Path.Combine(binPath, "applications", "Tekla", "Common", "Tekla.Application.Library.dll"),
+                Path.Combine(binPath, "dialogs", "Tekla.Structures.Dialog.dll"),
+            };
+
         }
     }
 }

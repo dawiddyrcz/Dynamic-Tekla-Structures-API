@@ -6,8 +6,6 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -15,8 +13,6 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class TSActivator
     {
-        private static Dictionary<string, Assembly> assemblies;
-
         /// <summary>Creates instance of type with typeName. TypeName should be c# full name like: Tekla.Structures.Model.Beam.BeamTypeEnum</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
@@ -144,11 +140,11 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception>
         public static Type GetTypeFromTypeName(string typeName)
         {
-            if (IsTeklaRunning())
+            if (TeklaProcess.IsTeklaRunning())
             {
-                if (assemblies.ContainsKey(typeName))
+                if (TeklaProcess.APIAssemblies.ContainsKey(typeName))
                 {
-                    var assembly = assemblies[typeName];
+                    var assembly = TeklaProcess.APIAssemblies[typeName];
                     var tsAPITypes = assembly;
                     var type = tsAPITypes.GetType(typeName);
 
@@ -187,78 +183,6 @@ namespace Dynamic.Tekla.Structures
                     return TryGetNestedType(output, ref assembly);
             }
             else return assembly.GetType(typeName);
-        }
-        
-        private static TeklaProcess teklaProcess;
-
-        private static bool IsTeklaRunning()
-        {
-            if (teklaProcess != null)
-            {
-                if (teklaProcess.IsTeklaRunning())
-                {
-                    return true;
-                }
-            }
-
-            teklaProcess = new TeklaProcess();
-            if (teklaProcess.IsTeklaRunning())
-            {
-                assemblies = GetAssemblies();
-                return true;
-            }
-
-            return false;
-        }
-
-        private static Dictionary<string, Assembly> GetAssemblies()
-        {
-            var output = new Dictionary<string, Assembly>();
-
-            foreach (var dllPath in GetDllPathes(teklaProcess.GetTeklaProcessDirectoryPath()))
-            {
-                var assembly = Assembly.LoadFrom(dllPath);
-
-                foreach (var tsType in assembly.GetTypes().Where(t => t.IsPublic))
-                {
-                    var typeFullName = CodeGenerator.TypeFullName.GetTypeFullName(tsType);
-                    output.Add(typeFullName, assembly);
-
-                    foreach (var nestedType in NestedTypes(tsType))
-                    {
-                        var nestedTypeFullName = CodeGenerator.TypeFullName.GetTypeFullName(nestedType);
-                        output.Add(nestedTypeFullName, assembly);
-                    }
-                }
-            }
-
-            return output;
-        }
-
-        private static List<Type> NestedTypes(Type type)
-        {
-            var output = new List<Type>();
-
-            foreach (var nestedType in type.GetNestedTypes())
-            {
-                output.Add(nestedType);
-                output.AddRange(NestedTypes(nestedType));
-            }
-            return output;
-        }
-
-        private static List<string> GetDllPathes(string binPath)
-        {
-            return new List<string>()
-            {
-                Path.Combine(binPath, "plugins", "Tekla.Structures.dll"),
-                Path.Combine(binPath, "plugins",  "Tekla.Structures.Model.dll"),
-                Path.Combine(binPath, "plugins",  "Tekla.Structures.Datatype.dll"),
-                Path.Combine(binPath, "plugins",  "Tekla.Structures.Drawing.dll"),
-                Path.Combine(binPath, "applications", "Tekla", "Common", "Tekla.Application.Library.dll"),
-                Path.Combine(binPath, "dialogs", "Tekla.Structures.Dialog.dll"),
-            };
-
         }
     }
 }

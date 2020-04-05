@@ -16,11 +16,12 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-            StaticFieldsOrProperties();
-            // InsertBeam();
+            //StaticFieldsOrProperties();
+            //InsertBeam();
+            //Thread.Sleep(1);
             // OpenDrawingAndInsertLine();
             // Events();
-          //  OperatorOverload();
+            OperatorOverload();
 
             Console.WriteLine("end");
             Console.ReadKey();
@@ -86,6 +87,7 @@ namespace TestConsoleApp
         private static void OpenDrawingAndInsertLine()
         {
             var dh = new TSD.DrawingHandler();
+            dh.CloseActiveDrawing(false);
             var drawings = dh.GetDrawings();
 
             while (drawings.MoveNext())
@@ -104,6 +106,8 @@ namespace TestConsoleApp
 
                 break;
             }
+
+            dh.CloseActiveDrawing(false);
         }
 
         private static void InsertBeam()

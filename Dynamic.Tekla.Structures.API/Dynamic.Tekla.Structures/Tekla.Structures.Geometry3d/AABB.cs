@@ -71,6 +71,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
+		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.AABB o1, Dynamic.Tekla.Structures.Geometry3d.AABB o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o2);
+			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
+		}
+		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.AABB o1, Dynamic.Tekla.Structures.Geometry3d.Point o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(o2);
+			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
+		}
+		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.Point o1, Dynamic.Tekla.Structures.Geometry3d.AABB o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o2);
+			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
+		}
 
 
 

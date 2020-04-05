@@ -40,6 +40,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
+		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Geometry3d.PolyLine o1, Dynamic.Tekla.Structures.Geometry3d.PolyLine o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(o2);
+			return o1Tek == o2Tek;
+		}
+		public static System.Boolean operator !=(Dynamic.Tekla.Structures.Geometry3d.PolyLine o1, Dynamic.Tekla.Structures.Geometry3d.PolyLine o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(o2);
+			return o1Tek != o2Tek;
+		}
 
 
 

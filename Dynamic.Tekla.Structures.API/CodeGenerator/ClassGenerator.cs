@@ -324,30 +324,84 @@ namespace CodeGenerator
 
         private string GetOverLoadedOperatorsText(Type type)
         {
+            var sb = new StringBuilder(500);
             var opMethods = type.GetMethods().Where(m => m.Name.StartsWith("op_", StringComparison.InvariantCulture));
 
             foreach (var opMethod in opMethods)
             {
+                var parameters = opMethod.GetParameters();
+
+                if (parameters.Length != 2)
+                {
+                    System.Diagnostics.Debug.WriteLine(type.FullName + "  " + opMethod.Name);
+                    continue;
+                }
+
+                var param1 = parameters[0];
+                var param2 = parameters[1];
+
+                var returnTypeFullName = GetTypeFullName(opMethod.ReturnType);
+
+                string operatorr = string.Empty;
+
                 switch (opMethod.Name)
                 {
                     case ("op_Equality"):
+                        operatorr = "==";
                         break;
                     case ("op_Inequality"):
+                        operatorr = "!=";
                         break;
                     case ("op_Addition"):
-                        break;
-                    case ("op_Multiply"):
+                        operatorr = "+";
                         break;
                     case ("op_Subtraction"):
+                        operatorr = "-";
                         break;
+                    case ("op_Multiply"):
+                        operatorr = "*";
+                        break;
+                    
                     case ("op_Explicit"):
                         break;
                     default:
                         break;
                 }
+
+                sb.Append("\t\tpublic static ");
+                sb.Append(GetTypeFullName(opMethod.ReturnType));
+                sb.Append(" operator " + operatorr + "(");
+                sb.Append(GetTypeFullName(param1.ParameterType));
+                sb.Append(" o1, ");
+                sb.Append(GetTypeFullName(param2.ParameterType));
+                sb.Append(" o2");
+                sb.Append(")\n");
+                sb.Append("\t\t{\n");
+
+                sb.Append("\t\t\tvar o1Tek = ");
+                if (IsTeklaType(param1.ParameterType))
+                    sb.Append(GetTypeFullName(param1.ParameterType) + "_.GetTSObject(o1);\n");
+                else
+                    sb.Append("o1;\n");
+
+                sb.Append("\t\t\tvar o2Tek = ");
+                 if (IsTeklaType(param2.ParameterType))
+                    sb.Append(GetTypeFullName(param2.ParameterType) + "_.GetTSObject(o2);\n");
+                else
+                    sb.Append("o2;\n");
+
+                if (IsTeklaType(opMethod.ReturnType))
+                    sb.Append("\t\t\treturn " + GetTypeFullName(type) + "_.FromTSObject(o1Tek " + operatorr + " o2Tek);\n");
+                else
+                    sb.Append("\t\t\treturn o1Tek " + operatorr + " o2Tek;\n");
+
+                sb.Append("\t\t}\n");
+
+
+
             }
 
-            return string.Empty;
+            return sb.ToString();
         }
 
         private readonly string text = @"

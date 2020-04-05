@@ -40,6 +40,12 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
+		public static Dynamic.Tekla.Structures.Model.DisposableToken operator +(Dynamic.Tekla.Structures.Model.DisposableToken o1, System.IDisposable o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(o1);
+			var o2Tek = o2;
+			return Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(o1Tek + o2Tek);
+		}
 
 
 

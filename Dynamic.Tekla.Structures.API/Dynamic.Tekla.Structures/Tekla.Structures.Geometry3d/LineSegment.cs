@@ -67,6 +67,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
+		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Geometry3d.LineSegment o1, Dynamic.Tekla.Structures.Geometry3d.LineSegment o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(o2);
+			return o1Tek == o2Tek;
+		}
+		public static System.Boolean operator !=(Dynamic.Tekla.Structures.Geometry3d.LineSegment o1, Dynamic.Tekla.Structures.Geometry3d.LineSegment o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(o2);
+			return o1Tek != o2Tek;
+		}
 
 
 

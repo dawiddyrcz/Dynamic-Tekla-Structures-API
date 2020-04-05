@@ -93,6 +93,18 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
+		public static Dynamic.Tekla.Structures.Geometry3d.Vector operator *(Dynamic.Tekla.Structures.Geometry3d.Vector o1, System.Double o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(o1);
+			var o2Tek = o2;
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(o1Tek * o2Tek);
+		}
+		public static Dynamic.Tekla.Structures.Geometry3d.Vector operator *(System.Double o1, Dynamic.Tekla.Structures.Geometry3d.Vector o2)
+		{
+			var o1Tek = o1;
+			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(o2);
+			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(o1Tek * o2Tek);
+		}
 
 
 

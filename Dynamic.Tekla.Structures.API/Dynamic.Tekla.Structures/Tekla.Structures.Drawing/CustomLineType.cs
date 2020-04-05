@@ -51,6 +51,18 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
+		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Drawing.CustomLineType o1, Dynamic.Tekla.Structures.Drawing.CustomLineType o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Drawing.CustomLineType_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Drawing.CustomLineType_.GetTSObject(o2);
+			return o1Tek == o2Tek;
+		}
+		public static System.Boolean operator !=(Dynamic.Tekla.Structures.Drawing.CustomLineType o1, Dynamic.Tekla.Structures.Drawing.CustomLineType o2)
+		{
+			var o1Tek = Dynamic.Tekla.Structures.Drawing.CustomLineType_.GetTSObject(o1);
+			var o2Tek = Dynamic.Tekla.Structures.Drawing.CustomLineType_.GetTSObject(o2);
+			return o1Tek != o2Tek;
+		}
 
 
 

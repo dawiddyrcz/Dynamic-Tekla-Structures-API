@@ -45,11 +45,6 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.GridCylindricalSurface", args);
 		}
 
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
 
 
 

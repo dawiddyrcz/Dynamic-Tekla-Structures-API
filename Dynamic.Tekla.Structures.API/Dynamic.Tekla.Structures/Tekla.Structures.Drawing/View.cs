@@ -96,11 +96,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects()
 		{
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetModelObjects());
@@ -777,16 +772,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View.ViewAttributes", args);
 		}
 
-		public System.Boolean LoadAttributes(System.String attributeFile)
-		{
-			return teklaObject.LoadAttributes(attributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -901,11 +886,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View.ViewShorteningAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -1001,11 +981,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -1093,11 +1068,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[2] = Dynamic.Tekla.Structures.Drawing.TextAlignment_.GetTSObject(alignment);
 			args[3] = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(tagContent);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View.ViewMarkTagAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -1212,11 +1182,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[3] = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(tagA4);
 			args[4] = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(tagA5);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View.ViewMarkTagsAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

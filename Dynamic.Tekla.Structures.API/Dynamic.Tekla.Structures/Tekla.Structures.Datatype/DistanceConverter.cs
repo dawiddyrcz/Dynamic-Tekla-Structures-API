@@ -25,26 +25,6 @@ namespace Dynamic.Tekla.Structures.Datatype
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean CanConvertFrom(System.ComponentModel.ITypeDescriptorContext context, System.Type sourceType)
-		{
-			return teklaObject.CanConvertFrom(context, sourceType);
-		}
-
-		public System.Boolean CanConvertTo(System.ComponentModel.ITypeDescriptorContext context, System.Type destinationType)
-		{
-			return teklaObject.CanConvertTo(context, destinationType);
-		}
-
-		public System.Object ConvertFrom(System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, System.Object value)
-		{
-			return teklaObject.ConvertFrom(context, culture, value);
-		}
-
-		public System.Object ConvertTo(System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, System.Object value, System.Type destinationType)
-		{
-			return teklaObject.ConvertTo(context, culture, value, destinationType);
-		}
-
 
 
 

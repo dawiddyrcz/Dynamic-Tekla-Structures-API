@@ -44,11 +44,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.UnitAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 		public System.Object Clone()
 		{
 			return teklaObject.Clone();

@@ -49,26 +49,6 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 		{
 			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());

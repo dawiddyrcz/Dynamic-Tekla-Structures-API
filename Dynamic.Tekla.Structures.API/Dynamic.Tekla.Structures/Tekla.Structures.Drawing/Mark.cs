@@ -34,31 +34,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark", args);
 		}
 
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -93,16 +68,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[0] = Dynamic.Tekla.Structures.Drawing.ModelObject_.GetTSObject(modelObject);
 			args[1] = AttributesFile;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Mark.MarkAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public System.Boolean LoadAttributes(System.String attributeFilename)
-		{
-			return teklaObject.LoadAttributes(attributeFilename);
 		}
 
 

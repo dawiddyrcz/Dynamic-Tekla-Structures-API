@@ -37,26 +37,6 @@ namespace Dynamic.Tekla.Structures.Model
 			return Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(teklaObject.GetReferenceModel());
 		}
 
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetFather()
 		{
 			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetFather());

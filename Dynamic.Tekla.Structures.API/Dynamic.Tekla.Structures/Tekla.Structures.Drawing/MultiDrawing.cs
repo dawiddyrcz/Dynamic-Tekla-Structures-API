@@ -22,21 +22,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
 
 
 

@@ -57,26 +57,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(teklaObject.GetAxisAlignedBoundingBox());
 		}
 
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
 		{
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
@@ -95,11 +75,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects(Dynamic.Tekla.Structures.Identifier ModelIdentifier)
 		{
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetModelObjects(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelIdentifier)));
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing GetOriginalDrawing()

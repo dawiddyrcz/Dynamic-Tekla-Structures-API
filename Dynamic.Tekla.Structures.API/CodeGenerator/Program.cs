@@ -12,8 +12,6 @@ namespace CodeGenerator
 {
     internal static class Program
     {
-        //TODO add exceptions to other TSActivator types
-
         static void Main(string[] args)
         {
             Console.WriteLine("Project directory: " + GetProjectDirectory());
@@ -35,6 +33,7 @@ namespace CodeGenerator
             {
                 dynamic beam = new Tekla.Structures.Model.Beam();
                 beam.Something();
+
 
                 Console.ReadKey();
             }

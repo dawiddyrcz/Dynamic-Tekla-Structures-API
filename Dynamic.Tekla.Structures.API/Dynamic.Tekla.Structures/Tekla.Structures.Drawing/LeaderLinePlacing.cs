@@ -34,11 +34,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.LeaderLinePlacing", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 

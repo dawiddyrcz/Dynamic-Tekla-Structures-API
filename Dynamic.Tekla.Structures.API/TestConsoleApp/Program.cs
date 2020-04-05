@@ -16,11 +16,10 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-            //StaticFieldsOrProperties();
+            StaticFieldsOrProperties();
             // InsertBeam();
             // OpenDrawingAndInsertLine();
-             Events();
-
+            // Events();
           //  OperatorOverload();
 
             Console.WriteLine("end");

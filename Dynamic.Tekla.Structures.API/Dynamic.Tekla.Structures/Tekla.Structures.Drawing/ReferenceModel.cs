@@ -28,31 +28,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
 
 
 
@@ -89,16 +64,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public ReferenceModelAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
 			this.teklaObject = tsObject;
-		}
-
-		public System.Boolean LoadAttributes(System.String AttributeFile)
-		{
-			return teklaObject.LoadAttributes(AttributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

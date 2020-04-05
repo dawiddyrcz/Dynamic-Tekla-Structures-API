@@ -68,16 +68,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DrawingObject.NoAttributes", args);
 		}
 
-		public System.Boolean LoadAttributes(System.String AttributeFile)
-		{
-			return teklaObject.LoadAttributes(AttributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 

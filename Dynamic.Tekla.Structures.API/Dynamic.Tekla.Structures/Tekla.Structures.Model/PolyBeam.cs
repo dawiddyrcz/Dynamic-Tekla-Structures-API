@@ -48,26 +48,6 @@ namespace Dynamic.Tekla.Structures.Model
 			return teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
 		}
 
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
 		public System.Collections.ArrayList GetPolybeamCoordinateSystems()
 		{
 			return teklaObject.GetPolybeamCoordinateSystems();

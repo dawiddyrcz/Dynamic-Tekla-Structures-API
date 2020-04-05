@@ -79,41 +79,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.StraightDimension", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet()
-		{
-			return Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(teklaObject.GetDimensionSet());
-		}
-
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet(System.Boolean Select)
-		{
-			return Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(teklaObject.GetDimensionSet(Select));
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
 
 
 
@@ -156,16 +121,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public StraightDimensionAttributes(dynamic tsObject, System.DateTime nonConflictParameter)
 		{
 			this.teklaObject = tsObject;
-		}
-
-		public System.Boolean LoadAttributes(System.String AttributeFile)
-		{
-			return teklaObject.LoadAttributes(AttributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

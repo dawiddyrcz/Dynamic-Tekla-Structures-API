@@ -774,11 +774,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionFormatAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -877,11 +872,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[1] = Dynamic.Tekla.Structures.Drawing.PlacingDirectionAttributes_.GetTSObject(direction);
 			args[2] = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.GetTSObject(distance);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionPlacingAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -984,11 +974,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTextAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -1080,11 +1065,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[0] = minimumNumberToCombine;
 			args[1] = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombineFormats_.GetTSObject(format);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombinedDimensionAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -1206,11 +1186,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[4] = ExaggerationPosition;
 			args[5] = ExaggerationHeight;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

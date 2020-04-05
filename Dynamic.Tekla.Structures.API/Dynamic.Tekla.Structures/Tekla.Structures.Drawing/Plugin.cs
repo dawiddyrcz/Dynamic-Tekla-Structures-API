@@ -35,34 +35,9 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Plugin", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 		public void SetPickerInput(Dynamic.Tekla.Structures.Drawing.PluginPickerInput Input)
 		{
 			teklaObject.SetPickerInput(Dynamic.Tekla.Structures.Drawing.PluginPickerInput_.GetTSObject(Input));
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
 		}
 
 		public System.Boolean ApplyStandardValues(System.String Filename)

@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeGenerator
 {
@@ -22,8 +21,9 @@ namespace CodeGenerator
             {
                 if (type.Name.Equals("Polymesh", StringComparison.InvariantCulture) && method.Name.Equals("Validate", StringComparison.InvariantCulture)) continue;
                 if (method.ReturnType.IsInterface) continue;
+                if (method.GetBaseDefinition() != method) continue;
 
-                if (method.GetParameters().Count() == 1)
+                if (method.GetParameters().Length == 1)
                 {
                     if (method.GetParameters()[0].ParameterType.Equals(typeof(System.Type[])))
                     {
@@ -34,6 +34,11 @@ namespace CodeGenerator
                 var name = method.Name;
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
                
+
+                if (type.Name.Equals("Beam") && method.Name.Equals("Insert"))
+                {
+                    var m = method;
+                }
 
                 if (method.IsStatic)
                 {
@@ -140,10 +145,6 @@ namespace CodeGenerator
                 var paramName = param.Name.Replace("result", "resultt");
                 if (paramName.Equals("object", StringComparison.InvariantCulture))
                     paramName = "@object";
-
-                //it is not possible to out dynamic parameters so it will be moved to extension methods
-                // if (param.ParameterType.IsByRef) sb.Append("ref ");
-                //if (param.IsOut) sb.Append("out ");
 
                 if (IsTeklaType(param.ParameterType))
                 {

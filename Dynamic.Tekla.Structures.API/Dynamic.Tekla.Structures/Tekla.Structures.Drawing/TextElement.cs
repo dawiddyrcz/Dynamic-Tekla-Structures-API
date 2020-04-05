@@ -47,21 +47,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.TextElement", args);
 		}
 
-		public System.Object Clone()
-		{
-			return teklaObject.Clone();
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public System.String GetUnformattedString()
-		{
-			return teklaObject.GetUnformattedString();
-		}
-
 
 
 

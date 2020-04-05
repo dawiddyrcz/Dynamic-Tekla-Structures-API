@@ -61,31 +61,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Polyline", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
 
 
 
@@ -110,16 +85,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var args = new object[1];
 			args[0] = AttributesFile;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Polyline.PolylineAttributes", args);
-		}
-
-		public System.Boolean LoadAttributes(System.String AttributeFile)
-		{
-			return teklaObject.LoadAttributes(AttributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

@@ -28,11 +28,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -57,16 +52,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var args = new object[1];
 			args[0] = AttributesFile;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal.CurvedDimensionSetOrthogonalAttributes", args);
-		}
-
-		public System.Boolean LoadAttributes(System.String attributeFilename)
-		{
-			return teklaObject.LoadAttributes(attributeFilename);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

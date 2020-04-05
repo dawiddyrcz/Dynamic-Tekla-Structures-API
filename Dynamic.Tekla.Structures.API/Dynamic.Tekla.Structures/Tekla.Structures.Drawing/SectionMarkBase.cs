@@ -34,31 +34,6 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -103,11 +78,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[1] = size;
 			args[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(position);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -336,16 +306,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes", args);
 		}
 
-		public System.Boolean LoadAttributes(System.String attributeFile)
-		{
-			return teklaObject.LoadAttributes(attributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -440,11 +400,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[3] = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation_.GetTSObject(rotation);
 			args[4] = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(tagContent);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -654,11 +609,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			args[3] = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(tagA4);
 			args[4] = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(tagA5);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 

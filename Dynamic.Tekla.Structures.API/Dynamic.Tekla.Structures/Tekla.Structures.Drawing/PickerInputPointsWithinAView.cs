@@ -16,11 +16,6 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 

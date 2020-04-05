@@ -49,19 +49,9 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Object Clone()
-		{
-			return teklaObject.Clone();
-		}
-
 		public void CopyTo(System.Array array, System.Int32 index)
 		{
 			teklaObject.CopyTo(array, index);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 		public void Add(Dynamic.Tekla.Structures.Drawing.ElementBase value)
@@ -72,11 +62,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public void Clear()
 		{
 			teklaObject.Clear();
-		}
-
-		public System.String GetUnformattedString()
-		{
-			return teklaObject.GetUnformattedString();
 		}
 
 

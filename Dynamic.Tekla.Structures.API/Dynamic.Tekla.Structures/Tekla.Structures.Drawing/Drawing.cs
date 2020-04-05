@@ -147,11 +147,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			return Dynamic.Tekla.Structures.Drawing.ContainerView_.FromTSObject(teklaObject.GetSheet());
 		}
 
-		public System.Boolean IsSameDatabaseObject(Dynamic.Tekla.Structures.Drawing.DatabaseObject Object)
-		{
-			return teklaObject.IsSameDatabaseObject(Dynamic.Tekla.Structures.Drawing.DatabaseObject_.GetTSObject(Object));
-		}
-
 		public System.Boolean CommitChanges()
 		{
 			return teklaObject.CommitChanges();
@@ -165,11 +160,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean PlaceViews()
 		{
 			return teklaObject.PlaceViews();
-		}
-
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
 		}
 
 		public System.String GetPlotFileName(System.Boolean includeRevisionInfo)

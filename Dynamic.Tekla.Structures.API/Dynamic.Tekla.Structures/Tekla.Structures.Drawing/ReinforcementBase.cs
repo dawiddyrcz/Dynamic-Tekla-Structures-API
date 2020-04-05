@@ -22,26 +22,6 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public System.Boolean Delete()
-		{
-			return teklaObject.Delete();
-		}
-
-		public System.Boolean Modify()
-		{
-			return teklaObject.Modify();
-		}
-
-		public System.Boolean Insert()
-		{
-			return teklaObject.Insert();
-		}
-
-		public System.Boolean Select()
-		{
-			return teklaObject.Select();
-		}
-
 
 
 
@@ -321,11 +301,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSingleAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -424,11 +399,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementBase.ReinforcementGroupAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -525,11 +495,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var args = new object[1];
 			args[0] = AttributeFile;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -634,11 +599,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var args = new object[1];
 			args[0] = AttributeFile;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes", args);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
 		}
 
 
@@ -751,11 +711,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.ReinforcementBase.ReinforcementMeshAttributes", args);
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
 
 
 
@@ -856,16 +811,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         
 
-
-		public System.Boolean LoadAttributes(System.String AttributeFile)
-		{
-			return teklaObject.LoadAttributes(AttributeFile);
-		}
-
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
 
 
 

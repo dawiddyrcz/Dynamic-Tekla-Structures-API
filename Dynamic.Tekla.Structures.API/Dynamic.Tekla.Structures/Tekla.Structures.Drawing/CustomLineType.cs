@@ -40,16 +40,6 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			return teklaObject.IsEqual(ObjectToCompare);
-		}
-
-		public System.Object Clone()
-		{
-			return teklaObject.Clone();
-		}
-
 
 		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Drawing.CustomLineType o1, Dynamic.Tekla.Structures.Drawing.CustomLineType o2)
 		{

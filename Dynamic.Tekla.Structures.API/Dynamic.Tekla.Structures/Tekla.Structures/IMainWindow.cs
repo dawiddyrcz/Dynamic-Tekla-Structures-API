@@ -30,17 +30,29 @@ namespace Dynamic.Tekla.Structures
 
 		public void Activate()
 		{
+			try {
 			teklaObject.Activate();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Activate()"); }
 		}
 
 		public void AttachChildForm(System.Windows.Forms.Form form)
 		{
+			try {
 			teklaObject.AttachChildForm(form);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AttachChildForm()"); }
 		}
 
 		public void DetachChildForm(System.Windows.Forms.Form form)
 		{
+			try {
 			teklaObject.DetachChildForm(form);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DetachChildForm()"); }
 		}
 
 

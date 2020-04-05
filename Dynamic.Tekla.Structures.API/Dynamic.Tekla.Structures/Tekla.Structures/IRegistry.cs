@@ -30,27 +30,47 @@ namespace Dynamic.Tekla.Structures
 
 		public Microsoft.Win32.RegistryKey GetVersion(System.String version)
 		{
+			try {
 			return teklaObject.GetVersion(version);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVersion()"); }
 		}
 
 		public System.Drawing.Rectangle LoadDialogBounds(System.String dialogName)
 		{
+			try {
 			return teklaObject.LoadDialogBounds(dialogName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadDialogBounds()"); }
 		}
 
 		public System.Drawing.Rectangle LoadDialogBounds(System.String dialogName, System.String version)
 		{
+			try {
 			return teklaObject.LoadDialogBounds(dialogName, version);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadDialogBounds()"); }
 		}
 
 		public void SaveDialogBounds(System.String dialogName, System.Drawing.Rectangle bounds)
 		{
+			try {
 			teklaObject.SaveDialogBounds(dialogName, bounds);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SaveDialogBounds()"); }
 		}
 
 		public void SaveDialogBounds(System.String dialogName, System.String version, System.Drawing.Rectangle bounds)
 		{
+			try {
 			teklaObject.SaveDialogBounds(dialogName, version, bounds);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SaveDialogBounds()"); }
 		}
 
 

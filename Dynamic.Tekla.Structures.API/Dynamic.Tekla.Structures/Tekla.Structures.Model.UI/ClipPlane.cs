@@ -45,17 +45,29 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Boolean Insert()
 		{
+			try {
 			return teklaObject.Insert();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
 		}
 
 		public System.Boolean Delete()
 		{
+			try {
 			return teklaObject.Delete();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
 		}
 
 		public System.Boolean Modify()
 		{
+			try {
 			return teklaObject.Modify();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
 		}
 
 

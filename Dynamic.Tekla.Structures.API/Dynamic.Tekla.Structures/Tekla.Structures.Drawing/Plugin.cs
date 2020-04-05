@@ -37,77 +37,137 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public void SetPickerInput(Dynamic.Tekla.Structures.Drawing.PluginPickerInput Input)
 		{
+			try {
 			teklaObject.SetPickerInput(Dynamic.Tekla.Structures.Drawing.PluginPickerInput_.GetTSObject(Input));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPickerInput()"); }
 		}
 
 		public System.Boolean ApplyStandardValues(System.String Filename)
 		{
+			try {
 			return teklaObject.ApplyStandardValues(Filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ApplyStandardValues()"); }
 		}
 
 		public System.Boolean LoadStandardValues(System.String Filename)
 		{
+			try {
 			return teklaObject.LoadStandardValues(Filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadStandardValues()"); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.Int32 fieldValue)
 		{
+			try {
 			return teklaObject.TrySetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.String fieldValue)
 		{
+			try {
 			return teklaObject.TrySetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.Double fieldValue)
 		{
+			try {
 			return teklaObject.TrySetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.Int32 fieldValue)
 		{
+			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.Double fieldValue)
 		{
+			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.String fieldValue)
 		{
+			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.Int32 FieldValue)
 		{
+			try {
 			return teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
 		}
 
 		public System.Int32 GetIntAttribute(System.String FieldName)
 		{
+			try {
 			return teklaObject.GetIntAttribute(FieldName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntAttribute()"); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.Double FieldValue)
 		{
+			try {
 			return teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
 		}
 
 		public System.Double GetDoubleAttribute(System.String FieldName)
 		{
+			try {
 			return teklaObject.GetDoubleAttribute(FieldName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleAttribute()"); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.String FieldValue)
 		{
+			try {
 			return teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
 		}
 
 		public System.String GetStringAttribute(System.String FieldName)
 		{
+			try {
 			return teklaObject.GetStringAttribute(FieldName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringAttribute()"); }
 		}
 
 

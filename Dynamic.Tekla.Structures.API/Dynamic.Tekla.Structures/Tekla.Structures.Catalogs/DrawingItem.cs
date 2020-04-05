@@ -45,12 +45,20 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean Select(System.String Name)
 		{
+			try {
 			return teklaObject.Select(Name);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Export(ref System.String filename)
 		{
+			try {
 			return teklaObject.Export(ref filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }
 		}
 
 

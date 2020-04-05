@@ -69,22 +69,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
+			try {
 			return teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPrimaryObject()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPrimaryObject()"); }
 		}
 
 		public System.Boolean SetReferencePoint(Dynamic.Tekla.Structures.Geometry3d.Point ReferencePoint)
 		{
+			try {
 			return teklaObject.SetReferencePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ReferencePoint));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetReferencePoint()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point GetReferencePoint()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.GetReferencePoint());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferencePoint()"); }
 		}
 
 

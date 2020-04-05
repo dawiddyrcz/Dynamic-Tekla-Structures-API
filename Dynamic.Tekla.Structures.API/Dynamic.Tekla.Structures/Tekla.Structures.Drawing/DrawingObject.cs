@@ -24,22 +24,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetRelatedObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRelatedObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ViewBase GetView()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(teklaObject.GetView());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetView()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing GetDrawing()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.GetDrawing());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawing()"); }
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
+			try {
 			return teklaObject.IsEqual(ObjectToCompare);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
 		}
 
 

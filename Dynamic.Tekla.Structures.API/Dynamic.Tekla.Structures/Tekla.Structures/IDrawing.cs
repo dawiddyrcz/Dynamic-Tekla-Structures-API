@@ -36,22 +36,38 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Boolean Close()
 		{
+			try {
 			return teklaObject.Close();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Close()"); }
 		}
 
 		public System.Boolean Close(System.Boolean saveBeforeClosing)
 		{
+			try {
 			return teklaObject.Close(saveBeforeClosing);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Close()"); }
 		}
 
 		public System.Boolean Open(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.Open(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Open()"); }
 		}
 
 		public System.Boolean Save()
 		{
+			try {
 			return teklaObject.Save();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Save()"); }
 		}
 
 

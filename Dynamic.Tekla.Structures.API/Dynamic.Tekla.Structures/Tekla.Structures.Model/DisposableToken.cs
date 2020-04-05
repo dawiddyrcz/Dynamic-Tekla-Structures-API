@@ -36,7 +36,11 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Dispose()
 		{
+			try {
 			teklaObject.Dispose();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Dispose()"); }
 		}
 
 

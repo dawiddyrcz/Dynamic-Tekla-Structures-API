@@ -36,7 +36,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Double Length()
 		{
+			try {
 			return teklaObject.Length();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()"); }
 		}
 
 

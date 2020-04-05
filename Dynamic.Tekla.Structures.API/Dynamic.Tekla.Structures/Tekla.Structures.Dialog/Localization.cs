@@ -52,52 +52,92 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public void LoadFile(System.String fileName)
 		{
+			try {
 			teklaObject.LoadFile(fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadFile()"); }
 		}
 
 		public void LoadAidFile(System.String fileName)
 		{
+			try {
 			teklaObject.LoadAidFile(fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAidFile()"); }
 		}
 
 		public void LoadAilFile(System.String fileName)
 		{
+			try {
 			teklaObject.LoadAilFile(fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAilFile()"); }
 		}
 
 		public void LoadXMLFile(System.String fileName)
 		{
+			try {
 			teklaObject.LoadXMLFile(fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadXMLFile()"); }
 		}
 
 		public void RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb,  params System.Type[] types)
 		{
+			try {
 			teklaObject.RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb), types);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RegisterLocalizationCallback()"); }
 		}
 
 		public void LocalizeToolTip(System.Windows.Forms.Control control, System.Windows.Forms.ToolTip toolTip)
 		{
+			try {
 			teklaObject.LocalizeToolTip(control, toolTip);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LocalizeToolTip()"); }
 		}
 
 		public void Localize(System.Windows.Forms.MenuItem menuItem)
 		{
+			try {
 			teklaObject.Localize(menuItem);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()"); }
 		}
 
 		public void Localize(System.Windows.Forms.Control control)
 		{
+			try {
 			teklaObject.Localize(control);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()"); }
 		}
 
 		public void Localize(System.Configuration.ApplicationSettingsBase applicationSettings)
 		{
+			try {
 			teklaObject.Localize(applicationSettings);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()"); }
 		}
 
 		public System.String GetText(System.String name)
 		{
+			try {
 			return teklaObject.GetText(name);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetText()"); }
 		}
 
 
@@ -126,12 +166,20 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public void Invoke(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
 		{
+			try {
 			teklaObject.Invoke(Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization), obj);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()"); }
 		}
 
 		public void EndInvoke(System.IAsyncResult resultt)
 		{
+			try {
 			teklaObject.EndInvoke(resultt);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()"); }
 		}
 
 
@@ -265,7 +313,11 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public void Localize(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
 		{
+			try {
 			teklaObject.Localize(Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization), obj);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()"); }
 		}
 
 

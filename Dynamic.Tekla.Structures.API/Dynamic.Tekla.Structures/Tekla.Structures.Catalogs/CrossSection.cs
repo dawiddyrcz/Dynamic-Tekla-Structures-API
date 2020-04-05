@@ -78,7 +78,11 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean Select(System.Double Location, System.Double Length)
 		{
+			try {
 			return teklaObject.Select(Location, Length);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 

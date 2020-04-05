@@ -36,17 +36,29 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
 		{
+			try {
 			return teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetMultiDirectoryFileList()"); }
 		}
 
 		public System.IO.FileInfo GetAttributeFile(System.String fileName)
 		{
+			try {
 			return teklaObject.GetAttributeFile(fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttributeFile()"); }
 		}
 
 		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.List<System.String> searchDirectories, System.String fileName)
 		{
+			try {
 			return teklaObject.GetAttributeFile(searchDirectories, fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttributeFile()"); }
 		}
 
 

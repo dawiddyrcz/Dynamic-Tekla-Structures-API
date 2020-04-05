@@ -141,7 +141,11 @@ namespace Dynamic.Tekla.Structures.Datatype
 
 		public System.Int32 CompareTo(Dynamic.Tekla.Structures.Datatype.Angle other)
 		{
+			try {
 			return teklaObject.CompareTo(Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(other));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()"); }
 		}
 
 

@@ -34,12 +34,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(teklaObject.GetReferenceModel());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceModel()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetFather()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetFather());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFather()"); }
 		}
 
 

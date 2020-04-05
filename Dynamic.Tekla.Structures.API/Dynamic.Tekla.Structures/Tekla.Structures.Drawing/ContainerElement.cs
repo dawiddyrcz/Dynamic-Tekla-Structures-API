@@ -51,17 +51,29 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public void CopyTo(System.Array array, System.Int32 index)
 		{
+			try {
 			teklaObject.CopyTo(array, index);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()"); }
 		}
 
 		public void Add(Dynamic.Tekla.Structures.Drawing.ElementBase value)
 		{
+			try {
 			teklaObject.Add(Dynamic.Tekla.Structures.Drawing.ElementBase_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
 		}
 
 		public void Clear()
 		{
+			try {
 			teklaObject.Clear();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clear()"); }
 		}
 
 

@@ -33,12 +33,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public void Add(Dynamic.Tekla.Structures.Drawing.PickerInput input)
 		{
+			try {
 			teklaObject.Add(Dynamic.Tekla.Structures.Drawing.PickerInput_.GetTSObject(input));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
 		}
 
 		public void AddRange(System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.PickerInput> inputs)
 		{
+			try {
 			teklaObject.AddRange(inputs);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddRange()"); }
 		}
 
 

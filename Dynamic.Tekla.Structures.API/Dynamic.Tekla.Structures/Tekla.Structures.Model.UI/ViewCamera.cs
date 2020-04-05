@@ -63,12 +63,20 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Boolean Select()
 		{
+			try {
 			return teklaObject.Select();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Modify()
 		{
+			try {
 			return teklaObject.Modify();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
 		}
 
 

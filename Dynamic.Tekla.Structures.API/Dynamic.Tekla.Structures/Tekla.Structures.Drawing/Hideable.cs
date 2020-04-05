@@ -33,22 +33,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public void HideFromDrawingView()
 		{
+			try {
 			teklaObject.HideFromDrawingView();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawingView()"); }
 		}
 
 		public void HideFromDrawing()
 		{
+			try {
 			teklaObject.HideFromDrawing();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawing()"); }
 		}
 
 		public void ShowInDrawingView()
 		{
+			try {
 			teklaObject.ShowInDrawingView();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawingView()"); }
 		}
 
 		public void ShowInDrawing()
 		{
+			try {
 			teklaObject.ShowInDrawing();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawing()"); }
 		}
 
 

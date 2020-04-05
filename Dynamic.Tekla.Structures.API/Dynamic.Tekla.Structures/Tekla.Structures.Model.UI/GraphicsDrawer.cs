@@ -27,42 +27,74 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Boolean DrawText(Dynamic.Tekla.Structures.Geometry3d.Point Location, System.String Text, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
+			try {
 			return teklaObject.DrawText(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Location), Text, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawText()"); }
 		}
 
 		public System.Boolean DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
+			try {
 			return teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawLineSegment()"); }
 		}
 
 		public System.Boolean DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
+			try {
 			return teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawLineSegment()"); }
 		}
 
 		public System.Boolean DrawMeshSurface(Dynamic.Tekla.Structures.Model.UI.Mesh Mesh, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
+			try {
 			return teklaObject.DrawMeshSurface(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawMeshSurface()"); }
 		}
 
 		public System.Boolean DrawMeshLines(Dynamic.Tekla.Structures.Model.UI.Mesh Mesh, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
+			try {
 			return teklaObject.DrawMeshLines(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawMeshLines()"); }
 		}
 
 		public System.Int32 DrawPolyLine(Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine GraphicPolyLine)
 		{
+			try {
 			return teklaObject.DrawPolyLine(Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine_.GetTSObject(GraphicPolyLine));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawPolyLine()"); }
 		}
 
 		public void RemoveTemporaryGraphicsObject(System.Int32 GraphicObjectID)
 		{
+			try {
 			teklaObject.RemoveTemporaryGraphicsObject(GraphicObjectID);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveTemporaryGraphicsObject()"); }
 		}
 
 		public void RemoveTemporaryGraphicsObjects(System.Collections.IEnumerable GraphicObjectIDs)
 		{
+			try {
 			teklaObject.RemoveTemporaryGraphicsObjects(GraphicObjectIDs);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveTemporaryGraphicsObjects()"); }
 		}
 
 

@@ -111,22 +111,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean AddObjectsToTask(System.Collections.ArrayList ModelObjects)
 		{
+			try {
 			return teklaObject.AddObjectsToTask(ModelObjects);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddObjectsToTask()"); }
 		}
 
 		public System.Boolean RemoveObjectsFromTask(System.Collections.ArrayList ModelObjects)
 		{
+			try {
 			return teklaObject.RemoveObjectsFromTask(ModelObjects);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveObjectsFromTask()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFathers()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetFathers());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFathers()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDependencies()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetDependencies());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDependencies()"); }
 		}
 
 		public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()

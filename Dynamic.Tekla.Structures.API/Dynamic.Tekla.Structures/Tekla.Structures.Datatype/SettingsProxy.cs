@@ -27,17 +27,29 @@ namespace Dynamic.Tekla.Structures.Datatype
 
 		public System.Object GetValue(System.String name)
 		{
+			try {
 			return teklaObject.GetValue(name);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetValue()"); }
 		}
 
 		public System.Boolean TryGetValue(System.String name, out System.Object obj)
 		{
+			try {
 			return teklaObject.TryGetValue(name, out obj);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetValue()"); }
 		}
 
 		public void SetValue(System.String name, System.Object value)
 		{
+			try {
 			teklaObject.SetValue(name, value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetValue()"); }
 		}
 
 

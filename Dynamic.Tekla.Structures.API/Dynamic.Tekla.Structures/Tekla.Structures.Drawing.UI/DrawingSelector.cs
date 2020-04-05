@@ -24,7 +24,11 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingEnumerator GetSelected()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingEnumerator_.FromTSObject(teklaObject.GetSelected());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSelected()"); }
 		}
 
 

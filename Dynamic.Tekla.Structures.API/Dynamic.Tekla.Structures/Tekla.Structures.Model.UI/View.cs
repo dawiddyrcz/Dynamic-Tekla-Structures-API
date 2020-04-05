@@ -111,37 +111,65 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Boolean Insert()
 		{
+			try {
 			return teklaObject.Insert();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
 		}
 
 		public System.Boolean Modify()
 		{
+			try {
 			return teklaObject.Modify();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
 		}
 
 		public System.Boolean Select()
 		{
+			try {
 			return teklaObject.Select();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Delete()
 		{
+			try {
 			return teklaObject.Delete();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
 		}
 
 		public System.Boolean IsPerspectiveViewProjection()
 		{
+			try {
 			return teklaObject.IsPerspectiveViewProjection();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsPerspectiveViewProjection()"); }
 		}
 
 		public System.Boolean IsVisible()
 		{
+			try {
 			return teklaObject.IsVisible();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsVisible()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection GetClipPlanes()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.UI.ClipPlaneCollection_.FromTSObject(teklaObject.GetClipPlanes());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetClipPlanes()"); }
 		}
 
 

@@ -24,17 +24,29 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean RunClashCheck()
 		{
+			try {
 			return teklaObject.RunClashCheck();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RunClashCheck()"); }
 		}
 
 		public System.Boolean StopClashCheck()
 		{
+			try {
 			return teklaObject.StopClashCheck();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("StopClashCheck()"); }
 		}
 
 		public System.Collections.ArrayList GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier ID1, Dynamic.Tekla.Structures.Identifier ID2)
 		{
+			try {
 			return teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntersectionBoundingBoxes()"); }
 		}
 
 

@@ -57,22 +57,38 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean Select(System.String name, System.Int32 number)
 		{
+			try {
 			return teklaObject.Select(name, number);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Select(System.String name, System.Int32 number, Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum type)
 		{
+			try {
 			return teklaObject.Select(name, number, Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(type));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Export(ref System.String filename)
 		{
+			try {
 			return teklaObject.Export(ref filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }
 		}
 
 		public System.Boolean GetVersion(ref System.Int32 version)
 		{
+			try {
 			return teklaObject.GetVersion(ref version);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVersion()"); }
 		}
 
 

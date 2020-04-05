@@ -96,52 +96,92 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 		{
+			try {
 			return teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
 		}
 
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
 		{
+			try {
 			return teklaObject.GetRebarGeometries(withHooks);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
 		}
 
 		public System.Collections.ArrayList GetRebarGeometriesWithoutClashes(System.Boolean withHooks)
 		{
+			try {
 			return teklaObject.GetRebarGeometriesWithoutClashes(withHooks);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometriesWithoutClashes()"); }
 		}
 
 		public System.Boolean IsGeometryValid()
 		{
+			try {
 			return teklaObject.IsGeometryValid();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsGeometryValid()"); }
 		}
 
 		public System.Int32 GetNumberOfRebars()
 		{
+			try {
 			return teklaObject.GetNumberOfRebars();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNumberOfRebars()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebar(System.Int32 index, System.Boolean withHooks)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(teklaObject.GetSingleRebar(index, withHooks));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSingleRebar()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarGeometry GetSingleRebarWithoutClash(System.Int32 index, System.Boolean withHooks)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.RebarGeometry_.FromTSObject(teklaObject.GetSingleRebarWithoutClash(index, withHooks));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSingleRebarWithoutClash()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetFatherPour());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFatherPour()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(teklaObject.GetFatherPourUnit());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFatherPourUnit()"); }
 		}
 
 

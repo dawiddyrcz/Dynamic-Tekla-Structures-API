@@ -45,7 +45,11 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint Point)
 		{
+			try {
 			teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddContourPoint()"); }
 		}
 
 		public System.Boolean CalculatePolygon(out Dynamic.Tekla.Structures.Model.Polygon polygon)

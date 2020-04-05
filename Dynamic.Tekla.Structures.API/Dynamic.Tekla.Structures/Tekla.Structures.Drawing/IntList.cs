@@ -33,72 +33,128 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Int32 Add(System.Int32 value)
 		{
+			try {
 			return teklaObject.Add(value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
 		}
 
 		public System.Boolean Contains(System.Int32 value)
 		{
+			try {
 			return teklaObject.Contains(value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Contains()"); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value)
 		{
+			try {
 			return teklaObject.IndexOf(value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex)
 		{
+			try {
 			return teklaObject.IndexOf(value, startIndex);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
 		{
+			try {
 			return teklaObject.IndexOf(value, startIndex, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public void Insert(System.Int32 index, System.Int32 value)
 		{
+			try {
 			teklaObject.Insert(index, value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.IntList GetRange(System.Int32 index, System.Int32 count)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.IntList_.FromTSObject(teklaObject.GetRange(index, count));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRange()"); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value)
 		{
+			try {
 			return teklaObject.LastIndexOf(value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex)
 		{
+			try {
 			return teklaObject.LastIndexOf(value, startIndex);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
 		{
+			try {
 			return teklaObject.LastIndexOf(value, startIndex, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public void Remove(System.Int32 value)
 		{
+			try {
 			teklaObject.Remove(value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Remove()"); }
 		}
 
 		public void RemoveRange(System.Int32 index, System.Int32 count)
 		{
+			try {
 			teklaObject.RemoveRange(index, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveRange()"); }
 		}
 
 		public System.Int32[] ToArray()
 		{
+			try {
 			return teklaObject.ToArray();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ToArray()"); }
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
+			try {
 			return teklaObject.IsEqual(ObjectToCompare);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
 		}
 
 

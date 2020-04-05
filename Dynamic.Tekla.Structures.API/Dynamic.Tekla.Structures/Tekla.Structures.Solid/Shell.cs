@@ -24,12 +24,20 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFaceEnumerator()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(teklaObject.GetEdgeEnumerator());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetEdgeEnumerator()"); }
 		}
 
 

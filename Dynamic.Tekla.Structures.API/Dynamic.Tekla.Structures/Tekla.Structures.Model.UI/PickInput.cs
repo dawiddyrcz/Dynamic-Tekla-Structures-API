@@ -42,7 +42,11 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public void CopyTo(System.Array array, System.Int32 index)
 		{
+			try {
 			teklaObject.CopyTo(array, index);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()"); }
 		}
 
 

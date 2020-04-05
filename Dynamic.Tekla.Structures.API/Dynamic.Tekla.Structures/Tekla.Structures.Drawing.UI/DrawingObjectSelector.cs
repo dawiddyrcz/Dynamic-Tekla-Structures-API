@@ -24,32 +24,56 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 
 		public System.Boolean SelectObject(Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject)
 		{
+			try {
 			return teklaObject.SelectObject(Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SelectObject()"); }
 		}
 
 		public System.Boolean SelectObjects(System.Collections.ArrayList DrawingObjects, System.Boolean ExtendSelection)
 		{
+			try {
 			return teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SelectObjects()"); }
 		}
 
 		public System.Boolean UnselectObject(Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject)
 		{
+			try {
 			return teklaObject.UnselectObject(Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("UnselectObject()"); }
 		}
 
 		public System.Boolean UnselectObjects(System.Collections.ArrayList DrawingObjects)
 		{
+			try {
 			return teklaObject.UnselectObjects(DrawingObjects);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("UnselectObjects()"); }
 		}
 
 		public System.Boolean UnselectAllObjects()
 		{
+			try {
 			return teklaObject.UnselectAllObjects();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("UnselectAllObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetSelected()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetSelected());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSelected()"); }
 		}
 
 

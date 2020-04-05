@@ -46,7 +46,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Object Clone()
 		{
+			try {
 			return teklaObject.Clone();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()"); }
 		}
 
 

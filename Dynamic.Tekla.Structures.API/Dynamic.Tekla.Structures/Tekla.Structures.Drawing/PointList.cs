@@ -33,77 +33,137 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Int32 Add(Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			return teklaObject.Add(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
 		}
 
 		public void AddRange(Dynamic.Tekla.Structures.Drawing.PointList value)
 		{
+			try {
 			teklaObject.AddRange(Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddRange()"); }
 		}
 
 		public System.Boolean Contains(Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			return teklaObject.Contains(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Contains()"); }
 		}
 
 		public System.Int32 IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			return teklaObject.IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public System.Int32 IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value, System.Int32 startIndex)
 		{
+			try {
 			return teklaObject.IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value), startIndex);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public System.Int32 IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value, System.Int32 startIndex, System.Int32 count)
 		{
+			try {
 			return teklaObject.IndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value), startIndex, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
 		}
 
 		public void Insert(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			teklaObject.Insert(index, Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PointList GetRange(System.Int32 index, System.Int32 count)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.GetRange(index, count));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRange()"); }
 		}
 
 		public System.Int32 LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			return teklaObject.LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public System.Int32 LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value, System.Int32 startIndex)
 		{
+			try {
 			return teklaObject.LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value), startIndex);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public System.Int32 LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point value, System.Int32 startIndex, System.Int32 count)
 		{
+			try {
 			return teklaObject.LastIndexOf(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value), startIndex, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
 		}
 
 		public void Remove(Dynamic.Tekla.Structures.Geometry3d.Point value)
 		{
+			try {
 			teklaObject.Remove(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Remove()"); }
 		}
 
 		public void RemoveRange(System.Int32 index, System.Int32 count)
 		{
+			try {
 			teklaObject.RemoveRange(index, count);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveRange()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point[] ToArray()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(teklaObject.ToArray());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ToArray()"); }
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
+			try {
 			return teklaObject.IsEqual(ObjectToCompare);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
 		}
 
 

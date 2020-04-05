@@ -36,12 +36,20 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public void AddExternalWindow(System.String Name, System.IntPtr Handle)
 		{
+			try {
 			teklaObject.AddExternalWindow(Name, Handle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddExternalWindow()"); }
 		}
 
 		public void RemoveExternalWindow(System.String Name, System.IntPtr Handle)
 		{
+			try {
 			teklaObject.RemoveExternalWindow(Name, Handle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveExternalWindow()"); }
 		}
 
 

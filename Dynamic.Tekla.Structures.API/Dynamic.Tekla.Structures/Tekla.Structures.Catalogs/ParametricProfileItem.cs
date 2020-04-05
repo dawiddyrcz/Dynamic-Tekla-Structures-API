@@ -41,12 +41,20 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String CreateProfileString()
 		{
+			try {
 			return teklaObject.CreateProfileString();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateProfileString()"); }
 		}
 
 		public System.Boolean Select(System.String ProfileName)
 		{
+			try {
 			return teklaObject.Select(ProfileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 

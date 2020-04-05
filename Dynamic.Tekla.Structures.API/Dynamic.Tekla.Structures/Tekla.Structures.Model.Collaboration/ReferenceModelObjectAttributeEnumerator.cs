@@ -36,12 +36,20 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Boolean MoveNext()
 		{
+			try {
 			return teklaObject.MoveNext();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()"); }
 		}
 
 		public void Reset()
 		{
+			try {
 			teklaObject.Reset();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Reset()"); }
 		}
 
 

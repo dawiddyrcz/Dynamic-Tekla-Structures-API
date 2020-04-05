@@ -75,32 +75,56 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean Attach()
 		{
+			try {
 			return teklaObject.Attach();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Attach()"); }
 		}
 
 		public System.Boolean AttachComplete()
 		{
+			try {
 			return teklaObject.AttachComplete();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AttachComplete()"); }
 		}
 
 		public System.Boolean Detach()
 		{
+			try {
 			return teklaObject.Detach();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Detach()"); }
 		}
 
 		public System.Boolean Select()
 		{
+			try {
 			return teklaObject.Select();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean SetVisibility(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> views, System.Boolean visible)
 		{
+			try {
 			return teklaObject.SetVisibility(views, visible);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetVisibility()"); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> GetVisibleInViews()
 		{
+			try {
 			return teklaObject.GetVisibleInViews();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVisibleInViews()"); }
 		}
 
 		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()

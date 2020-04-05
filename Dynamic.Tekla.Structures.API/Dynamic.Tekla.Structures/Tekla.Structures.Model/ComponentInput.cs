@@ -45,32 +45,56 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
 		{
+			try {
 			return teklaObject.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddOneInputPosition()"); }
 		}
 
 		public System.Boolean AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point Position1, Dynamic.Tekla.Structures.Geometry3d.Point Position2)
 		{
+			try {
 			return teklaObject.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddTwoInputPositions()"); }
 		}
 
 		public System.Boolean AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon P)
 		{
+			try {
 			return teklaObject.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputPolygon()"); }
 		}
 
 		public System.Boolean AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
+			try {
 			return teklaObject.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputObject()"); }
 		}
 
 		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
 		{
+			try {
 			return teklaObject.AddInputObjects(Objects);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputObjects()"); }
 		}
 
 		public void CopyTo(System.Array array, System.Int32 index)
 		{
+			try {
 			teklaObject.CopyTo(array, index);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()"); }
 		}
 
 

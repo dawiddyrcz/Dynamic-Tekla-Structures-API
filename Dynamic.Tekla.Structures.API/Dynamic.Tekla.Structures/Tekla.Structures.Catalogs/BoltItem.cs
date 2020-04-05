@@ -51,7 +51,11 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean ExportBoltStandard(ref System.String filename)
 		{
+			try {
 			return teklaObject.ExportBoltStandard(ref filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ExportBoltStandard()"); }
 		}
 
 

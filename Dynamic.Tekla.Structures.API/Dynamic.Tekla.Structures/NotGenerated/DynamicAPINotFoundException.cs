@@ -24,5 +24,10 @@ namespace Dynamic.Tekla.Structures
         public DynamicAPINotFoundException() : base()
         {
         }
+
+        public static DynamicAPINotFoundException CouldNotFindMethod(string methodName)
+        {
+            return new DynamicAPINotFoundException("Could not find method " + methodName + " in current Tekla API");
+        }
     }
 }

@@ -36,7 +36,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelIdentifiers()
 		{
+			try {
 			return teklaObject.GetModelIdentifiers();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelIdentifiers()"); }
 		}
 
 

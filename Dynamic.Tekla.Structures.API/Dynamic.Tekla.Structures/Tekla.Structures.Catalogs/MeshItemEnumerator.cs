@@ -30,17 +30,29 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean MoveNext()
 		{
+			try {
 			return teklaObject.MoveNext();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()"); }
 		}
 
 		public void Reset()
 		{
+			try {
 			teklaObject.Reset();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Reset()"); }
 		}
 
 		public System.Int32 GetSize()
 		{
+			try {
 			return teklaObject.GetSize();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSize()"); }
 		}
 
 		public static Dynamic.Tekla.Structures.Catalogs.MeshItem SelectMeshItem(System.String Name, System.String Grade)

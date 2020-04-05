@@ -18,12 +18,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void Visit(Dynamic.Tekla.Structures.Model.PolygonNode node)
 		{
+			try {
 			teklaObject.Visit(Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Visit()"); }
 		}
 
 		public void Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node)
 		{
+			try {
 			teklaObject.Visit(Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Visit()"); }
 		}
 
 

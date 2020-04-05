@@ -18,87 +18,155 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean Insert()
 		{
+			try {
 			return teklaObject.Insert();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
 		}
 
 		public System.Boolean Select()
 		{
+			try {
 			return teklaObject.Select();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
 		}
 
 		public System.Boolean Modify()
 		{
+			try {
 			return teklaObject.Modify();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
 		}
 
 		public System.Boolean Delete()
 		{
+			try {
 			return teklaObject.Delete();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
 		}
 
 		public System.Boolean IsSameDatabaseObject(Dynamic.Tekla.Structures.Drawing.DatabaseObject Object)
 		{
+			try {
 			return teklaObject.IsSameDatabaseObject(Dynamic.Tekla.Structures.Drawing.DatabaseObject_.GetTSObject(Object));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsSameDatabaseObject()"); }
 		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.String Value)
 		{
+			try {
 			return teklaObject.SetUserProperty(Name, Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()"); }
 		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
 		{
+			try {
 			return teklaObject.SetUserProperty(Name, Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()"); }
 		}
 
 		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
 		{
+			try {
 			return teklaObject.SetUserProperty(Name, Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()"); }
 		}
 
 		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
 		{
+			try {
 			return teklaObject.GetUserProperty(Name, ref Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()"); }
 		}
 
 		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
 		{
+			try {
 			return teklaObject.GetUserProperty(Name, ref Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()"); }
 		}
 
 		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
 		{
+			try {
 			return teklaObject.GetUserProperty(Name, ref Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()"); }
 		}
 
 		public System.Boolean GetStringUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.String> values)
 		{
+			try {
 			return teklaObject.GetStringUserProperties(names, out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringUserProperties()"); }
 		}
 
 		public System.Boolean GetDoubleUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.Double> values)
 		{
+			try {
 			return teklaObject.GetDoubleUserProperties(names, out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleUserProperties()"); }
 		}
 
 		public System.Boolean GetIntegerUserProperties(System.Collections.Generic.List<System.String> names, out System.Collections.Generic.Dictionary<System.String, System.Int32> values)
 		{
+			try {
 			return teklaObject.GetIntegerUserProperties(names, out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntegerUserProperties()"); }
 		}
 
 		public System.Boolean GetStringUserProperties(out System.Collections.Generic.Dictionary<System.String, System.String> values)
 		{
+			try {
 			return teklaObject.GetStringUserProperties(out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringUserProperties()"); }
 		}
 
 		public System.Boolean GetDoubleUserProperties(out System.Collections.Generic.Dictionary<System.String, System.Double> values)
 		{
+			try {
 			return teklaObject.GetDoubleUserProperties(out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleUserProperties()"); }
 		}
 
 		public System.Boolean GetIntegerUserProperties(out System.Collections.Generic.Dictionary<System.String, System.Int32> values)
 		{
+			try {
 			return teklaObject.GetIntegerUserProperties(out values);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntegerUserProperties()"); }
 		}
 
 

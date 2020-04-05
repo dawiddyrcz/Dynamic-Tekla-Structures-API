@@ -95,37 +95,65 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetConvertedObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConvertedObjects()"); }
 		}
 
 		public System.Boolean RefreshFile()
 		{
+			try {
 			return teklaObject.RefreshFile();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RefreshFile()"); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
 		{
+			try {
 			return teklaObject.GetRevisions();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRevisions()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceModelObjectByExternalGuid()"); }
 		}
 
 		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
 		{
+			try {
 			return teklaObject.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAsCurrentRevision()"); }
 		}
 
 		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
 		{
+			try {
 			return teklaObject.SetAsCurrentRevision(modelId, revisionId);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAsCurrentRevision()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(teklaObject.GetCurrentRevision());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCurrentRevision()"); }
 		}
 
 

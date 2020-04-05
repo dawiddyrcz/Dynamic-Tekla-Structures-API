@@ -36,7 +36,11 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(teklaObject.GetLoopEnumerator());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetLoopEnumerator()"); }
 		}
 
 

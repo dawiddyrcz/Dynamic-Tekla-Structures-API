@@ -40,7 +40,11 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
 		{
+			try {
 			teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPoint()"); }
 		}
 
 

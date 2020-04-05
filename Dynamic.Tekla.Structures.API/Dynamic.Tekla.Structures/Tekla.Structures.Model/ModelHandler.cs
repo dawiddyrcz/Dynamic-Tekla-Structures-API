@@ -27,37 +27,65 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean CreateNewSingleUserModel(System.String ModelName, System.String ModelFolder, System.String Template)
 		{
+			try {
 			return teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateNewSingleUserModel()"); }
 		}
 
 		public System.Boolean CreateNewMultiUserModel(System.String ModelName, System.String ModelFolder, System.String ServerName)
 		{
+			try {
 			return teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateNewMultiUserModel()"); }
 		}
 
 		public System.Boolean Save(System.String Comment, System.String User)
 		{
+			try {
 			return teklaObject.Save(Comment, User);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Save()"); }
 		}
 
 		public System.Boolean Open(System.String ModelFolder, System.Boolean OpenAutoSaved)
 		{
+			try {
 			return teklaObject.Open(ModelFolder, OpenAutoSaved);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Open()"); }
 		}
 
 		public void Close()
 		{
+			try {
 			teklaObject.Close();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Close()"); }
 		}
 
 		public System.Boolean IsModelSaved()
 		{
+			try {
 			return teklaObject.IsModelSaved();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsModelSaved()"); }
 		}
 
 		public System.Boolean IsModelAutoSaved(System.String ModelFolder)
 		{
+			try {
 			return teklaObject.IsModelAutoSaved(ModelFolder);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsModelAutoSaved()"); }
 		}
 
 

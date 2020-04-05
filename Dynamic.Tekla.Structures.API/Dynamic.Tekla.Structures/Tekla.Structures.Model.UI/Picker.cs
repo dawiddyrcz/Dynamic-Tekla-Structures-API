@@ -27,62 +27,110 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PickPoint());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoint()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint(System.String Prompt)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PickPoint(Prompt));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoint()"); }
 		}
 
 		public System.Collections.ArrayList PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum Enum)
 		{
+			try {
 			return teklaObject.PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum_.GetTSObject(Enum));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()"); }
 		}
 
 		public System.Collections.ArrayList PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum Enum, System.String Prompt)
 		{
+			try {
 			return teklaObject.PickPoints(Dynamic.Tekla.Structures.Model.UI.Picker.PickPointEnum_.GetTSObject(Enum), Prompt);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()"); }
 		}
 
 		public System.Collections.ArrayList PickLine()
 		{
+			try {
 			return teklaObject.PickLine();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickLine()"); }
 		}
 
 		public System.Collections.ArrayList PickLine(System.String Prompt)
 		{
+			try {
 			return teklaObject.PickLine(Prompt);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickLine()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.PickInput PickFace()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.UI.PickInput_.FromTSObject(teklaObject.PickFace());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickFace()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.PickInput PickFace(System.String Prompt)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.UI.PickInput_.FromTSObject(teklaObject.PickFace(Prompt));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickFace()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum Enum)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum_.GetTSObject(Enum)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObject()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum Enum, System.String Prompt)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.PickObject(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectEnum_.GetTSObject(Enum), Prompt));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObject()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum Enum)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum_.GetTSObject(Enum)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum Enum, System.String Prompt)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.PickObjects(Dynamic.Tekla.Structures.Model.UI.Picker.PickObjectsEnum_.GetTSObject(Enum), Prompt));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObjects()"); }
 		}
 
 

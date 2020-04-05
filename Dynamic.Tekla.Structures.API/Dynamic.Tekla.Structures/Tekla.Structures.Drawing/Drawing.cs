@@ -144,32 +144,56 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerView GetSheet()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.ContainerView_.FromTSObject(teklaObject.GetSheet());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSheet()"); }
 		}
 
 		public System.Boolean CommitChanges()
 		{
+			try {
 			return teklaObject.CommitChanges();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
 		}
 
 		public System.Boolean CommitChanges(System.String Message)
 		{
+			try {
 			return teklaObject.CommitChanges(Message);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
 		}
 
 		public System.Boolean PlaceViews()
 		{
+			try {
 			return teklaObject.PlaceViews();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PlaceViews()"); }
 		}
 
 		public System.String GetPlotFileName(System.Boolean includeRevisionInfo)
 		{
+			try {
 			return teklaObject.GetPlotFileName(includeRevisionInfo);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileName()"); }
 		}
 
 		public System.String GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum includeRevisionInfo)
 		{
+			try {
 			return teklaObject.GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileNameExt()"); }
 		}
 
 

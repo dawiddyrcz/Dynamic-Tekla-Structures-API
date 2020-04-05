@@ -31,10 +31,6 @@ namespace CodeGenerator
             }
             else
             {
-                dynamic beam = new Tekla.Structures.Model.Beam();
-                beam.Something();
-
-
                 Console.ReadKey();
             }
             

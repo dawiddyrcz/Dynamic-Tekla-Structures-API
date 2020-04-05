@@ -216,37 +216,65 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 		{
+			try {
 			return teklaObject.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddOtherPartToBolt()"); }
 		}
 
 		public System.Boolean RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 		{
+			try {
 			return teklaObject.RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveOtherPartToBolt()"); }
 		}
 
 		public System.Collections.ArrayList GetOtherPartsToBolt()
 		{
+			try {
 			return teklaObject.GetOtherPartsToBolt();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetOtherPartsToBolt()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid(System.Boolean withHighAccuracy)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid(withHighAccuracy));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetFatherPour());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFatherPour()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(teklaObject.GetFatherPourUnit());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFatherPourUnit()"); }
 		}
 
 

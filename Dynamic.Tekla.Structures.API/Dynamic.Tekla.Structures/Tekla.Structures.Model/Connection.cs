@@ -63,27 +63,47 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
+			try {
 			return teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPrimaryObject()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject GetPrimaryObject()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.GetPrimaryObject());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPrimaryObject()"); }
 		}
 
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
+			try {
 			return teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetSecondaryObject()"); }
 		}
 
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
 		{
+			try {
 			return teklaObject.SetSecondaryObjects(Secondaries);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetSecondaryObjects()"); }
 		}
 
 		public System.Collections.ArrayList GetSecondaryObjects()
 		{
+			try {
 			return teklaObject.GetSecondaryObjects();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSecondaryObjects()"); }
 		}
 
 

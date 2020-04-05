@@ -63,7 +63,11 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Boolean IsValid()
 		{
+			try {
 			return teklaObject.IsValid();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsValid()"); }
 		}
 
 

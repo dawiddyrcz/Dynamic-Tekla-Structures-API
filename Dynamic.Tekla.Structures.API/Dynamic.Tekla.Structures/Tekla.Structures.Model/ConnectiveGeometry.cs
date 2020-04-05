@@ -42,12 +42,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean IsEmpty()
 		{
+			try {
 			return teklaObject.IsEmpty();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEmpty()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(teklaObject.GetGeometryEnumerator());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGeometryEnumerator()"); }
 		}
 
 

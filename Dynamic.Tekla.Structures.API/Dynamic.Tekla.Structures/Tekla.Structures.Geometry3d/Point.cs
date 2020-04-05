@@ -78,12 +78,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void Zero()
 		{
+			try {
 			teklaObject.Zero();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Zero()"); }
 		}
 
 		public void Translate(System.Double X, System.Double Y, System.Double Z)
 		{
+			try {
 			teklaObject.Translate(X, Y, Z);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Translate()"); }
 		}
 
 		public static System.Boolean AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
@@ -97,7 +105,11 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Int32 CompareTo(System.Object obj)
 		{
+			try {
 			return teklaObject.CompareTo(obj);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()"); }
 		}
 
 

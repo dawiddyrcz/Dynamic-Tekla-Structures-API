@@ -43,22 +43,38 @@ namespace Dynamic.Tekla.Structures
 
 		public System.String CreateWritableCopy(System.String filename)
 		{
+			try {
 			return teklaObject.CreateWritableCopy(filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateWritableCopy()"); }
 		}
 
 		public System.String FindFile(System.String filename)
 		{
+			try {
 			return teklaObject.FindFile(filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FindFile()"); }
 		}
 
 		public System.String GetWritablePath(System.String filename)
 		{
+			try {
 			return teklaObject.GetWritablePath(filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWritablePath()"); }
 		}
 
 		public System.Boolean IsWritable(System.String filename)
 		{
+			try {
 			return teklaObject.IsWritable(filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsWritable()"); }
 		}
 
 

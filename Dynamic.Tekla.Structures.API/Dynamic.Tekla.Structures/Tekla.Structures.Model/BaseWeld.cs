@@ -282,12 +282,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList GetWeldGeometries()
 		{
+			try {
 			return teklaObject.GetWeldGeometries();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWeldGeometries()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()"); }
 		}
 
 

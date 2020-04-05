@@ -58,12 +58,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Double Length()
 		{
+			try {
 			return teklaObject.Length();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDirectionVector()"); }
 		}
 
 

@@ -27,67 +27,119 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean GetConnectionStatus()
 		{
+			try {
 			return teklaObject.GetConnectionStatus();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConnectionStatus()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelInfo GetInfo()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelInfo_.FromTSObject(teklaObject.GetInfo());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInfo()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ProjectInfo GetProjectInfo()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ProjectInfo_.FromTSObject(teklaObject.GetProjectInfo());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetProjectInfo()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PhaseCollection GetPhases()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PhaseCollection_.FromTSObject(teklaObject.GetPhases());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPhases()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectSelector GetModelObjectSelector()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectSelector_.FromTSObject(teklaObject.GetModelObjectSelector());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelObjectSelector()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObject SelectModelObject(Dynamic.Tekla.Structures.Identifier ID)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.SelectModelObject(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SelectModelObject()"); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)
 		{
+			try {
 			return teklaObject.FetchModelObjects(Guids, SelectInstances);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FetchModelObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Identifier GetIdentifierByGUID(System.String guid)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.GetIdentifierByGUID(guid));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIdentifierByGUID()"); }
 		}
 
 		public System.String GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier identifier)
 		{
+			try {
 			return teklaObject.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGUIDByIdentifier()"); }
 		}
 
 		public System.Boolean CommitChanges()
 		{
+			try {
 			return teklaObject.CommitChanges();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
 		}
 
 		public System.Boolean CommitChanges(System.String Message)
 		{
+			try {
 			return teklaObject.CommitChanges(Message);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.WorkPlaneHandler GetWorkPlaneHandler()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.WorkPlaneHandler_.FromTSObject(teklaObject.GetWorkPlaneHandler());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWorkPlaneHandler()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(teklaObject.GetClashCheckHandler());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetClashCheckHandler()"); }
 		}
 
 

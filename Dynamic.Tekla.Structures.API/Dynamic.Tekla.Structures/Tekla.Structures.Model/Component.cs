@@ -33,22 +33,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput I)
 		{
+			try {
 			return teklaObject.SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetComponentInput()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ComponentInput GetComponentInput()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ComponentInput_.FromTSObject(teklaObject.GetComponentInput());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetComponentInput()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAssembly()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetComponents());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetComponents()"); }
 		}
 
 

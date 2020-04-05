@@ -24,12 +24,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(teklaObject.GetCurrentTransformationPlane());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCurrentTransformationPlane()"); }
 		}
 
 		public System.Boolean SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane)
 		{
+			try {
 			return teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetCurrentTransformationPlane()"); }
 		}
 
 

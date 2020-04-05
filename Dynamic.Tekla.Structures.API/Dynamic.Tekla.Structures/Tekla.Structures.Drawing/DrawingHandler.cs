@@ -33,7 +33,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean GetConnectionStatus()
 		{
+			try {
 			return teklaObject.GetConnectionStatus();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConnectionStatus()"); }
 		}
 
 		public static Dynamic.Tekla.Structures.Drawing.DrawingHandler.MessageExecutionModeEnum SetMessageExecutionStatus(Dynamic.Tekla.Structures.Drawing.DrawingHandler.MessageExecutionModeEnum mode)
@@ -53,97 +57,173 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingEnumerator GetDrawings()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingEnumerator_.FromTSObject(teklaObject.GetDrawings());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawings()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.UI.DrawingSelector GetDrawingSelector()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.UI.DrawingSelector_.FromTSObject(teklaObject.GetDrawingSelector());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawingSelector()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.UI.DrawingObjectSelector GetDrawingObjectSelector()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.UI.DrawingObjectSelector_.FromTSObject(teklaObject.GetDrawingObjectSelector());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawingObjectSelector()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.UI.Picker GetPicker()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.UI.Picker_.FromTSObject(teklaObject.GetPicker());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPicker()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing GetActiveDrawing()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.GetActiveDrawing());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetActiveDrawing()"); }
 		}
 
 		public System.Boolean SetActiveDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.SetActiveDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetActiveDrawing()"); }
 		}
 
 		public System.Boolean SetActiveDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing, System.Boolean showDrawing)
 		{
+			try {
 			return teklaObject.SetActiveDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing), showDrawing);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetActiveDrawing()"); }
 		}
 
 		public System.Boolean SaveActiveDrawing()
 		{
+			try {
 			return teklaObject.SaveActiveDrawing();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SaveActiveDrawing()"); }
 		}
 
 		public System.Boolean CloseActiveDrawing()
 		{
+			try {
 			return teklaObject.CloseActiveDrawing();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CloseActiveDrawing()"); }
 		}
 
 		public System.Boolean CloseActiveDrawing(System.Boolean save)
 		{
+			try {
 			return teklaObject.CloseActiveDrawing(save);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CloseActiveDrawing()"); }
 		}
 
 		public System.Boolean PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Drawing.PrintAttributes printAttributes)
 		{
+			try {
 			return teklaObject.PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing), Dynamic.Tekla.Structures.Drawing.PrintAttributes_.GetTSObject(printAttributes));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrintDrawing()"); }
 		}
 
 		public System.Boolean PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Drawing.PrintAttributes printAttributes, System.String fileName)
 		{
+			try {
 			return teklaObject.PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing), Dynamic.Tekla.Structures.Drawing.PrintAttributes_.GetTSObject(printAttributes), fileName);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrintDrawing()"); }
 		}
 
 		public System.Boolean PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes printAttributes)
 		{
+			try {
 			return teklaObject.PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing), Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes_.GetTSObject(printAttributes));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrintDrawing()"); }
 		}
 
 		public System.Boolean PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes printAttributes, System.String outputFile)
 		{
+			try {
 			return teklaObject.PrintDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing), Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes_.GetTSObject(printAttributes), outputFile);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrintDrawing()"); }
 		}
 
 		public System.Boolean PrintDrawings(System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.Drawing> drawings, Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes printAttributes)
 		{
+			try {
 			return teklaObject.PrintDrawings(drawings, Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes_.GetTSObject(printAttributes));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrintDrawings()"); }
 		}
 
 		public System.Boolean UpdateDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.UpdateDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("UpdateDrawing()"); }
 		}
 
 		public System.Boolean IssueDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.IssueDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IssueDrawing()"); }
 		}
 
 		public System.Boolean UnissueDrawing(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.UnissueDrawing(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("UnissueDrawing()"); }
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelObjectIdentifiers(Dynamic.Tekla.Structures.Drawing.Drawing drawing)
 		{
+			try {
 			return teklaObject.GetModelObjectIdentifiers(Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelObjectIdentifiers()"); }
 		}
 
 

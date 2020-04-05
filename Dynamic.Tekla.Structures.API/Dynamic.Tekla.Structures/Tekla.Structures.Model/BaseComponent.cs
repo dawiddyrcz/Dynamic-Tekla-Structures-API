@@ -54,37 +54,65 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public void SetAttribute(System.String AttrName, System.String StrValue)
 		{
+			try {
 			teklaObject.SetAttribute(AttrName, StrValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public void SetAttribute(System.String AttrName, System.Int32 Value)
 		{
+			try {
 			teklaObject.SetAttribute(AttrName, Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public void SetAttribute(System.String AttrName, System.Double DValue)
 		{
+			try {
 			teklaObject.SetAttribute(AttrName, DValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
 		}
 
 		public System.Boolean GetAttribute(System.String AttrName, ref System.String StrValue)
 		{
+			try {
 			return teklaObject.GetAttribute(AttrName, ref StrValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
 		}
 
 		public System.Boolean GetAttribute(System.String AttrName, ref System.Int32 Value)
 		{
+			try {
 			return teklaObject.GetAttribute(AttrName, ref Value);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
 		}
 
 		public System.Boolean GetAttribute(System.String AttrName, ref System.Double DValue)
 		{
+			try {
 			return teklaObject.GetAttribute(AttrName, ref DValue);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
 		}
 
 		public System.Boolean LoadAttributesFromFile(System.String Filename)
 		{
+			try {
 			return teklaObject.LoadAttributesFromFile(Filename);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAttributesFromFile()"); }
 		}
 
 

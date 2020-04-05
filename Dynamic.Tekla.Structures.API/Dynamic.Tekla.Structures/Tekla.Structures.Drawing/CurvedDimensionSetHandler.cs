@@ -27,22 +27,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial CreateCurvedDimensionSetRadial(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint1, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint2, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint3, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, System.Double Distance, Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes Attributes)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial_.FromTSObject(teklaObject.CreateCurvedDimensionSetRadial(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint3), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Distance, Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes_.GetTSObject(Attributes)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateCurvedDimensionSetRadial()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial CreateCurvedDimensionSetRadial(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint1, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint2, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint3, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, System.Double Distance)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial_.FromTSObject(teklaObject.CreateCurvedDimensionSetRadial(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint3), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Distance));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateCurvedDimensionSetRadial()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal CreateCurvedDimensionSetOrthogonal(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint1, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint2, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint3, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, System.Double Distance, Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal.CurvedDimensionSetOrthogonalAttributes Attributes)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal_.FromTSObject(teklaObject.CreateCurvedDimensionSetOrthogonal(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint3), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Distance, Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal.CurvedDimensionSetOrthogonalAttributes_.GetTSObject(Attributes)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateCurvedDimensionSetOrthogonal()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal CreateCurvedDimensionSetOrthogonal(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint1, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint2, Dynamic.Tekla.Structures.Geometry3d.Point ArcPoint3, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, System.Double Distance)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetOrthogonal_.FromTSObject(teklaObject.CreateCurvedDimensionSetOrthogonal(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ArcPoint3), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Distance));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateCurvedDimensionSetOrthogonal()"); }
 		}
 
 

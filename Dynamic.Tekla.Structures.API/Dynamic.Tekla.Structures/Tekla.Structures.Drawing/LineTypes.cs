@@ -74,12 +74,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
+			try {
 			return teklaObject.IsEqual(ObjectToCompare);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
 		}
 
 		public System.Object Clone()
 		{
+			try {
 			return teklaObject.Clone();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()"); }
 		}
 
 

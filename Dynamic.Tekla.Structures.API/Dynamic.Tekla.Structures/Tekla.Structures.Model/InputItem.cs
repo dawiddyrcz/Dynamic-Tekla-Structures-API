@@ -24,12 +24,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInputType()"); }
 		}
 
 		public System.Object GetData()
 		{
+			try {
 			return teklaObject.GetData();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetData()"); }
 		}
 
 

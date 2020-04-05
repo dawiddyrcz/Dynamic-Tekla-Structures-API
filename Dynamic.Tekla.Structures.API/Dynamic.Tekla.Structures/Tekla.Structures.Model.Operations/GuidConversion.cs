@@ -27,12 +27,20 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
 		public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
 		{
+			try {
 			return teklaObject.GetGuidMapping();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGuidMapping()"); }
 		}
 
 		public System.Guid GetNewGuid(System.Guid oldGuid)
 		{
+			try {
 			return teklaObject.GetNewGuid(oldGuid);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNewGuid()"); }
 		}
 
 

@@ -98,7 +98,11 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetModelObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelObjects()"); }
 		}
 
 		public static System.Boolean CreateSectionView(Dynamic.Tekla.Structures.Drawing.View view, Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, System.Double depthUp, System.Double depthDown, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes sectionMarkAttributes, out Dynamic.Tekla.Structures.Drawing.View sectionView, out Dynamic.Tekla.Structures.Drawing.SectionMark sectionMark)
@@ -247,22 +251,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean RotateViewOnAxisX(System.Double rotationAngle)
 		{
+			try {
 			return teklaObject.RotateViewOnAxisX(rotationAngle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisX()"); }
 		}
 
 		public System.Boolean RotateViewOnAxisY(System.Double rotationAngle)
 		{
+			try {
 			return teklaObject.RotateViewOnAxisY(rotationAngle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisY()"); }
 		}
 
 		public System.Boolean RotateViewOnAxisZ(System.Double rotationAngle)
 		{
+			try {
 			return teklaObject.RotateViewOnAxisZ(rotationAngle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisZ()"); }
 		}
 
 		public System.Boolean RotateViewOnDrawingPlane(System.Double rotationAngle)
 		{
+			try {
 			return teklaObject.RotateViewOnDrawingPlane(rotationAngle);
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnDrawingPlane()"); }
 		}
 
 

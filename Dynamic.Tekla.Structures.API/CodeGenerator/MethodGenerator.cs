@@ -133,6 +133,7 @@ namespace CodeGenerator
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
             sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\ttry {\n");
             sb.Append("\t\t\t");
             if (!typeFullName.Equals("void")) sb.Append("return ");
             sb.Append("$dfield.");
@@ -164,7 +165,10 @@ namespace CodeGenerator
             }
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-            sb.Append(");\n\t\t}");
+            sb.Append(");\n");
+            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
+            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name + "()\"); }\n");
+            sb.Append("\t\t}");
         }
 
         private static string CorrectIfArray(string dynamicTypeFullName)
@@ -422,6 +426,7 @@ namespace CodeGenerator
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
             sb.Append(")\n\t\t{\n");
+            sb.Append("\t\t\ttry {\n");
             sb.Append("\t\t\treturn ");
             sb.Append(CorrectIfArray(GetTypeFullName(method.ReturnType)));
             sb.Append("_.FromTSObject($dfield.");
@@ -450,7 +455,12 @@ namespace CodeGenerator
             }
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
-            sb.Append("));\n\t\t}");
+            sb.Append("));\n");
+
+            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
+            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name +"()\"); }\n");
+
+            sb.Append("\t\t}");
         }
 
         private static void Static_GenerateForTeklaReturnType(StringBuilder sb, MethodInfo method, string name, Type type)

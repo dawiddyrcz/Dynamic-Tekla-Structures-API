@@ -33,12 +33,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Model.PourObject GetPourObject()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(teklaObject.GetPourObject());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPourObject()"); }
 		}
 
 

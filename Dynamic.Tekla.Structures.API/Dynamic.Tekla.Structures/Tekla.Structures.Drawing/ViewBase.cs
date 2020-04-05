@@ -54,32 +54,56 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox GetAxisAlignedBoundingBox()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(teklaObject.GetAxisAlignedBoundingBox());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAxisAlignedBoundingBox()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllObjects()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetAllObjects());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAllObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllObjects(System.Type Type)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetAllObjects(Type));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAllObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects(Dynamic.Tekla.Structures.Identifier ModelIdentifier)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetModelObjects(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelIdentifier)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelObjects()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing GetOriginalDrawing()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.GetOriginalDrawing());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetOriginalDrawing()"); }
 		}
 
 

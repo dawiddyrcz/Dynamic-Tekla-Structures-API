@@ -39,17 +39,29 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public void Transpose()
 		{
+			try {
 			teklaObject.Transpose();
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Transpose()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.GetTranspose());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetTranspose()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Transform(Dynamic.Tekla.Structures.Geometry3d.Point p)
 		{
+			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Transform()"); }
 		}
 
 

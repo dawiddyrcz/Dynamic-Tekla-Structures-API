@@ -31,12 +31,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension1()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.GetDimension1());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDimension1()"); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension2()
 		{
+			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.GetDimension2());
+			}
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDimension2()"); }
 		}
 
 

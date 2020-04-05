@@ -15,36 +15,90 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.Color);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.Color);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color"); }
 			}
 		}
 
 		public System.Double Height
 		{
-			get => teklaObject.Height;
-			set { teklaObject.Height = value; }
+			get
+			{
+				try {
+					return teklaObject.Height;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Height = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height"); }
+			}
 		}
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.Boolean Italic
 		{
-			get => teklaObject.Italic;
-			set { teklaObject.Italic = value; }
+			get
+			{
+				try {
+					return teklaObject.Italic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Italic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Italic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Italic"); }
+			}
 		}
 
 		public System.Boolean Bold
 		{
-			get => teklaObject.Bold;
-			set { teklaObject.Bold = value; }
+			get
+			{
+				try {
+					return teklaObject.Bold;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Bold"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Bold = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Bold"); }
+			}
 		}
 
         

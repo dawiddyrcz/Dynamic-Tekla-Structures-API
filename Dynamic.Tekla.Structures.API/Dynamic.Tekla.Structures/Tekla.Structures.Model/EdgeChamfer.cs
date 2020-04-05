@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(teklaObject.Chamfer);
+				try {
+				return Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(teklaObject.Chamfer);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Chamfer"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Chamfer"); }
 			}
 		}
 
@@ -27,11 +33,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.FirstEnd);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.FirstEnd);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstEnd"); }
 			}
 			set
 			{
+				try {
 				teklaObject.FirstEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstEnd"); }
 			}
 		}
 
@@ -39,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.SecondEnd);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.SecondEnd);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondEnd"); }
 			}
 			set
 			{
+				try {
 				teklaObject.SecondEnd = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondEnd"); }
 			}
 		}
 
@@ -51,11 +69,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.FirstChamferEndType);
+				try {
+				return Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.FirstChamferEndType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstChamferEndType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.FirstChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstChamferEndType"); }
 			}
 		}
 
@@ -63,30 +87,72 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.SecondChamferEndType);
+				try {
+				return Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.FromTSObject(teklaObject.SecondChamferEndType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondChamferEndType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.SecondChamferEndType = Dynamic.Tekla.Structures.Model.EdgeChamfer.ChamferEndTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondChamferEndType"); }
 			}
 		}
 
 		public System.Double SecondBevelDimension
 		{
-			get => teklaObject.SecondBevelDimension;
-			set { teklaObject.SecondBevelDimension = value; }
+			get
+			{
+				try {
+					return teklaObject.SecondBevelDimension;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondBevelDimension"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SecondBevelDimension = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SecondBevelDimension"); }
+			}
 		}
 
 		public System.Double FirstBevelDimension
 		{
-			get => teklaObject.FirstBevelDimension;
-			set { teklaObject.FirstBevelDimension = value; }
+			get
+			{
+				try {
+					return teklaObject.FirstBevelDimension;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstBevelDimension"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FirstBevelDimension = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstBevelDimension"); }
+			}
 		}
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
         

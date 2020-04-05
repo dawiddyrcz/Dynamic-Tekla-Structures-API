@@ -13,31 +13,61 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Double Depth
 		{
-			get => teklaObject.Depth;
+			get
+			{
+				try {
+					return teklaObject.Depth;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Depth"); }
+			}
 
 		}
 
 		public System.Double Width
 		{
-			get => teklaObject.Width;
+			get
+			{
+				try {
+					return teklaObject.Width;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width"); }
+			}
 
 		}
 
 		public System.Double WallThickness
 		{
-			get => teklaObject.WallThickness;
+			get
+			{
+				try {
+					return teklaObject.WallThickness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WallThickness"); }
+			}
 
 		}
 
 		public System.Double Girth
 		{
-			get => teklaObject.Girth;
+			get
+			{
+				try {
+					return teklaObject.Girth;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Girth"); }
+			}
 
 		}
 
 		public System.Double InternalFilletRadius
 		{
-			get => teklaObject.InternalFilletRadius;
+			get
+			{
+				try {
+					return teklaObject.InternalFilletRadius;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InternalFilletRadius"); }
+			}
 
 		}
 

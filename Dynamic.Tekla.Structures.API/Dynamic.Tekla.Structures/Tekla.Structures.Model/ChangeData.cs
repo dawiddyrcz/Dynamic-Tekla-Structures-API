@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object);
+				try {
+				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Object"); }
 			}
 		}
 
@@ -23,7 +26,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 

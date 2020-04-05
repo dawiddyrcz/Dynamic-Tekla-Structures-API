@@ -13,20 +13,44 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 
 		}
 
 		public System.String Description
 		{
-			get => teklaObject.Description;
+			get
+			{
+				try {
+					return teklaObject.Description;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Description"); }
+			}
 
 		}
 
 		public System.Collections.Generic.List<System.Double> LineDescription
 		{
-			get => teklaObject.LineDescription;
-			set { teklaObject.LineDescription = value; }
+			get
+			{
+				try {
+					return teklaObject.LineDescription;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineDescription"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LineDescription = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineDescription"); }
+			}
 		}
 
         

@@ -13,49 +13,109 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.String PrinterInstance
 		{
-			get => teklaObject.PrinterInstance;
-			set { teklaObject.PrinterInstance = value; }
+			get
+			{
+				try {
+					return teklaObject.PrinterInstance;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrinterInstance"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PrinterInstance = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrinterInstance"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintScalingType ScalingType
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingType);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScalingType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ScalingType = Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScalingType"); }
 			}
 		}
 
 		public System.Double Scale
 		{
-			get => teklaObject.Scale;
-			set { teklaObject.Scale = value; }
+			get
+			{
+				try {
+					return teklaObject.Scale;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scale"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Scale = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scale"); }
+			}
 		}
 
 		public System.Boolean PrintToMultipleSheet
 		{
-			get => teklaObject.PrintToMultipleSheet;
-			set { teklaObject.PrintToMultipleSheet = value; }
+			get
+			{
+				try {
+					return teklaObject.PrintToMultipleSheet;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintToMultipleSheet"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PrintToMultipleSheet = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintToMultipleSheet"); }
+			}
 		}
 
 		public System.Int32 NumberOfCopies
 		{
-			get => teklaObject.NumberOfCopies;
-			set { teklaObject.NumberOfCopies = value; }
+			get
+			{
+				try {
+					return teklaObject.NumberOfCopies;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfCopies"); }
+			}
+			set
+			{
+				try {
+					teklaObject.NumberOfCopies = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfCopies"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType Orientation
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Orientation"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Orientation = Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Orientation"); }
 			}
 		}
 
@@ -63,11 +123,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.FromTSObject(teklaObject.PrintArea);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.FromTSObject(teklaObject.PrintArea);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintArea"); }
 			}
 			set
 			{
+				try {
 				teklaObject.PrintArea = Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintArea"); }
 			}
 		}
 

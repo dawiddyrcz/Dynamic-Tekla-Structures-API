@@ -15,24 +15,54 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementMeshAttributes_.FromTSObject(teklaObject.Attributes);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementMeshAttributes_.FromTSObject(teklaObject.Attributes);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementMeshAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 		}
 
 		public System.Double ReinforcementCustomPositionLongitudinal
 		{
-			get => teklaObject.ReinforcementCustomPositionLongitudinal;
-			set { teklaObject.ReinforcementCustomPositionLongitudinal = value; }
+			get
+			{
+				try {
+					return teklaObject.ReinforcementCustomPositionLongitudinal;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPositionLongitudinal"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ReinforcementCustomPositionLongitudinal = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPositionLongitudinal"); }
+			}
 		}
 
 		public System.Double ReinforcementCustomPositionCrossing
 		{
-			get => teklaObject.ReinforcementCustomPositionCrossing;
-			set { teklaObject.ReinforcementCustomPositionCrossing = value; }
+			get
+			{
+				try {
+					return teklaObject.ReinforcementCustomPositionCrossing;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPositionCrossing"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ReinforcementCustomPositionCrossing = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPositionCrossing"); }
+			}
 		}
 
         

@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean IsAutomatic
 		{
-			get => teklaObject.IsAutomatic;
+			get
+			{
+				try {
+					return teklaObject.IsAutomatic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic"); }
+			}
 
 		}
 

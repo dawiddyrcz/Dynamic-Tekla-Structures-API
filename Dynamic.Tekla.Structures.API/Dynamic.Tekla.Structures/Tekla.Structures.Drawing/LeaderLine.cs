@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartPoint"); }
 			}
 			set
 			{
+				try {
 				teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartPoint"); }
 			}
 		}
 
@@ -27,11 +33,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndPoint"); }
 			}
 			set
 			{
+				try {
 				teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndPoint"); }
 			}
 		}
 
@@ -39,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.ElbowPoints);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.ElbowPoints);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ElbowPoints"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ElbowPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ElbowPoints"); }
 			}
 		}
 
@@ -51,11 +69,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.FromTSObject(teklaObject.LeaderLineType);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.FromTSObject(teklaObject.LeaderLineType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeaderLineType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.LeaderLineType = Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeaderLineType"); }
 			}
 		}
 

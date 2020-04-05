@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Int32 Count
 		{
-			get => teklaObject.Count;
+			get
+			{
+				try {
+					return teklaObject.Count;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count"); }
+			}
 
 		}
 
 		public System.Boolean IsSynchronized
 		{
-			get => teklaObject.IsSynchronized;
+			get
+			{
+				try {
+					return teklaObject.IsSynchronized;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSynchronized"); }
+			}
 
 		}
 
 		public System.Object SyncRoot
 		{
-			get => teklaObject.SyncRoot;
+			get
+			{
+				try {
+					return teklaObject.SyncRoot;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SyncRoot"); }
+			}
 
 		}
 

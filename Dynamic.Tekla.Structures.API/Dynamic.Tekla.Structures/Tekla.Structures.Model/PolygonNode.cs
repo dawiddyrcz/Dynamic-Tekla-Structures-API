@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean IsAutomatic
 		{
-			get => teklaObject.IsAutomatic;
-			set { teklaObject.IsAutomatic = value; }
+			get
+			{
+				try {
+					return teklaObject.IsAutomatic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsAutomatic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+				try {
+				return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour"); }
 			}
 		}
 

@@ -13,25 +13,61 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String Property
 		{
-			get => teklaObject.Property;
+			get
+			{
+				try {
+					return teklaObject.Property;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Property"); }
+			}
 
 		}
 
 		public System.Double Value
 		{
-			get => teklaObject.Value;
-			set { teklaObject.Value = value; }
+			get
+			{
+				try {
+					return teklaObject.Value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Value = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+			}
 		}
 
 		public System.String StringValue
 		{
-			get => teklaObject.StringValue;
-			set { teklaObject.StringValue = value; }
+			get
+			{
+				try {
+					return teklaObject.StringValue;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StringValue"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StringValue = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StringValue"); }
+			}
 		}
 
 		public System.String Symbol
 		{
-			get => teklaObject.Symbol;
+			get
+			{
+				try {
+					return teklaObject.Symbol;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Symbol"); }
+			}
 
 		}
 
@@ -39,13 +75,22 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(teklaObject.ParameterUnitType);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(teklaObject.ParameterUnitType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ParameterUnitType"); }
 			}
 		}
 
 		public System.Int32 CrossSectionNumber
 		{
-			get => teklaObject.CrossSectionNumber;
+			get
+			{
+				try {
+					return teklaObject.CrossSectionNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrossSectionNumber"); }
+			}
 
 		}
 

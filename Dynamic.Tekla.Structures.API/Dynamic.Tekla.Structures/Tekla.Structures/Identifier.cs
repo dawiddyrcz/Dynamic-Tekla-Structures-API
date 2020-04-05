@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Int32 ID
 		{
-			get => teklaObject.ID;
-			set { teklaObject.ID = value; }
+			get
+			{
+				try {
+					return teklaObject.ID;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ID"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ID = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ID"); }
+			}
 		}
 
 		public System.Int32 ID2
 		{
-			get => teklaObject.ID2;
-			set { teklaObject.ID2 = value; }
+			get
+			{
+				try {
+					return teklaObject.ID2;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ID2"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ID2 = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ID2"); }
+			}
 		}
 
 		public System.Guid GUID
 		{
-			get => teklaObject.GUID;
-			set { teklaObject.GUID = value; }
+			get
+			{
+				try {
+					return teklaObject.GUID;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GUID"); }
+			}
+			set
+			{
+				try {
+					teklaObject.GUID = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GUID"); }
+			}
 		}
 
         

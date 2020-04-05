@@ -13,32 +13,92 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum> Shape
 		{
-			get => teklaObject.Shape;
-			set { teklaObject.Shape = value; }
+			get
+			{
+				try {
+					return teklaObject.Shape;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shape"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Shape = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shape"); }
+			}
 		}
 
 		public System.Nullable<System.Double> Angle
 		{
-			get => teklaObject.Angle;
-			set { teklaObject.Angle = value; }
+			get
+			{
+				try {
+					return teklaObject.Angle;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Angle = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle"); }
+			}
 		}
 
 		public System.Nullable<System.Double> Radius
 		{
-			get => teklaObject.Radius;
-			set { teklaObject.Radius = value; }
+			get
+			{
+				try {
+					return teklaObject.Radius;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radius"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Radius = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radius"); }
+			}
 		}
 
 		public System.Nullable<System.Double> Length
 		{
-			get => teklaObject.Length;
-			set { teklaObject.Length = value; }
+			get
+			{
+				try {
+					return teklaObject.Length;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Length = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length"); }
+			}
 		}
 
 		public System.Nullable<System.Double> Rotation
 		{
-			get => teklaObject.Rotation;
-			set { teklaObject.Rotation = value; }
+			get
+			{
+				try {
+					return teklaObject.Rotation;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Rotation"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Rotation = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Rotation"); }
+			}
 		}
 
         

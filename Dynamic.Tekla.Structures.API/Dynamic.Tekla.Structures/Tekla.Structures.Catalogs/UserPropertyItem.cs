@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.PropertyTypeEnum Type
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.PropertyTypeEnum_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.PropertyTypeEnum_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Type = Dynamic.Tekla.Structures.PropertyTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 
@@ -33,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.UserPropertyFieldTypeEnum_.FromTSObject(teklaObject.FieldType);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.UserPropertyFieldTypeEnum_.FromTSObject(teklaObject.FieldType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FieldType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.FieldType = Dynamic.Tekla.Structures.Catalogs.UserPropertyFieldTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FieldType"); }
 			}
 		}
 
@@ -45,35 +69,71 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.UserPropertyLevelEnum_.FromTSObject(teklaObject.Level);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.UserPropertyLevelEnum_.FromTSObject(teklaObject.Level);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Level"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Level = Dynamic.Tekla.Structures.Catalogs.UserPropertyLevelEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Level"); }
 			}
 		}
 
 		public System.Boolean AffectsNumbering
 		{
-			get => teklaObject.AffectsNumbering;
-			set { teklaObject.AffectsNumbering = value; }
+			get
+			{
+				try {
+					return teklaObject.AffectsNumbering;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AffectsNumbering"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AffectsNumbering = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AffectsNumbering"); }
+			}
 		}
 
 		public System.Boolean Unique
 		{
-			get => teklaObject.Unique;
-			set { teklaObject.Unique = value; }
+			get
+			{
+				try {
+					return teklaObject.Unique;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Unique"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Unique = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Unique"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Catalogs.UserPropertyVisibilityEnum Visibility
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.UserPropertyVisibilityEnum_.FromTSObject(teklaObject.Visibility);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.UserPropertyVisibilityEnum_.FromTSObject(teklaObject.Visibility);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Visibility"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Visibility = Dynamic.Tekla.Structures.Catalogs.UserPropertyVisibilityEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Visibility"); }
 			}
 		}
 

@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
+				try {
+				return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon"); }
 			}
 		}
 

@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.String Item
 		{
-			get => teklaObject.Item;
-			set { teklaObject.Item = value; }
+			get
+			{
+				try {
+					return teklaObject.Item;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Item = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
+			}
 		}
 
         

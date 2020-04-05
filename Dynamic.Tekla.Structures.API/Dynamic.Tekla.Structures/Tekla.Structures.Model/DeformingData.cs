@@ -13,26 +13,74 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Double Angle
 		{
-			get => teklaObject.Angle;
-			set { teklaObject.Angle = value; }
+			get
+			{
+				try {
+					return teklaObject.Angle;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Angle = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle"); }
+			}
 		}
 
 		public System.Double Angle2
 		{
-			get => teklaObject.Angle2;
-			set { teklaObject.Angle2 = value; }
+			get
+			{
+				try {
+					return teklaObject.Angle2;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle2"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Angle2 = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle2"); }
+			}
 		}
 
 		public System.Double Cambering
 		{
-			get => teklaObject.Cambering;
-			set { teklaObject.Cambering = value; }
+			get
+			{
+				try {
+					return teklaObject.Cambering;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cambering"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Cambering = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cambering"); }
+			}
 		}
 
 		public System.Double Shortening
 		{
-			get => teklaObject.Shortening;
-			set { teklaObject.Shortening = value; }
+			get
+			{
+				try {
+					return teklaObject.Shortening;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Shortening = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening"); }
+			}
 		}
 
         

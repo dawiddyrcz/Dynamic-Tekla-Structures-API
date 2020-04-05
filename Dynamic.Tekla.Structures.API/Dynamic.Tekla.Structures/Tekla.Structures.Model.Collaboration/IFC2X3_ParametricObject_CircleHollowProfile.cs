@@ -13,13 +13,25 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Double Radius
 		{
-			get => teklaObject.Radius;
+			get
+			{
+				try {
+					return teklaObject.Radius;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radius"); }
+			}
 
 		}
 
 		public System.Double WallThickness
 		{
-			get => teklaObject.WallThickness;
+			get
+			{
+				try {
+					return teklaObject.WallThickness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WallThickness"); }
+			}
 
 		}
 

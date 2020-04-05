@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Double NumberOfBolts
 		{
-			get => teklaObject.NumberOfBolts;
-			set { teklaObject.NumberOfBolts = value; }
+			get
+			{
+				try {
+					return teklaObject.NumberOfBolts;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfBolts"); }
+			}
+			set
+			{
+				try {
+					teklaObject.NumberOfBolts = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfBolts"); }
+			}
 		}
 
 		public System.Double Diameter
 		{
-			get => teklaObject.Diameter;
-			set { teklaObject.Diameter = value; }
+			get
+			{
+				try {
+					return teklaObject.Diameter;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Diameter"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Diameter = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Diameter"); }
+			}
 		}
 
         

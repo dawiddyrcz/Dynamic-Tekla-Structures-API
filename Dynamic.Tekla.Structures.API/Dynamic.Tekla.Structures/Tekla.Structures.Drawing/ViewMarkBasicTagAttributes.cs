@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Offset);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Offset);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Offset"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Offset = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Offset"); }
 			}
 		}
 
@@ -27,11 +33,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.TagLocation_.FromTSObject(teklaObject.Location);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.TagLocation_.FromTSObject(teklaObject.Location);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Location"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Location = Dynamic.Tekla.Structures.Drawing.TagLocation_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Location"); }
 			}
 		}
 
@@ -39,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.TagContent);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.TagContent);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagContent"); }
 			}
 			set
 			{
+				try {
 				teklaObject.TagContent = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagContent"); }
 			}
 		}
 

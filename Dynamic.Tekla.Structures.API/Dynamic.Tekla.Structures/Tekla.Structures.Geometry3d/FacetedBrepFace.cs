@@ -13,31 +13,61 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Boolean HasHoles
 		{
-			get => teklaObject.HasHoles;
+			get
+			{
+				try {
+					return teklaObject.HasHoles;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HasHoles"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFaceHole> Holes
 		{
-			get => teklaObject.Holes;
+			get
+			{
+				try {
+					return teklaObject.Holes;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Holes"); }
+			}
 
 		}
 
 		public System.Boolean IsReadOnly
 		{
-			get => teklaObject.IsReadOnly;
+			get
+			{
+				try {
+					return teklaObject.IsReadOnly;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsReadOnly"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
 		{
-			get => teklaObject.VerticeIndexes;
+			get
+			{
+				try {
+					return teklaObject.VerticeIndexes;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VerticeIndexes"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
-			get => teklaObject.Vertices;
+			get
+			{
+				try {
+					return teklaObject.Vertices;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Vertices"); }
+			}
 
 		}
 

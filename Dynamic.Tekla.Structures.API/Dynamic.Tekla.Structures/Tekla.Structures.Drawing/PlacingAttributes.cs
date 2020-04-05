@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean IsFixed
 		{
-			get => teklaObject.IsFixed;
-			set { teklaObject.IsFixed = value; }
+			get
+			{
+				try {
+					return teklaObject.IsFixed;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsFixed"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsFixed = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsFixed"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes PlacingDistance
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.FromTSObject(teklaObject.PlacingDistance);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.FromTSObject(teklaObject.PlacingDistance);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlacingDistance"); }
 			}
 			set
 			{
+				try {
 				teklaObject.PlacingDistance = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlacingDistance"); }
 			}
 		}
 
@@ -33,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.FromTSObject(teklaObject.PlacingQuarter);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.FromTSObject(teklaObject.PlacingQuarter);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlacingQuarter"); }
 			}
 			set
 			{
+				try {
 				teklaObject.PlacingQuarter = Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlacingQuarter"); }
 			}
 		}
 

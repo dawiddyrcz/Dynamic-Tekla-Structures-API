@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
+				try {
+				return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane"); }
 			}
 		}
 

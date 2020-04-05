@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum> AdjustmentType
 		{
-			get => teklaObject.AdjustmentType;
-			set { teklaObject.AdjustmentType = value; }
+			get
+			{
+				try {
+					return teklaObject.AdjustmentType;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentType"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AdjustmentType = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentType"); }
+			}
 		}
 
 		public System.Nullable<System.Double> AdjustmentLength
 		{
-			get => teklaObject.AdjustmentLength;
-			set { teklaObject.AdjustmentLength = value; }
+			get
+			{
+				try {
+					return teklaObject.AdjustmentLength;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentLength"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AdjustmentLength = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentLength"); }
+			}
 		}
 
         

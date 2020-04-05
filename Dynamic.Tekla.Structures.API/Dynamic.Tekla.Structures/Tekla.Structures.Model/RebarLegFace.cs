@@ -13,37 +13,91 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 Id
 		{
-			get => teklaObject.Id;
-			set { teklaObject.Id = value; }
+			get
+			{
+				try {
+					return teklaObject.Id;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Id"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Id = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Id"); }
+			}
 		}
 
 		public System.Double AdditonalOffset
 		{
-			get => teklaObject.AdditonalOffset;
-			set { teklaObject.AdditonalOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.AdditonalOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdditonalOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AdditonalOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdditonalOffset"); }
+			}
 		}
 
 		public System.Int32 LayerOrderNumber
 		{
-			get => teklaObject.LayerOrderNumber;
-			set { teklaObject.LayerOrderNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.LayerOrderNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LayerOrderNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LayerOrderNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LayerOrderNumber"); }
+			}
 		}
 
 		public System.Boolean Reversed
 		{
-			get => teklaObject.Reversed;
-			set { teklaObject.Reversed = value; }
+			get
+			{
+				try {
+					return teklaObject.Reversed;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Reversed"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Reversed = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Reversed"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+				try {
+				return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour"); }
 			}
 		}
 

@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean AutomaticScaling
 		{
-			get => teklaObject.AutomaticScaling;
-			set { teklaObject.AutomaticScaling = value; }
+			get
+			{
+				try {
+					return teklaObject.AutomaticScaling;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AutomaticScaling = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling"); }
+			}
 		}
 
         

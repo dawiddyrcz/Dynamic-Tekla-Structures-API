@@ -13,13 +13,25 @@ namespace Dynamic.Tekla.Structures
 
 		public Microsoft.Win32.RegistryKey CurrentVersion
 		{
-			get => teklaObject.CurrentVersion;
+			get
+			{
+				try {
+					return teklaObject.CurrentVersion;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentVersion"); }
+			}
 
 		}
 
 		public Microsoft.Win32.RegistryKey Root
 		{
-			get => teklaObject.Root;
+			get
+			{
+				try {
+					return teklaObject.Root;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Root"); }
+			}
 
 		}
 

@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object1);
+				try {
+				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object1);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Object1"); }
 			}
 		}
 
@@ -23,7 +26,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object2);
+				try {
+				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object2);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Object2"); }
 			}
 		}
 
@@ -31,13 +37,22 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 
 		public System.Double Overlap
 		{
-			get => teklaObject.Overlap;
+			get
+			{
+				try {
+					return teklaObject.Overlap;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Overlap"); }
+			}
 
 		}
 

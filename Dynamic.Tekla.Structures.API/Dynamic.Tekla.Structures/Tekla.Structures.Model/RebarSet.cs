@@ -15,30 +15,72 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarProperties_.FromTSObject(teklaObject.RebarProperties);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarProperties_.FromTSObject(teklaObject.RebarProperties);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties"); }
 			}
 			set
 			{
+				try {
 				teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarProperties_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties"); }
 			}
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
 		{
-			get => teklaObject.LegFaces;
-			set { teklaObject.LegFaces = value; }
+			get
+			{
+				try {
+					return teklaObject.LegFaces;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LegFaces"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LegFaces = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LegFaces"); }
+			}
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarGuideline> Guidelines
 		{
-			get => teklaObject.Guidelines;
-			set { teklaObject.Guidelines = value; }
+			get
+			{
+				try {
+					return teklaObject.Guidelines;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guidelines"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Guidelines = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guidelines"); }
+			}
 		}
 
 		public System.Int32 LayerOrderNumber
 		{
-			get => teklaObject.LayerOrderNumber;
-			set { teklaObject.LayerOrderNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.LayerOrderNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LayerOrderNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LayerOrderNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LayerOrderNumber"); }
+			}
 		}
 
         

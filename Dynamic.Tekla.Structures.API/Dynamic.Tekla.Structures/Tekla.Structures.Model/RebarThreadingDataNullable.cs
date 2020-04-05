@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String ThreadingType
 		{
-			get => teklaObject.ThreadingType;
-			set { teklaObject.ThreadingType = value; }
+			get
+			{
+				try {
+					return teklaObject.ThreadingType;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ThreadingType"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ThreadingType = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ThreadingType"); }
+			}
 		}
 
 		public System.Nullable<System.Double> Length
 		{
-			get => teklaObject.Length;
-			set { teklaObject.Length = value; }
+			get
+			{
+				try {
+					return teklaObject.Length;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Length = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length"); }
+			}
 		}
 
 		public System.Nullable<System.Double> ExtraFabricationLength
 		{
-			get => teklaObject.ExtraFabricationLength;
-			set { teklaObject.ExtraFabricationLength = value; }
+			get
+			{
+				try {
+					return teklaObject.ExtraFabricationLength;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtraFabricationLength"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExtraFabricationLength = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtraFabricationLength"); }
+			}
 		}
 
         

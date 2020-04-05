@@ -25,8 +25,20 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public System.String Language
 		{
-			get => teklaObject.Language;
-			set { teklaObject.Language = value; }
+			get
+			{
+				try {
+					return teklaObject.Language;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Language = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language"); }
+			}
 		}
 
         

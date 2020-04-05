@@ -15,19 +15,34 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shape"); }
 			}
 		}
 
 		public System.Double Diameter
 		{
-			get => teklaObject.Diameter;
+			get
+			{
+				try {
+					return teklaObject.Diameter;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Diameter"); }
+			}
 
 		}
 
 		public System.Collections.ArrayList BendingRadiuses
 		{
-			get => teklaObject.BendingRadiuses;
+			get
+			{
+				try {
+					return teklaObject.BendingRadiuses;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingRadiuses"); }
+			}
 
 		}
 

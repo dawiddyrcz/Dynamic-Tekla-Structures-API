@@ -13,31 +13,61 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Collections.Generic.IEnumerable<System.String> CloningTemplateModelFolders
 		{
-			get => teklaObject.CloningTemplateModelFolders;
+			get
+			{
+				try {
+					return teklaObject.CloningTemplateModelFolders;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CloningTemplateModelFolders"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> CompanyFolders
 		{
-			get => teklaObject.CompanyFolders;
+			get
+			{
+				try {
+					return teklaObject.CompanyFolders;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CompanyFolders"); }
+			}
 
 		}
 
 		public System.Globalization.CultureInfo CultureInfo
 		{
-			get => teklaObject.CultureInfo;
+			get
+			{
+				try {
+					return teklaObject.CultureInfo;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CultureInfo"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> DrawingMacros
 		{
-			get => teklaObject.DrawingMacros;
+			get
+			{
+				try {
+					return teklaObject.DrawingMacros;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingMacros"); }
+			}
 
 		}
 
 		public System.String Language
 		{
-			get => teklaObject.Language;
+			get
+			{
+				try {
+					return teklaObject.Language;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language"); }
+			}
 
 		}
 
@@ -45,67 +75,130 @@ namespace Dynamic.Tekla.Structures
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Dialog.Localization_.FromTSObject(teklaObject.Localization);
+				try {
+				return Dynamic.Tekla.Structures.Dialog.Localization_.FromTSObject(teklaObject.Localization);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Localization"); }
 			}
 		}
 
 		public System.String MacrosFolder
 		{
-			get => teklaObject.MacrosFolder;
+			get
+			{
+				try {
+					return teklaObject.MacrosFolder;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MacrosFolder"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> ModelMacros
 		{
-			get => teklaObject.ModelMacros;
+			get
+			{
+				try {
+					return teklaObject.ModelMacros;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelMacros"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.Collections.Generic.Dictionary<System.String, System.String>> OptionTypeUDAIndexAndValue
 		{
-			get => teklaObject.OptionTypeUDAIndexAndValue;
+			get
+			{
+				try {
+					return teklaObject.OptionTypeUDAIndexAndValue;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OptionTypeUDAIndexAndValue"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> ProjectFolders
 		{
-			get => teklaObject.ProjectFolders;
+			get
+			{
+				try {
+					return teklaObject.ProjectFolders;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProjectFolders"); }
+			}
 
 		}
 
 		public System.String SearchPath
 		{
-			get => teklaObject.SearchPath;
+			get
+			{
+				try {
+					return teklaObject.SearchPath;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchPath"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> SystemFolders
 		{
-			get => teklaObject.SystemFolders;
+			get
+			{
+				try {
+					return teklaObject.SystemFolders;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SystemFolders"); }
+			}
 
 		}
 
 		public System.Boolean UseUSImperialUnitsInInput
 		{
-			get => teklaObject.UseUSImperialUnitsInInput;
+			get
+			{
+				try {
+					return teklaObject.UseUSImperialUnitsInInput;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UseUSImperialUnitsInInput"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributes
 		{
-			get => teklaObject.UserDefinedAttributes;
+			get
+			{
+				try {
+					return teklaObject.UserDefinedAttributes;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UserDefinedAttributes"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributesOptionType
 		{
-			get => teklaObject.UserDefinedAttributesOptionType;
+			get
+			{
+				try {
+					return teklaObject.UserDefinedAttributesOptionType;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UserDefinedAttributesOptionType"); }
+			}
 
 		}
 
 		public System.String Item
 		{
-			get => teklaObject.Item;
+			get
+			{
+				try {
+					return teklaObject.Item;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
+			}
 
 		}
 

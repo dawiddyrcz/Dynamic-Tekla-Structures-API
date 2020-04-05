@@ -15,18 +15,36 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(teklaObject.RebarProperties);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(teklaObject.RebarProperties);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties"); }
 			}
 			set
 			{
+				try {
 				teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties"); }
 			}
 		}
 
 		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType
 		{
-			get => teklaObject.GroupingType;
-			set { teklaObject.GroupingType = value; }
+			get
+			{
+				try {
+					return teklaObject.GroupingType;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupingType"); }
+			}
+			set
+			{
+				try {
+					teklaObject.GroupingType = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupingType"); }
+			}
 		}
 
         

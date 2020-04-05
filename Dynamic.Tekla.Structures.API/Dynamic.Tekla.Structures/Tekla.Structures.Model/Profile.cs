@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String ProfileString
 		{
-			get => teklaObject.ProfileString;
-			set { teklaObject.ProfileString = value; }
+			get
+			{
+				try {
+					return teklaObject.ProfileString;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileString"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ProfileString = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileString"); }
+			}
 		}
 
         

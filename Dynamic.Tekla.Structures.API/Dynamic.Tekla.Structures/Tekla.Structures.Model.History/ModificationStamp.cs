@@ -13,19 +13,49 @@ namespace Dynamic.Tekla.Structures.Model.History
 
 		public System.Int32 LocalStamp
 		{
-			get => teklaObject.LocalStamp;
-			set { teklaObject.LocalStamp = value; }
+			get
+			{
+				try {
+					return teklaObject.LocalStamp;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocalStamp"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LocalStamp = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocalStamp"); }
+			}
 		}
 
 		public System.Int32 ServerStamp
 		{
-			get => teklaObject.ServerStamp;
-			set { teklaObject.ServerStamp = value; }
+			get
+			{
+				try {
+					return teklaObject.ServerStamp;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ServerStamp"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ServerStamp = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ServerStamp"); }
+			}
 		}
 
 		public System.String Guid
 		{
-			get => teklaObject.Guid;
+			get
+			{
+				try {
+					return teklaObject.Guid;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guid"); }
+			}
 
 		}
 

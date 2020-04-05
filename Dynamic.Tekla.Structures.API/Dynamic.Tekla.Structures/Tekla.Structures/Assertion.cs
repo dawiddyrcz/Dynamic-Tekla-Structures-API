@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures
 
 		public System.String Message
 		{
-			get => teklaObject.Message;
-			set { teklaObject.Message = value; }
+			get
+			{
+				try {
+					return teklaObject.Message;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Message"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Message = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Message"); }
+			}
 		}
 
 		public System.String DetailedMessage
 		{
-			get => teklaObject.DetailedMessage;
-			set { teklaObject.DetailedMessage = value; }
+			get
+			{
+				try {
+					return teklaObject.DetailedMessage;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DetailedMessage"); }
+			}
+			set
+			{
+				try {
+					teklaObject.DetailedMessage = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DetailedMessage"); }
+			}
 		}
 
 		public System.String MethodName
 		{
-			get => teklaObject.MethodName;
-			set { teklaObject.MethodName = value; }
+			get
+			{
+				try {
+					return teklaObject.MethodName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MethodName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MethodName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MethodName"); }
+			}
 		}
 
         

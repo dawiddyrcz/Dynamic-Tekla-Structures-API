@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Collections.ArrayList Points
 		{
-			get => teklaObject.Points;
-			set { teklaObject.Points = value; }
+			get
+			{
+				try {
+					return teklaObject.Points;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Points = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+			}
 		}
 
         

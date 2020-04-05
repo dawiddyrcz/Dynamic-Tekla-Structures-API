@@ -15,18 +15,36 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Type = Dynamic.Tekla.Structures.Drawing.AngleTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 
 		public System.Int32 TriangleBase
 		{
-			get => teklaObject.TriangleBase;
-			set { teklaObject.TriangleBase = value; }
+			get
+			{
+				try {
+					return teklaObject.TriangleBase;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TriangleBase"); }
+			}
+			set
+			{
+				try {
+					teklaObject.TriangleBase = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TriangleBase"); }
+			}
 		}
 
         

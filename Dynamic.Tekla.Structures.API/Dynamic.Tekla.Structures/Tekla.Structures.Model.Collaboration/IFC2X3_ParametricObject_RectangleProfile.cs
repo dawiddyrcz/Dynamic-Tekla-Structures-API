@@ -13,13 +13,25 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Double XDim
 		{
-			get => teklaObject.XDim;
+			get
+			{
+				try {
+					return teklaObject.XDim;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("XDim"); }
+			}
 
 		}
 
 		public System.Double YDim
 		{
-			get => teklaObject.YDim;
+			get
+			{
+				try {
+					return teklaObject.YDim;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("YDim"); }
+			}
 
 		}
 

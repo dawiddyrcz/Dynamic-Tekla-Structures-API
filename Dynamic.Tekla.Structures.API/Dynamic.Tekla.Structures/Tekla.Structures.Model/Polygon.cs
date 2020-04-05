@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList Points
 		{
-			get => teklaObject.Points;
-			set { teklaObject.Points = value; }
+			get
+			{
+				try {
+					return teklaObject.Points;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Points = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+			}
 		}
 
 		public static System.Int32 MAX_POLYGON_POINTS

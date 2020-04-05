@@ -15,35 +15,71 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerType"); }
 			}
 		}
 
 		public System.Double StaggerOffset
 		{
-			get => teklaObject.StaggerOffset;
-			set { teklaObject.StaggerOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.StaggerOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StaggerOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerOffset"); }
+			}
 		}
 
 		public System.Double SplitOffset
 		{
-			get => teklaObject.SplitOffset;
-			set { teklaObject.SplitOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.SplitOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SplitOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitOffset"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitType"); }
 			}
 		}
 
@@ -51,11 +87,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lapping"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lapping"); }
 			}
 		}
 
@@ -63,11 +105,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cranking"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cranking"); }
 			}
 		}
 

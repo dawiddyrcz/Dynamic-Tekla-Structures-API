@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+				try {
+				return Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OperationStatus"); }
 			}
 		}
 

@@ -15,13 +15,22 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.AssemblyIdentifier);
+				try {
+				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.AssemblyIdentifier);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyIdentifier"); }
 			}
 		}
 
 		public System.Int32 SheetNumber
 		{
-			get => teklaObject.SheetNumber;
+			get
+			{
+				try {
+					return teklaObject.SheetNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetNumber"); }
+			}
 
 		}
 

@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean IsHidden
 		{
-			get => teklaObject.IsHidden;
+			get
+			{
+				try {
+					return teklaObject.IsHidden;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsHidden"); }
+			}
 
 		}
 

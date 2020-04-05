@@ -13,13 +13,25 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Boolean IsActive
 		{
-			get => teklaObject.IsActive;
+			get
+			{
+				try {
+					return teklaObject.IsActive;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsActive"); }
+			}
 
 		}
 
 		public System.Boolean IsMinimized
 		{
-			get => teklaObject.IsMinimized;
+			get
+			{
+				try {
+					return teklaObject.IsMinimized;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMinimized"); }
+			}
 
 		}
 

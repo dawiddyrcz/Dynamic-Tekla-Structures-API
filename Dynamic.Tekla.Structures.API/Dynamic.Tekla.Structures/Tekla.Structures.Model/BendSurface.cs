@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean InwardCurved
 		{
-			get => teklaObject.InwardCurved;
+			get
+			{
+				try {
+					return teklaObject.InwardCurved;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InwardCurved"); }
+			}
 
 		}
 
@@ -21,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.IntersectionLine);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.IntersectionLine);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IntersectionLine"); }
 			}
 		}
 
@@ -29,7 +38,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal1);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal1);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndFaceNormal1"); }
 			}
 		}
 
@@ -37,7 +49,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal2);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.EndFaceNormal2);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndFaceNormal2"); }
 			}
 		}
 
@@ -45,11 +60,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.CenterLine);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(teklaObject.CenterLine);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CenterLine"); }
 			}
 			set
 			{
+				try {
 				teklaObject.CenterLine = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CenterLine"); }
 			}
 		}
 
@@ -57,31 +78,64 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.RotationAxis);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.RotationAxis);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RotationAxis"); }
 			}
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary1
 		{
-			get => teklaObject.LateralBoundary1;
-			set { teklaObject.LateralBoundary1 = value; }
+			get
+			{
+				try {
+					return teklaObject.LateralBoundary1;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LateralBoundary1"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LateralBoundary1 = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LateralBoundary1"); }
+			}
 		}
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> LateralBoundary2
 		{
-			get => teklaObject.LateralBoundary2;
-			set { teklaObject.LateralBoundary2 = value; }
+			get
+			{
+				try {
+					return teklaObject.LateralBoundary2;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LateralBoundary2"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LateralBoundary2 = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LateralBoundary2"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment SideBoundary1
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary1);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary1);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SideBoundary1"); }
 			}
 			set
 			{
+				try {
 				teklaObject.SideBoundary1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SideBoundary1"); }
 			}
 		}
 
@@ -89,11 +143,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary2);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.SideBoundary2);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SideBoundary2"); }
 			}
 			set
 			{
+				try {
 				teklaObject.SideBoundary2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SideBoundary2"); }
 			}
 		}
 

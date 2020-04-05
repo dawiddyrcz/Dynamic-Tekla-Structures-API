@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures
 
 		public System.Double BoltHeadDiameter
 		{
-			get => teklaObject.BoltHeadDiameter;
-			set { teklaObject.BoltHeadDiameter = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltHeadDiameter;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHeadDiameter"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltHeadDiameter = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHeadDiameter"); }
+			}
 		}
 
 		public System.Double NutThickness
 		{
-			get => teklaObject.NutThickness;
-			set { teklaObject.NutThickness = value; }
+			get
+			{
+				try {
+					return teklaObject.NutThickness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NutThickness"); }
+			}
+			set
+			{
+				try {
+					teklaObject.NutThickness = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NutThickness"); }
+			}
 		}
 
         

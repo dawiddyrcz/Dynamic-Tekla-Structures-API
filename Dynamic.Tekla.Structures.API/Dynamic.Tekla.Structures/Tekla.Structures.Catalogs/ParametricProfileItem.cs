@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String ProfilePrefix
 		{
-			get => teklaObject.ProfilePrefix;
-			set { teklaObject.ProfilePrefix = value; }
+			get
+			{
+				try {
+					return teklaObject.ProfilePrefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfilePrefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ProfilePrefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfilePrefix"); }
+			}
 		}
 
         

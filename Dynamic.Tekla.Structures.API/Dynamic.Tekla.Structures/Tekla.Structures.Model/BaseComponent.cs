@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.Int32 Number
 		{
-			get => teklaObject.Number;
-			set { teklaObject.Number = value; }
+			get
+			{
+				try {
+					return teklaObject.Number;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Number"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Number = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Number"); }
+			}
 		}
 
 		public static System.Int32 CUSTOM_OBJECT_NUMBER

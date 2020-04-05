@@ -26,18 +26,36 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.FromTSObject(teklaObject.Hatch);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.FromTSObject(teklaObject.Hatch);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Hatch"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Hatch = Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Hatch"); }
 			}
 		}
 
 		public System.Boolean BehindModelObjects
 		{
-			get => teklaObject.BehindModelObjects;
-			set { teklaObject.BehindModelObjects = value; }
+			get
+			{
+				try {
+					return teklaObject.BehindModelObjects;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BehindModelObjects"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BehindModelObjects = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BehindModelObjects"); }
+			}
 		}
 
         

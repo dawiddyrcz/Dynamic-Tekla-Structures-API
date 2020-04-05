@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.PickedPoints);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.PickedPoints);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedPoints"); }
 			}
 			set
 			{
+				try {
 				teklaObject.PickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedPoints"); }
 			}
 		}
 

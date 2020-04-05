@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(teklaObject.ErrorStatus);
+				try {
+				return Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(teklaObject.ErrorStatus);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ErrorStatus"); }
 			}
 		}
 

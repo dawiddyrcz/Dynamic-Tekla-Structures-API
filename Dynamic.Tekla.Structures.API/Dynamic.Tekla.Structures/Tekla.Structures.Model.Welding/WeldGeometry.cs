@@ -15,13 +15,22 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
+				try {
+				return Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position"); }
 			}
 		}
 
 		public System.Collections.ArrayList Polygons
 		{
-			get => teklaObject.Polygons;
+			get
+			{
+				try {
+					return teklaObject.Polygons;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
+			}
 
 		}
 

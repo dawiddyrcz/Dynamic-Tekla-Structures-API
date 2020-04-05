@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Forming
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.Deforming);
+				try {
+				return Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.Deforming);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Deforming"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Deforming"); }
 			}
 		}
 
@@ -27,11 +33,17 @@ namespace Dynamic.Tekla.Structures.Forming
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(teklaObject.Folding);
+				try {
+				return Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(teklaObject.Folding);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Folding"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Folding"); }
 			}
 		}
 
@@ -39,11 +51,17 @@ namespace Dynamic.Tekla.Structures.Forming
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(teklaObject.Wrapping);
+				try {
+				return Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(teklaObject.Wrapping);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Wrapping"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Wrapping"); }
 			}
 		}
 

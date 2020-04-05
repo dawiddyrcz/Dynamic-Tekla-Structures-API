@@ -13,98 +13,272 @@ namespace Dynamic.Tekla.Structures
 
 		public System.String PlateProfileName
 		{
-			get => teklaObject.PlateProfileName;
-			set { teklaObject.PlateProfileName = value; }
+			get
+			{
+				try {
+					return teklaObject.PlateProfileName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlateProfileName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PlateProfileName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlateProfileName"); }
+			}
 		}
 
 		public System.String FoldedPlateProfileName
 		{
-			get => teklaObject.FoldedPlateProfileName;
-			set { teklaObject.FoldedPlateProfileName = value; }
+			get
+			{
+				try {
+					return teklaObject.FoldedPlateProfileName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FoldedPlateProfileName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FoldedPlateProfileName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FoldedPlateProfileName"); }
+			}
 		}
 
 		public System.Double BoltEdgeDistanceFactor
 		{
-			get => teklaObject.BoltEdgeDistanceFactor;
-			set { teklaObject.BoltEdgeDistanceFactor = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltEdgeDistanceFactor;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltEdgeDistanceFactor"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltEdgeDistanceFactor = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltEdgeDistanceFactor"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(teklaObject.BoltEdgeDistanceReference);
+				try {
+				return Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(teklaObject.BoltEdgeDistanceReference);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltEdgeDistanceReference"); }
 			}
 			set
 			{
+				try {
 				teklaObject.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltEdgeDistanceReference"); }
 			}
 		}
 
 		public System.String BoltStandard
 		{
-			get => teklaObject.BoltStandard;
-			set { teklaObject.BoltStandard = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltStandard;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltStandard"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltStandard = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltStandard"); }
+			}
 		}
 
 		public System.String BoltSize
 		{
-			get => teklaObject.BoltSize;
-			set { teklaObject.BoltSize = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltSize;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltSize"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltSize = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltSize"); }
+			}
 		}
 
 		public System.String PartMaterial
 		{
-			get => teklaObject.PartMaterial;
-			set { teklaObject.PartMaterial = value; }
+			get
+			{
+				try {
+					return teklaObject.PartMaterial;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartMaterial"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartMaterial = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartMaterial"); }
+			}
 		}
 
 		public System.Int32 PartWeldedToPrimaryStartNumber
 		{
-			get => teklaObject.PartWeldedToPrimaryStartNumber;
-			set { teklaObject.PartWeldedToPrimaryStartNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.PartWeldedToPrimaryStartNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToPrimaryStartNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartWeldedToPrimaryStartNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToPrimaryStartNumber"); }
+			}
 		}
 
 		public System.String PartWeldedToPrimaryPositionPrefix
 		{
-			get => teklaObject.PartWeldedToPrimaryPositionPrefix;
-			set { teklaObject.PartWeldedToPrimaryPositionPrefix = value; }
+			get
+			{
+				try {
+					return teklaObject.PartWeldedToPrimaryPositionPrefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToPrimaryPositionPrefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartWeldedToPrimaryPositionPrefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToPrimaryPositionPrefix"); }
+			}
 		}
 
 		public System.Int32 PartWeldedToSecondaryStartNumber
 		{
-			get => teklaObject.PartWeldedToSecondaryStartNumber;
-			set { teklaObject.PartWeldedToSecondaryStartNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.PartWeldedToSecondaryStartNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToSecondaryStartNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartWeldedToSecondaryStartNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToSecondaryStartNumber"); }
+			}
 		}
 
 		public System.String PartWeldedToSecondaryPositionPrefix
 		{
-			get => teklaObject.PartWeldedToSecondaryPositionPrefix;
-			set { teklaObject.PartWeldedToSecondaryPositionPrefix = value; }
+			get
+			{
+				try {
+					return teklaObject.PartWeldedToSecondaryPositionPrefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToSecondaryPositionPrefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartWeldedToSecondaryPositionPrefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartWeldedToSecondaryPositionPrefix"); }
+			}
 		}
 
 		public System.Int32 LoosePartStartNumber
 		{
-			get => teklaObject.LoosePartStartNumber;
-			set { teklaObject.LoosePartStartNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.LoosePartStartNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoosePartStartNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LoosePartStartNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoosePartStartNumber"); }
+			}
 		}
 
 		public System.String LoosePartPositionPrefix
 		{
-			get => teklaObject.LoosePartPositionPrefix;
-			set { teklaObject.LoosePartPositionPrefix = value; }
+			get
+			{
+				try {
+					return teklaObject.LoosePartPositionPrefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoosePartPositionPrefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LoosePartPositionPrefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoosePartPositionPrefix"); }
+			}
 		}
 
 		public System.Int32 AssemblyLoosePartStartNumber
 		{
-			get => teklaObject.AssemblyLoosePartStartNumber;
-			set { teklaObject.AssemblyLoosePartStartNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.AssemblyLoosePartStartNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyLoosePartStartNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AssemblyLoosePartStartNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyLoosePartStartNumber"); }
+			}
 		}
 
 		public System.String AssemblyLoosePartPositionPrefix
 		{
-			get => teklaObject.AssemblyLoosePartPositionPrefix;
-			set { teklaObject.AssemblyLoosePartPositionPrefix = value; }
+			get
+			{
+				try {
+					return teklaObject.AssemblyLoosePartPositionPrefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyLoosePartPositionPrefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.AssemblyLoosePartPositionPrefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyLoosePartPositionPrefix"); }
+			}
 		}
 
         

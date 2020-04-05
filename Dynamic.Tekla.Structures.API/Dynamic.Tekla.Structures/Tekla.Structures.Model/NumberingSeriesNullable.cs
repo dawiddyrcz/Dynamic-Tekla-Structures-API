@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String Prefix
 		{
-			get => teklaObject.Prefix;
-			set { teklaObject.Prefix = value; }
+			get
+			{
+				try {
+					return teklaObject.Prefix;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Prefix"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Prefix = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Prefix"); }
+			}
 		}
 
 		public System.Nullable<System.Int32> StartNumber
 		{
-			get => teklaObject.StartNumber;
-			set { teklaObject.StartNumber = value; }
+			get
+			{
+				try {
+					return teklaObject.StartNumber;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartNumber"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StartNumber = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartNumber"); }
+			}
 		}
 
         

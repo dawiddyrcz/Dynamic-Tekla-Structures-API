@@ -13,26 +13,74 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Double Red
 		{
-			get => teklaObject.Red;
-			set { teklaObject.Red = value; }
+			get
+			{
+				try {
+					return teklaObject.Red;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Red"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Red = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Red"); }
+			}
 		}
 
 		public System.Double Green
 		{
-			get => teklaObject.Green;
-			set { teklaObject.Green = value; }
+			get
+			{
+				try {
+					return teklaObject.Green;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Green"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Green = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Green"); }
+			}
 		}
 
 		public System.Double Blue
 		{
-			get => teklaObject.Blue;
-			set { teklaObject.Blue = value; }
+			get
+			{
+				try {
+					return teklaObject.Blue;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Blue"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Blue = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Blue"); }
+			}
 		}
 
 		public System.Double Transparency
 		{
-			get => teklaObject.Transparency;
-			set { teklaObject.Transparency = value; }
+			get
+			{
+				try {
+					return teklaObject.Transparency;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Transparency"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Transparency = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Transparency"); }
+			}
 		}
 
         

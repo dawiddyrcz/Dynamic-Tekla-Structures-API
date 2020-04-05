@@ -15,18 +15,36 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(teklaObject.CylinderBase);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(teklaObject.CylinderBase);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderBase"); }
 			}
 			set
 			{
+				try {
 				teklaObject.CylinderBase = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderBase"); }
 			}
 		}
 
 		public System.Double CylinderHeight
 		{
-			get => teklaObject.CylinderHeight;
-			set { teklaObject.CylinderHeight = value; }
+			get
+			{
+				try {
+					return teklaObject.CylinderHeight;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderHeight"); }
+			}
+			set
+			{
+				try {
+					teklaObject.CylinderHeight = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderHeight"); }
+			}
 		}
 
         

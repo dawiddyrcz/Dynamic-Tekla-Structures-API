@@ -13,86 +13,236 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.Int32 Completeness
 		{
-			get => teklaObject.Completeness;
-			set { teklaObject.Completeness = value; }
+			get
+			{
+				try {
+					return teklaObject.Completeness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Completeness"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Completeness = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Completeness"); }
+			}
 		}
 
 		public System.Boolean Critical
 		{
-			get => teklaObject.Critical;
-			set { teklaObject.Critical = value; }
+			get
+			{
+				try {
+					return teklaObject.Critical;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Critical"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Critical = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Critical"); }
+			}
 		}
 
 		public System.Boolean Local
 		{
-			get => teklaObject.Local;
-			set { teklaObject.Local = value; }
+			get
+			{
+				try {
+					return teklaObject.Local;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Local"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Local = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Local"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.HierarchicObject Scenario
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(teklaObject.Scenario);
+				try {
+				return Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(teklaObject.Scenario);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scenario"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Scenario = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scenario"); }
 			}
 		}
 
 		public System.String Description
 		{
-			get => teklaObject.Description;
-			set { teklaObject.Description = value; }
+			get
+			{
+				try {
+					return teklaObject.Description;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Description"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Description = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Description"); }
+			}
 		}
 
 		public System.String Url
 		{
-			get => teklaObject.Url;
-			set { teklaObject.Url = value; }
+			get
+			{
+				try {
+					return teklaObject.Url;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Url"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Url = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Url"); }
+			}
 		}
 
 		public System.DateTime PlannedStartDate
 		{
-			get => teklaObject.PlannedStartDate;
-			set { teklaObject.PlannedStartDate = value; }
+			get
+			{
+				try {
+					return teklaObject.PlannedStartDate;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedStartDate"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PlannedStartDate = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedStartDate"); }
+			}
 		}
 
 		public System.DateTime PlannedEndDate
 		{
-			get => teklaObject.PlannedEndDate;
-			set { teklaObject.PlannedEndDate = value; }
+			get
+			{
+				try {
+					return teklaObject.PlannedEndDate;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedEndDate"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PlannedEndDate = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedEndDate"); }
+			}
 		}
 
 		public System.Double PlannedWorkAmount
 		{
-			get => teklaObject.PlannedWorkAmount;
-			set { teklaObject.PlannedWorkAmount = value; }
+			get
+			{
+				try {
+					return teklaObject.PlannedWorkAmount;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedWorkAmount"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PlannedWorkAmount = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlannedWorkAmount"); }
+			}
 		}
 
 		public System.DateTime ActualStartDate
 		{
-			get => teklaObject.ActualStartDate;
-			set { teklaObject.ActualStartDate = value; }
+			get
+			{
+				try {
+					return teklaObject.ActualStartDate;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualStartDate"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ActualStartDate = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualStartDate"); }
+			}
 		}
 
 		public System.DateTime ActualEndDate
 		{
-			get => teklaObject.ActualEndDate;
-			set { teklaObject.ActualEndDate = value; }
+			get
+			{
+				try {
+					return teklaObject.ActualEndDate;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualEndDate"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ActualEndDate = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualEndDate"); }
+			}
 		}
 
 		public System.Double ActualWorkAmount
 		{
-			get => teklaObject.ActualWorkAmount;
-			set { teklaObject.ActualWorkAmount = value; }
+			get
+			{
+				try {
+					return teklaObject.ActualWorkAmount;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualWorkAmount"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ActualWorkAmount = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ActualWorkAmount"); }
+			}
 		}
 
         

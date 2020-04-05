@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 Index
 		{
-			get => teklaObject.Index;
+			get
+			{
+				try {
+					return teklaObject.Index;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Index"); }
+			}
 
 		}
 
@@ -21,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
+				try {
+				return Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GeometryNode"); }
 			}
 		}
 

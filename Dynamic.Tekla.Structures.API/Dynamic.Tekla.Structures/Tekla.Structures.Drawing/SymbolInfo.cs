@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Int32 SymbolIndex
 		{
-			get => teklaObject.SymbolIndex;
-			set { teklaObject.SymbolIndex = value; }
+			get
+			{
+				try {
+					return teklaObject.SymbolIndex;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolIndex"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SymbolIndex = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolIndex"); }
+			}
 		}
 
 		public System.String SymbolFile
 		{
-			get => teklaObject.SymbolFile;
-			set { teklaObject.SymbolFile = value; }
+			get
+			{
+				try {
+					return teklaObject.SymbolFile;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolFile"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SymbolFile = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolFile"); }
+			}
 		}
 
 		public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default

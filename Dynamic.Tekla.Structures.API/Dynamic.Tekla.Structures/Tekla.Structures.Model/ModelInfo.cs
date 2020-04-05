@@ -13,37 +13,97 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Double NorthDirection
 		{
-			get => teklaObject.NorthDirection;
-			set { teklaObject.NorthDirection = value; }
+			get
+			{
+				try {
+					return teklaObject.NorthDirection;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NorthDirection"); }
+			}
+			set
+			{
+				try {
+					teklaObject.NorthDirection = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NorthDirection"); }
+			}
 		}
 
 		public System.String ModelPath
 		{
-			get => teklaObject.ModelPath;
-			set { teklaObject.ModelPath = value; }
+			get
+			{
+				try {
+					return teklaObject.ModelPath;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelPath"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ModelPath = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelPath"); }
+			}
 		}
 
 		public System.String ModelName
 		{
-			get => teklaObject.ModelName;
-			set { teklaObject.ModelName = value; }
+			get
+			{
+				try {
+					return teklaObject.ModelName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ModelName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelName"); }
+			}
 		}
 
 		public System.Int32 CurrentPhase
 		{
-			get => teklaObject.CurrentPhase;
-			set { teklaObject.CurrentPhase = value; }
+			get
+			{
+				try {
+					return teklaObject.CurrentPhase;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentPhase"); }
+			}
+			set
+			{
+				try {
+					teklaObject.CurrentPhase = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentPhase"); }
+			}
 		}
 
 		public System.Boolean SharedModel
 		{
-			get => teklaObject.SharedModel;
+			get
+			{
+				try {
+					return teklaObject.SharedModel;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SharedModel"); }
+			}
 
 		}
 
 		public System.Boolean SingleUserModel
 		{
-			get => teklaObject.SingleUserModel;
+			get
+			{
+				try {
+					return teklaObject.SingleUserModel;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SingleUserModel"); }
+			}
 
 		}
 

@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Double X
 		{
-			get => teklaObject.X;
-			set { teklaObject.X = value; }
+			get
+			{
+				try {
+					return teklaObject.X;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("X"); }
+			}
+			set
+			{
+				try {
+					teklaObject.X = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("X"); }
+			}
 		}
 
 		public System.Double Y
 		{
-			get => teklaObject.Y;
-			set { teklaObject.Y = value; }
+			get
+			{
+				try {
+					return teklaObject.Y;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Y"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Y = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Y"); }
+			}
 		}
 
 		public System.Double Z
 		{
-			get => teklaObject.Z;
-			set { teklaObject.Z = value; }
+			get
+			{
+				try {
+					return teklaObject.Z;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Z"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Z = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Z"); }
+			}
 		}
 
 		public static System.Double EPSILON_SQUARED

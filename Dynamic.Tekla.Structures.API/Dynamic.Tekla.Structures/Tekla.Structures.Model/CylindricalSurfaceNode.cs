@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
+				try {
+				return Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface"); }
 			}
 		}
 

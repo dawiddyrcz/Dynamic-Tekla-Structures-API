@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+				try {
+				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Identifier"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Identifier"); }
 			}
 		}
 

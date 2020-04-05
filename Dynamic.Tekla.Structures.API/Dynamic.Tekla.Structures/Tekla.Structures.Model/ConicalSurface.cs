@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Tuple<System.Double, System.Double> Radiuses
 		{
-			get => teklaObject.Radiuses;
+			get
+			{
+				try {
+					return teklaObject.Radiuses;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radiuses"); }
+			}
 
 		}
 
@@ -21,7 +27,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Apex);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Apex);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Apex"); }
 			}
 		}
 

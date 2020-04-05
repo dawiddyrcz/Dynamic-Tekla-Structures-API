@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean IsAutomatic
 		{
-			get => teklaObject.IsAutomatic;
+			get
+			{
+				try {
+					return teklaObject.IsAutomatic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic"); }
+			}
 
 		}
 
@@ -21,11 +27,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
+				try {
+				return Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface"); }
 			}
 		}
 

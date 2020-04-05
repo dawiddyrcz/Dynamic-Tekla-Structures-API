@@ -13,20 +13,44 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Collections.ArrayList aProfileItemAnalysisParameters
 		{
-			get => teklaObject.aProfileItemAnalysisParameters;
+			get
+			{
+				try {
+					return teklaObject.aProfileItemAnalysisParameters;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemAnalysisParameters"); }
+			}
 
 		}
 
 		public System.Collections.ArrayList aProfileItemUserParameters
 		{
-			get => teklaObject.aProfileItemUserParameters;
+			get
+			{
+				try {
+					return teklaObject.aProfileItemUserParameters;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemUserParameters"); }
+			}
 
 		}
 
 		public System.String ProfileName
 		{
-			get => teklaObject.ProfileName;
-			set { teklaObject.ProfileName = value; }
+			get
+			{
+				try {
+					return teklaObject.ProfileName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ProfileName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileName"); }
+			}
 		}
 
         

@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Solid
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
+				try {
+				return Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
 			}
 		}
 

@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Double OffsetX
 		{
-			get => teklaObject.OffsetX;
-			set { teklaObject.OffsetX = value; }
+			get
+			{
+				try {
+					return teklaObject.OffsetX;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX"); }
+			}
+			set
+			{
+				try {
+					teklaObject.OffsetX = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX"); }
+			}
 		}
 
 		public System.Double OffsetY
 		{
-			get => teklaObject.OffsetY;
-			set { teklaObject.OffsetY = value; }
+			get
+			{
+				try {
+					return teklaObject.OffsetY;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY"); }
+			}
+			set
+			{
+				try {
+					teklaObject.OffsetY = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY"); }
+			}
 		}
 
         

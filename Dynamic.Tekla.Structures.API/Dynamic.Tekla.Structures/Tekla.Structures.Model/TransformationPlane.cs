@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToGlobal);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToGlobal);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TransformationMatrixToGlobal"); }
 			}
 		}
 
@@ -23,7 +26,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToLocal);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToLocal);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TransformationMatrixToLocal"); }
 			}
 		}
 

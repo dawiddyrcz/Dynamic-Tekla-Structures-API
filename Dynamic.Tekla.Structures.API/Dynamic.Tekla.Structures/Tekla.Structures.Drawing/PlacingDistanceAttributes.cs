@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Double SearchMargin
 		{
-			get => teklaObject.SearchMargin;
-			set { teklaObject.SearchMargin = value; }
+			get
+			{
+				try {
+					return teklaObject.SearchMargin;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchMargin"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SearchMargin = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchMargin"); }
+			}
 		}
 
 		public System.Double MinimalDistance
 		{
-			get => teklaObject.MinimalDistance;
-			set { teklaObject.MinimalDistance = value; }
+			get
+			{
+				try {
+					return teklaObject.MinimalDistance;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimalDistance"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MinimalDistance = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimalDistance"); }
+			}
 		}
 
 		public System.Double MaximalDistance
 		{
-			get => teklaObject.MaximalDistance;
-			set { teklaObject.MaximalDistance = value; }
+			get
+			{
+				try {
+					return teklaObject.MaximalDistance;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximalDistance"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MaximalDistance = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximalDistance"); }
+			}
 		}
 
         

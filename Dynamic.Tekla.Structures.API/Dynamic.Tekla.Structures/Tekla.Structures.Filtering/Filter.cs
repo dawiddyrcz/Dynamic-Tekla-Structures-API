@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Filtering
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(teklaObject.FilterExpression);
+				try {
+				return Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(teklaObject.FilterExpression);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FilterExpression"); }
 			}
 			set
 			{
+				try {
 				teklaObject.FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FilterExpression"); }
 			}
 		}
 

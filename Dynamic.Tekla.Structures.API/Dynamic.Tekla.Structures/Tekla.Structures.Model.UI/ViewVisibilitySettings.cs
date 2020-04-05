@@ -13,164 +13,488 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Boolean PointsVisible
 		{
-			get => teklaObject.PointsVisible;
-			set { teklaObject.PointsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.PointsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PointsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PointsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PointsVisible"); }
+			}
 		}
 
 		public System.Boolean PartsVisible
 		{
-			get => teklaObject.PartsVisible;
-			set { teklaObject.PartsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.PartsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartsVisible"); }
+			}
 		}
 
 		public System.Boolean BoltsVisible
 		{
-			get => teklaObject.BoltsVisible;
-			set { teklaObject.BoltsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltsVisible"); }
+			}
 		}
 
 		public System.Boolean BoltHolesVisible
 		{
-			get => teklaObject.BoltHolesVisible;
-			set { teklaObject.BoltHolesVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltHolesVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHolesVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltHolesVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHolesVisible"); }
+			}
 		}
 
 		public System.Boolean WeldsVisible
 		{
-			get => teklaObject.WeldsVisible;
-			set { teklaObject.WeldsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.WeldsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WeldsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.WeldsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WeldsVisible"); }
+			}
 		}
 
 		public System.Boolean ConstructionPlanesVisible
 		{
-			get => teklaObject.ConstructionPlanesVisible;
-			set { teklaObject.ConstructionPlanesVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.ConstructionPlanesVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionPlanesVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ConstructionPlanesVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionPlanesVisible"); }
+			}
 		}
 
 		public System.Boolean RebarsVisible
 		{
-			get => teklaObject.RebarsVisible;
-			set { teklaObject.RebarsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.RebarsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.RebarsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarsVisible"); }
+			}
 		}
 
 		public System.Boolean SurfaceTreatmentsVisible
 		{
-			get => teklaObject.SurfaceTreatmentsVisible;
-			set { teklaObject.SurfaceTreatmentsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.SurfaceTreatmentsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SurfaceTreatmentsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SurfaceTreatmentsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SurfaceTreatmentsVisible"); }
+			}
 		}
 
 		public System.Boolean PoursVisible
 		{
-			get => teklaObject.PoursVisible;
-			set { teklaObject.PoursVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.PoursVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PoursVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PoursVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PoursVisible"); }
+			}
 		}
 
 		public System.Boolean PourBreaksVisible
 		{
-			get => teklaObject.PourBreaksVisible;
-			set { teklaObject.PourBreaksVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.PourBreaksVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourBreaksVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PourBreaksVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourBreaksVisible"); }
+			}
 		}
 
 		public System.Boolean LoadsVisible
 		{
-			get => teklaObject.LoadsVisible;
-			set { teklaObject.LoadsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.LoadsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoadsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LoadsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LoadsVisible"); }
+			}
 		}
 
 		public System.Boolean CutsVisible
 		{
-			get => teklaObject.CutsVisible;
-			set { teklaObject.CutsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.CutsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.CutsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutsVisible"); }
+			}
 		}
 
 		public System.Boolean FittingsVisible
 		{
-			get => teklaObject.FittingsVisible;
-			set { teklaObject.FittingsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.FittingsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FittingsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FittingsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FittingsVisible"); }
+			}
 		}
 
 		public System.Boolean ComponentsVisible
 		{
-			get => teklaObject.ComponentsVisible;
-			set { teklaObject.ComponentsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.ComponentsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ComponentsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ComponentsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ComponentsVisible"); }
+			}
 		}
 
 		public System.Boolean GridsVisible
 		{
-			get => teklaObject.GridsVisible;
-			set { teklaObject.GridsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.GridsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GridsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.GridsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GridsVisible"); }
+			}
 		}
 
 		public System.Boolean ConstructionLinesVisible
 		{
-			get => teklaObject.ConstructionLinesVisible;
-			set { teklaObject.ConstructionLinesVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.ConstructionLinesVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionLinesVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ConstructionLinesVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionLinesVisible"); }
+			}
 		}
 
 		public System.Boolean ReferenceObjectsVisible
 		{
-			get => teklaObject.ReferenceObjectsVisible;
-			set { teklaObject.ReferenceObjectsVisible = value; }
+			get
+			{
+				try {
+					return teklaObject.ReferenceObjectsVisible;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReferenceObjectsVisible"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ReferenceObjectsVisible = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReferenceObjectsVisible"); }
+			}
 		}
 
 		public System.Boolean PointsVisibleInComponents
 		{
-			get => teklaObject.PointsVisibleInComponents;
-			set { teklaObject.PointsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.PointsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PointsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PointsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PointsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean PartsVisibleInComponents
 		{
-			get => teklaObject.PartsVisibleInComponents;
-			set { teklaObject.PartsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.PartsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PartsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean BoltsVisibleInComponents
 		{
-			get => teklaObject.BoltsVisibleInComponents;
-			set { teklaObject.BoltsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean BoltHolesVisibleInComponents
 		{
-			get => teklaObject.BoltHolesVisibleInComponents;
-			set { teklaObject.BoltHolesVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.BoltHolesVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHolesVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.BoltHolesVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHolesVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean WeldsVisibleInComponents
 		{
-			get => teklaObject.WeldsVisibleInComponents;
-			set { teklaObject.WeldsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.WeldsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WeldsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.WeldsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("WeldsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean ConstructionPlanesVisibleInComponents
 		{
-			get => teklaObject.ConstructionPlanesVisibleInComponents;
-			set { teklaObject.ConstructionPlanesVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.ConstructionPlanesVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionPlanesVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ConstructionPlanesVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConstructionPlanesVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean RebarsVisibleInComponents
 		{
-			get => teklaObject.RebarsVisibleInComponents;
-			set { teklaObject.RebarsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.RebarsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.RebarsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean CutsVisibleInComponents
 		{
-			get => teklaObject.CutsVisibleInComponents;
-			set { teklaObject.CutsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.CutsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.CutsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean FittingsVisibleInComponents
 		{
-			get => teklaObject.FittingsVisibleInComponents;
-			set { teklaObject.FittingsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.FittingsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FittingsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FittingsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FittingsVisibleInComponents"); }
+			}
 		}
 
 		public System.Boolean ComponentsVisibleInComponents
 		{
-			get => teklaObject.ComponentsVisibleInComponents;
-			set { teklaObject.ComponentsVisibleInComponents = value; }
+			get
+			{
+				try {
+					return teklaObject.ComponentsVisibleInComponents;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ComponentsVisibleInComponents"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ComponentsVisibleInComponents = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ComponentsVisibleInComponents"); }
+			}
 		}
 
         

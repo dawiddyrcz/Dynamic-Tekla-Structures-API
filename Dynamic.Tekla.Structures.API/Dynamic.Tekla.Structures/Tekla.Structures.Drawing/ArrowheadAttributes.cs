@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.FromTSObject(teklaObject.ArrowPosition);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.FromTSObject(teklaObject.ArrowPosition);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ArrowPosition"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ArrowPosition = Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ArrowPosition"); }
 			}
 		}
 
@@ -27,24 +33,54 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.FromTSObject(teklaObject.Head);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.FromTSObject(teklaObject.Head);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Head"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Head = Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Head"); }
 			}
 		}
 
 		public System.Double Height
 		{
-			get => teklaObject.Height;
-			set { teklaObject.Height = value; }
+			get
+			{
+				try {
+					return teklaObject.Height;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Height = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height"); }
+			}
 		}
 
 		public System.Double Width
 		{
-			get => teklaObject.Width;
-			set { teklaObject.Width = value; }
+			get
+			{
+				try {
+					return teklaObject.Width;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Width = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width"); }
+			}
 		}
 
         

@@ -15,30 +15,72 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes_.FromTSObject(teklaObject.Attributes);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes_.FromTSObject(teklaObject.Attributes);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 		}
 
 		public System.Double Distance
 		{
-			get => teklaObject.Distance;
-			set { teklaObject.Distance = value; }
+			get
+			{
+				try {
+					return teklaObject.Distance;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Distance"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Distance = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Distance"); }
+			}
 		}
 
 		public System.Double LeftTagLineOffset
 		{
-			get => teklaObject.LeftTagLineOffset;
-			set { teklaObject.LeftTagLineOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.LeftTagLineOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftTagLineOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.LeftTagLineOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftTagLineOffset"); }
+			}
 		}
 
 		public System.Double RightTagLineOffset
 		{
-			get => teklaObject.RightTagLineOffset;
-			set { teklaObject.RightTagLineOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.RightTagLineOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightTagLineOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.RightTagLineOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightTagLineOffset"); }
+			}
 		}
 
         
@@ -69,11 +111,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombinedDimensionAttributes_.FromTSObject(teklaObject.CombinedDimension);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombinedDimensionAttributes_.FromTSObject(teklaObject.CombinedDimension);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CombinedDimension"); }
 			}
 			set
 			{
+				try {
 				teklaObject.CombinedDimension = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CombinedDimensionAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CombinedDimension"); }
 			}
 		}
 
@@ -81,11 +129,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.FromTSObject(teklaObject.DimensionType);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.FromTSObject(teklaObject.DimensionType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DimensionType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.DimensionType = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DimensionType"); }
 			}
 		}
 
@@ -93,11 +147,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ExtensionLineTypes_.FromTSObject(teklaObject.ExtensionLine);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ExtensionLineTypes_.FromTSObject(teklaObject.ExtensionLine);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionLine"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ExtensionLine = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ExtensionLineTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionLine"); }
 			}
 		}
 
@@ -105,71 +165,179 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ShortDimensionTypes_.FromTSObject(teklaObject.ShortDimension);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ShortDimensionTypes_.FromTSObject(teklaObject.ShortDimension);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShortDimension"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ShortDimension = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.ShortDimensionTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShortDimension"); }
 			}
 		}
 
 		public System.Boolean IncludePartCountInTag
 		{
-			get => teklaObject.IncludePartCountInTag;
-			set { teklaObject.IncludePartCountInTag = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTag;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTag"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTag = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTag"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagA
 		{
-			get => teklaObject.IncludePartCountInTagA;
-			set { teklaObject.IncludePartCountInTagA = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagA;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagA"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagA = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagA"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagB
 		{
-			get => teklaObject.IncludePartCountInTagB;
-			set { teklaObject.IncludePartCountInTagB = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagB;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagB"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagB = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagB"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagC
 		{
-			get => teklaObject.IncludePartCountInTagC;
-			set { teklaObject.IncludePartCountInTagC = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagC;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagC"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagC = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagC"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagD
 		{
-			get => teklaObject.IncludePartCountInTagD;
-			set { teklaObject.IncludePartCountInTagD = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagD;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagD"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagD = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagD"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagE
 		{
-			get => teklaObject.IncludePartCountInTagE;
-			set { teklaObject.IncludePartCountInTagE = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagE;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagE"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagE = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagE"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagF
 		{
-			get => teklaObject.IncludePartCountInTagF;
-			set { teklaObject.IncludePartCountInTagF = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagF;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagF"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagF = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagF"); }
+			}
 		}
 
 		public System.Boolean IncludePartCountInTagG
 		{
-			get => teklaObject.IncludePartCountInTagG;
-			set { teklaObject.IncludePartCountInTagG = value; }
+			get
+			{
+				try {
+					return teklaObject.IncludePartCountInTagG;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagG"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IncludePartCountInTagG = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IncludePartCountInTagG"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement LeftUpperTag
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftUpperTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftUpperTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftUpperTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.LeftUpperTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftUpperTag"); }
 			}
 		}
 
@@ -177,11 +345,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftMiddleTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftMiddleTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftMiddleTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.LeftMiddleTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftMiddleTag"); }
 			}
 		}
 
@@ -189,11 +363,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightUpperTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightUpperTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightUpperTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.RightUpperTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightUpperTag"); }
 			}
 		}
 
@@ -201,11 +381,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightMiddleTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightMiddleTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightMiddleTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.RightMiddleTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightMiddleTag"); }
 			}
 		}
 
@@ -213,11 +399,17 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftLowerTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.LeftLowerTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftLowerTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.LeftLowerTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftLowerTag"); }
 			}
 		}
 
@@ -225,29 +417,53 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightLowerTag);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.RightLowerTag);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightLowerTag"); }
 			}
 			set
 			{
+				try {
 				teklaObject.RightLowerTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightLowerTag"); }
 			}
 		}
 
 		public System.String ExcludePartsAccordingToFilter
 		{
-			get => teklaObject.ExcludePartsAccordingToFilter;
-			set { teklaObject.ExcludePartsAccordingToFilter = value; }
+			get
+			{
+				try {
+					return teklaObject.ExcludePartsAccordingToFilter;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExcludePartsAccordingToFilter"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExcludePartsAccordingToFilter = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExcludePartsAccordingToFilter"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes Exaggeration
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.FromTSObject(teklaObject.Exaggeration);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.FromTSObject(teklaObject.Exaggeration);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Exaggeration"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Exaggeration = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Exaggeration"); }
 			}
 		}
 

@@ -19,8 +19,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean SelectInstances
 		{
-			get => teklaObject.SelectInstances;
-			set { teklaObject.SelectInstances = value; }
+			get
+			{
+				try {
+					return teklaObject.SelectInstances;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SelectInstances = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
 		}
 
         

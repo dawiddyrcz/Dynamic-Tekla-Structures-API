@@ -13,31 +13,61 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
 		{
-			get => teklaObject.Faces;
+			get
+			{
+				try {
+					return teklaObject.Faces;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Faces"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> InnerWires
 		{
-			get => teklaObject.InnerWires;
+			get
+			{
+				try {
+					return teklaObject.InnerWires;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InnerWires"); }
+			}
 
 		}
 
 		public System.Int32[][] OuterWires
 		{
-			get => teklaObject.OuterWires;
+			get
+			{
+				try {
+					return teklaObject.OuterWires;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OuterWires"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
 		{
-			get => teklaObject.GetEdges;
+			get
+			{
+				try {
+					return teklaObject.GetEdges;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GetEdges"); }
+			}
 
 		}
 
 		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
 		{
-			get => teklaObject.Vertices;
+			get
+			{
+				try {
+					return teklaObject.Vertices;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Vertices"); }
+			}
 
 		}
 

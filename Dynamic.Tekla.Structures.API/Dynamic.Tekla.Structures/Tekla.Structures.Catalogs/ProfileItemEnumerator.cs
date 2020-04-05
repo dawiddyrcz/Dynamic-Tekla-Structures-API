@@ -13,15 +13,30 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.Boolean SelectInstances
 		{
-			get => teklaObject.SelectInstances;
-			set { teklaObject.SelectInstances = value; }
+			get
+			{
+				try {
+					return teklaObject.SelectInstances;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SelectInstances = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileItem Current
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(teklaObject.Current);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(teklaObject.Current);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
 			}
 		}
 

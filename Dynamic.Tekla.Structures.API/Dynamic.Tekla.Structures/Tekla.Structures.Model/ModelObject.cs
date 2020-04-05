@@ -13,13 +13,25 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Nullable<System.DateTime> ModificationTime
 		{
-			get => teklaObject.ModificationTime;
+			get
+			{
+				try {
+					return teklaObject.ModificationTime;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModificationTime"); }
+			}
 
 		}
 
 		public System.Boolean IsUpToDate
 		{
-			get => teklaObject.IsUpToDate;
+			get
+			{
+				try {
+					return teklaObject.IsUpToDate;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsUpToDate"); }
+			}
 
 		}
 

@@ -15,7 +15,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemTypeEnum_.FromTSObject(teklaObject.ProfileItemType);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemTypeEnum_.FromTSObject(teklaObject.ProfileItemType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileItemType"); }
 			}
 		}
 
@@ -23,41 +26,77 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.FromTSObject(teklaObject.ProfileItemSubType);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.FromTSObject(teklaObject.ProfileItemSubType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileItemSubType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.ProfileItemSubType = Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileItemSubType"); }
 			}
 		}
 
 		public System.Collections.ArrayList aProfileItemParameters
 		{
-			get => teklaObject.aProfileItemParameters;
+			get
+			{
+				try {
+					return teklaObject.aProfileItemParameters;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemParameters"); }
+			}
 
 		}
 
 		public System.String ParameterString
 		{
-			get => teklaObject.ParameterString;
+			get
+			{
+				try {
+					return teklaObject.ParameterString;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ParameterString"); }
+			}
 
 		}
 
 		public System.Int32 NumberOfCrossSections
 		{
-			get => teklaObject.NumberOfCrossSections;
+			get
+			{
+				try {
+					return teklaObject.NumberOfCrossSections;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfCrossSections"); }
+			}
 
 		}
 
 		public System.Boolean IsSketchedUserParametric
 		{
-			get => teklaObject.IsSketchedUserParametric;
+			get
+			{
+				try {
+					return teklaObject.IsSketchedUserParametric;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSketchedUserParametric"); }
+			}
 
 		}
 
 		public System.Boolean IsMultiCrossSectionUserParametric
 		{
-			get => teklaObject.IsMultiCrossSectionUserParametric;
+			get
+			{
+				try {
+					return teklaObject.IsMultiCrossSectionUserParametric;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMultiCrossSectionUserParametric"); }
+			}
 
 		}
 

@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
+				try {
+				return Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position"); }
 			}
 		}
 

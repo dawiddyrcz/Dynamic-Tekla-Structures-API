@@ -13,32 +13,92 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.String Device
 		{
-			get => teklaObject.Device;
-			set { teklaObject.Device = value; }
+			get
+			{
+				try {
+					return teklaObject.Device;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Device"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Device = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Device"); }
+			}
 		}
 
 		public System.String Extension
 		{
-			get => teklaObject.Extension;
-			set { teklaObject.Extension = value; }
+			get
+			{
+				try {
+					return teklaObject.Extension;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Extension"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Extension = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Extension"); }
+			}
 		}
 
 		public System.Double PrintAreaWidth
 		{
-			get => teklaObject.PrintAreaWidth;
-			set { teklaObject.PrintAreaWidth = value; }
+			get
+			{
+				try {
+					return teklaObject.PrintAreaWidth;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintAreaWidth"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PrintAreaWidth = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintAreaWidth"); }
+			}
 		}
 
 		public System.Double PrintAreaHeigth
 		{
-			get => teklaObject.PrintAreaHeigth;
-			set { teklaObject.PrintAreaHeigth = value; }
+			get
+			{
+				try {
+					return teklaObject.PrintAreaHeigth;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintAreaHeigth"); }
+			}
+			set
+			{
+				try {
+					teklaObject.PrintAreaHeigth = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PrintAreaHeigth"); }
+			}
 		}
 
         

@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String MaterialName
 		{
-			get => teklaObject.MaterialName;
-			set { teklaObject.MaterialName = value; }
+			get
+			{
+				try {
+					return teklaObject.MaterialName;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialName"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MaterialName = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialName"); }
+			}
 		}
 
 		public System.Double[] MarketSizes
 		{
-			get => teklaObject.MarketSizes;
-			set { teklaObject.MarketSizes = value; }
+			get
+			{
+				try {
+					return teklaObject.MarketSizes;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarketSizes"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MarketSizes = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarketSizes"); }
+			}
 		}
 
         

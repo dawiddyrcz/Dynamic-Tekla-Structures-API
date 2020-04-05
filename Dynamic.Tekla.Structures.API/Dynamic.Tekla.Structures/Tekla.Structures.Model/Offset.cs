@@ -13,20 +13,56 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Double Dx
 		{
-			get => teklaObject.Dx;
-			set { teklaObject.Dx = value; }
+			get
+			{
+				try {
+					return teklaObject.Dx;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dx"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Dx = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dx"); }
+			}
 		}
 
 		public System.Double Dy
 		{
-			get => teklaObject.Dy;
-			set { teklaObject.Dy = value; }
+			get
+			{
+				try {
+					return teklaObject.Dy;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dy"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Dy = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dy"); }
+			}
 		}
 
 		public System.Double Dz
 		{
-			get => teklaObject.Dz;
-			set { teklaObject.Dz = value; }
+			get
+			{
+				try {
+					return teklaObject.Dz;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dz"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Dz = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dz"); }
+			}
 		}
 
         

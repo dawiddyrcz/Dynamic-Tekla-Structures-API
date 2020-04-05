@@ -15,19 +15,34 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
+				try {
+				return Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
 			}
 		}
 
 		public System.Int32 Count
 		{
-			get => teklaObject.Count;
+			get
+			{
+				try {
+					return teklaObject.Count;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count"); }
+			}
 
 		}
 
 		public System.Int32 CurrentViewId
 		{
-			get => teklaObject.CurrentViewId;
+			get
+			{
+				try {
+					return teklaObject.CurrentViewId;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentViewId"); }
+			}
 
 		}
 

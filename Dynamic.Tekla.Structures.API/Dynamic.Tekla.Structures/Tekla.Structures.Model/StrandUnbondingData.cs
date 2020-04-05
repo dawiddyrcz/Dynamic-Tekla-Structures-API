@@ -13,32 +13,92 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Int32 StrandIndex
 		{
-			get => teklaObject.StrandIndex;
-			set { teklaObject.StrandIndex = value; }
+			get
+			{
+				try {
+					return teklaObject.StrandIndex;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StrandIndex"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StrandIndex = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StrandIndex"); }
+			}
 		}
 
 		public System.Double FromStart
 		{
-			get => teklaObject.FromStart;
-			set { teklaObject.FromStart = value; }
+			get
+			{
+				try {
+					return teklaObject.FromStart;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FromStart"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FromStart = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FromStart"); }
+			}
 		}
 
 		public System.Double MiddleToStart
 		{
-			get => teklaObject.MiddleToStart;
-			set { teklaObject.MiddleToStart = value; }
+			get
+			{
+				try {
+					return teklaObject.MiddleToStart;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddleToStart"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MiddleToStart = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddleToStart"); }
+			}
 		}
 
 		public System.Double MiddleToEnd
 		{
-			get => teklaObject.MiddleToEnd;
-			set { teklaObject.MiddleToEnd = value; }
+			get
+			{
+				try {
+					return teklaObject.MiddleToEnd;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddleToEnd"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MiddleToEnd = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddleToEnd"); }
+			}
 		}
 
 		public System.Double FromEnd
 		{
-			get => teklaObject.FromEnd;
-			set { teklaObject.FromEnd = value; }
+			get
+			{
+				try {
+					return teklaObject.FromEnd;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FromEnd"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FromEnd = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FromEnd"); }
+			}
 		}
 
         

@@ -15,18 +15,36 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementGroupAttributes_.FromTSObject(teklaObject.Attributes);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementGroupAttributes_.FromTSObject(teklaObject.Attributes);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementGroupAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 		}
 
 		public System.Double ReinforcementCustomPosition
 		{
-			get => teklaObject.ReinforcementCustomPosition;
-			set { teklaObject.ReinforcementCustomPosition = value; }
+			get
+			{
+				try {
+					return teklaObject.ReinforcementCustomPosition;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPosition"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ReinforcementCustomPosition = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementCustomPosition"); }
+			}
 		}
 
         

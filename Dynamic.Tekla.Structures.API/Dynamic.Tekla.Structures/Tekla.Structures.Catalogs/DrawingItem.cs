@@ -13,25 +13,55 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.Collections.Generic.List<System.IO.FileInfo> Files
 		{
-			get => teklaObject.Files;
-			set { teklaObject.Files = value; }
+			get
+			{
+				try {
+					return teklaObject.Files;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Files"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Files = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Files"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes Type
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 

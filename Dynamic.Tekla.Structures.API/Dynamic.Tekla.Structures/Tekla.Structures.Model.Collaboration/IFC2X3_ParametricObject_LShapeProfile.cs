@@ -13,37 +13,73 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Double Depth
 		{
-			get => teklaObject.Depth;
+			get
+			{
+				try {
+					return teklaObject.Depth;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Depth"); }
+			}
 
 		}
 
 		public System.Double Width
 		{
-			get => teklaObject.Width;
+			get
+			{
+				try {
+					return teklaObject.Width;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width"); }
+			}
 
 		}
 
 		public System.Double Thickness
 		{
-			get => teklaObject.Thickness;
+			get
+			{
+				try {
+					return teklaObject.Thickness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Thickness"); }
+			}
 
 		}
 
 		public System.Double FilletRadius
 		{
-			get => teklaObject.FilletRadius;
+			get
+			{
+				try {
+					return teklaObject.FilletRadius;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FilletRadius"); }
+			}
 
 		}
 
 		public System.Double EdgeRadius
 		{
-			get => teklaObject.EdgeRadius;
+			get
+			{
+				try {
+					return teklaObject.EdgeRadius;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EdgeRadius"); }
+			}
 
 		}
 
 		public System.Double LegSlope
 		{
-			get => teklaObject.LegSlope;
+			get
+			{
+				try {
+					return teklaObject.LegSlope;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LegSlope"); }
+			}
 
 		}
 

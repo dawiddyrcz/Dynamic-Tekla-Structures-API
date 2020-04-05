@@ -13,37 +13,91 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean IsMagnetic
 		{
-			get => teklaObject.IsMagnetic;
-			set { teklaObject.IsMagnetic = value; }
+			get
+			{
+				try {
+					return teklaObject.IsMagnetic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsMagnetic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
 		}
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
 		public System.Int32 FontSize
 		{
-			get => teklaObject.FontSize;
-			set { teklaObject.FontSize = value; }
+			get
+			{
+				try {
+					return teklaObject.FontSize;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FontSize"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FontSize = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FontSize"); }
+			}
 		}
 
 		public System.Drawing.Color FontColor
 		{
-			get => teklaObject.FontColor;
-			set { teklaObject.FontColor = value; }
+			get
+			{
+				try {
+					return teklaObject.FontColor;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FontColor"); }
+			}
+			set
+			{
+				try {
+					teklaObject.FontColor = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FontColor"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Origin
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Origin);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Origin"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Origin = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Origin"); }
 			}
 		}
 

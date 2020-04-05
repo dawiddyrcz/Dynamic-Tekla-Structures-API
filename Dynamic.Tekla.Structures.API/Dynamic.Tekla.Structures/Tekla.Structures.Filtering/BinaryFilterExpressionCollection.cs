@@ -13,25 +13,49 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public System.Boolean IsSynchronized
 		{
-			get => teklaObject.IsSynchronized;
+			get
+			{
+				try {
+					return teklaObject.IsSynchronized;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSynchronized"); }
+			}
 
 		}
 
 		public System.Object SyncRoot
 		{
-			get => teklaObject.SyncRoot;
+			get
+			{
+				try {
+					return teklaObject.SyncRoot;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SyncRoot"); }
+			}
 
 		}
 
 		public System.Int32 Count
 		{
-			get => teklaObject.Count;
+			get
+			{
+				try {
+					return teklaObject.Count;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count"); }
+			}
 
 		}
 
 		public System.Boolean IsReadOnly
 		{
-			get => teklaObject.IsReadOnly;
+			get
+			{
+				try {
+					return teklaObject.IsReadOnly;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsReadOnly"); }
+			}
 
 		}
 
@@ -39,11 +63,17 @@ namespace Dynamic.Tekla.Structures.Filtering
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(teklaObject.Item);
+				try {
+				return Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(teklaObject.Item);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
 			}
 		}
 

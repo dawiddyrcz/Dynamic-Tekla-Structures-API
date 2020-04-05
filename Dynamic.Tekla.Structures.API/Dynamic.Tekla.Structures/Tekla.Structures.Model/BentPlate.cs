@@ -15,17 +15,29 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.Geometry);
+				try {
+				return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.Geometry);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Geometry"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Geometry"); }
 			}
 		}
 
 		public System.Double Thickness
 		{
-			get => teklaObject.Thickness;
+			get
+			{
+				try {
+					return teklaObject.Thickness;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Thickness"); }
+			}
 
 		}
 

@@ -15,29 +15,53 @@ namespace Dynamic.Tekla.Structures.Drawing
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.Points);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.Points);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Points = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
 			}
 		}
 
 		public System.Double Bulge
 		{
-			get => teklaObject.Bulge;
-			set { teklaObject.Bulge = value; }
+			get
+			{
+				try {
+					return teklaObject.Bulge;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Bulge"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Bulge = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Bulge"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes Attributes
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.FromTSObject(teklaObject.Attributes);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.FromTSObject(teklaObject.Attributes);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes"); }
 			}
 		}
 

@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public System.Collections.ArrayList Points
 		{
-			get => teklaObject.Points;
+			get
+			{
+				try {
+					return teklaObject.Points;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+			}
 
 		}
 
 		public System.Collections.ArrayList Triangles
 		{
-			get => teklaObject.Triangles;
+			get
+			{
+				try {
+					return teklaObject.Triangles;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Triangles"); }
+			}
 
 		}
 
 		public System.Collections.ArrayList Lines
 		{
-			get => teklaObject.Lines;
+			get
+			{
+				try {
+					return teklaObject.Lines;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lines"); }
+			}
 
 		}
 

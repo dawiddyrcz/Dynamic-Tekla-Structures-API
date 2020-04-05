@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Double Size
 		{
-			get => teklaObject.Size;
-			set { teklaObject.Size = value; }
+			get
+			{
+				try {
+					return teklaObject.Size;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Size = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.MarkSymbolShape Shape
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.FromTSObject(teklaObject.Shape);
+				try {
+				return Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.FromTSObject(teklaObject.Shape);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shape"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Shape = Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shape"); }
 			}
 		}
 

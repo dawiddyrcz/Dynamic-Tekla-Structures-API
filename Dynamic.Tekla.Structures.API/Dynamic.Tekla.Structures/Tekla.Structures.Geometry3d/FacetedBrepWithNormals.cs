@@ -15,11 +15,17 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(teklaObject.Normals);
+				try {
+				return Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(teklaObject.Normals);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Normals"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Normals"); }
 			}
 		}
 

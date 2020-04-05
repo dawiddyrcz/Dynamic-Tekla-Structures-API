@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 		public System.IntPtr Handle
 		{
-			get => teklaObject.Handle;
+			get
+			{
+				try {
+					return teklaObject.Handle;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Handle"); }
+			}
 
 		}
 

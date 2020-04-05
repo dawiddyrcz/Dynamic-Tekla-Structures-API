@@ -25,19 +25,37 @@ namespace Dynamic.Tekla.Structures.Datatype
 
 		public System.Double Degrees
 		{
-			get => teklaObject.Degrees;
+			get
+			{
+				try {
+					return teklaObject.Degrees;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Degrees"); }
+			}
 
 		}
 
 		public System.Double Radians
 		{
-			get => teklaObject.Radians;
+			get
+			{
+				try {
+					return teklaObject.Radians;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radians"); }
+			}
 
 		}
 
 		public System.Double CurrentUnitValue
 		{
-			get => teklaObject.CurrentUnitValue;
+			get
+			{
+				try {
+					return teklaObject.CurrentUnitValue;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentUnitValue"); }
+			}
 
 		}
 

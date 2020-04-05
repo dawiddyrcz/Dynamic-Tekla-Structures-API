@@ -15,60 +15,162 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
+				try {
+				return Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Parent"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Parent"); }
 			}
 		}
 
 		public System.String Label
 		{
-			get => teklaObject.Label;
-			set { teklaObject.Label = value; }
+			get
+			{
+				try {
+					return teklaObject.Label;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Label"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Label = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Label"); }
+			}
 		}
 
 		public System.Boolean IsMagnetic
 		{
-			get => teklaObject.IsMagnetic;
-			set { teklaObject.IsMagnetic = value; }
+			get
+			{
+				try {
+					return teklaObject.IsMagnetic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsMagnetic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
 		}
 
 		public System.Double ExtensionLeft
 		{
-			get => teklaObject.ExtensionLeft;
-			set { teklaObject.ExtensionLeft = value; }
+			get
+			{
+				try {
+					return teklaObject.ExtensionLeft;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionLeft"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExtensionLeft = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionLeft"); }
+			}
 		}
 
 		public System.Double ExtensionRight
 		{
-			get => teklaObject.ExtensionRight;
-			set { teklaObject.ExtensionRight = value; }
+			get
+			{
+				try {
+					return teklaObject.ExtensionRight;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionRight"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExtensionRight = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionRight"); }
+			}
 		}
 
 		public System.Double ExtensionBelow
 		{
-			get => teklaObject.ExtensionBelow;
-			set { teklaObject.ExtensionBelow = value; }
+			get
+			{
+				try {
+					return teklaObject.ExtensionBelow;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionBelow"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExtensionBelow = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionBelow"); }
+			}
 		}
 
 		public System.Double ExtensionAbove
 		{
-			get => teklaObject.ExtensionAbove;
-			set { teklaObject.ExtensionAbove = value; }
+			get
+			{
+				try {
+					return teklaObject.ExtensionAbove;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionAbove"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ExtensionAbove = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtensionAbove"); }
+			}
 		}
 
 		public System.Boolean DrawingVisibility
 		{
-			get => teklaObject.DrawingVisibility;
-			set { teklaObject.DrawingVisibility = value; }
+			get
+			{
+				try {
+					return teklaObject.DrawingVisibility;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingVisibility"); }
+			}
+			set
+			{
+				try {
+					teklaObject.DrawingVisibility = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingVisibility"); }
+			}
 		}
 
 		public System.Boolean IsManual
 		{
-			get => teklaObject.IsManual;
-			set { teklaObject.IsManual = value; }
+			get
+			{
+				try {
+					return teklaObject.IsManual;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsManual"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsManual = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsManual"); }
+			}
 		}
 
         

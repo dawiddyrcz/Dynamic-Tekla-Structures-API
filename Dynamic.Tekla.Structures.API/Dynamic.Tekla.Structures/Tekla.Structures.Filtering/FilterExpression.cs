@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public System.Boolean IsEnable
 		{
-			get => teklaObject.IsEnable;
-			set { teklaObject.IsEnable = value; }
+			get
+			{
+				try {
+					return teklaObject.IsEnable;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsEnable = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable"); }
+			}
 		}
 
         

@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Boolean SelectInstances
 		{
-			get => teklaObject.SelectInstances;
-			set { teklaObject.SelectInstances = value; }
+			get
+			{
+				try {
+					return teklaObject.SelectInstances;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
+			set
+			{
+				try {
+					teklaObject.SelectInstances = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances"); }
+			}
 		}
 
 		public static System.Boolean AutoFetch
@@ -27,7 +39,10 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);
+				try {
+				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
 			}
 		}
 

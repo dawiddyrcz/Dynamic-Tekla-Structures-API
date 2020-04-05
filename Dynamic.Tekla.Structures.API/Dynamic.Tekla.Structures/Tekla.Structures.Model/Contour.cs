@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList ContourPoints
 		{
-			get => teklaObject.ContourPoints;
-			set { teklaObject.ContourPoints = value; }
+			get
+			{
+				try {
+					return teklaObject.ContourPoints;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints"); }
+			}
+			set
+			{
+				try {
+					teklaObject.ContourPoints = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints"); }
+			}
 		}
 
 		public static System.Int32 MAX_CONTOUR_POINTS

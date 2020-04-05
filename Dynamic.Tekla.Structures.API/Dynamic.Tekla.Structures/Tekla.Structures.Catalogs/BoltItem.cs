@@ -13,31 +13,67 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public System.String Standard
 		{
-			get => teklaObject.Standard;
-			set { teklaObject.Standard = value; }
+			get
+			{
+				try {
+					return teklaObject.Standard;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Standard"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Standard = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Standard"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum Type
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.FromTSObject(teklaObject.Type);
+				try {
+				return Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.FromTSObject(teklaObject.Type);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type"); }
 			}
 		}
 
 		public System.Double Size
 		{
-			get => teklaObject.Size;
-			set { teklaObject.Size = value; }
+			get
+			{
+				try {
+					return teklaObject.Size;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Size = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size"); }
+			}
 		}
 
 		public System.Collections.Generic.List<System.Double> Lengths
 		{
-			get => teklaObject.Lengths;
+			get
+			{
+				try {
+					return teklaObject.Lengths;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lengths"); }
+			}
 
 		}
 

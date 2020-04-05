@@ -13,7 +13,13 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 
 		public System.Object Current
 		{
-			get => teklaObject.Current;
+			get
+			{
+				try {
+					return teklaObject.Current;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current"); }
+			}
 
 		}
 

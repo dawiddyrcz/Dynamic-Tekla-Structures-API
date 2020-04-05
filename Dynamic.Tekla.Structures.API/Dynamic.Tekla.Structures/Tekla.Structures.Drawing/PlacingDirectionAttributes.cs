@@ -13,14 +13,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public System.Boolean Positive
 		{
-			get => teklaObject.Positive;
-			set { teklaObject.Positive = value; }
+			get
+			{
+				try {
+					return teklaObject.Positive;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Positive"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Positive = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Positive"); }
+			}
 		}
 
 		public System.Boolean Negative
 		{
-			get => teklaObject.Negative;
-			set { teklaObject.Negative = value; }
+			get
+			{
+				try {
+					return teklaObject.Negative;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Negative"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Negative = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Negative"); }
+			}
 		}
 
         

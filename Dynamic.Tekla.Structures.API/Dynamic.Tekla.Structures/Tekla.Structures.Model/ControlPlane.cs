@@ -15,24 +15,54 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
+				try {
+				return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane"); }
 			}
 			set
 			{
+				try {
 				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane"); }
 			}
 		}
 
 		public System.Boolean IsMagnetic
 		{
-			get => teklaObject.IsMagnetic;
-			set { teklaObject.IsMagnetic = value; }
+			get
+			{
+				try {
+					return teklaObject.IsMagnetic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.IsMagnetic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMagnetic"); }
+			}
 		}
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
-			set { teklaObject.Name = value; }
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Name = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 		}
 
         

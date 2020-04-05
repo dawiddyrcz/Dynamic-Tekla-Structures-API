@@ -15,13 +15,22 @@ namespace Dynamic.Tekla.Structures
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(teklaObject.Folder);
+				try {
+				return Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(teklaObject.Folder);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Folder"); }
 			}
 		}
 
 		public System.String Name
 		{
-			get => teklaObject.Name;
+			get
+			{
+				try {
+					return teklaObject.Name;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+			}
 
 		}
 

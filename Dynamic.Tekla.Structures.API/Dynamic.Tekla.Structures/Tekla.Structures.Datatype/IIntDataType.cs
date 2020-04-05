@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Datatype
 
 		public System.Int32 Value
 		{
-			get => teklaObject.Value;
-			set { teklaObject.Value = value; }
+			get
+			{
+				try {
+					return teklaObject.Value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Value = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+			}
 		}
 
         

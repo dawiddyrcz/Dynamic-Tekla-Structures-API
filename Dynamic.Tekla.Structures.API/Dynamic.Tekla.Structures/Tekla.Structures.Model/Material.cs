@@ -13,8 +13,20 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.String MaterialString
 		{
-			get => teklaObject.MaterialString;
-			set { teklaObject.MaterialString = value; }
+			get
+			{
+				try {
+					return teklaObject.MaterialString;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialString"); }
+			}
+			set
+			{
+				try {
+					teklaObject.MaterialString = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialString"); }
+			}
 		}
 
         

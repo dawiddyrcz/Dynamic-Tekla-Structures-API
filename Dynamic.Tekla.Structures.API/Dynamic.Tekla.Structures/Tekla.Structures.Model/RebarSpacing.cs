@@ -13,31 +13,73 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
 		{
-			get => teklaObject.Zones;
-			set { teklaObject.Zones = value; }
+			get
+			{
+				try {
+					return teklaObject.Zones;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Zones"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Zones = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Zones"); }
+			}
 		}
 
 		public System.Double StartOffset
 		{
-			get => teklaObject.StartOffset;
-			set { teklaObject.StartOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.StartOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StartOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffset"); }
+			}
 		}
 
 		public System.Double EndOffset
 		{
-			get => teklaObject.EndOffset;
-			set { teklaObject.EndOffset = value; }
+			get
+			{
+				try {
+					return teklaObject.EndOffset;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffset"); }
+			}
+			set
+			{
+				try {
+					teklaObject.EndOffset = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffset"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum StartOffsetType
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.StartOffsetType);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.StartOffsetType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffsetType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffsetType"); }
 			}
 		}
 
@@ -45,30 +87,72 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.EndOffsetType);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.EndOffsetType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffsetType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffsetType"); }
 			}
 		}
 
 		public System.Boolean StartOffsetIsAutomatic
 		{
-			get => teklaObject.StartOffsetIsAutomatic;
-			set { teklaObject.StartOffsetIsAutomatic = value; }
+			get
+			{
+				try {
+					return teklaObject.StartOffsetIsAutomatic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffsetIsAutomatic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.StartOffsetIsAutomatic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartOffsetIsAutomatic"); }
+			}
 		}
 
 		public System.Boolean EndOffsetIsAutomatic
 		{
-			get => teklaObject.EndOffsetIsAutomatic;
-			set { teklaObject.EndOffsetIsAutomatic = value; }
+			get
+			{
+				try {
+					return teklaObject.EndOffsetIsAutomatic;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffsetIsAutomatic"); }
+			}
+			set
+			{
+				try {
+					teklaObject.EndOffsetIsAutomatic = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndOffsetIsAutomatic"); }
+			}
 		}
 
 		public System.Boolean InheritFromPrimary
 		{
-			get => teklaObject.InheritFromPrimary;
-			set { teklaObject.InheritFromPrimary = value; }
+			get
+			{
+				try {
+					return teklaObject.InheritFromPrimary;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InheritFromPrimary"); }
+			}
+			set
+			{
+				try {
+					teklaObject.InheritFromPrimary = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InheritFromPrimary"); }
+			}
 		}
 
         

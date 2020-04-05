@@ -13,19 +13,37 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public System.Collections.ArrayList Polygons
 		{
-			get => teklaObject.Polygons;
-			set { teklaObject.Polygons = value; }
+			get
+			{
+				try {
+					return teklaObject.Polygons;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
+			}
+			set
+			{
+				try {
+					teklaObject.Polygons = value;
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum StirrupType
 		{
 			get
 			{
-				 return Dynamic.Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum_.FromTSObject(teklaObject.StirrupType);
+				try {
+				return Dynamic.Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum_.FromTSObject(teklaObject.StirrupType);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StirrupType"); }
 			}
 			set
 			{
+				try {
 				teklaObject.StirrupType = Dynamic.Tekla.Structures.Model.RebarGroup.RebarGroupStirrupTypeEnum_.GetTSObject(value);
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StirrupType"); }
 			}
 		}
 

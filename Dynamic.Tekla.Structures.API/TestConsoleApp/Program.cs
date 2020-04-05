@@ -19,9 +19,9 @@ namespace TestConsoleApp
             //StaticFieldsOrProperties();
             // InsertBeam();
             // OpenDrawingAndInsertLine();
-            // Events();
+             Events();
 
-            OperatorOverload();
+          //  OperatorOverload();
 
             Console.WriteLine("end");
             Console.ReadKey();
@@ -49,21 +49,21 @@ namespace TestConsoleApp
             {
                 var modelEvents = new Events();
                 modelEvents.SelectionChange += () =>Console.WriteLine("SelectionChange");
-                modelEvents.ModelObjectChanged += (x) => Console.WriteLine("ModelObjectChanged: " + x.Count);
+                //modelEvents.ModelObjectChanged += (x) => Console.WriteLine("ModelObjectChanged: " + x.Count);
                 modelEvents.ClashCheckDone += (x) => Console.WriteLine("ClashCheckDone");
                 modelEvents.ClashDetected += (x) => Console.WriteLine("ClashDetected");
                 modelEvents.ModelSave += () => Console.WriteLine("ModelSave");
-                modelEvents.Interrupted += () => Console.WriteLine("Interrupted");
+               // modelEvents.Interrupted += () => Console.WriteLine("Interrupted");
                 modelEvents.Numbering += () => Console.WriteLine("Numbering");
                 modelEvents.TeklaStructuresExit += () => Console.WriteLine("TeklaStructuresExit");
                 modelEvents.Register();
 
                 var drawingEvents = new TSD.Events();
-                drawingEvents.DrawingChanged += () => Console.WriteLine("DrawingChanged");
+               // drawingEvents.DrawingChanged += () => Console.WriteLine("DrawingChanged");
                 drawingEvents.DrawingDeleted += () => Console.WriteLine("DrawingDeleted");
                 drawingEvents.DrawingInserted += () => Console.WriteLine("DrawingInserted");
                 drawingEvents.DrawingStatusChanged += () => Console.WriteLine("DrawingStatusChanged");
-                drawingEvents.DrawingUpdated += (x, y) => Console.WriteLine("DrawingUpdated");
+                //drawingEvents.DrawingUpdated += (x, y) => Console.WriteLine("DrawingUpdated");
                 drawingEvents.Register();
 
                 var drawingUIEvents = new TSD.UI.Events();
@@ -71,7 +71,7 @@ namespace TestConsoleApp
                 drawingUIEvents.DrawingEditorOpened += () => Console.WriteLine("DrawingEditorOpened");
                 drawingUIEvents.DrawingListSelectionChanged += () => Console.WriteLine("DrawingListSelectionChanged");
                 drawingUIEvents.DrawingLoaded += () => Console.WriteLine("DrawingLoaded");
-                drawingUIEvents.Interrupted += () => Console.WriteLine("DrawingInterrupted");
+                //drawingUIEvents.Interrupted += () => Console.WriteLine("DrawingInterrupted");
                 drawingUIEvents.SelectionChange += () => Console.WriteLine("DrawingSelectionChange");
                 drawingUIEvents.Register();
 

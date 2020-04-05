@@ -57,6 +57,9 @@ namespace Dynamic.Tekla.Structures.Model
         private void BindEventToMethod(string eventName, string methodName)
         {
             var eventInfo = teklaObject.GetType().GetEvent(eventName);
+            if (eventInfo is null)
+                throw new DynamicAPINotFoundException("Could not find event: \"" + eventName + "\" in current version of the Tekla API"); 
+
             var delegateType = eventInfo.EventHandlerType;
             var methodInfo = typeof(Events).GetMethod(methodName, BindingFlags.NonPublic | BindingFlags.Instance);
             var delegateInstance = Delegate.CreateDelegate(delegateType, this, methodInfo);
@@ -79,13 +82,28 @@ namespace Dynamic.Tekla.Structures.Model
             if (CommandStatusChange != null) BindEventToMethod("CommandStatusChange", "TeklaObject_CommandStatusChange");
             if (ClashDetected != null) BindEventToMethod("ClashDetected", "TeklaObject_ClashDetected");
             if (ClashCheckDone != null) BindEventToMethod("ClashCheckDone", "TeklaObject_ClashCheckDone");
-            teklaObject.Register();
+
+            try
+            {
+                teklaObject.Register();
+            }
+            catch (Exception ex)
+            {
+                throw new DynamicAPIException("Internal error: " + ex.Message, ex);
+            }
         }
 
         public void UnRegister()
         {
-            teklaObject.UnRegister();
-            NewTeklaObject();
+            try
+            {
+                teklaObject.UnRegister();
+                NewTeklaObject();
+            }
+            catch (Exception ex)
+            {
+                throw new DynamicAPIException("Internal error: " + ex.Message, ex);
+            }
         }
 
         private void TeklaObject_ClashCheckDone(int NumbersOfClashes)

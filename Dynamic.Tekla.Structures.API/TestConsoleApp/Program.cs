@@ -17,12 +17,23 @@ namespace TestConsoleApp
         static void Main(string[] args)
         {
             //StaticFieldsOrProperties();
-           // InsertBeam();
-           // OpenDrawingAndInsertLine();
-           // Events();
-           
+            // InsertBeam();
+            // OpenDrawingAndInsertLine();
+            // Events();
+
+            OperatorOverload();
+
             Console.WriteLine("end");
             Console.ReadKey();
+        }
+
+        private static void OperatorOverload()
+        {
+            var p1 = new Point(0, 0, 0);
+            var p2 = new Point(1000, 0, 0);
+
+            var p3 = p1 + p2;
+            Console.WriteLine(p3.X);
         }
 
         private static void StaticFieldsOrProperties()

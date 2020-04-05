@@ -789,13 +789,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionFormatAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DimensionFormatAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -813,7 +813,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionFormatAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -824,7 +824,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static DimensionFormatAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DimensionFormatAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -894,13 +894,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionPlacingAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DimensionPlacingAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -918,7 +918,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionPlacingAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -929,7 +929,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static DimensionPlacingAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DimensionPlacingAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -999,13 +999,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionTextAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DimensionTextAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1023,7 +1023,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionTextAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1034,7 +1034,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static DimensionTextAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DimensionTextAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -1097,13 +1097,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(CombinedDimensionAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static CombinedDimensionAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1121,7 +1121,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(CombinedDimensionAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1132,7 +1132,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static CombinedDimensionAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<CombinedDimensionAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -1223,13 +1223,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionExaggerationAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DimensionExaggerationAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1247,7 +1247,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionExaggerationAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1258,7 +1258,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static DimensionExaggerationAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DimensionExaggerationAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -1277,13 +1277,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionSetBaseAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DimensionSetBaseAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -1301,7 +1301,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(DimensionSetBaseAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -1312,7 +1312,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static DimensionSetBaseAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DimensionSetBaseAttributes>();
             foreach(var tsItem in tsArray)
             {

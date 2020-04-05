@@ -245,13 +245,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(TextAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static TextAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -269,7 +269,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(TextAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -280,7 +280,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static TextAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<TextAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -299,13 +299,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Text dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Text FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -323,7 +323,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(Text[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -334,7 +334,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static Text[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Text>();
             foreach(var tsItem in tsArray)
             {

@@ -55,13 +55,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomBoolean dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static CustomBoolean FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -79,7 +79,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomBoolean[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -90,7 +90,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomBoolean[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<CustomBoolean>();
             foreach(var tsItem in tsArray)
             {
@@ -132,13 +132,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomDateTime dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static CustomDateTime FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -156,7 +156,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomDateTime[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -167,7 +167,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomDateTime[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<CustomDateTime>();
             foreach(var tsItem in tsArray)
             {
@@ -209,13 +209,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomNumber dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static CustomNumber FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -233,7 +233,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomNumber[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -244,7 +244,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomNumber[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<CustomNumber>();
             foreach(var tsItem in tsArray)
             {
@@ -286,13 +286,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomString dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static CustomString FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -310,7 +310,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(CustomString[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -321,7 +321,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static CustomString[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<CustomString>();
             foreach(var tsItem in tsArray)
             {
@@ -360,13 +360,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(ActualEndDate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ActualEndDate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -384,7 +384,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(ActualEndDate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -395,7 +395,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static ActualEndDate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ActualEndDate>();
             foreach(var tsItem in tsArray)
             {
@@ -434,13 +434,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(ActualStartDate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ActualStartDate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -458,7 +458,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(ActualStartDate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -469,7 +469,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static ActualStartDate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ActualStartDate>();
             foreach(var tsItem in tsArray)
             {
@@ -508,13 +508,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Completeness dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Completeness FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -532,7 +532,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Completeness[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -543,7 +543,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Completeness[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Completeness>();
             foreach(var tsItem in tsArray)
             {
@@ -582,13 +582,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Critical dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Critical FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -606,7 +606,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Critical[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -617,7 +617,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Critical[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Critical>();
             foreach(var tsItem in tsArray)
             {
@@ -656,13 +656,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Local dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Local FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -680,7 +680,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Local[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -691,7 +691,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Local[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Local>();
             foreach(var tsItem in tsArray)
             {
@@ -730,13 +730,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Name dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Name FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -754,7 +754,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(Name[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -765,7 +765,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static Name[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Name>();
             foreach(var tsItem in tsArray)
             {
@@ -804,13 +804,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(PlannedEndDate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static PlannedEndDate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -828,7 +828,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(PlannedEndDate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -839,7 +839,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PlannedEndDate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<PlannedEndDate>();
             foreach(var tsItem in tsArray)
             {
@@ -878,13 +878,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(PlannedStartDate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static PlannedStartDate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -902,7 +902,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(PlannedStartDate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -913,7 +913,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static PlannedStartDate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<PlannedStartDate>();
             foreach(var tsItem in tsArray)
             {
@@ -932,13 +932,13 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(TaskFilterExpressions dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static TaskFilterExpressions FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -956,7 +956,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
     {
         public static dynamic GetTSObject(TaskFilterExpressions[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -967,7 +967,7 @@ namespace Dynamic.Tekla.Structures.Filtering.Categories
 
         public static TaskFilterExpressions[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<TaskFilterExpressions>();
             foreach(var tsItem in tsArray)
             {

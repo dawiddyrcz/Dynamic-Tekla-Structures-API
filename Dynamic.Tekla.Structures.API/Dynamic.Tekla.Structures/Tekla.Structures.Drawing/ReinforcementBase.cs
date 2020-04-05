@@ -336,13 +336,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementSingleAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementSingleAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -360,7 +360,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementSingleAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -371,7 +371,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementSingleAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementSingleAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -439,13 +439,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementGroupAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementGroupAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -463,7 +463,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementGroupAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -474,7 +474,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementGroupAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementGroupAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -542,13 +542,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementSetGroupAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementSetGroupAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -566,7 +566,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementSetGroupAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -577,7 +577,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementSetGroupAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementSetGroupAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -651,13 +651,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementStrandAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementStrandAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -675,7 +675,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementStrandAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -686,7 +686,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementStrandAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementStrandAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -766,13 +766,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementMeshAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementMeshAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -790,7 +790,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementMeshAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -801,7 +801,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementMeshAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementMeshAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -877,13 +877,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementBaseAttributes dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementBaseAttributes FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -901,7 +901,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementBaseAttributes[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -912,7 +912,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementBaseAttributes[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementBaseAttributes>();
             foreach(var tsItem in tsArray)
             {
@@ -931,13 +931,13 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementBase dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ReinforcementBase FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -955,7 +955,7 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
         public static dynamic GetTSObject(ReinforcementBase[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -966,7 +966,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
         public static ReinforcementBase[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ReinforcementBase>();
             foreach(var tsItem in tsArray)
             {

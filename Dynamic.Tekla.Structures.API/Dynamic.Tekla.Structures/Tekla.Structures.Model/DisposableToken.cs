@@ -42,6 +42,8 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public static Dynamic.Tekla.Structures.Model.DisposableToken operator +(Dynamic.Tekla.Structures.Model.DisposableToken o1, System.IDisposable o2)
 		{
+			if (o1 is null) throw new System.ArgumentNullException("o1");
+			if (o2 is null) throw new System.ArgumentNullException("o2");
 			var o1Tek = Dynamic.Tekla.Structures.Model.DisposableToken_.GetTSObject(o1);
 			var o2Tek = o2;
 			return Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(o1Tek + o2Tek);
@@ -55,13 +57,13 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DisposableToken dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static DisposableToken FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -79,7 +81,7 @@ namespace Dynamic.Tekla.Structures.Model
     {
         public static dynamic GetTSObject(DisposableToken[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -90,7 +92,7 @@ namespace Dynamic.Tekla.Structures.Model
 
         public static DisposableToken[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<DisposableToken>();
             foreach(var tsItem in tsArray)
             {

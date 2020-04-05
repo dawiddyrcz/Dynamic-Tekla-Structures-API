@@ -351,6 +351,7 @@ namespace CodeGenerator
                         break;
                     case ("op_Inequality"):
                         operatorr = "!=";
+                        
                         break;
                     case ("op_Addition"):
                         operatorr = "+";
@@ -377,6 +378,11 @@ namespace CodeGenerator
                 sb.Append(" o2");
                 sb.Append(")\n");
                 sb.Append("\t\t{\n");
+
+                if (param1.ParameterType.IsValueType == false)
+                    sb.Append("\t\t\tif (o1 is null) throw new System.ArgumentNullException(\"o1\");\n");
+                if (param2.ParameterType.IsValueType == false)
+                    sb.Append("\t\t\tif (o2 is null) throw new System.ArgumentNullException(\"o2\");\n");
 
                 sb.Append("\t\t\tvar o1Tek = ");
                 if (IsTeklaType(param1.ParameterType))
@@ -423,13 +429,13 @@ $nestedTypes
     {
         public static dynamic GetTSObject($classname dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.$dfield;
         }
 
         public static $classname FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = ""Dynamic."" + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -447,7 +453,7 @@ $nestedTypes
     {
         public static dynamic GetTSObject($classname[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -458,7 +464,7 @@ $nestedTypes
 
         public static $classname[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<$classname>();
             foreach(var tsItem in tsArray)
             {

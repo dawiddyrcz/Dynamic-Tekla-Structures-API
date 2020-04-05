@@ -73,18 +73,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.AABB o1, Dynamic.Tekla.Structures.Geometry3d.AABB o2)
 		{
+			if (o1 is null) throw new System.ArgumentNullException("o1");
+			if (o2 is null) throw new System.ArgumentNullException("o2");
 			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o1);
 			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o2);
 			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
 		}
 		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.AABB o1, Dynamic.Tekla.Structures.Geometry3d.Point o2)
 		{
+			if (o1 is null) throw new System.ArgumentNullException("o1");
+			if (o2 is null) throw new System.ArgumentNullException("o2");
 			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o1);
 			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(o2);
 			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
 		}
 		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.Point o1, Dynamic.Tekla.Structures.Geometry3d.AABB o2)
 		{
+			if (o1 is null) throw new System.ArgumentNullException("o1");
+			if (o2 is null) throw new System.ArgumentNullException("o2");
 			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(o1);
 			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(o2);
 			return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(o1Tek + o2Tek);
@@ -98,13 +104,13 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(AABB dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static AABB FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -122,7 +128,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
         public static dynamic GetTSObject(AABB[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -133,7 +139,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
         public static AABB[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<AABB>();
             foreach(var tsItem in tsArray)
             {

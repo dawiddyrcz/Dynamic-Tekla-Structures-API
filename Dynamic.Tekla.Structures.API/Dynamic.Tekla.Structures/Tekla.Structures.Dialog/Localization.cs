@@ -144,13 +144,13 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(LocalizationCallback dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static LocalizationCallback FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -168,7 +168,7 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(LocalizationCallback[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -179,7 +179,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         public static LocalizationCallback[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<LocalizationCallback>();
             foreach(var tsItem in tsArray)
             {
@@ -278,13 +278,13 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(PropertyLocalizer dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static PropertyLocalizer FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -302,7 +302,7 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(PropertyLocalizer[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -313,7 +313,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         public static PropertyLocalizer[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<PropertyLocalizer>();
             foreach(var tsItem in tsArray)
             {
@@ -332,13 +332,13 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(Util dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Util FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -356,7 +356,7 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(Util[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -367,7 +367,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         public static Util[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Util>();
             foreach(var tsItem in tsArray)
             {
@@ -386,13 +386,13 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(Localization dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Localization FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -410,7 +410,7 @@ namespace Dynamic.Tekla.Structures.Dialog
     {
         public static dynamic GetTSObject(Localization[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -421,7 +421,7 @@ namespace Dynamic.Tekla.Structures.Dialog
 
         public static Localization[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Localization>();
             foreach(var tsItem in tsArray)
             {

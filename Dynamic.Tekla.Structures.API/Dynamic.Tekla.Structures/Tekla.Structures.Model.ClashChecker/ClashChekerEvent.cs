@@ -67,13 +67,13 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashCheckDoneDelegate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ClashCheckDoneDelegate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -91,7 +91,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashCheckDoneDelegate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -102,7 +102,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         public static ClashCheckDoneDelegate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ClashCheckDoneDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -155,13 +155,13 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashDetectedDelegate dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ClashDetectedDelegate FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -179,7 +179,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashDetectedDelegate[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -190,7 +190,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         public static ClashDetectedDelegate[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ClashDetectedDelegate>();
             foreach(var tsItem in tsArray)
             {
@@ -209,13 +209,13 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashChekerEvent dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ClashChekerEvent FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -233,7 +233,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
     {
         public static dynamic GetTSObject(ClashChekerEvent[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -244,7 +244,7 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
         public static ClashChekerEvent[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ClashChekerEvent>();
             foreach(var tsItem in tsArray)
             {

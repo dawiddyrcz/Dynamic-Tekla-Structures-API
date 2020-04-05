@@ -711,13 +711,13 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(ProgressBar dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static ProgressBar FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -735,7 +735,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(ProgressBar[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -746,7 +746,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public static ProgressBar[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<ProgressBar>();
             foreach(var tsItem in tsArray)
             {
@@ -765,13 +765,13 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(Operation dynObject)
         {
-            if (dynObject == null) return null;
+            if (dynObject is null) return null;
             return dynObject.teklaObject;
         }
 
         public static Operation FromTSObject(dynamic tsObject)
         {
-            if (tsObject == null) return null;
+            if (tsObject is null) return null;
             var typeName = "Dynamic." + tsObject.GetType().FullName;
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
             
@@ -789,7 +789,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
     {
         public static dynamic GetTSObject(Operation[] dynArray)
         {
-            if (dynArray == null) return null;
+            if (dynArray is null) return null;
             var list = new System.Collections.Generic.List<dynamic>();
             foreach(var dynItem in dynArray)
             {
@@ -800,7 +800,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 
         public static Operation[] FromTSObject(dynamic[] tsArray)
         {
-            if (tsArray == null) return null;
+            if (tsArray is null) return null;
             var list = new System.Collections.Generic.List<Operation>();
             foreach(var tsItem in tsArray)
             {

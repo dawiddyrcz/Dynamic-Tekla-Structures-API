@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintScalingType ScalingType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingType);
-			set { teklaObject.ScalingType = Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingType);
+			}
+			set
+			{
+				teklaObject.ScalingType = Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Scale
@@ -43,14 +49,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType Orientation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
-			set { teklaObject.Orientation = Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
+			}
+			set
+			{
+				teklaObject.Orientation = Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintAreaType PrintArea
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.FromTSObject(teklaObject.PrintArea);
-			set { teklaObject.PrintArea = Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.FromTSObject(teklaObject.PrintArea);
+			}
+			set
+			{
+				teklaObject.PrintArea = Dynamic.Tekla.Structures.Drawing.DotPrintAreaType_.GetTSObject(value);
+			}
 		}
 
         

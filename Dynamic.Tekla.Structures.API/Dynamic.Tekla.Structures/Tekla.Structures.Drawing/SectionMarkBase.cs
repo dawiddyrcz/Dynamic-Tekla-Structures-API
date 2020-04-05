@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point LeftPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LeftPoint);
-			set { teklaObject.LeftPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LeftPoint);
+			}
+			set
+			{
+				teklaObject.LeftPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point RightPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.RightPoint);
-			set { teklaObject.RightPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.RightPoint);
+			}
+			set
+			{
+				teklaObject.RightPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -42,8 +60,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes Shape
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes_.FromTSObject(teklaObject.Shape);
-			set { teklaObject.Shape = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes_.FromTSObject(teklaObject.Shape);
+			}
+			set
+			{
+				teklaObject.Shape = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol.SymbolShapes_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Size
@@ -54,8 +78,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position);
-			set { teklaObject.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position);
+			}
+			set
+			{
+				teklaObject.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
         
@@ -258,32 +288,62 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingColors LineColor
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.LineColor);
-			set { teklaObject.LineColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.LineColor);
+			}
+			set
+			{
+				teklaObject.LineColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingColors SymbolColor
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.SymbolColor);
-			set { teklaObject.SymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.SymbolColor);
+			}
+			set
+			{
+				teklaObject.SymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol LeftSymbol
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.FromTSObject(teklaObject.LeftSymbol);
-			set { teklaObject.LeftSymbol = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.FromTSObject(teklaObject.LeftSymbol);
+			}
+			set
+			{
+				teklaObject.LeftSymbol = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol RightSymbol
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.FromTSObject(teklaObject.RightSymbol);
-			set { teklaObject.RightSymbol = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.FromTSObject(teklaObject.RightSymbol);
+			}
+			set
+			{
+				teklaObject.RightSymbol = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkSymbol_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes TagsAttributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
-			set { teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
+			}
+			set
+			{
+				teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagsAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -368,14 +428,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide ShowOnSide
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide_.FromTSObject(teklaObject.ShowOnSide);
-			set { teklaObject.ShowOnSide = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide_.FromTSObject(teklaObject.ShowOnSide);
+			}
+			set
+			{
+				teklaObject.ShowOnSide = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagShowOnSide_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation TagRotation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation_.FromTSObject(teklaObject.TagRotation);
-			set { teklaObject.TagRotation = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation_.FromTSObject(teklaObject.TagRotation);
+			}
+			set
+			{
+				teklaObject.TagRotation = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes.TagTextRotation_.GetTSObject(value);
+			}
 		}
 
         
@@ -559,32 +631,62 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes TagA1
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA1);
-			set { teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA1);
+			}
+			set
+			{
+				teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes TagA2
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA2);
-			set { teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA2);
+			}
+			set
+			{
+				teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes TagA3
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA3);
-			set { teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA3);
+			}
+			set
+			{
+				teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes TagA4
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA4);
-			set { teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA4);
+			}
+			set
+			{
+				teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes TagA5
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA5);
-			set { teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.FromTSObject(teklaObject.TagA5);
+			}
+			set
+			{
+				teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkTagAttributes_.GetTSObject(value);
+			}
 		}
 
         

@@ -19,14 +19,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingHatchColors Color
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingHatchColors BackgroundColor
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.FromTSObject(teklaObject.BackgroundColor);
-			set { teklaObject.BackgroundColor = Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.FromTSObject(teklaObject.BackgroundColor);
+			}
+			set
+			{
+				teklaObject.BackgroundColor = Dynamic.Tekla.Structures.Drawing.DrawingHatchColors_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean DrawBackgroundColor

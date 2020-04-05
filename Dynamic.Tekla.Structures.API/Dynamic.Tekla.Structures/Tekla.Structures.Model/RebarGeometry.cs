@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.Shape);
+			}
 		}
 
 		public System.Double Diameter

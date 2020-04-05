@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
-			set { teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
+			}
+			set
+			{
+				teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Radius
@@ -25,8 +31,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Circle.CircleAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Circle.CircleAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Circle.CircleAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Circle.CircleAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Circle.CircleAttributes_.GetTSObject(value);
+			}
 		}
 
         

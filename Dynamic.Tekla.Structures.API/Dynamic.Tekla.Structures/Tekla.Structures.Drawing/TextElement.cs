@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
 		{
-			get => Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
-			set { teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
+			}
+			set
+			{
+				teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.String Value

@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Identifier CastUnitIdentifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.CastUnitIdentifier);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.CastUnitIdentifier);
+			}
 		}
 
 		public System.Int32 SheetNumber

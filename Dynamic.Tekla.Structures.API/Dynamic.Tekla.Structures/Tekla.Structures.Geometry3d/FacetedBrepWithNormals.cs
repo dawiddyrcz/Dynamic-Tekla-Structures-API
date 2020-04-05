@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector[] Normals
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(teklaObject.Normals);
-			set { teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(teklaObject.Normals);
+			}
+			set
+			{
+				teklaObject.Normals = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(value);
+			}
 		}
 
         

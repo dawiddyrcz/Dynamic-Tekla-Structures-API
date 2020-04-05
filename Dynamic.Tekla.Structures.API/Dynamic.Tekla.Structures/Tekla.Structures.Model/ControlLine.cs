@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.LineSegment Line
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.Line);
-			set { teklaObject.Line = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(teklaObject.Line);
+			}
+			set
+			{
+				teklaObject.Line = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean IsMagnetic
@@ -31,14 +37,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Model.ControlLine.ControlLineColorEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(teklaObject.LineType);
-			set { teklaObject.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(teklaObject.LineType);
+			}
+			set
+			{
+				teklaObject.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value);
+			}
 		}
 
         

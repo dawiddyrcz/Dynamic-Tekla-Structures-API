@@ -13,26 +13,50 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position1);
-			set { teklaObject.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position1);
+			}
+			set
+			{
+				teklaObject.Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Position2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position2);
-			set { teklaObject.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position2);
+			}
+			set
+			{
+				teklaObject.Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P1);
-			set { teklaObject.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P1);
+			}
+			set
+			{
+				teklaObject.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector P2
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P2);
-			set { teklaObject.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P2);
+			}
+			set
+			{
+				teklaObject.P2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Torsion1
@@ -49,8 +73,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum LoadForm
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(teklaObject.LoadForm);
-			set { teklaObject.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.FromTSObject(teklaObject.LoadForm);
+			}
+			set
+			{
+				teklaObject.LoadForm = Dynamic.Tekla.Structures.Model.LoadLine.LineLoadFormEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double DistanceA

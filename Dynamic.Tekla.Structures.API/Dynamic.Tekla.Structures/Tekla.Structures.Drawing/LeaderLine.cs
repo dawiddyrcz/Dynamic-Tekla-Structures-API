@@ -13,26 +13,50 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
-			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			}
+			set
+			{
+				teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			}
+			set
+			{
+				teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PointList ElbowPoints
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.ElbowPoints);
-			set { teklaObject.ElbowPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.ElbowPoints);
+			}
+			set
+			{
+				teklaObject.ElbowPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes LeaderLineType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.FromTSObject(teklaObject.LeaderLineType);
-			set { teklaObject.LeaderLineType = Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.FromTSObject(teklaObject.LeaderLineType);
+			}
+			set
+			{
+				teklaObject.LeaderLineType = Dynamic.Tekla.Structures.Drawing.LeaderLine.LeaderLineTypes_.GetTSObject(value);
+			}
 		}
 
         

@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolyLine PolyLine
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.PolyLine);
-			set { teklaObject.PolyLine = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(teklaObject.PolyLine);
+			}
+			set
+			{
+				teklaObject.PolyLine = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.Color Color
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 Width
@@ -31,8 +43,14 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType Type
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine.LineType_.GetTSObject(value);
+			}
 		}
 
         

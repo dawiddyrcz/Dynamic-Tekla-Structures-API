@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement RebarGroup1
 		{
-			get => Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(teklaObject.RebarGroup1);
-			set { teklaObject.RebarGroup1 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(teklaObject.RebarGroup1);
+			}
+			set
+			{
+				teklaObject.RebarGroup1 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Reinforcement RebarGroup2
 		{
-			get => Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(teklaObject.RebarGroup2);
-			set { teklaObject.RebarGroup2 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Reinforcement_.FromTSObject(teklaObject.RebarGroup2);
+			}
+			set
+			{
+				teklaObject.RebarGroup2 = Dynamic.Tekla.Structures.Model.Reinforcement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double LapLength
@@ -49,8 +67,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum BarPositions
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(teklaObject.BarPositions);
-			set { teklaObject.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.FromTSObject(teklaObject.BarPositions);
+			}
+			set
+			{
+				teklaObject.BarPositions = Dynamic.Tekla.Structures.Model.RebarSplice.RebarSpliceBarPositionsEnum_.GetTSObject(value);
+			}
 		}
 
         

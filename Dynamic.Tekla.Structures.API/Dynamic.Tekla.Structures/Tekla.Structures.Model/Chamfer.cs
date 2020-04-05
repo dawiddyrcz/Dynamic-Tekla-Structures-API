@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double X

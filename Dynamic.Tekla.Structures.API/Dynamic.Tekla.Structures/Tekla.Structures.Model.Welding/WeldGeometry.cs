@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 
 		public Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum Position
 		{
-			get => Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
+			}
 		}
 
 		public System.Collections.ArrayList Polygons

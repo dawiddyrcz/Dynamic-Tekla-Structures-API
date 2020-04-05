@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.PointList Points
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.Points);
-			set { teklaObject.Points = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.Points);
+			}
+			set
+			{
+				teklaObject.Points = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Bulge
@@ -25,8 +31,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Cloud.CloudAttributes_.GetTSObject(value);
+			}
 		}
 
         

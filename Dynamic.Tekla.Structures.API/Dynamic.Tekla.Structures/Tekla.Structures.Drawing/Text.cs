@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point InsertionPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.InsertionPoint);
-			set { teklaObject.InsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.InsertionPoint);
+			}
+			set
+			{
+				teklaObject.InsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public System.String TextString
@@ -25,20 +31,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Text.TextAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Text.TextAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Text.TextAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Text.TextAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Text.TextAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PlacingBase Placing
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(teklaObject.Placing);
-			set { teklaObject.Placing = Dynamic.Tekla.Structures.Drawing.PlacingBase_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(teklaObject.Placing);
+			}
+			set
+			{
+				teklaObject.Placing = Dynamic.Tekla.Structures.Drawing.PlacingBase_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(teklaObject.Hideable);
-			set { teklaObject.Hideable = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(teklaObject.Hideable);
+			}
+			set
+			{
+				teklaObject.Hideable = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value);
+			}
 		}
 
         
@@ -132,14 +156,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
 		{
-			get => Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
-			set { teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
+			}
+			set
+			{
+				teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.TextAlignment Alignment
 		{
-			get => Dynamic.Tekla.Structures.Drawing.TextAlignment_.FromTSObject(teklaObject.Alignment);
-			set { teklaObject.Alignment = Dynamic.Tekla.Structures.Drawing.TextAlignment_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.TextAlignment_.FromTSObject(teklaObject.Alignment);
+			}
+			set
+			{
+				teklaObject.Alignment = Dynamic.Tekla.Structures.Drawing.TextAlignment_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Angle
@@ -150,26 +186,50 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Frame Frame
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Frame_.FromTSObject(teklaObject.Frame);
-			set { teklaObject.Frame = Dynamic.Tekla.Structures.Drawing.Frame_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Frame_.FromTSObject(teklaObject.Frame);
+			}
+			set
+			{
+				teklaObject.Frame = Dynamic.Tekla.Structures.Drawing.Frame_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes ArrowHead
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.FromTSObject(teklaObject.ArrowHead);
-			set { teklaObject.ArrowHead = Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.FromTSObject(teklaObject.ArrowHead);
+			}
+			set
+			{
+				teklaObject.ArrowHead = Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PreferredPlacing
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(teklaObject.PreferredPlacing);
-			set { teklaObject.PreferredPlacing = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(teklaObject.PreferredPlacing);
+			}
+			set
+			{
+				teklaObject.PreferredPlacing = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PlacingAttributes PlacingAttributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PlacingAttributes_.FromTSObject(teklaObject.PlacingAttributes);
-			set { teklaObject.PlacingAttributes = Dynamic.Tekla.Structures.Drawing.PlacingAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PlacingAttributes_.FromTSObject(teklaObject.PlacingAttributes);
+			}
+			set
+			{
+				teklaObject.PlacingAttributes = Dynamic.Tekla.Structures.Drawing.PlacingAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean UseWordWrapping

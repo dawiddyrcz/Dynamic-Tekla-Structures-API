@@ -25,8 +25,14 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 Number

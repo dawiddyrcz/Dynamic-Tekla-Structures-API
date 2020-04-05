@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Arc CylinderBase
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(teklaObject.CylinderBase);
-			set { teklaObject.CylinderBase = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(teklaObject.CylinderBase);
+			}
+			set
+			{
+				teklaObject.CylinderBase = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value);
+			}
 		}
 
 		public System.Double CylinderHeight

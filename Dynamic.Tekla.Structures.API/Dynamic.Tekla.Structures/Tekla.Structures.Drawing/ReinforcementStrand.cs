@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementStrandAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Double ReinforcementCustomPosition

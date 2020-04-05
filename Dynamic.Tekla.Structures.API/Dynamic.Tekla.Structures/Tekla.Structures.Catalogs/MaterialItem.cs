@@ -37,8 +37,14 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.MaterialItem.MaterialItemTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.MaterialItem.MaterialItemTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.MaterialItem.MaterialItemTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.MaterialItem.MaterialItemTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.MaterialItem.MaterialItemTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double ProfileDensity

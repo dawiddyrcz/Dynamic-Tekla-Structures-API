@@ -31,8 +31,14 @@ namespace Dynamic.Tekla.Structures
 
 		public Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum BoltEdgeDistanceReference
 		{
-			get => Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(teklaObject.BoltEdgeDistanceReference);
-			set { teklaObject.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.FromTSObject(teklaObject.BoltEdgeDistanceReference);
+			}
+			set
+			{
+				teklaObject.BoltEdgeDistanceReference = Dynamic.Tekla.Structures.ComponentOptions.BoltEdgeDistanceReferenceEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.String BoltStandard

@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.View Current
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
+			}
 		}
 
 		public System.Int32 Count

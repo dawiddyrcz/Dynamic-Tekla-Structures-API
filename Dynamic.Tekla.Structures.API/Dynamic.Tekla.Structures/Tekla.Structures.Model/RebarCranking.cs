@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum CrankSide
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(teklaObject.CrankSide);
-			set { teklaObject.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.FromTSObject(teklaObject.CrankSide);
+			}
+			set
+			{
+				teklaObject.CrankSide = Dynamic.Tekla.Structures.Model.RebarCranking.CrankSideEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double CrankRotation
@@ -31,8 +37,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum CrankedLengthType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(teklaObject.CrankedLengthType);
-			set { teklaObject.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.FromTSObject(teklaObject.CrankedLengthType);
+			}
+			set
+			{
+				teklaObject.CrankedLengthType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double CrankedRatio
@@ -55,8 +67,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum CrankingType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(teklaObject.CrankingType);
-			set { teklaObject.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.FromTSObject(teklaObject.CrankingType);
+			}
+			set
+			{
+				teklaObject.CrankingType = Dynamic.Tekla.Structures.Model.RebarCranking.CrankingTypeEnum_.GetTSObject(value);
+			}
 		}
 
         

@@ -24,8 +24,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes Hatch
 		{
-			get => Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.FromTSObject(teklaObject.Hatch);
-			set { teklaObject.Hatch = Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.FromTSObject(teklaObject.Hatch);
+			}
+			set
+			{
+				teklaObject.Hatch = Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean BehindModelObjects

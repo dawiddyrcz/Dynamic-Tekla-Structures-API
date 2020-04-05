@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum Shape
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(teklaObject.Shape);
-			set { teklaObject.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.FromTSObject(teklaObject.Shape);
+			}
+			set
+			{
+				teklaObject.Shape = Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Angle

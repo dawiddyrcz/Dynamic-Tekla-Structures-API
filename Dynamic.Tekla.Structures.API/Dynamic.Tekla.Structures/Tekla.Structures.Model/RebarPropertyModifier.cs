@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarPropertiesNullable RebarProperties
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(teklaObject.RebarProperties);
-			set { teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(teklaObject.RebarProperties);
+			}
+			set
+			{
+				teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value);
+			}
 		}
 
 		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType

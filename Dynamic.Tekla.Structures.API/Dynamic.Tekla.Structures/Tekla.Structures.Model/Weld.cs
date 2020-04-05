@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum Position
 		{
-			get => Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.FromTSObject(teklaObject.Position);
-			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.FromTSObject(teklaObject.Position);
+			}
+			set
+			{
+				teklaObject.Position = Dynamic.Tekla.Structures.Model.Weld.WeldPositionEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Direction
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Direction);
-			set { teklaObject.Direction = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Direction);
+			}
+			set
+			{
+				teklaObject.Direction = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
         

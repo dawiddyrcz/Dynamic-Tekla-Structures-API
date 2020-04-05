@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItem Current
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItem_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItem_.FromTSObject(teklaObject.Current);
+			}
 		}
 
         

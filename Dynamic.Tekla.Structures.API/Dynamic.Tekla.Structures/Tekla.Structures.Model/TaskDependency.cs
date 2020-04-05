@@ -25,20 +25,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Task Primary
 		{
-			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Primary);
-			set { teklaObject.Primary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Primary);
+			}
+			set
+			{
+				teklaObject.Primary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Task Secondary
 		{
-			get => Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Secondary);
-			set { teklaObject.Secondary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Task_.FromTSObject(teklaObject.Secondary);
+			}
+			set
+			{
+				teklaObject.Secondary = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
 		{
-			get => Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(teklaObject.DependencyType);
-			set { teklaObject.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(teklaObject.DependencyType);
+			}
+			set
+			{
+				teklaObject.DependencyType = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value);
+			}
 		}
 
         

@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Model.ControlObjectColorEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.ControlObjectLineType LineType
 		{
-			get => Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(teklaObject.LineType);
-			set { teklaObject.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.ControlObjectLineType_.FromTSObject(teklaObject.LineType);
+			}
+			set
+			{
+				teklaObject.LineType = Dynamic.Tekla.Structures.Model.ControlObjectLineType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Polycurve Geometry
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(teklaObject.Geometry);
-			set { teklaObject.Geometry = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(teklaObject.Geometry);
+			}
+			set
+			{
+				teklaObject.Geometry = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(value);
+			}
 		}
 
         

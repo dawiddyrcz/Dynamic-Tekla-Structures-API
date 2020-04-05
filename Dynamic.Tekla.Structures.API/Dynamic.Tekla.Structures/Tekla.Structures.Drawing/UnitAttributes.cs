@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Units Unit
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Units_.FromTSObject(teklaObject.Unit);
-			set { teklaObject.Unit = Dynamic.Tekla.Structures.Drawing.Units_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Units_.FromTSObject(teklaObject.Unit);
+			}
+			set
+			{
+				teklaObject.Unit = Dynamic.Tekla.Structures.Drawing.Units_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.FormatTypes Format
 		{
-			get => Dynamic.Tekla.Structures.Drawing.FormatTypes_.FromTSObject(teklaObject.Format);
-			set { teklaObject.Format = Dynamic.Tekla.Structures.Drawing.FormatTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.FormatTypes_.FromTSObject(teklaObject.Format);
+			}
+			set
+			{
+				teklaObject.Format = Dynamic.Tekla.Structures.Drawing.FormatTypes_.GetTSObject(value);
+			}
 		}
 
         

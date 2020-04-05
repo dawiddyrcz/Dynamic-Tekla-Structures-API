@@ -13,14 +13,22 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemTypeEnum ProfileItemType
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemTypeEnum_.FromTSObject(teklaObject.ProfileItemType);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemTypeEnum_.FromTSObject(teklaObject.ProfileItemType);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum ProfileItemSubType
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.FromTSObject(teklaObject.ProfileItemSubType);
-			set { teklaObject.ProfileItemSubType = Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.FromTSObject(teklaObject.ProfileItemSubType);
+			}
+			set
+			{
+				teklaObject.ProfileItemSubType = Dynamic.Tekla.Structures.Catalogs.ProfileItem.ProfileItemSubTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Collections.ArrayList aProfileItemParameters

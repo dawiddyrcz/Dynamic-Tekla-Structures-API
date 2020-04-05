@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Identifier ModelIdentifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.ModelIdentifier);
-			set { teklaObject.ModelIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.ModelIdentifier);
+			}
+			set
+			{
+				teklaObject.ModelIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(teklaObject.Hideable);
-			set { teklaObject.Hideable = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(teklaObject.Hideable);
+			}
+			set
+			{
+				teklaObject.Hideable = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value);
+			}
 		}
 
         

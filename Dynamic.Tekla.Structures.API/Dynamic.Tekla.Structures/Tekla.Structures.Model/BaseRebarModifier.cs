@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSet Father
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
-			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
+			}
+			set
+			{
+				teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
-			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
+			}
+			set
+			{
+				teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
 		{
-			get => Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
-			set { teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
+			}
+			set
+			{
+				teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 FirstAffectedBar

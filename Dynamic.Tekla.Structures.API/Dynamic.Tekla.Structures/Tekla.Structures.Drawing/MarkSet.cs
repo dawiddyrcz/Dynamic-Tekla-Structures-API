@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.MarkSet.MarkSetAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.MarkSet.MarkSetAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.MarkSet.MarkSetAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.MarkSet.MarkSetAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.MarkSet.MarkSetAttributes_.GetTSObject(value);
+			}
 		}
 
         

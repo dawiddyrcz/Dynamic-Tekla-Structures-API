@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.BoltItem.BoltItemTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Size

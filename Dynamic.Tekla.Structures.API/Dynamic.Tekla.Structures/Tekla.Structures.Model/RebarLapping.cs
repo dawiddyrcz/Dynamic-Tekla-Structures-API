@@ -19,20 +19,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum LapSide
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(teklaObject.LapSide);
-			set { teklaObject.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(teklaObject.LapSide);
+			}
+			set
+			{
+				teklaObject.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum LapPlacement
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(teklaObject.LapPlacement);
-			set { teklaObject.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(teklaObject.LapPlacement);
+			}
+			set
+			{
+				teklaObject.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum LappingType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(teklaObject.LappingType);
-			set { teklaObject.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(teklaObject.LappingType);
+			}
+			set
+			{
+				teklaObject.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value);
+			}
 		}
 
         

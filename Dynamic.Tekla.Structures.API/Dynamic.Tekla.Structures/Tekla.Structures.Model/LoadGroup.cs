@@ -19,14 +19,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType GroupType
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(teklaObject.GroupType);
-			set { teklaObject.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(teklaObject.GroupType);
+			}
+			set
+			{
+				teklaObject.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection Direction
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(teklaObject.Direction);
-			set { teklaObject.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(teklaObject.Direction);
+			}
+			set
+			{
+				teklaObject.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 Compatible
@@ -43,8 +55,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup.Colors Color
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value);
+			}
 		}
 
         

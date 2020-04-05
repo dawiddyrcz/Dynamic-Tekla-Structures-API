@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.TemplateInfo Template
 		{
-			get => Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(teklaObject.Template);
-			set { teklaObject.Template = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(teklaObject.Template);
+			}
+			set
+			{
+				teklaObject.Template = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value);
+			}
 		}
 
         

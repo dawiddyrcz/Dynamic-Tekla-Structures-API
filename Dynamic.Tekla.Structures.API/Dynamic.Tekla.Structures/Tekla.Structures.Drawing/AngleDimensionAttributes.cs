@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.AngleTypes Type
 		{
-			get => Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Drawing.AngleTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Drawing.AngleTypes_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 TriangleBase

@@ -19,14 +19,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.HierarchicDefinition Definition
 		{
-			get => Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(teklaObject.Definition);
-			set { teklaObject.Definition = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(teklaObject.Definition);
+			}
+			set
+			{
+				teklaObject.Definition = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.HierarchicObject Father
 		{
-			get => Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(teklaObject.Father);
-			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.HierarchicObject_.FromTSObject(teklaObject.Father);
+			}
+			set
+			{
+				teklaObject.Father = Dynamic.Tekla.Structures.Model.HierarchicObject_.GetTSObject(value);
+			}
 		}
 
 		public System.Collections.ArrayList HierarchicChildren

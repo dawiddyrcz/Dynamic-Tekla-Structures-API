@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingUpToDateStatus UpToDateStatus
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingUpToDateStatus_.FromTSObject(teklaObject.UpToDateStatus);
-			set { teklaObject.UpToDateStatus = Dynamic.Tekla.Structures.Drawing.DrawingUpToDateStatus_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingUpToDateStatus_.FromTSObject(teklaObject.UpToDateStatus);
+			}
+			set
+			{
+				teklaObject.UpToDateStatus = Dynamic.Tekla.Structures.Drawing.DrawingUpToDateStatus_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean IsMasterDrawing
@@ -109,8 +115,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.LayoutAttributes Layout
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LayoutAttributes_.FromTSObject(teklaObject.Layout);
-			set { teklaObject.Layout = Dynamic.Tekla.Structures.Drawing.LayoutAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LayoutAttributes_.FromTSObject(teklaObject.Layout);
+			}
+			set
+			{
+				teklaObject.Layout = Dynamic.Tekla.Structures.Drawing.LayoutAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.String SectionViewStartLabel

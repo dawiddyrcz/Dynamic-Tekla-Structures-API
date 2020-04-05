@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing Target
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Target);
-			set { teklaObject.Target = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Target);
+			}
+			set
+			{
+				teklaObject.Target = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(value);
+			}
 		}
 
         

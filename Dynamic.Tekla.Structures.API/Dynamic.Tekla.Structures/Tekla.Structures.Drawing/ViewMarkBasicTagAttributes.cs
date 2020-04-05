@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector Offset
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Offset);
-			set { teklaObject.Offset = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Offset);
+			}
+			set
+			{
+				teklaObject.Offset = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.TagLocation Location
 		{
-			get => Dynamic.Tekla.Structures.Drawing.TagLocation_.FromTSObject(teklaObject.Location);
-			set { teklaObject.Location = Dynamic.Tekla.Structures.Drawing.TagLocation_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.TagLocation_.FromTSObject(teklaObject.Location);
+			}
+			set
+			{
+				teklaObject.Location = Dynamic.Tekla.Structures.Drawing.TagLocation_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement TagContent
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.TagContent);
-			set { teklaObject.TagContent = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.TagContent);
+			}
+			set
+			{
+				teklaObject.TagContent = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
         

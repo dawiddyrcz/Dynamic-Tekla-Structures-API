@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileName Profile
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ProfileName_.FromTSObject(teklaObject.Profile);
-			set { teklaObject.Profile = Dynamic.Tekla.Structures.Catalogs.ProfileName_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ProfileName_.FromTSObject(teklaObject.Profile);
+			}
+			set
+			{
+				teklaObject.Profile = Dynamic.Tekla.Structures.Catalogs.ProfileName_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Location

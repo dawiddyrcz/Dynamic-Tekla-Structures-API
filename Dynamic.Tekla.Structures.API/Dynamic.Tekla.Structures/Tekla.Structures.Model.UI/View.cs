@@ -19,20 +19,38 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Identifier Identifier
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-			set { teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
+			}
+			set
+			{
+				teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem ViewCoordinateSystem
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.ViewCoordinateSystem);
-			set { teklaObject.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.ViewCoordinateSystem);
+			}
+			set
+			{
+				teklaObject.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem DisplayCoordinateSystem
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.DisplayCoordinateSystem);
-			set { teklaObject.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.DisplayCoordinateSystem);
+			}
+			set
+			{
+				teklaObject.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
+			}
 		}
 
 		public System.String Name
@@ -43,8 +61,14 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.AABB WorkArea
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.WorkArea);
-			set { teklaObject.WorkArea = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.WorkArea);
+			}
+			set
+			{
+				teklaObject.WorkArea = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value);
+			}
 		}
 
 		public System.Double ViewDepthUp
@@ -61,20 +85,30 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType ViewProjection
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(teklaObject.ViewProjection);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.FromTSObject(teklaObject.ViewProjection);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(teklaObject.DisplayType);
-			set { teklaObject.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.FromTSObject(teklaObject.DisplayType);
+			}
+			set
+			{
+				teklaObject.DisplayType = Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType ViewRendering
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(teklaObject.ViewRendering);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.View.ViewRenderingType_.FromTSObject(teklaObject.ViewRendering);
+			}
 		}
 
 		public System.String ViewFilter
@@ -91,8 +125,14 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings VisibilitySettings
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.FromTSObject(teklaObject.VisibilitySettings);
-			set { teklaObject.VisibilitySettings = Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.FromTSObject(teklaObject.VisibilitySettings);
+			}
+			set
+			{
+				teklaObject.VisibilitySettings = Dynamic.Tekla.Structures.Model.UI.ViewVisibilitySettings_.GetTSObject(value);
+			}
 		}
 
         

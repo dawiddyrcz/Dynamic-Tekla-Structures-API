@@ -13,14 +13,18 @@ namespace Dynamic.Tekla.Structures
 
 		public Dynamic.Tekla.Structures.VirtualFolder AttributesFolder
 		{
-			get => Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.AttributesFolder);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.AttributesFolder);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.VirtualFolder DrawingsFolder
 		{
-			get => Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.DrawingsFolder);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.DrawingsFolder);
+			}
 		}
 
 		public static System.String AssemblyFileExtension

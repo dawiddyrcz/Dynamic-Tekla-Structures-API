@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model.UI
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point Location
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Location);
-			set { teklaObject.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Location);
+			}
+			set
+			{
+				teklaObject.Location = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
-			set { teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
+			}
+			set
+			{
+				teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.UI.View View
 		{
-			get => Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.View);
-			set { teklaObject.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.View);
+			}
+			set
+			{
+				teklaObject.View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(value);
+			}
 		}
 
         

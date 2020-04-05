@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Surfacing.SurfacingAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Surfacing.SurfacingAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Surfacing.SurfacingAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Surfacing.SurfacingAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Surfacing.SurfacingAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -96,8 +102,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Surfacing.Representation Representation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Surfacing.Representation_.FromTSObject(teklaObject.Representation);
-			set { teklaObject.Representation = Dynamic.Tekla.Structures.Drawing.Surfacing.Representation_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Surfacing.Representation_.FromTSObject(teklaObject.Representation);
+			}
+			set
+			{
+				teklaObject.Representation = Dynamic.Tekla.Structures.Drawing.Surfacing.Representation_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean ShowPattern
@@ -120,14 +132,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
-			set { teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
+			}
+			set
+			{
+				teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
-			set { teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
+			}
+			set
+			{
+				teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+			}
 		}
 
         

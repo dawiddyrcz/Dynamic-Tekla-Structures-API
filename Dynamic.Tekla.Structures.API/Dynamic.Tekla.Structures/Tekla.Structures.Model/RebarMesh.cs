@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum MeshType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(teklaObject.MeshType);
-			set { teklaObject.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.FromTSObject(teklaObject.MeshType);
+			}
+			set
+			{
+				teklaObject.MeshType = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum LongitudinalSpacingMethod
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(teklaObject.LongitudinalSpacingMethod);
-			set { teklaObject.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.FromTSObject(teklaObject.LongitudinalSpacingMethod);
+			}
+			set
+			{
+				teklaObject.LongitudinalSpacingMethod = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshSpacingMethodEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Polygon Polygon
 		{
-			get => Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
-			set { teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
+			}
+			set
+			{
+				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
+			}
 		}
 
 		public System.Collections.ArrayList LongitudinalDistances
@@ -61,14 +79,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
-			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			}
+			set
+			{
+				teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			}
+			set
+			{
+				teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public System.Double LeftOverhangLongitudinal
@@ -133,20 +163,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum CrossBarLocation
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(teklaObject.CrossBarLocation);
-			set { teklaObject.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.FromTSObject(teklaObject.CrossBarLocation);
+			}
+			set
+			{
+				teklaObject.CrossBarLocation = Dynamic.Tekla.Structures.Model.RebarMesh.RebarMeshCrossBarLocationEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.StartHook);
-			set { teklaObject.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.StartHook);
+			}
+			set
+			{
+				teklaObject.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.EndHook);
-			set { teklaObject.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.EndHook);
+			}
+			set
+			{
+				teklaObject.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
+			}
 		}
 
         

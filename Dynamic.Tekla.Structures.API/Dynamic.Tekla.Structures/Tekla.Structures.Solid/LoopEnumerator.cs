@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Solid
 
 		public Dynamic.Tekla.Structures.Solid.Loop Current
 		{
-			get => Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
+			}
 		}
 
         

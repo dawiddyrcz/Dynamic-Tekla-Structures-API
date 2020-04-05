@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry Geometry
 		{
-			get => Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.Geometry);
-			set { teklaObject.Geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.Geometry);
+			}
+			set
+			{
+				teklaObject.Geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Thickness

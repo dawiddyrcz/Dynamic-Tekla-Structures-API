@@ -19,8 +19,10 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
 		{
-			get => Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
+			}
 		}
 
         

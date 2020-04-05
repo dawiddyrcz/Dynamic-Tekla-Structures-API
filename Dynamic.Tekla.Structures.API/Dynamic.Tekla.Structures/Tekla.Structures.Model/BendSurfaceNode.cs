@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.BendSurface Surface
 		{
-			get => Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
-			set { teklaObject.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
+			}
+			set
+			{
+				teklaObject.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value);
+			}
 		}
 
         

@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Identifier FatherId
 		{
-			get => Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.FatherId);
-			set { teklaObject.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.FatherId);
+			}
+			set
+			{
+				teklaObject.FatherId = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum Spanning
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(teklaObject.Spanning);
-			set { teklaObject.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.FromTSObject(teklaObject.Spanning);
+			}
+			set
+			{
+				teklaObject.Spanning = Dynamic.Tekla.Structures.Model.Load.LoadSpanningEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector PrimaryAxisDirection
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.PrimaryAxisDirection);
-			set { teklaObject.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.PrimaryAxisDirection);
+			}
+			set
+			{
+				teklaObject.PrimaryAxisDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean AutomaticPrimaryAxisWeight
@@ -55,14 +73,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum LoadAttachment
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(teklaObject.LoadAttachment);
-			set { teklaObject.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.FromTSObject(teklaObject.LoadAttachment);
+			}
+			set
+			{
+				teklaObject.LoadAttachment = Dynamic.Tekla.Structures.Model.Load.LoadAttachmentEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum PartNames
 		{
-			get => Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(teklaObject.PartNames);
-			set { teklaObject.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.FromTSObject(teklaObject.PartNames);
+			}
+			set
+			{
+				teklaObject.PartNames = Dynamic.Tekla.Structures.Model.Load.LoadPartNamesEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.String PartFilter
@@ -91,8 +121,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.LoadGroup Group
 		{
-			get => Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(teklaObject.Group);
-			set { teklaObject.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.LoadGroup_.FromTSObject(teklaObject.Group);
+			}
+			set
+			{
+				teklaObject.Group = Dynamic.Tekla.Structures.Model.LoadGroup_.GetTSObject(value);
+			}
 		}
 
         

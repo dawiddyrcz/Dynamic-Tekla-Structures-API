@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.MarkSymbolShape Shape
 		{
-			get => Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.FromTSObject(teklaObject.Shape);
-			set { teklaObject.Shape = Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.FromTSObject(teklaObject.Shape);
+			}
+			set
+			{
+				teklaObject.Shape = Dynamic.Tekla.Structures.Drawing.MarkSymbolShape_.GetTSObject(value);
+			}
 		}
 
         

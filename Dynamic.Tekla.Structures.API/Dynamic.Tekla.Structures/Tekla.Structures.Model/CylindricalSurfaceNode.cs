@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.CylindricalSurface Surface
 		{
-			get => Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
+			}
 		}
 
         

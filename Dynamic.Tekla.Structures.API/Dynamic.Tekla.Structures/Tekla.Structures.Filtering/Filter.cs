@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
 		{
-			get => Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(teklaObject.FilterExpression);
-			set { teklaObject.FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(teklaObject.FilterExpression);
+			}
+			set
+			{
+				teklaObject.FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value);
+			}
 		}
 
         

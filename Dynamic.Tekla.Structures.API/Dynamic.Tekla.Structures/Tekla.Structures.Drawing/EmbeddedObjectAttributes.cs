@@ -25,14 +25,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions Scaling
 		{
-			get => Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.FromTSObject(teklaObject.Scaling);
-			set { teklaObject.Scaling = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.FromTSObject(teklaObject.Scaling);
+			}
+			set
+			{
+				teklaObject.Scaling = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame Frame
 		{
-			get => Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.FromTSObject(teklaObject.Frame);
-			set { teklaObject.Frame = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.FromTSObject(teklaObject.Frame);
+			}
+			set
+			{
+				teklaObject.Frame = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.GetTSObject(value);
+			}
 		}
 
         

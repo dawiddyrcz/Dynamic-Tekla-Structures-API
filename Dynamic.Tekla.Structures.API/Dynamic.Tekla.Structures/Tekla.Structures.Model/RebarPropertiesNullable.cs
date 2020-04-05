@@ -37,8 +37,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.NumberingSeriesNullable NumberingSeries
 		{
-			get => Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.FromTSObject(teklaObject.NumberingSeries);
-			set { teklaObject.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.FromTSObject(teklaObject.NumberingSeries);
+			}
+			set
+			{
+				teklaObject.NumberingSeries = Dynamic.Tekla.Structures.Model.NumberingSeriesNullable_.GetTSObject(value);
+			}
 		}
 
 		public System.Nullable<System.Double> BendingRadius

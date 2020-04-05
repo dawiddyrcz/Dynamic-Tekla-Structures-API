@@ -13,32 +13,62 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA1
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA1);
-			set { teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA1);
+			}
+			set
+			{
+				teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA2
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA2);
-			set { teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA2);
+			}
+			set
+			{
+				teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA3
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA3);
-			set { teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA3);
+			}
+			set
+			{
+				teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA4
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA4);
-			set { teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA4);
+			}
+			set
+			{
+				teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA5
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA5);
-			set { teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA5);
+			}
+			set
+			{
+				teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+			}
 		}
 
         

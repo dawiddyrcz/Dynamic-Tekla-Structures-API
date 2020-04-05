@@ -13,26 +13,50 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
-			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			}
+			set
+			{
+				teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			}
+			set
+			{
+				teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement Value
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.Value);
-			set { teklaObject.Value = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.Value);
+			}
+			set
+			{
+				teklaObject.Value = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimension.StraightDimensionAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.StraightDimension.StraightDimensionAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.StraightDimension.StraightDimensionAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.StraightDimension.StraightDimensionAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.StraightDimension.StraightDimensionAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Distance
@@ -43,8 +67,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Vector UpDirection
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpDirection);
-			set { teklaObject.UpDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpDirection);
+			}
+			set
+			{
+				teklaObject.UpDirection = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+			}
 		}
 
         
@@ -87,26 +117,50 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement MiddleLowerTag
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.MiddleLowerTag);
-			set { teklaObject.MiddleLowerTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.MiddleLowerTag);
+			}
+			set
+			{
+				teklaObject.MiddleLowerTag = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement DimensionValuePrefix
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.DimensionValuePrefix);
-			set { teklaObject.DimensionValuePrefix = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.DimensionValuePrefix);
+			}
+			set
+			{
+				teklaObject.DimensionValuePrefix = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement DimensionValuePostfix
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.DimensionValuePostfix);
-			set { teklaObject.DimensionValuePostfix = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.DimensionValuePostfix);
+			}
+			set
+			{
+				teklaObject.DimensionValuePostfix = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes Exaggeration
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.FromTSObject(teklaObject.Exaggeration);
-			set { teklaObject.Exaggeration = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.FromTSObject(teklaObject.Exaggeration);
+			}
+			set
+			{
+				teklaObject.Exaggeration = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionExaggerationAttributes_.GetTSObject(value);
+			}
 		}
 
         

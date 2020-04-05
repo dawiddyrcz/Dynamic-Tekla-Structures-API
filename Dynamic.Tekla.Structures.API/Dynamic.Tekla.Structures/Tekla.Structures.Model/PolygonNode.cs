@@ -19,8 +19,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Contour Contour
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
-			set { teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
+			}
+			set
+			{
+				teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+			}
 		}
 
         

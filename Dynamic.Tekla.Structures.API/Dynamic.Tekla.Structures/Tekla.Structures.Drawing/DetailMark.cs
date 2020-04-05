@@ -13,26 +13,50 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
-			set { teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
+			}
+			set
+			{
+				teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point BoundaryPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.BoundaryPoint);
-			set { teklaObject.BoundaryPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.BoundaryPoint);
+			}
+			set
+			{
+				teklaObject.BoundaryPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point LabelPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LabelPoint);
-			set { teklaObject.LabelPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LabelPoint);
+			}
+			set
+			{
+				teklaObject.LabelPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -79,44 +103,86 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes BoundingLine
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.BoundingLine);
-			set { teklaObject.BoundingLine = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.BoundingLine);
+			}
+			set
+			{
+				teklaObject.BoundingLine = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape BoundaryShape
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.FromTSObject(teklaObject.BoundaryShape);
-			set { teklaObject.BoundaryShape = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.FromTSObject(teklaObject.BoundaryShape);
+			}
+			set
+			{
+				teklaObject.BoundaryShape = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingColors MarkSymbolColor
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.MarkSymbolColor);
-			set { teklaObject.MarkSymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.MarkSymbolColor);
+			}
+			set
+			{
+				teklaObject.MarkSymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes MarkSymbolAttributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.FromTSObject(teklaObject.MarkSymbolAttributes);
-			set { teklaObject.MarkSymbolAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.FromTSObject(teklaObject.MarkSymbolAttributes);
+			}
+			set
+			{
+				teklaObject.MarkSymbolAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes TagsAttributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
-			set { teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
+			}
+			set
+			{
+				teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypes BoundaryLineType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(teklaObject.BoundaryLineType);
-			set { teklaObject.BoundaryLineType = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(teklaObject.BoundaryLineType);
+			}
+			set
+			{
+				teklaObject.BoundaryLineType = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingColors BoundaryLineColor
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.BoundaryLineColor);
-			set { teklaObject.BoundaryLineColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.BoundaryLineColor);
+			}
+			set
+			{
+				teklaObject.BoundaryLineColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+			}
 		}
 
         

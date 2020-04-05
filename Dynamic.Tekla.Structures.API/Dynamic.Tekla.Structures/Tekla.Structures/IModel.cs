@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures
 
 		public Dynamic.Tekla.Structures.ModelFolder Folder
 		{
-			get => Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(teklaObject.Folder);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(teklaObject.Folder);
+			}
 		}
 
 		public System.String Name

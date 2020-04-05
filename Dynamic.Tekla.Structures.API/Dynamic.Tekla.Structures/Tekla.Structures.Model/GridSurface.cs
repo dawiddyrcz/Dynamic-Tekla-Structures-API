@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.GridBase Parent
 		{
-			get => Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
-			set { teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.GridBase_.FromTSObject(teklaObject.Parent);
+			}
+			set
+			{
+				teklaObject.Parent = Dynamic.Tekla.Structures.Model.GridBase_.GetTSObject(value);
+			}
 		}
 
 		public System.String Label

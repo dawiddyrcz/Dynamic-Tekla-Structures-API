@@ -19,8 +19,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileItem Current
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(teklaObject.Current);
+			}
 		}
 
         

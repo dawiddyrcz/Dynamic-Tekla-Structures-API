@@ -13,50 +13,98 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum Color
 		{
-			get => Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Model.SurfaceTreatment.SurfaceColorEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Material Material
 		{
-			get => Dynamic.Tekla.Structures.Model.Material_.FromTSObject(teklaObject.Material);
-			set { teklaObject.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Material_.FromTSObject(teklaObject.Material);
+			}
+			set
+			{
+				teklaObject.Material = Dynamic.Tekla.Structures.Model.Material_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position Position
 		{
-			get => Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
-			set { teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Position_.FromTSObject(teklaObject.Position);
+			}
+			set
+			{
+				teklaObject.Position = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Contour Polygon
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Polygon);
-			set { teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Polygon);
+			}
+			set
+			{
+				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point StartPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
-			set { teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.StartPoint);
+			}
+			set
+			{
+				teklaObject.StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.Point EndPoint
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
-			set { teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.EndPoint);
+			}
+			set
+			{
+				teklaObject.EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part Father
 		{
-			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(teklaObject.Father);
-			set { teklaObject.Father = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Part_.FromTSObject(teklaObject.Father);
+			}
+			set
+			{
+				teklaObject.Father = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Thickness

@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ArrowheadPositions ArrowPosition
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.FromTSObject(teklaObject.ArrowPosition);
-			set { teklaObject.ArrowPosition = Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.FromTSObject(teklaObject.ArrowPosition);
+			}
+			set
+			{
+				teklaObject.ArrowPosition = Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ArrowheadTypes Head
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.FromTSObject(teklaObject.Head);
-			set { teklaObject.Head = Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.FromTSObject(teklaObject.Head);
+			}
+			set
+			{
+				teklaObject.Head = Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.GetTSObject(value);
+			}
 		}
 
 		public System.Double Height

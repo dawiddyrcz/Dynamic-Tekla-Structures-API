@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus
 		{
-			get => Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(teklaObject.ErrorStatus);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(teklaObject.ErrorStatus);
+			}
 		}
 
         

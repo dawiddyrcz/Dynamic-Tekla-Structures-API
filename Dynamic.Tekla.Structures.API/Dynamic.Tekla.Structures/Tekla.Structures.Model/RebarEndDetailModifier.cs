@@ -13,26 +13,50 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarHookDataNullable RebarHook
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(teklaObject.RebarHook);
-			set { teklaObject.RebarHook = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(teklaObject.RebarHook);
+			}
+			set
+			{
+				teklaObject.RebarHook = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable RebarThreading
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(teklaObject.RebarThreading);
-			set { teklaObject.RebarThreading = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(teklaObject.RebarThreading);
+			}
+			set
+			{
+				teklaObject.RebarThreading = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable RebarLengthAdjustment
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(teklaObject.RebarLengthAdjustment);
-			set { teklaObject.RebarLengthAdjustment = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(teklaObject.RebarLengthAdjustment);
+			}
+			set
+			{
+				teklaObject.RebarLengthAdjustment = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarCrankingNullable RebarCranking
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(teklaObject.RebarCranking);
-			set { teklaObject.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(teklaObject.RebarCranking);
+			}
+			set
+			{
+				teklaObject.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value);
+			}
 		}
 
 		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType

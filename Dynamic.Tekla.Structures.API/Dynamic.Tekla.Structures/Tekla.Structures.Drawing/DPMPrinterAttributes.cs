@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintOutputType OutputType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintOutputType_.FromTSObject(teklaObject.OutputType);
-			set { teklaObject.OutputType = Dynamic.Tekla.Structures.Drawing.DotPrintOutputType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintOutputType_.FromTSObject(teklaObject.OutputType);
+			}
+			set
+			{
+				teklaObject.OutputType = Dynamic.Tekla.Structures.Drawing.DotPrintOutputType_.GetTSObject(value);
+			}
 		}
 
 		public System.String PrinterName
@@ -25,14 +31,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintPaperSize PaperSize
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintPaperSize_.FromTSObject(teklaObject.PaperSize);
-			set { teklaObject.PaperSize = Dynamic.Tekla.Structures.Drawing.DotPrintPaperSize_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintPaperSize_.FromTSObject(teklaObject.PaperSize);
+			}
+			set
+			{
+				teklaObject.PaperSize = Dynamic.Tekla.Structures.Drawing.DotPrintPaperSize_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintScalingType ScalingMethod
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingMethod);
-			set { teklaObject.ScalingMethod = Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.FromTSObject(teklaObject.ScalingMethod);
+			}
+			set
+			{
+				teklaObject.ScalingMethod = Dynamic.Tekla.Structures.Drawing.DotPrintScalingType_.GetTSObject(value);
+			}
 		}
 
 		public System.Double ScaleFactor
@@ -43,8 +61,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType Orientation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
-			set { teklaObject.Orientation = Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.FromTSObject(teklaObject.Orientation);
+			}
+			set
+			{
+				teklaObject.Orientation = Dynamic.Tekla.Structures.Drawing.DotPrintOrientationType_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 NumberOfCopies
@@ -55,8 +79,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintColor ColorMode
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintColor_.FromTSObject(teklaObject.ColorMode);
-			set { teklaObject.ColorMode = Dynamic.Tekla.Structures.Drawing.DotPrintColor_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintColor_.FromTSObject(teklaObject.ColorMode);
+			}
+			set
+			{
+				teklaObject.ColorMode = Dynamic.Tekla.Structures.Drawing.DotPrintColor_.GetTSObject(value);
+			}
 		}
 
 		public System.String OutputFileName
@@ -73,8 +103,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DotPrintToMultipleSheet PrintToMultipleSheet
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DotPrintToMultipleSheet_.FromTSObject(teklaObject.PrintToMultipleSheet);
-			set { teklaObject.PrintToMultipleSheet = Dynamic.Tekla.Structures.Drawing.DotPrintToMultipleSheet_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DotPrintToMultipleSheet_.FromTSObject(teklaObject.PrintToMultipleSheet);
+			}
+			set
+			{
+				teklaObject.PrintToMultipleSheet = Dynamic.Tekla.Structures.Drawing.DotPrintToMultipleSheet_.GetTSObject(value);
+			}
 		}
 
         

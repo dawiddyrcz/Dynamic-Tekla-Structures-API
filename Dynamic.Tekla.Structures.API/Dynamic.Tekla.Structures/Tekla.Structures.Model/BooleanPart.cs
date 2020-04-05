@@ -13,14 +13,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum Type
 		{
-			get => Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Part OperativePart
 		{
-			get => Dynamic.Tekla.Structures.Model.Part_.FromTSObject(teklaObject.OperativePart);
-			set { teklaObject.OperativePart = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Part_.FromTSObject(teklaObject.OperativePart);
+			}
+			set
+			{
+				teklaObject.OperativePart = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
+			}
 		}
 
 		public static System.String BooleanOperativeClassName

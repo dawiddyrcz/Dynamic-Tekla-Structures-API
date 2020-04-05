@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -265,20 +271,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-			set { teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
+			}
+			set
+			{
+				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-			set { teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
+			}
+			set
+			{
+				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-			set { teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
+			}
+			set
+			{
+				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
         
@@ -363,20 +387,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-			set { teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
+			}
+			set
+			{
+				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-			set { teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
+			}
+			set
+			{
+				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-			set { teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
+			}
+			set
+			{
+				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
         
@@ -461,20 +503,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-			set { teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
+			}
+			set
+			{
+				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-			set { teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
+			}
+			set
+			{
+				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-			set { teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
+			}
+			set
+			{
+				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
         
@@ -559,20 +619,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-			set { teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
+			}
+			set
+			{
+				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-			set { teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
+			}
+			set
+			{
+				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-			set { teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
+			}
+			set
+			{
+				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+			}
 		}
 
         
@@ -663,14 +741,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityLongitudinal
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityLongitudinal);
-			set { teklaObject.MeshReinforcementVisibilityLongitudinal = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityLongitudinal);
+			}
+			set
+			{
+				teklaObject.MeshReinforcementVisibilityLongitudinal = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityCrossing
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityCrossing);
-			set { teklaObject.MeshReinforcementVisibilityCrossing = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityCrossing);
+			}
+			set
+			{
+				teklaObject.MeshReinforcementVisibilityCrossing = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+			}
 		}
 
 		public System.Int32 MeshReinforcementSymbolIndex
@@ -773,20 +863,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes ReinforcementRepresentation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.FromTSObject(teklaObject.ReinforcementRepresentation);
-			set { teklaObject.ReinforcementRepresentation = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.FromTSObject(teklaObject.ReinforcementRepresentation);
+			}
+			set
+			{
+				teklaObject.ReinforcementRepresentation = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
-			set { teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
+			}
+			set
+			{
+				teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
 		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
-			set { teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
+			}
+			set
+			{
+				teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean HideLinesHiddenByPart

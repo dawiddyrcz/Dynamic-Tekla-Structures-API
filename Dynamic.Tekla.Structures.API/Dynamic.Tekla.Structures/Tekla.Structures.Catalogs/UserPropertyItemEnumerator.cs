@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.UserPropertyItem Current
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.UserPropertyItem_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.UserPropertyItem_.FromTSObject(teklaObject.Current);
+			}
 		}
 
         

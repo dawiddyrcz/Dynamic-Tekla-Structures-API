@@ -13,20 +13,38 @@ namespace Dynamic.Tekla.Structures.Forming
 
 		public Dynamic.Tekla.Structures.Forming.DeformingType Deforming
 		{
-			get => Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.Deforming);
-			set { teklaObject.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(teklaObject.Deforming);
+			}
+			set
+			{
+				teklaObject.Deforming = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Forming.FoldingType Folding
 		{
-			get => Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(teklaObject.Folding);
-			set { teklaObject.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(teklaObject.Folding);
+			}
+			set
+			{
+				teklaObject.Folding = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Forming.WrappingType Wrapping
 		{
-			get => Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(teklaObject.Wrapping);
-			set { teklaObject.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(teklaObject.Wrapping);
+			}
+			set
+			{
+				teklaObject.Wrapping = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value);
+			}
 		}
 
         

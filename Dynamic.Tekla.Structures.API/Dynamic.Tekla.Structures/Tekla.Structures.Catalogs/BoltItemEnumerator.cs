@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.BoltItem Current
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.BoltItem_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.BoltItem_.FromTSObject(teklaObject.Current);
+			}
 		}
 
         

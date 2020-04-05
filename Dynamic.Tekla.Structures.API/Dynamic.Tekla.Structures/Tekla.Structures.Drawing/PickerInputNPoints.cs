@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.PointList PickedPoints
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.PickedPoints);
-			set { teklaObject.PickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(teklaObject.PickedPoints);
+			}
+			set
+			{
+				teklaObject.PickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
+			}
 		}
 
         

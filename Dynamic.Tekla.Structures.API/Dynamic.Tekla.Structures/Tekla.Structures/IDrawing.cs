@@ -13,8 +13,10 @@ namespace Dynamic.Tekla.Structures
 
 		public Dynamic.Tekla.Structures.Drawing.Drawing Current
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Current);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Current);
+			}
 		}
 
 		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Drawing.Drawing> Drawings

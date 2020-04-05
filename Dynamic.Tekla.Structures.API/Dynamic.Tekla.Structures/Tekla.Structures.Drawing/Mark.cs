@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -42,8 +48,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ContainerElement Content
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.Content);
-			set { teklaObject.Content = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(teklaObject.Content);
+			}
+			set
+			{
+				teklaObject.Content = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
+			}
 		}
 
         

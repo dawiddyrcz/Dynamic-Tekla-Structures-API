@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
 		{
-			get => Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
-			set { teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
+			}
+			set
+			{
+				teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean AutomaticScaling
@@ -37,8 +43,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation RotationAxis
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.FromTSObject(teklaObject.RotationAxis);
-			set { teklaObject.RotationAxis = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.FromTSObject(teklaObject.RotationAxis);
+			}
+			set
+			{
+				teklaObject.RotationAxis = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean Exaggeration
@@ -67,8 +79,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols EndSymbolType
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.FromTSObject(teklaObject.EndSymbolType);
-			set { teklaObject.EndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.FromTSObject(teklaObject.EndSymbolType);
+			}
+			set
+			{
+				teklaObject.EndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.GetTSObject(value);
+			}
 		}
 
         

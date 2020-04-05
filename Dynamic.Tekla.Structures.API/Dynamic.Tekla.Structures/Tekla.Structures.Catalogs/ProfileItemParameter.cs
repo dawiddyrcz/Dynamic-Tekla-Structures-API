@@ -37,8 +37,10 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum ParameterUnitType
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(teklaObject.ParameterUnitType);
-
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(teklaObject.ParameterUnitType);
+			}
 		}
 
 		public System.Int32 CrossSectionNumber

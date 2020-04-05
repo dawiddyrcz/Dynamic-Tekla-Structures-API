@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.ViewBase PickedView
 		{
-			get => Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(teklaObject.PickedView);
-			set { teklaObject.PickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(teklaObject.PickedView);
+			}
+			set
+			{
+				teklaObject.PickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(value);
+			}
 		}
 
         

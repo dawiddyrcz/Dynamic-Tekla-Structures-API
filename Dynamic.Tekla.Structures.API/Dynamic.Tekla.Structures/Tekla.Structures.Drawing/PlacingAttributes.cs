@@ -19,14 +19,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes PlacingDistance
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.FromTSObject(teklaObject.PlacingDistance);
-			set { teklaObject.PlacingDistance = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.FromTSObject(teklaObject.PlacingDistance);
+			}
+			set
+			{
+				teklaObject.PlacingDistance = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes PlacingQuarter
 		{
-			get => Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.FromTSObject(teklaObject.PlacingQuarter);
-			set { teklaObject.PlacingQuarter = Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.FromTSObject(teklaObject.PlacingQuarter);
+			}
+			set
+			{
+				teklaObject.PlacingQuarter = Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.GetTSObject(value);
+			}
 		}
 
         

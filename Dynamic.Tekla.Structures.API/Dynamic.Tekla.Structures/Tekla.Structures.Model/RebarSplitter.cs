@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum StaggerType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
-			set { teklaObject.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
+			}
+			set
+			{
+				teklaObject.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Double StaggerOffset
@@ -31,20 +37,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
-			set { teklaObject.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
+			}
+			set
+			{
+				teklaObject.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarLapping Lapping
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
-			set { teklaObject.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
+			}
+			set
+			{
+				teklaObject.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarCranking Cranking
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
-			set { teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
+			}
+			set
+			{
+				teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value);
+			}
 		}
 
         

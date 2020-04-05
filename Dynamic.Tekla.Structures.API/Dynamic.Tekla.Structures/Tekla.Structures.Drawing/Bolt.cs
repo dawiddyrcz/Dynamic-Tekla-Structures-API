@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.Bolt.BoltAttributes Attributes
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Bolt.BoltAttributes_.FromTSObject(teklaObject.Attributes);
-			set { teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Bolt.BoltAttributes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Bolt.BoltAttributes_.FromTSObject(teklaObject.Attributes);
+			}
+			set
+			{
+				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.Bolt.BoltAttributes_.GetTSObject(value);
+			}
 		}
 
         
@@ -101,14 +107,26 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.DrawingColors Color
 		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.Color);
-			set { teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.Color);
+			}
+			set
+			{
+				teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Bolt.Representation Representation
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Bolt.Representation_.FromTSObject(teklaObject.Representation);
-			set { teklaObject.Representation = Dynamic.Tekla.Structures.Drawing.Bolt.Representation_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Bolt.Representation_.FromTSObject(teklaObject.Representation);
+			}
+			set
+			{
+				teklaObject.Representation = Dynamic.Tekla.Structures.Drawing.Bolt.Representation_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean SymbolContainsHole

@@ -25,8 +25,14 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
 		public Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes Type
 		{
-			get => Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.FromTSObject(teklaObject.Type);
-			set { teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.FromTSObject(teklaObject.Type);
+			}
+			set
+			{
+				teklaObject.Type = Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.GetTSObject(value);
+			}
 		}
 
         

@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Brep
 		{
-			get => Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(teklaObject.Brep);
-			set { teklaObject.Brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(teklaObject.Brep);
+			}
+			set
+			{
+				teklaObject.Brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value);
+			}
 		}
 
         

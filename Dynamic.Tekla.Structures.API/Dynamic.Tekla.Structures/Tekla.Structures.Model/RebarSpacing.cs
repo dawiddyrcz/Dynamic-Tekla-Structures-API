@@ -31,14 +31,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum StartOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.StartOffsetType);
-			set { teklaObject.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.StartOffsetType);
+			}
+			set
+			{
+				teklaObject.StartOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum EndOffsetType
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.EndOffsetType);
-			set { teklaObject.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.FromTSObject(teklaObject.EndOffsetType);
+			}
+			set
+			{
+				teklaObject.EndOffsetType = Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum_.GetTSObject(value);
+			}
 		}
 
 		public System.Boolean StartOffsetIsAutomatic

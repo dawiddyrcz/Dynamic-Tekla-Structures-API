@@ -13,8 +13,14 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Plane Plane
 		{
-			get => Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
-			set { teklaObject.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
+			}
+			set
+			{
+				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
+			}
 		}
 
         

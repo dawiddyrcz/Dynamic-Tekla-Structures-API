@@ -37,8 +37,14 @@ namespace Dynamic.Tekla.Structures.Filtering
 
 		public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item
 		{
-			get => Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(teklaObject.Item);
-			set { teklaObject.Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(teklaObject.Item);
+			}
+			set
+			{
+				teklaObject.Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value);
+			}
 		}
 
         

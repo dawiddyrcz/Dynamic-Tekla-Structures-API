@@ -19,14 +19,26 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Contour Curve
 		{
-			get => Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
-			set { teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
+			}
+			set
+			{
+				teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.RebarSpacing Spacing
 		{
-			get => Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(teklaObject.Spacing);
-			set { teklaObject.Spacing = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(teklaObject.Spacing);
+			}
+			set
+			{
+				teklaObject.Spacing = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value);
+			}
 		}
 
         

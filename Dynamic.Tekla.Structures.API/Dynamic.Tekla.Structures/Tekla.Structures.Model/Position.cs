@@ -31,20 +31,38 @@ namespace Dynamic.Tekla.Structures.Model
 
 		public Dynamic.Tekla.Structures.Model.Position.PlaneEnum Plane
 		{
-			get => Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(teklaObject.Plane);
-			set { teklaObject.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(teklaObject.Plane);
+			}
+			set
+			{
+				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position.DepthEnum Depth
 		{
-			get => Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(teklaObject.Depth);
-			set { teklaObject.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(teklaObject.Depth);
+			}
+			set
+			{
+				teklaObject.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Model.Position.RotationEnum Rotation
 		{
-			get => Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(teklaObject.Rotation);
-			set { teklaObject.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(teklaObject.Rotation);
+			}
+			set
+			{
+				teklaObject.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.GetTSObject(value);
+			}
 		}
 
         

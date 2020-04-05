@@ -19,20 +19,38 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode SizeDefinitionMode
 		{
-			get => Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.FromTSObject(teklaObject.SizeDefinitionMode);
-			set { teklaObject.SizeDefinitionMode = Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.FromTSObject(teklaObject.SizeDefinitionMode);
+			}
+			set
+			{
+				teklaObject.SizeDefinitionMode = Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.AutoSizeOptions AutoSizeOptions
 		{
-			get => Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.FromTSObject(teklaObject.AutoSizeOptions);
-			set { teklaObject.AutoSizeOptions = Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.FromTSObject(teklaObject.AutoSizeOptions);
+			}
+			set
+			{
+				teklaObject.AutoSizeOptions = Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.GetTSObject(value);
+			}
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.Size SheetSize
 		{
-			get => Dynamic.Tekla.Structures.Drawing.Size_.FromTSObject(teklaObject.SheetSize);
-			set { teklaObject.SheetSize = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(value); }
+			get
+			{
+				 return Dynamic.Tekla.Structures.Drawing.Size_.FromTSObject(teklaObject.SheetSize);
+			}
+			set
+			{
+				teklaObject.SheetSize = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(value);
+			}
 		}
 
         

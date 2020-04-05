@@ -34,7 +34,7 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
 					return System.Enum.Parse(tsType, "ERROR_DRAWING_EDITOR_MUST_BE_CLOSED");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -52,7 +52,7 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
 				return AutoDrawingsStatusEnum.ERROR_DRAWING_EDITOR_MUST_BE_CLOSED;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

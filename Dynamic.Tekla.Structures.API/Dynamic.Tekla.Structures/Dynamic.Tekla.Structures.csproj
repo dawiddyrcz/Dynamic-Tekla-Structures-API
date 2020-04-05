@@ -51,7 +51,7 @@
     <Compile Include="NotGenerated\DrawingUIEvents.cs" />
     <Compile Include="NotGenerated\DynamicAPINotFoundException.cs" />
     <Compile Include="NotGenerated\DynamicAPIException.cs" />
-    <Compile Include="NotGenerated\GlobalSuppressions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="NotGenerated\ModelEvents.cs" />
     <Compile Include="NotGenerated\TeklaFileVersion.cs" />
     <Compile Include="NotGenerated\TeklaProcess.cs" />

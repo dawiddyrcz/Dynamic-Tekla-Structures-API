@@ -80,7 +80,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "STIRRUP_TYPE_SPIRAL");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -94,7 +94,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return CircleRebarGroupStirrupTypeEnum.STIRRUP_TYPE_SPIRAL;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

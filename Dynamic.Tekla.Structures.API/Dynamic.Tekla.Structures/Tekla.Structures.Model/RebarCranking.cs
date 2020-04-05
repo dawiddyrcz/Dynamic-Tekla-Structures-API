@@ -96,7 +96,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "CRANK_RIGHT");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -110,7 +110,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return CrankSideEnum.CRANK_RIGHT;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -142,7 +142,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "HORIZONTAL_DISTANCE");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -160,7 +160,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return CrankedLengthTypeEnum.HORIZONTAL_DISTANCE;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -186,7 +186,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "STANDARD_CRANKING");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -200,7 +200,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return CrankingTypeEnum.STANDARD_CRANKING;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

@@ -77,7 +77,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "HiddenByParent");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -93,7 +93,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return HiddenFlags.HiddenByParent;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -128,7 +128,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "ShowInDrawing");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -148,7 +148,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ShouldBeHiddenFlags.ShowInDrawing;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

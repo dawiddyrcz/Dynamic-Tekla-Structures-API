@@ -593,7 +593,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 					return System.Enum.Parse(tsType, "STEEL2000");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -613,7 +613,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 				return MISExportTypeEnum.STEEL2000;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -642,7 +642,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 					return System.Enum.Parse(tsType, "AsSticks");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -658,7 +658,7 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 				return UnselectedModeEnum.AsSticks;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

@@ -388,7 +388,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELD_TYPE_INCLINED");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -452,7 +452,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldTypeEnum.WELD_TYPE_INCLINED;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -484,7 +484,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELD_CONTOUR_CONCAVE");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -502,7 +502,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldContourEnum.WELD_CONTOUR_CONCAVE;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -540,7 +540,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELS_FINISH_SMOOTH_TRANSITION");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -562,7 +562,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldFinishEnum.WELS_FINISH_SMOOTH_TRANSITION;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -606,7 +606,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELD_ELECTRODE_CLASSIFICATION_E90XX");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -632,7 +632,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldElectrodeClassificationEnum.WELD_ELECTRODE_CLASSIFICATION_E90XX;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -673,7 +673,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELD_PROCESS_EGW");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -697,7 +697,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldProcessTypeEnum.WELD_PROCESS_EGW;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -735,7 +735,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "WELD_NDT_INSPECTION_E");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -757,7 +757,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldNDTInspectionEnum.WELD_NDT_INSPECTION_E;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -786,7 +786,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "STAGGERED_INTERMITTENT");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -802,7 +802,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldIntermittentTypeEnum.STAGGERED_INTERMITTENT;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -831,7 +831,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "PLACEMENT_SECONDARY");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -847,7 +847,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldPlacementTypeEnum.PLACEMENT_SECONDARY;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -879,7 +879,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "PREPARATION_SECONDARY");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -897,7 +897,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return WeldPreparationTypeEnum.PREPARATION_SECONDARY;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

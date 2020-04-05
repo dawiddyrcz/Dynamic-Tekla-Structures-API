@@ -37,7 +37,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 					return System.Enum.Parse(tsType, "VISIBLE");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -57,7 +57,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 				return TemporaryTransparency.VISIBLE;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

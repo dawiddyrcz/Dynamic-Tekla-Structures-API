@@ -80,7 +80,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "SingleLineFilledEnds");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -104,7 +104,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ReinforcementRepresentationTypes.SingleLineFilledEnds;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -145,7 +145,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "Customized");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -169,7 +169,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ReinforcementVisibilityTypes.Customized;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -207,7 +207,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "FullHooks");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -229,7 +229,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return StraightEndSymbolTypes.FullHooks;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -258,7 +258,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "FullHook");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -274,7 +274,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return HookedEndSymbolTypes.FullHook;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

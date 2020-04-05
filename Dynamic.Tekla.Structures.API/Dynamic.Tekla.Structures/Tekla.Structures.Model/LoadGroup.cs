@@ -338,7 +338,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "ACI_TEMPERATURE_LOAD");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -508,7 +508,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return LoadGroupType.ACI_TEMPERATURE_LOAD;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -552,7 +552,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "MAGENTA");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -578,7 +578,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return Colors.MAGENTA;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -616,7 +616,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "DIR_NEG_Z");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -638,7 +638,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return LoadGroupDirection.DIR_NEG_Z;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

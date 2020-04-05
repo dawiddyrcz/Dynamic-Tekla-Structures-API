@@ -317,7 +317,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "_3DView");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -347,7 +347,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ViewTypes._3DView;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -403,7 +403,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "DOT_GR_ADD_OBJECTS_TO_VIEW");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -437,7 +437,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ViewCommands.DOT_GR_ADD_OBJECTS_TO_VIEW;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -463,7 +463,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "Bottom");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -477,7 +477,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return VerticalLabelPosition.Bottom;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -515,7 +515,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "RightAlignByViewRestrictionBox");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -537,7 +537,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return HorizontalLabelPosition.RightAlignByViewRestrictionBox;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -563,7 +563,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "Custom");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -577,7 +577,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return LabelLineLengthType.Custom;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -606,7 +606,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "Y_Direction");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -622,7 +622,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ShorteningCutPartType.Y_Direction;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

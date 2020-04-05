@@ -40,7 +40,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 					return System.Enum.Parse(tsType, "LATER_OR_EQUEL");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -62,7 +62,7 @@ namespace Dynamic.Tekla.Structures.Filtering
 				return DateTimeOperatorType.LATER_OR_EQUEL;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

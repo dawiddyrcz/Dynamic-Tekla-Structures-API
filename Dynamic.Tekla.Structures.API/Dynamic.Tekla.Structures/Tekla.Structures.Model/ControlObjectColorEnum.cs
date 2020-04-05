@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "YELLOW_RED");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -77,7 +77,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return ControlObjectColorEnum.YELLOW_RED;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

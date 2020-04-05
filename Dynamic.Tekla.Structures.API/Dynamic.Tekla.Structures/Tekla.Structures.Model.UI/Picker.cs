@@ -117,7 +117,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 					return System.Enum.Parse(tsType, "PICK_FACE");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -137,7 +137,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 				return PickPointEnum.PICK_FACE;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -172,7 +172,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 					return System.Enum.Parse(tsType, "PICK_ONE_REINFORCEMENT");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -192,7 +192,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 				return PickObjectEnum.PICK_ONE_REINFORCEMENT;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }
@@ -227,7 +227,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 					return System.Enum.Parse(tsType, "PICK_N_REINFORCEMENTS");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -247,7 +247,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 				return PickObjectsEnum.PICK_N_REINFORCEMENTS;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

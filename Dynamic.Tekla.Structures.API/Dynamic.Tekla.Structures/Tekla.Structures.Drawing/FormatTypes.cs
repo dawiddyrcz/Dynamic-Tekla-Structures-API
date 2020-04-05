@@ -49,7 +49,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "Fractional");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -77,7 +77,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return FormatTypes.Fractional;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

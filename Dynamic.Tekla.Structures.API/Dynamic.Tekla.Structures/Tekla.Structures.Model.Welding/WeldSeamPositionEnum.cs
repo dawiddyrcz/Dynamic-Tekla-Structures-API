@@ -28,7 +28,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 					return System.Enum.Parse(tsType, "SEAM_BELOW");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -42,7 +42,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 				return WeldSeamPositionEnum.SEAM_BELOW;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

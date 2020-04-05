@@ -114,7 +114,7 @@ namespace Dynamic.Tekla.Structures.Drawing
                         return System.Enum.Parse(tsType, "DELETED");
 
                     default:
-                        throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                        throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
                 }
             }
 
@@ -129,7 +129,7 @@ namespace Dynamic.Tekla.Structures.Drawing
                 else if (tsEnumValue.Equals("DELETED", System.StringComparison.InvariantCulture))
                     return DrawingUpdateTypeEnum.DELETED;
                 else
-                    throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                    throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
 
             }
 
@@ -142,7 +142,7 @@ namespace Dynamic.Tekla.Structures.Drawing
                 else if (value.Equals(2))
                     return DrawingUpdateTypeEnum.DELETED;
                 else
-                    throw new System.NotImplementedException(value + "- enum value is not implemented");
+                    throw new DynamicAPIException(value + "- enum value is not implemented");
 
             }
         }

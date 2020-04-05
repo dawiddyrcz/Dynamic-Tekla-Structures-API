@@ -102,7 +102,7 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "NORMAL_WITHOUT_WELDPREPS");
 
                 default:
-                    throw new System.NotImplementedException(dynEnum.ToString() + "- enum value is not implemented");
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
             }
         }
     
@@ -126,7 +126,7 @@ namespace Dynamic.Tekla.Structures.Model
 				return SolidCreationTypeEnum.NORMAL_WITHOUT_WELDPREPS;
 
             else 
-                throw new System.NotImplementedException(tsEnumValue + "- enum value is not implemented");
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
         }
     }

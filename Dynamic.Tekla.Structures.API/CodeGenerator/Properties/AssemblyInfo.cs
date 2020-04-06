@@ -1,4 +1,11 @@
-﻿using System.Reflection;
+﻿/*Copyright (C) Dawid Dyrcz 2020
+* This program is free software. You may use, distribute and modify 
+* this code under the terms of the LGPL3 license. This program is distributed 
+* in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+*/
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,11 +13,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CodeGenerator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Code generator which generated Dynamic.Tekla.Structures.API from normal Tekla.Structures.API")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("CodeGenerator")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © Dawid Dyrcz 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

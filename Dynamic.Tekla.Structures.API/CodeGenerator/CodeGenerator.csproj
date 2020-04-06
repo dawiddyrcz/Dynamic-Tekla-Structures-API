@@ -66,7 +66,6 @@
     <Content Include="API_dll_files_version_2019i\Tekla.Structures.dll" />
     <Content Include="API_dll_files_version_2019i\Tekla.Structures.Drawing.dll" />
     <Content Include="API_dll_files_version_2019i\Tekla.Structures.Model.dll" />
-    <Content Include="types.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -103,7 +103,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Add(System.Collections.ArrayList Assemblables)
 		{
 			try {
-			var result = teklaObject.Add(Assemblables);
+			var result = teklaObject.Add(TSActivator.ConvertToTSArrayList(Assemblables));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

@@ -106,7 +106,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
 		{
 			try {
-			var result = teklaObject.AddObjects(Objects);
+			var result = teklaObject.AddObjects(TSActivator.ConvertToTSArrayList(Objects));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -116,7 +116,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RemoveObjects(System.Collections.ArrayList Objects)
 		{
 			try {
-			var result = teklaObject.RemoveObjects(Objects);
+			var result = teklaObject.RemoveObjects(TSActivator.ConvertToTSArrayList(Objects));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

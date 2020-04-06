@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects)
 		{
 			try {
-			var result = teklaObject.Select(ModelObjects);
+			var result = teklaObject.Select(TSActivator.ConvertToTSArrayList(ModelObjects));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -56,7 +56,7 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects, System.Boolean ShowDimensions)
 		{
 			try {
-			var result = teklaObject.Select(ModelObjects, ShowDimensions);
+			var result = teklaObject.Select(TSActivator.ConvertToTSArrayList(ModelObjects), ShowDimensions);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

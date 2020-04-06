@@ -158,7 +158,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
 		{
 			try {
-			var result = teklaObject.SetSecondaryObjects(Secondaries);
+			var result = teklaObject.SetSecondaryObjects(TSActivator.ConvertToTSArrayList(Secondaries));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

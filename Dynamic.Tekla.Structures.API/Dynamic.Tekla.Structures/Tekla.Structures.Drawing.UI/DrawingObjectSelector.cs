@@ -35,7 +35,7 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		public System.Boolean SelectObjects(System.Collections.ArrayList DrawingObjects, System.Boolean ExtendSelection)
 		{
 			try {
-			var result = teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
+			var result = teklaObject.SelectObjects(TSActivator.ConvertToTSArrayList(DrawingObjects), ExtendSelection);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -55,7 +55,7 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		public System.Boolean UnselectObjects(System.Collections.ArrayList DrawingObjects)
 		{
 			try {
-			var result = teklaObject.UnselectObjects(DrawingObjects);
+			var result = teklaObject.UnselectObjects(TSActivator.ConvertToTSArrayList(DrawingObjects));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

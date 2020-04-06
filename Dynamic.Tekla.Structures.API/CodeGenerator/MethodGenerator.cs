@@ -163,7 +163,11 @@ namespace CodeGenerator
                 {
                     if (param.IsOut) sb.Append("out ");
                     else if (param.ParameterType.IsByRef) sb.Append("ref ");
-                    sb.Append(paramName);
+
+                    if (param.ParameterType.Equals(typeof(System.Collections.ArrayList)))
+                        sb.Append("TSActivator.ConvertToTSArrayList(" + paramName+")");
+                    else
+                        sb.Append(paramName);
                 }
 
                 sb.Append(", ");
@@ -465,7 +469,10 @@ namespace CodeGenerator
                     if (param.IsOut) sb.Append("out ");
                     else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
-                    sb.Append(paramName);
+                    if (param.ParameterType.Equals(typeof(System.Collections.ArrayList)))
+                        sb.Append("TSActivator.ConvertToTSArrayList(" + paramName + ")");
+                    else
+                        sb.Append(paramName);
                 }
                 sb.Append(", ");
             }

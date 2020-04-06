@@ -150,7 +150,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetAllReportProperties(System.Collections.ArrayList stringNames, System.Collections.ArrayList doubleNames, System.Collections.ArrayList integerNames, ref System.Collections.Hashtable values)
 		{
 			try {
-			var result = teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+			var result = teklaObject.GetAllReportProperties(TSActivator.ConvertToTSArrayList(stringNames), TSActivator.ConvertToTSArrayList(doubleNames), TSActivator.ConvertToTSArrayList(integerNames), ref values);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -160,7 +160,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetIntegerReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
 		{
 			try {
-			var result = teklaObject.GetIntegerReportProperties(names, ref values);
+			var result = teklaObject.GetIntegerReportProperties(TSActivator.ConvertToTSArrayList(names), ref values);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -170,7 +170,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetDoubleReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
 		{
 			try {
-			var result = teklaObject.GetDoubleReportProperties(names, ref values);
+			var result = teklaObject.GetDoubleReportProperties(TSActivator.ConvertToTSArrayList(names), ref values);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
@@ -180,7 +180,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetStringReportProperties(System.Collections.ArrayList names, ref System.Collections.Hashtable values)
 		{
 			try {
-			var result = teklaObject.GetStringReportProperties(names, ref values);
+			var result = teklaObject.GetStringReportProperties(TSActivator.ConvertToTSArrayList(names), ref values);
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

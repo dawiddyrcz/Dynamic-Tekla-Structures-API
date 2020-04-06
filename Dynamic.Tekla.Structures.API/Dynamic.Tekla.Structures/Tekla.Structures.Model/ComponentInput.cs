@@ -104,7 +104,7 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
 		{
 			try {
-			var result = teklaObject.AddInputObjects(Objects);
+			var result = teklaObject.AddInputObjects(TSActivator.ConvertToTSArrayList(Objects));
 			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)

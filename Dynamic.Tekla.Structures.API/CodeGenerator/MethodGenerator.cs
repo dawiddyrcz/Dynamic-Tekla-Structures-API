@@ -126,7 +126,7 @@ namespace CodeGenerator
                     paramName = "@object";
 
                 if (param.IsOut) sb.Append("out ");
-                else if (param.ParameterType.IsByRef) sb.Append("ref ");
+                else if (param.ParameterType.IsByRef) sb.Append("ref "); //after removing this some method changed
 
                 if (IsParams(param)) sb.Append(" params ");
                 var paramTypeFullName = GetTypeFullName(param.ParameterType);
@@ -434,8 +434,6 @@ namespace CodeGenerator
             foreach (var param in method.GetParameters())
             {
                 var paramName = param.Name.Replace("result", "resultt");
-                if (param.IsOut) sb.Append("out ");
-                else if (param.ParameterType.IsByRef) sb.Append("ref ");
 
                 if (IsParams(param)) sb.Append(" params ");
                 sb.Append(GetTypeFullName(param.ParameterType));
@@ -466,9 +464,6 @@ namespace CodeGenerator
                 }
                 else
                 {
-                    if (param.IsOut) sb.Append("out ");
-                    else if (param.ParameterType.IsByRef) sb.Append("ref ");
-
                     if (param.ParameterType.Equals(typeof(System.Collections.ArrayList)))
                         sb.Append("TSActivator.ConvertToTSArrayList(" + paramName + ")");
                     else

@@ -16,7 +16,6 @@ namespace TestConsoleApp
 {
     static class Program
     {
-        //TODO add arraylist converter to TSActivator
         //TODO bug: gdy się robi pick point w rysunkach to wywala RuntimeBinderException PickPoint(string prompt)
         //TODO bug result System.Tuple
         //TODO bug: GetAllObjects(System.Type Type)
@@ -37,8 +36,8 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-            //StaticFieldsOrProperties();
-            //InsertBeam();
+            StaticFieldsOrProperties();
+            InsertBeam();
             //Thread.Sleep(1);
             // OpenDrawingAndInsertLine();
             // Events();

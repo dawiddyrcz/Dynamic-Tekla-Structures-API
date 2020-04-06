@@ -33,16 +33,26 @@ namespace Dynamic.Tekla.Structures
             return Activator.CreateInstance(type, args);
         }
 
-
         ///<summary>Invoke method in the instance of the object</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static object InvokeMethod(object instance, string typeName, string methodName, object[] parameters)
         {
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i] is System.Collections.ArrayList)
+                    parameters[i] = ConvertToTSArrayList((ArrayList)parameters[i]);
+            }
+
             var type = GetTypeFromTypeName(typeName);
             MethodInfo method = GetMethod(methodName, parameters, type);
 
-            return method.Invoke(instance, parameters);
+            var result = method.Invoke(instance, parameters);
+            if (result is null) return null;
+
+            if (result is System.Collections.ArrayList)
+                return ConvertArrayList((ArrayList)result);
+            else return result;
         }
 
         ///<summary>Invoke static method in the type with typeName</summary>
@@ -50,13 +60,22 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static object InvokeStaticMethod(string typeName, string methodName, object[] parameters)
         {
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i] is System.Collections.ArrayList)
+                    parameters[i] = ConvertToTSArrayList((ArrayList)parameters[i]);
+            }
+
             var type = GetTypeFromTypeName(typeName);
             MethodInfo method = GetMethod(methodName, parameters, type);
 
-            return method.Invoke(null, parameters);
-        }
+            var result =  method.Invoke(null, parameters);
+            if (result is null) return null;
 
-        //TODO zastanowić się i zrobić korektę we wszystkich metodach zwracających arrayList
+            if (result is System.Collections.ArrayList)
+                return ConvertArrayList((ArrayList)result);
+            else return result;
+        }
 
         ///<summary>Gets value of static field or property in type with typeName</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
@@ -66,11 +85,25 @@ namespace Dynamic.Tekla.Structures
             var type = GetTypeFromTypeName(typeName);
             var fieldInfo = type.GetField(fieldOrPropertyName);
             if (fieldInfo != null)
-                return fieldInfo.GetValue(null);
+            {
+                var result = fieldInfo.GetValue(null);
+                if (result is null) return null;
+
+                if (result is System.Collections.ArrayList)
+                    return ConvertArrayList((ArrayList)result);
+                else return result;
+            }
 
             var propertyInfo = type.GetProperty(fieldOrPropertyName);
             if (propertyInfo != null)
-                return propertyInfo.GetValue(null);
+            {
+                var result =  propertyInfo.GetValue(null);
+                if (result is null) return null;
+
+                if (result is System.Collections.ArrayList)
+                    return ConvertArrayList((ArrayList)result);
+                else return result;
+            }
 
             throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
         }
@@ -80,20 +113,27 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static void Set_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName, object value)
         {
+            object valueCorrected;
+            if (value is ArrayList)
+                valueCorrected = ConvertToTSArrayList((ArrayList)value);
+            else
+                valueCorrected = value;
+
             var type = GetTypeFromTypeName(typeName);
             var fieldInfo = type.GetField(fieldOrPropertyName);
 
             if (fieldInfo != null)
             {
-                fieldInfo.SetValue(null, value);
+                fieldInfo.SetValue(null, valueCorrected);
                 return;
             }
             var propertyInfo = type.GetProperty(fieldOrPropertyName);
             if (propertyInfo != null)
             {
-                propertyInfo.SetValue(null, value);
+                propertyInfo.SetValue(null, valueCorrected);
                 return;
             }
+
             throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
         }
 

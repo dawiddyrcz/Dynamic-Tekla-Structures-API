@@ -391,7 +391,7 @@ namespace CodeGenerator
                         break;
                     case ("op_Inequality"):
                         operatorr = "!=";
-                        
+
                         break;
                     case ("op_Addition"):
                         operatorr = "+";
@@ -402,8 +402,9 @@ namespace CodeGenerator
                     case ("op_Multiply"):
                         operatorr = "*";
                         break;
-                    
+
                     case ("op_Explicit"):
+                        //TODO explicit operator
                         break;
                     default:
                         break;
@@ -419,27 +420,41 @@ namespace CodeGenerator
                 sb.Append(")\n");
                 sb.Append("\t\t{\n");
 
-                if (param1.ParameterType.IsValueType == false)
-                    sb.Append("\t\t\tif (o1 is null) throw new System.ArgumentNullException(\"o1\");\n");
-                if (param2.ParameterType.IsValueType == false)
-                    sb.Append("\t\t\tif (o2 is null) throw new System.ArgumentNullException(\"o2\");\n");
-
-                sb.Append("\t\t\tvar o1Tek = ");
-                if (IsTeklaType(param1.ParameterType))
-                    sb.Append(GetTypeFullName(param1.ParameterType) + "_.GetTSObject(o1);\n");
+                if (opMethod.Name.Equals("op_Inequality"))
+                {
+                    sb.Append("\t\t\treturn !(o1 == o2);\n");
+                }
                 else
-                    sb.Append("o1;\n");
+                {
+                    if (opMethod.Name.Equals("op_Equality"))
+                    {
+                        sb.Append("\t\t\tif(System.Object.ReferenceEquals(o1, null)) return System.Object.ReferenceEquals(o2, null);\n");
+                    }
+                    else
+                    {
+                        if (param1.ParameterType.IsValueType == false)
+                            sb.Append("\t\t\tif (o1 is null) throw new System.ArgumentNullException(\"o1\");\n");
+                        if (param2.ParameterType.IsValueType == false)
+                            sb.Append("\t\t\tif (o2 is null) throw new System.ArgumentNullException(\"o2\");\n");
+                    }
 
-                sb.Append("\t\t\tvar o2Tek = ");
-                 if (IsTeklaType(param2.ParameterType))
-                    sb.Append(GetTypeFullName(param2.ParameterType) + "_.GetTSObject(o2);\n");
-                else
-                    sb.Append("o2;\n");
+                    sb.Append("\t\t\tvar o1Tek = ");
+                    if (IsTeklaType(param1.ParameterType))
+                        sb.Append(GetTypeFullName(param1.ParameterType) + "_.GetTSObject(o1);\n");
+                    else
+                        sb.Append("o1;\n");
 
-                if (IsTeklaType(opMethod.ReturnType))
-                    sb.Append("\t\t\treturn " + GetTypeFullName(type) + "_.FromTSObject(o1Tek " + operatorr + " o2Tek);\n");
-                else
-                    sb.Append("\t\t\treturn o1Tek " + operatorr + " o2Tek;\n");
+                    sb.Append("\t\t\tvar o2Tek = ");
+                    if (IsTeklaType(param2.ParameterType))
+                        sb.Append(GetTypeFullName(param2.ParameterType) + "_.GetTSObject(o2);\n");
+                    else
+                        sb.Append("o2;\n");
+
+                    if (IsTeklaType(opMethod.ReturnType))
+                        sb.Append("\t\t\treturn " + GetTypeFullName(type) + "_.FromTSObject(o1Tek " + operatorr + " o2Tek);\n");
+                    else
+                        sb.Append("\t\t\treturn o1Tek " + operatorr + " o2Tek;\n");
+                }
 
                 sb.Append("\t\t}\n");
 

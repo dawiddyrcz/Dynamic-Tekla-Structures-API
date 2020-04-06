@@ -25,19 +25,14 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Drawing.NormalLineType o1, Dynamic.Tekla.Structures.Drawing.NormalLineType o2)
 		{
-			if (o1 is null) throw new System.ArgumentNullException("o1");
-			if (o2 is null) throw new System.ArgumentNullException("o2");
+			if(System.Object.ReferenceEquals(o1, null)) return System.Object.ReferenceEquals(o2, null);
 			var o1Tek = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(o1);
 			var o2Tek = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(o2);
 			return o1Tek == o2Tek;
 		}
 		public static System.Boolean operator !=(Dynamic.Tekla.Structures.Drawing.NormalLineType o1, Dynamic.Tekla.Structures.Drawing.NormalLineType o2)
 		{
-			if (o1 is null) throw new System.ArgumentNullException("o1");
-			if (o2 is null) throw new System.ArgumentNullException("o2");
-			var o1Tek = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(o1);
-			var o2Tek = Dynamic.Tekla.Structures.Drawing.NormalLineType_.GetTSObject(o2);
-			return o1Tek != o2Tek;
+			return !(o1 == o2);
 		}
 
 

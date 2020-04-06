@@ -16,6 +16,12 @@ namespace TestConsoleApp
 {
     static class Program
     {
+        //TODO bug -> when method returns ArrayList like in picker then throw invalid cast exception
+        //TODO bug == operator nie obsługuje nullli
+        //https://stackoverflow.com/questions/4219261/overriding-operator-how-to-compare-to-null
+
+        //TODO obejrzeć wszystkie klasy
+
         //TODO readme
         //TODO nuget package
 

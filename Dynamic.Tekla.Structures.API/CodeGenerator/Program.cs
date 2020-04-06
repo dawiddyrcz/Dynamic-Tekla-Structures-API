@@ -1,12 +1,10 @@
-﻿using System;
+﻿//#define OVERRIDE
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using TSM = Tekla.Structures.Model;
-using T3D = Tekla.Structures.Geometry3d;
 
 namespace CodeGenerator
 {
@@ -21,22 +19,61 @@ namespace CodeGenerator
 
             if (input.Equals("y", StringComparison.InvariantCulture))
             {
-                GenerateAPICode();
+
+                string outputDirectory = string.Empty;
+
+#if OVERRIDE
+                outputDirectory = Path.GetDirectoryName(Program.GetProjectDirectory());
+#else
+                outputDirectory = "DynamicAPI";
+#endif
+                GenerateAPICode(outputDirectory);
 
                 System.Diagnostics.Debug.WriteLine("op names: ");
                 foreach (var item in ClassGenerator.opStrings)
                 {
                     System.Diagnostics.Debug.WriteLine(item);
                 }
+
+#if !OVERRIDE
+                var solutionPath = Path.GetDirectoryName(Program.GetProjectDirectory());
+                var notGeneratedInputPath = Path.Combine(solutionPath, "Dynamic.Tekla.Structures", "NotGenerated");
+                var notGeneratedOutputPath =Path.Combine( Path.GetFullPath(outputDirectory), "Dynamic.Tekla.Structures", "NotGenerated");
+
+                CopyDir(notGeneratedInputPath, notGeneratedOutputPath);
+
+                try
+                {
+                    System.Diagnostics.Process.Start(outputDirectory);
+                }
+                catch (Exception)
+                {
+
+                }
+#endif
+
             }
             else
             {
+                Console.WriteLine("Wrong choice");
                 Console.ReadKey();
             }
             
         }
 
-        public static string GetProjectDirectory()
+        private static void GenerateAPICode(string outputDirectory)
+        {
+            Console.WriteLine("Generate API code");
+            var generator = new FileGenerator(outputDirectory);
+
+            foreach (var type in GetTypesFromDll())
+            {
+                generator.SaveToFile(type);
+            }
+        }
+
+
+        private static string GetProjectDirectory()
         {
             var debugFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName;
             var binFolder = Directory.GetParent(debugFolder);
@@ -46,19 +83,8 @@ namespace CodeGenerator
 
         private static Assembly LoadAssembly(string fileName)
         {
-            string filePath = Path.Combine(GetProjectDirectory(), fileName);
+            string filePath = Path.Combine(GetProjectDirectory(), "API_dll_files_version_2019i", fileName);
             return Assembly.LoadFile(filePath);
-        }
-
-        private static void GenerateAPICode()
-        {
-            Console.WriteLine("Generate API code");
-            var generator = new FileGenerator();
-            
-            foreach (var type in GetTypesFromDll())
-            {
-                generator.SaveToFile(type);
-            }
         }
 
         private static List<Type> GetTypesFromDll()
@@ -136,6 +162,25 @@ namespace CodeGenerator
             output.AddRange(tsdtTypes);
 
             return output;
+        }
+
+        private static void CopyDir(string inputDir, string outputDir)
+        {
+            if (!Directory.Exists(inputDir)) return;
+            if (!Directory.Exists(outputDir)) Directory.CreateDirectory(outputDir);
+            var inputDirectoryInfo = new DirectoryInfo(inputDir);
+
+            var filesToCopy = inputDirectoryInfo.GetFiles();
+            foreach (var file in filesToCopy)
+            {
+                File.Copy(file.FullName, Path.Combine(outputDir, file.Name), true);
+            }
+
+            var directoriesToCopy = inputDirectoryInfo.GetDirectories();
+            foreach (var directory in directoriesToCopy)
+            {
+                CopyDir(Path.Combine(inputDir, directory.Name), Path.Combine(outputDir, directory.Name));
+            }
         }
     }
 }

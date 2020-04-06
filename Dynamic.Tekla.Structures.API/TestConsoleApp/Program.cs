@@ -13,12 +13,15 @@ namespace TestConsoleApp
 {
     static class Program
     {
+        //TODO add license info in all projects
+        //TODO op_explicit operator
         //TODO exception in Drawing enumerator
         //TODO change generator - remove dlls from github, change output to different location
         //TODO readme
         //TODO test model
         //TODO project with unit tests
         //TODO nuget package
+        //TODO add info in license informaing that you have to have Tekla Structures Software
 
         [STAThread]
         static void Main(string[] args)

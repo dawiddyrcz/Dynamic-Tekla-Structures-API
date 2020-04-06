@@ -5,7 +5,11 @@ namespace CodeGenerator
 {
     public class FileGenerator
     {
-        public FileGenerator() { }
+        private readonly string outputDirectory;
+
+        public FileGenerator(string outputDirectory) {
+            this.outputDirectory = outputDirectory;
+        }
 
         public void SaveToFile(Type type)
         {
@@ -18,7 +22,7 @@ namespace CodeGenerator
             var generator = new TypeGenerator();
             string outputText = String.Copy(text);
 
-            string fileName = Path.Combine(Path.GetDirectoryName(Program.GetProjectDirectory())
+            string fileName = Path.Combine(outputDirectory
                   , "Dynamic.Tekla.Structures", type.Namespace,
                   type.Name + ".cs");
 
@@ -44,5 +48,6 @@ $typeContent
 }
     
 ";
+        
     }
 }

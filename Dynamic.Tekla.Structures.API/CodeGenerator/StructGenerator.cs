@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Dynamic.Tekla.Structures;
 
 namespace CodeGenerator
 {

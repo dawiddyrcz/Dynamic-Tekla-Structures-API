@@ -3,6 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Tekla Structures Dlls
+Tekla.Application.Library.dll
+Tekla.Structures.Catalogs.dll
+Tekla.Structures.Datatype.dll
+Tekla.Structures.Dialog.dll
+Tekla.Structures.dll
+Tekla.Structures.Drawing.dll
+Tekla.Structures.Model.dll
+
 # User-specific files
 *.rsuser
 *.suo

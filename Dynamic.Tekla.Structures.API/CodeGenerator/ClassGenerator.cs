@@ -424,10 +424,6 @@ namespace CodeGenerator
                     case ("op_Multiply"):
                         operatorr = "*";
                         break;
-
-                    case ("op_Explicit"):
-                        //TODO explicit operator
-                        break;
                     default:
                         break;
                 }

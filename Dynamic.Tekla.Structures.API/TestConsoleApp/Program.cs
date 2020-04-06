@@ -23,14 +23,12 @@ namespace TestConsoleApp
         //System.InvalidCastException: 'Nie można rzutować obiektu typu 'Dynamic.Tekla.Structures.Drawing.ContainerView' na typ 'Tekla.Structures.Drawing.DrawingObject'.'
 
         //TODO obejrzeć wszystkie klasy
-
         //TODO readme
         //TODO nuget package
 
         //TODO project with unit tests
         //TODO test model
         //TODO exception in Drawing enumerator
-        //TODO op_explicit operator
         //TODO add info in license informaing that you have to have Tekla Structures Software
 
         [STAThread]

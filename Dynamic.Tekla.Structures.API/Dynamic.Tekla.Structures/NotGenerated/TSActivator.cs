@@ -254,16 +254,10 @@ namespace Dynamic.Tekla.Structures
                 return new ArrayList();
 
             var output = new ArrayList(dynAPIObjects.Count + 1);
-            var assembly = Assembly.GetExecutingAssembly();
 
-            foreach (var dynObject in dynAPIObjects)
+            foreach (dynamic dynObject in dynAPIObjects)
             {
-                string converterName = "Dynamic." + dynObject.GetType().ToString() + "_";
-                var converterType = assembly.GetType(converterName);
-                var parameters = new object[] { dynObject };
-                var fromTSObjectMethod = GetMethod("GetTSObject", parameters, converterType);
-
-                output.Add(fromTSObjectMethod.Invoke(null, parameters));
+                output.Add(dynObject.teklaObject);
             }
             return output;
         }

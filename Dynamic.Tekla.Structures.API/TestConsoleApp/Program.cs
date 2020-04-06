@@ -20,8 +20,6 @@ namespace TestConsoleApp
         //TODO bug result System.Tuple
         //TODO bug: GetAllObjects(System.Type Type)
 
-        //System.InvalidCastException: 'Nie można rzutować obiektu typu 'Dynamic.Tekla.Structures.Drawing.ContainerView' na typ 'Tekla.Structures.Drawing.DrawingObject'.'
-
         //TODO obejrzeć wszystkie klasy
         //TODO readme
         //TODO nuget package

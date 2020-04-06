@@ -16,7 +16,7 @@ namespace TestConsoleApp
 {
     static class Program
     {
-        //TODO bug -> add ArrayList converter to properties and check other places where arrayList is returned
+        //TODO check other places where arrayList is returned
         //TODO bugi gdy parametrem metody jest ArrayList
         //TODO bug: gdy się robi pick point w rysunkach to wywala RuntimeBinderException PickPoint(string prompt)
         //TODO bug result System.Tuple

@@ -70,14 +70,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.LongitudinalDistances;
+					return TSActivator.ConvertArrayList(teklaObject.LongitudinalDistances);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LongitudinalDistances"); }
 			}
 			set
 			{
 				try {
-					teklaObject.LongitudinalDistances = value;
+					teklaObject.LongitudinalDistances = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LongitudinalDistances"); }
 			}
@@ -88,14 +88,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.CrossDistances;
+					return TSActivator.ConvertArrayList(teklaObject.CrossDistances);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrossDistances"); }
 			}
 			set
 			{
 				try {
-					teklaObject.CrossDistances = value;
+					teklaObject.CrossDistances = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrossDistances"); }
 			}

@@ -27,7 +27,7 @@ namespace Dynamic.Tekla.Structures.Model.Welding
 			get
 			{
 				try {
-					return teklaObject.Polygons;
+					return TSActivator.ConvertArrayList(teklaObject.Polygons);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
 			}

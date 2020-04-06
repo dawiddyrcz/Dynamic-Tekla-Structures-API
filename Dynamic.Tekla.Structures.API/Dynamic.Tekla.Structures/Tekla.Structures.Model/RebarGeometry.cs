@@ -39,7 +39,7 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.BendingRadiuses;
+					return TSActivator.ConvertArrayList(teklaObject.BendingRadiuses);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingRadiuses"); }
 			}

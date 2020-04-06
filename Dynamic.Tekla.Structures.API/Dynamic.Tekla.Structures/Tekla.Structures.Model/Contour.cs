@@ -16,14 +16,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.ContourPoints;
+					return TSActivator.ConvertArrayList(teklaObject.ContourPoints);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints"); }
 			}
 			set
 			{
 				try {
-					teklaObject.ContourPoints = value;
+					teklaObject.ContourPoints = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints"); }
 			}

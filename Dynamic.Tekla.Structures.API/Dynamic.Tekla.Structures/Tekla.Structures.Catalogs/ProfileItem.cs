@@ -45,7 +45,7 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			get
 			{
 				try {
-					return teklaObject.aProfileItemParameters;
+					return TSActivator.ConvertArrayList(teklaObject.aProfileItemParameters);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemParameters"); }
 			}

@@ -70,14 +70,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.HierarchicChildren;
+					return TSActivator.ConvertArrayList(teklaObject.HierarchicChildren);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchicChildren"); }
 			}
 			set
 			{
 				try {
-					teklaObject.HierarchicChildren = value;
+					teklaObject.HierarchicChildren = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchicChildren"); }
 			}

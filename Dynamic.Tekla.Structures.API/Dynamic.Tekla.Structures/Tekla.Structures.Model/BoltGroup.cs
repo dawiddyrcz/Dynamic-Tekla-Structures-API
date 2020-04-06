@@ -520,7 +520,7 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.OtherPartsToBolt;
+					return TSActivator.ConvertArrayList(teklaObject.OtherPartsToBolt);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OtherPartsToBolt"); }
 			}
@@ -586,7 +586,7 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.BoltPositions;
+					return TSActivator.ConvertArrayList(teklaObject.BoltPositions);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltPositions"); }
 			}

@@ -56,6 +56,8 @@ namespace Dynamic.Tekla.Structures
             return method.Invoke(null, parameters);
         }
 
+        //TODO zastanowić się i zrobić korektę we wszystkich metodach zwracających arrayList
+
         ///<summary>Gets value of static field or property in type with typeName</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
@@ -200,6 +202,26 @@ namespace Dynamic.Tekla.Structures
                 var converterType = assembly.GetType(converterName);
                 var parameters = new object[] { tsObject };
                 var fromTSObjectMethod = GetMethod("FromTSObject", parameters, converterType);
+
+                output.Add(fromTSObjectMethod.Invoke(null, parameters));
+            }
+            return output;
+        }
+
+        public static ArrayList ConvertToTSArrayList(ArrayList dynAPIObjects)
+        {
+            if (dynAPIObjects.Count.Equals(0))
+                return new ArrayList();
+
+            var output = new ArrayList(dynAPIObjects.Count + 1);
+            var assembly = Assembly.GetExecutingAssembly();
+
+            foreach (var dynObject in dynAPIObjects)
+            {
+                string converterName = "Dynamic." + dynObject.GetType().ToString() + "_";
+                var converterType = assembly.GetType(converterName);
+                var parameters = new object[] { dynObject };
+                var fromTSObjectMethod = GetMethod("GetTSObject", parameters, converterType);
 
                 output.Add(fromTSObjectMethod.Invoke(null, parameters));
             }

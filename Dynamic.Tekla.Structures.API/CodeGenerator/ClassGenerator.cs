@@ -270,12 +270,12 @@ namespace CodeGenerator
             }
         }
 
-        private void GenerateNonStatic_FieldOrProperty(ref StringBuilder sb, MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
+        private void GenerateNonStatic_FieldOrProperty(ref StringBuilder sb, MemberInfo propertyOrField, Type propertyOrFieldType, bool hasGet, bool hasSet)
         {
-            if (IsTeklaType(currentType))
+            if (IsTeklaType(propertyOrFieldType))
             {
                 sb.Append("\t\tpublic ");
-                sb.Append(GetTypeFullName(currentType));
+                sb.Append(GetTypeFullName(propertyOrFieldType));
                 sb.Append(" ");
                 sb.Append(propertyOrField.Name);
 
@@ -285,7 +285,7 @@ namespace CodeGenerator
                     sb.Append("\n\t\t\tget\n\t\t\t{\n");
                     sb.Append("\t\t\t\ttry {\n");
                     sb.Append("\t\t\t\treturn ");
-                    sb.Append(CorrectIfArray(GetTypeFullName(currentType)));
+                    sb.Append(CorrectIfArray(GetTypeFullName(propertyOrFieldType)));
                     sb.Append("_.FromTSObject($dfield.");
                     sb.Append(propertyOrField.Name);
                     sb.Append(");\n");
@@ -300,7 +300,7 @@ namespace CodeGenerator
                     sb.Append("\t\t\t\t$dfield.");
                     sb.Append(propertyOrField.Name);
                     sb.Append(" = ");
-                    sb.Append(CorrectIfArray(GetTypeFullName(currentType)));
+                    sb.Append(CorrectIfArray(GetTypeFullName(propertyOrFieldType)));
                     sb.Append("_.GetTSObject(value);\n");
                     sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
                     sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
@@ -311,7 +311,7 @@ namespace CodeGenerator
             else
             {
                 sb.Append("\t\tpublic ");
-                sb.Append(GetTypeFullName(currentType));
+                sb.Append(GetTypeFullName(propertyOrFieldType));
                 sb.Append(" ");
                 sb.Append(propertyOrField.Name);
 
@@ -320,8 +320,19 @@ namespace CodeGenerator
                     sb.Append("\n\t\t{\n");
                     sb.Append("\t\t\tget\n\t\t\t{\n");
                     sb.Append("\t\t\t\ttry {\n");
-                    sb.Append("\t\t\t\t\treturn $dfield.");
-                    sb.Append(propertyOrField.Name);
+
+                    if (propertyOrFieldType.Equals(typeof(System.Collections.ArrayList)))
+                    {
+                        sb.Append("\t\t\t\t\treturn TSActivator.ConvertArrayList($dfield.");
+                        sb.Append(propertyOrField.Name);
+                        sb.Append(")");
+                    }
+                    else
+                    {
+                        sb.Append("\t\t\t\t\treturn $dfield.");
+                        sb.Append(propertyOrField.Name);
+                    }
+
                     sb.Append(";\n");
                     sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
                     sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
@@ -333,7 +344,18 @@ namespace CodeGenerator
                     sb.Append("\t\t\t\ttry {\n");
                     sb.Append("\t\t\t\t\t$dfield.");
                     sb.Append(propertyOrField.Name);
-                    sb.Append(" = value;\n");
+                    sb.Append(" = ");
+
+                    if (propertyOrFieldType.Equals(typeof(System.Collections.ArrayList)))
+                    {
+                        sb.Append("TSActivator.ConvertToTSArrayList(value);");
+                    }
+                    else
+                    {
+                        sb.Append("value;");
+                    }
+
+                    sb.Append("\n");
                     sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
                     sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
                     sb.Append("\t\t\t}");

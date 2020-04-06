@@ -106,14 +106,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.OnPlaneOffsets;
+					return TSActivator.ConvertArrayList(teklaObject.OnPlaneOffsets);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OnPlaneOffsets"); }
 			}
 			set
 			{
 				try {
-					teklaObject.OnPlaneOffsets = value;
+					teklaObject.OnPlaneOffsets = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OnPlaneOffsets"); }
 			}
@@ -214,14 +214,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.RadiusValues;
+					return TSActivator.ConvertArrayList(teklaObject.RadiusValues);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RadiusValues"); }
 			}
 			set
 			{
 				try {
-					teklaObject.RadiusValues = value;
+					teklaObject.RadiusValues = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RadiusValues"); }
 			}

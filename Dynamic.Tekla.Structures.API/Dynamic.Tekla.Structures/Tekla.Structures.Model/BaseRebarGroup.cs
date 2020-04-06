@@ -160,14 +160,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.Spacings;
+					return TSActivator.ConvertArrayList(teklaObject.Spacings);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Spacings"); }
 			}
 			set
 			{
 				try {
-					teklaObject.Spacings = value;
+					teklaObject.Spacings = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Spacings"); }
 			}

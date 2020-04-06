@@ -16,14 +16,14 @@ namespace Dynamic.Tekla.Structures.Model
 			get
 			{
 				try {
-					return teklaObject.Polygons;
+					return TSActivator.ConvertArrayList(teklaObject.Polygons);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
 			}
 			set
 			{
 				try {
-					teklaObject.Polygons = value;
+					teklaObject.Polygons = TSActivator.ConvertToTSArrayList(value);
 				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons"); }
 			}

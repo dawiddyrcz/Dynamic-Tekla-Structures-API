@@ -88,12 +88,12 @@ namespace Dynamic.Tekla.Structures
 
                 foreach (var tsType in assembly.GetTypes().Where(t => t.IsPublic))
                 {
-                    var typeFullName = CodeGenerator.TypeFullName.GetTypeFullName(tsType);
+                    var typeFullName = TypeFullName.GetTypeFullName(tsType);
                     output.Add(typeFullName, assembly);
 
                     foreach (var nestedType in NestedTypes(tsType))
                     {
-                        var nestedTypeFullName = CodeGenerator.TypeFullName.GetTypeFullName(nestedType);
+                        var nestedTypeFullName = TypeFullName.GetTypeFullName(nestedType);
                         output.Add(nestedTypeFullName, assembly);
                     }
                 }

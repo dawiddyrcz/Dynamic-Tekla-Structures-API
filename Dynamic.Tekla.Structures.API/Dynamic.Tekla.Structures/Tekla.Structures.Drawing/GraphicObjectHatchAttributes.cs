@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.OffsetX;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.OffsetX = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX", ex); }
 			}
 		}
 
@@ -35,15 +35,15 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.OffsetY;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.OffsetY = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY", ex); }
 			}
 		}
 

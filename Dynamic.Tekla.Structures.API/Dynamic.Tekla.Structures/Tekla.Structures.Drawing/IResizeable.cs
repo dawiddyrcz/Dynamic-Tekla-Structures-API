@@ -22,8 +22,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.Resize(Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(size));
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Resize()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Resize()", ex); }
 		}
 
 

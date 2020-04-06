@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Datatype
 			{
 				try {
 					return teklaObject.Value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.Value = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
 			}
 		}
 

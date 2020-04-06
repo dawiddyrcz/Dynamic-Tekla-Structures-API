@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.PartIdentifier);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartIdentifier"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartIdentifier", ex); }
 			}
 		}
 
@@ -28,8 +28,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.SheetNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetNumber"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetNumber", ex); }
 			}
 
 		}

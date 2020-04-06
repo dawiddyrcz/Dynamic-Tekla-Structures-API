@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return TSActivator.ConvertArrayList(teklaObject.Points);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
 			}
 
 		}
@@ -29,8 +29,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return TSActivator.ConvertArrayList(teklaObject.Triangles);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Triangles"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Triangles", ex); }
 			}
 
 		}
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return TSActivator.ConvertArrayList(teklaObject.Lines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lines"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lines", ex); }
 			}
 
 		}
@@ -75,8 +75,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			var result = teklaObject.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddPoint()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddPoint()", ex); }
 		}
 
 		public void AddTriangle(System.Int32 Index1, System.Int32 Index2, System.Int32 Index3)
@@ -84,8 +84,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			try {
 			teklaObject.AddTriangle(Index1, Index2, Index3);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddTriangle()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddTriangle()", ex); }
 		}
 
 		public void AddLine(System.Int32 Index1, System.Int32 Index2)
@@ -93,8 +93,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			try {
 			teklaObject.AddLine(Index1, Index2);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLine()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLine()", ex); }
 		}
 
 

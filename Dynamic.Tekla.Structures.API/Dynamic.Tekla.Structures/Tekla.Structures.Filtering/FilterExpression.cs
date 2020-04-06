@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Filtering
 			{
 				try {
 					return teklaObject.IsEnable;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.IsEnable = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable", ex); }
 			}
 		}
 

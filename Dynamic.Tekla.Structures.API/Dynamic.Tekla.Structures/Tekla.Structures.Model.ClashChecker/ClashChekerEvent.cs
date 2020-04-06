@@ -52,8 +52,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			try {
 			teklaObject.Invoke(nClashes);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()", ex); }
 		}
 
 		public void EndInvoke(System.IAsyncResult resultt)
@@ -61,8 +61,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			try {
 			teklaObject.EndInvoke(resultt);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()", ex); }
 		}
 
 
@@ -148,8 +148,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			try {
 			teklaObject.Invoke(Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()", ex); }
 		}
 
 		public void EndInvoke(System.IAsyncResult resultt)
@@ -157,8 +157,8 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 			try {
 			teklaObject.EndInvoke(resultt);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()", ex); }
 		}
 
 

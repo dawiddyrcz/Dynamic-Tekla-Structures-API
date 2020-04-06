@@ -28,8 +28,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.IsInteractive();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsInteractive()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsInteractive()", ex); }
 		}
 
 		public void PickPoint(System.String prompt, out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView)
@@ -51,8 +51,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.PickPoint(prompt);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoint()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoint()", ex); }
 		}
 
 		public void PickTwoPoints(System.String firstPrompt, System.String secondPrompt, out Dynamic.Tekla.Structures.Geometry3d.Point firstPickedPoint, out Dynamic.Tekla.Structures.Geometry3d.Point secondPickedPoint, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView)
@@ -113,8 +113,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.PickPoints(numberOfPicks, Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts));
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()", ex); }
 		}
 
 		public void PickPoints(Dynamic.Tekla.Structures.Drawing.StringList prompts, out Dynamic.Tekla.Structures.Drawing.PointList pickedPoints, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView)
@@ -136,8 +136,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.PickPoints(Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts));
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()", ex); }
 		}
 
 		public void PickObject(System.String prompt, out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView)
@@ -159,8 +159,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.PickObject(prompt);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObject()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObject()", ex); }
 		}
 
 		public void PickObject(System.String prompt, out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView, out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint)
@@ -185,8 +185,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 			var result = teklaObject.PickObjectAndPoint(prompt);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObjectAndPoint()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObjectAndPoint()", ex); }
 		}
 
 		public void PickObject(System.String prompt, System.Type[] typeFilter, out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject, out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView, out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint)

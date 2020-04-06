@@ -687,8 +687,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			var result = teklaObject.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Display()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Display()", ex); }
 		}
 
 		public void Close()
@@ -696,8 +696,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			try {
 			teklaObject.Close();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Close()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Close()", ex); }
 		}
 
 		public void SetProgress(System.String ProgressLabel, System.Int32 Progress)
@@ -705,8 +705,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			try {
 			teklaObject.SetProgress(ProgressLabel, Progress);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetProgress()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetProgress()", ex); }
 		}
 
 		public System.Boolean Canceled()
@@ -715,8 +715,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			var result = teklaObject.Canceled();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Canceled()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Canceled()", ex); }
 		}
 
 

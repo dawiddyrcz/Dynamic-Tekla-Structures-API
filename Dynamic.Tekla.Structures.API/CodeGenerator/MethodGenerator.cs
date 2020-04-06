@@ -186,8 +186,8 @@ namespace CodeGenerator
                     sb.Append("\t\t\treturn result;\n");
             }
             
-            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name + "()\"); }\n");
+            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name + "()\", ex); }\n");
             sb.Append("\t\t}");
         }
 
@@ -475,8 +475,8 @@ namespace CodeGenerator
 
             sb.Append("));\n");
 
-            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name +"()\"); }\n");
+            sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+            sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name +"()\", ex); }\n");
 
             sb.Append("\t\t}");
         }

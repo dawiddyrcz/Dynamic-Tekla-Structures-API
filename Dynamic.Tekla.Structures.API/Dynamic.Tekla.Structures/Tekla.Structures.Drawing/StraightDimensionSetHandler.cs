@@ -30,8 +30,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(UpDirection), Distance, Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes_.GetTSObject(Attributes)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, Dynamic.Tekla.Structures.Geometry3d.Vector UpDirection, System.Double Distance, System.Double LeftTagLineOffset, System.Double RightTagLineOffset, Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes Attributes)
@@ -39,8 +39,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(UpDirection), Distance, LeftTagLineOffset, RightTagLineOffset, Dynamic.Tekla.Structures.Drawing.StraightDimensionSet.StraightDimensionSetAttributes_.GetTSObject(Attributes)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, Dynamic.Tekla.Structures.Geometry3d.Vector UpDirection, System.Double Distance)
@@ -48,8 +48,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(UpDirection), Distance));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase View, Dynamic.Tekla.Structures.Drawing.PointList DimensionPoints, Dynamic.Tekla.Structures.Geometry3d.Vector UpDirection, System.Double Distance, System.Double LeftTagLineOffset, System.Double RightTagLineOffset)
@@ -57,8 +57,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			return Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(teklaObject.CreateDimensionSet(Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(View), Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(DimensionPoints), Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(UpDirection), Distance, LeftTagLineOffset, RightTagLineOffset));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateDimensionSet()", ex); }
 		}
 
 

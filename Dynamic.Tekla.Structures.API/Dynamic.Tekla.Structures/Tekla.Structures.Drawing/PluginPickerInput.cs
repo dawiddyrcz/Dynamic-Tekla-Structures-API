@@ -36,8 +36,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.Add(Dynamic.Tekla.Structures.Drawing.PickerInput_.GetTSObject(input));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()", ex); }
 		}
 
 		public void AddRange(System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.PickerInput> inputs)
@@ -45,8 +45,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.AddRange(inputs);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddRange()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddRange()", ex); }
 		}
 
 

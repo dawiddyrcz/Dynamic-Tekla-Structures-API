@@ -29,8 +29,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			{
 				try {
 					return teklaObject.Degrees;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Degrees"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Degrees", ex); }
 			}
 
 		}
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			{
 				try {
 					return teklaObject.Radians;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radians"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radians", ex); }
 			}
 
 		}
@@ -53,8 +53,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			{
 				try {
 					return teklaObject.CurrentUnitValue;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentUnitValue"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentUnitValue", ex); }
 			}
 
 		}
@@ -163,8 +163,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			var result = teklaObject.CompareTo(Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(other));
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()", ex); }
 		}
 
 

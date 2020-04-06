@@ -289,8 +289,8 @@ namespace CodeGenerator
                     sb.Append("_.FromTSObject($dfield.");
                     sb.Append(propertyOrField.Name);
                     sb.Append(");\n");
-                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
+                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\", ex); }\n");
                     sb.Append("\t\t\t}\n");
                 }
                 if (hasSet)
@@ -302,8 +302,8 @@ namespace CodeGenerator
                     sb.Append(" = ");
                     sb.Append(CorrectIfArray(GetTypeFullName(propertyOrFieldType)));
                     sb.Append("_.GetTSObject(value);\n");
-                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
+                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\", ex); }\n");
                     sb.Append("\t\t\t}\n");
                 }
                 sb.Append("\t\t}\n\n");
@@ -334,8 +334,8 @@ namespace CodeGenerator
                     }
 
                     sb.Append(";\n");
-                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
+                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\", ex); }\n");
                     sb.Append("\t\t\t}\n");
                 }
                 if (hasSet)
@@ -356,8 +356,8 @@ namespace CodeGenerator
                     }
 
                     sb.Append("\n");
-                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
-                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\"); }\n");
+                    sb.Append("\t\t\t\t} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)\n");
+                    sb.Append("\t\t\t\t { throw DynamicAPINotFoundException.CouldNotFindProperty(\"" + propertyOrField.Name + "\", ex); }\n");
                     sb.Append("\t\t\t}");
                 }
                 sb.Append("\n\t\t}\n\n");

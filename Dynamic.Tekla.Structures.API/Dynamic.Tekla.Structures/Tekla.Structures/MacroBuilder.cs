@@ -36,8 +36,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.Activate(dialog, field));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Activate()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Activate()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder Callback(System.String callback)
@@ -45,8 +45,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.Callback(callback));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder Callback(System.String callback, System.String parameter)
@@ -54,8 +54,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.Callback(callback, parameter));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder Callback(System.String callback, System.String parameter, System.String frame)
@@ -63,8 +63,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.Callback(callback, parameter, frame));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Callback()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder CheckValue(System.String name, System.Int32 value)
@@ -72,8 +72,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.CheckValue(name, value));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CheckValue()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CheckValue()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder CommandEnd()
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.CommandEnd());
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommandEnd()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommandEnd()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder CommandStart(System.String command, System.String parameter, System.String frame)
@@ -90,8 +90,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.CommandStart(command, parameter, frame));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommandStart()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommandStart()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder FileSelection( params System.String[] items)
@@ -99,8 +99,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.FileSelection(items));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FileSelection()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FileSelection()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder ListSelect(System.String dialog, System.String field,  params System.String[] items)
@@ -108,8 +108,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.ListSelect(dialog, field, items));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ListSelect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ListSelect()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder ModalDialog(System.Int32 value)
@@ -117,8 +117,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.ModalDialog(value));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModalDialog()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModalDialog()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder MouseDown(System.String frame, System.String subframe, System.Int32 x, System.Int32 y, System.Int32 modifier)
@@ -126,8 +126,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.MouseDown(frame, subframe, x, y, modifier));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MouseDown()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MouseDown()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder MouseUp(System.String frame, System.String subframe, System.Int32 x, System.Int32 y, System.Int32 modifier)
@@ -135,8 +135,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.MouseUp(frame, subframe, x, y, modifier));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MouseUp()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MouseUp()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder PushButton(System.String button, System.String frame)
@@ -144,8 +144,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.PushButton(button, frame));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PushButton()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PushButton()", ex); }
 		}
 
 		public void Run()
@@ -153,8 +153,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			teklaObject.Run();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Run()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Run()", ex); }
 		}
 
 		public void Run(Dynamic.Tekla.Structures.IConnection connection)
@@ -162,8 +162,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			teklaObject.Run(Dynamic.Tekla.Structures.IConnection_.GetTSObject(connection));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Run()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Run()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder TabChange(System.String dialog, System.String field, System.String item)
@@ -171,8 +171,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.TabChange(dialog, field, item));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TabChange()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TabChange()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder TableSelect(System.String dialog, System.String field,  params System.Int32[] items)
@@ -180,8 +180,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.TableSelect(dialog, field, items));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TableSelect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TableSelect()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder TreeSelect(System.String dialog, System.String field, System.String rowstring)
@@ -189,8 +189,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.TreeSelect(dialog, field, rowstring));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TreeSelect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TreeSelect()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.MacroBuilder ValueChange(System.String dialog, System.String field, System.String data)
@@ -198,8 +198,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			return Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(teklaObject.ValueChange(dialog, field, data));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ValueChange()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ValueChange()", ex); }
 		}
 
 

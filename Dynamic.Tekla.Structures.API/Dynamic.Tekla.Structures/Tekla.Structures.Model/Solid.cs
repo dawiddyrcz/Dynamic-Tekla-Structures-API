@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures.Model
 			{
 				try {
 				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinimumPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumPoint"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumPoint", ex); }
 			}
 		}
 
@@ -28,8 +28,8 @@ namespace Dynamic.Tekla.Structures.Model
 			{
 				try {
 				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaximumPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumPoint"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumPoint", ex); }
 			}
 		}
 
@@ -50,8 +50,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
 			return TSActivator.ConvertArrayList(result);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()", ex); }
 		}
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2)
@@ -60,8 +60,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
 			return TSActivator.ConvertArrayList(result);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()", ex); }
 		}
 
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
@@ -70,8 +70,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
 			return TSActivator.ConvertArrayList(result);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
@@ -79,8 +79,8 @@ namespace Dynamic.Tekla.Structures.Model
 			try {
 			return Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(teklaObject.GetFaceEnumerator());
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFaceEnumerator()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFaceEnumerator()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
@@ -88,8 +88,8 @@ namespace Dynamic.Tekla.Structures.Model
 			try {
 			return Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(teklaObject.GetEdgeEnumerator());
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetEdgeEnumerator()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetEdgeEnumerator()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Solid.ShellEnumerator GetCutPart(Dynamic.Tekla.Structures.Model.Solid CuttingPart)
@@ -97,8 +97,8 @@ namespace Dynamic.Tekla.Structures.Model
 			try {
 			return Dynamic.Tekla.Structures.Solid.ShellEnumerator_.FromTSObject(teklaObject.GetCutPart(Dynamic.Tekla.Structures.Model.Solid_.GetTSObject(CuttingPart)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCutPart()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCutPart()", ex); }
 		}
 
 

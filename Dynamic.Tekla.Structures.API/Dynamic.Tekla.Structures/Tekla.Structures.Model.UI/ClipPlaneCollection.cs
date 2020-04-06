@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return teklaObject.Count;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count", ex); }
 			}
 
 		}
@@ -29,8 +29,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return teklaObject.IsSynchronized;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSynchronized"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSynchronized", ex); }
 			}
 
 		}
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			{
 				try {
 					return teklaObject.SyncRoot;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SyncRoot"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SyncRoot", ex); }
 			}
 
 		}
@@ -63,8 +63,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			try {
 			teklaObject.CopyTo(array, index);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()", ex); }
 		}
 
 

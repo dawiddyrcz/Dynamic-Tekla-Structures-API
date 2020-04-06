@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			{
 				try {
 					return TSActivator.ConvertArrayList(teklaObject.Points);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.Points = TSActivator.ConvertToTSArrayList(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
 			}
 		}
 
@@ -52,8 +52,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			var result = teklaObject.Length();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()", ex); }
 		}
 
 

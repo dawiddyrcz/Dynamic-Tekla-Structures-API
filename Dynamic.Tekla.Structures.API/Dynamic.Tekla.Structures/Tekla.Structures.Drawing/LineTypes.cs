@@ -78,8 +78,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IsEqual(ObjectToCompare);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
 		}
 
 		public System.Object Clone()
@@ -88,8 +88,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.Clone();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
 		}
 
 

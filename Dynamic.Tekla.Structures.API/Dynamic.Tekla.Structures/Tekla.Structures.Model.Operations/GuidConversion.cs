@@ -31,8 +31,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			var result = teklaObject.GetGuidMapping();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGuidMapping()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGuidMapping()", ex); }
 		}
 
 		public System.Guid GetNewGuid(System.Guid oldGuid)
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			var result = teklaObject.GetNewGuid(oldGuid);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNewGuid()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNewGuid()", ex); }
 		}
 
 

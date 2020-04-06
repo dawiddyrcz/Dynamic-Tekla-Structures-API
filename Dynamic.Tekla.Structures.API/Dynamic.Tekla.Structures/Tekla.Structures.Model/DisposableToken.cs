@@ -39,8 +39,8 @@ namespace Dynamic.Tekla.Structures.Model
 			try {
 			teklaObject.Dispose();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Dispose()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Dispose()", ex); }
 		}
 
 

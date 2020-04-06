@@ -36,8 +36,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(teklaObject.GetPolycurve());
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPolycurve()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPolycurve()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.Arc arc)
@@ -45,8 +45,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Append(Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
@@ -54,8 +54,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Append(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Append(Dynamic.Tekla.Structures.Geometry3d.Polycurve otherPolycurve)
@@ -63,8 +63,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Append(Dynamic.Tekla.Structures.Geometry3d.Polycurve_.GetTSObject(otherPolycurve)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Append()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendArc(Dynamic.Tekla.Structures.Geometry3d.Point middlePoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
@@ -72,8 +72,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.AppendArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendArc()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendArc()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendSegment(Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.AppendSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendSegment()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendSegment()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point endPoint)
@@ -90,8 +90,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.AppendTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendTangentArc()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendTangentArc()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder AppendTangentSegment(System.Double length)
@@ -99,8 +99,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.AppendTangentSegment(length));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendTangentSegment()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AppendTangentSegment()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Prepend(Dynamic.Tekla.Structures.Geometry3d.Arc arc)
@@ -108,8 +108,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Prepend(Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Prepend()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Prepend()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Prepend(Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
@@ -117,8 +117,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Prepend(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Prepend()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Prepend()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependArc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point middlePoint)
@@ -126,8 +126,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.PrependArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependArc()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependArc()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependSegment(Dynamic.Tekla.Structures.Geometry3d.Point startPoint)
@@ -135,8 +135,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.PrependSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependSegment()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependSegment()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point startPoint)
@@ -144,8 +144,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.PrependTangentArc(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependTangentArc()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependTangentArc()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder PrependTangentSegment(System.Double length)
@@ -153,8 +153,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.PrependTangentSegment(length));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependTangentSegment()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PrependTangentSegment()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Replace(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.Arc arc)
@@ -162,8 +162,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Replace(index, Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(arc)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Replace()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Replace()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder Replace(System.Int32 index, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment)
@@ -171,8 +171,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			try {
 			return Dynamic.Tekla.Structures.Geometry3d.PolycurveGeometryBuilder_.FromTSObject(teklaObject.Replace(index, Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment)));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Replace()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Replace()", ex); }
 		}
 
 

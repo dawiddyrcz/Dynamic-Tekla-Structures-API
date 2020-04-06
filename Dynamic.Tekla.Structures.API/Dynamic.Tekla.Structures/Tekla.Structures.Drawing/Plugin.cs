@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
 			}
 		}
 
@@ -52,8 +52,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.SetPickerInput(Dynamic.Tekla.Structures.Drawing.PluginPickerInput_.GetTSObject(Input));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPickerInput()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPickerInput()", ex); }
 		}
 
 		public System.Boolean ApplyStandardValues(System.String Filename)
@@ -62,8 +62,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.ApplyStandardValues(Filename);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ApplyStandardValues()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ApplyStandardValues()", ex); }
 		}
 
 		public System.Boolean LoadStandardValues(System.String Filename)
@@ -72,8 +72,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.LoadStandardValues(Filename);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadStandardValues()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadStandardValues()", ex); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.Int32 fieldValue)
@@ -82,8 +82,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()", ex); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.String fieldValue)
@@ -92,8 +92,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()", ex); }
 		}
 
 		public System.Boolean TrySetAttribute(System.String FieldName, System.Double fieldValue)
@@ -102,8 +102,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TrySetAttribute()", ex); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.Int32 fieldValue)
@@ -111,8 +111,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()", ex); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.Double fieldValue)
@@ -120,8 +120,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()", ex); }
 		}
 
 		public void SetAttribute(System.String FieldName, System.String fieldValue)
@@ -129,8 +129,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.SetAttribute(FieldName, fieldValue);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAttribute()", ex); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.Int32 FieldValue)
@@ -139,8 +139,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()", ex); }
 		}
 
 		public System.Int32 GetIntAttribute(System.String FieldName)
@@ -149,8 +149,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.GetIntAttribute(FieldName);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntAttribute()", ex); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.Double FieldValue)
@@ -159,8 +159,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()", ex); }
 		}
 
 		public System.Double GetDoubleAttribute(System.String FieldName)
@@ -169,8 +169,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.GetDoubleAttribute(FieldName);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleAttribute()", ex); }
 		}
 
 		public System.Boolean TryGetAttribute(System.String FieldName, ref System.String FieldValue)
@@ -179,8 +179,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetAttribute()", ex); }
 		}
 
 		public System.String GetStringAttribute(System.String FieldName)
@@ -189,8 +189,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.GetStringAttribute(FieldName);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringAttribute()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringAttribute()", ex); }
 		}
 
 

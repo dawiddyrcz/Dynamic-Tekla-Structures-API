@@ -22,8 +22,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.Clone();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
@@ -32,8 +32,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IsEqual(ObjectToCompare);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
 		}
 
 		public System.String GetUnformattedString()
@@ -42,8 +42,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.GetUnformattedString();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUnformattedString()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUnformattedString()", ex); }
 		}
 
 

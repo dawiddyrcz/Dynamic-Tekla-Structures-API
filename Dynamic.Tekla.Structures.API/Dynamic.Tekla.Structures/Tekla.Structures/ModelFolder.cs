@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures
 			{
 				try {
 				return Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.AttributesFolder);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AttributesFolder"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AttributesFolder", ex); }
 			}
 		}
 
@@ -28,8 +28,8 @@ namespace Dynamic.Tekla.Structures
 			{
 				try {
 				return Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(teklaObject.DrawingsFolder);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingsFolder"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingsFolder", ex); }
 			}
 		}
 

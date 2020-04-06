@@ -31,8 +31,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			var result = teklaObject.GetValue(name);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetValue()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetValue()", ex); }
 		}
 
 		public System.Boolean TryGetValue(System.String name, out System.Object obj)
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			var result = teklaObject.TryGetValue(name, out obj);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetValue()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetValue()", ex); }
 		}
 
 		public void SetValue(System.String name, System.Object value)
@@ -50,8 +50,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 			try {
 			teklaObject.SetValue(name, value);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetValue()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetValue()", ex); }
 		}
 
 

@@ -17,15 +17,15 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.Item;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item", ex); }
 			}
 			set
 			{
 				try {
 					teklaObject.Item = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item", ex); }
 			}
 		}
 
@@ -49,8 +49,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.Add(value);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()", ex); }
 		}
 
 		public System.Boolean Contains(System.Int32 value)
@@ -59,8 +59,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.Contains(value);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Contains()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Contains()", ex); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value)
@@ -69,8 +69,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IndexOf(value);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()", ex); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex)
@@ -79,8 +79,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IndexOf(value, startIndex);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()", ex); }
 		}
 
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
@@ -89,8 +89,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IndexOf(value, startIndex, count);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()", ex); }
 		}
 
 		public void Insert(System.Int32 index, System.Int32 value)
@@ -98,8 +98,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.Insert(index, value);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()", ex); }
 		}
 
 		public Dynamic.Tekla.Structures.Drawing.IntList GetRange(System.Int32 index, System.Int32 count)
@@ -107,8 +107,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			return Dynamic.Tekla.Structures.Drawing.IntList_.FromTSObject(teklaObject.GetRange(index, count));
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRange()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRange()", ex); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value)
@@ -117,8 +117,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.LastIndexOf(value);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()", ex); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex)
@@ -127,8 +127,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.LastIndexOf(value, startIndex);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()", ex); }
 		}
 
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
@@ -137,8 +137,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.LastIndexOf(value, startIndex, count);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()", ex); }
 		}
 
 		public void Remove(System.Int32 value)
@@ -146,8 +146,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.Remove(value);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Remove()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Remove()", ex); }
 		}
 
 		public void RemoveRange(System.Int32 index, System.Int32 count)
@@ -155,8 +155,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.RemoveRange(index, count);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveRange()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveRange()", ex); }
 		}
 
 		public System.Int32[] ToArray()
@@ -165,8 +165,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.ToArray();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ToArray()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ToArray()", ex); }
 		}
 
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
@@ -175,8 +175,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			var result = teklaObject.IsEqual(ObjectToCompare);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
 		}
 
 

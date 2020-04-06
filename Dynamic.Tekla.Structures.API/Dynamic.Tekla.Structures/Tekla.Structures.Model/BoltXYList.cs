@@ -31,8 +31,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.AddBoltDistX(DistX);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddBoltDistX()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddBoltDistX()", ex); }
 		}
 
 		public System.Boolean AddBoltDistY(System.Double DistY)
@@ -41,8 +41,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.AddBoltDistY(DistY);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddBoltDistY()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddBoltDistY()", ex); }
 		}
 
 		public System.Int32 GetBoltDistXCount()
@@ -51,8 +51,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.GetBoltDistXCount();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistXCount()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistXCount()", ex); }
 		}
 
 		public System.Int32 GetBoltDistYCount()
@@ -61,8 +61,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.GetBoltDistYCount();
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistYCount()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistYCount()", ex); }
 		}
 
 		public System.Double GetBoltDistX(System.Int32 Index)
@@ -71,8 +71,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.GetBoltDistX(Index);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistX()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistX()", ex); }
 		}
 
 		public System.Double GetBoltDistY(System.Int32 Index)
@@ -81,8 +81,8 @@ namespace Dynamic.Tekla.Structures.Model
 			var result = teklaObject.GetBoltDistY(Index);
 			return result;
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistY()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltDistY()", ex); }
 		}
 
 

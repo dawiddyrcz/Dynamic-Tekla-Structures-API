@@ -17,8 +17,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			{
 				try {
 					return teklaObject.IsHidden;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsHidden"); }
+				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsHidden", ex); }
 			}
 
 		}
@@ -42,8 +42,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.HideFromDrawingView();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawingView()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawingView()", ex); }
 		}
 
 		public void HideFromDrawing()
@@ -51,8 +51,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.HideFromDrawing();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawing()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("HideFromDrawing()", ex); }
 		}
 
 		public void ShowInDrawingView()
@@ -60,8 +60,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.ShowInDrawingView();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawingView()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawingView()", ex); }
 		}
 
 		public void ShowInDrawing()
@@ -69,8 +69,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			try {
 			teklaObject.ShowInDrawing();
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawing()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ShowInDrawing()", ex); }
 		}
 
 

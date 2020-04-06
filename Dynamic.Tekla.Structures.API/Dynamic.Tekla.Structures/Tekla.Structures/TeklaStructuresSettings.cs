@@ -143,8 +143,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()", ex); }
 		}
 
 		public void EndInvoke(System.IAsyncResult resultt)
@@ -152,8 +152,8 @@ namespace Dynamic.Tekla.Structures
 			try {
 			teklaObject.EndInvoke(resultt);
 			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()"); }
+			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()", ex); }
 		}
 
 

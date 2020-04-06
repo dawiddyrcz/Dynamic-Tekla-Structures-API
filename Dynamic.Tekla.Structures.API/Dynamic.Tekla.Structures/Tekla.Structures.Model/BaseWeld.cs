@@ -812,7 +812,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetWeldGeometries();
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWeldGeometries()"); }

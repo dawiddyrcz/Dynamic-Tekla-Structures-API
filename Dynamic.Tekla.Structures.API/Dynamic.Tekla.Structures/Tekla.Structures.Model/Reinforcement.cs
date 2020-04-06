@@ -254,7 +254,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
@@ -264,7 +264,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetRebarGeometries(withHooks);
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
@@ -274,7 +274,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetRebarGeometriesWithoutClashes(withHooks);
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometriesWithoutClashes()"); }

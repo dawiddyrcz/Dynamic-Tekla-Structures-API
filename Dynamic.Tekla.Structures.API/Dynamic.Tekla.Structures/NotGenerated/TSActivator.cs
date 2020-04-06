@@ -6,6 +6,7 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 using System;
+using System.Collections;
 using System.Linq;
 using System.Reflection;
 
@@ -183,6 +184,26 @@ namespace Dynamic.Tekla.Structures
                     return TryGetNestedType(output, ref assembly);
             }
             else return assembly.GetType(typeName);
+        }
+
+        public static ArrayList ConvertArrayList(ArrayList tsObjects)
+        {
+            if (tsObjects.Count.Equals(0))
+                return new ArrayList();
+
+            var output = new ArrayList(tsObjects.Count + 1);
+            var assembly = Assembly.GetExecutingAssembly();
+
+            foreach (var tsObject in tsObjects)
+            {
+                string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
+                var converterType = assembly.GetType(converterName);
+                var parameters = new object[] { tsObject };
+                var fromTSObjectMethod = GetMethod("FromTSObject", parameters, converterType);
+
+                output.Add(fromTSObjectMethod.Invoke(null, parameters));
+            }
+            return output;
         }
     }
 }

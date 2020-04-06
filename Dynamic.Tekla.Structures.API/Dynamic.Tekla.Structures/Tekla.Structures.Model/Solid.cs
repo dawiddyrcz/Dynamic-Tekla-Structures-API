@@ -48,7 +48,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
@@ -58,7 +58,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
@@ -68,7 +68,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }

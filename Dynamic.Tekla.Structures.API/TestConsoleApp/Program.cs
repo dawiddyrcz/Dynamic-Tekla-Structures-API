@@ -16,8 +16,6 @@ namespace TestConsoleApp
 {
     static class Program
     {
-        //TODO bug -> when method returns ArrayList like in picker then throw invalid cast exception
-
         //TODO obejrzeć wszystkie klasy
 
         //TODO readme

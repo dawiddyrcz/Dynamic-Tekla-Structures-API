@@ -46,7 +46,7 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
-			return result;
+			return TSActivator.ConvertArrayList(result);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntersectionBoundingBoxes()"); }

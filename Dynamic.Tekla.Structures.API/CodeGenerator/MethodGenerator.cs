@@ -26,6 +26,7 @@ namespace CodeGenerator
                 if (type.Name.Equals("Polymesh", StringComparison.InvariantCulture) && method.Name.Equals("Validate", StringComparison.InvariantCulture)) continue;
                 if (method.ReturnType.IsInterface) continue;
                 if (method.GetBaseDefinition() != method) continue;
+                //if (method.ReturnType.Equals(typeof(System.Collections.ArrayList))) continue;
 
                 if (method.GetParameters().Length == 1)
                 {
@@ -170,7 +171,17 @@ namespace CodeGenerator
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
             sb.Append(");\n");
-            if (!typeFullName.Equals("void")) sb.Append("\t\t\treturn result;\n");
+
+            if (!typeFullName.Equals("void"))
+            {
+                if(method.ReturnType.Equals(typeof(System.Collections.ArrayList)))
+                {
+                    sb.Append("\t\t\treturn TSActivator.ConvertArrayList(result);\n");
+                }
+                else
+                    sb.Append("\t\t\treturn result;\n");
+            }
+            
             sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
             sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name + "()\"); }\n");
             sb.Append("\t\t}");

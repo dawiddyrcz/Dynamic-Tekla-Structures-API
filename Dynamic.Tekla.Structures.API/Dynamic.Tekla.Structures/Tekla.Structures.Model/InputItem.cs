@@ -34,7 +34,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Object GetData()
 		{
 			try {
-			return teklaObject.GetData();
+			var result = teklaObject.GetData();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetData()"); }

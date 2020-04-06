@@ -377,7 +377,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Insert()
 		{
 			try {
-			return teklaObject.Insert();
+			var result = teklaObject.Insert();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
@@ -386,7 +387,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Modify()
 		{
 			try {
-			return teklaObject.Modify();
+			var result = teklaObject.Modify();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
@@ -395,7 +397,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Delete()
 		{
 			try {
-			return teklaObject.Delete();
+			var result = teklaObject.Delete();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
@@ -413,7 +416,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
 		{
 			try {
-			return teklaObject.GetCompoundPlaneAngleLatitude();
+			var result = teklaObject.GetCompoundPlaneAngleLatitude();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLatitude()"); }
@@ -422,7 +426,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
 		{
 			try {
-			return teklaObject.GetCompoundPlaneAngleLongitude();
+			var result = teklaObject.GetCompoundPlaneAngleLongitude();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLongitude()"); }

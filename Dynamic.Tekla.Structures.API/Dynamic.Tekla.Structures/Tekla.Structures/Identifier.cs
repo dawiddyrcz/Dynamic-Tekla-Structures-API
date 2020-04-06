@@ -100,7 +100,8 @@ namespace Dynamic.Tekla.Structures
 		public System.Boolean IsValid()
 		{
 			try {
-			return teklaObject.IsValid();
+			var result = teklaObject.IsValid();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsValid()"); }

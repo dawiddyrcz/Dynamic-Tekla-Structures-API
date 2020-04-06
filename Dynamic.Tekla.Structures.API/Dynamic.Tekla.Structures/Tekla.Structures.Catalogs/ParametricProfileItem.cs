@@ -54,7 +54,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.String CreateProfileString()
 		{
 			try {
-			return teklaObject.CreateProfileString();
+			var result = teklaObject.CreateProfileString();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateProfileString()"); }
@@ -63,7 +64,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String ProfileName)
 		{
 			try {
-			return teklaObject.Select(ProfileName);
+			var result = teklaObject.Select(ProfileName);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }

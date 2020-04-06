@@ -102,7 +102,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean CheckForTwoManifold()
 		{
 			try {
-			return teklaObject.CheckForTwoManifold();
+			var result = teklaObject.CheckForTwoManifold();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CheckForTwoManifold()"); }
@@ -111,7 +112,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Int32[] GetInnerFace(System.Int32 faceIndex)
 		{
 			try {
-			return teklaObject.GetInnerFace(faceIndex);
+			var result = teklaObject.GetInnerFace(faceIndex);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInnerFace()"); }
@@ -120,7 +122,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Int32 GetInnerFaceCount(System.Int32 faceIndex)
 		{
 			try {
-			return teklaObject.GetInnerFaceCount(faceIndex);
+			var result = teklaObject.GetInnerFaceCount(faceIndex);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInnerFaceCount()"); }
@@ -129,7 +132,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Int32[] GetOuterFace(System.Int32 faceIndex)
 		{
 			try {
-			return teklaObject.GetOuterFace(faceIndex);
+			var result = teklaObject.GetOuterFace(faceIndex);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetOuterFace()"); }

@@ -811,7 +811,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetWeldGeometries()
 		{
 			try {
-			return teklaObject.GetWeldGeometries();
+			var result = teklaObject.GetWeldGeometries();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWeldGeometries()"); }

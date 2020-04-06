@@ -601,7 +601,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 		{
 			try {
-			return teklaObject.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			var result = teklaObject.AddOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddOtherPartToBolt()"); }
@@ -610,7 +611,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part M)
 		{
 			try {
-			return teklaObject.RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			var result = teklaObject.RemoveOtherPartToBolt(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveOtherPartToBolt()"); }
@@ -619,7 +621,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetOtherPartsToBolt()
 		{
 			try {
-			return teklaObject.GetOtherPartsToBolt();
+			var result = teklaObject.GetOtherPartsToBolt();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetOtherPartsToBolt()"); }

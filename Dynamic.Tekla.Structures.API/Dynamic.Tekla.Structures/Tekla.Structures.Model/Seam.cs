@@ -129,7 +129,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
 			try {
-			return teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			var result = teklaObject.SetPrimaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPrimaryObject()"); }
@@ -147,7 +148,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject M)
 		{
 			try {
-			return teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			var result = teklaObject.SetSecondaryObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetSecondaryObject()"); }
@@ -156,7 +158,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetSecondaryObjects(System.Collections.ArrayList Secondaries)
 		{
 			try {
-			return teklaObject.SetSecondaryObjects(Secondaries);
+			var result = teklaObject.SetSecondaryObjects(Secondaries);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetSecondaryObjects()"); }
@@ -165,7 +168,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetSecondaryObjects()
 		{
 			try {
-			return teklaObject.GetSecondaryObjects();
+			var result = teklaObject.GetSecondaryObjects();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSecondaryObjects()"); }
@@ -174,7 +178,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
 		{
 			try {
-			return teklaObject.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			var result = teklaObject.SetInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetInputPositions()"); }
@@ -183,7 +188,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetStartAndEndPositions(ref Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, ref Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
 		{
 			try {
-			return teklaObject.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			var result = teklaObject.GetStartAndEndPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStartAndEndPositions()"); }
@@ -192,7 +198,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon InputPolygon)
 		{
 			try {
-			return teklaObject.SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon));
+			var result = teklaObject.SetInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetInputPolygon()"); }

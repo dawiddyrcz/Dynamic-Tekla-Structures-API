@@ -34,7 +34,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput I)
 		{
 			try {
-			return teklaObject.SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I));
+			var result = teklaObject.SetComponentInput(Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetComponentInput()"); }

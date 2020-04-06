@@ -28,7 +28,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetConnectionStatus()
 		{
 			try {
-			return teklaObject.GetConnectionStatus();
+			var result = teklaObject.GetConnectionStatus();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConnectionStatus()"); }
@@ -82,7 +83,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> FetchModelObjects(System.Collections.Generic.List<System.String> Guids, System.Boolean SelectInstances)
 		{
 			try {
-			return teklaObject.FetchModelObjects(Guids, SelectInstances);
+			var result = teklaObject.FetchModelObjects(Guids, SelectInstances);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FetchModelObjects()"); }
@@ -100,7 +102,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.String GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier identifier)
 		{
 			try {
-			return teklaObject.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
+			var result = teklaObject.GetGUIDByIdentifier(Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGUIDByIdentifier()"); }
@@ -109,7 +112,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CommitChanges()
 		{
 			try {
-			return teklaObject.CommitChanges();
+			var result = teklaObject.CommitChanges();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
@@ -118,7 +122,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CommitChanges(System.String Message)
 		{
 			try {
-			return teklaObject.CommitChanges(Message);
+			var result = teklaObject.CommitChanges(Message);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }

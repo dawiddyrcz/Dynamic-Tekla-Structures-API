@@ -253,7 +253,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum options)
 		{
 			try {
-			return teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
+			var result = teklaObject.GetRebarGeometries(Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometryOptionEnum_.GetTSObject(options));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
@@ -262,7 +263,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetRebarGeometries(System.Boolean withHooks)
 		{
 			try {
-			return teklaObject.GetRebarGeometries(withHooks);
+			var result = teklaObject.GetRebarGeometries(withHooks);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometries()"); }
@@ -271,7 +273,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetRebarGeometriesWithoutClashes(System.Boolean withHooks)
 		{
 			try {
-			return teklaObject.GetRebarGeometriesWithoutClashes(withHooks);
+			var result = teklaObject.GetRebarGeometriesWithoutClashes(withHooks);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarGeometriesWithoutClashes()"); }
@@ -280,7 +283,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean IsGeometryValid()
 		{
 			try {
-			return teklaObject.IsGeometryValid();
+			var result = teklaObject.IsGeometryValid();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsGeometryValid()"); }
@@ -289,7 +293,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 GetNumberOfRebars()
 		{
 			try {
-			return teklaObject.GetNumberOfRebars();
+			var result = teklaObject.GetNumberOfRebars();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNumberOfRebars()"); }

@@ -46,7 +46,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects)
 		{
 			try {
-			return teklaObject.Select(ModelObjects);
+			var result = teklaObject.Select(ModelObjects);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -55,7 +56,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select(System.Collections.ArrayList ModelObjects, System.Boolean ShowDimensions)
 		{
 			try {
-			return teklaObject.Select(ModelObjects, ShowDimensions);
+			var result = teklaObject.Select(ModelObjects, ShowDimensions);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }

@@ -172,7 +172,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Attach()
 		{
 			try {
-			return teklaObject.Attach();
+			var result = teklaObject.Attach();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Attach()"); }
@@ -181,7 +182,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AttachComplete()
 		{
 			try {
-			return teklaObject.AttachComplete();
+			var result = teklaObject.AttachComplete();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AttachComplete()"); }
@@ -190,7 +192,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Detach()
 		{
 			try {
-			return teklaObject.Detach();
+			var result = teklaObject.Detach();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Detach()"); }
@@ -199,7 +202,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean Select()
 		{
 			try {
-			return teklaObject.Select();
+			var result = teklaObject.Select();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -208,7 +212,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetVisibility(System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> views, System.Boolean visible)
 		{
 			try {
-			return teklaObject.SetVisibility(views, visible);
+			var result = teklaObject.SetVisibility(views, visible);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetVisibility()"); }
@@ -217,7 +222,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> GetVisibleInViews()
 		{
 			try {
-			return teklaObject.GetVisibleInViews();
+			var result = teklaObject.GetVisibleInViews();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVisibleInViews()"); }

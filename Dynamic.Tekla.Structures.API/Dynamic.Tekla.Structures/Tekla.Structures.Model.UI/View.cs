@@ -266,7 +266,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Insert()
 		{
 			try {
-			return teklaObject.Insert();
+			var result = teklaObject.Insert();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
@@ -275,7 +276,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Modify()
 		{
 			try {
-			return teklaObject.Modify();
+			var result = teklaObject.Modify();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
@@ -284,7 +286,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Select()
 		{
 			try {
-			return teklaObject.Select();
+			var result = teklaObject.Select();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -293,7 +296,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean Delete()
 		{
 			try {
-			return teklaObject.Delete();
+			var result = teklaObject.Delete();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
@@ -302,7 +306,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean IsPerspectiveViewProjection()
 		{
 			try {
-			return teklaObject.IsPerspectiveViewProjection();
+			var result = teklaObject.IsPerspectiveViewProjection();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsPerspectiveViewProjection()"); }
@@ -311,7 +316,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean IsVisible()
 		{
 			try {
-			return teklaObject.IsVisible();
+			var result = teklaObject.IsVisible();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsVisible()"); }

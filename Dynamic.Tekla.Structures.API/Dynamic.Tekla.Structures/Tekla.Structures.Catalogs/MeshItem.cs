@@ -316,7 +316,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String MeshName, System.String MeshGrade)
 		{
 			try {
-			return teklaObject.Select(MeshName, MeshGrade);
+			var result = teklaObject.Select(MeshName, MeshGrade);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -325,7 +326,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Export(ref System.String filename)
 		{
 			try {
-			return teklaObject.Export(ref filename);
+			var result = teklaObject.Export(ref filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }

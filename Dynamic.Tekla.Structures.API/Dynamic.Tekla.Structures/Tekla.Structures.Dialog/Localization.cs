@@ -146,7 +146,8 @@ namespace Dynamic.Tekla.Structures.Dialog
 		public System.String GetText(System.String name)
 		{
 			try {
-			return teklaObject.GetText(name);
+			var result = teklaObject.GetText(name);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetText()"); }

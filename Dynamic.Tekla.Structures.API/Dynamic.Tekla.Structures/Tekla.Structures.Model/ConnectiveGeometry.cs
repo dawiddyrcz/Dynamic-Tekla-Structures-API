@@ -43,7 +43,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean IsEmpty()
 		{
 			try {
-			return teklaObject.IsEmpty();
+			var result = teklaObject.IsEmpty();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEmpty()"); }

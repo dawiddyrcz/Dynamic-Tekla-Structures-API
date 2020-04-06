@@ -91,7 +91,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean MoveObjectRelative(Dynamic.Tekla.Structures.Geometry3d.Vector MoveVector)
 		{
 			try {
-			return teklaObject.MoveObjectRelative(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector));
+			var result = teklaObject.MoveObjectRelative(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveObjectRelative()"); }
@@ -100,7 +101,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean Resize(Dynamic.Tekla.Structures.Drawing.Size size)
 		{
 			try {
-			return teklaObject.Resize(Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(size));
+			var result = teklaObject.Resize(Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(size));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Resize()"); }

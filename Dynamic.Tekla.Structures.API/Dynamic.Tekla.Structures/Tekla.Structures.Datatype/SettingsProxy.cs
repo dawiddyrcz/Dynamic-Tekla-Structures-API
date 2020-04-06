@@ -28,7 +28,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 		public System.Object GetValue(System.String name)
 		{
 			try {
-			return teklaObject.GetValue(name);
+			var result = teklaObject.GetValue(name);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetValue()"); }
@@ -37,7 +38,8 @@ namespace Dynamic.Tekla.Structures.Datatype
 		public System.Boolean TryGetValue(System.String name, out System.Object obj)
 		{
 			try {
-			return teklaObject.TryGetValue(name, out obj);
+			var result = teklaObject.TryGetValue(name, out obj);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetValue()"); }

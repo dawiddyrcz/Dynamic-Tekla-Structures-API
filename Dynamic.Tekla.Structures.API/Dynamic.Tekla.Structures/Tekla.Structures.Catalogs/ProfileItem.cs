@@ -108,7 +108,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean IsProfileUserParametric()
 		{
 			try {
-			return teklaObject.IsProfileUserParametric();
+			var result = teklaObject.IsProfileUserParametric();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsProfileUserParametric()"); }
@@ -117,7 +118,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean IsProfileUserDefined()
 		{
 			try {
-			return teklaObject.IsProfileUserDefined();
+			var result = teklaObject.IsProfileUserDefined();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsProfileUserDefined()"); }
@@ -126,7 +128,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select()
 		{
 			try {
-			return teklaObject.Select();
+			var result = teklaObject.Select();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -135,7 +138,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean ModifyProfileItemParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter value)
 		{
 			try {
-			return teklaObject.ModifyProfileItemParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			var result = teklaObject.ModifyProfileItemParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyProfileItemParameter()"); }
@@ -144,7 +148,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean ModifyProfileItemAnalysisParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter value)
 		{
 			try {
-			return teklaObject.ModifyProfileItemAnalysisParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			var result = teklaObject.ModifyProfileItemAnalysisParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyProfileItemAnalysisParameter()"); }
@@ -153,7 +158,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean ModifyProfileItemUserParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter value)
 		{
 			try {
-			return teklaObject.ModifyProfileItemUserParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			var result = teklaObject.ModifyProfileItemUserParameter(Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyProfileItemUserParameter()"); }
@@ -162,7 +168,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Export(ref System.String filename)
 		{
 			try {
-			return teklaObject.Export(ref filename);
+			var result = teklaObject.Export(ref filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }

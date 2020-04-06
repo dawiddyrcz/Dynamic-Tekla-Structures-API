@@ -64,7 +64,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean AddToDimensionSet(Dynamic.Tekla.Structures.Drawing.DimensionSetBase SetToAdd)
 		{
 			try {
-			return teklaObject.AddToDimensionSet(Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.GetTSObject(SetToAdd));
+			var result = teklaObject.AddToDimensionSet(Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.GetTSObject(SetToAdd));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddToDimensionSet()"); }

@@ -233,7 +233,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String materialName)
 		{
 			try {
-			return teklaObject.Select(materialName);
+			var result = teklaObject.Select(materialName);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -242,7 +243,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select()
 		{
 			try {
-			return teklaObject.Select();
+			var result = teklaObject.Select();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -251,7 +253,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Insert()
 		{
 			try {
-			return teklaObject.Insert();
+			var result = teklaObject.Insert();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()"); }
@@ -260,7 +263,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Modify()
 		{
 			try {
-			return teklaObject.Modify();
+			var result = teklaObject.Modify();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()"); }
@@ -269,7 +273,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Delete()
 		{
 			try {
-			return teklaObject.Delete();
+			var result = teklaObject.Delete();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()"); }
@@ -278,7 +283,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Export(ref System.String filename)
 		{
 			try {
-			return teklaObject.Export(ref filename);
+			var result = teklaObject.Export(ref filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }

@@ -34,7 +34,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane)
 		{
 			try {
-			return teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
+			var result = teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetCurrentTransformationPlane()"); }

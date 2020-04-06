@@ -43,7 +43,8 @@ namespace Dynamic.Tekla.Structures
 		public Microsoft.Win32.RegistryKey GetVersion(System.String version)
 		{
 			try {
-			return teklaObject.GetVersion(version);
+			var result = teklaObject.GetVersion(version);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVersion()"); }
@@ -52,7 +53,8 @@ namespace Dynamic.Tekla.Structures
 		public System.Drawing.Rectangle LoadDialogBounds(System.String dialogName)
 		{
 			try {
-			return teklaObject.LoadDialogBounds(dialogName);
+			var result = teklaObject.LoadDialogBounds(dialogName);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadDialogBounds()"); }
@@ -61,7 +63,8 @@ namespace Dynamic.Tekla.Structures
 		public System.Drawing.Rectangle LoadDialogBounds(System.String dialogName, System.String version)
 		{
 			try {
-			return teklaObject.LoadDialogBounds(dialogName, version);
+			var result = teklaObject.LoadDialogBounds(dialogName, version);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadDialogBounds()"); }

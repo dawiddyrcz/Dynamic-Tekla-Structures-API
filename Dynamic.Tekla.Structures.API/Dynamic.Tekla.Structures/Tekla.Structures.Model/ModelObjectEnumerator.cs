@@ -60,7 +60,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean MoveNext()
 		{
 			try {
-			return teklaObject.MoveNext();
+			var result = teklaObject.MoveNext();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()"); }
@@ -78,7 +79,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Int32 GetSize()
 		{
 			try {
-			return teklaObject.GetSize();
+			var result = teklaObject.GetSize();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSize()"); }

@@ -684,7 +684,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public System.Boolean Display(System.Int32 SleepTime, System.String Title, System.String Message, System.String CancelButtonLabel, System.String ProgressLabel)
 		{
 			try {
-			return teklaObject.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);
+			var result = teklaObject.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Display()"); }
@@ -711,7 +712,8 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 		public System.Boolean Canceled()
 		{
 			try {
-			return teklaObject.Canceled();
+			var result = teklaObject.Canceled();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Canceled()"); }

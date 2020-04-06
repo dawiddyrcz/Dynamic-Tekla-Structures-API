@@ -25,7 +25,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RunClashCheck()
 		{
 			try {
-			return teklaObject.RunClashCheck();
+			var result = teklaObject.RunClashCheck();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RunClashCheck()"); }
@@ -34,7 +35,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean StopClashCheck()
 		{
 			try {
-			return teklaObject.StopClashCheck();
+			var result = teklaObject.StopClashCheck();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("StopClashCheck()"); }
@@ -43,7 +45,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier ID1, Dynamic.Tekla.Structures.Identifier ID2)
 		{
 			try {
-			return teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+			var result = teklaObject.GetIntersectionBoundingBoxes(Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID1), Dynamic.Tekla.Structures.Identifier_.GetTSObject(ID2));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntersectionBoundingBoxes()"); }

@@ -157,7 +157,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Double GetAngle()
 		{
 			try {
-			return teklaObject.GetAngle();
+			var result = teklaObject.GetAngle();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAngle()"); }

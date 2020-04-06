@@ -63,7 +63,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
 		{
 			try {
-			return teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
+			var result = teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddContourPoint()"); }
@@ -72,7 +73,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetPolybeamCoordinateSystems()
 		{
 			try {
-			return teklaObject.GetPolybeamCoordinateSystems();
+			var result = teklaObject.GetPolybeamCoordinateSystems();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPolybeamCoordinateSystems()"); }

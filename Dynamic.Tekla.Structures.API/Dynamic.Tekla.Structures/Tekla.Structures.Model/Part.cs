@@ -253,7 +253,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.String GetPartMark()
 		{
 			try {
-			return teklaObject.GetPartMark();
+			var result = teklaObject.GetPartMark();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPartMark()"); }
@@ -262,7 +263,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetCenterLine(System.Boolean withCutsFittings)
 		{
 			try {
-			return teklaObject.GetCenterLine(withCutsFittings);
+			var result = teklaObject.GetCenterLine(withCutsFittings);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCenterLine()"); }
@@ -271,7 +273,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList GetReferenceLine(System.Boolean withCutsFittings)
 		{
 			try {
-			return teklaObject.GetReferenceLine(withCutsFittings);
+			var result = teklaObject.GetReferenceLine(withCutsFittings);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceLine()"); }
@@ -352,7 +355,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
 		{
 			try {
-			return teklaObject.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
+			var result = teklaObject.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()"); }

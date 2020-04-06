@@ -424,7 +424,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.String Size, System.Double BendRadius)
 		{
 			try {
-			return teklaObject.Select(Grade, Size, BendRadius);
+			var result = teklaObject.Select(Grade, Size, BendRadius);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -433,7 +434,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.Double Diameter, System.Double BendRadius, System.Boolean UseNominalDiameter)
 		{
 			try {
-			return teklaObject.Select(Grade, Diameter, BendRadius, UseNominalDiameter);
+			var result = teklaObject.Select(Grade, Diameter, BendRadius, UseNominalDiameter);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -442,7 +444,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.String Size, System.String Usage)
 		{
 			try {
-			return teklaObject.Select(Grade, Size, Usage);
+			var result = teklaObject.Select(Grade, Size, Usage);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -451,7 +454,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.Double Diameter, System.String Usage, System.Boolean UseNominalDiameter)
 		{
 			try {
-			return teklaObject.Select(Grade, Diameter, Usage, UseNominalDiameter);
+			var result = teklaObject.Select(Grade, Diameter, Usage, UseNominalDiameter);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -460,7 +464,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.String Size)
 		{
 			try {
-			return teklaObject.Select(Grade, Size);
+			var result = teklaObject.Select(Grade, Size);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -469,7 +474,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Grade, System.Double NominalDiameter, System.Boolean UseNominalDiameter)
 		{
 			try {
-			return teklaObject.Select(Grade, NominalDiameter, UseNominalDiameter);
+			var result = teklaObject.Select(Grade, NominalDiameter, UseNominalDiameter);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -478,7 +484,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Export(ref System.String filename)
 		{
 			try {
-			return teklaObject.Export(ref filename);
+			var result = teklaObject.Export(ref filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }

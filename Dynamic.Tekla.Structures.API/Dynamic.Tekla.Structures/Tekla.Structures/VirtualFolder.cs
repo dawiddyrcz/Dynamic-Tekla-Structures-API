@@ -56,7 +56,8 @@ namespace Dynamic.Tekla.Structures
 		public System.String CreateWritableCopy(System.String filename)
 		{
 			try {
-			return teklaObject.CreateWritableCopy(filename);
+			var result = teklaObject.CreateWritableCopy(filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateWritableCopy()"); }
@@ -65,7 +66,8 @@ namespace Dynamic.Tekla.Structures
 		public System.String FindFile(System.String filename)
 		{
 			try {
-			return teklaObject.FindFile(filename);
+			var result = teklaObject.FindFile(filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("FindFile()"); }
@@ -74,7 +76,8 @@ namespace Dynamic.Tekla.Structures
 		public System.String GetWritablePath(System.String filename)
 		{
 			try {
-			return teklaObject.GetWritablePath(filename);
+			var result = teklaObject.GetWritablePath(filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWritablePath()"); }
@@ -83,7 +86,8 @@ namespace Dynamic.Tekla.Structures
 		public System.Boolean IsWritable(System.String filename)
 		{
 			try {
-			return teklaObject.IsWritable(filename);
+			var result = teklaObject.IsWritable(filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsWritable()"); }

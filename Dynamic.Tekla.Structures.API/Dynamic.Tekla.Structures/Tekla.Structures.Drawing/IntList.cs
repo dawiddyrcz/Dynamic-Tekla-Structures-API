@@ -46,7 +46,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 Add(System.Int32 value)
 		{
 			try {
-			return teklaObject.Add(value);
+			var result = teklaObject.Add(value);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()"); }
@@ -55,7 +56,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean Contains(System.Int32 value)
 		{
 			try {
-			return teklaObject.Contains(value);
+			var result = teklaObject.Contains(value);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Contains()"); }
@@ -64,7 +66,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 IndexOf(System.Int32 value)
 		{
 			try {
-			return teklaObject.IndexOf(value);
+			var result = teklaObject.IndexOf(value);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
@@ -73,7 +76,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex)
 		{
 			try {
-			return teklaObject.IndexOf(value, startIndex);
+			var result = teklaObject.IndexOf(value, startIndex);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
@@ -82,7 +86,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 IndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
 		{
 			try {
-			return teklaObject.IndexOf(value, startIndex, count);
+			var result = teklaObject.IndexOf(value, startIndex, count);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IndexOf()"); }
@@ -109,7 +114,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 LastIndexOf(System.Int32 value)
 		{
 			try {
-			return teklaObject.LastIndexOf(value);
+			var result = teklaObject.LastIndexOf(value);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
@@ -118,7 +124,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex)
 		{
 			try {
-			return teklaObject.LastIndexOf(value, startIndex);
+			var result = teklaObject.LastIndexOf(value, startIndex);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
@@ -127,7 +134,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32 LastIndexOf(System.Int32 value, System.Int32 startIndex, System.Int32 count)
 		{
 			try {
-			return teklaObject.LastIndexOf(value, startIndex, count);
+			var result = teklaObject.LastIndexOf(value, startIndex, count);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LastIndexOf()"); }
@@ -154,7 +162,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Int32[] ToArray()
 		{
 			try {
-			return teklaObject.ToArray();
+			var result = teklaObject.ToArray();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ToArray()"); }
@@ -163,7 +172,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean IsEqual(System.Object ObjectToCompare)
 		{
 			try {
-			return teklaObject.IsEqual(ObjectToCompare);
+			var result = teklaObject.IsEqual(ObjectToCompare);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()"); }

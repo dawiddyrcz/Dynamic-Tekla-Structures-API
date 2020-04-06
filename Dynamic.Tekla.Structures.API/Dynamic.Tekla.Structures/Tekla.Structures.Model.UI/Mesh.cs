@@ -72,7 +72,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Int32 AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point)
 		{
 			try {
-			return teklaObject.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
+			var result = teklaObject.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddPoint()"); }

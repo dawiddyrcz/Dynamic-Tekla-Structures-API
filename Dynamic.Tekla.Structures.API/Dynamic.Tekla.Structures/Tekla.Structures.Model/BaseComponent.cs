@@ -106,7 +106,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetAttribute(System.String AttrName, ref System.String StrValue)
 		{
 			try {
-			return teklaObject.GetAttribute(AttrName, ref StrValue);
+			var result = teklaObject.GetAttribute(AttrName, ref StrValue);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
@@ -115,7 +116,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetAttribute(System.String AttrName, ref System.Int32 Value)
 		{
 			try {
-			return teklaObject.GetAttribute(AttrName, ref Value);
+			var result = teklaObject.GetAttribute(AttrName, ref Value);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
@@ -124,7 +126,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean GetAttribute(System.String AttrName, ref System.Double DValue)
 		{
 			try {
-			return teklaObject.GetAttribute(AttrName, ref DValue);
+			var result = teklaObject.GetAttribute(AttrName, ref DValue);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttribute()"); }
@@ -133,7 +136,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean LoadAttributesFromFile(System.String Filename)
 		{
 			try {
-			return teklaObject.LoadAttributesFromFile(Filename);
+			var result = teklaObject.LoadAttributesFromFile(Filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAttributesFromFile()"); }

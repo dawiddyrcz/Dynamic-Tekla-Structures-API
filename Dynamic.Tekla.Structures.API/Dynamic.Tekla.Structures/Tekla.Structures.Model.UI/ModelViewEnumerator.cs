@@ -60,7 +60,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean MoveNext()
 		{
 			try {
-			return teklaObject.MoveNext();
+			var result = teklaObject.MoveNext();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()"); }

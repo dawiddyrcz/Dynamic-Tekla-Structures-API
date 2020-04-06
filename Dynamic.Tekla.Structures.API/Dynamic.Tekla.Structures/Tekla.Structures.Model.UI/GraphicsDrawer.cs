@@ -28,7 +28,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean DrawText(Dynamic.Tekla.Structures.Geometry3d.Point Location, System.String Text, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
 			try {
-			return teklaObject.DrawText(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Location), Text, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			var result = teklaObject.DrawText(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Location), Text, Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawText()"); }
@@ -37,7 +38,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
 			try {
-			return teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			var result = teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawLineSegment()"); }
@@ -46,7 +48,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
 			try {
-			return teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			var result = teklaObject.DrawLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawLineSegment()"); }
@@ -55,7 +58,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean DrawMeshSurface(Dynamic.Tekla.Structures.Model.UI.Mesh Mesh, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
 			try {
-			return teklaObject.DrawMeshSurface(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			var result = teklaObject.DrawMeshSurface(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawMeshSurface()"); }
@@ -64,7 +68,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Boolean DrawMeshLines(Dynamic.Tekla.Structures.Model.UI.Mesh Mesh, Dynamic.Tekla.Structures.Model.UI.Color Color)
 		{
 			try {
-			return teklaObject.DrawMeshLines(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			var result = teklaObject.DrawMeshLines(Dynamic.Tekla.Structures.Model.UI.Mesh_.GetTSObject(Mesh), Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawMeshLines()"); }
@@ -73,7 +78,8 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		public System.Int32 DrawPolyLine(Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine GraphicPolyLine)
 		{
 			try {
-			return teklaObject.DrawPolyLine(Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine_.GetTSObject(GraphicPolyLine));
+			var result = teklaObject.DrawPolyLine(Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine_.GetTSObject(GraphicPolyLine));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DrawPolyLine()"); }

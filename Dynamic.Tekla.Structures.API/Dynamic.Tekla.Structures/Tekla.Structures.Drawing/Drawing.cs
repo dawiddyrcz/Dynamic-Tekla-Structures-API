@@ -406,7 +406,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean CommitChanges()
 		{
 			try {
-			return teklaObject.CommitChanges();
+			var result = teklaObject.CommitChanges();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
@@ -415,7 +416,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean CommitChanges(System.String Message)
 		{
 			try {
-			return teklaObject.CommitChanges(Message);
+			var result = teklaObject.CommitChanges(Message);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()"); }
@@ -424,7 +426,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean PlaceViews()
 		{
 			try {
-			return teklaObject.PlaceViews();
+			var result = teklaObject.PlaceViews();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PlaceViews()"); }
@@ -433,7 +436,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.String GetPlotFileName(System.Boolean includeRevisionInfo)
 		{
 			try {
-			return teklaObject.GetPlotFileName(includeRevisionInfo);
+			var result = teklaObject.GetPlotFileName(includeRevisionInfo);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileName()"); }
@@ -442,7 +446,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.String GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum includeRevisionInfo)
 		{
 			try {
-			return teklaObject.GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo));
+			var result = teklaObject.GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileNameExt()"); }

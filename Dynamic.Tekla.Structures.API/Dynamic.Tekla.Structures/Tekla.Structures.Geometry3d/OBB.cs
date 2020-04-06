@@ -231,7 +231,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Point point)
 		{
 			try {
-			return teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point));
+			var result = teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DistanceTo()"); }
@@ -240,7 +241,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Line line)
 		{
 			try {
-			return teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
+			var result = teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DistanceTo()"); }
@@ -249,7 +251,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
 		{
 			try {
-			return teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
+			var result = teklaObject.DistanceTo(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DistanceTo()"); }
@@ -294,7 +297,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.OBB obb)
 		{
 			try {
-			return teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb));
+			var result = teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersects()"); }
@@ -303,7 +307,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.Line line)
 		{
 			try {
-			return teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
+			var result = teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersects()"); }
@@ -312,7 +317,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment)
 		{
 			try {
-			return teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
+			var result = teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersects()"); }
@@ -321,7 +327,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Boolean Intersects(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane geometricPlane)
 		{
 			try {
-			return teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane));
+			var result = teklaObject.Intersects(Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersects()"); }

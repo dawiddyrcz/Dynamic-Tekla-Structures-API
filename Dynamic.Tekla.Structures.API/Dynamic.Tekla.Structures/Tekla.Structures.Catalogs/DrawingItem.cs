@@ -82,7 +82,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Select(System.String Name)
 		{
 			try {
-			return teklaObject.Select(Name);
+			var result = teklaObject.Select(Name);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()"); }
@@ -91,7 +92,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		public System.Boolean Export(ref System.String filename)
 		{
 			try {
-			return teklaObject.Export(ref filename);
+			var result = teklaObject.Export(ref filename);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()"); }

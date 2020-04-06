@@ -324,7 +324,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean RotateViewOnAxisX(System.Double rotationAngle)
 		{
 			try {
-			return teklaObject.RotateViewOnAxisX(rotationAngle);
+			var result = teklaObject.RotateViewOnAxisX(rotationAngle);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisX()"); }
@@ -333,7 +334,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean RotateViewOnAxisY(System.Double rotationAngle)
 		{
 			try {
-			return teklaObject.RotateViewOnAxisY(rotationAngle);
+			var result = teklaObject.RotateViewOnAxisY(rotationAngle);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisY()"); }
@@ -342,7 +344,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean RotateViewOnAxisZ(System.Double rotationAngle)
 		{
 			try {
-			return teklaObject.RotateViewOnAxisZ(rotationAngle);
+			var result = teklaObject.RotateViewOnAxisZ(rotationAngle);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisZ()"); }
@@ -351,7 +354,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 		public System.Boolean RotateViewOnDrawingPlane(System.Double rotationAngle)
 		{
 			try {
-			return teklaObject.RotateViewOnDrawingPlane(rotationAngle);
+			var result = teklaObject.RotateViewOnDrawingPlane(rotationAngle);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnDrawingPlane()"); }

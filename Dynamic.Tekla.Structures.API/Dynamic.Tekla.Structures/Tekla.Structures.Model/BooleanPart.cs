@@ -70,7 +70,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean SetOperativePart(Dynamic.Tekla.Structures.Model.Part Part)
 		{
 			try {
-			return teklaObject.SetOperativePart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
+			var result = teklaObject.SetOperativePart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetOperativePart()"); }

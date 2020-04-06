@@ -160,7 +160,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
 		{
 			try {
-			return teklaObject.AddObjects(Objects);
+			var result = teklaObject.AddObjects(Objects);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddObjects()"); }
@@ -169,7 +170,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Boolean RemoveObjects(System.Collections.ArrayList Objects)
 		{
 			try {
-			return teklaObject.RemoveObjects(Objects);
+			var result = teklaObject.RemoveObjects(Objects);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveObjects()"); }

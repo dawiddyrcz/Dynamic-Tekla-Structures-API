@@ -108,7 +108,8 @@ namespace Dynamic.Tekla.Structures.Forming
 		public System.Object Clone()
 		{
 			try {
-			return teklaObject.Clone();
+			var result = teklaObject.Clone();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()"); }

@@ -47,7 +47,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment line)
 		{
 			try {
-			return teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
+			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(line));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
@@ -56,7 +57,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2)
 		{
 			try {
-			return teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
+			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }
@@ -65,7 +67,8 @@ namespace Dynamic.Tekla.Structures.Model
 		public System.Collections.ArrayList Intersect(Dynamic.Tekla.Structures.Geometry3d.Point point1, Dynamic.Tekla.Structures.Geometry3d.Point point2, Dynamic.Tekla.Structures.Geometry3d.Point point3)
 		{
 			try {
-			return teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
+			var result = teklaObject.Intersect(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point2), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Intersect()"); }

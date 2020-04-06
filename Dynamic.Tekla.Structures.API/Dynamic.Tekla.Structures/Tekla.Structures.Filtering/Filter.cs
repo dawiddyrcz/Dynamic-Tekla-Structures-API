@@ -56,7 +56,8 @@ namespace Dynamic.Tekla.Structures.Filtering
 		public System.String CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType, System.String FullFileName)
 		{
 			try {
-			return teklaObject.CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType_.GetTSObject(FilterExpressionFileType), FullFileName);
+			var result = teklaObject.CreateFile(Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType_.GetTSObject(FilterExpressionFileType), FullFileName);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateFile()"); }

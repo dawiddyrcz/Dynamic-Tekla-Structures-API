@@ -139,7 +139,7 @@ namespace CodeGenerator
             sb.Append(")\n\t\t{\n");
             sb.Append("\t\t\ttry {\n");
             sb.Append("\t\t\t");
-            if (!typeFullName.Equals("void")) sb.Append("return ");
+            if (!typeFullName.Equals("void")) sb.Append("var result = ");
             sb.Append("$dfield.");
             sb.Append(name);
             sb.Append("(");
@@ -170,6 +170,7 @@ namespace CodeGenerator
             if (method.GetParameters().Length > 0) sb.Remove(sb.Length - 2, 2);
 
             sb.Append(");\n");
+            if (!typeFullName.Equals("void")) sb.Append("\t\t\treturn result;\n");
             sb.Append("\t\t\t}\n\t\t\tcatch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)\n");
             sb.Append("\t\t\t { throw DynamicAPINotFoundException.CouldNotFindMethod(\"" + method.Name + "()\"); }\n");
             sb.Append("\t\t}");

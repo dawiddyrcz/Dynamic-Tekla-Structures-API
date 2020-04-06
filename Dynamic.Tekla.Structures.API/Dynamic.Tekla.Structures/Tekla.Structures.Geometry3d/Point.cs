@@ -142,7 +142,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Int32 CompareTo(System.Object obj)
 		{
 			try {
-			return teklaObject.CompareTo(obj);
+			var result = teklaObject.CompareTo(obj);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()"); }

@@ -42,7 +42,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double Normalize()
 		{
 			try {
-			return teklaObject.Normalize();
+			var result = teklaObject.Normalize();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Normalize()"); }
@@ -51,7 +52,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double Normalize(System.Double NewLength)
 		{
 			try {
-			return teklaObject.Normalize(NewLength);
+			var result = teklaObject.Normalize(NewLength);
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Normalize()"); }
@@ -60,7 +62,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double GetLength()
 		{
 			try {
-			return teklaObject.GetLength();
+			var result = teklaObject.GetLength();
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetLength()"); }
@@ -69,7 +72,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double GetAngleBetween(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
 		{
 			try {
-			return teklaObject.GetAngleBetween(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
+			var result = teklaObject.GetAngleBetween(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAngleBetween()"); }
@@ -87,7 +91,8 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		public System.Double Dot(Dynamic.Tekla.Structures.Geometry3d.Vector Vector)
 		{
 			try {
-			return teklaObject.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
+			var result = teklaObject.Dot(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector));
+			return result;
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Dot()"); }

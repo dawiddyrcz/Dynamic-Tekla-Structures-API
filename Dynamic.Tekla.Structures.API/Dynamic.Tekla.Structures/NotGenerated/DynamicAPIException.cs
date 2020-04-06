@@ -11,18 +11,26 @@ namespace Dynamic.Tekla.Structures
 {
     public class DynamicAPIException : Exception
     {
-        public DynamicAPIException(string message) : base (message)
+        public DynamicAPIException(string message) 
+            : base (message + TeklaVersion())
         {
 
         }
 
-        public DynamicAPIException(string message, Exception innerException) :base(message, innerException)
+        public DynamicAPIException(string message, Exception innerException) 
+            :base(message + TeklaVersion(), innerException)
         {
 
         }
 
         public DynamicAPIException() : base()
         {
+
+        }
+
+        private static string TeklaVersion()
+        {
+            return "\nCurrent tekla version = " + TeklaProcess.TeklaFileVersion.ToString();
         }
     }
 }

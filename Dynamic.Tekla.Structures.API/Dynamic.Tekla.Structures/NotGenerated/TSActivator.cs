@@ -153,7 +153,7 @@ namespace Dynamic.Tekla.Structures
                     type = TryGetNestedType(typeName, ref assembly);
                     if (type != null) return type;
 
-                    throw new DynamicAPIException("Unknown error. Type is null in GetTypeFromTypeName() method.");
+                    throw new DynamicAPIException("Unknown error. Type is null in GetTypeFromTypeName() method. Type name: " + typeName);
                 }
                 else
                 {

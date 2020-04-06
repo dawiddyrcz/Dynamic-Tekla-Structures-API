@@ -7,11 +7,59 @@
 */
 namespace Dynamic.Tekla.Structures
 {
-    internal struct TeklaFileVersion
+    public struct TeklaFileVersion
     {
         public int Major;
         public int Minor;
         public int Build;
         public int Build2;
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is TeklaFileVersion))
+            {
+                return false;
+            }
+
+            var version = (TeklaFileVersion)obj;
+            return Major == version.Major &&
+                   Minor == version.Minor &&
+                   Build == version.Build &&
+                   Build2 == version.Build2;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1197760834;
+            hashCode = hashCode * -1521134295 + Major.GetHashCode();
+            hashCode = hashCode * -1521134295 + Minor.GetHashCode();
+            hashCode = hashCode * -1521134295 + Build.GetHashCode();
+            hashCode = hashCode * -1521134295 + Build2.GetHashCode();
+            return hashCode;
+        }
+
+        public override string ToString()
+        {
+            var sb = new System.Text.StringBuilder(100);
+            sb.Append(Major);
+            sb.Append(".");
+            sb.Append(Minor);
+            sb.Append(".");
+            sb.Append(Build);
+            sb.Append(".");
+            sb.Append(Build2);
+
+            return sb.ToString();
+        }
+
+        public static bool operator ==(TeklaFileVersion version1, TeklaFileVersion version2)
+        {
+            return version1.Equals(version2);
+        }
+
+        public static bool operator !=(TeklaFileVersion version1, TeklaFileVersion version2)
+        {
+            return !(version1 == version2);
+        }
     }
 }

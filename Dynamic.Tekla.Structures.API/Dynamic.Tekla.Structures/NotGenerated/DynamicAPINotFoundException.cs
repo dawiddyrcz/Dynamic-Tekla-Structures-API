@@ -11,18 +11,25 @@ namespace Dynamic.Tekla.Structures
 {
     public class DynamicAPINotFoundException : Exception
     {
-        public DynamicAPINotFoundException(string message) : base (message)
+        public DynamicAPINotFoundException(string message) 
+            : base (message + TeklaVersion())
         {
 
         }
 
-        public DynamicAPINotFoundException(string message, Exception innerException) :base(message, innerException)
+        public DynamicAPINotFoundException(string message, Exception innerException) 
+            :base(message + TeklaVersion(), innerException)
         {
 
         }
 
         public DynamicAPINotFoundException() : base()
         {
+        }
+
+        private static string TeklaVersion()
+        {
+            return "\nCurrent tekla version = " + TeklaProcess.TeklaFileVersion.ToString();
         }
 
         public static DynamicAPINotFoundException CouldNotFindMethod(string methodName)
@@ -32,7 +39,7 @@ namespace Dynamic.Tekla.Structures
 
         public static DynamicAPINotFoundException CouldNotFindProperty(string propertyName)
         {
-            return new DynamicAPINotFoundException("Could not find method " + propertyName + " in current Tekla API");
+            return new DynamicAPINotFoundException("Could not find property " + propertyName + " in current Tekla API");
         }
     }
 }

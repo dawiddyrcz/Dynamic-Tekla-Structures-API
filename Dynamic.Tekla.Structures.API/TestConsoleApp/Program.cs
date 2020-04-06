@@ -13,8 +13,6 @@ namespace TestConsoleApp
 {
     static class Program
     {
-        //TODO TeklaProcess public
-        //TODO exceptions with API version
         //TODO exception in Drawing enumerator
         //TODO change generator - remove dlls from github, change output to different location
         //TODO readme

@@ -15,7 +15,7 @@ using System.Text;
 
 namespace Dynamic.Tekla.Structures
 {
-    internal static class TeklaProcess
+    public static class TeklaProcess
     {
         private const string TEKLA_PROCESS_NAME = "TeklaStructures";
 

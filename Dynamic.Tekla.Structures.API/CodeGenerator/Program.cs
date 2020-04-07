@@ -7,6 +7,21 @@
 */
 
 
+//TODO bug: w constructorze parametry jako listy nie są konwertowane
+//TODO bug: GetAllObjects(System.Type Type)
+
+//TODO obejrzeć wszystkie klasy
+//TODO readme
+//TODO nuget package
+
+//TODO project with unit tests
+//TODO test model
+//TODO exception in Drawing enumerator
+//TODO add info in license informaing that you have to have Tekla Structures Software
+
+
+
+
 #define OVERRIDE
 
 using System;

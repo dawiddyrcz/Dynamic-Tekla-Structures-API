@@ -19,11 +19,13 @@ namespace Dynamic.Tekla.Structures
     {
         private const string TEKLA_PROCESS_NAME = "TeklaStructures";
 
-        public static Dictionary<string, Assembly> APIAssemblies { get; private set; } = new Dictionary<string, Assembly>();
+        /// <summary>Holds TypeFull name in c# style with assembly where type should be</summary>
+        internal static Dictionary<string, Assembly> APIAssemblies { get; private set; } = new Dictionary<string, Assembly>();
+
         public static string BinPath { get; private set; } = string.Empty;
         public static TeklaFileVersion TeklaFileVersion { get; private set; }
 
-        private static Process teklaProcess;
+        public static Process teklaProcess { get; private set; }
 
         public static bool IsTeklaRunning()
         {

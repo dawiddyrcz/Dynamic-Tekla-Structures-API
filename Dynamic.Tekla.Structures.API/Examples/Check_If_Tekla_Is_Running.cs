@@ -12,10 +12,6 @@ namespace Examples
 {
     public class Check_If_Tekla_Is_Running : ExampleBase
     {
-        public Check_If_Tekla_Is_Running()
-        {
-
-        }
 
         public override void Run()                      
         {

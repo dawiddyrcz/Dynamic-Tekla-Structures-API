@@ -11,7 +11,6 @@
 //TODO bug: GetAllObjects(System.Type Type)
 
 //TODO obejrzeć wszystkie klasy
-//TODO readme
 //TODO nuget package
 
 //TODO project with unit tests

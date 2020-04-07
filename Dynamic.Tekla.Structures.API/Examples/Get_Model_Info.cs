@@ -12,10 +12,6 @@ namespace Examples
 {
     public class Get_Model_Info : ExampleBase
     {
-        public Get_Model_Info()
-        {
-
-        }
 
         public override void Run()
         {

@@ -14,10 +14,6 @@ namespace Examples
 {
     public class Insert_Beam_In_Model : ExampleBase
     {
-        public Insert_Beam_In_Model()
-        {
-
-        }
 
         public override void Run()
         {

@@ -1,4 +1,6 @@
 # Dynamic-Tekla-Structures-API
+This is alpha version of library. Tests are in progress. There are some not finded bugs.
+
 This is a wrapper of the Tekla Structures API assemblies, created to make version independent applications which connects with Tekla Structures. This library can be used instead of official Tekla Structures API. Library contains most of the types present in official Tekla API but namespaces starts with "Dynamic.Tekla.Structures" instead of "Tekla.Structures". 
 
 ## What is the Tekla Structures API

@@ -29,6 +29,7 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static dynamic CreateInstance(string typeName, object[] args)
         {
+            //TODO convert parameters
             var type = GetTypeFromTypeName(typeName);
             return Activator.CreateInstance(type, args);
         }
@@ -69,7 +70,7 @@ namespace Dynamic.Tekla.Structures
             var type = GetTypeFromTypeName(typeName);
             MethodInfo method = GetMethod(methodName, parameters, type);
 
-            var result =  method.Invoke(null, parameters);
+            var result = method.Invoke(null, parameters);
             if (result is null) return null;
 
             if (result is System.Collections.ArrayList)
@@ -97,7 +98,7 @@ namespace Dynamic.Tekla.Structures
             var propertyInfo = type.GetProperty(fieldOrPropertyName);
             if (propertyInfo != null)
             {
-                var result =  propertyInfo.GetValue(null);
+                var result = propertyInfo.GetValue(null);
                 if (result is null) return null;
 
                 if (result is System.Collections.ArrayList)
@@ -177,7 +178,7 @@ namespace Dynamic.Tekla.Structures
             throw new DynamicAPINotFoundException("Could not find method " + methodName + " in type " + type.Name);
         }
 
-        
+
         /// <summary>Finds type from loaded Tekla API assemblies</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception>
@@ -208,7 +209,7 @@ namespace Dynamic.Tekla.Structures
                 throw new DynamicAPIException("Tekla Structures is not running. Start program before using API");
             }
         }
-        
+
         private static Type TryGetNestedType(string typeName, ref Assembly assembly)
         {
             if (typeName.Contains('.'))
@@ -260,6 +261,53 @@ namespace Dynamic.Tekla.Structures
                 output.Add(dynObject.teklaObject);
             }
             return output;
+        }
+
+        public static object[] ConvertTupleTSTypes(object input)
+        {
+            object[] values = input.GetType()
+                  .GetProperties()
+                  .Select(property => property.GetValue(input))
+                  .ToArray();
+            if (values.Length.Equals(0)) return values;
+
+            var assembly = Assembly.GetExecutingAssembly();
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                var currentValue = values[i];
+                if (currentValue.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
+                {
+                    string converterName = "Dynamic." + currentValue.GetType().ToString() + "_";
+                    var converterType = assembly.GetType(converterName);
+                    var parameters = new object[] { currentValue };
+                    var fromTSObjectMethod = GetMethod("FromTSObject", parameters, converterType);
+                    var converted = fromTSObjectMethod.Invoke(null, parameters);
+                    values[i] = converted;
+                }
+            }
+            return values;
+        }
+
+        public static System.Tuple<T1, T2> ArrayToTuple<T1, T2>(object[] array)
+        {
+            if (array.Length != 2)
+                throw new ArgumentException("Input array should have 2 elements but has " + array.Length);
+            return new Tuple<T1, T2>((T1)array[0], (T2)array[1]);
+        }
+
+        public static System.Tuple<T1, T2, T3> ArrayToTuple<T1, T2, T3>(object[] array)
+        {
+            if (array.Length != 3)
+                throw new ArgumentException("Input array should have 3 elements but has " + array.Length);
+            return new Tuple<T1, T2, T3>((T1)array[0], (T2)array[1], (T3)array[2]);
+        }
+
+        public static System.Tuple<T1, T2, T3, T4> ArrayToTuple<T1, T2, T3, T4>(object[] array)
+        {
+            if (array.Length != 4)
+                throw new ArgumentException("Input array should have 4 elements but has " + array.Length);
+            return new Tuple<T1, T2, T3, T4>((T1)array[0], (T2)array[1], (T3)array[2], (T4)array[3]);
         }
     }
 }

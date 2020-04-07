@@ -121,7 +121,7 @@ namespace CodeGenerator.Tests
         public void Dictionary_In_DatabaseObject()
         {
             var method = typeof(Tekla.Structures.Drawing.DatabaseObject).GetMethods()
-                .Where(m => m.Name.Equals("GetStringUserProperties", StringComparison.InvariantCulture) 
+                .Where(m => m.Name.Equals("GetStringUserProperties", StringComparison.InvariantCulture)
                 && m.GetParameters().Count().Equals(1)).FirstOrDefault();
             Assert.NotNull(method);
 
@@ -142,6 +142,6 @@ namespace CodeGenerator.Tests
             Console.WriteLine("Result:\t" + result);
             Assert.AreEqual("Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape", result);
         }
-
+        
     }
 }

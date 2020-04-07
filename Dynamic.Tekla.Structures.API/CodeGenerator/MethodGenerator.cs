@@ -182,6 +182,14 @@ namespace CodeGenerator
                 {
                     sb.Append("\t\t\treturn TSActivator.ConvertArrayList(result);\n");
                 }
+                else if (method.ReturnType.ToString().StartsWith("System.Tuple", StringComparison.InvariantCulture))
+                {
+                    sb.Append("\t\t\tvar valls = TSActivator.ConvertTupleTSTypes(result);\n");
+                    string t1t2t3 = TypeFullName.GetTypeFullName(method.ReturnType)
+                        .Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.")
+                        .Replace("System.Tuple","");
+                    sb.Append("\t\t\treturn TSActivator.ArrayToTuple" + t1t2t3 +"(valls);\n");
+                }
                 else
                     sb.Append("\t\t\treturn result;\n");
             }
@@ -259,6 +267,14 @@ namespace CodeGenerator
                 {
                     sb.Append("\t\t\tparameters[" + i + "] = ");
                     sb.Append(CorrectIfArray(paramTypeFullName) + "_.GetTSObject(" + paramName + ");\n");
+                }
+                else if (method.ReturnType.ToString().StartsWith("System.Tuple", StringComparison.InvariantCulture))
+                {
+                    sb.Append("\t\t\tvar valls = TSActivator.ConvertTupleTSTypes(result);\n");
+                    string t1t2t3 = TypeFullName.GetTypeFullName(method.ReturnType)
+                        .Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.")
+                        .Replace("System.Tuple", "");
+                    sb.Append("\t\t\treturn TSActivator.ArrayToTuple" + t1t2t3 + "(valls);\n");
                 }
                 else
                     sb.Append("\t\t\tparameters["+ i +"] = " + paramName + ";\n");

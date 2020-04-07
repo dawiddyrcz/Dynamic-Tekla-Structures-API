@@ -16,8 +16,7 @@ namespace TestConsoleApp
 {
     static class Program
     {
-        //TODO bug: gdy się robi pick point w rysunkach to wywala RuntimeBinderException PickPoint(string prompt)
-        //TODO bug result System.Tuple
+        //TODO bug: w constructorze parametry jako listy nie są konwertowane
         //TODO bug: GetAllObjects(System.Type Type)
 
         //TODO obejrzeć wszystkie klasy

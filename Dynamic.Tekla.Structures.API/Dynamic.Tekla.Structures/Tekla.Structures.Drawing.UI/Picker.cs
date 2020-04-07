@@ -49,7 +49,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		{
 			try {
 			var result = teklaObject.PickPoint(prompt);
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<Dynamic.Tekla.Structures.Geometry3d.Point, Dynamic.Tekla.Structures.Drawing.ViewBase>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoint()", ex); }
@@ -111,7 +112,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		{
 			try {
 			var result = teklaObject.PickPoints(numberOfPicks, Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts));
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.Structures.Drawing.ViewBase>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()", ex); }
@@ -134,7 +136,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		{
 			try {
 			var result = teklaObject.PickPoints(Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts));
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.Structures.Drawing.ViewBase>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickPoints()", ex); }
@@ -157,7 +160,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		{
 			try {
 			var result = teklaObject.PickObject(prompt);
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekla.Structures.Drawing.ViewBase>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObject()", ex); }
@@ -183,7 +187,8 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		{
 			try {
 			var result = teklaObject.PickObjectAndPoint(prompt);
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekla.Structures.Drawing.ViewBase, Dynamic.Tekla.Structures.Geometry3d.Point>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PickObjectAndPoint()", ex); }

@@ -417,7 +417,8 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetCompoundPlaneAngleLatitude();
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<System.Boolean, System.Int32, System.Int32, System.Int32>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLatitude()", ex); }
@@ -427,7 +428,8 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			try {
 			var result = teklaObject.GetCompoundPlaneAngleLongitude();
-			return result;
+			var valls = TSActivator.ConvertTupleTSTypes(result);
+			return TSActivator.ArrayToTuple<System.Boolean, System.Int32, System.Int32, System.Int32>(valls);
 			}
 			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
 			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLongitude()", ex); }

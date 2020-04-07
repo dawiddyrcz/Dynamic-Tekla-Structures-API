@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="NotGenerated\DrawingEvents.cs" />
     <Compile Include="NotGenerated\DrawingUIEvents.cs" />
+    <Compile Include="NotGenerated\DynamicAPITeklaNotRunningException.cs" />
     <Compile Include="NotGenerated\DynamicAPINotFoundException.cs" />
     <Compile Include="NotGenerated\DynamicAPIException.cs" />
     <Compile Include="GlobalSuppressions.cs" />

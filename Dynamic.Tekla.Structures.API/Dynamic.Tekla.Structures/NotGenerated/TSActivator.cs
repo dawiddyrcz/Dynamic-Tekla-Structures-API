@@ -206,7 +206,7 @@ namespace Dynamic.Tekla.Structures
             }
             else
             {
-                throw new DynamicAPIException("Tekla Structures is not running. Start program before using API");
+                throw new DynamicAPITeklaNotRunningException();
             }
         }
 

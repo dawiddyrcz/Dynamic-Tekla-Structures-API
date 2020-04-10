@@ -1,14 +1,18 @@
-﻿/*
-*Copyright (C) Dawid Dyrcz 2020 - All rights reserved
+﻿/*Copyright (C) Dawid Dyrcz 2020
+* This program is free software. You may use, distribute and modify 
+* this code under the terms of the LGPL3 license. This program is distributed 
+* in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
+
+
+//TODO ref and out parameters
+
 
 using Dynamic.Tekla.Structures;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeGenerator
 {
@@ -17,12 +21,17 @@ namespace CodeGenerator
         private readonly ParameterInfo parameterInfo;
         private readonly bool haveToBeConverted = false;
         private readonly string correctedName = string.Empty;
-      
+        private readonly string correctedName_ = string.Empty;
+
         public MethodParameter(ParameterInfo parameterInfo)
         {
+            if (parameterInfo is null)
+                throw new ArgumentNullException(nameof(parameterInfo));
+
             this.parameterInfo = parameterInfo;
-            haveToBeConverted = HaveToBeConverted();
+            haveToBeConverted = Converters.HaveToBeConverted(parameterInfo.ParameterType);
             correctedName = CorrectName();
+            correctedName_ = correctedName + "_";
         }
 
         private string CorrectName()
@@ -31,39 +40,53 @@ namespace CodeGenerator
 
             if (name.Equals("object", StringComparison.InvariantCulture))
                 return "objectt";
-            else if (name.Equals("Type", StringComparison.InvariantCulture))
-                return "Ttype";
             else
                 return name;
         }
 
-        private bool HaveToBeConverted()
-        {
-            var type = parameterInfo.ParameterType;
-
-            if (TypeFullName.IsTeklaType(type))
-                return true;
-
-            if (type.IsArray)
-                return true;
-
-            if (type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(List<>)))
-                return true;
-
-            return false;
-        }
 
         public string MethodDeclaration
         {
             get
             {
-                string declaration = TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " " + correctedName;
-
                 if (haveToBeConverted)
-                    return declaration + "_";
+                    return TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " " + correctedName_;
                 else
-                    return declaration;
+                    return TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " " + correctedName;
+            }
+        }
 
+        public string ParameterName
+        {
+            get
+            {
+                return correctedName;
+            }
+        }
+
+        public string ConverterToTS
+        {
+            get
+            {
+                if (!haveToBeConverted)
+                {
+                    return string.Empty;
+                }
+
+                return Converters.ToTSObjects(parameterInfo.ParameterType, correctedName_, "var " + correctedName);
+            }
+        }
+
+        public string ConverterFromTS
+        {
+            get
+            {
+                if (!haveToBeConverted)
+                {
+                    return string.Empty;
+                }
+
+                return Converters.FromTSObjects(parameterInfo.ParameterType, correctedName, correctedName_);
             }
         }
     }

@@ -46,7 +46,7 @@ namespace CodeGenerator
             }
         }
 
-        public static bool HaveToBeConverted(Type type)
+        public static bool HaveToBeConverted(Type type2)
         {
             //if (TypeFullName.IsTeklaType(type))
             //    return true;
@@ -64,12 +64,21 @@ namespace CodeGenerator
             //    return true;
 
             //return false;
+            Type type;
+            if (type2.IsByRef)
+                type = type2.GetElementType();
+            else
+                type = type2;
 
             if (
                 type.IsAssignableFrom(typeof(int))
                 || type.IsAssignableFrom(typeof(string))
                 || type.IsAssignableFrom(typeof(double))
                 || type.IsAssignableFrom(typeof(bool))
+                
+                //TODO a czy to ma jakiś sens?
+                || type.IsAssignableFrom(typeof(Hashtable)) //I know the hashtables are only with report properties which are string, int, double
+                || typeof(Hashtable).IsAssignableFrom(type) //I know the hashtables are only with report properties which are string, int, double
                 ) return false;
 
             return true;

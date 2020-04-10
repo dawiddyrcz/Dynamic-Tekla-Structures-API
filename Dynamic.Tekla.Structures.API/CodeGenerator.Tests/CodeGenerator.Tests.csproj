@@ -84,6 +84,7 @@
     <Compile Include="..\CodeGenerator\TypeFullName.cs">
       <Link>TypeFullName.cs</Link>
     </Compile>
+    <Compile Include="MethodGeneratorTests.cs" />
     <Compile Include="MethodParameterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeNameTests.cs" />

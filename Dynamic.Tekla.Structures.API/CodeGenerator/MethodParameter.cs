@@ -49,10 +49,19 @@ namespace CodeGenerator
         {
             get
             {
+                var declaration = TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " ";
+
                 if (haveToBeConverted)
-                    return TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " " + correctedName_;
+                    declaration += correctedName_;
                 else
-                    return TypeFullName.GetTypeFullName_WithDynamic(parameterInfo.ParameterType) + " " + correctedName;
+                    declaration += correctedName;
+
+                if (parameterInfo.ParameterType.IsByRef)
+                    declaration = "ref " + declaration;
+                else if (parameterInfo.IsOut)
+                    declaration = "out " + declaration;
+
+                return declaration;
             }
         }
 
@@ -64,13 +73,31 @@ namespace CodeGenerator
             }
         }
 
+        public string MethodCall
+        {
+            get
+            {
+                if (parameterInfo.ParameterType.IsByRef)
+                    return "ref " + correctedName;
+                else if (parameterInfo.IsOut)
+                    return "out " + correctedName;
+                else
+                    return correctedName;
+            }
+        }
+
         public string ConverterToTS
         {
             get
             {
                 if (!haveToBeConverted)
                 {
-                    return string.Empty;
+                    if (IsRefOrOut) //TODO a nie same outy?
+                    {
+                        return "var " + correctedName + " = " + correctedName_ + ";";
+                    }
+                    else
+                        return string.Empty;
                 }
 
                 return Converters.ToTSObjects(parameterInfo.ParameterType, correctedName_, "var " + correctedName);
@@ -83,10 +110,22 @@ namespace CodeGenerator
             {
                 if (!haveToBeConverted)
                 {
+                    if (IsRefOrOut)
+                    {
+                        return correctedName_ + " = " + correctedName + ";";
+                    }
                     return string.Empty;
                 }
 
                 return Converters.FromTSObjects(parameterInfo.ParameterType, correctedName, correctedName_);
+            }
+        }
+
+        public bool IsRefOrOut
+        {
+            get
+            {
+                return parameterInfo.IsOut || parameterInfo.ParameterType.IsByRef;
             }
         }
     }

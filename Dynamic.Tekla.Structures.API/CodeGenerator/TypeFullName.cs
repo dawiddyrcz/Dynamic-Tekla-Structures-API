@@ -16,7 +16,7 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class TypeFullName
     {
-        private static bool IsTeklaType(Type type)
+        public static bool IsTeklaType(Type type)
         {
             return type.FullName?.StartsWith("Tekla.Structures") ?? false;
         }

@@ -159,27 +159,6 @@ public System.Boolean AddInputObjects(
 
 
 
-public void CopyTo(
-	System.Array array_,
-	System.Int32 index
-	)
-{
-	var array = IEnumerableConverter.ToTSObjects<System.Array>(array_);
-	
-    try
-    {
-        	teklaObject.CopyTo(array, index);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CopyTo), ex);
-    }
-}
-
-
-
 
 
 

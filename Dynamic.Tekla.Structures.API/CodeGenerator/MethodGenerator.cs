@@ -26,7 +26,7 @@ namespace CodeGenerator
                 if (type.Name.Equals("Polymesh", StringComparison.InvariantCulture) && method.Name.Equals("Validate", StringComparison.InvariantCulture)) continue;
                 if (method.ReturnType.IsInterface) continue;
                 if (method.GetBaseDefinition() != method) continue;
-                //if (method.ReturnType.Equals(typeof(System.Collections.ArrayList))) continue;
+                if (method.Name.Equals("CopyTo")) continue;
 
                 if (method.IsGenericMethod)
                     continue;

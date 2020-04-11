@@ -225,27 +225,6 @@ public System.Boolean Contains(
 
 
 
-public void CopyTo(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem[] Array_,
-	System.Int32 ArrayIndex
-	)
-{
-	var Array = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItemArray_.GetTSObject(Array_);
-	
-    try
-    {
-        	teklaObject.CopyTo(Array, ArrayIndex);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CopyTo), ex);
-    }
-}
-
-
-
 public System.Boolean IsFirst(
 	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem_
 	)

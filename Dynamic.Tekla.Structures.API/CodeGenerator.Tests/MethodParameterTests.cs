@@ -74,9 +74,9 @@ namespace CodeGenerator.Tests
             var methodParameter = new MethodParameter(parameterInfo);
 
             Assert.AreEqual("System.Type[] TypeFilter_", methodParameter.MethodDeclaration);
-            Assert.AreEqual("var TypeFilter = IEnumerableConverter.ToTSObjects(TypeFilter_);", methodParameter.ConverterToTS);
+            Assert.AreEqual("var TypeFilter = IEnumerableConverter.ToTSObjects<System.Type[]>(TypeFilter_);", methodParameter.ConverterToTS);
             Assert.AreEqual("TypeFilter", methodParameter.ParameterName);
-            Assert.AreEqual("TypeFilter_ = IEnumerableConverter.FromTSObjects(TypeFilter);", methodParameter.ConverterFromTS);
+            Assert.AreEqual("TypeFilter_ = IEnumerableConverter.FromTSObjects<System.Type[]>(TypeFilter);", methodParameter.ConverterFromTS);
 
         }
 
@@ -92,9 +92,9 @@ namespace CodeGenerator.Tests
             var methodParameter = new MethodParameter(parameterInfo);
 
             Assert.AreEqual("System.Collections.ArrayList Assemblables_", methodParameter.MethodDeclaration);
-            Assert.AreEqual("var Assemblables = IEnumerableConverter.ToTSObjects(Assemblables_);", methodParameter.ConverterToTS);
+            Assert.AreEqual("var Assemblables = ArrayListConverter.ToTSObjects(Assemblables_);", methodParameter.ConverterToTS);
             Assert.AreEqual("Assemblables", methodParameter.ParameterName);
-            Assert.AreEqual("Assemblables_ = IEnumerableConverter.FromTSObjects(Assemblables);", methodParameter.ConverterFromTS);
+            Assert.AreEqual("Assemblables_ = ArrayListConverter.FromTSObjects(Assemblables);", methodParameter.ConverterFromTS);
 
         }
 
@@ -128,10 +128,10 @@ namespace CodeGenerator.Tests
 
             var methodParameter = new MethodParameter(parameterInfo);
 
-            Assert.AreEqual("System.Collections.Generic.List<System.String> names_", methodParameter.MethodDeclaration);
-            Assert.AreEqual("var names = IEnumerableConverter.ToTSObjects(names_);", methodParameter.ConverterToTS);
+            Assert.AreEqual("System.Collections.Generic.List<System.String> names", methodParameter.MethodDeclaration);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterToTS);
             Assert.AreEqual("names", methodParameter.ParameterName);
-            Assert.AreEqual("names_ = IEnumerableConverter.FromTSObjects(names);", methodParameter.ConverterFromTS);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterFromTS);
 
         }
     }

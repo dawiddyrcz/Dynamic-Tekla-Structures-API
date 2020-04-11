@@ -35,5 +35,16 @@ namespace CodeGenerator.Tests
             var methodCode = MethodGeneratorSingle.GenerateCode(methodInfo);
             Console.WriteLine(methodCode);
         }
+
+        [Test]
+        public void Operation_Combine()
+        {
+            var methodInfo = typeof(Tekla.Structures.Model.Operations.Operation).GetMethods()
+                .Where(m => m.Name.Equals("Combine", StringComparison.InvariantCulture) && m.GetParameters().Length > 1)
+                .FirstOrDefault();
+
+            var methodCode = MethodGeneratorSingle.GenerateCode(methodInfo);
+            Console.WriteLine(methodCode);
+        }
     }
 }

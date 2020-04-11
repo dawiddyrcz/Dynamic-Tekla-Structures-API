@@ -46,7 +46,7 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
             return methodCode;
         }
-
+        
         private static List<MethodParameter> GetMethodParameters(MethodInfo methodInfo)
         {
             var output = new List<MethodParameter>();
@@ -110,10 +110,18 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             if (!IsVoid(methodInfo))
                 sb.Append("var result = ");
             
-            //TODO static methods
-            sb.Append("teklaObject.")
-                .Append(methodInfo.Name)
-                .Append("(");
+            if (methodInfo.IsStatic)
+            {
+                sb.Append("MethodInvoker.InvokeStaticMethod(teklaObject.GetType(), \"")
+                .Append(methodInfo.Name).Append("\", ");
+            }
+            else
+            {
+                sb.Append("teklaObject.")
+               .Append(methodInfo.Name)
+               .Append("(");
+            }
+           
 
             if (parameters.Count > 0)
             {
@@ -127,7 +135,15 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
             sb.Append(");");
 
-            return sb.ToString();
+            if (methodInfo.IsStatic == false)
+            {
+                return $@"
+    try
+    {{
+        {sb.ToString()}";
+            }
+            else
+                return sb.ToString();
         }
         
         private static string GetParametersConvertersFromTS(List<MethodParameter> parameters)
@@ -162,7 +178,19 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             {
                 sb.Append("\t").Append("return result;");
             }
-            return sb.ToString();
+            
+            if (!methodInfo.IsStatic)
+            {
+                return $@"
+        {sb.ToString()}
+    }}
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {{
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof({methodInfo.Name}), ex);
+    }}";
+            }
+            else
+                return sb.ToString();
         }
 
         private static bool IsVoid(MethodInfo methodInfo)

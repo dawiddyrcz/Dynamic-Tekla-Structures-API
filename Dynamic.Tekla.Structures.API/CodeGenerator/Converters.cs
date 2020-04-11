@@ -9,6 +9,7 @@
 using Dynamic.Tekla.Structures;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace CodeGenerator
 {
@@ -16,13 +17,19 @@ namespace CodeGenerator
     {
         public static string ToTSObjects(Type type, string inputName, string outputName)
         {
+            var typeFullName = TypeFullName.GetTypeFullName(type);
+
             if (TypeFullName.IsTeklaType(type))
             {
                 return outputName + " = " + TypeFullName.GetTypeFullName_WithDynamic(type) + "_.GetTSObject(" + inputName + ");";
             }
+            else if (typeof(ArrayList).IsAssignableFrom(type))
+            {
+                return outputName + " = ArrayListConverter.ToTSObjects(" + inputName + ");";
+            }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                return outputName + " = IEnumerableConverter.ToTSObjects(" + inputName + ");";
+                return outputName + " = IEnumerableConverter.ToTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
             else
             {
@@ -32,13 +39,18 @@ namespace CodeGenerator
 
         public static string FromTSObjects(Type type, string inputName, string outputName)
         {
+            var typeFullName = TypeFullName.GetTypeFullName_WithDynamic(type);
             if (TypeFullName.IsTeklaType(type))
             {
                 return outputName + " = " + TypeFullName.GetTypeFullName_WithDynamic(type) + "_.FromTSObject(" + inputName + ");";
             }
+            else if (typeof(ArrayList).IsAssignableFrom(type))
+            {
+                return  outputName + " = ArrayListConverter.FromTSObjects(" + inputName + ");";
+            }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                return outputName + " = IEnumerableConverter.FromTSObjects(" + inputName + ");";
+                return outputName + " = IEnumerableConverter.FromTSObjects<"+typeFullName+">(" + inputName + ");";
             }
             else
             {
@@ -48,22 +60,6 @@ namespace CodeGenerator
 
         public static bool HaveToBeConverted(Type type2)
         {
-            //if (TypeFullName.IsTeklaType(type))
-            //    return true;
-
-            //if (type.IsArray)
-            //    return true;
-
-            //if (type.IsAssignableFrom(typeof(System.Collections.ArrayList)))
-            //    return true;
-
-            //if (type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(List<>)))
-            //    return true;
-
-            //if (type.IsAssignableFrom(typeof(System.Type)))
-            //    return true;
-
-            //return false;
             Type type;
             if (type2.IsByRef)
                 type = type2.GetElementType();
@@ -76,10 +72,22 @@ namespace CodeGenerator
                 || type.IsAssignableFrom(typeof(double))
                 || type.IsAssignableFrom(typeof(bool))
                 
-                //TODO a czy to ma jakiś sens?
-                || type.IsAssignableFrom(typeof(Hashtable)) //I know the hashtables are only with report properties which are string, int, double
                 || typeof(Hashtable).IsAssignableFrom(type) //I know the hashtables are only with report properties which are string, int, double
-                ) return false;
+                
+                || typeof(List<string>).IsAssignableFrom(type)
+                || typeof(List<int>).IsAssignableFrom(type)
+                || typeof(List<double>).IsAssignableFrom(type)
+                || typeof(List<bool>).IsAssignableFrom(type)
+
+                || typeof(Dictionary<string, string>).IsAssignableFrom(type)
+                || typeof(Dictionary<string, int>).IsAssignableFrom(type)
+                || typeof(Dictionary<string, double>).IsAssignableFrom(type)
+
+
+                )
+            {
+                return false;
+            }
 
             return true;
         }

@@ -31,10 +31,9 @@ public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMa
 
     try
     {
-        	var result = teklaObject.GetGuidMapping();
+        	var result = (System.Collections.Generic.Dictionary<System.Guid, System.Guid>) teklaObject.GetGuidMapping();
 
-        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.Dictionary<System.Guid, System.Guid>>(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {

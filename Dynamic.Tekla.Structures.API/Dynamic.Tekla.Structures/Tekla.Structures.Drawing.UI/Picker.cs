@@ -339,7 +339,7 @@ public void PickObject(
 	)
 {
 	
-	var typeFilter = IEnumerableConverter.ToTSObjects<System.Type[]>(typeFilter_);
+	var typeFilter = TypeConverter.ToTSObjects(typeFilter_);
 	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(pickedObject_);
 	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
 	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pickedPoint_);

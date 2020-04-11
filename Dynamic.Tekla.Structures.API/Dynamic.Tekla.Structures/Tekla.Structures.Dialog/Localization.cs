@@ -145,7 +145,7 @@ public void RegisterLocalizationCallback(
 	)
 {
 	var cb = Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb_);
-	var types = IEnumerableConverter.ToTSObjects<System.Type[]>(types_);
+	var types = TypeConverter.ToTSObjects(types_);
     try
     {
         	teklaObject.RegisterLocalizationCallback(cb, types);

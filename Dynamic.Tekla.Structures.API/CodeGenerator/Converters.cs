@@ -38,15 +38,16 @@ namespace CodeGenerator
             { 
                 return outputName + " = ListConverter.ToTSObjects(" + inputName + ");";
             }
+            else if (typeof(System.Type).IsAssignableFrom(type)
+               || typeof(System.Type[]).IsAssignableFrom(type))
+            {
+                return outputName + " = TypeConverter.ToTSObjects(" + inputName + ");";
+            }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
                 return outputName + " = IEnumerableConverter.ToTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
-            else if (typeof(System.Type).IsAssignableFrom(type)
-                || typeof(System.Type[]).IsAssignableFrom(type))
-            {
-                return outputName + " = TypeConverter.ToTSObjects(" + inputName + ");";
-            }
+            
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
                 var tupleParams = typeFullNameWithDynamic.Replace("System.Tuple", "");
@@ -80,15 +81,16 @@ namespace CodeGenerator
                 var listParams = typeFullName.Replace("System.Collections.Generic.List", "").Replace("System.Collections.Generic.IList", "");
                 return outputName + " = ListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
             }
+            else if (typeof(System.Type).IsAssignableFrom(type)
+              || typeof(System.Type[]).IsAssignableFrom(type))
+            {
+                return outputName + " = TypeConverter.FromTSObject(" + inputName + ");";
+            }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
                 return outputName + " = IEnumerableConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
-            else if (typeof(System.Type).IsAssignableFrom(type)
-               || typeof(System.Type[]).IsAssignableFrom(type))
-            {
-                return outputName + " = TypeConverter.FromTSObject(" + inputName + ");";
-            }
+           
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
                 var tupleParams = typeFullName.Replace("System.Tuple", "");
@@ -144,6 +146,8 @@ namespace CodeGenerator
                 || typeof(System.Guid).IsAssignableFrom(type)
 
                 || typeof(System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32>).IsAssignableFrom(type)
+                || typeof(System.Collections.Generic.Dictionary<System.Guid, System.Guid>).IsAssignableFrom(type)
+
                 // 
 
                 || type.Namespace.StartsWith("System.Windows.Forms")

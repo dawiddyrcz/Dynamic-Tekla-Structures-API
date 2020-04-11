@@ -140,7 +140,7 @@ namespace Dynamic.Tekla.Structures
 
         /// <summary>Gets the method from the type</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find metod</exception>
-        private static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
+        public static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
         {
             var methods = type.GetMethods()
                 .Where(m => m.Name.Equals(methodName, StringComparison.InvariantCulture)

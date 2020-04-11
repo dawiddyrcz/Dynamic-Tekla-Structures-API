@@ -49,7 +49,8 @@ namespace CodeGenerator
             }
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
-                return outputName + " = TupleConverter.ToTSObjects(" + inputName + ");";
+                var tupleParams = typeFullNameWithDynamic.Replace("System.Tuple", "");
+                return outputName + " = TupleConverter.ToTSObjects"+ tupleParams+"(" + inputName + ");";
             }
             else
             {
@@ -89,7 +90,8 @@ namespace CodeGenerator
             }
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
-                return outputName + " = TupleConverter.FromTSObject<" + typeFullName + ">(" + inputName + ");";
+                var tupleParams = typeFullName.Replace("System.Tuple", "");
+                return outputName + " = TupleConverter.FromTSObject" + tupleParams + "(" + inputName + ");";
             }
             else
             {

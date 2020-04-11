@@ -12,16 +12,39 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class ArrayListConverter
     {
-        public static ArrayList ToTSObjects(ArrayList input)
+        //TODO sprawdzić wszystkie wystąpienia 
+        public static ArrayList ToTSObjects(ArrayList dynAPIObjects)
         {
-            //TODO method
-            throw new NotImplementedException();
+            if (dynAPIObjects.Count.Equals(0))
+                return new ArrayList();
+
+            var output = new ArrayList(dynAPIObjects.Count + 1);
+
+            foreach (dynamic dynObject in dynAPIObjects)
+            {
+                output.Add(dynObject.teklaObject);
+            }
+            return output;
         }
 
-        public static ArrayList FromTSObjects(ArrayList input)
+        public static ArrayList FromTSObjects(ArrayList tsObjects)
         {
-            //TODO method
-            throw new NotImplementedException();
+            if (tsObjects.Count.Equals(0))
+                return new ArrayList();
+
+            var output = new ArrayList(tsObjects.Count + 1);
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+            foreach (var tsObject in tsObjects)
+            {
+                string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
+                var converterType = assembly.GetType(converterName);
+                var parameters = new object[] { tsObject };
+                var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+
+                output.Add(fromTSObjectMethod.Invoke(null, parameters));
+            }
+            return output;
         }
     }
 }

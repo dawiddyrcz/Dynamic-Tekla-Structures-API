@@ -664,7 +664,7 @@
     <Compile Include="Tekla.Structures\TeklaStructuresSettings.cs" />
     <Compile Include="Tekla.Structures\TeklaStructuresVariables.cs" />
     <Compile Include="Tekla.Structures\VirtualFolder.cs" />
-    <Compile Include="TupleConverter.cs" />
+    <Compile Include="NotGenerated\TupleConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

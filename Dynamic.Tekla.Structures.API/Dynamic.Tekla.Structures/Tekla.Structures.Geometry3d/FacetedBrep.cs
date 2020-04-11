@@ -105,7 +105,7 @@ public System.Boolean CheckForTwoManifold()
 
     try
     {
-        	var result = teklaObject.CheckForTwoManifold();
+        	var result = (System.Boolean) teklaObject.CheckForTwoManifold();
 
         	return result;
     }
@@ -124,7 +124,7 @@ public System.Int32[] GetInnerFace(
 	
     try
     {
-        	var result = teklaObject.GetInnerFace(faceIndex);
+        	var result = (System.Int32[]) teklaObject.GetInnerFace(faceIndex);
 
         	return result;
     }
@@ -143,7 +143,7 @@ public System.Int32 GetInnerFaceCount(
 	
     try
     {
-        	var result = teklaObject.GetInnerFaceCount(faceIndex);
+        	var result = (System.Int32) teklaObject.GetInnerFaceCount(faceIndex);
 
         	return result;
     }
@@ -162,7 +162,7 @@ public System.Int32[] GetOuterFace(
 	
     try
     {
-        	var result = teklaObject.GetOuterFace(faceIndex);
+        	var result = (System.Int32[]) teklaObject.GetOuterFace(faceIndex);
 
         	return result;
     }

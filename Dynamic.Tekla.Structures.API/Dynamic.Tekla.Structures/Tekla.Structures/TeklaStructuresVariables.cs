@@ -39,7 +39,7 @@ public static System.String Get(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Get", key);
+	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Get", key);
 	return result;
 }
 
@@ -50,7 +50,7 @@ public static System.Boolean ContainsVariable(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "ContainsVariable", key);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "ContainsVariable", key);
 	return result;
 }
 

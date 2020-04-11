@@ -28,7 +28,7 @@ public System.Boolean RunClashCheck()
 
     try
     {
-        	var result = teklaObject.RunClashCheck();
+        	var result = (System.Boolean) teklaObject.RunClashCheck();
 
         	return result;
     }
@@ -45,7 +45,7 @@ public System.Boolean StopClashCheck()
 
     try
     {
-        	var result = teklaObject.StopClashCheck();
+        	var result = (System.Boolean) teklaObject.StopClashCheck();
 
         	return result;
     }

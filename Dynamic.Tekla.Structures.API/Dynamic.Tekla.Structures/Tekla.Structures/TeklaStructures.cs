@@ -79,7 +79,7 @@ namespace Dynamic.Tekla.Structures
 
 public static System.Boolean Connect()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect");
 	return result;
 }
 

@@ -46,7 +46,7 @@ public System.Boolean IsEmpty()
 
     try
     {
-        	var result = teklaObject.IsEmpty();
+        	var result = (System.Boolean) teklaObject.IsEmpty();
 
         	return result;
     }

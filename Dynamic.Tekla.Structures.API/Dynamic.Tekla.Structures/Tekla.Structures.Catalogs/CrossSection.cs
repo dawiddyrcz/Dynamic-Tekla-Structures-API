@@ -146,7 +146,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Location, Length);
+        	var result = (System.Boolean) teklaObject.Select(Location, Length);
 
         	return result;
     }

@@ -22,7 +22,7 @@ public static System.Boolean SetTemporaryStateForAll(
 	)
 {
 	var color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryStateForAll", color);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryStateForAll", color);
 	return result;
 }
 
@@ -33,9 +33,9 @@ public static System.Boolean SetTemporaryState(
 	Dynamic.Tekla.Structures.Model.UI.Color color_
 	)
 {
-	var modelObjects = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Model.ModelObject>>(modelObjects_);
+	var modelObjects = ListConverter.ToTSObjects(modelObjects_);
 	var color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryState", modelObjects, color);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryState", modelObjects, color);
 	return result;
 }
 
@@ -46,7 +46,7 @@ public static System.Boolean SetTransparencyForAll(
 	)
 {
 	var transparency = Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparencyForAll", transparency);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparencyForAll", transparency);
 	return result;
 }
 
@@ -57,9 +57,9 @@ public static System.Boolean SetTransparency(
 	Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency_
 	)
 {
-	var modelObjects = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Model.ModelObject>>(modelObjects_);
+	var modelObjects = ListConverter.ToTSObjects(modelObjects_);
 	var transparency = Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparency", modelObjects, transparency);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparency", modelObjects, transparency);
 	return result;
 }
 
@@ -70,9 +70,9 @@ public static System.Boolean SetTransparency(
 	Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency transparency_
 	)
 {
-	var identifiers = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Identifier>>(identifiers_);
+	var identifiers = ListConverter.ToTSObjects(identifiers_);
 	var transparency = Dynamic.Tekla.Structures.Model.UI.TemporaryTransparency_.GetTSObject(transparency_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparency", identifiers, transparency);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTransparency", identifiers, transparency);
 	return result;
 }
 
@@ -83,9 +83,9 @@ public static System.Boolean SetTemporaryState(
 	Dynamic.Tekla.Structures.Model.UI.Color color_
 	)
 {
-	var identifiers = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Identifier>>(identifiers_);
+	var identifiers = ListConverter.ToTSObjects(identifiers_);
 	var color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryState", identifiers, color);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "SetTemporaryState", identifiers, color);
 	return result;
 }
 
@@ -98,7 +98,7 @@ public static System.Boolean GetRepresentation(
 {
 	var modelObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(modelObject_);
 	var color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(color_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "GetRepresentation", modelObject, ref color);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "GetRepresentation", modelObject, ref color);
 	color_ = Dynamic.Tekla.Structures.Model.UI.Color_.FromTSObject(color);
 	return result;
 }
@@ -107,7 +107,7 @@ public static System.Boolean GetRepresentation(
 
 public static System.Boolean ClearAllTemporaryStates()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "ClearAllTemporaryStates");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ModelObjectVisualization", "ClearAllTemporaryStates");
 	return result;
 }
 

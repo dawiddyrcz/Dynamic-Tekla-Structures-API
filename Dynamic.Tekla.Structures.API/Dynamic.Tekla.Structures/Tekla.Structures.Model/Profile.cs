@@ -49,7 +49,7 @@ public static System.String ParseProfileString(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", profileString);
+	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", profileString);
 	return result;
 }
 
@@ -60,7 +60,7 @@ public static System.String FormatProfileString(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", profileString);
+	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", profileString);
 	return result;
 }
 

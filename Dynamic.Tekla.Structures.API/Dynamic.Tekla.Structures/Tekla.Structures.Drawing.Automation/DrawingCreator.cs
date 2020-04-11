@@ -24,9 +24,9 @@ public static System.Boolean CreateDrawings(
 	)
 {
 	var Rule = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule_);
-	var aModelObjectIdentifier = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Identifier>>(aModelObjectIdentifier_);
+	var aModelObjectIdentifier = ListConverter.ToTSObjects(aModelObjectIdentifier_);
 	var OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, aModelObjectIdentifier, ref OperationStatus);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, aModelObjectIdentifier, ref OperationStatus);
 	OperationStatus_ = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(OperationStatus);
 	return result;
 }
@@ -42,7 +42,7 @@ public static System.Boolean CreateDrawings(
 	var Rule = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule_);
 	var ModelObjectIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelObjectIdentifier_);
 	var OperationStatus = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.GetTSObject(OperationStatus_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, ModelObjectIdentifier, ref OperationStatus);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, ModelObjectIdentifier, ref OperationStatus);
 	OperationStatus_ = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingsStatusEnum_.FromTSObject(OperationStatus);
 	return result;
 }
@@ -56,7 +56,7 @@ public static System.Boolean CreateDrawings(
 {
 	var Rule = Dynamic.Tekla.Structures.Drawing.Automation.AutoDrawingRule_.GetTSObject(Rule_);
 	var ModelObjectIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(ModelObjectIdentifier_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, ModelObjectIdentifier);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Automation.DrawingCreator", "CreateDrawings", Rule, ModelObjectIdentifier);
 	return result;
 }
 

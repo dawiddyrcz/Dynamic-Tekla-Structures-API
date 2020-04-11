@@ -24,7 +24,7 @@ public System.Boolean Resize(
 	var size = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(size_);
     try
     {
-        	var result = teklaObject.Resize(size);
+        	var result = (System.Boolean) teklaObject.Resize(size);
 
         	return result;
     }

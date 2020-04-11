@@ -70,13 +70,13 @@ public void Invoke(
 
 
 public void EndInvoke(
-	System.IAsyncResult result_
+	System.IAsyncResult presult
 	)
 {
-	var result = ObjectConverter.ToTSObject(result_);
+	
     try
     {
-        	teklaObject.EndInvoke(result);
+        	teklaObject.EndInvoke(presult);
 
         
     }
@@ -186,13 +186,13 @@ public void Invoke(
 
 
 public void EndInvoke(
-	System.IAsyncResult result_
+	System.IAsyncResult presult
 	)
 {
-	var result = ObjectConverter.ToTSObject(result_);
+	
     try
     {
-        	teklaObject.EndInvoke(result);
+        	teklaObject.EndInvoke(presult);
 
         
     }

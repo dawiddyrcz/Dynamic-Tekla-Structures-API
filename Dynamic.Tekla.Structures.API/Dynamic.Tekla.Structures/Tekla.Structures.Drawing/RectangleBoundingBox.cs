@@ -174,7 +174,7 @@ public System.Boolean IsEqual(
 	
     try
     {
-        	var result = teklaObject.IsEqual(ObjectToCompare);
+        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
 
         	return result;
     }

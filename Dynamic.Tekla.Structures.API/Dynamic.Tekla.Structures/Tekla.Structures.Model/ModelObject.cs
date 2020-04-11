@@ -46,7 +46,7 @@ public System.Boolean Insert()
 
     try
     {
-        	var result = teklaObject.Insert();
+        	var result = (System.Boolean) teklaObject.Insert();
 
         	return result;
     }
@@ -63,7 +63,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -80,7 +80,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }
@@ -97,7 +97,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -170,7 +170,7 @@ public System.Boolean GetAllUserProperties(
 	
     try
     {
-        	var result = teklaObject.GetAllUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetAllUserProperties(ref values);
 	
         	return result;
     }
@@ -189,7 +189,7 @@ public System.Boolean GetIntegerUserProperties(
 	
     try
     {
-        	var result = teklaObject.GetIntegerUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(ref values);
 	
         	return result;
     }
@@ -208,7 +208,7 @@ public System.Boolean GetDoubleUserProperties(
 	
     try
     {
-        	var result = teklaObject.GetDoubleUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(ref values);
 	
         	return result;
     }
@@ -227,7 +227,7 @@ public System.Boolean GetStringUserProperties(
 	
     try
     {
-        	var result = teklaObject.GetStringUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetStringUserProperties(ref values);
 	
         	return result;
     }
@@ -252,7 +252,7 @@ public System.Boolean GetAllReportProperties(
 	
     try
     {
-        	var result = teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
+        	var result = (System.Boolean) teklaObject.GetAllReportProperties(stringNames, doubleNames, integerNames, ref values);
 	
         	return result;
     }
@@ -273,7 +273,7 @@ public System.Boolean GetIntegerReportProperties(
 	
     try
     {
-        	var result = teklaObject.GetIntegerReportProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetIntegerReportProperties(names, ref values);
 	
         	return result;
     }
@@ -294,7 +294,7 @@ public System.Boolean GetDoubleReportProperties(
 	
     try
     {
-        	var result = teklaObject.GetDoubleReportProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetDoubleReportProperties(names, ref values);
 	
         	return result;
     }
@@ -315,7 +315,7 @@ public System.Boolean GetStringReportProperties(
 	
     try
     {
-        	var result = teklaObject.GetStringReportProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetStringReportProperties(names, ref values);
 	
         	return result;
     }
@@ -336,7 +336,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(name, ref value);
 	
         	return result;
     }
@@ -357,7 +357,7 @@ public System.Boolean GetReportProperty(
 	
     try
     {
-        	var result = teklaObject.GetReportProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetReportProperty(name, ref value);
 	
         	return result;
     }
@@ -378,7 +378,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(name, ref value);
 	
         	return result;
     }
@@ -399,7 +399,7 @@ public System.Boolean GetReportProperty(
 	
     try
     {
-        	var result = teklaObject.GetReportProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetReportProperty(name, ref value);
 	
         	return result;
     }
@@ -420,7 +420,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(name, ref value);
 	
         	return result;
     }
@@ -441,7 +441,7 @@ public System.Boolean GetReportProperty(
 	
     try
     {
-        	var result = teklaObject.GetReportProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetReportProperty(name, ref value);
 	
         	return result;
     }
@@ -462,7 +462,7 @@ public System.Boolean GetDynamicStringProperty(
 	
     try
     {
-        	var result = teklaObject.GetDynamicStringProperty(name, ref value);
+        	var result = (System.Boolean) teklaObject.GetDynamicStringProperty(name, ref value);
 	
         	return result;
     }
@@ -483,7 +483,7 @@ public System.Boolean SetDynamicStringProperty(
 	
     try
     {
-        	var result = teklaObject.SetDynamicStringProperty(name, value);
+        	var result = (System.Boolean) teklaObject.SetDynamicStringProperty(name, value);
 
         	return result;
     }
@@ -504,7 +504,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(name, value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(name, value);
 
         	return result;
     }
@@ -525,7 +525,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(name, value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(name, value);
 
         	return result;
     }
@@ -546,7 +546,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(name, value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(name, value);
 
         	return result;
     }
@@ -583,7 +583,7 @@ public System.Boolean SetPhase(
 	var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase_);
     try
     {
-        	var result = teklaObject.SetPhase(phase);
+        	var result = (System.Boolean) teklaObject.SetPhase(phase);
 
         	return result;
     }
@@ -602,7 +602,7 @@ public System.Boolean GetPhase(
 	var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase_);
     try
     {
-        	var result = teklaObject.GetPhase(ref phase);
+        	var result = (System.Boolean) teklaObject.GetPhase(ref phase);
 	phase_ = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(phase);
         	return result;
     }
@@ -621,7 +621,7 @@ public System.Boolean SetLabel(
 	
     try
     {
-        	var result = teklaObject.SetLabel(label);
+        	var result = (System.Boolean) teklaObject.SetLabel(label);
 
         	return result;
     }
@@ -640,7 +640,7 @@ public System.Int32 CompareTo(
 	
     try
     {
-        	var result = teklaObject.CompareTo(obj);
+        	var result = (System.Int32) teklaObject.CompareTo(obj);
 
         	return result;
     }

@@ -99,7 +99,7 @@ public System.Int32 IndexOf(
 	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
     try
     {
-        	var result = teklaObject.IndexOf(Item);
+        	var result = (System.Int32) teklaObject.IndexOf(Item);
 
         	return result;
     }
@@ -158,7 +158,7 @@ public System.Boolean Remove(
 	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
     try
     {
-        	var result = teklaObject.Remove(Item);
+        	var result = (System.Boolean) teklaObject.Remove(Item);
 
         	return result;
     }
@@ -213,7 +213,7 @@ public System.Boolean Contains(
 	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
     try
     {
-        	var result = teklaObject.Contains(Item);
+        	var result = (System.Boolean) teklaObject.Contains(Item);
 
         	return result;
     }
@@ -253,7 +253,7 @@ public System.Boolean IsFirst(
 	var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
     try
     {
-        	var result = teklaObject.IsFirst(BinaryFilterExpressionItem);
+        	var result = (System.Boolean) teklaObject.IsFirst(BinaryFilterExpressionItem);
 
         	return result;
     }
@@ -272,7 +272,7 @@ public System.Boolean IsLast(
 	var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
     try
     {
-        	var result = teklaObject.IsLast(BinaryFilterExpressionItem);
+        	var result = (System.Boolean) teklaObject.IsLast(BinaryFilterExpressionItem);
 
         	return result;
     }

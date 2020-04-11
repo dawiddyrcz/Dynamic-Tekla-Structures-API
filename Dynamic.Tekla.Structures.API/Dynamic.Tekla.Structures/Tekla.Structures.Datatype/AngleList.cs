@@ -23,7 +23,7 @@ public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.
 {
 	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text);
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 
@@ -31,13 +31,13 @@ public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.
 
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(
 	System.String text,
-	System.IFormatProvider formatProvider_
+	System.IFormatProvider formatProvider
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text, formatProvider);
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 
@@ -45,15 +45,15 @@ public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.
 
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(
 	System.String text,
-	System.IFormatProvider formatProvider_,
+	System.IFormatProvider formatProvider,
 	Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType_
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	
 	var unitType = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text, formatProvider, unitType);
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 

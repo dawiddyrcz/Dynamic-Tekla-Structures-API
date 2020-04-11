@@ -78,7 +78,7 @@ public System.Boolean AddToDimensionSet(
 	var SetToAdd = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.GetTSObject(SetToAdd_);
     try
     {
-        	var result = teklaObject.AddToDimensionSet(SetToAdd);
+        	var result = (System.Boolean) teklaObject.AddToDimensionSet(SetToAdd);
 
         	return result;
     }

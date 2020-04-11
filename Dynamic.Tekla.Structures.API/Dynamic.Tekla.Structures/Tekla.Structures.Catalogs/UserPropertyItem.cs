@@ -159,7 +159,7 @@ public System.Boolean GetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.GetDefaultValue(ref DefaultValue);
+        	var result = (System.Boolean) teklaObject.GetDefaultValue(ref DefaultValue);
 	
         	return result;
     }
@@ -178,7 +178,7 @@ public System.Boolean SetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.SetDefaultValue(DefaultValue);
+        	var result = (System.Boolean) teklaObject.SetDefaultValue(DefaultValue);
 
         	return result;
     }
@@ -197,7 +197,7 @@ public System.Boolean GetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.GetDefaultValue(ref DefaultValue);
+        	var result = (System.Boolean) teklaObject.GetDefaultValue(ref DefaultValue);
 	
         	return result;
     }
@@ -216,7 +216,7 @@ public System.Boolean SetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.SetDefaultValue(DefaultValue);
+        	var result = (System.Boolean) teklaObject.SetDefaultValue(DefaultValue);
 
         	return result;
     }
@@ -235,7 +235,7 @@ public System.Boolean GetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.GetDefaultValue(ref DefaultValue);
+        	var result = (System.Boolean) teklaObject.GetDefaultValue(ref DefaultValue);
 	
         	return result;
     }
@@ -254,7 +254,7 @@ public System.Boolean SetDefaultValue(
 	
     try
     {
-        	var result = teklaObject.SetDefaultValue(DefaultValue);
+        	var result = (System.Boolean) teklaObject.SetDefaultValue(DefaultValue);
 
         	return result;
     }
@@ -267,14 +267,14 @@ public System.Boolean SetDefaultValue(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions_
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions
 	)
 {
-	var IntOptions = ObjectConverter.ToTSObject(IntOptions_);
+	
     try
     {
-        	var result = teklaObject.GetOptions(ref IntOptions);
-	IntOptions_ = ObjectConverter.FromTSObject(IntOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref IntOptions);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -286,16 +286,16 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions_,
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions,
 	System.Boolean translatedLabels
 	)
 {
-	var IntOptions = ObjectConverter.ToTSObject(IntOptions_);
+	
 	
     try
     {
-        	var result = teklaObject.GetOptions(ref IntOptions, translatedLabels);
-	IntOptions_ = ObjectConverter.FromTSObject(IntOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref IntOptions, translatedLabels);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -307,13 +307,13 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean SetOptions(
-	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions_
+	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>> IntOptions
 	)
 {
-	var IntOptions = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Int32, System.String>>>(IntOptions_);
+	
     try
     {
-        	var result = teklaObject.SetOptions(IntOptions);
+        	var result = (System.Boolean) teklaObject.SetOptions(IntOptions);
 
         	return result;
     }
@@ -326,14 +326,14 @@ public System.Boolean SetOptions(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions_
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions
 	)
 {
-	var DoubleOptions = ObjectConverter.ToTSObject(DoubleOptions_);
+	
     try
     {
-        	var result = teklaObject.GetOptions(ref DoubleOptions);
-	DoubleOptions_ = ObjectConverter.FromTSObject(DoubleOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref DoubleOptions);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -345,16 +345,16 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions_,
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions,
 	System.Boolean translatedLabels
 	)
 {
-	var DoubleOptions = ObjectConverter.ToTSObject(DoubleOptions_);
+	
 	
     try
     {
-        	var result = teklaObject.GetOptions(ref DoubleOptions, translatedLabels);
-	DoubleOptions_ = ObjectConverter.FromTSObject(DoubleOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref DoubleOptions, translatedLabels);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -366,13 +366,13 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean SetOptions(
-	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions_
+	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>> DoubleOptions
 	)
 {
-	var DoubleOptions = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Double, System.String>>>(DoubleOptions_);
+	
     try
     {
-        	var result = teklaObject.SetOptions(DoubleOptions);
+        	var result = (System.Boolean) teklaObject.SetOptions(DoubleOptions);
 
         	return result;
     }
@@ -385,14 +385,14 @@ public System.Boolean SetOptions(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions_
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions
 	)
 {
-	var StringOptions = ObjectConverter.ToTSObject(StringOptions_);
+	
     try
     {
-        	var result = teklaObject.GetOptions(ref StringOptions);
-	StringOptions_ = ObjectConverter.FromTSObject(StringOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref StringOptions);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -404,16 +404,16 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean GetOptions(
-	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions_,
+	ref System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions,
 	System.Boolean translatedLabels
 	)
 {
-	var StringOptions = ObjectConverter.ToTSObject(StringOptions_);
+	
 	
     try
     {
-        	var result = teklaObject.GetOptions(ref StringOptions, translatedLabels);
-	StringOptions_ = ObjectConverter.FromTSObject(StringOptions);
+        	var result = (System.Boolean) teklaObject.GetOptions(ref StringOptions, translatedLabels);
+	
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -425,13 +425,13 @@ public System.Boolean GetOptions(
 
 
 public System.Boolean SetOptions(
-	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions_
+	System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>> StringOptions
 	)
 {
-	var StringOptions = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.String>>>(StringOptions_);
+	
     try
     {
-        	var result = teklaObject.SetOptions(StringOptions);
+        	var result = (System.Boolean) teklaObject.SetOptions(StringOptions);
 
         	return result;
     }
@@ -467,7 +467,7 @@ public System.String GetLabel()
 
     try
     {
-        	var result = teklaObject.GetLabel();
+        	var result = (System.String) teklaObject.GetLabel();
 
         	return result;
     }
@@ -486,7 +486,7 @@ public System.String GetLabel(
 	
     try
     {
-        	var result = teklaObject.GetLabel(translated);
+        	var result = (System.String) teklaObject.GetLabel(translated);
 
         	return result;
     }
@@ -503,7 +503,7 @@ public System.Boolean Insert()
 
     try
     {
-        	var result = teklaObject.Insert();
+        	var result = (System.Boolean) teklaObject.Insert();
 
         	return result;
     }
@@ -520,7 +520,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }
@@ -537,7 +537,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -554,7 +554,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -570,11 +570,11 @@ public System.Boolean GetObjectTypes(
 	ref System.Collections.Generic.List<Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum> objectTypes_
 	)
 {
-	var objectTypes = ObjectConverter.ToTSObject(objectTypes_);
+	var objectTypes = ListConverter.ToTSObjects(objectTypes_);
     try
     {
-        	var result = teklaObject.GetObjectTypes(ref objectTypes);
-	objectTypes_ = ObjectConverter.FromTSObject(objectTypes);
+        	var result = (System.Boolean) teklaObject.GetObjectTypes(ref objectTypes);
+	objectTypes_ = ListConverter.FromTSObjects(objectTypes);
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -592,7 +592,7 @@ public System.Boolean AddToObjectType(
 	var objectType = Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum_.GetTSObject(objectType_);
     try
     {
-        	var result = teklaObject.AddToObjectType(objectType);
+        	var result = (System.Boolean) teklaObject.AddToObjectType(objectType);
 
         	return result;
     }
@@ -611,7 +611,7 @@ public System.Boolean RemoveFromObjectType(
 	var objectType = Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum_.GetTSObject(objectType_);
     try
     {
-        	var result = teklaObject.RemoveFromObjectType(objectType);
+        	var result = (System.Boolean) teklaObject.RemoveFromObjectType(objectType);
 
         	return result;
     }

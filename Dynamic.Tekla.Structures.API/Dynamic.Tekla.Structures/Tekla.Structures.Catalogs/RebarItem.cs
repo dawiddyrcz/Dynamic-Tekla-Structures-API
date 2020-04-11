@@ -433,7 +433,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, Size, BendRadius);
+        	var result = (System.Boolean) teklaObject.Select(Grade, Size, BendRadius);
 
         	return result;
     }
@@ -458,7 +458,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, Diameter, BendRadius, UseNominalDiameter);
+        	var result = (System.Boolean) teklaObject.Select(Grade, Diameter, BendRadius, UseNominalDiameter);
 
         	return result;
     }
@@ -481,7 +481,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, Size, Usage);
+        	var result = (System.Boolean) teklaObject.Select(Grade, Size, Usage);
 
         	return result;
     }
@@ -506,7 +506,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, Diameter, Usage, UseNominalDiameter);
+        	var result = (System.Boolean) teklaObject.Select(Grade, Diameter, Usage, UseNominalDiameter);
 
         	return result;
     }
@@ -527,7 +527,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, Size);
+        	var result = (System.Boolean) teklaObject.Select(Grade, Size);
 
         	return result;
     }
@@ -550,7 +550,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(Grade, NominalDiameter, UseNominalDiameter);
+        	var result = (System.Boolean) teklaObject.Select(Grade, NominalDiameter, UseNominalDiameter);
 
         	return result;
     }
@@ -569,7 +569,7 @@ public System.Boolean Export(
 	
     try
     {
-        	var result = teklaObject.Export(ref filename);
+        	var result = (System.Boolean) teklaObject.Export(ref filename);
 	
         	return result;
     }

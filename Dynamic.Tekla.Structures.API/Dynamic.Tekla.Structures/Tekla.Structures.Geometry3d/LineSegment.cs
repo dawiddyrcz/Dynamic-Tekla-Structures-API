@@ -96,7 +96,7 @@ public System.Double Length()
 
     try
     {
-        	var result = teklaObject.Length();
+        	var result = (System.Double) teklaObject.Length();
 
         	return result;
     }

@@ -111,7 +111,7 @@ public System.Boolean IsProfileUserParametric()
 
     try
     {
-        	var result = teklaObject.IsProfileUserParametric();
+        	var result = (System.Boolean) teklaObject.IsProfileUserParametric();
 
         	return result;
     }
@@ -128,7 +128,7 @@ public System.Boolean IsProfileUserDefined()
 
     try
     {
-        	var result = teklaObject.IsProfileUserDefined();
+        	var result = (System.Boolean) teklaObject.IsProfileUserDefined();
 
         	return result;
     }
@@ -145,7 +145,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -164,7 +164,7 @@ public System.Boolean ModifyProfileItemParameter(
 	var value = Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.ModifyProfileItemParameter(value);
+        	var result = (System.Boolean) teklaObject.ModifyProfileItemParameter(value);
 
         	return result;
     }
@@ -183,7 +183,7 @@ public System.Boolean ModifyProfileItemAnalysisParameter(
 	var value = Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.ModifyProfileItemAnalysisParameter(value);
+        	var result = (System.Boolean) teklaObject.ModifyProfileItemAnalysisParameter(value);
 
         	return result;
     }
@@ -202,7 +202,7 @@ public System.Boolean ModifyProfileItemUserParameter(
 	var value = Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.ModifyProfileItemUserParameter(value);
+        	var result = (System.Boolean) teklaObject.ModifyProfileItemUserParameter(value);
 
         	return result;
     }
@@ -221,7 +221,7 @@ public System.Boolean Export(
 	
     try
     {
-        	var result = teklaObject.Export(ref filename);
+        	var result = (System.Boolean) teklaObject.Export(ref filename);
 	
         	return result;
     }

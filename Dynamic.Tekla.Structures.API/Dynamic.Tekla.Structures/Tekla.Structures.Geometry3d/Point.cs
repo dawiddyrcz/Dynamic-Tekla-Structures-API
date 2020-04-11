@@ -160,7 +160,7 @@ public static System.Boolean AreEqual(
 {
 	var Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1_);
 	var Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "AreEqual", Point1, Point2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "AreEqual", Point1, Point2);
 	return result;
 }
 
@@ -173,7 +173,7 @@ public System.Int32 CompareTo(
 	
     try
     {
-        	var result = teklaObject.CompareTo(obj);
+        	var result = (System.Int32) teklaObject.CompareTo(obj);
 
         	return result;
     }

@@ -62,7 +62,7 @@ public System.Boolean AddContourPoint(
 	var contourPoint = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint_);
     try
     {
-        	var result = teklaObject.AddContourPoint(contourPoint);
+        	var result = (System.Boolean) teklaObject.AddContourPoint(contourPoint);
 
         	return result;
     }

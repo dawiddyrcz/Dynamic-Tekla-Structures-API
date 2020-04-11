@@ -109,7 +109,7 @@ public System.Boolean IsEqual(
 	
     try
     {
-        	var result = teklaObject.IsEqual(ObjectToCompare);
+        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
 
         	return result;
     }
@@ -126,7 +126,7 @@ public System.Object Clone()
 
     try
     {
-        	var result = teklaObject.Clone();
+        	var result = (System.Object) teklaObject.Clone();
 
         	return result;
     }

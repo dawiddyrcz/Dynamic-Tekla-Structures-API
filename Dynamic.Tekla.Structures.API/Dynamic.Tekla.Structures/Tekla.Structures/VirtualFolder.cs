@@ -61,7 +61,7 @@ public System.String CreateWritableCopy(
 	
     try
     {
-        	var result = teklaObject.CreateWritableCopy(filename);
+        	var result = (System.String) teklaObject.CreateWritableCopy(filename);
 
         	return result;
     }
@@ -80,7 +80,7 @@ public System.String FindFile(
 	
     try
     {
-        	var result = teklaObject.FindFile(filename);
+        	var result = (System.String) teklaObject.FindFile(filename);
 
         	return result;
     }
@@ -99,7 +99,7 @@ public System.String GetWritablePath(
 	
     try
     {
-        	var result = teklaObject.GetWritablePath(filename);
+        	var result = (System.String) teklaObject.GetWritablePath(filename);
 
         	return result;
     }
@@ -118,7 +118,7 @@ public System.Boolean IsWritable(
 	
     try
     {
-        	var result = teklaObject.IsWritable(filename);
+        	var result = (System.Boolean) teklaObject.IsWritable(filename);
 
         	return result;
     }

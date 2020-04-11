@@ -40,7 +40,7 @@ public System.Boolean MoveNext()
 
     try
     {
-        	var result = teklaObject.MoveNext();
+        	var result = (System.Boolean) teklaObject.MoveNext();
 
         	return result;
     }

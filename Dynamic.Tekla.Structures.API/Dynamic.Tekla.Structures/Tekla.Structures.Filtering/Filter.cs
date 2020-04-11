@@ -63,7 +63,7 @@ public System.String CreateFile(
 	
     try
     {
-        	var result = teklaObject.CreateFile(FilterExpressionFileType, FullFileName);
+        	var result = (System.String) teklaObject.CreateFile(FilterExpressionFileType, FullFileName);
 
         	return result;
     }

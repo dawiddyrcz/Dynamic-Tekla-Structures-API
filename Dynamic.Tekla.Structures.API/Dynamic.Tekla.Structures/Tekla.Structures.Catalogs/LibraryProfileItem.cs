@@ -75,7 +75,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(profileName);
+        	var result = (System.Boolean) teklaObject.Select(profileName);
 
         	return result;
     }
@@ -92,7 +92,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -109,7 +109,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }
@@ -128,7 +128,7 @@ public System.Boolean Copy(
 	
     try
     {
-        	var result = teklaObject.Copy(newName);
+        	var result = (System.Boolean) teklaObject.Copy(newName);
 
         	return result;
     }

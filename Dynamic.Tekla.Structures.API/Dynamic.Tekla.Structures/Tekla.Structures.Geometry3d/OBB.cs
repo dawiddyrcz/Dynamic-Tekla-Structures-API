@@ -326,7 +326,7 @@ public System.Double DistanceTo(
 	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
     try
     {
-        	var result = teklaObject.DistanceTo(point);
+        	var result = (System.Double) teklaObject.DistanceTo(point);
 
         	return result;
     }
@@ -345,7 +345,7 @@ public System.Double DistanceTo(
 	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
     try
     {
-        	var result = teklaObject.DistanceTo(line);
+        	var result = (System.Double) teklaObject.DistanceTo(line);
 
         	return result;
     }
@@ -364,7 +364,7 @@ public System.Double DistanceTo(
 	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
     try
     {
-        	var result = teklaObject.DistanceTo(lineSegment);
+        	var result = (System.Double) teklaObject.DistanceTo(lineSegment);
 
         	return result;
     }
@@ -463,7 +463,7 @@ public System.Boolean Intersects(
 	var obb = Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb_);
     try
     {
-        	var result = teklaObject.Intersects(obb);
+        	var result = (System.Boolean) teklaObject.Intersects(obb);
 
         	return result;
     }
@@ -482,7 +482,7 @@ public System.Boolean Intersects(
 	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
     try
     {
-        	var result = teklaObject.Intersects(line);
+        	var result = (System.Boolean) teklaObject.Intersects(line);
 
         	return result;
     }
@@ -501,7 +501,7 @@ public System.Boolean Intersects(
 	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
     try
     {
-        	var result = teklaObject.Intersects(lineSegment);
+        	var result = (System.Boolean) teklaObject.Intersects(lineSegment);
 
         	return result;
     }
@@ -520,7 +520,7 @@ public System.Boolean Intersects(
 	var geometricPlane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane_);
     try
     {
-        	var result = teklaObject.Intersects(geometricPlane);
+        	var result = (System.Boolean) teklaObject.Intersects(geometricPlane);
 
         	return result;
     }

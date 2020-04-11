@@ -175,7 +175,7 @@ public System.Boolean Attach()
 
     try
     {
-        	var result = teklaObject.Attach();
+        	var result = (System.Boolean) teklaObject.Attach();
 
         	return result;
     }
@@ -192,7 +192,7 @@ public System.Boolean AttachComplete()
 
     try
     {
-        	var result = teklaObject.AttachComplete();
+        	var result = (System.Boolean) teklaObject.AttachComplete();
 
         	return result;
     }
@@ -209,7 +209,7 @@ public System.Boolean Detach()
 
     try
     {
-        	var result = teklaObject.Detach();
+        	var result = (System.Boolean) teklaObject.Detach();
 
         	return result;
     }
@@ -226,7 +226,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -243,11 +243,11 @@ public System.Boolean SetVisibility(
 	System.Boolean visible
 	)
 {
-	var views = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Model.UI.View>>(views_);
+	var views = ListConverter.ToTSObjects(views_);
 	
     try
     {
-        	var result = teklaObject.SetVisibility(views, visible);
+        	var result = (System.Boolean) teklaObject.SetVisibility(views, visible);
 
         	return result;
     }
@@ -266,7 +266,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> G
     {
         	var result = teklaObject.GetVisibleInViews();
 
-        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View>>(result);
+        	var _result = ListConverter.FromTSObjects(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -280,7 +280,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> G
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
 {
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.PointCloud", "GetPointClouds");
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 

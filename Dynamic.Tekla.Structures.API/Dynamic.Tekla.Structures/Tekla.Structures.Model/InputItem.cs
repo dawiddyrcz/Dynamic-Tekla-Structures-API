@@ -46,7 +46,7 @@ public System.Object GetData()
 
     try
     {
-        	var result = teklaObject.GetData();
+        	var result = (System.Object) teklaObject.GetData();
 
         	return result;
     }

@@ -51,7 +51,7 @@ public System.Boolean GetLogicalWeld(
 	var LogicalWeld = Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld_);
     try
     {
-        	var result = teklaObject.GetLogicalWeld(ref LogicalWeld);
+        	var result = (System.Boolean) teklaObject.GetLogicalWeld(ref LogicalWeld);
 	LogicalWeld_ = Dynamic.Tekla.Structures.Model.LogicalWeld_.FromTSObject(LogicalWeld);
         	return result;
     }

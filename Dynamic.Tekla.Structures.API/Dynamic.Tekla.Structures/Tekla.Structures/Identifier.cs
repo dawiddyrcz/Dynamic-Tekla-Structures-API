@@ -103,7 +103,7 @@ public System.Boolean IsValid()
 
     try
     {
-        	var result = teklaObject.IsValid();
+        	var result = (System.Boolean) teklaObject.IsValid();
 
         	return result;
     }

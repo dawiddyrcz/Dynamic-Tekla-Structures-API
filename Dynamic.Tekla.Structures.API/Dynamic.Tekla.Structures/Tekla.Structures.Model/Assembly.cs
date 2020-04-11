@@ -87,7 +87,7 @@ public System.Boolean SetMainPart(
 	var Part = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part_);
     try
     {
-        	var result = teklaObject.SetMainPart(Part);
+        	var result = (System.Boolean) teklaObject.SetMainPart(Part);
 
         	return result;
     }
@@ -124,7 +124,7 @@ public System.Boolean Add(
 	var Object = Dynamic.Tekla.Structures.Model.IAssemblable_.GetTSObject(Object_);
     try
     {
-        	var result = teklaObject.Add(Object);
+        	var result = (System.Boolean) teklaObject.Add(Object);
 
         	return result;
     }
@@ -143,7 +143,7 @@ public System.Boolean Add(
 	var Assemblables = ArrayListConverter.ToTSObjects(Assemblables_);
     try
     {
-        	var result = teklaObject.Add(Assemblables);
+        	var result = (System.Boolean) teklaObject.Add(Assemblables);
 
         	return result;
     }
@@ -162,7 +162,7 @@ public System.Boolean Remove(
 	var Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object_);
     try
     {
-        	var result = teklaObject.Remove(Object);
+        	var result = (System.Boolean) teklaObject.Remove(Object);
 
         	return result;
     }
@@ -181,7 +181,7 @@ public System.Boolean Add(
 	var Assembly = Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(Assembly_);
     try
     {
-        	var result = teklaObject.Add(Assembly);
+        	var result = (System.Boolean) teklaObject.Add(Assembly);
 
         	return result;
     }
@@ -290,7 +290,7 @@ public System.Boolean CompareTo(
 	var AssemblyToCompare = Dynamic.Tekla.Structures.Model.Assembly_.GetTSObject(AssemblyToCompare_);
     try
     {
-        	var result = teklaObject.CompareTo(AssemblyToCompare);
+        	var result = (System.Boolean) teklaObject.CompareTo(AssemblyToCompare);
 
         	return result;
     }

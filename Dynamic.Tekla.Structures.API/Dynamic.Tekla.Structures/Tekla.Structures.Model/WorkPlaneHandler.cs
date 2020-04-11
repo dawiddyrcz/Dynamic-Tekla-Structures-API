@@ -48,7 +48,7 @@ public System.Boolean SetCurrentTransformationPlane(
 	var TransformationPlane = Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane_);
     try
     {
-        	var result = teklaObject.SetCurrentTransformationPlane(TransformationPlane);
+        	var result = (System.Boolean) teklaObject.SetCurrentTransformationPlane(TransformationPlane);
 
         	return result;
     }

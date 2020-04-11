@@ -135,7 +135,7 @@ public static System.Boolean ContainsModelDatabase(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", modelFolder);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", modelFolder);
 	return result;
 }
 

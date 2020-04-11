@@ -36,7 +36,7 @@ public System.Boolean AddWeld(
 	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
     try
     {
-        	var result = teklaObject.AddWeld(Weld);
+        	var result = (System.Boolean) teklaObject.AddWeld(Weld);
 
         	return result;
     }
@@ -73,7 +73,7 @@ public System.Boolean SetMainWeld(
 	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
     try
     {
-        	var result = teklaObject.SetMainWeld(Weld);
+        	var result = (System.Boolean) teklaObject.SetMainWeld(Weld);
 
         	return result;
     }
@@ -92,7 +92,7 @@ public System.Boolean RemoveWeld(
 	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
     try
     {
-        	var result = teklaObject.RemoveWeld(Weld);
+        	var result = (System.Boolean) teklaObject.RemoveWeld(Weld);
 
         	return result;
     }
@@ -109,7 +109,7 @@ public System.Boolean Explode()
 
     try
     {
-        	var result = teklaObject.Explode();
+        	var result = (System.Boolean) teklaObject.Explode();
 
         	return result;
     }
@@ -128,7 +128,7 @@ public System.Boolean Select(
 	var ChildWeld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(ChildWeld_);
     try
     {
-        	var result = teklaObject.Select(ChildWeld);
+        	var result = (System.Boolean) teklaObject.Select(ChildWeld);
 
         	return result;
     }

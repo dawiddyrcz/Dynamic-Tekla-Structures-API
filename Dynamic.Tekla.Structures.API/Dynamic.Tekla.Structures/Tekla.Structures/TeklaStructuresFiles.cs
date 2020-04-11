@@ -56,7 +56,7 @@ public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(
 	
     try
     {
-        	var result = teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
+        	var result = (System.Collections.Generic.List<System.String>) teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
 
         	return result;
     }

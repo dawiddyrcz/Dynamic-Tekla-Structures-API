@@ -74,7 +74,7 @@ public System.Object Clone()
 
     try
     {
-        	var result = teklaObject.Clone();
+        	var result = (System.Object) teklaObject.Clone();
 
         	return result;
     }

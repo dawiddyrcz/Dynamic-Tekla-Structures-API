@@ -69,7 +69,7 @@ public System.Boolean AddOneInputPosition(
 	var P = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P_);
     try
     {
-        	var result = teklaObject.AddOneInputPosition(P);
+        	var result = (System.Boolean) teklaObject.AddOneInputPosition(P);
 
         	return result;
     }
@@ -90,7 +90,7 @@ public System.Boolean AddTwoInputPositions(
 	var Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2_);
     try
     {
-        	var result = teklaObject.AddTwoInputPositions(Position1, Position2);
+        	var result = (System.Boolean) teklaObject.AddTwoInputPositions(Position1, Position2);
 
         	return result;
     }
@@ -109,7 +109,7 @@ public System.Boolean AddInputPolygon(
 	var P = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P_);
     try
     {
-        	var result = teklaObject.AddInputPolygon(P);
+        	var result = (System.Boolean) teklaObject.AddInputPolygon(P);
 
         	return result;
     }
@@ -128,7 +128,7 @@ public System.Boolean AddInputObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.AddInputObject(M);
+        	var result = (System.Boolean) teklaObject.AddInputObject(M);
 
         	return result;
     }
@@ -147,7 +147,7 @@ public System.Boolean AddInputObjects(
 	var Objects = ArrayListConverter.ToTSObjects(Objects_);
     try
     {
-        	var result = teklaObject.AddInputObjects(Objects);
+        	var result = (System.Boolean) teklaObject.AddInputObjects(Objects);
 
         	return result;
     }

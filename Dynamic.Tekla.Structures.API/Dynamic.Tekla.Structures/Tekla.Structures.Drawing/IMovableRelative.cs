@@ -24,7 +24,7 @@ public System.Boolean MoveObjectRelative(
 	var MoveVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector_);
     try
     {
-        	var result = teklaObject.MoveObjectRelative(MoveVector);
+        	var result = (System.Boolean) teklaObject.MoveObjectRelative(MoveVector);
 
         	return result;
     }

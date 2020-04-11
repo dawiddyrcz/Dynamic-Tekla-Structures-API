@@ -323,7 +323,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(MeshName, MeshGrade);
+        	var result = (System.Boolean) teklaObject.Select(MeshName, MeshGrade);
 
         	return result;
     }
@@ -342,7 +342,7 @@ public System.Boolean Export(
 	
     try
     {
-        	var result = teklaObject.Export(ref filename);
+        	var result = (System.Boolean) teklaObject.Export(ref filename);
 	
         	return result;
     }

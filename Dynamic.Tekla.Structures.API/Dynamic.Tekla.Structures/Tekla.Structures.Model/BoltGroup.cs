@@ -606,7 +606,7 @@ public System.Boolean AddOtherPartToBolt(
 	var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.AddOtherPartToBolt(M);
+        	var result = (System.Boolean) teklaObject.AddOtherPartToBolt(M);
 
         	return result;
     }
@@ -625,7 +625,7 @@ public System.Boolean RemoveOtherPartToBolt(
 	var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.RemoveOtherPartToBolt(M);
+        	var result = (System.Boolean) teklaObject.RemoveOtherPartToBolt(M);
 
         	return result;
     }

@@ -273,7 +273,7 @@ public System.Boolean AddObjectsToTask(
 	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
     try
     {
-        	var result = teklaObject.AddObjectsToTask(ModelObjects);
+        	var result = (System.Boolean) teklaObject.AddObjectsToTask(ModelObjects);
 
         	return result;
     }
@@ -292,7 +292,7 @@ public System.Boolean RemoveObjectsFromTask(
 	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
     try
     {
-        	var result = teklaObject.RemoveObjectsFromTask(ModelObjects);
+        	var result = (System.Boolean) teklaObject.RemoveObjectsFromTask(ModelObjects);
 
         	return result;
     }

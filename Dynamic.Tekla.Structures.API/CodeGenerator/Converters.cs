@@ -32,6 +32,12 @@ namespace CodeGenerator
             {
                 return outputName + " = ArrayListConverter.ToTSObjects(" + inputName + ");";
             }
+            else if (typeFullName.StartsWith("System.Collections.Generic.List<", StringComparison.InvariantCulture)
+               || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
+               )
+            { 
+                return outputName + " = ListConverter.ToTSObjects(" + inputName + ");";
+            }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
                 return outputName + " = IEnumerableConverter.ToTSObjects<" + typeFullName + ">(" + inputName + ");";
@@ -49,17 +55,23 @@ namespace CodeGenerator
             if (TypeFullName.IsTeklaType(type))
             {
                 if (typeFullName.EndsWith("[]", StringComparison.InvariantCulture))
-                    return outputName + " = " + typeFullName.Replace("[]","") + "Array_.FromTSObject(" + inputName + ");";
+                    return outputName + " = " + typeFullName.Replace("[]", "") + "Array_.FromTSObject(" + inputName + ");";
                 else
                     return outputName + " = " + typeFullName + "_.FromTSObject(" + inputName + ");";
             }
             else if (typeof(ArrayList).IsAssignableFrom(type))
             {
-                return  outputName + " = ArrayListConverter.FromTSObjects(" + inputName + ");";
+                return outputName + " = ArrayListConverter.FromTSObjects(" + inputName + ");";
+            }
+            else if (typeFullName.StartsWith("System.Collections.Generic.List<", StringComparison.InvariantCulture)
+                || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
+                )
+            {
+                return outputName + " = ListConverter.FromTSObjects(" + inputName + ");";
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                return outputName + " = IEnumerableConverter.FromTSObjects<"+typeFullName+">(" + inputName + ");";
+                return outputName + " = IEnumerableConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
             else
             {
@@ -91,13 +103,23 @@ namespace CodeGenerator
                 || typeof(Dictionary<string, string>).IsAssignableFrom(type)
                 || typeof(Dictionary<string, int>).IsAssignableFrom(type)
                 || typeof(Dictionary<string, double>).IsAssignableFrom(type)
+
+                || typeof(KeyValuePair<int, int>).IsAssignableFrom(type)
+                || typeof(KeyValuePair<double, string>).IsAssignableFrom(type)
+                || typeof(KeyValuePair<string, string>).IsAssignableFrom(type)
+
+                || typeof(List<KeyValuePair<int, int>>).IsAssignableFrom(type)
+                || typeof(List<KeyValuePair<double, string>>).IsAssignableFrom(type)
+                || typeof(List<KeyValuePair<string, string>>).IsAssignableFrom(type)
+                || typeof(List<KeyValuePair<int, string>>).IsAssignableFrom(type)
+
                 || typeof(string[]).IsAssignableFrom(type)
                 || typeof(int[]).IsAssignableFrom(type)
                 || typeof(double[]).IsAssignableFrom(type)
                 || typeof(bool[]).IsAssignableFrom(type)
-
-
-
+                || typeof(System.IAsyncResult).IsAssignableFrom(type)
+                || typeof(System.IFormatProvider).IsAssignableFrom(type)
+                
                 )
             {
                 return false;

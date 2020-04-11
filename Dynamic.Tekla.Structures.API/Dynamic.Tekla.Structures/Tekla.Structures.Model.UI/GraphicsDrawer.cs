@@ -37,7 +37,7 @@ public System.Boolean DrawText(
 	var Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color_);
     try
     {
-        	var result = teklaObject.DrawText(Location, Text, Color);
+        	var result = (System.Boolean) teklaObject.DrawText(Location, Text, Color);
 
         	return result;
     }
@@ -58,7 +58,7 @@ public System.Boolean DrawLineSegment(
 	var Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color_);
     try
     {
-        	var result = teklaObject.DrawLineSegment(LineSegment, Color);
+        	var result = (System.Boolean) teklaObject.DrawLineSegment(LineSegment, Color);
 
         	return result;
     }
@@ -81,7 +81,7 @@ public System.Boolean DrawLineSegment(
 	var Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color_);
     try
     {
-        	var result = teklaObject.DrawLineSegment(Point1, Point2, Color);
+        	var result = (System.Boolean) teklaObject.DrawLineSegment(Point1, Point2, Color);
 
         	return result;
     }
@@ -102,7 +102,7 @@ public System.Boolean DrawMeshSurface(
 	var Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color_);
     try
     {
-        	var result = teklaObject.DrawMeshSurface(Mesh, Color);
+        	var result = (System.Boolean) teklaObject.DrawMeshSurface(Mesh, Color);
 
         	return result;
     }
@@ -123,7 +123,7 @@ public System.Boolean DrawMeshLines(
 	var Color = Dynamic.Tekla.Structures.Model.UI.Color_.GetTSObject(Color_);
     try
     {
-        	var result = teklaObject.DrawMeshLines(Mesh, Color);
+        	var result = (System.Boolean) teklaObject.DrawMeshLines(Mesh, Color);
 
         	return result;
     }
@@ -142,7 +142,7 @@ public System.Int32 DrawPolyLine(
 	var GraphicPolyLine = Dynamic.Tekla.Structures.Model.UI.GraphicPolyLine_.GetTSObject(GraphicPolyLine_);
     try
     {
-        	var result = teklaObject.DrawPolyLine(GraphicPolyLine);
+        	var result = (System.Int32) teklaObject.DrawPolyLine(GraphicPolyLine);
 
         	return result;
     }

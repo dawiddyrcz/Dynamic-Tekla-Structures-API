@@ -28,7 +28,7 @@ public System.Boolean IsInteractive()
 
     try
     {
-        	var result = teklaObject.IsInteractive();
+        	var result = (System.Boolean) teklaObject.IsInteractive();
 
         	return result;
     }

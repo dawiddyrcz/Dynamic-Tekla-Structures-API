@@ -33,7 +33,7 @@ public static System.Boolean GetAdvancedOption(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
 	
 	return result;
 }
@@ -47,7 +47,7 @@ public static System.Boolean GetAdvancedOption(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
 	
 	return result;
 }
@@ -61,7 +61,7 @@ public static System.Boolean GetAdvancedOption(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
 	
 	return result;
 }
@@ -75,7 +75,7 @@ public static System.Boolean GetAdvancedOption(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
 	
 	return result;
 }
@@ -87,7 +87,7 @@ public static System.Boolean GetOptions(
 	)
 {
 	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
 	Options_ = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(Options);
 	return result;
 }
@@ -99,7 +99,7 @@ public static System.Boolean SetOptions(
 	)
 {
 	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
 	return result;
 }
 
@@ -110,7 +110,7 @@ public static System.Boolean GetOptions(
 	)
 {
 	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
 	Options_ = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(Options);
 	return result;
 }
@@ -122,7 +122,7 @@ public static System.Boolean SetOptions(
 	)
 {
 	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
 	return result;
 }
 
@@ -133,7 +133,7 @@ public static System.Boolean IsToolOptionOn(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", toolOptionName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", toolOptionName);
 	return result;
 }
 
@@ -141,7 +141,7 @@ public static System.Boolean IsToolOptionOn(
 
 public static System.Boolean IsPourEnabled()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled");
 	return result;
 }
 
@@ -195,13 +195,13 @@ public void Invoke(
 
 
 public void EndInvoke(
-	System.IAsyncResult result_
+	System.IAsyncResult presult
 	)
 {
-	var result = ObjectConverter.ToTSObject(result_);
+	
     try
     {
-        	teklaObject.EndInvoke(result);
+        	teklaObject.EndInvoke(presult);
 
         
     }

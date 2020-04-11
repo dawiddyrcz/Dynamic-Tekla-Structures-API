@@ -97,7 +97,7 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 public static System.Collections.Generic.List<System.String> GetAllExcludePartsAccordingToFilter()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.StraightDimensionSet", "GetAllExcludePartsAccordingToFilter");
+	var result = (System.Collections.Generic.List<System.String>) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.StraightDimensionSet", "GetAllExcludePartsAccordingToFilter");
 	return result;
 }
 

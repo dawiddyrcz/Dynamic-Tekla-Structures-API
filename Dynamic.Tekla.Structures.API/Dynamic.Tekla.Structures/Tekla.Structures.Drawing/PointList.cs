@@ -51,7 +51,7 @@ public System.Int32 Add(
 	var value = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.Add(value);
+        	var result = (System.Int32) teklaObject.Add(value);
 
         	return result;
     }
@@ -89,7 +89,7 @@ public System.Boolean Contains(
 	var value = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.Contains(value);
+        	var result = (System.Boolean) teklaObject.Contains(value);
 
         	return result;
     }
@@ -108,7 +108,7 @@ public System.Int32 IndexOf(
 	var value = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.IndexOf(value);
+        	var result = (System.Int32) teklaObject.IndexOf(value);
 
         	return result;
     }
@@ -129,7 +129,7 @@ public System.Int32 IndexOf(
 	
     try
     {
-        	var result = teklaObject.IndexOf(value, startIndex);
+        	var result = (System.Int32) teklaObject.IndexOf(value, startIndex);
 
         	return result;
     }
@@ -152,7 +152,7 @@ public System.Int32 IndexOf(
 	
     try
     {
-        	var result = teklaObject.IndexOf(value, startIndex, count);
+        	var result = (System.Int32) teklaObject.IndexOf(value, startIndex, count);
 
         	return result;
     }
@@ -214,7 +214,7 @@ public System.Int32 LastIndexOf(
 	var value = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value_);
     try
     {
-        	var result = teklaObject.LastIndexOf(value);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value);
 
         	return result;
     }
@@ -235,7 +235,7 @@ public System.Int32 LastIndexOf(
 	
     try
     {
-        	var result = teklaObject.LastIndexOf(value, startIndex);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value, startIndex);
 
         	return result;
     }
@@ -258,7 +258,7 @@ public System.Int32 LastIndexOf(
 	
     try
     {
-        	var result = teklaObject.LastIndexOf(value, startIndex, count);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value, startIndex, count);
 
         	return result;
     }
@@ -335,7 +335,7 @@ public System.Boolean IsEqual(
 	
     try
     {
-        	var result = teklaObject.IsEqual(ObjectToCompare);
+        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
 
         	return result;
     }

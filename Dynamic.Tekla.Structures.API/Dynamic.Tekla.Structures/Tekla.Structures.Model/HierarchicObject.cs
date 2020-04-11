@@ -111,7 +111,7 @@ public System.Boolean AddObjects(
 	var Objects = ArrayListConverter.ToTSObjects(Objects_);
     try
     {
-        	var result = teklaObject.AddObjects(Objects);
+        	var result = (System.Boolean) teklaObject.AddObjects(Objects);
 
         	return result;
     }
@@ -130,7 +130,7 @@ public System.Boolean RemoveObjects(
 	var Objects = ArrayListConverter.ToTSObjects(Objects_);
     try
     {
-        	var result = teklaObject.RemoveObjects(Objects);
+        	var result = (System.Boolean) teklaObject.RemoveObjects(Objects);
 
         	return result;
     }

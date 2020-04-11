@@ -76,7 +76,7 @@ public static System.Boolean ShowView(
 	)
 {
 	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", view);
 	return result;
 }
 
@@ -87,7 +87,7 @@ public static System.Boolean HideView(
 	)
 {
 	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", view);
 	return result;
 }
 
@@ -98,7 +98,7 @@ public static System.Boolean RedrawView(
 	)
 {
 	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", view);
 	return result;
 }
 
@@ -111,7 +111,7 @@ public static System.Boolean ZoomToBoundingBox(
 {
 	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
 	var B = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", view, B);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", view, B);
 	return result;
 }
 
@@ -122,7 +122,7 @@ public static System.Boolean ZoomToBoundingBox(
 	)
 {
 	var box = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", box);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", box);
 	return result;
 }
 
@@ -133,7 +133,7 @@ public static System.Boolean SetRepresentation(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", Representation);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", Representation);
 	return result;
 }
 
@@ -141,7 +141,7 @@ public static System.Boolean SetRepresentation(
 
 public static System.Boolean RedrawWorkplane()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane");
 	return result;
 }
 

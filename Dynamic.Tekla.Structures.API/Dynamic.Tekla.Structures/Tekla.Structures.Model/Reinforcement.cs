@@ -316,7 +316,7 @@ public System.Boolean IsGeometryValid()
 
     try
     {
-        	var result = teklaObject.IsGeometryValid();
+        	var result = (System.Boolean) teklaObject.IsGeometryValid();
 
         	return result;
     }
@@ -333,7 +333,7 @@ public System.Int32 GetNumberOfRebars()
 
     try
     {
-        	var result = teklaObject.GetNumberOfRebars();
+        	var result = (System.Int32) teklaObject.GetNumberOfRebars();
 
         	return result;
     }

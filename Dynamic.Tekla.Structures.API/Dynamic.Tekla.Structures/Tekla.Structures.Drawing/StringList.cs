@@ -57,7 +57,7 @@ public System.Int32 Add(
 	
     try
     {
-        	var result = teklaObject.Add(value);
+        	var result = (System.Int32) teklaObject.Add(value);
 
         	return result;
     }
@@ -76,7 +76,7 @@ public System.Boolean Contains(
 	
     try
     {
-        	var result = teklaObject.Contains(value);
+        	var result = (System.Boolean) teklaObject.Contains(value);
 
         	return result;
     }
@@ -95,7 +95,7 @@ public System.Int32 IndexOf(
 	
     try
     {
-        	var result = teklaObject.IndexOf(value);
+        	var result = (System.Int32) teklaObject.IndexOf(value);
 
         	return result;
     }
@@ -116,7 +116,7 @@ public System.Int32 IndexOf(
 	
     try
     {
-        	var result = teklaObject.IndexOf(value, startIndex);
+        	var result = (System.Int32) teklaObject.IndexOf(value, startIndex);
 
         	return result;
     }
@@ -139,7 +139,7 @@ public System.Int32 IndexOf(
 	
     try
     {
-        	var result = teklaObject.IndexOf(value, startIndex, count);
+        	var result = (System.Int32) teklaObject.IndexOf(value, startIndex, count);
 
         	return result;
     }
@@ -201,7 +201,7 @@ public System.Int32 LastIndexOf(
 	
     try
     {
-        	var result = teklaObject.LastIndexOf(value);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value);
 
         	return result;
     }
@@ -222,7 +222,7 @@ public System.Int32 LastIndexOf(
 	
     try
     {
-        	var result = teklaObject.LastIndexOf(value, startIndex);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value, startIndex);
 
         	return result;
     }
@@ -245,7 +245,7 @@ public System.Int32 LastIndexOf(
 	
     try
     {
-        	var result = teklaObject.LastIndexOf(value, startIndex, count);
+        	var result = (System.Int32) teklaObject.LastIndexOf(value, startIndex, count);
 
         	return result;
     }
@@ -302,7 +302,7 @@ public System.String[] ToArray()
 
     try
     {
-        	var result = teklaObject.ToArray();
+        	var result = (System.String[]) teklaObject.ToArray();
 
         	return result;
     }
@@ -321,7 +321,7 @@ public System.Boolean IsEqual(
 	
     try
     {
-        	var result = teklaObject.IsEqual(ObjectToCompare);
+        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
 
         	return result;
     }

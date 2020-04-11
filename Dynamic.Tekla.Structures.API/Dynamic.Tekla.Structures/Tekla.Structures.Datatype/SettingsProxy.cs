@@ -33,7 +33,7 @@ public System.Object GetValue(
 	
     try
     {
-        	var result = teklaObject.GetValue(name);
+        	var result = (System.Object) teklaObject.GetValue(name);
 
         	return result;
     }
@@ -54,7 +54,7 @@ public System.Boolean TryGetValue(
 	
     try
     {
-        	var result = teklaObject.TryGetValue(name, ref obj);
+        	var result = (System.Boolean) teklaObject.TryGetValue(name, ref obj);
 	
         	return result;
     }

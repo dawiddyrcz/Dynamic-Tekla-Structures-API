@@ -160,7 +160,7 @@ public System.Double GetAngle()
 
     try
     {
-        	var result = teklaObject.GetAngle();
+        	var result = (System.Double) teklaObject.GetAngle();
 
         	return result;
     }

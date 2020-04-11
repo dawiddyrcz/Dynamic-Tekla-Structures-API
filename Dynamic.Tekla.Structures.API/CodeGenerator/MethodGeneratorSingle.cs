@@ -106,7 +106,10 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
             if (!IsVoid(methodInfo))
                 sb.Append("var result = ");
-            
+
+            if (!Converters.HaveToBeConverted(methodInfo.ReturnType))
+                sb.Append("(").Append(TypeFullName.GetTypeFullName(methodInfo.ReturnType)).Append(") ");
+
             if (methodInfo.IsStatic)
             {
                 sb.Append("MethodInvoker.InvokeStaticMethod(\"").Append("$typeFullName").Append("\", \"")

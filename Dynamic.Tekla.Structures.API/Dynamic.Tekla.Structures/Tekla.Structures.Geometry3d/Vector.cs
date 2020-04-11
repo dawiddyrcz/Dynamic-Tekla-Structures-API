@@ -45,7 +45,7 @@ public System.Double Normalize()
 
     try
     {
-        	var result = teklaObject.Normalize();
+        	var result = (System.Double) teklaObject.Normalize();
 
         	return result;
     }
@@ -64,7 +64,7 @@ public System.Double Normalize(
 	
     try
     {
-        	var result = teklaObject.Normalize(NewLength);
+        	var result = (System.Double) teklaObject.Normalize(NewLength);
 
         	return result;
     }
@@ -81,7 +81,7 @@ public System.Double GetLength()
 
     try
     {
-        	var result = teklaObject.GetLength();
+        	var result = (System.Double) teklaObject.GetLength();
 
         	return result;
     }
@@ -100,7 +100,7 @@ public System.Double GetAngleBetween(
 	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
     try
     {
-        	var result = teklaObject.GetAngleBetween(Vector);
+        	var result = (System.Double) teklaObject.GetAngleBetween(Vector);
 
         	return result;
     }
@@ -137,7 +137,7 @@ public System.Double Dot(
 	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
     try
     {
-        	var result = teklaObject.Dot(Vector);
+        	var result = (System.Double) teklaObject.Dot(Vector);
 
         	return result;
     }
@@ -156,7 +156,7 @@ public static System.Double Dot(
 {
 	var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
 	var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", Vector1, Vector2);
+	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", Vector1, Vector2);
 	return result;
 }
 

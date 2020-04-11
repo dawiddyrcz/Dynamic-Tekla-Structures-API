@@ -269,7 +269,7 @@ public System.Boolean Insert()
 
     try
     {
-        	var result = teklaObject.Insert();
+        	var result = (System.Boolean) teklaObject.Insert();
 
         	return result;
     }
@@ -286,7 +286,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }
@@ -303,7 +303,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -320,7 +320,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -337,7 +337,7 @@ public System.Boolean IsPerspectiveViewProjection()
 
     try
     {
-        	var result = teklaObject.IsPerspectiveViewProjection();
+        	var result = (System.Boolean) teklaObject.IsPerspectiveViewProjection();
 
         	return result;
     }
@@ -354,7 +354,7 @@ public System.Boolean IsVisible()
 
     try
     {
-        	var result = teklaObject.IsVisible();
+        	var result = (System.Boolean) teklaObject.IsVisible();
 
         	return result;
     }

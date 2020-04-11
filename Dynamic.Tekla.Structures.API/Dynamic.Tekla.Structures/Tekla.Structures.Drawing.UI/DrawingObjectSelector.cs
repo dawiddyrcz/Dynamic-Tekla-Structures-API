@@ -30,7 +30,7 @@ public System.Boolean SelectObject(
 	var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
     try
     {
-        	var result = teklaObject.SelectObject(DrawingObject);
+        	var result = (System.Boolean) teklaObject.SelectObject(DrawingObject);
 
         	return result;
     }
@@ -51,7 +51,7 @@ public System.Boolean SelectObjects(
 	
     try
     {
-        	var result = teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
+        	var result = (System.Boolean) teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
 
         	return result;
     }
@@ -70,7 +70,7 @@ public System.Boolean UnselectObject(
 	var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
     try
     {
-        	var result = teklaObject.UnselectObject(DrawingObject);
+        	var result = (System.Boolean) teklaObject.UnselectObject(DrawingObject);
 
         	return result;
     }
@@ -89,7 +89,7 @@ public System.Boolean UnselectObjects(
 	var DrawingObjects = ArrayListConverter.ToTSObjects(DrawingObjects_);
     try
     {
-        	var result = teklaObject.UnselectObjects(DrawingObjects);
+        	var result = (System.Boolean) teklaObject.UnselectObjects(DrawingObjects);
 
         	return result;
     }
@@ -106,7 +106,7 @@ public System.Boolean UnselectAllObjects()
 
     try
     {
-        	var result = teklaObject.UnselectAllObjects();
+        	var result = (System.Boolean) teklaObject.UnselectAllObjects();
 
         	return result;
     }

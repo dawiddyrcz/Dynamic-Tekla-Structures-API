@@ -149,7 +149,7 @@ public System.Boolean GetAttribute(
 	
     try
     {
-        	var result = teklaObject.GetAttribute(AttrName, ref StrValue);
+        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref StrValue);
 	
         	return result;
     }
@@ -170,7 +170,7 @@ public System.Boolean GetAttribute(
 	
     try
     {
-        	var result = teklaObject.GetAttribute(AttrName, ref Value);
+        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref Value);
 	
         	return result;
     }
@@ -191,7 +191,7 @@ public System.Boolean GetAttribute(
 	
     try
     {
-        	var result = teklaObject.GetAttribute(AttrName, ref DValue);
+        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref DValue);
 	
         	return result;
     }
@@ -210,7 +210,7 @@ public System.Boolean LoadAttributesFromFile(
 	
     try
     {
-        	var result = teklaObject.LoadAttributesFromFile(Filename);
+        	var result = (System.Boolean) teklaObject.LoadAttributesFromFile(Filename);
 
         	return result;
     }

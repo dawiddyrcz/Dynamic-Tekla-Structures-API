@@ -237,7 +237,7 @@ public System.Boolean RefreshFile()
 
     try
     {
-        	var result = teklaObject.RefreshFile();
+        	var result = (System.Boolean) teklaObject.RefreshFile();
 
         	return result;
     }
@@ -256,7 +256,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceM
     {
         	var result = teklaObject.GetRevisions();
 
-        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision>>(result);
+        	var _result = ListConverter.FromTSObjects(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -294,7 +294,7 @@ public System.Boolean SetAsCurrentRevision(
 	var revision = Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision_);
     try
     {
-        	var result = teklaObject.SetAsCurrentRevision(revision);
+        	var result = (System.Boolean) teklaObject.SetAsCurrentRevision(revision);
 
         	return result;
     }
@@ -315,7 +315,7 @@ public System.Boolean SetAsCurrentRevision(
 	
     try
     {
-        	var result = teklaObject.SetAsCurrentRevision(modelId, revisionId);
+        	var result = (System.Boolean) teklaObject.SetAsCurrentRevision(modelId, revisionId);
 
         	return result;
     }

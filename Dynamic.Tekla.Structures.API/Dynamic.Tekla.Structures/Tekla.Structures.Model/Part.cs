@@ -296,7 +296,7 @@ public System.String GetPartMark()
 
     try
     {
-        	var result = teklaObject.GetPartMark();
+        	var result = (System.String) teklaObject.GetPartMark();
 
         	return result;
     }
@@ -499,7 +499,7 @@ public System.Boolean CompareTo(
 	var partToCompare = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare_);
     try
     {
-        	var result = teklaObject.CompareTo(partToCompare);
+        	var result = (System.Boolean) teklaObject.CompareTo(partToCompare);
 
         	return result;
     }

@@ -85,7 +85,7 @@ public System.Boolean Insert()
 
     try
     {
-        	var result = teklaObject.Insert();
+        	var result = (System.Boolean) teklaObject.Insert();
 
         	return result;
     }
@@ -102,7 +102,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -119,7 +119,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }

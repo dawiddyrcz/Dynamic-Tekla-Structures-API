@@ -121,11 +121,11 @@ public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 
 public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 	System.String text,
-	System.IFormatProvider formatProvider_
+	System.IFormatProvider formatProvider
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "Parse", text, formatProvider);
 	var _result = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(result);
 	return _result;
@@ -135,12 +135,12 @@ public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 
 public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 	System.String text,
-	System.IFormatProvider formatProvider_,
+	System.IFormatProvider formatProvider,
 	Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType_
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	
 	var unitType = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "Parse", text, formatProvider, unitType);
 	var _result = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(result);
@@ -151,13 +151,13 @@ public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 
 public static System.Boolean TryParse(
 	System.String text,
-	ref Dynamic.Tekla.Structures.Datatype.Angle result_
+	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
-	var result = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(result_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, ref result);
-	result_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(result);
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, ref presult);
+	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;
 }
 
@@ -165,15 +165,15 @@ public static System.Boolean TryParse(
 
 public static System.Boolean TryParse(
 	System.String text,
-	System.IFormatProvider formatProvider_,
-	ref Dynamic.Tekla.Structures.Datatype.Angle result_
+	System.IFormatProvider formatProvider,
+	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
-	var result = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(result_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, ref result);
-	result_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(result);
+	
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, ref presult);
+	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;
 }
 
@@ -181,17 +181,17 @@ public static System.Boolean TryParse(
 
 public static System.Boolean TryParse(
 	System.String text,
-	System.IFormatProvider formatProvider_,
+	System.IFormatProvider formatProvider,
 	Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType_,
-	ref Dynamic.Tekla.Structures.Datatype.Angle result_
+	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
-	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	
 	var unitType = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType_);
-	var result = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(result_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, unitType, ref result);
-	result_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(result);
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, unitType, ref presult);
+	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;
 }
 
@@ -204,7 +204,7 @@ public System.Int32 CompareTo(
 	var other = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(other_);
     try
     {
-        	var result = teklaObject.CompareTo(other);
+        	var result = (System.Int32) teklaObject.CompareTo(other);
 
         	return result;
     }

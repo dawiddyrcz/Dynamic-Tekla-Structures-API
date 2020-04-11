@@ -245,7 +245,7 @@ public System.String GetText(
 	
     try
     {
-        	var result = teklaObject.GetText(name);
+        	var result = (System.String) teklaObject.GetText(name);
 
         	return result;
     }
@@ -303,13 +303,13 @@ public void Invoke(
 
 
 public void EndInvoke(
-	System.IAsyncResult result_
+	System.IAsyncResult presult
 	)
 {
-	var result = ObjectConverter.ToTSObject(result_);
+	
     try
     {
-        	teklaObject.EndInvoke(result);
+        	teklaObject.EndInvoke(presult);
 
         
     }

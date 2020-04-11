@@ -22,7 +22,7 @@ public static System.Boolean DisplayHelpTopic(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopic", helpTopic);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopic", helpTopic);
 	return result;
 }
 
@@ -37,7 +37,7 @@ public static System.Boolean DisplayHelpTopicIndependent(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopicIndependent", helpViewerFilePath, helpTopic, language);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopicIndependent", helpViewerFilePath, helpTopic, language);
 	return result;
 }
 

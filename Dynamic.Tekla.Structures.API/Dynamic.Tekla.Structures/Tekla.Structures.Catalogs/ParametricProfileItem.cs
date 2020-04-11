@@ -49,7 +49,7 @@ public static System.String GetParametricProfilePrefix(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.ParametricProfileItem", "GetParametricProfilePrefix", Subtype);
+	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.ParametricProfileItem", "GetParametricProfilePrefix", Subtype);
 	return result;
 }
 
@@ -60,7 +60,7 @@ public System.String CreateProfileString()
 
     try
     {
-        	var result = teklaObject.CreateProfileString();
+        	var result = (System.String) teklaObject.CreateProfileString();
 
         	return result;
     }
@@ -79,7 +79,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(ProfileName);
+        	var result = (System.Boolean) teklaObject.Select(ProfileName);
 
         	return result;
     }

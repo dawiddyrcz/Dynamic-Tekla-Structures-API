@@ -24,7 +24,7 @@ public System.Boolean IsEqual(
 	
     try
     {
-        	var result = teklaObject.IsEqual(ObjectToCompare);
+        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
 
         	return result;
     }
@@ -43,7 +43,7 @@ public System.Boolean LoadAttributes(
 	
     try
     {
-        	var result = teklaObject.LoadAttributes(AttributeFile);
+        	var result = (System.Boolean) teklaObject.LoadAttributes(AttributeFile);
 
         	return result;
     }

@@ -118,7 +118,7 @@ public System.Boolean Insert()
 
     try
     {
-        	var result = teklaObject.Insert();
+        	var result = (System.Boolean) teklaObject.Insert();
 
         	return result;
     }
@@ -135,7 +135,7 @@ public System.Boolean Select()
 
     try
     {
-        	var result = teklaObject.Select();
+        	var result = (System.Boolean) teklaObject.Select();
 
         	return result;
     }
@@ -152,7 +152,7 @@ public System.Boolean Modify()
 
     try
     {
-        	var result = teklaObject.Modify();
+        	var result = (System.Boolean) teklaObject.Modify();
 
         	return result;
     }
@@ -169,7 +169,7 @@ public System.Boolean Delete()
 
     try
     {
-        	var result = teklaObject.Delete();
+        	var result = (System.Boolean) teklaObject.Delete();
 
         	return result;
     }
@@ -190,7 +190,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(Name, Value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(Name, Value);
 
         	return result;
     }
@@ -211,7 +211,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(Name, Value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(Name, Value);
 
         	return result;
     }
@@ -232,7 +232,7 @@ public System.Boolean SetUserProperty(
 	
     try
     {
-        	var result = teklaObject.SetUserProperty(Name, Value);
+        	var result = (System.Boolean) teklaObject.SetUserProperty(Name, Value);
 
         	return result;
     }
@@ -253,7 +253,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(Name, ref Value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(Name, ref Value);
 	
         	return result;
     }
@@ -274,7 +274,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(Name, ref Value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(Name, ref Value);
 	
         	return result;
     }
@@ -295,7 +295,7 @@ public System.Boolean GetUserProperty(
 	
     try
     {
-        	var result = teklaObject.GetUserProperty(Name, ref Value);
+        	var result = (System.Boolean) teklaObject.GetUserProperty(Name, ref Value);
 	
         	return result;
     }

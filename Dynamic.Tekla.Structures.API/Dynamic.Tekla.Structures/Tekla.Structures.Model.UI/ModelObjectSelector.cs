@@ -75,7 +75,7 @@ public System.Boolean Select(
 	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
     try
     {
-        	var result = teklaObject.Select(ModelObjects);
+        	var result = (System.Boolean) teklaObject.Select(ModelObjects);
 
         	return result;
     }
@@ -96,7 +96,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(ModelObjects, ShowDimensions);
+        	var result = (System.Boolean) teklaObject.Select(ModelObjects, ShowDimensions);
 
         	return result;
     }

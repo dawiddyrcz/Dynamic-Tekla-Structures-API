@@ -33,7 +33,7 @@ public System.Boolean AddBoltDistX(
 	
     try
     {
-        	var result = teklaObject.AddBoltDistX(DistX);
+        	var result = (System.Boolean) teklaObject.AddBoltDistX(DistX);
 
         	return result;
     }
@@ -52,7 +52,7 @@ public System.Boolean AddBoltDistY(
 	
     try
     {
-        	var result = teklaObject.AddBoltDistY(DistY);
+        	var result = (System.Boolean) teklaObject.AddBoltDistY(DistY);
 
         	return result;
     }
@@ -71,7 +71,7 @@ public System.Boolean RemoveBoltDistX(
 	
     try
     {
-        	var result = teklaObject.RemoveBoltDistX(Index);
+        	var result = (System.Boolean) teklaObject.RemoveBoltDistX(Index);
 
         	return result;
     }
@@ -90,7 +90,7 @@ public System.Boolean RemoveBoltDistY(
 	
     try
     {
-        	var result = teklaObject.RemoveBoltDistY(Index);
+        	var result = (System.Boolean) teklaObject.RemoveBoltDistY(Index);
 
         	return result;
     }
@@ -107,7 +107,7 @@ public System.Int32 GetBoltDistXCount()
 
     try
     {
-        	var result = teklaObject.GetBoltDistXCount();
+        	var result = (System.Int32) teklaObject.GetBoltDistXCount();
 
         	return result;
     }
@@ -124,7 +124,7 @@ public System.Int32 GetBoltDistYCount()
 
     try
     {
-        	var result = teklaObject.GetBoltDistYCount();
+        	var result = (System.Int32) teklaObject.GetBoltDistYCount();
 
         	return result;
     }
@@ -143,7 +143,7 @@ public System.Double GetBoltDistX(
 	
     try
     {
-        	var result = teklaObject.GetBoltDistX(Index);
+        	var result = (System.Double) teklaObject.GetBoltDistX(Index);
 
         	return result;
     }
@@ -162,7 +162,7 @@ public System.Double GetBoltDistY(
 	
     try
     {
-        	var result = teklaObject.GetBoltDistY(Index);
+        	var result = (System.Double) teklaObject.GetBoltDistY(Index);
 
         	return result;
     }
@@ -183,7 +183,7 @@ public System.Boolean SetBoltDistX(
 	
     try
     {
-        	var result = teklaObject.SetBoltDistX(Index, DistX);
+        	var result = (System.Boolean) teklaObject.SetBoltDistX(Index, DistX);
 
         	return result;
     }
@@ -204,7 +204,7 @@ public System.Boolean SetBoltDistY(
 	
     try
     {
-        	var result = teklaObject.SetBoltDistY(Index, DistY);
+        	var result = (System.Boolean) teklaObject.SetBoltDistY(Index, DistY);
 
         	return result;
     }

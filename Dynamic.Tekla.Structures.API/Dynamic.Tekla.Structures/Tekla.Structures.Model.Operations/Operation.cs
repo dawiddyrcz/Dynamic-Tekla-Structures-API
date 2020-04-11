@@ -22,7 +22,7 @@ public static System.Boolean IsNumberingUpToDate(
 	)
 {
 	var InputModelObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(InputModelObject_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDate", InputModelObject);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDate", InputModelObject);
 	return result;
 }
 
@@ -30,7 +30,7 @@ public static System.Boolean IsNumberingUpToDate(
 
 public static System.Boolean IsNumberingUpToDateAll()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll");
 	return result;
 }
 
@@ -42,7 +42,7 @@ public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.Mod
 {
 	var ObjectToCompare = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ObjectToCompare_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetSimilarNumberedObjects", ObjectToCompare);
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 
@@ -61,7 +61,7 @@ public static System.Boolean CreateReportFromSelected(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromSelected", TemplateName, FileName, Title1, Title2, Title3);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromSelected", TemplateName, FileName, Title1, Title2, Title3);
 	return result;
 }
 
@@ -72,7 +72,7 @@ public static System.Boolean DisplayReport(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayReport", FileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayReport", FileName);
 	return result;
 }
 
@@ -91,7 +91,7 @@ public static System.Boolean CreateReportFromAll(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromAll", TemplateName, FileName, Title1, Title2, Title3);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateReportFromAll", TemplateName, FileName, Title1, Title2, Title3);
 	return result;
 }
 
@@ -104,7 +104,7 @@ public static System.Boolean CreateNCFilesFromSelected(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", NCFileSettings, DestinationFolder);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", NCFileSettings, DestinationFolder);
 	return result;
 }
 
@@ -125,7 +125,7 @@ public static System.Boolean CreateNCFilesFromSelected(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromSelected", NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
 	return result;
 }
 
@@ -138,7 +138,7 @@ public static System.Boolean CreateNCFilesFromAll(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", NCFileSettings, DestinationFolder);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", NCFileSettings, DestinationFolder);
 	return result;
 }
 
@@ -159,7 +159,7 @@ public static System.Boolean CreateNCFilesFromAll(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesFromAll", NCFileSettings, DestinationFolder, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
 	return result;
 }
 
@@ -184,7 +184,7 @@ public static System.Boolean CreateNCFilesByPartId(
 	
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesByPartId", NCFileSettings, DestinationFolder, PartID, ref DstvOutput, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateNCFilesByPartId", NCFileSettings, DestinationFolder, PartID, ref DstvOutput, CreatePopMarks, PopMarkSettingsFileName, CreateContourMarking, ContourMarkingSettingsFileName);
 	
 	return result;
 }
@@ -198,7 +198,7 @@ public static System.Boolean CreateMISFileFromSelected(
 {
 	var MISType = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromSelected", MISType, FileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromSelected", MISType, FileName);
 	return result;
 }
 
@@ -211,7 +211,7 @@ public static System.Boolean CreateMISFileFromAll(
 {
 	var MISType = Dynamic.Tekla.Structures.Model.Operations.Operation.MISExportTypeEnum_.GetTSObject(MISType_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromAll", MISType, FileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateMISFileFromAll", MISType, FileName);
 	return result;
 }
 
@@ -222,7 +222,7 @@ public static System.Boolean RunMacro(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RunMacro", FileName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RunMacro", FileName);
 	return result;
 }
 
@@ -230,7 +230,7 @@ public static System.Boolean RunMacro(
 
 public static System.Boolean IsMacroRunning()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsMacroRunning");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsMacroRunning");
 	return result;
 }
 
@@ -241,7 +241,7 @@ public static System.Boolean Open(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", ModelFolder);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", ModelFolder);
 	return result;
 }
 
@@ -254,7 +254,7 @@ public static System.Boolean Open(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", ModelFolder, OpenAutoSaved);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Open", ModelFolder, OpenAutoSaved);
 	return result;
 }
 
@@ -265,7 +265,7 @@ public static System.Boolean IsModelAutoSaved(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsModelAutoSaved", ModelFolder);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsModelAutoSaved", ModelFolder);
 	return result;
 }
 
@@ -276,7 +276,7 @@ public static System.Boolean SaveAsWebModel(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveAsWebModel", Filename);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveAsWebModel", Filename);
 	return result;
 }
 
@@ -287,7 +287,7 @@ public static System.Boolean SaveSelectedAsWebModel(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", Filename);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", Filename);
 	return result;
 }
 
@@ -300,7 +300,7 @@ public static System.Boolean MoveObject(
 {
 	var Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object_);
 	var TranslationVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(TranslationVector_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", Object, TranslationVector);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", Object, TranslationVector);
 	return result;
 }
 
@@ -315,7 +315,7 @@ public static System.Boolean MoveObject(
 	var Object = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(Object_);
 	var StartCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(StartCoordinateSystem_);
 	var EndCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(EndCoordinateSystem_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", Object, StartCoordinateSystem, EndCoordinateSystem);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "MoveObject", Object, StartCoordinateSystem, EndCoordinateSystem);
 	return result;
 }
 
@@ -615,9 +615,9 @@ public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(
 	)
 {
 	var part1 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1_);
-	var face1 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face1_);
+	var face1 = ListConverter.ToTSObjects(face1_);
 	var part2 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2_);
-	var face2 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face2_);
+	var face2 = ListConverter.ToTSObjects(face2_);
 	var bendShape = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", part1, face1, part2, face2, bendShape);
 	var _result = Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
@@ -634,9 +634,9 @@ public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(
 	)
 {
 	var part1 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1_);
-	var face1 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face1_);
+	var face1 = ListConverter.ToTSObjects(face1_);
 	var part2 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2_);
-	var face2 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face2_);
+	var face2 = ListConverter.ToTSObjects(face2_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", part1, face1, part2, face2);
 	var _result = Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
 	return _result;
@@ -691,9 +691,9 @@ public static Dynamic.Tekla.Structures.Model.BentPlate CreateBentPlateByFaces(
 	)
 {
 	var part1 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1_);
-	var face1 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face1_);
+	var face1 = ListConverter.ToTSObjects(face1_);
 	var part2 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2_);
-	var face2 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face2_);
+	var face2 = ListConverter.ToTSObjects(face2_);
 	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateBentPlateByFaces", part1, face1, part2, face2, radius);
 	var _result = Dynamic.Tekla.Structures.Model.BentPlate_.FromTSObject(result);
@@ -732,9 +732,9 @@ public static Dynamic.Tekla.Structures.Model.BentPlate CreateConicalBentPlateByF
 	)
 {
 	var part1 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part1_);
-	var face1 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face1_);
+	var face1 = ListConverter.ToTSObjects(face1_);
 	var part2 = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(part2_);
-	var face2 = IEnumerableConverter.ToTSObjects<System.Collections.Generic.IList<Tekla.Structures.Geometry3d.Point>>(face2_);
+	var face2 = ListConverter.ToTSObjects(face2_);
 	
 	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateConicalBentPlateByFaces", part1, face1, part2, face2, largestRadius, halfAperture);
@@ -771,7 +771,7 @@ public static System.Boolean ExplodeBentPlate(
 	)
 {
 	var bentPlate = Dynamic.Tekla.Structures.Model.BentPlate_.GetTSObject(bentPlate_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ExplodeBentPlate", bentPlate);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ExplodeBentPlate", bentPlate);
 	return result;
 }
 
@@ -783,8 +783,8 @@ public static System.Boolean AddToPourUnit(
 	)
 {
 	var inputPourUnit = Dynamic.Tekla.Structures.Model.PourUnit_.GetTSObject(inputPourUnit_);
-	var objectsToBeAdded = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Model.ModelObject>>(objectsToBeAdded_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "AddToPourUnit", inputPourUnit, objectsToBeAdded);
+	var objectsToBeAdded = ListConverter.ToTSObjects(objectsToBeAdded_);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "AddToPourUnit", inputPourUnit, objectsToBeAdded);
 	return result;
 }
 
@@ -794,8 +794,8 @@ public static System.Boolean RemoveFromPourUnit(
 	System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> objectsToBeRemoved_
 	)
 {
-	var objectsToBeRemoved = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Model.ModelObject>>(objectsToBeRemoved_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RemoveFromPourUnit", objectsToBeRemoved);
+	var objectsToBeRemoved = ListConverter.ToTSObjects(objectsToBeRemoved_);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "RemoveFromPourUnit", objectsToBeRemoved);
 	return result;
 }
 
@@ -803,7 +803,7 @@ public static System.Boolean RemoveFromPourUnit(
 
 public static System.Boolean CalculatePourUnits()
 {
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CalculatePourUnits");
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CalculatePourUnits");
 	return result;
 }
 
@@ -814,7 +814,7 @@ public static System.Boolean DisplayPrompt(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", Message);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "DisplayPrompt", Message);
 	return result;
 }
 
@@ -827,7 +827,7 @@ public static System.Boolean ObjectMatchesToFilter(
 {
 	var ModelObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", ModelObject, FilterName);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", ModelObject, FilterName);
 	return result;
 }
 
@@ -840,7 +840,7 @@ public static System.Boolean ObjectMatchesToFilter(
 {
 	var ModelObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ModelObject_);
 	var FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", ModelObject, FilterExpression);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ObjectMatchesToFilter", ModelObject, FilterExpression);
 	return result;
 }
 
@@ -981,7 +981,7 @@ public System.Boolean Display(
 	
     try
     {
-        	var result = teklaObject.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);
+        	var result = (System.Boolean) teklaObject.Display(SleepTime, Title, Message, CancelButtonLabel, ProgressLabel);
 
         	return result;
     }
@@ -1036,7 +1036,7 @@ public System.Boolean Canceled()
 
     try
     {
-        	var result = teklaObject.Canceled();
+        	var result = (System.Boolean) teklaObject.Canceled();
 
         	return result;
     }

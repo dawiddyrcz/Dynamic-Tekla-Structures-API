@@ -82,7 +82,7 @@ public System.Boolean IsInside(
 	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
     try
     {
-        	var result = teklaObject.IsInside(Point);
+        	var result = (System.Boolean) teklaObject.IsInside(Point);
 
         	return result;
     }
@@ -101,7 +101,7 @@ public System.Boolean IsInside(
 	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
     try
     {
-        	var result = teklaObject.IsInside(LineSegment);
+        	var result = (System.Boolean) teklaObject.IsInside(LineSegment);
 
         	return result;
     }
@@ -138,7 +138,7 @@ public System.Boolean Collide(
 	var Other = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other_);
     try
     {
-        	var result = teklaObject.Collide(Other);
+        	var result = (System.Boolean) teklaObject.Collide(Other);
 
         	return result;
     }

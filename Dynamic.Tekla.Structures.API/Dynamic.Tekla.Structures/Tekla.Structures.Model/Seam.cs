@@ -134,7 +134,7 @@ public System.Boolean SetPrimaryObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.SetPrimaryObject(M);
+        	var result = (System.Boolean) teklaObject.SetPrimaryObject(M);
 
         	return result;
     }
@@ -171,7 +171,7 @@ public System.Boolean SetSecondaryObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.SetSecondaryObject(M);
+        	var result = (System.Boolean) teklaObject.SetSecondaryObject(M);
 
         	return result;
     }
@@ -190,7 +190,7 @@ public System.Boolean SetSecondaryObjects(
 	var Secondaries = ArrayListConverter.ToTSObjects(Secondaries_);
     try
     {
-        	var result = teklaObject.SetSecondaryObjects(Secondaries);
+        	var result = (System.Boolean) teklaObject.SetSecondaryObjects(Secondaries);
 
         	return result;
     }
@@ -229,7 +229,7 @@ public System.Boolean SetInputPositions(
 	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
     try
     {
-        	var result = teklaObject.SetInputPositions(StartPoint, EndPoint);
+        	var result = (System.Boolean) teklaObject.SetInputPositions(StartPoint, EndPoint);
 
         	return result;
     }
@@ -250,7 +250,7 @@ public System.Boolean GetStartAndEndPositions(
 	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
     try
     {
-        	var result = teklaObject.GetStartAndEndPositions(ref StartPoint, ref EndPoint);
+        	var result = (System.Boolean) teklaObject.GetStartAndEndPositions(ref StartPoint, ref EndPoint);
 	StartPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(StartPoint);
 	EndPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(EndPoint);
         	return result;
@@ -270,7 +270,7 @@ public System.Boolean SetInputPolygon(
 	var InputPolygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(InputPolygon_);
     try
     {
-        	var result = teklaObject.SetInputPolygon(InputPolygon);
+        	var result = (System.Boolean) teklaObject.SetInputPolygon(InputPolygon);
 
         	return result;
     }

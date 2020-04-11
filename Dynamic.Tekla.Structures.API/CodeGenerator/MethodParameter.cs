@@ -40,6 +40,8 @@ namespace CodeGenerator
 
             if (name.Equals("object", StringComparison.InvariantCulture))
                 return "objectt";
+            if (name.Equals("result", StringComparison.InvariantCulture))
+                return "presult";
             else
                 return name;
         }

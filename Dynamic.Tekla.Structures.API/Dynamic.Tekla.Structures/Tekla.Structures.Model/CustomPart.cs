@@ -60,7 +60,7 @@ public System.Boolean SetInputPositions(
 	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
     try
     {
-        	var result = teklaObject.SetInputPositions(StartPoint, EndPoint);
+        	var result = (System.Boolean) teklaObject.SetInputPositions(StartPoint, EndPoint);
 
         	return result;
     }
@@ -81,7 +81,7 @@ public System.Boolean GetStartAndEndPositions(
 	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
     try
     {
-        	var result = teklaObject.GetStartAndEndPositions(ref StartPoint, ref EndPoint);
+        	var result = (System.Boolean) teklaObject.GetStartAndEndPositions(ref StartPoint, ref EndPoint);
 	StartPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(StartPoint);
 	EndPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(EndPoint);
         	return result;

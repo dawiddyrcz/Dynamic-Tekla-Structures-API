@@ -49,7 +49,7 @@ public static System.String Fingerprint(
 	)
 {
 	var brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(brep_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "Fingerprint", brep);
+	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "Fingerprint", brep);
 	return result;
 }
 
@@ -62,7 +62,7 @@ public static System.Boolean CompareFingerprints(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "CompareFingerprints", fingerprint1, fingerprint2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "CompareFingerprints", fingerprint1, fingerprint2);
 	return result;
 }
 
@@ -75,7 +75,7 @@ public static System.Boolean GetSolidBrep(
 {
 	var inBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep_);
 	var outBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "GetSolidBrep", inBrep, ref outBrep);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "GetSolidBrep", inBrep, ref outBrep);
 	outBrep_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(outBrep);
 	return result;
 }

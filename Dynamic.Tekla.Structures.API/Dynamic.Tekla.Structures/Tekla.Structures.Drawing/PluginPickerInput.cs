@@ -55,7 +55,7 @@ public void AddRange(
 	System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.PickerInput> inputs_
 	)
 {
-	var inputs = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Drawing.PickerInput>>(inputs_);
+	var inputs = ListConverter.ToTSObjects(inputs_);
     try
     {
         	teklaObject.AddRange(inputs);

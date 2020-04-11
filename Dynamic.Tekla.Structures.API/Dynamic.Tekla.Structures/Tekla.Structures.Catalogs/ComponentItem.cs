@@ -119,7 +119,7 @@ public System.Boolean Select(
 	
     try
     {
-        	var result = teklaObject.Select(name, number);
+        	var result = (System.Boolean) teklaObject.Select(name, number);
 
         	return result;
     }
@@ -142,7 +142,7 @@ public System.Boolean Select(
 	var type = Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(type_);
     try
     {
-        	var result = teklaObject.Select(name, number, type);
+        	var result = (System.Boolean) teklaObject.Select(name, number, type);
 
         	return result;
     }
@@ -161,7 +161,7 @@ public System.Boolean Export(
 	
     try
     {
-        	var result = teklaObject.Export(ref filename);
+        	var result = (System.Boolean) teklaObject.Export(ref filename);
 	
         	return result;
     }
@@ -180,7 +180,7 @@ public System.Boolean GetVersion(
 	
     try
     {
-        	var result = teklaObject.GetVersion(ref version);
+        	var result = (System.Boolean) teklaObject.GetVersion(ref version);
 	
         	return result;
     }

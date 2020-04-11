@@ -96,7 +96,7 @@ public System.Boolean MoveObjectRelative(
 	var MoveVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector_);
     try
     {
-        	var result = teklaObject.MoveObjectRelative(MoveVector);
+        	var result = (System.Boolean) teklaObject.MoveObjectRelative(MoveVector);
 
         	return result;
     }
@@ -115,7 +115,7 @@ public System.Boolean Resize(
 	var size = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(size_);
     try
     {
-        	var result = teklaObject.Resize(size);
+        	var result = (System.Boolean) teklaObject.Resize(size);
 
         	return result;
     }

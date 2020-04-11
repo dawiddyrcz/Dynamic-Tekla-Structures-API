@@ -39,7 +39,7 @@ public System.Boolean SetComponentInput(
 	var I = Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I_);
     try
     {
-        	var result = teklaObject.SetComponentInput(I);
+        	var result = (System.Boolean) teklaObject.SetComponentInput(I);
 
         	return result;
     }

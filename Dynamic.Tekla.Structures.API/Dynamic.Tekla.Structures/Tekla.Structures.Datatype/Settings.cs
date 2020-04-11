@@ -31,7 +31,7 @@ public static System.Object GetValue(
 	)
 {
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", name);
+	var result = (System.Object) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", name);
 	return result;
 }
 
@@ -44,24 +44,11 @@ public static System.Boolean TryGetValue(
 {
 	
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
 	
 	return result;
 }
 
-
-
-public static System.Boolean TryGetValue(
-	System.String name,
-	ref Dynamic.Tekla.Structures.Datatype.Settings.T obj_
-	)
-{
-	
-	var obj = ObjectConverter.ToTSObject(obj_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
-	obj_ = ObjectConverter.FromTSObject(obj);
-	return result;
-}
 
 
 

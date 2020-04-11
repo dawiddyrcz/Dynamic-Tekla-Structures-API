@@ -37,7 +37,7 @@ public System.Boolean GetConnectionStatus()
 
     try
     {
-        	var result = teklaObject.GetConnectionStatus();
+        	var result = (System.Boolean) teklaObject.GetConnectionStatus();
 
         	return result;
     }
@@ -167,7 +167,7 @@ public System.Boolean SetActiveDrawing(
 	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
     try
     {
-        	var result = teklaObject.SetActiveDrawing(drawing);
+        	var result = (System.Boolean) teklaObject.SetActiveDrawing(drawing);
 
         	return result;
     }
@@ -188,7 +188,7 @@ public System.Boolean SetActiveDrawing(
 	
     try
     {
-        	var result = teklaObject.SetActiveDrawing(drawing, showDrawing);
+        	var result = (System.Boolean) teklaObject.SetActiveDrawing(drawing, showDrawing);
 
         	return result;
     }
@@ -205,7 +205,7 @@ public System.Boolean SaveActiveDrawing()
 
     try
     {
-        	var result = teklaObject.SaveActiveDrawing();
+        	var result = (System.Boolean) teklaObject.SaveActiveDrawing();
 
         	return result;
     }
@@ -222,7 +222,7 @@ public System.Boolean CloseActiveDrawing()
 
     try
     {
-        	var result = teklaObject.CloseActiveDrawing();
+        	var result = (System.Boolean) teklaObject.CloseActiveDrawing();
 
         	return result;
     }
@@ -241,7 +241,7 @@ public System.Boolean CloseActiveDrawing(
 	
     try
     {
-        	var result = teklaObject.CloseActiveDrawing(save);
+        	var result = (System.Boolean) teklaObject.CloseActiveDrawing(save);
 
         	return result;
     }
@@ -262,7 +262,7 @@ public System.Boolean PrintDrawing(
 	var printAttributes = Dynamic.Tekla.Structures.Drawing.PrintAttributes_.GetTSObject(printAttributes_);
     try
     {
-        	var result = teklaObject.PrintDrawing(drawing, printAttributes);
+        	var result = (System.Boolean) teklaObject.PrintDrawing(drawing, printAttributes);
 
         	return result;
     }
@@ -285,7 +285,7 @@ public System.Boolean PrintDrawing(
 	
     try
     {
-        	var result = teklaObject.PrintDrawing(drawing, printAttributes, fileName);
+        	var result = (System.Boolean) teklaObject.PrintDrawing(drawing, printAttributes, fileName);
 
         	return result;
     }
@@ -306,7 +306,7 @@ public System.Boolean PrintDrawing(
 	var printAttributes = Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes_.GetTSObject(printAttributes_);
     try
     {
-        	var result = teklaObject.PrintDrawing(drawing, printAttributes);
+        	var result = (System.Boolean) teklaObject.PrintDrawing(drawing, printAttributes);
 
         	return result;
     }
@@ -329,7 +329,7 @@ public System.Boolean PrintDrawing(
 	
     try
     {
-        	var result = teklaObject.PrintDrawing(drawing, printAttributes, outputFile);
+        	var result = (System.Boolean) teklaObject.PrintDrawing(drawing, printAttributes, outputFile);
 
         	return result;
     }
@@ -346,11 +346,11 @@ public System.Boolean PrintDrawings(
 	Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes printAttributes_
 	)
 {
-	var drawings = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Drawing.Drawing>>(drawings_);
+	var drawings = ListConverter.ToTSObjects(drawings_);
 	var printAttributes = Dynamic.Tekla.Structures.Drawing.DPMPrinterAttributes_.GetTSObject(printAttributes_);
     try
     {
-        	var result = teklaObject.PrintDrawings(drawings, printAttributes);
+        	var result = (System.Boolean) teklaObject.PrintDrawings(drawings, printAttributes);
 
         	return result;
     }
@@ -369,7 +369,7 @@ public System.Boolean UpdateDrawing(
 	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
     try
     {
-        	var result = teklaObject.UpdateDrawing(drawing);
+        	var result = (System.Boolean) teklaObject.UpdateDrawing(drawing);
 
         	return result;
     }
@@ -388,7 +388,7 @@ public System.Boolean IssueDrawing(
 	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
     try
     {
-        	var result = teklaObject.IssueDrawing(drawing);
+        	var result = (System.Boolean) teklaObject.IssueDrawing(drawing);
 
         	return result;
     }
@@ -407,7 +407,7 @@ public System.Boolean UnissueDrawing(
 	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
     try
     {
-        	var result = teklaObject.UnissueDrawing(drawing);
+        	var result = (System.Boolean) teklaObject.UnissueDrawing(drawing);
 
         	return result;
     }
@@ -428,7 +428,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetM
     {
         	var result = teklaObject.GetModelObjectIdentifiers(drawing);
 
-        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier>>(result);
+        	var _result = ListConverter.FromTSObjects(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

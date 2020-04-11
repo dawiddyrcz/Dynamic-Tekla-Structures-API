@@ -57,7 +57,7 @@ public System.Boolean MoveNext()
 
     try
     {
-        	var result = teklaObject.MoveNext();
+        	var result = (System.Boolean) teklaObject.MoveNext();
 
         	return result;
     }
@@ -91,7 +91,7 @@ public System.Int32 GetSize()
 
     try
     {
-        	var result = teklaObject.GetSize();
+        	var result = (System.Int32) teklaObject.GetSize();
 
         	return result;
     }

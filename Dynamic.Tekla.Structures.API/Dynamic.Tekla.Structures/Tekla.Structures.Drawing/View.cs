@@ -210,7 +210,7 @@ public static System.Boolean CreateSectionView(
 	var sectionMarkAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes_);
 	var sectionView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(sectionView_);
 	var sectionMark = Dynamic.Tekla.Structures.Drawing.SectionMark_.GetTSObject(sectionMark_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateSectionView", view, startPoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref sectionView, ref sectionMark);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateSectionView", view, startPoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref sectionView, ref sectionMark);
 	sectionView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(sectionView);
 	sectionMark_ = Dynamic.Tekla.Structures.Drawing.SectionMark_.FromTSObject(sectionMark);
 	return result;
@@ -243,7 +243,7 @@ public static System.Boolean CreateCurvedSectionView(
 	var sectionMarkAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes_);
 	var curvedSectionView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(curvedSectionView_);
 	var sectionMark = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.GetTSObject(sectionMark_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateCurvedSectionView", view, startPoint, middlePoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref curvedSectionView, ref sectionMark);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateCurvedSectionView", view, startPoint, middlePoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref curvedSectionView, ref sectionMark);
 	curvedSectionView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(curvedSectionView);
 	sectionMark_ = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.FromTSObject(sectionMark);
 	return result;
@@ -272,7 +272,7 @@ public static System.Boolean CreateDetailView(
 	var detailMarkAttributes = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(detailMarkAttributes_);
 	var detailView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(detailView_);
 	var detailMark = Dynamic.Tekla.Structures.Drawing.DetailMark_.GetTSObject(detailMark_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateDetailView", view, centerPoint, boundaryPoint, labelPoint, viewInsertionPoint, viewAttributes, detailMarkAttributes, ref detailView, ref detailMark);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateDetailView", view, centerPoint, boundaryPoint, labelPoint, viewInsertionPoint, viewAttributes, detailMarkAttributes, ref detailView, ref detailMark);
 	detailView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(detailView);
 	detailMark_ = Dynamic.Tekla.Structures.Drawing.DetailMark_.FromTSObject(detailMark);
 	return result;
@@ -291,7 +291,7 @@ public static System.Boolean CreateFrontView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateFrontView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateFrontView", drawing, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -309,7 +309,7 @@ public static System.Boolean CreateTopView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateTopView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateTopView", drawing, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -327,7 +327,7 @@ public static System.Boolean CreateBackView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBackView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBackView", drawing, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -345,7 +345,7 @@ public static System.Boolean CreateBottomView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBottomView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBottomView", drawing, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -363,7 +363,7 @@ public static System.Boolean Create3dView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -387,7 +387,7 @@ public static System.Boolean Create3dView(
 	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
 	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
 	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewPlane, displayPlane, viewExtrema, viewInsertionPoint, viewAttributes, ref view);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewPlane, displayPlane, viewExtrema, viewInsertionPoint, viewAttributes, ref view);
 	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
 	return result;
 }
@@ -401,7 +401,7 @@ public System.Boolean RotateViewOnAxisX(
 	
     try
     {
-        	var result = teklaObject.RotateViewOnAxisX(rotationAngle);
+        	var result = (System.Boolean) teklaObject.RotateViewOnAxisX(rotationAngle);
 
         	return result;
     }
@@ -420,7 +420,7 @@ public System.Boolean RotateViewOnAxisY(
 	
     try
     {
-        	var result = teklaObject.RotateViewOnAxisY(rotationAngle);
+        	var result = (System.Boolean) teklaObject.RotateViewOnAxisY(rotationAngle);
 
         	return result;
     }
@@ -439,7 +439,7 @@ public System.Boolean RotateViewOnAxisZ(
 	
     try
     {
-        	var result = teklaObject.RotateViewOnAxisZ(rotationAngle);
+        	var result = (System.Boolean) teklaObject.RotateViewOnAxisZ(rotationAngle);
 
         	return result;
     }
@@ -458,7 +458,7 @@ public System.Boolean RotateViewOnDrawingPlane(
 	
     try
     {
-        	var result = teklaObject.RotateViewOnDrawingPlane(rotationAngle);
+        	var result = (System.Boolean) teklaObject.RotateViewOnDrawingPlane(rotationAngle);
 
         	return result;
     }

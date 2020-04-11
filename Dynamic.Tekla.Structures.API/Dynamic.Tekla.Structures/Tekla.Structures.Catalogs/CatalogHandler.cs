@@ -31,7 +31,7 @@ public System.Boolean GetConnectionStatus()
 
     try
     {
-        	var result = teklaObject.GetConnectionStatus();
+        	var result = (System.Boolean) teklaObject.GetConnectionStatus();
 
         	return result;
     }
@@ -302,7 +302,7 @@ public System.Boolean SaveProfileDatabase()
 
     try
     {
-        	var result = teklaObject.SaveProfileDatabase();
+        	var result = (System.Boolean) teklaObject.SaveProfileDatabase();
 
         	return result;
     }
@@ -321,7 +321,7 @@ public System.Boolean ImportLibraryProfileItems(
 	
     try
     {
-        	var result = teklaObject.ImportLibraryProfileItems(path);
+        	var result = (System.Boolean) teklaObject.ImportLibraryProfileItems(path);
 
         	return result;
     }
@@ -340,7 +340,7 @@ public System.Boolean ImportParametricProfileItems(
 	
     try
     {
-        	var result = teklaObject.ImportParametricProfileItems(path);
+        	var result = (System.Boolean) teklaObject.ImportParametricProfileItems(path);
 
         	return result;
     }
@@ -359,7 +359,7 @@ public System.Boolean ImportMaterialItems(
 	
     try
     {
-        	var result = teklaObject.ImportMaterialItems(path);
+        	var result = (System.Boolean) teklaObject.ImportMaterialItems(path);
 
         	return result;
     }
@@ -378,7 +378,7 @@ public System.Boolean ImportCustomComponentItems(
 	
     try
     {
-        	var result = teklaObject.ImportCustomComponentItems(path);
+        	var result = (System.Boolean) teklaObject.ImportCustomComponentItems(path);
 
         	return result;
     }
@@ -397,7 +397,7 @@ public System.Boolean ImportRebarItems(
 	
     try
     {
-        	var result = teklaObject.ImportRebarItems(path);
+        	var result = (System.Boolean) teklaObject.ImportRebarItems(path);
 
         	return result;
     }
@@ -416,7 +416,7 @@ public System.Boolean ImportMeshItems(
 	
     try
     {
-        	var result = teklaObject.ImportMeshItems(path);
+        	var result = (System.Boolean) teklaObject.ImportMeshItems(path);
 
         	return result;
     }
@@ -435,7 +435,7 @@ public System.Boolean ImportBoltItems(
 	
     try
     {
-        	var result = teklaObject.ImportBoltItems(path);
+        	var result = (System.Boolean) teklaObject.ImportBoltItems(path);
 
         	return result;
     }
@@ -454,7 +454,7 @@ public System.Boolean ImportDrawingItems(
 	
     try
     {
-        	var result = teklaObject.ImportDrawingItems(path);
+        	var result = (System.Boolean) teklaObject.ImportDrawingItems(path);
 
         	return result;
     }
@@ -473,7 +473,7 @@ public System.Boolean ImportShapeItems(
 	
     try
     {
-        	var result = teklaObject.ImportShapeItems(path);
+        	var result = (System.Boolean) teklaObject.ImportShapeItems(path);
 
         	return result;
     }

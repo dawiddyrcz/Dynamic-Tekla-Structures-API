@@ -152,7 +152,7 @@ public System.Boolean SetPrimaryObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.SetPrimaryObject(M);
+        	var result = (System.Boolean) teklaObject.SetPrimaryObject(M);
 
         	return result;
     }
@@ -189,7 +189,7 @@ public System.Boolean SetReferencePoint(
 	var ReferencePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ReferencePoint_);
     try
     {
-        	var result = teklaObject.SetReferencePoint(ReferencePoint);
+        	var result = (System.Boolean) teklaObject.SetReferencePoint(ReferencePoint);
 
         	return result;
     }

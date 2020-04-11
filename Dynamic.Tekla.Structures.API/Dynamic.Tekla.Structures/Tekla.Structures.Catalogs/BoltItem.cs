@@ -99,7 +99,7 @@ public System.Boolean ExportBoltStandard(
 	
     try
     {
-        	var result = teklaObject.ExportBoltStandard(ref filename);
+        	var result = (System.Boolean) teklaObject.ExportBoltStandard(ref filename);
 	
         	return result;
     }

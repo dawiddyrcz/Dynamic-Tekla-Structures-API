@@ -418,7 +418,7 @@ public System.Boolean CommitChanges()
 
     try
     {
-        	var result = teklaObject.CommitChanges();
+        	var result = (System.Boolean) teklaObject.CommitChanges();
 
         	return result;
     }
@@ -437,7 +437,7 @@ public System.Boolean CommitChanges(
 	
     try
     {
-        	var result = teklaObject.CommitChanges(Message);
+        	var result = (System.Boolean) teklaObject.CommitChanges(Message);
 
         	return result;
     }
@@ -454,7 +454,7 @@ public System.Boolean PlaceViews()
 
     try
     {
-        	var result = teklaObject.PlaceViews();
+        	var result = (System.Boolean) teklaObject.PlaceViews();
 
         	return result;
     }
@@ -473,7 +473,7 @@ public System.String GetPlotFileName(
 	
     try
     {
-        	var result = teklaObject.GetPlotFileName(includeRevisionInfo);
+        	var result = (System.String) teklaObject.GetPlotFileName(includeRevisionInfo);
 
         	return result;
     }
@@ -492,7 +492,7 @@ public System.String GetPlotFileNameExt(
 	var includeRevisionInfo = Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo_);
     try
     {
-        	var result = teklaObject.GetPlotFileNameExt(includeRevisionInfo);
+        	var result = (System.String) teklaObject.GetPlotFileNameExt(includeRevisionInfo);
 
         	return result;
     }

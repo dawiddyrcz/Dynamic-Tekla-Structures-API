@@ -24,7 +24,7 @@ public static System.Boolean VectorToVector(
 {
 	var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
 	var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToVector", Vector1, Vector2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToVector", Vector1, Vector2);
 	return result;
 }
 
@@ -39,7 +39,7 @@ public static System.Boolean VectorToVector(
 	var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
 	var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToVector", Vector1, Vector2, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToVector", Vector1, Vector2, Tolerance);
 	return result;
 }
 
@@ -52,7 +52,7 @@ public static System.Boolean LineToLine(
 {
 	var Line1 = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1_);
 	var Line2 = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToLine", Line1, Line2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToLine", Line1, Line2);
 	return result;
 }
 
@@ -67,7 +67,7 @@ public static System.Boolean LineToLine(
 	var Line1 = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line1_);
 	var Line2 = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line2_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToLine", Line1, Line2, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToLine", Line1, Line2, Tolerance);
 	return result;
 }
 
@@ -80,7 +80,7 @@ public static System.Boolean LineSegmentToLineSegment(
 {
 	var LineSegment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1_);
 	var LineSegment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToLineSegment", LineSegment1, LineSegment2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToLineSegment", LineSegment1, LineSegment2);
 	return result;
 }
 
@@ -95,7 +95,7 @@ public static System.Boolean LineSegmentToLineSegment(
 	var LineSegment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment1_);
 	var LineSegment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment2_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToLineSegment", LineSegment1, LineSegment2, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToLineSegment", LineSegment1, LineSegment2, Tolerance);
 	return result;
 }
 
@@ -108,7 +108,7 @@ public static System.Boolean PlaneToPlane(
 {
 	var Plane1 = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1_);
 	var Plane2 = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "PlaneToPlane", Plane1, Plane2);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "PlaneToPlane", Plane1, Plane2);
 	return result;
 }
 
@@ -123,7 +123,7 @@ public static System.Boolean PlaneToPlane(
 	var Plane1 = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane1_);
 	var Plane2 = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane2_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "PlaneToPlane", Plane1, Plane2, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "PlaneToPlane", Plane1, Plane2, Tolerance);
 	return result;
 }
 
@@ -136,7 +136,7 @@ public static System.Boolean VectorToPlane(
 {
 	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToPlane", Vector, Plane);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToPlane", Vector, Plane);
 	return result;
 }
 
@@ -151,7 +151,7 @@ public static System.Boolean VectorToPlane(
 	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToPlane", Vector, Plane, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "VectorToPlane", Vector, Plane, Tolerance);
 	return result;
 }
 
@@ -164,7 +164,7 @@ public static System.Boolean LineToPlane(
 {
 	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToPlane", Line, Plane);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToPlane", Line, Plane);
 	return result;
 }
 
@@ -179,7 +179,7 @@ public static System.Boolean LineToPlane(
 	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToPlane", Line, Plane, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineToPlane", Line, Plane, Tolerance);
 	return result;
 }
 
@@ -192,7 +192,7 @@ public static System.Boolean LineSegmentToPlane(
 {
 	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToPlane", LineSegment, Plane);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToPlane", LineSegment, Plane);
 	return result;
 }
 
@@ -207,7 +207,7 @@ public static System.Boolean LineSegmentToPlane(
 	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
 	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
 	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToPlane", LineSegment, Plane, Tolerance);
+	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Parallel", "LineSegmentToPlane", LineSegment, Plane, Tolerance);
 	return result;
 }
 

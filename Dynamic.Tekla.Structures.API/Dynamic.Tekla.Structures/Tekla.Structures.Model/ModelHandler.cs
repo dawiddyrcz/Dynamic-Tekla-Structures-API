@@ -37,7 +37,7 @@ public System.Boolean CreateNewSingleUserModel(
 	
     try
     {
-        	var result = teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
+        	var result = (System.Boolean) teklaObject.CreateNewSingleUserModel(ModelName, ModelFolder, Template);
 
         	return result;
     }
@@ -60,7 +60,7 @@ public System.Boolean CreateNewMultiUserModel(
 	
     try
     {
-        	var result = teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
+        	var result = (System.Boolean) teklaObject.CreateNewMultiUserModel(ModelName, ModelFolder, ServerName);
 
         	return result;
     }
@@ -81,7 +81,7 @@ public System.Boolean Save(
 	
     try
     {
-        	var result = teklaObject.Save(Comment, User);
+        	var result = (System.Boolean) teklaObject.Save(Comment, User);
 
         	return result;
     }
@@ -102,7 +102,7 @@ public System.Boolean Open(
 	
     try
     {
-        	var result = teklaObject.Open(ModelFolder, OpenAutoSaved);
+        	var result = (System.Boolean) teklaObject.Open(ModelFolder, OpenAutoSaved);
 
         	return result;
     }
@@ -136,7 +136,7 @@ public System.Boolean IsModelSaved()
 
     try
     {
-        	var result = teklaObject.IsModelSaved();
+        	var result = (System.Boolean) teklaObject.IsModelSaved();
 
         	return result;
     }
@@ -155,7 +155,7 @@ public System.Boolean IsModelAutoSaved(
 	
     try
     {
-        	var result = teklaObject.IsModelAutoSaved(ModelFolder);
+        	var result = (System.Boolean) teklaObject.IsModelAutoSaved(ModelFolder);
 
         	return result;
     }

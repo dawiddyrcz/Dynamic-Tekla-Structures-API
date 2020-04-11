@@ -57,7 +57,7 @@ public System.Boolean Close()
 
     try
     {
-        	var result = teklaObject.Close();
+        	var result = (System.Boolean) teklaObject.Close();
 
         	return result;
     }
@@ -76,7 +76,7 @@ public System.Boolean Close(
 	
     try
     {
-        	var result = teklaObject.Close(saveBeforeClosing);
+        	var result = (System.Boolean) teklaObject.Close(saveBeforeClosing);
 
         	return result;
     }
@@ -95,7 +95,7 @@ public System.Boolean Open(
 	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
     try
     {
-        	var result = teklaObject.Open(drawing);
+        	var result = (System.Boolean) teklaObject.Open(drawing);
 
         	return result;
     }
@@ -112,7 +112,7 @@ public System.Boolean Save()
 
     try
     {
-        	var result = teklaObject.Save();
+        	var result = (System.Boolean) teklaObject.Save();
 
         	return result;
     }

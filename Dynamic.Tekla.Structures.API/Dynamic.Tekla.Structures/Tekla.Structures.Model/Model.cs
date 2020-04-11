@@ -31,7 +31,7 @@ public System.Boolean GetConnectionStatus()
 
     try
     {
-        	var result = teklaObject.GetConnectionStatus();
+        	var result = (System.Boolean) teklaObject.GetConnectionStatus();
 
         	return result;
     }
@@ -146,7 +146,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObjec
     {
         	var result = teklaObject.FetchModelObjects(Guids, SelectInstances);
 
-        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>>(result);
+        	var _result = ListConverter.FromTSObjects(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -184,7 +184,7 @@ public System.String GetGUIDByIdentifier(
 	var identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(identifier_);
     try
     {
-        	var result = teklaObject.GetGUIDByIdentifier(identifier);
+        	var result = (System.String) teklaObject.GetGUIDByIdentifier(identifier);
 
         	return result;
     }
@@ -201,7 +201,7 @@ public System.Boolean CommitChanges()
 
     try
     {
-        	var result = teklaObject.CommitChanges();
+        	var result = (System.Boolean) teklaObject.CommitChanges();
 
         	return result;
     }
@@ -220,7 +220,7 @@ public System.Boolean CommitChanges(
 	
     try
     {
-        	var result = teklaObject.CommitChanges(Message);
+        	var result = (System.Boolean) teklaObject.CommitChanges(Message);
 
         	return result;
     }

@@ -134,7 +134,7 @@ public System.Boolean SetPrimaryObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.SetPrimaryObject(M);
+        	var result = (System.Boolean) teklaObject.SetPrimaryObject(M);
 
         	return result;
     }
@@ -171,7 +171,7 @@ public System.Boolean SetSecondaryObject(
 	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
     try
     {
-        	var result = teklaObject.SetSecondaryObject(M);
+        	var result = (System.Boolean) teklaObject.SetSecondaryObject(M);
 
         	return result;
     }
@@ -190,7 +190,7 @@ public System.Boolean SetSecondaryObjects(
 	var Secondaries = ArrayListConverter.ToTSObjects(Secondaries_);
     try
     {
-        	var result = teklaObject.SetSecondaryObjects(Secondaries);
+        	var result = (System.Boolean) teklaObject.SetSecondaryObjects(Secondaries);
 
         	return result;
     }

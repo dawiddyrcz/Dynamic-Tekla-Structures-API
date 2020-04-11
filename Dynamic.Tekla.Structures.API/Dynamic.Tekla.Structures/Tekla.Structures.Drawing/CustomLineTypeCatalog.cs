@@ -44,7 +44,7 @@ public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType> Get()
 {
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get");
-	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType>>(result);
+	var _result = ListConverter.FromTSObjects(result);
 	return _result;
 }
 

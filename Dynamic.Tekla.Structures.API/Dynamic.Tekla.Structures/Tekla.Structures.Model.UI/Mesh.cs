@@ -77,7 +77,7 @@ public System.Int32 AddPoint(
 	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
     try
     {
-        	var result = teklaObject.AddPoint(Point);
+        	var result = (System.Int32) teklaObject.AddPoint(Point);
 
         	return result;
     }

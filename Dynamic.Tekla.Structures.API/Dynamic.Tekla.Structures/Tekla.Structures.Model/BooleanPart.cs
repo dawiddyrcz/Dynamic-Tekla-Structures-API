@@ -75,7 +75,7 @@ public System.Boolean SetOperativePart(
 	var Part = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part_);
     try
     {
-        	var result = teklaObject.SetOperativePart(Part);
+        	var result = (System.Boolean) teklaObject.SetOperativePart(Part);
 
         	return result;
     }

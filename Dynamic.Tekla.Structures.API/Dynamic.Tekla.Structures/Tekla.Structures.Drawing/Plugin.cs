@@ -74,7 +74,7 @@ public System.Boolean ApplyStandardValues(
 	
     try
     {
-        	var result = teklaObject.ApplyStandardValues(Filename);
+        	var result = (System.Boolean) teklaObject.ApplyStandardValues(Filename);
 
         	return result;
     }
@@ -93,7 +93,7 @@ public System.Boolean LoadStandardValues(
 	
     try
     {
-        	var result = teklaObject.LoadStandardValues(Filename);
+        	var result = (System.Boolean) teklaObject.LoadStandardValues(Filename);
 
         	return result;
     }
@@ -114,7 +114,7 @@ public System.Boolean TrySetAttribute(
 	
     try
     {
-        	var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
+        	var result = (System.Boolean) teklaObject.TrySetAttribute(FieldName, fieldValue);
 
         	return result;
     }
@@ -135,7 +135,7 @@ public System.Boolean TrySetAttribute(
 	
     try
     {
-        	var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
+        	var result = (System.Boolean) teklaObject.TrySetAttribute(FieldName, fieldValue);
 
         	return result;
     }
@@ -156,7 +156,7 @@ public System.Boolean TrySetAttribute(
 	
     try
     {
-        	var result = teklaObject.TrySetAttribute(FieldName, fieldValue);
+        	var result = (System.Boolean) teklaObject.TrySetAttribute(FieldName, fieldValue);
 
         	return result;
     }
@@ -240,7 +240,7 @@ public System.Boolean TryGetAttribute(
 	
     try
     {
-        	var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+        	var result = (System.Boolean) teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 	
         	return result;
     }
@@ -259,7 +259,7 @@ public System.Int32 GetIntAttribute(
 	
     try
     {
-        	var result = teklaObject.GetIntAttribute(FieldName);
+        	var result = (System.Int32) teklaObject.GetIntAttribute(FieldName);
 
         	return result;
     }
@@ -280,7 +280,7 @@ public System.Boolean TryGetAttribute(
 	
     try
     {
-        	var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+        	var result = (System.Boolean) teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 	
         	return result;
     }
@@ -299,7 +299,7 @@ public System.Double GetDoubleAttribute(
 	
     try
     {
-        	var result = teklaObject.GetDoubleAttribute(FieldName);
+        	var result = (System.Double) teklaObject.GetDoubleAttribute(FieldName);
 
         	return result;
     }
@@ -320,7 +320,7 @@ public System.Boolean TryGetAttribute(
 	
     try
     {
-        	var result = teklaObject.TryGetAttribute(FieldName, ref FieldValue);
+        	var result = (System.Boolean) teklaObject.TryGetAttribute(FieldName, ref FieldValue);
 	
         	return result;
     }
@@ -339,7 +339,7 @@ public System.String GetStringAttribute(
 	
     try
     {
-        	var result = teklaObject.GetStringAttribute(FieldName);
+        	var result = (System.String) teklaObject.GetStringAttribute(FieldName);
 
         	return result;
     }

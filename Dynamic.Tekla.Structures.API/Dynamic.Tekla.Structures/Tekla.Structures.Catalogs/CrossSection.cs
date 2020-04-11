@@ -136,15 +136,26 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Catalogs.CrossSection", args);
 		}
 
-		public System.Boolean Select(System.Double Location, System.Double Length)
-		{
-			try {
-			var result = teklaObject.Select(Location, Length);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
+
+public System.Boolean Select(
+	System.Double Location,
+	System.Double Length
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.Select(Location, Length);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
+
 
 
 

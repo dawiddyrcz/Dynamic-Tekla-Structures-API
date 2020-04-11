@@ -76,25 +76,32 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public static System.Boolean Connect()
-		{
-			var parameters = new object[0];
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect", parameters);
-			return result;
-		}
 
-		public static void Disconnect()
-		{
-			var parameters = new object[0];
-			TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Disconnect", parameters);
-		}
+public static System.Boolean Connect()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect");
+	return result;
+}
 
-		public static void ExecuteScript(System.String script)
-		{
-			var parameters = new object[1];
-			parameters[0] = script;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "ExecuteScript", parameters);
-		}
+
+
+public static void Disconnect()
+{
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Disconnect");
+
+}
+
+
+
+public static void ExecuteScript(
+	System.String script
+	)
+{
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "ExecuteScript", script);
+
+}
+
 
 
 

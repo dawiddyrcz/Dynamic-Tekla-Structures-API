@@ -103,25 +103,43 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.HierarchicObject", args);
 		}
 
-		public System.Boolean AddObjects(System.Collections.ArrayList Objects)
-		{
-			try {
-			var result = teklaObject.AddObjects(TSActivator.ConvertToTSArrayList(Objects));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddObjects()", ex); }
-		}
 
-		public System.Boolean RemoveObjects(System.Collections.ArrayList Objects)
-		{
-			try {
-			var result = teklaObject.RemoveObjects(TSActivator.ConvertToTSArrayList(Objects));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveObjects()", ex); }
-		}
+public System.Boolean AddObjects(
+	System.Collections.ArrayList Objects_
+	)
+{
+	var Objects = ArrayListConverter.ToTSObjects(Objects_);
+    try
+    {
+        	var result = teklaObject.AddObjects(Objects);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddObjects), ex);
+    }
+}
+
+
+
+public System.Boolean RemoveObjects(
+	System.Collections.ArrayList Objects_
+	)
+{
+	var Objects = ArrayListConverter.ToTSObjects(Objects_);
+    try
+    {
+        	var result = teklaObject.RemoveObjects(Objects);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveObjects), ex);
+    }
+}
+
 
 
 

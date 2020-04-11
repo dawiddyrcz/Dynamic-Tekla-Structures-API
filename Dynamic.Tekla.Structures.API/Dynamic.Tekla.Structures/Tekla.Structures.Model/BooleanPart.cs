@@ -67,15 +67,24 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean SetOperativePart(Dynamic.Tekla.Structures.Model.Part Part)
-		{
-			try {
-			var result = teklaObject.SetOperativePart(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetOperativePart()", ex); }
-		}
+
+public System.Boolean SetOperativePart(
+	Dynamic.Tekla.Structures.Model.Part Part_
+	)
+{
+	var Part = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part_);
+    try
+    {
+        	var result = teklaObject.SetOperativePart(Part);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetOperativePart), ex);
+    }
+}
+
 
 
 

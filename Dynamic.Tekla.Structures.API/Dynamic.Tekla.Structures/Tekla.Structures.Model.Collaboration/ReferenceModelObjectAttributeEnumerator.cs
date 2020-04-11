@@ -40,24 +40,39 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttributeEnumerator", args);
 		}
 
-		public System.Boolean MoveNext()
-		{
-			try {
-			var result = teklaObject.MoveNext();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()", ex); }
-		}
 
-		public void Reset()
-		{
-			try {
-			teklaObject.Reset();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Reset()", ex); }
-		}
+public System.Boolean MoveNext()
+{
+
+    try
+    {
+        	var result = teklaObject.MoveNext();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
+    }
+}
+
+
+
+public void Reset()
+{
+
+    try
+    {
+        	teklaObject.Reset();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
+    }
+}
+
 
 
 

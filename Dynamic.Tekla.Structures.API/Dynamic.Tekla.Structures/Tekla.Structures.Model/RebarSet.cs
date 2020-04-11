@@ -97,32 +97,59 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetRebarSetAdditions()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetRebarSetAdditions());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarSetAdditions()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetRebarModifiers()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetRebarModifiers());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarModifiers()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetRebarSetAdditions()
+{
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetReinforcements());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReinforcements()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetRebarSetAdditions();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarSetAdditions), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetRebarModifiers()
+{
+
+    try
+    {
+        	var result = teklaObject.GetRebarModifiers();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarModifiers), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
+{
+
+    try
+    {
+        	var result = teklaObject.GetReinforcements();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReinforcements), ex);
+    }
+}
+
 
 
 

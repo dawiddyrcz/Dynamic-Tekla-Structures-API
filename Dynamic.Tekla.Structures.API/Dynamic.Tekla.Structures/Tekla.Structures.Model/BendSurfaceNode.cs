@@ -46,14 +46,24 @@ namespace Dynamic.Tekla.Structures.Model
         internal dynamic teklaObject;
 
 
-		public void AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor)
-		{
-			try {
-			teklaObject.AcceptVisitor(Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AcceptVisitor()", ex); }
-		}
+
+public void AcceptVisitor(
+	Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor_
+	)
+{
+	var visitor = Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor_);
+    try
+    {
+        	teklaObject.AcceptVisitor(visitor);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AcceptVisitor), ex);
+    }
+}
+
 
 
 

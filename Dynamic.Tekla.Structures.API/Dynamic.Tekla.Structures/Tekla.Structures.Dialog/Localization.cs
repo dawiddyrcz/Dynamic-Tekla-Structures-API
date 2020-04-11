@@ -62,96 +62,199 @@ namespace Dynamic.Tekla.Structures.Dialog
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.Localization", args);
 		}
 
-		public void LoadFile(System.String fileName)
-		{
-			try {
-			teklaObject.LoadFile(fileName);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadFile()", ex); }
-		}
 
-		public void LoadAidFile(System.String fileName)
-		{
-			try {
-			teklaObject.LoadAidFile(fileName);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAidFile()", ex); }
-		}
+public void LoadFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	teklaObject.LoadFile(fileName);
 
-		public void LoadAilFile(System.String fileName)
-		{
-			try {
-			teklaObject.LoadAilFile(fileName);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadAilFile()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadFile), ex);
+    }
+}
 
-		public void LoadXMLFile(System.String fileName)
-		{
-			try {
-			teklaObject.LoadXMLFile(fileName);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadXMLFile()", ex); }
-		}
 
-		public void RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb,  params System.Type[] types)
-		{
-			try {
-			teklaObject.RegisterLocalizationCallback(Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb), types);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RegisterLocalizationCallback()", ex); }
-		}
 
-		public void LocalizeToolTip(System.Windows.Forms.Control control, System.Windows.Forms.ToolTip toolTip)
-		{
-			try {
-			teklaObject.LocalizeToolTip(control, toolTip);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LocalizeToolTip()", ex); }
-		}
+public void LoadAidFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	teklaObject.LoadAidFile(fileName);
 
-		public void Localize(System.Windows.Forms.MenuItem menuItem)
-		{
-			try {
-			teklaObject.Localize(menuItem);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadAidFile), ex);
+    }
+}
 
-		public void Localize(System.Windows.Forms.Control control)
-		{
-			try {
-			teklaObject.Localize(control);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()", ex); }
-		}
 
-		public void Localize(System.Configuration.ApplicationSettingsBase applicationSettings)
-		{
-			try {
-			teklaObject.Localize(applicationSettings);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()", ex); }
-		}
 
-		public System.String GetText(System.String name)
-		{
-			try {
-			var result = teklaObject.GetText(name);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetText()", ex); }
-		}
+public void LoadAilFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	teklaObject.LoadAilFile(fileName);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadAilFile), ex);
+    }
+}
+
+
+
+public void LoadXMLFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	teklaObject.LoadXMLFile(fileName);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadXMLFile), ex);
+    }
+}
+
+
+
+public void RegisterLocalizationCallback(
+	Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb_,
+	System.Type[] types_
+	)
+{
+	var cb = Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb_);
+	var types = IEnumerableConverter.ToTSObjects<System.Type[]>(types_);
+    try
+    {
+        	teklaObject.RegisterLocalizationCallback(cb, types);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RegisterLocalizationCallback), ex);
+    }
+}
+
+
+
+public void LocalizeToolTip(
+	System.Windows.Forms.Control control_,
+	System.Windows.Forms.ToolTip toolTip_
+	)
+{
+	var control = ObjectConverter.ToTSObject(control_);
+	var toolTip = ObjectConverter.ToTSObject(toolTip_);
+    try
+    {
+        	teklaObject.LocalizeToolTip(control, toolTip);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LocalizeToolTip), ex);
+    }
+}
+
+
+
+public void Localize(
+	System.Windows.Forms.MenuItem menuItem_
+	)
+{
+	var menuItem = ObjectConverter.ToTSObject(menuItem_);
+    try
+    {
+        	teklaObject.Localize(menuItem);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Localize), ex);
+    }
+}
+
+
+
+public void Localize(
+	System.Windows.Forms.Control control_
+	)
+{
+	var control = ObjectConverter.ToTSObject(control_);
+    try
+    {
+        	teklaObject.Localize(control);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Localize), ex);
+    }
+}
+
+
+
+public void Localize(
+	System.Configuration.ApplicationSettingsBase applicationSettings_
+	)
+{
+	var applicationSettings = ObjectConverter.ToTSObject(applicationSettings_);
+    try
+    {
+        	teklaObject.Localize(applicationSettings);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Localize), ex);
+    }
+}
+
+
+
+public System.String GetText(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetText(name);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetText), ex);
+    }
+}
+
 
 
 
@@ -177,23 +280,45 @@ namespace Dynamic.Tekla.Structures.Dialog
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.Localization.LocalizationCallback", args);
 		}
 
-		public void Invoke(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			try {
-			teklaObject.Invoke(Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization), obj);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()", ex); }
-		}
 
-		public void EndInvoke(System.IAsyncResult resultt)
-		{
-			try {
-			teklaObject.EndInvoke(resultt);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()", ex); }
-		}
+public void Invoke(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+    try
+    {
+        	teklaObject.Invoke(localization, obj);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
+    }
+}
+
+
+
+public void EndInvoke(
+	System.IAsyncResult result_
+	)
+{
+	var result = ObjectConverter.ToTSObject(result_);
+    try
+    {
+        	teklaObject.EndInvoke(result);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
+    }
+}
+
 
 
 
@@ -269,37 +394,57 @@ namespace Dynamic.Tekla.Structures.Dialog
 			this.teklaObject = tsObject;
 		}
 
-		public static void LocalizeListControl(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization);
-			parameters[1] = obj;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeListControl", parameters);
-		}
 
-		public static void LocalizeDataGridView(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization);
-			parameters[1] = obj;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeDataGridView", parameters);
-		}
+public static void LocalizeListControl(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeListControl", localization, obj);
 
-		public static void LocalizeToolStrip(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization);
-			parameters[1] = obj;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeToolStrip", parameters);
-		}
+}
 
-		public static void LocalizeImageListComboBox(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization);
-			parameters[1] = obj;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeImageListComboBox", parameters);
-		}
+
+
+public static void LocalizeDataGridView(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeDataGridView", localization, obj);
+
+}
+
+
+
+public static void LocalizeToolStrip(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeToolStrip", localization, obj);
+
+}
+
+
+
+public static void LocalizeImageListComboBox(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.Localization.Util", "LocalizeImageListComboBox", localization, obj);
+
+}
+
 
 
 
@@ -324,14 +469,26 @@ namespace Dynamic.Tekla.Structures.Dialog
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.Localization.Util.PropertyLocalizer", args);
 		}
 
-		public void Localize(Dynamic.Tekla.Structures.Dialog.Localization localization, System.Object obj)
-		{
-			try {
-			teklaObject.Localize(Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization), obj);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Localize()", ex); }
-		}
+
+public void Localize(
+	Dynamic.Tekla.Structures.Dialog.Localization localization_,
+	System.Object obj
+	)
+{
+	var localization = Dynamic.Tekla.Structures.Dialog.Localization_.GetTSObject(localization_);
+	
+    try
+    {
+        	teklaObject.Localize(localization, obj);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Localize), ex);
+    }
+}
+
 
 
 

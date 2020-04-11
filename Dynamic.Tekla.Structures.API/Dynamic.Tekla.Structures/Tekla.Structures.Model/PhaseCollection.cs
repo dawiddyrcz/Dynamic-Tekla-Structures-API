@@ -58,14 +58,26 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public void CopyTo(System.Array Array, System.Int32 Index)
-		{
-			try {
-			teklaObject.CopyTo(Array, Index);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()", ex); }
-		}
+
+public void CopyTo(
+	System.Array Array_,
+	System.Int32 Index
+	)
+{
+	var Array = IEnumerableConverter.ToTSObjects<System.Array>(Array_);
+	
+    try
+    {
+        	teklaObject.CopyTo(Array, Index);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CopyTo), ex);
+    }
+}
+
 
 
         public System.Collections.IEnumerator GetEnumerator()

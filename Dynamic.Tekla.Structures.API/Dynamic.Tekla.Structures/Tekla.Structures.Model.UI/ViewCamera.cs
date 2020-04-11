@@ -133,25 +133,39 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Select()
-		{
-			try {
-			var result = teklaObject.Select();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
 
-		public System.Boolean Modify()
-		{
-			try {
-			var result = teklaObject.Modify();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()", ex); }
-		}
+public System.Boolean Select()
+{
+
+    try
+    {
+        	var result = teklaObject.Select();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
+
+
+
+public System.Boolean Modify()
+{
+
+    try
+    {
+        	var result = teklaObject.Modify();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
+    }
+}
+
 
 
 

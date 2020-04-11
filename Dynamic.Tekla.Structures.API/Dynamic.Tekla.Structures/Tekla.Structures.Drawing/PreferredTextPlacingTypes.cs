@@ -16,47 +16,59 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "PointPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "LeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "PointPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "AlongLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLineWithArrowAtStartPointPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLineWithArrowAtStartPointPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "LeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLineWithArrowAtEndPointPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLineWithArrowAtEndPointPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "AlongLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLineWithArrowAtStartPointPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLineWithArrowAtStartPointPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase BaseLineWithArrowAtEndPointPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredTextPlacingTypes", "BaseLineWithArrowAtEndPointPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

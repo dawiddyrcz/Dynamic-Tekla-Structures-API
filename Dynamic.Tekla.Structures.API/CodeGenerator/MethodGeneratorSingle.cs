@@ -35,16 +35,13 @@ namespace CodeGenerator
 public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 {{
 {parametersConvertersToTS}
-
 {methodCall}
-
 {parametersConvertersFromTS}
-
 {result}
 }}
 ";
 
-            return methodCode;
+            return methodCode.Replace(System.Environment.NewLine + System.Environment.NewLine, System.Environment.NewLine);
         }
         
         private static List<MethodParameter> GetMethodParameters(MethodInfo methodInfo)
@@ -112,8 +109,11 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             
             if (methodInfo.IsStatic)
             {
-                sb.Append("MethodInvoker.InvokeStaticMethod(teklaObject.GetType(), \"")
-                .Append(methodInfo.Name).Append("\", ");
+                sb.Append("MethodInvoker.InvokeStaticMethod(\"").Append("$typeFullName").Append("\", \"")
+                .Append(methodInfo.Name).Append("\"");
+
+                if (parameters.Count > 0)
+                    sb.Append(", ");
             }
             else
             {
@@ -164,21 +164,26 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
         private static string GetResult(MethodInfo methodInfo)
         {
-            if (IsVoid(methodInfo)) return string.Empty;
 
             var sb = new StringBuilder(200);
-            var type = methodInfo.ReturnType;
+            if (!IsVoid(methodInfo))
+            {
 
-            if (Converters.HaveToBeConverted(type))
-            {
-                sb.Append("\t").AppendLine(Converters.FromTSObjects(type, "result", "_result"));
-                sb.Append("\t").Append("return _result;");
+
+
+                var type = methodInfo.ReturnType;
+
+                if (Converters.HaveToBeConverted(type))
+                {
+                    sb.Append("\t").AppendLine(Converters.FromTSObjects(type, "result", "var _result"));
+                    sb.Append("\t").Append("return _result;");
+                }
+                else
+                {
+                    sb.Append("\t").Append("return result;");
+                }
             }
-            else
-            {
-                sb.Append("\t").Append("return result;");
-            }
-            
+
             if (!methodInfo.IsStatic)
             {
                 return $@"

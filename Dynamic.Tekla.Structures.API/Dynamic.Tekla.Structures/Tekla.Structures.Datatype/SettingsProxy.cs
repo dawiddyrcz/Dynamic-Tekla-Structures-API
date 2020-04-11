@@ -25,34 +25,66 @@ namespace Dynamic.Tekla.Structures.Datatype
 			this.teklaObject = tsObject;
 		}
 
-		public System.Object GetValue(System.String name)
-		{
-			try {
-			var result = teklaObject.GetValue(name);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetValue()", ex); }
-		}
 
-		public System.Boolean TryGetValue(System.String name, out System.Object obj)
-		{
-			try {
-			var result = teklaObject.TryGetValue(name, out obj);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("TryGetValue()", ex); }
-		}
+public System.Object GetValue(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetValue(name);
 
-		public void SetValue(System.String name, System.Object value)
-		{
-			try {
-			teklaObject.SetValue(name, value);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetValue()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetValue), ex);
+    }
+}
+
+
+
+public System.Boolean TryGetValue(
+	System.String name,
+	ref System.Object obj
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.TryGetValue(name, ref obj);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(TryGetValue), ex);
+    }
+}
+
+
+
+public void SetValue(
+	System.String name,
+	System.Object value
+	)
+{
+	
+	
+    try
+    {
+        	teklaObject.SetValue(name, value);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetValue), ex);
+    }
+}
+
 
 
 

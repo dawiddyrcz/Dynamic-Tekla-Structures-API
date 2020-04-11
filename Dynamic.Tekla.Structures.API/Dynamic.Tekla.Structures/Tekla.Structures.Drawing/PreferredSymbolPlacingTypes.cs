@@ -16,26 +16,32 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "PointPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "LeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "PointPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "AlongLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "LeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredSymbolPlacingTypes", "AlongLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

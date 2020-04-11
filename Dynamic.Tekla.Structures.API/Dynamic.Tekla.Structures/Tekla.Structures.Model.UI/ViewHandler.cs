@@ -25,96 +25,126 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			this.teklaObject = tsObject;
 		}
 
-		public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetAllViews()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetAllViews", parameters);
-			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetVisibleViews()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetVisibleViews", parameters);
-			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetAllViews()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetAllViews");
+	var _result = Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetPermanentViews()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetPermanentViews", parameters);
-			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetTemporaryViews()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetTemporaryViews", parameters);
-			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetSelectedViews()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetSelectedViews", parameters);
-			return Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetVisibleViews()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetVisibleViews");
+	var _result = Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
+	return _result;
+}
 
-		public static System.Boolean ShowView(Dynamic.Tekla.Structures.Model.UI.View view)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", parameters);
-			return result;
-		}
 
-		public static System.Boolean HideView(Dynamic.Tekla.Structures.Model.UI.View view)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", parameters);
-			return result;
-		}
 
-		public static System.Boolean RedrawView(Dynamic.Tekla.Structures.Model.UI.View view)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", parameters);
-			return result;
-		}
+public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetPermanentViews()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetPermanentViews");
+	var _result = Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
+	return _result;
+}
 
-		public static System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Model.UI.View view, Dynamic.Tekla.Structures.Geometry3d.AABB B)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
-			return result;
-		}
 
-		public static System.Boolean ZoomToBoundingBox(Dynamic.Tekla.Structures.Geometry3d.AABB box)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", parameters);
-			return result;
-		}
 
-		public static System.Boolean SetRepresentation(System.String Representation)
-		{
-			var parameters = new object[1];
-			parameters[0] = Representation;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", parameters);
-			return result;
-		}
+public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetTemporaryViews()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetTemporaryViews");
+	var _result = Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
+	return _result;
+}
 
-		public static System.Boolean RedrawWorkplane()
-		{
-			var parameters = new object[0];
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane", parameters);
-			return result;
-		}
+
+
+public static Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator GetSelectedViews()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "GetSelectedViews");
+	var _result = Dynamic.Tekla.Structures.Model.UI.ModelViewEnumerator_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static System.Boolean ShowView(
+	Dynamic.Tekla.Structures.Model.UI.View view_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ShowView", view);
+	return result;
+}
+
+
+
+public static System.Boolean HideView(
+	Dynamic.Tekla.Structures.Model.UI.View view_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "HideView", view);
+	return result;
+}
+
+
+
+public static System.Boolean RedrawView(
+	Dynamic.Tekla.Structures.Model.UI.View view_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawView", view);
+	return result;
+}
+
+
+
+public static System.Boolean ZoomToBoundingBox(
+	Dynamic.Tekla.Structures.Model.UI.View view_,
+	Dynamic.Tekla.Structures.Geometry3d.AABB B_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(view_);
+	var B = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(B_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", view, B);
+	return result;
+}
+
+
+
+public static System.Boolean ZoomToBoundingBox(
+	Dynamic.Tekla.Structures.Geometry3d.AABB box_
+	)
+{
+	var box = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(box_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "ZoomToBoundingBox", box);
+	return result;
+}
+
+
+
+public static System.Boolean SetRepresentation(
+	System.String Representation
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "SetRepresentation", Representation);
+	return result;
+}
+
+
+
+public static System.Boolean RedrawWorkplane()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.UI.ViewHandler", "RedrawWorkplane");
+	return result;
+}
+
 
 
 

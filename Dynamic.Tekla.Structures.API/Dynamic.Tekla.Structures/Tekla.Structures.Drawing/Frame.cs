@@ -65,43 +65,77 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.Frame", args);
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox GetAxisAlignedBoundingBox()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(teklaObject.GetAxisAlignedBoundingBox());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAxisAlignedBoundingBox()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox GetObjectAlignedBoundingBox()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(teklaObject.GetObjectAlignedBoundingBox());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetObjectAlignedBoundingBox()", ex); }
-		}
+public Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox GetAxisAlignedBoundingBox()
+{
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			try {
-			var result = teklaObject.IsEqual(ObjectToCompare);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetAxisAlignedBoundingBox();
 
-		public System.Object Clone()
-		{
-			try {
-			var result = teklaObject.Clone();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAxisAlignedBoundingBox), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox GetObjectAlignedBoundingBox()
+{
+
+    try
+    {
+        	var result = teklaObject.GetObjectAlignedBoundingBox();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectAlignedBoundingBox), ex);
+    }
+}
+
+
+
+public System.Boolean IsEqual(
+	System.Object ObjectToCompare
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.IsEqual(ObjectToCompare);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+    }
+}
+
+
+
+public System.Object Clone()
+{
+
+    try
+    {
+        	var result = teklaObject.Clone();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+    }
+}
+
 
 
 

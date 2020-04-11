@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NotGenerated\MethodInvoker.cs" />
     <Compile Include="NotGenerated\DrawingEvents.cs" />
     <Compile Include="NotGenerated\DrawingUIEvents.cs" />
     <Compile Include="NotGenerated\DynamicAPITeklaNotRunningException.cs" />

@@ -16,82 +16,104 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "PointPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PointPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "PointPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLineOrWithLeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLineOrWithLeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLineOrWithLeaderLineAndParentObjectAlongPartPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLineOrWithLeaderLineAndParentObjectAlongPartPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongPartCenteredPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongPartCenteredPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartAlongPartPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartAlongPartPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartAlongPartOrWithLeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartAlongPartOrWithLeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartHorizontalPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartHorizontalPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLineOrWithLeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLineOrWithLeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartHorizontalOrWithLeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartHorizontalOrWithLeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "LeaderLinePlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLineAndParentObjectAlongPartPlacingType()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "LeaderLineAndParentObjectAlongPartPlacingType", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongLineOrWithLeaderLineAndParentObjectAlongPartPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongLineOrWithLeaderLineAndParentObjectAlongPartPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase AlongPartCenteredPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "AlongPartCenteredPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartAlongPartPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartAlongPartPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartAlongPartOrWithLeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartAlongPartOrWithLeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartHorizontalPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartHorizontalPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase InsidePartHorizontalOrWithLeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "InsidePartHorizontalOrWithLeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLinePlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "LeaderLinePlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase LeaderLineAndParentObjectAlongPartPlacingType()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PreferredMarkPlacingTypes", "LeaderLineAndParentObjectAlongPartPlacingType");
+	var _result = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

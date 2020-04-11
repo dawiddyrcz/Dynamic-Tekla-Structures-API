@@ -97,14 +97,23 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.RebarSet GetRebarSet()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.GetRebarSet());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarSet()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Model.RebarSet GetRebarSet()
+{
+
+    try
+    {
+        	var result = teklaObject.GetRebarSet();
+
+        	var _result = Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarSet), ex);
+    }
+}
+
 
 
 

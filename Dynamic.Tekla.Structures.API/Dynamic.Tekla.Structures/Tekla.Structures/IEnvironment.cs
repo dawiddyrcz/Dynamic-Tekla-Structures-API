@@ -207,14 +207,24 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void LoadLocalizationFile(System.String fileName)
-		{
-			try {
-			teklaObject.LoadLocalizationFile(fileName);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("LoadLocalizationFile()", ex); }
-		}
+
+public void LoadLocalizationFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	teklaObject.LoadLocalizationFile(fileName);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadLocalizationFile), ex);
+    }
+}
+
 
 
 

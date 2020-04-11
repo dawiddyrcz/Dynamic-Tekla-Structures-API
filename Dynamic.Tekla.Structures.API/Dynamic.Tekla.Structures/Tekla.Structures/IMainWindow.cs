@@ -40,32 +40,60 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void Activate()
-		{
-			try {
-			teklaObject.Activate();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Activate()", ex); }
-		}
 
-		public void AttachChildForm(System.Windows.Forms.Form form)
-		{
-			try {
-			teklaObject.AttachChildForm(form);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AttachChildForm()", ex); }
-		}
+public void Activate()
+{
 
-		public void DetachChildForm(System.Windows.Forms.Form form)
-		{
-			try {
-			teklaObject.DetachChildForm(form);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("DetachChildForm()", ex); }
-		}
+    try
+    {
+        	teklaObject.Activate();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Activate), ex);
+    }
+}
+
+
+
+public void AttachChildForm(
+	System.Windows.Forms.Form form_
+	)
+{
+	var form = ObjectConverter.ToTSObject(form_);
+    try
+    {
+        	teklaObject.AttachChildForm(form);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AttachChildForm), ex);
+    }
+}
+
+
+
+public void DetachChildForm(
+	System.Windows.Forms.Form form_
+	)
+{
+	var form = ObjectConverter.ToTSObject(form_);
+    try
+    {
+        	teklaObject.DetachChildForm(form);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DetachChildForm), ex);
+    }
+}
+
 
 
 

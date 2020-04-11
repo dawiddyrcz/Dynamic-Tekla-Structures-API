@@ -109,45 +109,87 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Select(System.String name, System.Int32 number)
-		{
-			try {
-			var result = teklaObject.Select(name, number);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
 
-		public System.Boolean Select(System.String name, System.Int32 number, Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum type)
-		{
-			try {
-			var result = teklaObject.Select(name, number, Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(type));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
+public System.Boolean Select(
+	System.String name,
+	System.Int32 number
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.Select(name, number);
 
-		public System.Boolean Export(ref System.String filename)
-		{
-			try {
-			var result = teklaObject.Export(ref filename);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
 
-		public System.Boolean GetVersion(ref System.Int32 version)
-		{
-			try {
-			var result = teklaObject.GetVersion(ref version);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVersion()", ex); }
-		}
+
+
+public System.Boolean Select(
+	System.String name,
+	System.Int32 number,
+	Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum type_
+	)
+{
+	
+	
+	var type = Dynamic.Tekla.Structures.Catalogs.ComponentItem.ComponentTypeEnum_.GetTSObject(type_);
+    try
+    {
+        	var result = teklaObject.Select(name, number, type);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
+
+
+
+public System.Boolean Export(
+	ref System.String filename
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Export(ref filename);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Export), ex);
+    }
+}
+
+
+
+public System.Boolean GetVersion(
+	ref System.Int32 version
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetVersion(ref version);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetVersion), ex);
+    }
+}
+
 
 
 

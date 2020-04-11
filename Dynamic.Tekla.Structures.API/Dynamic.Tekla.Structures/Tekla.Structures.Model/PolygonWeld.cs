@@ -43,15 +43,24 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean GetLogicalWeld(ref Dynamic.Tekla.Structures.Model.LogicalWeld LogicalWeld)
-		{
-			try {
-			var result = teklaObject.GetLogicalWeld(Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetLogicalWeld()", ex); }
-		}
+
+public System.Boolean GetLogicalWeld(
+	ref Dynamic.Tekla.Structures.Model.LogicalWeld LogicalWeld_
+	)
+{
+	var LogicalWeld = Dynamic.Tekla.Structures.Model.LogicalWeld_.GetTSObject(LogicalWeld_);
+    try
+    {
+        	var result = teklaObject.GetLogicalWeld(ref LogicalWeld);
+	LogicalWeld_ = Dynamic.Tekla.Structures.Model.LogicalWeld_.FromTSObject(LogicalWeld);
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLogicalWeld), ex);
+    }
+}
+
 
 
 

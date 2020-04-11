@@ -25,25 +25,43 @@ namespace Dynamic.Tekla.Structures.Model.Operations
 			this.teklaObject = tsObject;
 		}
 
-		public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
-		{
-			try {
-			var result = teklaObject.GetGuidMapping();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetGuidMapping()", ex); }
-		}
 
-		public System.Guid GetNewGuid(System.Guid oldGuid)
-		{
-			try {
-			var result = teklaObject.GetNewGuid(oldGuid);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNewGuid()", ex); }
-		}
+public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMapping()
+{
+
+    try
+    {
+        	var result = teklaObject.GetGuidMapping();
+
+        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.Dictionary<System.Guid, System.Guid>>(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetGuidMapping), ex);
+    }
+}
+
+
+
+public System.Guid GetNewGuid(
+	System.Guid oldGuid_
+	)
+{
+	var oldGuid = ObjectConverter.ToTSObject(oldGuid_);
+    try
+    {
+        	var result = teklaObject.GetNewGuid(oldGuid);
+
+        	var _result = ObjectConverter.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetNewGuid), ex);
+    }
+}
+
 
 
 

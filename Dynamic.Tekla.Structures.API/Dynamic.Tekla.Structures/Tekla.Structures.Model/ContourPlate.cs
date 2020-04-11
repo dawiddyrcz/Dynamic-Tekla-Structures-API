@@ -54,15 +54,24 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint contourPoint)
-		{
-			try {
-			var result = teklaObject.AddContourPoint(Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddContourPoint()", ex); }
-		}
+
+public System.Boolean AddContourPoint(
+	Dynamic.Tekla.Structures.Model.ContourPoint contourPoint_
+	)
+{
+	var contourPoint = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint_);
+    try
+    {
+        	var result = teklaObject.AddContourPoint(contourPoint);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddContourPoint), ex);
+    }
+}
+
 
 
 

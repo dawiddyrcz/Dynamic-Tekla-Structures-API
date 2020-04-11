@@ -25,241 +25,464 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean GetConnectionStatus()
-		{
-			try {
-			var result = teklaObject.GetConnectionStatus();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConnectionStatus()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetProfileItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(teklaObject.GetProfileItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetProfileItems()", ex); }
-		}
+public System.Boolean GetConnectionStatus()
+{
 
-		public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetLibraryProfileItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(teklaObject.GetLibraryProfileItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetLibraryProfileItems()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetConnectionStatus();
 
-		public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetParametricProfileItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(teklaObject.GetParametricProfileItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetParametricProfileItems()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetConnectionStatus), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Catalogs.RebarItemEnumerator GetRebarItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.RebarItemEnumerator_.FromTSObject(teklaObject.GetRebarItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRebarItems()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.MeshItemEnumerator GetMeshItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.MeshItemEnumerator_.FromTSObject(teklaObject.GetMeshItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetMeshItems()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.BoltItemEnumerator GetBoltItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.BoltItemEnumerator_.FromTSObject(teklaObject.GetBoltItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBoltItems()", ex); }
-		}
+public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetProfileItems()
+{
 
-		public Dynamic.Tekla.Structures.Catalogs.ShapeItemEnumerator GetShapeItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.ShapeItemEnumerator_.FromTSObject(teklaObject.GetShapeItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetShapeItems()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetProfileItems();
 
-		public Dynamic.Tekla.Structures.Catalogs.MaterialItemEnumerator GetMaterialItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.MaterialItemEnumerator_.FromTSObject(teklaObject.GetMaterialItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetMaterialItems()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetProfileItems), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItemEnumerator GetMaterialMarketSizes()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItemEnumerator_.FromTSObject(teklaObject.GetMaterialMarketSizes());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetMaterialMarketSizes()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.PrinterItemEnumerator GetPrinterItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.PrinterItemEnumerator_.FromTSObject(teklaObject.GetPrinterItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPrinterItems()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.ComponentItemEnumerator GetComponentItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.ComponentItemEnumerator_.FromTSObject(teklaObject.GetComponentItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetComponentItems()", ex); }
-		}
+public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetLibraryProfileItems()
+{
 
-		public Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator GetUserPropertyItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator_.FromTSObject(teklaObject.GetUserPropertyItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserPropertyItems()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetLibraryProfileItems();
 
-		public Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator GetUserPropertyItems(Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum objectType)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator_.FromTSObject(teklaObject.GetUserPropertyItems(Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum_.GetTSObject(objectType)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserPropertyItems()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLibraryProfileItems), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Catalogs.DrawingItemEnumerator GetDrawingItems()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Catalogs.DrawingItemEnumerator_.FromTSObject(teklaObject.GetDrawingItems());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawingItems()", ex); }
-		}
 
-		public System.Boolean SaveProfileDatabase()
-		{
-			try {
-			var result = teklaObject.SaveProfileDatabase();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SaveProfileDatabase()", ex); }
-		}
 
-		public System.Boolean ImportLibraryProfileItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportLibraryProfileItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportLibraryProfileItems()", ex); }
-		}
+public Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator GetParametricProfileItems()
+{
 
-		public System.Boolean ImportParametricProfileItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportParametricProfileItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportParametricProfileItems()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetParametricProfileItems();
 
-		public System.Boolean ImportMaterialItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportMaterialItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportMaterialItems()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Catalogs.ProfileItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetParametricProfileItems), ex);
+    }
+}
 
-		public System.Boolean ImportCustomComponentItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportCustomComponentItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportCustomComponentItems()", ex); }
-		}
 
-		public System.Boolean ImportRebarItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportRebarItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportRebarItems()", ex); }
-		}
 
-		public System.Boolean ImportMeshItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportMeshItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportMeshItems()", ex); }
-		}
+public Dynamic.Tekla.Structures.Catalogs.RebarItemEnumerator GetRebarItems()
+{
 
-		public System.Boolean ImportBoltItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportBoltItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportBoltItems()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetRebarItems();
 
-		public System.Boolean ImportDrawingItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportDrawingItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportDrawingItems()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarItems), ex);
+    }
+}
 
-		public System.Boolean ImportShapeItems(System.String path)
-		{
-			try {
-			var result = teklaObject.ImportShapeItems(path);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ImportShapeItems()", ex); }
-		}
+
+
+public Dynamic.Tekla.Structures.Catalogs.MeshItemEnumerator GetMeshItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetMeshItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.MeshItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMeshItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.BoltItemEnumerator GetBoltItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetBoltItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.BoltItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetBoltItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.ShapeItemEnumerator GetShapeItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetShapeItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.ShapeItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetShapeItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.MaterialItemEnumerator GetMaterialItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetMaterialItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.MaterialItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMaterialItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItemEnumerator GetMaterialMarketSizes()
+{
+
+    try
+    {
+        	var result = teklaObject.GetMaterialMarketSizes();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.MaterialMarketSizesItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMaterialMarketSizes), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.PrinterItemEnumerator GetPrinterItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetPrinterItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.PrinterItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetPrinterItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.ComponentItemEnumerator GetComponentItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetComponentItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.ComponentItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponentItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator GetUserPropertyItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetUserPropertyItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetUserPropertyItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator GetUserPropertyItems(
+	Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum objectType_
+	)
+{
+	var objectType = Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum_.GetTSObject(objectType_);
+    try
+    {
+        	var result = teklaObject.GetUserPropertyItems(objectType);
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.UserPropertyItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetUserPropertyItems), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Catalogs.DrawingItemEnumerator GetDrawingItems()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDrawingItems();
+
+        	var _result = Dynamic.Tekla.Structures.Catalogs.DrawingItemEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDrawingItems), ex);
+    }
+}
+
+
+
+public System.Boolean SaveProfileDatabase()
+{
+
+    try
+    {
+        	var result = teklaObject.SaveProfileDatabase();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SaveProfileDatabase), ex);
+    }
+}
+
+
+
+public System.Boolean ImportLibraryProfileItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportLibraryProfileItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportLibraryProfileItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportParametricProfileItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportParametricProfileItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportParametricProfileItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportMaterialItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportMaterialItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportMaterialItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportCustomComponentItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportCustomComponentItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportCustomComponentItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportRebarItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportRebarItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportRebarItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportMeshItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportMeshItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportMeshItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportBoltItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportBoltItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportBoltItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportDrawingItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportDrawingItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportDrawingItems), ex);
+    }
+}
+
+
+
+public System.Boolean ImportShapeItems(
+	System.String path
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.ImportShapeItems(path);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ImportShapeItems), ex);
+    }
+}
+
 
 
 

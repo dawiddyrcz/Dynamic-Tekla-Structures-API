@@ -214,162 +214,319 @@ namespace Dynamic.Tekla.Structures.Model
         
 
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid(Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.Solid GetSolid()
+{
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates formingStates)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid(Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetSolid();
 
-		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAssembly()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+    }
+}
 
-		public System.String GetPartMark()
-		{
-			try {
-			var result = teklaObject.GetPartMark();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPartMark()", ex); }
-		}
 
-		public System.Collections.ArrayList GetCenterLine(System.Boolean withCutsFittings)
-		{
-			try {
-			var result = teklaObject.GetCenterLine(withCutsFittings);
-			return TSActivator.ConvertArrayList(result);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCenterLine()", ex); }
-		}
 
-		public System.Collections.ArrayList GetReferenceLine(System.Boolean withCutsFittings)
-		{
-			try {
-			var result = teklaObject.GetReferenceLine(withCutsFittings);
-			return TSActivator.ConvertArrayList(result);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceLine()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.Solid GetSolid(
+	Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum solidCreationType_
+	)
+{
+	var solidCreationType = Dynamic.Tekla.Structures.Model.Solid.SolidCreationTypeEnum_.GetTSObject(solidCreationType_);
+    try
+    {
+        	var result = teklaObject.GetSolid(solidCreationType);
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetComponents());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetComponents()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetBooleans());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBooleans()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetBolts());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetBolts()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetWelds());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWelds()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.Solid GetSolid(
+	Dynamic.Tekla.Structures.Forming.FormingStates formingStates_
+	)
+{
+	var formingStates = Dynamic.Tekla.Structures.Forming.FormingStates_.GetTSObject(formingStates_);
+    try
+    {
+        	var result = teklaObject.GetSolid(formingStates);
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetReinforcements());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReinforcements()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetSurfaceTreatments());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSurfaceTreatments()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetSurfaceObjects());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSurfaceObjects()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetPours());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPours()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+{
 
-		public System.Boolean CompareTo(Dynamic.Tekla.Structures.Model.Part partToCompare)
-		{
-			try {
-			var result = teklaObject.CompareTo(Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetAssembly();
 
-		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetDSTVCoordinateSystem());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDSTVCoordinateSystem()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
+    }
+}
+
+
+
+public System.String GetPartMark()
+{
+
+    try
+    {
+        	var result = teklaObject.GetPartMark();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetPartMark), ex);
+    }
+}
+
+
+
+public System.Collections.ArrayList GetCenterLine(
+	System.Boolean withCutsFittings
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetCenterLine(withCutsFittings);
+
+        	var _result = ArrayListConverter.FromTSObjects(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCenterLine), ex);
+    }
+}
+
+
+
+public System.Collections.ArrayList GetReferenceLine(
+	System.Boolean withCutsFittings
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetReferenceLine(withCutsFittings);
+
+        	var _result = ArrayListConverter.FromTSObjects(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReferenceLine), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
+{
+
+    try
+    {
+        	var result = teklaObject.GetComponents();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponents), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBooleans()
+{
+
+    try
+    {
+        	var result = teklaObject.GetBooleans();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetBooleans), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetBolts()
+{
+
+    try
+    {
+        	var result = teklaObject.GetBolts();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetBolts), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetWelds()
+{
+
+    try
+    {
+        	var result = teklaObject.GetWelds();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetWelds), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
+{
+
+    try
+    {
+        	var result = teklaObject.GetReinforcements();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReinforcements), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceTreatments()
+{
+
+    try
+    {
+        	var result = teklaObject.GetSurfaceTreatments();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSurfaceTreatments), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSurfaceObjects()
+{
+
+    try
+    {
+        	var result = teklaObject.GetSurfaceObjects();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSurfaceObjects), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetPours()
+{
+
+    try
+    {
+        	var result = teklaObject.GetPours();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetPours), ex);
+    }
+}
+
+
+
+public System.Boolean CompareTo(
+	Dynamic.Tekla.Structures.Model.Part partToCompare_
+	)
+{
+	var partToCompare = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(partToCompare_);
+    try
+    {
+        	var result = teklaObject.CompareTo(partToCompare);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CompareTo), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetDSTVCoordinateSystem()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDSTVCoordinateSystem();
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDSTVCoordinateSystem), ex);
+    }
+}
+
 
 
 

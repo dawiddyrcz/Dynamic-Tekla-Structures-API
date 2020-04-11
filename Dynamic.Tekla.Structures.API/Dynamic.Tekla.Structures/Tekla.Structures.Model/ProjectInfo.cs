@@ -382,170 +382,309 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Modify()
-		{
-			try {
-			var result = teklaObject.Modify();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()", ex); }
-		}
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.String Value)
-		{
-			try {
-			var result = teklaObject.GetUserProperty(Name, ref Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()", ex); }
-		}
+public System.Boolean Modify()
+{
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Int32 Value)
-		{
-			try {
-			var result = teklaObject.GetUserProperty(Name, ref Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.Modify();
 
-		public System.Boolean GetUserProperty(System.String Name, ref System.Double Value)
-		{
-			try {
-			var result = teklaObject.GetUserProperty(Name, ref Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetUserProperty()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
+    }
+}
 
-		public System.Boolean SetUserProperty(System.String Name, System.String Value)
-		{
-			try {
-			var result = teklaObject.SetUserProperty(Name, Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()", ex); }
-		}
 
-		public System.Boolean SetUserProperty(System.String Name, System.Double Value)
-		{
-			try {
-			var result = teklaObject.SetUserProperty(Name, Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()", ex); }
-		}
 
-		public System.Boolean SetUserProperty(System.String Name, System.Int32 Value)
-		{
-			try {
-			var result = teklaObject.SetUserProperty(Name, Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetUserProperty()", ex); }
-		}
+public System.Boolean GetUserProperty(
+	System.String Name,
+	ref System.String Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetUserProperty(Name, ref Value);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetUserProperty), ex);
+    }
+}
 
-		public System.Boolean GetIntegerUserProperties(ref System.Collections.Hashtable Values)
-		{
-			try {
-			var result = teklaObject.GetIntegerUserProperties(ref Values);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetIntegerUserProperties()", ex); }
-		}
 
-		public System.Boolean GetDoubleUserProperties(ref System.Collections.Hashtable Values)
-		{
-			try {
-			var result = teklaObject.GetDoubleUserProperties(ref Values);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDoubleUserProperties()", ex); }
-		}
 
-		public System.Boolean GetStringUserProperties(ref System.Collections.Hashtable Values)
-		{
-			try {
-			var result = teklaObject.GetStringUserProperties(ref Values);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetStringUserProperties()", ex); }
-		}
+public System.Boolean GetUserProperty(
+	System.String Name,
+	ref System.Int32 Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetUserProperty(Name, ref Value);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetUserProperty), ex);
+    }
+}
 
-		public System.Boolean GetDynamicStringProperty(System.String Name, ref System.String Value)
-		{
-			try {
-			var result = teklaObject.GetDynamicStringProperty(Name, ref Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDynamicStringProperty()", ex); }
-		}
 
-		public System.Boolean SetDynamicStringProperty(System.String Name, System.String Value)
-		{
-			try {
-			var result = teklaObject.SetDynamicStringProperty(Name, Value);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetDynamicStringProperty()", ex); }
-		}
 
-		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
-		{
-			var parameters = new object[0];
-			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints", parameters);
-			return result;
-		}
+public System.Boolean GetUserProperty(
+	System.String Name,
+	ref System.Double Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetUserProperty(Name, ref Value);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetUserProperty), ex);
+    }
+}
 
-		public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(System.String name)
-		{
-			var parameters = new object[1];
-			parameters[0] = name;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByName", parameters);
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(System.Guid guid)
-		{
-			var parameters = new object[1];
-			parameters[0] = guid;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByGuid", parameters);
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetCurrentCoordsysBasePoint", parameters);
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
-		}
+public System.Boolean SetUserProperty(
+	System.String Name,
+	System.String Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.SetUserProperty(Name, Value);
 
-		public static System.Boolean SetCurrentCoordsysToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "SetCurrentCoordsysToBasePoint", parameters);
-			return result;
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetUserProperty), ex);
+    }
+}
 
-		public static Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetProjectBasePoint", parameters);
-			return Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
-		}
+
+
+public System.Boolean SetUserProperty(
+	System.String Name,
+	System.Double Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.SetUserProperty(Name, Value);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetUserProperty), ex);
+    }
+}
+
+
+
+public System.Boolean SetUserProperty(
+	System.String Name,
+	System.Int32 Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.SetUserProperty(Name, Value);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetUserProperty), ex);
+    }
+}
+
+
+
+public System.Boolean GetIntegerUserProperties(
+	ref System.Collections.Hashtable Values
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetIntegerUserProperties(ref Values);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetIntegerUserProperties), ex);
+    }
+}
+
+
+
+public System.Boolean GetDoubleUserProperties(
+	ref System.Collections.Hashtable Values
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetDoubleUserProperties(ref Values);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDoubleUserProperties), ex);
+    }
+}
+
+
+
+public System.Boolean GetStringUserProperties(
+	ref System.Collections.Hashtable Values
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetStringUserProperties(ref Values);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetStringUserProperties), ex);
+    }
+}
+
+
+
+public System.Boolean GetDynamicStringProperty(
+	System.String Name,
+	ref System.String Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetDynamicStringProperty(Name, ref Value);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDynamicStringProperty), ex);
+    }
+}
+
+
+
+public System.Boolean SetDynamicStringProperty(
+	System.String Name,
+	System.String Value
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.SetDynamicStringProperty(Name, Value);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetDynamicStringProperty), ex);
+    }
+}
+
+
+
+public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints");
+	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>>(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(
+	System.String name
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByName", name);
+	var _result = Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(
+	System.Guid guid_
+	)
+{
+	var guid = ObjectConverter.ToTSObject(guid_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByGuid", guid);
+	var _result = Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Model.BasePoint GetCurrentCoordsysBasePoint()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetCurrentCoordsysBasePoint");
+	var _result = Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static System.Boolean SetCurrentCoordsysToBasePoint(
+	Dynamic.Tekla.Structures.Model.BasePoint basePoint_
+	)
+{
+	var basePoint = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "SetCurrentCoordsysToBasePoint", basePoint);
+	return result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Model.BasePoint GetProjectBasePoint()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetProjectBasePoint");
+	var _result = Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

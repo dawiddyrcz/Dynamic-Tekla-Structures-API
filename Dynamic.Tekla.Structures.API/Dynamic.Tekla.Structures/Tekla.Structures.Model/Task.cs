@@ -265,50 +265,88 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.Task", args);
 		}
 
-		public System.Boolean AddObjectsToTask(System.Collections.ArrayList ModelObjects)
-		{
-			try {
-			var result = teklaObject.AddObjectsToTask(TSActivator.ConvertToTSArrayList(ModelObjects));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddObjectsToTask()", ex); }
-		}
 
-		public System.Boolean RemoveObjectsFromTask(System.Collections.ArrayList ModelObjects)
-		{
-			try {
-			var result = teklaObject.RemoveObjectsFromTask(TSActivator.ConvertToTSArrayList(ModelObjects));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveObjectsFromTask()", ex); }
-		}
+public System.Boolean AddObjectsToTask(
+	System.Collections.ArrayList ModelObjects_
+	)
+{
+	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
+    try
+    {
+        	var result = teklaObject.AddObjectsToTask(ModelObjects);
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFathers()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetFathers());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFathers()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddObjectsToTask), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDependencies()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetDependencies());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDependencies()", ex); }
-		}
 
-		public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Task", "GetAllTasksOfSelectedObjects", parameters);
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-		}
+
+public System.Boolean RemoveObjectsFromTask(
+	System.Collections.ArrayList ModelObjects_
+	)
+{
+	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
+    try
+    {
+        	var result = teklaObject.RemoveObjectsFromTask(ModelObjects);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveObjectsFromTask), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFathers()
+{
+
+    try
+    {
+        	var result = teklaObject.GetFathers();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFathers), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetDependencies()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDependencies();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDependencies), ex);
+    }
+}
+
+
+
+public static Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllTasksOfSelectedObjects()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Task", "GetAllTasksOfSelectedObjects");
+	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

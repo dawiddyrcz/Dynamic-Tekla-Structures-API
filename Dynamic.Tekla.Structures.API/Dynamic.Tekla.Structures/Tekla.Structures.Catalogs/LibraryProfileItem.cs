@@ -67,45 +67,77 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Select(System.String profileName)
-		{
-			try {
-			var result = teklaObject.Select(profileName);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
 
-		public System.Boolean Delete()
-		{
-			try {
-			var result = teklaObject.Delete();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()", ex); }
-		}
+public System.Boolean Select(
+	System.String profileName
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Select(profileName);
 
-		public System.Boolean Modify()
-		{
-			try {
-			var result = teklaObject.Modify();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
 
-		public System.Boolean Copy(System.String newName)
-		{
-			try {
-			var result = teklaObject.Copy(newName);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Copy()", ex); }
-		}
+
+
+public System.Boolean Delete()
+{
+
+    try
+    {
+        	var result = teklaObject.Delete();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Delete), ex);
+    }
+}
+
+
+
+public System.Boolean Modify()
+{
+
+    try
+    {
+        	var result = teklaObject.Modify();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
+    }
+}
+
+
+
+public System.Boolean Copy(
+	System.String newName
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Copy(newName);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Copy), ex);
+    }
+}
+
 
 
 

@@ -32,23 +32,41 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModelObject", args);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(teklaObject.GetReferenceModel());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceModel()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetFather()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetFather());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetFather()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ReferenceModel GetReferenceModel()
+{
+
+    try
+    {
+        	var result = teklaObject.GetReferenceModel();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ReferenceModel_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReferenceModel), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetFather()
+{
+
+    try
+    {
+        	var result = teklaObject.GetFather();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFather), ex);
+    }
+}
+
 
 
 

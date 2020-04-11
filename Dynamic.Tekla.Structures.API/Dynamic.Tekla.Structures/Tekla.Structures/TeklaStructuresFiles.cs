@@ -46,35 +46,68 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresFiles", args);
 		}
 
-		public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(System.String fileExtension, System.Boolean fullpath)
-		{
-			try {
-			var result = teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetMultiDirectoryFileList()", ex); }
-		}
 
-		public System.IO.FileInfo GetAttributeFile(System.String fileName)
-		{
-			try {
-			var result = teklaObject.GetAttributeFile(fileName);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttributeFile()", ex); }
-		}
+public System.Collections.Generic.List<System.String> GetMultiDirectoryFileList(
+	System.String fileExtension,
+	System.Boolean fullpath
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetMultiDirectoryFileList(fileExtension, fullpath);
 
-		public System.IO.FileInfo GetAttributeFile(System.Collections.Generic.List<System.String> searchDirectories, System.String fileName)
-		{
-			try {
-			var result = teklaObject.GetAttributeFile(searchDirectories, fileName);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAttributeFile()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMultiDirectoryFileList), ex);
+    }
+}
+
+
+
+public System.IO.FileInfo GetAttributeFile(
+	System.String fileName
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetAttributeFile(fileName);
+
+        	var _result = ObjectConverter.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttributeFile), ex);
+    }
+}
+
+
+
+public System.IO.FileInfo GetAttributeFile(
+	System.Collections.Generic.List<System.String> searchDirectories,
+	System.String fileName
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.GetAttributeFile(searchDirectories, fileName);
+
+        	var _result = ObjectConverter.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttributeFile), ex);
+    }
+}
+
 
 
 

@@ -16,15 +16,24 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public System.Boolean MoveObjectRelative(Dynamic.Tekla.Structures.Geometry3d.Vector MoveVector)
-		{
-			try {
-			var result = teklaObject.MoveObjectRelative(Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveObjectRelative()", ex); }
-		}
+
+public System.Boolean MoveObjectRelative(
+	Dynamic.Tekla.Structures.Geometry3d.Vector MoveVector_
+	)
+{
+	var MoveVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(MoveVector_);
+    try
+    {
+        	var result = teklaObject.MoveObjectRelative(MoveVector);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveObjectRelative), ex);
+    }
+}
+
 
 
 

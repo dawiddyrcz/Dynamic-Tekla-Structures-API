@@ -16,14 +16,23 @@ namespace Dynamic.Tekla.Structures.Model
         internal dynamic teklaObject;
 
 
-		public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(teklaObject.GetAssembly());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAssembly()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+{
+
+    try
+    {
+        	var result = teklaObject.GetAssembly();
+
+        	var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
+    }
+}
+
 
 
 

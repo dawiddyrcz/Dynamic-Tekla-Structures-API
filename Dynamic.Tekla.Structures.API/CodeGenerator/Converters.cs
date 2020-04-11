@@ -18,10 +18,15 @@ namespace CodeGenerator
         public static string ToTSObjects(Type type, string inputName, string outputName)
         {
             var typeFullName = TypeFullName.GetTypeFullName(type);
+            var typeFullNameWithDynamic = TypeFullName.GetTypeFullName_WithDynamic(type);
 
             if (TypeFullName.IsTeklaType(type))
             {
-                return outputName + " = " + TypeFullName.GetTypeFullName_WithDynamic(type) + "_.GetTSObject(" + inputName + ");";
+                if (typeFullNameWithDynamic.EndsWith("[]", StringComparison.InvariantCulture))
+                    return outputName + " = " + typeFullNameWithDynamic.Replace("[]","") + "Array_.GetTSObject(" + inputName + ");";
+                else
+                    return outputName + " = " + typeFullNameWithDynamic + "_.GetTSObject(" + inputName + ");";
+
             }
             else if (typeof(ArrayList).IsAssignableFrom(type))
             {
@@ -40,9 +45,13 @@ namespace CodeGenerator
         public static string FromTSObjects(Type type, string inputName, string outputName)
         {
             var typeFullName = TypeFullName.GetTypeFullName_WithDynamic(type);
+
             if (TypeFullName.IsTeklaType(type))
             {
-                return outputName + " = " + TypeFullName.GetTypeFullName_WithDynamic(type) + "_.FromTSObject(" + inputName + ");";
+                if (typeFullName.EndsWith("[]", StringComparison.InvariantCulture))
+                    return outputName + " = " + typeFullName.Replace("[]","") + "Array_.FromTSObject(" + inputName + ");";
+                else
+                    return outputName + " = " + typeFullName + "_.FromTSObject(" + inputName + ");";
             }
             else if (typeof(ArrayList).IsAssignableFrom(type))
             {
@@ -82,6 +91,11 @@ namespace CodeGenerator
                 || typeof(Dictionary<string, string>).IsAssignableFrom(type)
                 || typeof(Dictionary<string, int>).IsAssignableFrom(type)
                 || typeof(Dictionary<string, double>).IsAssignableFrom(type)
+                || typeof(string[]).IsAssignableFrom(type)
+                || typeof(int[]).IsAssignableFrom(type)
+                || typeof(double[]).IsAssignableFrom(type)
+                || typeof(bool[]).IsAssignableFrom(type)
+
 
 
                 )

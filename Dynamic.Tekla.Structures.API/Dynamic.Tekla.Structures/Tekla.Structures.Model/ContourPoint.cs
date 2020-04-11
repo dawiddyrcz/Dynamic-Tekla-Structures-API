@@ -50,14 +50,24 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ContourPoint", args);
 		}
 
-		public void SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point P)
-		{
-			try {
-			teklaObject.SetPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetPoint()", ex); }
-		}
+
+public void SetPoint(
+	Dynamic.Tekla.Structures.Geometry3d.Point P_
+	)
+{
+	var P = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P_);
+    try
+    {
+        	teklaObject.SetPoint(P);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetPoint), ex);
+    }
+}
+
 
 
 

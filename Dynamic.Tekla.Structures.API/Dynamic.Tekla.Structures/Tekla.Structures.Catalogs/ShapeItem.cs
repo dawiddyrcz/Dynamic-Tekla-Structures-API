@@ -187,85 +187,147 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Select(System.String name)
-		{
-			try {
-			var result = teklaObject.Select(name);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
 
-		public System.Boolean Select()
-		{
-			try {
-			var result = teklaObject.Select();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
+public System.Boolean Select(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Select(name);
 
-		public System.Boolean Delete()
-		{
-			try {
-			var result = teklaObject.Delete();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
 
-		public System.Boolean Insert()
-		{
-			try {
-			var result = teklaObject.Insert();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()", ex); }
-		}
 
-		public System.Boolean InsertUsingNormals()
-		{
-			try {
-			var result = teklaObject.InsertUsingNormals();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("InsertUsingNormals()", ex); }
-		}
 
-		public System.Boolean Export(ref System.String filename)
-		{
-			try {
-			var result = teklaObject.Export(ref filename);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()", ex); }
-		}
+public System.Boolean Select()
+{
 
-		public System.Boolean Modify()
-		{
-			try {
-			var result = teklaObject.Modify();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.Select();
 
-		public System.Boolean CleanAndModify(ref System.Boolean isSolid)
-		{
-			try {
-			var result = teklaObject.CleanAndModify(ref isSolid);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CleanAndModify()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
+
+
+
+public System.Boolean Delete()
+{
+
+    try
+    {
+        	var result = teklaObject.Delete();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Delete), ex);
+    }
+}
+
+
+
+public System.Boolean Insert()
+{
+
+    try
+    {
+        	var result = teklaObject.Insert();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Insert), ex);
+    }
+}
+
+
+
+public System.Boolean InsertUsingNormals()
+{
+
+    try
+    {
+        	var result = teklaObject.InsertUsingNormals();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(InsertUsingNormals), ex);
+    }
+}
+
+
+
+public System.Boolean Export(
+	ref System.String filename
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Export(ref filename);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Export), ex);
+    }
+}
+
+
+
+public System.Boolean Modify()
+{
+
+    try
+    {
+        	var result = teklaObject.Modify();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
+    }
+}
+
+
+
+public System.Boolean CleanAndModify(
+	ref System.Boolean isSolid
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.CleanAndModify(ref isSolid);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CleanAndModify), ex);
+    }
+}
+
 
 
 

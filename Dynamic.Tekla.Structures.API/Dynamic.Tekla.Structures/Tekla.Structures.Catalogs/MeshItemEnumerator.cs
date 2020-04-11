@@ -33,43 +33,70 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean MoveNext()
-		{
-			try {
-			var result = teklaObject.MoveNext();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()", ex); }
-		}
 
-		public void Reset()
-		{
-			try {
-			teklaObject.Reset();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Reset()", ex); }
-		}
+public System.Boolean MoveNext()
+{
 
-		public System.Int32 GetSize()
-		{
-			try {
-			var result = teklaObject.GetSize();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSize()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.MoveNext();
 
-		public static Dynamic.Tekla.Structures.Catalogs.MeshItem SelectMeshItem(System.String Name, System.String Grade)
-		{
-			var parameters = new object[2];
-			parameters[0] = Name;
-			parameters[1] = Grade;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.MeshItemEnumerator", "SelectMeshItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.MeshItem_.FromTSObject(result);
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
+    }
+}
+
+
+
+public void Reset()
+{
+
+    try
+    {
+        	teklaObject.Reset();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
+    }
+}
+
+
+
+public System.Int32 GetSize()
+{
+
+    try
+    {
+        	var result = teklaObject.GetSize();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSize), ex);
+    }
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.MeshItem SelectMeshItem(
+	System.String Name,
+	System.String Grade
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.MeshItemEnumerator", "SelectMeshItem", Name, Grade);
+	var _result = Dynamic.Tekla.Structures.Catalogs.MeshItem_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

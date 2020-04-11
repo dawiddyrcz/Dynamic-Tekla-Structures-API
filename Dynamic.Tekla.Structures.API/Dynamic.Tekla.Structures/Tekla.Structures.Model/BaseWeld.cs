@@ -808,24 +808,41 @@ namespace Dynamic.Tekla.Structures.Model
         
 
 
-		public System.Collections.ArrayList GetWeldGeometries()
-		{
-			try {
-			var result = teklaObject.GetWeldGeometries();
-			return TSActivator.ConvertArrayList(result);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetWeldGeometries()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(teklaObject.GetSolid());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSolid()", ex); }
-		}
+public System.Collections.ArrayList GetWeldGeometries()
+{
+
+    try
+    {
+        	var result = teklaObject.GetWeldGeometries();
+
+        	var _result = ArrayListConverter.FromTSObjects(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetWeldGeometries), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.Solid GetSolid()
+{
+
+    try
+    {
+        	var result = teklaObject.GetSolid();
+
+        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+    }
+}
+
 
 
 

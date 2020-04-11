@@ -25,43 +25,57 @@ namespace Dynamic.Tekla.Structures.Datatype
 			this.teklaObject = tsObject;
 		}
 
-		public static System.Object GetValue(System.String name)
-		{
-			var parameters = new object[1];
-			parameters[0] = name;
-			var result = (System.Object) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", parameters);
-			return result;
-		}
 
-		public static System.Boolean TryGetValue(System.String name, out System.Object obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = name;
-			obj = new System.Object();
-			parameters[1] = obj;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", parameters);
-			obj = (System.Object) parameters[1];
-			return result;
-		}
+public static System.Object GetValue(
+	System.String name
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", name);
+	return result;
+}
 
-		public static System.Boolean TryGetValue<T>(System.String name, out T obj)
-		{
-			var parameters = new object[2];
-			parameters[0] = name;
-			obj = default(T);
-			parameters[1] = obj;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", parameters);
-			obj = (T) parameters[1];
-			return result;
-		}
 
-		public static void SetValue(System.String name, System.Object value)
-		{
-			var parameters = new object[2];
-			parameters[0] = name;
-			parameters[1] = value;
-			TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "SetValue", parameters);
-		}
+
+public static System.Boolean TryGetValue(
+	System.String name,
+	ref System.Object obj
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
+	
+	return result;
+}
+
+
+
+public static System.Boolean TryGetValue(
+	System.String name,
+	ref Dynamic.Tekla.Structures.Datatype.Settings.T obj_
+	)
+{
+	
+	var obj = ObjectConverter.ToTSObject(obj_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
+	obj_ = ObjectConverter.FromTSObject(obj);
+	return result;
+}
+
+
+
+public static void SetValue(
+	System.String name,
+	System.Object value
+	)
+{
+	
+	
+	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "SetValue", name, value);
+
+}
+
 
 
 

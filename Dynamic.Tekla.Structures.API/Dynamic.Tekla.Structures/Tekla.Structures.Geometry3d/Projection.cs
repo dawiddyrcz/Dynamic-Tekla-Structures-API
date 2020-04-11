@@ -16,41 +16,61 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToLine", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Point PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToPlane", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Geometry3d.Point PointToLine(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+	Dynamic.Tekla.Structures.Geometry3d.Line Line_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToLine", Point, Line);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Line LineToPlane(Dynamic.Tekla.Structures.Geometry3d.Line Line, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineToPlane", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToPlane(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineSegmentToPlane", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-		}
+
+public static Dynamic.Tekla.Structures.Geometry3d.Point PointToPlane(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "PointToPlane", Point, Plane);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Geometry3d.Line LineToPlane(
+	Dynamic.Tekla.Structures.Geometry3d.Line Line_,
+	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_
+	)
+{
+	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
+	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineToPlane", Line, Plane);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Line_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegmentToPlane(
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment_,
+	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_
+	)
+{
+	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
+	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Projection", "LineSegmentToPlane", LineSegment, Plane);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

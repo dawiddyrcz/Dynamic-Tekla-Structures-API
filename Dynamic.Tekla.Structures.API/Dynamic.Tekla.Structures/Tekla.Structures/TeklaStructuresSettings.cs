@@ -25,94 +25,126 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = tsObject;
 		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Boolean Value)
-		{
-			var parameters = new object[2];
-			parameters[0] = VariableName;
-			parameters[1] = Value;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			Value = (System.Boolean) parameters[1];
-			return result;
-		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Int32 Value)
-		{
-			var parameters = new object[2];
-			parameters[0] = VariableName;
-			parameters[1] = Value;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			Value = (System.Int32) parameters[1];
-			return result;
-		}
+public static System.Boolean GetAdvancedOption(
+	System.String VariableName,
+	ref System.Boolean Value
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	
+	return result;
+}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.String Value)
-		{
-			var parameters = new object[2];
-			parameters[0] = VariableName;
-			parameters[1] = Value;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			Value = (System.String) parameters[1];
-			return result;
-		}
 
-		public static System.Boolean GetAdvancedOption(System.String VariableName, ref System.Double Value)
-		{
-			var parameters = new object[2];
-			parameters[0] = VariableName;
-			parameters[1] = Value;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", parameters);
-			Value = (System.Double) parameters[1];
-			return result;
-		}
 
-		public static System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ClashCheckOptions Options)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", parameters);
-			Options = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(parameters[0]);
-			return result;
-		}
+public static System.Boolean GetAdvancedOption(
+	System.String VariableName,
+	ref System.Int32 Value
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	
+	return result;
+}
 
-		public static System.Boolean SetOptions(Dynamic.Tekla.Structures.ClashCheckOptions Options)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", parameters);
-			return result;
-		}
 
-		public static System.Boolean GetOptions(ref Dynamic.Tekla.Structures.ComponentOptions Options)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", parameters);
-			Options = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(parameters[0]);
-			return result;
-		}
 
-		public static System.Boolean SetOptions(Dynamic.Tekla.Structures.ComponentOptions Options)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", parameters);
-			return result;
-		}
+public static System.Boolean GetAdvancedOption(
+	System.String VariableName,
+	ref System.String Value
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	
+	return result;
+}
 
-		public static System.Boolean IsToolOptionOn(System.String toolOptionName)
-		{
-			var parameters = new object[1];
-			parameters[0] = toolOptionName;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", parameters);
-			return result;
-		}
 
-		public static System.Boolean IsPourEnabled()
-		{
-			var parameters = new object[0];
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled", parameters);
-			return result;
-		}
+
+public static System.Boolean GetAdvancedOption(
+	System.String VariableName,
+	ref System.Double Value
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+	
+	return result;
+}
+
+
+
+public static System.Boolean GetOptions(
+	ref Dynamic.Tekla.Structures.ClashCheckOptions Options_
+	)
+{
+	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+	Options_ = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(Options);
+	return result;
+}
+
+
+
+public static System.Boolean SetOptions(
+	Dynamic.Tekla.Structures.ClashCheckOptions Options_
+	)
+{
+	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+	return result;
+}
+
+
+
+public static System.Boolean GetOptions(
+	ref Dynamic.Tekla.Structures.ComponentOptions Options_
+	)
+{
+	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+	Options_ = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(Options);
+	return result;
+}
+
+
+
+public static System.Boolean SetOptions(
+	Dynamic.Tekla.Structures.ComponentOptions Options_
+	)
+{
+	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+	return result;
+}
+
+
+
+public static System.Boolean IsToolOptionOn(
+	System.String toolOptionName
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", toolOptionName);
+	return result;
+}
+
+
+
+public static System.Boolean IsPourEnabled()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled");
+	return result;
+}
+
 
 
 
@@ -138,23 +170,47 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback", args);
 		}
 
-		public void Invoke(System.String advancedOption, System.String invalidString, System.String exceptionMessage)
-		{
-			try {
-			teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Invoke()", ex); }
-		}
 
-		public void EndInvoke(System.IAsyncResult resultt)
-		{
-			try {
-			teklaObject.EndInvoke(resultt);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("EndInvoke()", ex); }
-		}
+public void Invoke(
+	System.String advancedOption,
+	System.String invalidString,
+	System.String exceptionMessage
+	)
+{
+	
+	
+	
+    try
+    {
+        	teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
+    }
+}
+
+
+
+public void EndInvoke(
+	System.IAsyncResult result_
+	)
+{
+	var result = ObjectConverter.ToTSObject(result_);
+    try
+    {
+        	teklaObject.EndInvoke(result);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
+    }
+}
+
 
 
 

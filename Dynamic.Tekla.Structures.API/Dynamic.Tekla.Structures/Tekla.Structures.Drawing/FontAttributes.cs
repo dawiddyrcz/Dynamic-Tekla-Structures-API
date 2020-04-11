@@ -125,15 +125,22 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.FontAttributes", args);
 		}
 
-		public System.Object Clone()
-		{
-			try {
-			var result = teklaObject.Clone();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
-		}
+
+public System.Object Clone()
+{
+
+    try
+    {
+        	var result = teklaObject.Clone();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+    }
+}
+
 
 
 

@@ -90,24 +90,40 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.LineSegment", args);
 		}
 
-		public System.Double Length()
-		{
-			try {
-			var result = teklaObject.Length();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetDirectionVector());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDirectionVector()", ex); }
-		}
+public System.Double Length()
+{
+
+    try
+    {
+        	var result = teklaObject.Length();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Length), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Vector GetDirectionVector()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDirectionVector();
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDirectionVector), ex);
+    }
+}
+
 
 
 		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Geometry3d.LineSegment o1, Dynamic.Tekla.Structures.Geometry3d.LineSegment o2)

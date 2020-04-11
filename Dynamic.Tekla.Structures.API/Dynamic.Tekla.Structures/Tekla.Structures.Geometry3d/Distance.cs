@@ -16,41 +16,57 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         internal dynamic teklaObject;
 
 
-		public static System.Double PointToPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2);
-			var result = (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPoint", parameters);
-			return result;
-		}
 
-		public static System.Double PointToLine(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.Line Line)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line);
-			var result = (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLine", parameters);
-			return result;
-		}
+public static System.Double PointToPoint(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point1_,
+	Dynamic.Tekla.Structures.Geometry3d.Point Point2_
+	)
+{
+	var Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1_);
+	var Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPoint", Point1, Point2);
+	return result;
+}
 
-		public static System.Double PointToLineSegment(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment);
-			var result = (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLineSegment", parameters);
-			return result;
-		}
 
-		public static System.Double PointToPlane(Dynamic.Tekla.Structures.Geometry3d.Point Point, Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane);
-			var result = (System.Double) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPlane", parameters);
-			return result;
-		}
+
+public static System.Double PointToLine(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+	Dynamic.Tekla.Structures.Geometry3d.Line Line_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLine", Point, Line);
+	return result;
+}
+
+
+
+public static System.Double PointToLineSegment(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLineSegment", Point, LineSegment);
+	return result;
+}
+
+
+
+public static System.Double PointToPlane(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPlane", Point, Plane);
+	return result;
+}
+
 
 
 

@@ -34,14 +34,22 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.DisposableToken", args);
 		}
 
-		public void Dispose()
-		{
-			try {
-			teklaObject.Dispose();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Dispose()", ex); }
-		}
+
+public void Dispose()
+{
+
+    try
+    {
+        	teklaObject.Dispose();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Dispose), ex);
+    }
+}
+
 
 
 		public static Dynamic.Tekla.Structures.Model.DisposableToken operator +(Dynamic.Tekla.Structures.Model.DisposableToken o1, System.IDisposable o2)

@@ -16,38 +16,54 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.PlacingBase AlongLinePlacing(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "AlongLinePlacing", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PlacingBase BaseLinePlacing(Dynamic.Tekla.Structures.Geometry3d.Point StartPoint, Dynamic.Tekla.Structures.Geometry3d.Point EndPoint)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "BaseLinePlacing", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.PlacingBase AlongLinePlacing(
+	Dynamic.Tekla.Structures.Geometry3d.Point StartPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point EndPoint_
+	)
+{
+	var StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint_);
+	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "AlongLinePlacing", StartPoint, EndPoint);
+	var _result = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
+	return _result;
+}
 
-		public static Dynamic.Tekla.Structures.Drawing.PlacingBase LeaderLinePlacing(Dynamic.Tekla.Structures.Geometry3d.Point LeaderLineStartPoint)
-		{
-			var parameters = new object[1];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(LeaderLineStartPoint);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "LeaderLinePlacing", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PlacingBase PointPlacing()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "PointPlacing", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
-		}
+
+public static Dynamic.Tekla.Structures.Drawing.PlacingBase BaseLinePlacing(
+	Dynamic.Tekla.Structures.Geometry3d.Point StartPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point EndPoint_
+	)
+{
+	var StartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(StartPoint_);
+	var EndPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(EndPoint_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "BaseLinePlacing", StartPoint, EndPoint);
+	var _result = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PlacingBase LeaderLinePlacing(
+	Dynamic.Tekla.Structures.Geometry3d.Point LeaderLineStartPoint_
+	)
+{
+	var LeaderLineStartPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(LeaderLineStartPoint_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "LeaderLinePlacing", LeaderLineStartPoint);
+	var _result = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PlacingBase PointPlacing()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PlacingTypes", "PointPlacing");
+	var _result = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

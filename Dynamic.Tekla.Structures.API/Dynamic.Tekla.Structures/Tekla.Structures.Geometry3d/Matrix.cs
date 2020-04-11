@@ -49,32 +49,60 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Matrix", args);
 		}
 
-		public void Transpose()
-		{
-			try {
-			teklaObject.Transpose();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Transpose()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.GetTranspose());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetTranspose()", ex); }
-		}
+public void Transpose()
+{
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point Transform(Dynamic.Tekla.Structures.Geometry3d.Point p)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Transform(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Transform()", ex); }
-		}
+    try
+    {
+        	teklaObject.Transpose();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transpose), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
+{
+
+    try
+    {
+        	var result = teklaObject.GetTranspose();
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetTranspose), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Point Transform(
+	Dynamic.Tekla.Structures.Geometry3d.Point p_
+	)
+{
+	var p = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p_);
+    try
+    {
+        	var result = teklaObject.Transform(p);
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transform), ex);
+    }
+}
+
 
 
 		public static Dynamic.Tekla.Structures.Geometry3d.Matrix operator *(Dynamic.Tekla.Structures.Geometry3d.Matrix o1, Dynamic.Tekla.Structures.Geometry3d.Matrix o2)

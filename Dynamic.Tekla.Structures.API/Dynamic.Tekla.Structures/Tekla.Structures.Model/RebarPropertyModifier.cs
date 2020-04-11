@@ -61,14 +61,23 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetAffectedBars());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAffectedBars()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAffectedBars()
+{
+
+    try
+    {
+        	var result = teklaObject.GetAffectedBars();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAffectedBars), ex);
+    }
+}
+
 
 
 

@@ -22,23 +22,41 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetViews()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetViews());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetViews()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllViews()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetAllViews());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAllViews()", ex); }
-		}
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetViews()
+{
+
+    try
+    {
+        	var result = teklaObject.GetViews();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetViews), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllViews()
+{
+
+    try
+    {
+        	var result = teklaObject.GetAllViews();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllViews), ex);
+    }
+}
+
 
 
 

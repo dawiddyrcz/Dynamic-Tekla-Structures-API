@@ -16,32 +16,47 @@ namespace Dynamic.Tekla.Structures.Datatype
         internal dynamic teklaObject;
 
 
-		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(System.String text)
-		{
-			var parameters = new object[1];
-			parameters[0] = text;
-			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", parameters);
-			return result;
-		}
 
-		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(System.String text, System.IFormatProvider formatProvider)
-		{
-			var parameters = new object[2];
-			parameters[0] = text;
-			parameters[1] = formatProvider;
-			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", parameters);
-			return result;
-		}
+public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(
+	System.String text
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text);
+	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	return _result;
+}
 
-		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(System.String text, System.IFormatProvider formatProvider, Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType)
-		{
-			var parameters = new object[3];
-			parameters[0] = text;
-			parameters[1] = formatProvider;
-			parameters[2] = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType);
-			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>) TSActivator.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", parameters);
-			return result;
-		}
+
+
+public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(
+	System.String text,
+	System.IFormatProvider formatProvider_
+	)
+{
+	
+	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text, formatProvider);
+	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	return _result;
+}
+
+
+
+public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle> Parse(
+	System.String text,
+	System.IFormatProvider formatProvider_,
+	Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType_
+	)
+{
+	
+	var formatProvider = ObjectConverter.ToTSObject(formatProvider_);
+	var unitType = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.AngleList", "Parse", text, formatProvider, unitType);
+	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Datatype.Angle>>(result);
+	return _result;
+}
+
 
 
 

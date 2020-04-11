@@ -112,42 +112,77 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.Point", args);
 		}
 
-		public void Zero()
-		{
-			try {
-			teklaObject.Zero();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Zero()", ex); }
-		}
 
-		public void Translate(System.Double X, System.Double Y, System.Double Z)
-		{
-			try {
-			teklaObject.Translate(X, Y, Z);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Translate()", ex); }
-		}
+public void Zero()
+{
 
-		public static System.Boolean AreEqual(Dynamic.Tekla.Structures.Geometry3d.Point Point1, Dynamic.Tekla.Structures.Geometry3d.Point Point2)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "AreEqual", parameters);
-			return result;
-		}
+    try
+    {
+        	teklaObject.Zero();
 
-		public System.Int32 CompareTo(System.Object obj)
-		{
-			try {
-			var result = teklaObject.CompareTo(obj);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CompareTo()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Zero), ex);
+    }
+}
+
+
+
+public void Translate(
+	System.Double X,
+	System.Double Y,
+	System.Double Z
+	)
+{
+	
+	
+	
+    try
+    {
+        	teklaObject.Translate(X, Y, Z);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Translate), ex);
+    }
+}
+
+
+
+public static System.Boolean AreEqual(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point1_,
+	Dynamic.Tekla.Structures.Geometry3d.Point Point2_
+	)
+{
+	var Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1_);
+	var Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Point", "AreEqual", Point1, Point2);
+	return result;
+}
+
+
+
+public System.Int32 CompareTo(
+	System.Object obj
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.CompareTo(obj);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CompareTo), ex);
+    }
+}
+
 
 
 		public static Dynamic.Tekla.Structures.Geometry3d.Point operator +(Dynamic.Tekla.Structures.Geometry3d.Point o1, Dynamic.Tekla.Structures.Geometry3d.Point o2)

@@ -168,198 +168,306 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.View", args);
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetModelObjects());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelObjects()", ex); }
-		}
 
-		public static System.Boolean CreateSectionView(Dynamic.Tekla.Structures.Drawing.View view, Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, System.Double depthUp, System.Double depthDown, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes sectionMarkAttributes, out Dynamic.Tekla.Structures.Drawing.View sectionView, out Dynamic.Tekla.Structures.Drawing.SectionMark sectionMark)
-		{
-			var parameters = new object[10];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
-			parameters[3] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[4] = depthUp;
-			parameters[5] = depthDown;
-			parameters[6] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			parameters[7] = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes);
-			sectionView = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[8] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(sectionView);
-			sectionMark = new Dynamic.Tekla.Structures.Drawing.SectionMark();
-			parameters[9] = Dynamic.Tekla.Structures.Drawing.SectionMark_.GetTSObject(sectionMark);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateSectionView", parameters);
-			sectionView = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[8]);
-			sectionMark = Dynamic.Tekla.Structures.Drawing.SectionMark_.FromTSObject(parameters[9]);
-			return result;
-		}
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetModelObjects()
+{
 
-		public static System.Boolean CreateCurvedSectionView(Dynamic.Tekla.Structures.Drawing.View view, Dynamic.Tekla.Structures.Geometry3d.Point startPoint, Dynamic.Tekla.Structures.Geometry3d.Point middlePoint, Dynamic.Tekla.Structures.Geometry3d.Point endPoint, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, System.Double depthUp, System.Double depthDown, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes sectionMarkAttributes, out Dynamic.Tekla.Structures.Drawing.View curvedSectionView, out Dynamic.Tekla.Structures.Drawing.CurvedSectionMark sectionMark)
-		{
-			var parameters = new object[11];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint);
-			parameters[3] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint);
-			parameters[4] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[5] = depthUp;
-			parameters[6] = depthDown;
-			parameters[7] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			parameters[8] = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes);
-			curvedSectionView = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[9] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(curvedSectionView);
-			sectionMark = new Dynamic.Tekla.Structures.Drawing.CurvedSectionMark();
-			parameters[10] = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.GetTSObject(sectionMark);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateCurvedSectionView", parameters);
-			curvedSectionView = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[9]);
-			sectionMark = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.FromTSObject(parameters[10]);
-			return result;
-		}
+    try
+    {
+        	var result = teklaObject.GetModelObjects();
 
-		public static System.Boolean CreateDetailView(Dynamic.Tekla.Structures.Drawing.View view, Dynamic.Tekla.Structures.Geometry3d.Point centerPoint, Dynamic.Tekla.Structures.Geometry3d.Point boundaryPoint, Dynamic.Tekla.Structures.Geometry3d.Point labelPoint, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes detailMarkAttributes, out Dynamic.Tekla.Structures.Drawing.View detailView, out Dynamic.Tekla.Structures.Drawing.DetailMark detailMark)
-		{
-			var parameters = new object[9];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(centerPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(boundaryPoint);
-			parameters[3] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(labelPoint);
-			parameters[4] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[5] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			parameters[6] = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(detailMarkAttributes);
-			detailView = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[7] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(detailView);
-			detailMark = new Dynamic.Tekla.Structures.Drawing.DetailMark();
-			parameters[8] = Dynamic.Tekla.Structures.Drawing.DetailMark_.GetTSObject(detailMark);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateDetailView", parameters);
-			detailView = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[7]);
-			detailMark = Dynamic.Tekla.Structures.Drawing.DetailMark_.FromTSObject(parameters[8]);
-			return result;
-		}
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetModelObjects), ex);
+    }
+}
 
-		public static System.Boolean CreateFrontView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[3] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateFrontView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[3]);
-			return result;
-		}
 
-		public static System.Boolean CreateTopView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[3] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateTopView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[3]);
-			return result;
-		}
 
-		public static System.Boolean CreateBackView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[3] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBackView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[3]);
-			return result;
-		}
+public static System.Boolean CreateSectionView(
+	Dynamic.Tekla.Structures.Drawing.View view_,
+	Dynamic.Tekla.Structures.Geometry3d.Point startPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point endPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	System.Double depthUp,
+	System.Double depthDown,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes sectionMarkAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View sectionView_,
+	ref Dynamic.Tekla.Structures.Drawing.SectionMark sectionMark_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var startPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint_);
+	var endPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	
+	
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var sectionMarkAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes_);
+	var sectionView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(sectionView_);
+	var sectionMark = Dynamic.Tekla.Structures.Drawing.SectionMark_.GetTSObject(sectionMark_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateSectionView", view, startPoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref sectionView, ref sectionMark);
+	sectionView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(sectionView);
+	sectionMark_ = Dynamic.Tekla.Structures.Drawing.SectionMark_.FromTSObject(sectionMark);
+	return result;
+}
 
-		public static System.Boolean CreateBottomView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[3] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBottomView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[3]);
-			return result;
-		}
 
-		public static System.Boolean Create3dView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[3] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[3]);
-			return result;
-		}
 
-		public static System.Boolean Create3dView(Dynamic.Tekla.Structures.Drawing.Drawing drawing, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem viewPlane, Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem displayPlane, Dynamic.Tekla.Structures.Geometry3d.AABB viewExtrema, Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint, Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes, out Dynamic.Tekla.Structures.Drawing.View view)
-		{
-			var parameters = new object[7];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(viewPlane);
-			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(displayPlane);
-			parameters[3] = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(viewExtrema);
-			parameters[4] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint);
-			parameters[5] = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes);
-			view = new Dynamic.Tekla.Structures.Drawing.View();
-			parameters[6] = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view);
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", parameters);
-			view = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(parameters[6]);
-			return result;
-		}
+public static System.Boolean CreateCurvedSectionView(
+	Dynamic.Tekla.Structures.Drawing.View view_,
+	Dynamic.Tekla.Structures.Geometry3d.Point startPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point middlePoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point endPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	System.Double depthUp,
+	System.Double depthDown,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes sectionMarkAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View curvedSectionView_,
+	ref Dynamic.Tekla.Structures.Drawing.CurvedSectionMark sectionMark_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var startPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(startPoint_);
+	var middlePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(middlePoint_);
+	var endPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(endPoint_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	
+	
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var sectionMarkAttributes = Dynamic.Tekla.Structures.Drawing.SectionMarkBase.SectionMarkAttributes_.GetTSObject(sectionMarkAttributes_);
+	var curvedSectionView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(curvedSectionView_);
+	var sectionMark = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.GetTSObject(sectionMark_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateCurvedSectionView", view, startPoint, middlePoint, endPoint, viewInsertionPoint, depthUp, depthDown, viewAttributes, sectionMarkAttributes, ref curvedSectionView, ref sectionMark);
+	curvedSectionView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(curvedSectionView);
+	sectionMark_ = Dynamic.Tekla.Structures.Drawing.CurvedSectionMark_.FromTSObject(sectionMark);
+	return result;
+}
 
-		public System.Boolean RotateViewOnAxisX(System.Double rotationAngle)
-		{
-			try {
-			var result = teklaObject.RotateViewOnAxisX(rotationAngle);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisX()", ex); }
-		}
 
-		public System.Boolean RotateViewOnAxisY(System.Double rotationAngle)
-		{
-			try {
-			var result = teklaObject.RotateViewOnAxisY(rotationAngle);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisY()", ex); }
-		}
 
-		public System.Boolean RotateViewOnAxisZ(System.Double rotationAngle)
-		{
-			try {
-			var result = teklaObject.RotateViewOnAxisZ(rotationAngle);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnAxisZ()", ex); }
-		}
+public static System.Boolean CreateDetailView(
+	Dynamic.Tekla.Structures.Drawing.View view_,
+	Dynamic.Tekla.Structures.Geometry3d.Point centerPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point boundaryPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point labelPoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes detailMarkAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View detailView_,
+	ref Dynamic.Tekla.Structures.Drawing.DetailMark detailMark_
+	)
+{
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var centerPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(centerPoint_);
+	var boundaryPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(boundaryPoint_);
+	var labelPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(labelPoint_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var detailMarkAttributes = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(detailMarkAttributes_);
+	var detailView = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(detailView_);
+	var detailMark = Dynamic.Tekla.Structures.Drawing.DetailMark_.GetTSObject(detailMark_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateDetailView", view, centerPoint, boundaryPoint, labelPoint, viewInsertionPoint, viewAttributes, detailMarkAttributes, ref detailView, ref detailMark);
+	detailView_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(detailView);
+	detailMark_ = Dynamic.Tekla.Structures.Drawing.DetailMark_.FromTSObject(detailMark);
+	return result;
+}
 
-		public System.Boolean RotateViewOnDrawingPlane(System.Double rotationAngle)
-		{
-			try {
-			var result = teklaObject.RotateViewOnDrawingPlane(rotationAngle);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RotateViewOnDrawingPlane()", ex); }
-		}
+
+
+public static System.Boolean CreateFrontView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateFrontView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public static System.Boolean CreateTopView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateTopView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public static System.Boolean CreateBackView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBackView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public static System.Boolean CreateBottomView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "CreateBottomView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public static System.Boolean Create3dView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public static System.Boolean Create3dView(
+	Dynamic.Tekla.Structures.Drawing.Drawing drawing_,
+	Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem viewPlane_,
+	Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem displayPlane_,
+	Dynamic.Tekla.Structures.Geometry3d.AABB viewExtrema_,
+	Dynamic.Tekla.Structures.Geometry3d.Point viewInsertionPoint_,
+	Dynamic.Tekla.Structures.Drawing.View.ViewAttributes viewAttributes_,
+	ref Dynamic.Tekla.Structures.Drawing.View view_
+	)
+{
+	var drawing = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(drawing_);
+	var viewPlane = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(viewPlane_);
+	var displayPlane = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(displayPlane_);
+	var viewExtrema = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(viewExtrema_);
+	var viewInsertionPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(viewInsertionPoint_);
+	var viewAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(viewAttributes_);
+	var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(view_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.View", "Create3dView", drawing, viewPlane, displayPlane, viewExtrema, viewInsertionPoint, viewAttributes, ref view);
+	view_ = Dynamic.Tekla.Structures.Drawing.View_.FromTSObject(view);
+	return result;
+}
+
+
+
+public System.Boolean RotateViewOnAxisX(
+	System.Double rotationAngle
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.RotateViewOnAxisX(rotationAngle);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RotateViewOnAxisX), ex);
+    }
+}
+
+
+
+public System.Boolean RotateViewOnAxisY(
+	System.Double rotationAngle
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.RotateViewOnAxisY(rotationAngle);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RotateViewOnAxisY), ex);
+    }
+}
+
+
+
+public System.Boolean RotateViewOnAxisZ(
+	System.Double rotationAngle
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.RotateViewOnAxisZ(rotationAngle);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RotateViewOnAxisZ), ex);
+    }
+}
+
+
+
+public System.Boolean RotateViewOnDrawingPlane(
+	System.Double rotationAngle
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.RotateViewOnDrawingPlane(rotationAngle);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RotateViewOnDrawingPlane), ex);
+    }
+}
+
 
 
 

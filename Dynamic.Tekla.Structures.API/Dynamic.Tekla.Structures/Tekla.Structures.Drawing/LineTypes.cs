@@ -64,33 +64,53 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes Custom(System.String CustomLineTypeName)
-		{
-			var parameters = new object[1];
-			parameters[0] = CustomLineTypeName;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "Custom", parameters);
-			return Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
-		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			try {
-			var result = teklaObject.IsEqual(ObjectToCompare);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
-		}
+public static Dynamic.Tekla.Structures.Drawing.LineTypes Custom(
+	System.String CustomLineTypeName
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "Custom", CustomLineTypeName);
+	var _result = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
+	return _result;
+}
 
-		public System.Object Clone()
-		{
-			try {
-			var result = teklaObject.Clone();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
-		}
+
+
+public System.Boolean IsEqual(
+	System.Object ObjectToCompare
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.IsEqual(ObjectToCompare);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+    }
+}
+
+
+
+public System.Object Clone()
+{
+
+    try
+    {
+        	var result = teklaObject.Clone();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+    }
+}
+
 
 
 		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Drawing.LineTypes o1, Dynamic.Tekla.Structures.Drawing.LineTypes o2)

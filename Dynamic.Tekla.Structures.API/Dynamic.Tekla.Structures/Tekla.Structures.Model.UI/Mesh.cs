@@ -69,33 +69,68 @@ namespace Dynamic.Tekla.Structures.Model.UI
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.UI.Mesh", args);
 		}
 
-		public System.Int32 AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point Point)
-		{
-			try {
-			var result = teklaObject.AddPoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddPoint()", ex); }
-		}
 
-		public void AddTriangle(System.Int32 Index1, System.Int32 Index2, System.Int32 Index3)
-		{
-			try {
-			teklaObject.AddTriangle(Index1, Index2, Index3);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddTriangle()", ex); }
-		}
+public System.Int32 AddPoint(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+    try
+    {
+        	var result = teklaObject.AddPoint(Point);
 
-		public void AddLine(System.Int32 Index1, System.Int32 Index2)
-		{
-			try {
-			teklaObject.AddLine(Index1, Index2);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLine()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddPoint), ex);
+    }
+}
+
+
+
+public void AddTriangle(
+	System.Int32 Index1,
+	System.Int32 Index2,
+	System.Int32 Index3
+	)
+{
+	
+	
+	
+    try
+    {
+        	teklaObject.AddTriangle(Index1, Index2, Index3);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddTriangle), ex);
+    }
+}
+
+
+
+public void AddLine(
+	System.Int32 Index1,
+	System.Int32 Index2
+	)
+{
+	
+	
+    try
+    {
+        	teklaObject.AddLine(Index1, Index2);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLine), ex);
+    }
+}
+
 
 
 

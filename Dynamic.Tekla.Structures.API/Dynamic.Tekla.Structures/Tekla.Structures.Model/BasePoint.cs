@@ -374,102 +374,180 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.BasePoint", args);
 		}
 
-		public System.Boolean Insert()
-		{
-			try {
-			var result = teklaObject.Insert();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Insert()", ex); }
-		}
 
-		public System.Boolean Modify()
-		{
-			try {
-			var result = teklaObject.Modify();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Modify()", ex); }
-		}
+public System.Boolean Insert()
+{
 
-		public System.Boolean Delete()
-		{
-			try {
-			var result = teklaObject.Delete();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Delete()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.Insert();
 
-		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.GetCoordinateSystem(Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType_.GetTSObject(CoordsysType)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCoordinateSystem()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Insert), ex);
+    }
+}
 
-		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
-		{
-			try {
-			var result = teklaObject.GetCompoundPlaneAngleLatitude();
-			var valls = TSActivator.ConvertTupleTSTypes(result);
-			return TSActivator.ArrayToTuple<System.Boolean, System.Int32, System.Int32, System.Int32>(valls);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLatitude()", ex); }
-		}
 
-		public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
-		{
-			try {
-			var result = teklaObject.GetCompoundPlaneAngleLongitude();
-			var valls = TSActivator.ConvertTupleTSTypes(result);
-			return TSActivator.ArrayToTuple<System.Boolean, System.Int32, System.Int32, System.Int32>(valls);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCompoundPlaneAngleLongitude()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertToBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ConvertToBasePoint()", ex); }
-		}
+public System.Boolean Modify()
+{
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point point)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.ConvertFromBasePoint(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ConvertFromBasePoint()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.Modify();
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertToBasePoint", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
+    }
+}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(Dynamic.Tekla.Structures.Model.BasePoint basePoint, Dynamic.Tekla.Structures.Geometry3d.Point point)
-		{
-			var parameters = new object[2];
-			parameters[0] = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint);
-			parameters[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertFromBasePoint", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-		}
+
+
+public System.Boolean Delete()
+{
+
+    try
+    {
+        	var result = teklaObject.Delete();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Delete), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem(
+	Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType CoordsysType_
+	)
+{
+	var CoordsysType = Dynamic.Tekla.Structures.Model.BasePoint.CoordinateSystemType_.GetTSObject(CoordsysType_);
+    try
+    {
+        	var result = teklaObject.GetCoordinateSystem(CoordsysType);
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCoordinateSystem), ex);
+    }
+}
+
+
+
+public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLatitude()
+{
+
+    try
+    {
+        	var result = teklaObject.GetCompoundPlaneAngleLatitude();
+
+        	var _result = ObjectConverter.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCompoundPlaneAngleLatitude), ex);
+    }
+}
+
+
+
+public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> GetCompoundPlaneAngleLongitude()
+{
+
+    try
+    {
+        	var result = teklaObject.GetCompoundPlaneAngleLongitude();
+
+        	var _result = ObjectConverter.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCompoundPlaneAngleLongitude), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(
+	Dynamic.Tekla.Structures.Geometry3d.Point point_
+	)
+{
+	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+    try
+    {
+        	var result = teklaObject.ConvertToBasePoint(point);
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ConvertToBasePoint), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(
+	Dynamic.Tekla.Structures.Geometry3d.Point point_
+	)
+{
+	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+    try
+    {
+        	var result = teklaObject.ConvertFromBasePoint(point);
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ConvertFromBasePoint), ex);
+    }
+}
+
+
+
+public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertToBasePoint(
+	Dynamic.Tekla.Structures.Model.BasePoint basePoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point point_
+	)
+{
+	var basePoint = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint_);
+	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertToBasePoint", basePoint, point);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Geometry3d.Point ConvertFromBasePoint(
+	Dynamic.Tekla.Structures.Model.BasePoint basePoint_,
+	Dynamic.Tekla.Structures.Geometry3d.Point point_
+	)
+{
+	var basePoint = Dynamic.Tekla.Structures.Model.BasePoint_.GetTSObject(basePoint_);
+	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.BasePoint", "ConvertFromBasePoint", basePoint, point);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

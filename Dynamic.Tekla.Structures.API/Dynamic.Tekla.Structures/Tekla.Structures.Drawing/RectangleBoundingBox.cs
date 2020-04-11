@@ -148,26 +148,42 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public static Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox CreateRectangleBoundingBox(Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint, System.Double Width, System.Double Height, System.Double AngleToAxis)
-		{
-			var parameters = new object[4];
-			parameters[0] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(CenterPoint);
-			parameters[1] = Width;
-			parameters[2] = Height;
-			parameters[3] = AngleToAxis;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.RectangleBoundingBox", "CreateRectangleBoundingBox", parameters);
-			return Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(result);
-		}
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			try {
-			var result = teklaObject.IsEqual(ObjectToCompare);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
-		}
+public static Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox CreateRectangleBoundingBox(
+	Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint_,
+	System.Double Width,
+	System.Double Height,
+	System.Double AngleToAxis
+	)
+{
+	var CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(CenterPoint_);
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.RectangleBoundingBox", "CreateRectangleBoundingBox", CenterPoint, Width, Height, AngleToAxis);
+	var _result = Dynamic.Tekla.Structures.Drawing.RectangleBoundingBox_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public System.Boolean IsEqual(
+	System.Object ObjectToCompare
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.IsEqual(ObjectToCompare);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+    }
+}
+
 
 
 

@@ -22,24 +22,42 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(teklaObject.GetCurrentTransformationPlane());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCurrentTransformationPlane()", ex); }
-		}
 
-		public System.Boolean SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane)
-		{
-			try {
-			var result = teklaObject.SetCurrentTransformationPlane(Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetCurrentTransformationPlane()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.TransformationPlane GetCurrentTransformationPlane()
+{
+
+    try
+    {
+        	var result = teklaObject.GetCurrentTransformationPlane();
+
+        	var _result = Dynamic.Tekla.Structures.Model.TransformationPlane_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCurrentTransformationPlane), ex);
+    }
+}
+
+
+
+public System.Boolean SetCurrentTransformationPlane(
+	Dynamic.Tekla.Structures.Model.TransformationPlane TransformationPlane_
+	)
+{
+	var TransformationPlane = Dynamic.Tekla.Structures.Model.TransformationPlane_.GetTSObject(TransformationPlane_);
+    try
+    {
+        	var result = teklaObject.SetCurrentTransformationPlane(TransformationPlane);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetCurrentTransformationPlane), ex);
+    }
+}
+
 
 
 

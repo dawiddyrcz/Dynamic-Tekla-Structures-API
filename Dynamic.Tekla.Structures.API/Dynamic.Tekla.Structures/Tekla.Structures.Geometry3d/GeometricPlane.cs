@@ -82,14 +82,23 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.GeometricPlane", args);
 		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.GetNormal());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetNormal()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
+{
+
+    try
+    {
+        	var result = teklaObject.GetNormal();
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetNormal), ex);
+    }
+}
+
 
 
 

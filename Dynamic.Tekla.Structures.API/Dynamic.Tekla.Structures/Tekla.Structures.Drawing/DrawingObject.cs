@@ -34,42 +34,78 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetRelatedObjects());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRelatedObjects()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ViewBase GetView()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(teklaObject.GetView());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetView()", ex); }
-		}
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects()
+{
 
-		public Dynamic.Tekla.Structures.Drawing.Drawing GetDrawing()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.GetDrawing());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDrawing()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetRelatedObjects();
 
-		public System.Boolean IsEqual(System.Object ObjectToCompare)
-		{
-			try {
-			var result = teklaObject.IsEqual(ObjectToCompare);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsEqual()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Drawing.ViewBase GetView()
+{
+
+    try
+    {
+        	var result = teklaObject.GetView();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetView), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Drawing.Drawing GetDrawing()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDrawing();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDrawing), ex);
+    }
+}
+
+
+
+public System.Boolean IsEqual(
+	System.Object ObjectToCompare
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.IsEqual(ObjectToCompare);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+    }
+}
+
 
 
 

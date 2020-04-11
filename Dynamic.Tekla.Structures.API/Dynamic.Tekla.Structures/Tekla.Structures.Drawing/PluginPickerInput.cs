@@ -31,23 +31,43 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.PluginPickerInput", args);
 		}
 
-		public void Add(Dynamic.Tekla.Structures.Drawing.PickerInput input)
-		{
-			try {
-			teklaObject.Add(Dynamic.Tekla.Structures.Drawing.PickerInput_.GetTSObject(input));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()", ex); }
-		}
 
-		public void AddRange(System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.PickerInput> inputs)
-		{
-			try {
-			teklaObject.AddRange(inputs);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddRange()", ex); }
-		}
+public void Add(
+	Dynamic.Tekla.Structures.Drawing.PickerInput input_
+	)
+{
+	var input = Dynamic.Tekla.Structures.Drawing.PickerInput_.GetTSObject(input_);
+    try
+    {
+        	teklaObject.Add(input);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Add), ex);
+    }
+}
+
+
+
+public void AddRange(
+	System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.PickerInput> inputs_
+	)
+{
+	var inputs = IEnumerableConverter.ToTSObjects<System.Collections.Generic.List<Tekla.Structures.Drawing.PickerInput>>(inputs_);
+    try
+    {
+        	teklaObject.AddRange(inputs);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddRange), ex);
+    }
+}
+
 
 
 

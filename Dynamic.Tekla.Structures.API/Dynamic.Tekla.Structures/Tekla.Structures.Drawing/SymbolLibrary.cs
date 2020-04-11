@@ -16,20 +16,26 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries()
-		{
-			var parameters = new object[0];
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries", parameters);
-			return Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries(System.Boolean forceRefresh)
-		{
-			var parameters = new object[1];
-			parameters[0] = forceRefresh;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries", parameters);
-			return Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries");
+	var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries(
+	System.Boolean forceRefresh
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries", forceRefresh);
+	var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

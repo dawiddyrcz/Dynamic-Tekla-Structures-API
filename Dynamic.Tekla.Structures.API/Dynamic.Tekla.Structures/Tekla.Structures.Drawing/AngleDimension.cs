@@ -154,15 +154,22 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Drawing.AngleDimension", args);
 		}
 
-		public System.Double GetAngle()
-		{
-			try {
-			var result = teklaObject.GetAngle();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetAngle()", ex); }
-		}
+
+public System.Double GetAngle()
+{
+
+    try
+    {
+        	var result = teklaObject.GetAngle();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAngle), ex);
+    }
+}
+
 
 
 

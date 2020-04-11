@@ -79,25 +79,43 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean Select(System.String Name)
-		{
-			try {
-			var result = teklaObject.Select(Name);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Select()", ex); }
-		}
 
-		public System.Boolean Export(ref System.String filename)
-		{
-			try {
-			var result = teklaObject.Export(ref filename);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Export()", ex); }
-		}
+public System.Boolean Select(
+	System.String Name
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Select(Name);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+    }
+}
+
+
+
+public System.Boolean Export(
+	ref System.String filename
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.Export(ref filename);
+	
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Export), ex);
+    }
+}
+
 
 
 

@@ -99,45 +99,79 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.FacetedBrep", args);
 		}
 
-		public System.Boolean CheckForTwoManifold()
-		{
-			try {
-			var result = teklaObject.CheckForTwoManifold();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CheckForTwoManifold()", ex); }
-		}
 
-		public System.Int32[] GetInnerFace(System.Int32 faceIndex)
-		{
-			try {
-			var result = teklaObject.GetInnerFace(faceIndex);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInnerFace()", ex); }
-		}
+public System.Boolean CheckForTwoManifold()
+{
 
-		public System.Int32 GetInnerFaceCount(System.Int32 faceIndex)
-		{
-			try {
-			var result = teklaObject.GetInnerFaceCount(faceIndex);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInnerFaceCount()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.CheckForTwoManifold();
 
-		public System.Int32[] GetOuterFace(System.Int32 faceIndex)
-		{
-			try {
-			var result = teklaObject.GetOuterFace(faceIndex);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetOuterFace()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CheckForTwoManifold), ex);
+    }
+}
+
+
+
+public System.Int32[] GetInnerFace(
+	System.Int32 faceIndex
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetInnerFace(faceIndex);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInnerFace), ex);
+    }
+}
+
+
+
+public System.Int32 GetInnerFaceCount(
+	System.Int32 faceIndex
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetInnerFaceCount(faceIndex);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInnerFaceCount), ex);
+    }
+}
+
+
+
+public System.Int32[] GetOuterFace(
+	System.Int32 faceIndex
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetOuterFace(faceIndex);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetOuterFace), ex);
+    }
+}
+
 
 
 

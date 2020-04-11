@@ -16,28 +16,38 @@ namespace Dynamic.Tekla.Structures.Drawing
         internal dynamic teklaObject;
 
 
-		public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(System.Int32 CustomLineTypeId)
-		{
-			var parameters = new object[1];
-			parameters[0] = CustomLineTypeId;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", parameters);
-			return Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(System.String Name)
-		{
-			var parameters = new object[1];
-			parameters[0] = Name;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", parameters);
-			return Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
+	System.Int32 CustomLineTypeId
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", CustomLineTypeId);
+	var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
+	return _result;
+}
 
-		public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType> Get()
-		{
-			var parameters = new object[0];
-			var result = (System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType>) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", parameters);
-			return result;
-		}
+
+
+public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
+	System.String Name
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", Name);
+	var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType> Get()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get");
+	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType>>(result);
+	return _result;
+}
+
 
 
 

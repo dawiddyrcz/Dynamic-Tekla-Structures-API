@@ -16,86 +16,172 @@ namespace Dynamic.Tekla.Structures
         internal dynamic teklaObject;
 
 
-		public void CreateGeneralArrangementDrawingFromTemplate(System.String name)
-		{
-			try {
-			teklaObject.CreateGeneralArrangementDrawingFromTemplate(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CreateGeneralArrangementDrawingFromTemplate()", ex); }
-		}
 
-		public void OpenAssemblyDrawingProperties(System.String name)
-		{
-			try {
-			teklaObject.OpenAssemblyDrawingProperties(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenAssemblyDrawingProperties()", ex); }
-		}
+public void CreateGeneralArrangementDrawingFromTemplate(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.CreateGeneralArrangementDrawingFromTemplate(name);
 
-		public void OpenAutoDrawingScript(System.String name)
-		{
-			try {
-			teklaObject.OpenAutoDrawingScript(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenAutoDrawingScript()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CreateGeneralArrangementDrawingFromTemplate), ex);
+    }
+}
 
-		public void OpenCastUnitDrawingProperties(System.String name)
-		{
-			try {
-			teklaObject.OpenCastUnitDrawingProperties(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenCastUnitDrawingProperties()", ex); }
-		}
 
-		public void OpenDrawingList()
-		{
-			try {
-			teklaObject.OpenDrawingList();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenDrawingList()", ex); }
-		}
 
-		public void OpenGeneralArrangementDrawingProperties(System.String name)
-		{
-			try {
-			teklaObject.OpenGeneralArrangementDrawingProperties(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenGeneralArrangementDrawingProperties()", ex); }
-		}
+public void OpenAssemblyDrawingProperties(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.OpenAssemblyDrawingProperties(name);
 
-		public void OpenNumberingSettings()
-		{
-			try {
-			teklaObject.OpenNumberingSettings();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenNumberingSettings()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenAssemblyDrawingProperties), ex);
+    }
+}
 
-		public void OpenSinglePartDrawingProperties(System.String name)
-		{
-			try {
-			teklaObject.OpenSinglePartDrawingProperties(name);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("OpenSinglePartDrawingProperties()", ex); }
-		}
 
-		public void PerformNumbering(System.Boolean fullNumbering)
-		{
-			try {
-			teklaObject.PerformNumbering(fullNumbering);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PerformNumbering()", ex); }
-		}
+
+public void OpenAutoDrawingScript(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.OpenAutoDrawingScript(name);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenAutoDrawingScript), ex);
+    }
+}
+
+
+
+public void OpenCastUnitDrawingProperties(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.OpenCastUnitDrawingProperties(name);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenCastUnitDrawingProperties), ex);
+    }
+}
+
+
+
+public void OpenDrawingList()
+{
+
+    try
+    {
+        	teklaObject.OpenDrawingList();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenDrawingList), ex);
+    }
+}
+
+
+
+public void OpenGeneralArrangementDrawingProperties(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.OpenGeneralArrangementDrawingProperties(name);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenGeneralArrangementDrawingProperties), ex);
+    }
+}
+
+
+
+public void OpenNumberingSettings()
+{
+
+    try
+    {
+        	teklaObject.OpenNumberingSettings();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenNumberingSettings), ex);
+    }
+}
+
+
+
+public void OpenSinglePartDrawingProperties(
+	System.String name
+	)
+{
+	
+    try
+    {
+        	teklaObject.OpenSinglePartDrawingProperties(name);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(OpenSinglePartDrawingProperties), ex);
+    }
+}
+
+
+
+public void PerformNumbering(
+	System.Boolean fullNumbering
+	)
+{
+	
+    try
+    {
+        	teklaObject.PerformNumbering(fullNumbering);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PerformNumbering), ex);
+    }
+}
+
 
 
 

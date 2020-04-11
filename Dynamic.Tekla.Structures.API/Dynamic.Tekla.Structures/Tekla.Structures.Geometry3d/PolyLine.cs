@@ -46,15 +46,22 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.PolyLine", args);
 		}
 
-		public System.Double Length()
-		{
-			try {
-			var result = teklaObject.Length();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Length()", ex); }
-		}
+
+public System.Double Length()
+{
+
+    try
+    {
+        	var result = teklaObject.Length();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Length), ex);
+    }
+}
+
 
 
 		public static System.Boolean operator ==(Dynamic.Tekla.Structures.Geometry3d.PolyLine o1, Dynamic.Tekla.Structures.Geometry3d.PolyLine o2)

@@ -213,72 +213,136 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.ReferenceModel", args);
 		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(teklaObject.GetConvertedObjects());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetConvertedObjects()", ex); }
-		}
 
-		public System.Boolean RefreshFile()
-		{
-			try {
-			var result = teklaObject.RefreshFile();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RefreshFile()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetConvertedObjects()
+{
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
-		{
-			try {
-			var result = teklaObject.GetRevisions();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetRevisions()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetConvertedObjects();
 
-		public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(System.String externalGuid)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetReferenceModelObjectByExternalGuid()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetConvertedObjects), ex);
+    }
+}
 
-		public System.Boolean SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision)
-		{
-			try {
-			var result = teklaObject.SetAsCurrentRevision(Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAsCurrentRevision()", ex); }
-		}
 
-		public System.Boolean SetAsCurrentRevision(System.Int32 modelId, System.Int32 revisionId)
-		{
-			try {
-			var result = teklaObject.SetAsCurrentRevision(modelId, revisionId);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetAsCurrentRevision()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(teklaObject.GetCurrentRevision());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCurrentRevision()", ex); }
-		}
+public System.Boolean RefreshFile()
+{
+
+    try
+    {
+        	var result = teklaObject.RefreshFile();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RefreshFile), ex);
+    }
+}
+
+
+
+public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision> GetRevisions()
+{
+
+    try
+    {
+        	var result = teklaObject.GetRevisions();
+
+        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision>>(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRevisions), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ReferenceModelObject GetReferenceModelObjectByExternalGuid(
+	System.String externalGuid
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetReferenceModelObjectByExternalGuid(externalGuid);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ReferenceModelObject_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReferenceModelObjectByExternalGuid), ex);
+    }
+}
+
+
+
+public System.Boolean SetAsCurrentRevision(
+	Dynamic.Tekla.Structures.Model.ReferenceModel.Revision revision_
+	)
+{
+	var revision = Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.GetTSObject(revision_);
+    try
+    {
+        	var result = teklaObject.SetAsCurrentRevision(revision);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAsCurrentRevision), ex);
+    }
+}
+
+
+
+public System.Boolean SetAsCurrentRevision(
+	System.Int32 modelId,
+	System.Int32 revisionId
+	)
+{
+	
+	
+    try
+    {
+        	var result = teklaObject.SetAsCurrentRevision(modelId, revisionId);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAsCurrentRevision), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ReferenceModel.Revision GetCurrentRevision()
+{
+
+    try
+    {
+        	var result = teklaObject.GetCurrentRevision();
+
+        	var _result = Dynamic.Tekla.Structures.Model.ReferenceModel.Revision_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCurrentRevision), ex);
+    }
+}
+
 
 
 

@@ -129,13 +129,16 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.ModelFolder", args);
 		}
 
-		public static System.Boolean ContainsModelDatabase(System.String modelFolder)
-		{
-			var parameters = new object[1];
-			parameters[0] = modelFolder;
-			var result = (System.Boolean) TSActivator.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", parameters);
-			return result;
-		}
+
+public static System.Boolean ContainsModelDatabase(
+	System.String modelFolder
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", modelFolder);
+	return result;
+}
+
 
 
 

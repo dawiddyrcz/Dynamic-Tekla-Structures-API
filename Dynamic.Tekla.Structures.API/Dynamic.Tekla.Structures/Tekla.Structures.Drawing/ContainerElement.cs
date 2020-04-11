@@ -79,32 +79,62 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public void CopyTo(System.Array array, System.Int32 index)
-		{
-			try {
-			teklaObject.CopyTo(array, index);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()", ex); }
-		}
 
-		public void Add(Dynamic.Tekla.Structures.Drawing.ElementBase value)
-		{
-			try {
-			teklaObject.Add(Dynamic.Tekla.Structures.Drawing.ElementBase_.GetTSObject(value));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Add()", ex); }
-		}
+public void CopyTo(
+	System.Array array_,
+	System.Int32 index
+	)
+{
+	var array = IEnumerableConverter.ToTSObjects<System.Array>(array_);
+	
+    try
+    {
+        	teklaObject.CopyTo(array, index);
 
-		public void Clear()
-		{
-			try {
-			teklaObject.Clear();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clear()", ex); }
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CopyTo), ex);
+    }
+}
+
+
+
+public void Add(
+	Dynamic.Tekla.Structures.Drawing.ElementBase value_
+	)
+{
+	var value = Dynamic.Tekla.Structures.Drawing.ElementBase_.GetTSObject(value_);
+    try
+    {
+        	teklaObject.Add(value);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Add), ex);
+    }
+}
+
+
+
+public void Clear()
+{
+
+    try
+    {
+        	teklaObject.Clear();
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clear), ex);
+    }
+}
+
 
 
 

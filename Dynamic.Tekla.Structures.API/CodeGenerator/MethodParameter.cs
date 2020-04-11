@@ -92,12 +92,7 @@ namespace CodeGenerator
             {
                 if (!haveToBeConverted)
                 {
-                    if (IsRefOrOut) //TODO a nie same outy?
-                    {
-                        return "var " + correctedName + " = " + correctedName_ + ";";
-                    }
-                    else
-                        return string.Empty;
+                     return string.Empty;
                 }
 
                 return Converters.ToTSObjects(parameterInfo.ParameterType, correctedName_, "var " + correctedName);
@@ -110,10 +105,6 @@ namespace CodeGenerator
             {
                 if (!haveToBeConverted)
                 {
-                    if (IsRefOrOut)
-                    {
-                        return correctedName_ + " = " + correctedName + ";";
-                    }
                     return string.Empty;
                 }
 

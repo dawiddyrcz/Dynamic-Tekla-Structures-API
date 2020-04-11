@@ -25,25 +25,37 @@ namespace Dynamic.Tekla.Structures.Drawing.Tools
 			this.teklaObject = tsObject;
 		}
 
-		public static Dynamic.Tekla.Structures.Geometry3d.Point Convert(Dynamic.Tekla.Structures.Drawing.ViewBase fromView, Dynamic.Tekla.Structures.Drawing.ViewBase toView, Dynamic.Tekla.Structures.Geometry3d.Point point)
-		{
-			var parameters = new object[3];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(fromView);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(toView);
-			parameters[2] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter", "Convert", parameters);
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.PointList Convert(Dynamic.Tekla.Structures.Drawing.ViewBase fromView, Dynamic.Tekla.Structures.Drawing.ViewBase toView, Dynamic.Tekla.Structures.Drawing.PointList pointList)
-		{
-			var parameters = new object[3];
-			parameters[0] = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(fromView);
-			parameters[1] = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(toView);
-			parameters[2] = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(pointList);
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter", "Convert", parameters);
-			return Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(result);
-		}
+public static Dynamic.Tekla.Structures.Geometry3d.Point Convert(
+	Dynamic.Tekla.Structures.Drawing.ViewBase fromView_,
+	Dynamic.Tekla.Structures.Drawing.ViewBase toView_,
+	Dynamic.Tekla.Structures.Geometry3d.Point point_
+	)
+{
+	var fromView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(fromView_);
+	var toView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(toView_);
+	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter", "Convert", fromView, toView, point);
+	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Drawing.PointList Convert(
+	Dynamic.Tekla.Structures.Drawing.ViewBase fromView_,
+	Dynamic.Tekla.Structures.Drawing.ViewBase toView_,
+	Dynamic.Tekla.Structures.Drawing.PointList pointList_
+	)
+{
+	var fromView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(fromView_);
+	var toView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(toView_);
+	var pointList = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(pointList_);
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.Tools.DrawingCoordinateConverter", "Convert", fromView, toView, pointList);
+	var _result = Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

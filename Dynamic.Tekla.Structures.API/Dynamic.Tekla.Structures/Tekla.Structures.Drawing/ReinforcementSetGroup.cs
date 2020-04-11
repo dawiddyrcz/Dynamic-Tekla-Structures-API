@@ -58,15 +58,23 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelIdentifiers()
-		{
-			try {
-			var result = teklaObject.GetModelIdentifiers();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetModelIdentifiers()", ex); }
-		}
+
+public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelIdentifiers()
+{
+
+    try
+    {
+        	var result = teklaObject.GetModelIdentifiers();
+
+        	var _result = IEnumerableConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier>>(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetModelIdentifiers), ex);
+    }
+}
+
 
 
 

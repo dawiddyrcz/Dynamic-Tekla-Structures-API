@@ -74,44 +74,80 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
 		}
 
-		public System.Boolean IsInside(Dynamic.Tekla.Structures.Geometry3d.Point Point)
-		{
-			try {
-			var result = teklaObject.IsInside(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsInside()", ex); }
-		}
 
-		public System.Boolean IsInside(Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment)
-		{
-			try {
-			var result = teklaObject.IsInside(Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsInside()", ex); }
-		}
+public System.Boolean IsInside(
+	Dynamic.Tekla.Structures.Geometry3d.Point Point_
+	)
+{
+	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+    try
+    {
+        	var result = teklaObject.IsInside(Point);
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point GetCenterPoint()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.GetCenterPoint());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetCenterPoint()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsInside), ex);
+    }
+}
 
-		public System.Boolean Collide(Dynamic.Tekla.Structures.Geometry3d.AABB Other)
-		{
-			try {
-			var result = teklaObject.Collide(Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Collide()", ex); }
-		}
+
+
+public System.Boolean IsInside(
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment_
+	)
+{
+	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
+    try
+    {
+        	var result = teklaObject.IsInside(LineSegment);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsInside), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Geometry3d.Point GetCenterPoint()
+{
+
+    try
+    {
+        	var result = teklaObject.GetCenterPoint();
+
+        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCenterPoint), ex);
+    }
+}
+
+
+
+public System.Boolean Collide(
+	Dynamic.Tekla.Structures.Geometry3d.AABB Other_
+	)
+{
+	var Other = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(Other_);
+    try
+    {
+        	var result = teklaObject.Collide(Other);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Collide), ex);
+    }
+}
+
 
 
 		public static Dynamic.Tekla.Structures.Geometry3d.AABB operator +(Dynamic.Tekla.Structures.Geometry3d.AABB o1, Dynamic.Tekla.Structures.Geometry3d.AABB o2)

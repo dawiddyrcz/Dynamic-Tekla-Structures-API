@@ -40,23 +40,47 @@ namespace Dynamic.Tekla.Structures.Dialog
 			this.teklaObject = tsObject;
 		}
 
-		public void AddExternalWindow(System.String Name, System.IntPtr Handle)
-		{
-			try {
-			teklaObject.AddExternalWindow(Name, Handle);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddExternalWindow()", ex); }
-		}
 
-		public void RemoveExternalWindow(System.String Name, System.IntPtr Handle)
-		{
-			try {
-			teklaObject.RemoveExternalWindow(Name, Handle);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveExternalWindow()", ex); }
-		}
+public void AddExternalWindow(
+	System.String Name,
+	System.IntPtr Handle_
+	)
+{
+	
+	var Handle = ObjectConverter.ToTSObject(Handle_);
+    try
+    {
+        	teklaObject.AddExternalWindow(Name, Handle);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddExternalWindow), ex);
+    }
+}
+
+
+
+public void RemoveExternalWindow(
+	System.String Name,
+	System.IntPtr Handle_
+	)
+{
+	
+	var Handle = ObjectConverter.ToTSObject(Handle_);
+    try
+    {
+        	teklaObject.RemoveExternalWindow(Name, Handle);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveExternalWindow), ex);
+    }
+}
+
 
 
 

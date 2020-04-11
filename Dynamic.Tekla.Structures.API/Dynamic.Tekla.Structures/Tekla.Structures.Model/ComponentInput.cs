@@ -61,64 +61,123 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point P)
-		{
-			try {
-			var result = teklaObject.AddOneInputPosition(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddOneInputPosition()", ex); }
-		}
 
-		public System.Boolean AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point Position1, Dynamic.Tekla.Structures.Geometry3d.Point Position2)
-		{
-			try {
-			var result = teklaObject.AddTwoInputPositions(Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1), Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddTwoInputPositions()", ex); }
-		}
+public System.Boolean AddOneInputPosition(
+	Dynamic.Tekla.Structures.Geometry3d.Point P_
+	)
+{
+	var P = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(P_);
+    try
+    {
+        	var result = teklaObject.AddOneInputPosition(P);
 
-		public System.Boolean AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon P)
-		{
-			try {
-			var result = teklaObject.AddInputPolygon(Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputPolygon()", ex); }
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddOneInputPosition), ex);
+    }
+}
 
-		public System.Boolean AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject M)
-		{
-			try {
-			var result = teklaObject.AddInputObject(Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputObject()", ex); }
-		}
 
-		public System.Boolean AddInputObjects(System.Collections.ArrayList Objects)
-		{
-			try {
-			var result = teklaObject.AddInputObjects(TSActivator.ConvertToTSArrayList(Objects));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddInputObjects()", ex); }
-		}
 
-		public void CopyTo(System.Array array, System.Int32 index)
-		{
-			try {
-			teklaObject.CopyTo(array, index);
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CopyTo()", ex); }
-		}
+public System.Boolean AddTwoInputPositions(
+	Dynamic.Tekla.Structures.Geometry3d.Point Position1_,
+	Dynamic.Tekla.Structures.Geometry3d.Point Position2_
+	)
+{
+	var Position1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position1_);
+	var Position2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Position2_);
+    try
+    {
+        	var result = teklaObject.AddTwoInputPositions(Position1, Position2);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddTwoInputPositions), ex);
+    }
+}
+
+
+
+public System.Boolean AddInputPolygon(
+	Dynamic.Tekla.Structures.Model.Polygon P_
+	)
+{
+	var P = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(P_);
+    try
+    {
+        	var result = teklaObject.AddInputPolygon(P);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddInputPolygon), ex);
+    }
+}
+
+
+
+public System.Boolean AddInputObject(
+	Dynamic.Tekla.Structures.Model.ModelObject M_
+	)
+{
+	var M = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(M_);
+    try
+    {
+        	var result = teklaObject.AddInputObject(M);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddInputObject), ex);
+    }
+}
+
+
+
+public System.Boolean AddInputObjects(
+	System.Collections.ArrayList Objects_
+	)
+{
+	var Objects = ArrayListConverter.ToTSObjects(Objects_);
+    try
+    {
+        	var result = teklaObject.AddInputObjects(Objects);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddInputObjects), ex);
+    }
+}
+
+
+
+public void CopyTo(
+	System.Array array_,
+	System.Int32 index
+	)
+{
+	var array = IEnumerableConverter.ToTSObjects<System.Array>(array_);
+	
+    try
+    {
+        	teklaObject.CopyTo(array, index);
+
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CopyTo), ex);
+    }
+}
+
 
 
 

@@ -40,14 +40,23 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(teklaObject.GetObjects());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetObjects()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
+{
+
+    try
+    {
+        	var result = teklaObject.GetObjects();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjects), ex);
+    }
+}
+
 
 
 

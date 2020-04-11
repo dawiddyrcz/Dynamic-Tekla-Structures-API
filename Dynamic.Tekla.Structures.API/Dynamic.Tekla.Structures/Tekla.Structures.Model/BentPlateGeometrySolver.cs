@@ -25,158 +25,429 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	var bendShape = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape_);
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, polygon, bendShape);
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, System.Double radius)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), radius));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.Contour polygon, System.Double largestRadius, System.Double halfAperture)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), largestRadius, halfAperture));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, polygon);
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, System.Double radius)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), radius));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1, Dynamic.Tekla.Structures.Model.Contour polygon, Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2, System.Double largestRadius, System.Double halfAperture)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.AddLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon), Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2), largestRadius, halfAperture));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("AddLeg()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection legSection)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.RemoveLeg(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(legSection)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("RemoveLeg()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection bendSection, Dynamic.Tekla.Structures.Model.BendSurface surface)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyBendSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(bendSection), Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(surface)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyBendSurface()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	System.Double radius
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, polygon, radius);
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyCylindricalSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection, Dynamic.Tekla.Structures.Model.CylindricalSurface surface)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyCylindricalSurface(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(surface)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyCylindricalSurface()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyRadius(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection, System.Double radius)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyRadius(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection), radius));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyRadius()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyConicalRadiuses(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection conicalSection, System.Double radius1, System.Double radius2)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyConicalRadiuses(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), radius1, radius2));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyConicalRadiuses()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ScaleConeSection(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection conicalSection, System.Double scale)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ScaleConeSection(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection), scale));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ScaleConeSection()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	System.Double largestRadius,
+	System.Double halfAperture
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	
+	
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, polygon, largestRadius, halfAperture);
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyPolygon(Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry, Dynamic.Tekla.Structures.Model.GeometrySection polygonSection, Dynamic.Tekla.Structures.Model.Contour points)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.ModifyPolygon(Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(polygonSection), Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(points)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("ModifyPolygon()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetMainSection(Dynamic.Tekla.Structures.Model.GeometrySection newMainSection, Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetMainSection(Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(newMainSection), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetMainSection()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetBendAngle(System.Double angle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToSetAngle, Dynamic.Tekla.Structures.Model.GeometrySection sectionToMove, Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.SetBendAngle(angle, Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToSetAngle), Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToMove), Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry)));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("SetBendAngle()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2_,
+	Dynamic.Tekla.Structures.Model.BentPlate.BendShape bendShape_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var segment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	var segment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2_);
+	var bendShape = Dynamic.Tekla.Structures.Model.BentPlate.BendShape_.GetTSObject(bendShape_);
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, segment1, polygon, segment2, bendShape);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var segment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	var segment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2_);
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, segment1, polygon, segment2);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2_,
+	System.Double radius
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var segment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	var segment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2_);
+	
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, segment1, polygon, segment2, radius);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry AddLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment1_,
+	Dynamic.Tekla.Structures.Model.Contour polygon_,
+	Dynamic.Tekla.Structures.Geometry3d.LineSegment segment2_,
+	System.Double largestRadius,
+	System.Double halfAperture
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var segment1 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment1_);
+	var polygon = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(polygon_);
+	var segment2 = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(segment2_);
+	
+	
+    try
+    {
+        	var result = teklaObject.AddLeg(geometry, segment1, polygon, segment2, largestRadius, halfAperture);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddLeg), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry RemoveLeg(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection legSection_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var legSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(legSection_);
+    try
+    {
+        	var result = teklaObject.RemoveLeg(geometry, legSection);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveLeg), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyBendSurface(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection bendSection_,
+	Dynamic.Tekla.Structures.Model.BendSurface surface_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var bendSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(bendSection_);
+	var surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(surface_);
+    try
+    {
+        	var result = teklaObject.ModifyBendSurface(geometry, bendSection, surface);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ModifyBendSurface), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyCylindricalSurface(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection_,
+	Dynamic.Tekla.Structures.Model.CylindricalSurface surface_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var cylindricalSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection_);
+	var surface = Dynamic.Tekla.Structures.Model.CylindricalSurface_.GetTSObject(surface_);
+    try
+    {
+        	var result = teklaObject.ModifyCylindricalSurface(geometry, cylindricalSection, surface);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ModifyCylindricalSurface), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyRadius(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection cylindricalSection_,
+	System.Double radius
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var cylindricalSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(cylindricalSection_);
+	
+    try
+    {
+        	var result = teklaObject.ModifyRadius(geometry, cylindricalSection, radius);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ModifyRadius), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyConicalRadiuses(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection conicalSection_,
+	System.Double radius1,
+	System.Double radius2
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var conicalSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection_);
+	
+	
+    try
+    {
+        	var result = teklaObject.ModifyConicalRadiuses(geometry, conicalSection, radius1, radius2);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ModifyConicalRadiuses), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ScaleConeSection(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection conicalSection_,
+	System.Double scale
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var conicalSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(conicalSection_);
+	
+    try
+    {
+        	var result = teklaObject.ScaleConeSection(geometry, conicalSection, scale);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ScaleConeSection), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry ModifyPolygon(
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_,
+	Dynamic.Tekla.Structures.Model.GeometrySection polygonSection_,
+	Dynamic.Tekla.Structures.Model.Contour points_
+	)
+{
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+	var polygonSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(polygonSection_);
+	var points = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(points_);
+    try
+    {
+        	var result = teklaObject.ModifyPolygon(geometry, polygonSection, points);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ModifyPolygon), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetMainSection(
+	Dynamic.Tekla.Structures.Model.GeometrySection newMainSection_,
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_
+	)
+{
+	var newMainSection = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(newMainSection_);
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+    try
+    {
+        	var result = teklaObject.SetMainSection(newMainSection, geometry);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetMainSection), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Model.ConnectiveGeometry SetBendAngle(
+	System.Double angle,
+	Dynamic.Tekla.Structures.Model.GeometrySection sectionToSetAngle_,
+	Dynamic.Tekla.Structures.Model.GeometrySection sectionToMove_,
+	Dynamic.Tekla.Structures.Model.ConnectiveGeometry geometry_
+	)
+{
+	
+	var sectionToSetAngle = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToSetAngle_);
+	var sectionToMove = Dynamic.Tekla.Structures.Model.GeometrySection_.GetTSObject(sectionToMove_);
+	var geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(geometry_);
+    try
+    {
+        	var result = teklaObject.SetBendAngle(angle, sectionToSetAngle, sectionToMove, geometry);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetBendAngle), ex);
+    }
+}
+
 
 
 

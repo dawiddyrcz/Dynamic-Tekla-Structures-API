@@ -43,21 +43,27 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public static System.String ParseProfileString(System.String profileString)
-		{
-			var parameters = new object[1];
-			parameters[0] = profileString;
-			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", parameters);
-			return result;
-		}
 
-		public static System.String FormatProfileString(System.String profileString)
-		{
-			var parameters = new object[1];
-			parameters[0] = profileString;
-			var result = (System.String) TSActivator.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", parameters);
-			return result;
-		}
+public static System.String ParseProfileString(
+	System.String profileString
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", profileString);
+	return result;
+}
+
+
+
+public static System.String FormatProfileString(
+	System.String profileString
+	)
+{
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", profileString);
+	return result;
+}
+
 
 
 

@@ -97,15 +97,22 @@ namespace Dynamic.Tekla.Structures
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Identifier", args);
 		}
 
-		public System.Boolean IsValid()
-		{
-			try {
-			var result = teklaObject.IsValid();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("IsValid()", ex); }
-		}
+
+public System.Boolean IsValid()
+{
+
+    try
+    {
+        	var result = teklaObject.IsValid();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsValid), ex);
+    }
+}
+
 
 
 

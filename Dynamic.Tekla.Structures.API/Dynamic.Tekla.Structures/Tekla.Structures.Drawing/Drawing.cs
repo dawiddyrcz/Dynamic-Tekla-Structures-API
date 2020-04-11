@@ -394,64 +394,114 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public Dynamic.Tekla.Structures.Drawing.ContainerView GetSheet()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.ContainerView_.FromTSObject(teklaObject.GetSheet());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSheet()", ex); }
-		}
 
-		public System.Boolean CommitChanges()
-		{
-			try {
-			var result = teklaObject.CommitChanges();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()", ex); }
-		}
+public Dynamic.Tekla.Structures.Drawing.ContainerView GetSheet()
+{
 
-		public System.Boolean CommitChanges(System.String Message)
-		{
-			try {
-			var result = teklaObject.CommitChanges(Message);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("CommitChanges()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.GetSheet();
 
-		public System.Boolean PlaceViews()
-		{
-			try {
-			var result = teklaObject.PlaceViews();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("PlaceViews()", ex); }
-		}
+        	var _result = Dynamic.Tekla.Structures.Drawing.ContainerView_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSheet), ex);
+    }
+}
 
-		public System.String GetPlotFileName(System.Boolean includeRevisionInfo)
-		{
-			try {
-			var result = teklaObject.GetPlotFileName(includeRevisionInfo);
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileName()", ex); }
-		}
 
-		public System.String GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum includeRevisionInfo)
-		{
-			try {
-			var result = teklaObject.GetPlotFileNameExt(Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo));
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetPlotFileNameExt()", ex); }
-		}
+
+public System.Boolean CommitChanges()
+{
+
+    try
+    {
+        	var result = teklaObject.CommitChanges();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CommitChanges), ex);
+    }
+}
+
+
+
+public System.Boolean CommitChanges(
+	System.String Message
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.CommitChanges(Message);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CommitChanges), ex);
+    }
+}
+
+
+
+public System.Boolean PlaceViews()
+{
+
+    try
+    {
+        	var result = teklaObject.PlaceViews();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PlaceViews), ex);
+    }
+}
+
+
+
+public System.String GetPlotFileName(
+	System.Boolean includeRevisionInfo
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetPlotFileName(includeRevisionInfo);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetPlotFileName), ex);
+    }
+}
+
+
+
+public System.String GetPlotFileNameExt(
+	Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum includeRevisionInfo_
+	)
+{
+	var includeRevisionInfo = Dynamic.Tekla.Structures.Drawing.IncludeRevisionMarkEnum_.GetTSObject(includeRevisionInfo_);
+    try
+    {
+        	var result = teklaObject.GetPlotFileNameExt(includeRevisionInfo);
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetPlotFileNameExt), ex);
+    }
+}
+
 
 
 

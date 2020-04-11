@@ -55,15 +55,22 @@ namespace Dynamic.Tekla.Structures.Solid
 			this.teklaObject = tsObject;
 		}
 
-		public System.Object Clone()
-		{
-			try {
-			var result = teklaObject.Clone();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Clone()", ex); }
-		}
+
+public System.Object Clone()
+{
+
+    try
+    {
+        	var result = teklaObject.Clone();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+    }
+}
+
 
 
 

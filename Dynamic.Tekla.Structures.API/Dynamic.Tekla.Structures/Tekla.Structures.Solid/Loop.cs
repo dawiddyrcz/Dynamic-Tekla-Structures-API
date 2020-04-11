@@ -22,14 +22,23 @@ namespace Dynamic.Tekla.Structures.Solid
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(teklaObject.GetVertexEnumerator());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetVertexEnumerator()", ex); }
-		}
+
+public Dynamic.Tekla.Structures.Solid.VertexEnumerator GetVertexEnumerator()
+{
+
+    try
+    {
+        	var result = teklaObject.GetVertexEnumerator();
+
+        	var _result = Dynamic.Tekla.Structures.Solid.VertexEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetVertexEnumerator), ex);
+    }
+}
+
 
 
 

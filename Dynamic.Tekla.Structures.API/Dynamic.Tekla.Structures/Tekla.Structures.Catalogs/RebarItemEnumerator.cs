@@ -33,95 +33,154 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			this.teklaObject = tsObject;
 		}
 
-		public System.Boolean MoveNext()
-		{
-			try {
-			var result = teklaObject.MoveNext();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("MoveNext()", ex); }
-		}
 
-		public void Reset()
-		{
-			try {
-			teklaObject.Reset();
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("Reset()", ex); }
-		}
+public System.Boolean MoveNext()
+{
 
-		public System.Int32 GetSize()
-		{
-			try {
-			var result = teklaObject.GetSize();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetSize()", ex); }
-		}
+    try
+    {
+        	var result = teklaObject.MoveNext();
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.String Size, System.Double BendRadius)
-		{
-			var parameters = new object[3];
-			parameters[0] = Grade;
-			parameters[1] = Size;
-			parameters[2] = BendRadius;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
+    }
+}
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.String Size, System.String Usage)
-		{
-			var parameters = new object[3];
-			parameters[0] = Grade;
-			parameters[1] = Size;
-			parameters[2] = Usage;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.String Size)
-		{
-			var parameters = new object[2];
-			parameters[0] = Grade;
-			parameters[1] = Size;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.Double Diameter, System.Double BendRadius, System.Boolean UseNominalDiameter)
-		{
-			var parameters = new object[4];
-			parameters[0] = Grade;
-			parameters[1] = Diameter;
-			parameters[2] = BendRadius;
-			parameters[3] = UseNominalDiameter;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
+public void Reset()
+{
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.Double Diameter, System.String Usage, System.Boolean UseNominalDiameter)
-		{
-			var parameters = new object[4];
-			parameters[0] = Grade;
-			parameters[1] = Diameter;
-			parameters[2] = Usage;
-			parameters[3] = UseNominalDiameter;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
+    try
+    {
+        	teklaObject.Reset();
 
-		public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(System.String Grade, System.Double Diameter, System.Boolean UseNominalDiameter)
-		{
-			var parameters = new object[3];
-			parameters[0] = Grade;
-			parameters[1] = Diameter;
-			parameters[2] = UseNominalDiameter;
-			dynamic result = TSActivator.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", parameters);
-			return Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
-		}
+        
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
+    }
+}
+
+
+
+public System.Int32 GetSize()
+{
+
+    try
+    {
+        	var result = teklaObject.GetSize();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSize), ex);
+    }
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.String Size,
+	System.Double BendRadius
+	)
+{
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Size, BendRadius);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.String Size,
+	System.String Usage
+	)
+{
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Size, Usage);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.String Size
+	)
+{
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Size);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.Double Diameter,
+	System.Double BendRadius,
+	System.Boolean UseNominalDiameter
+	)
+{
+	
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Diameter, BendRadius, UseNominalDiameter);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.Double Diameter,
+	System.String Usage,
+	System.Boolean UseNominalDiameter
+	)
+{
+	
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Diameter, Usage, UseNominalDiameter);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
+
+
+public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+	System.String Grade,
+	System.Double Diameter,
+	System.Boolean UseNominalDiameter
+	)
+{
+	
+	
+	
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Diameter, UseNominalDiameter);
+	var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+	return _result;
+}
+
 
 
 

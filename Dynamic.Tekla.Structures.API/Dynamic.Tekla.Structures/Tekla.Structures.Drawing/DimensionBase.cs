@@ -34,23 +34,43 @@ namespace Dynamic.Tekla.Structures.Drawing
         
 
 
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(teklaObject.GetDimensionSet());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDimensionSet()", ex); }
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet(System.Boolean Select)
-		{
-			try {
-			return Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(teklaObject.GetDimensionSet(Select));
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetDimensionSet()", ex); }
-		}
+public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet()
+{
+
+    try
+    {
+        	var result = teklaObject.GetDimensionSet();
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
+    }
+}
+
+
+
+public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet(
+	System.Boolean Select
+	)
+{
+	
+    try
+    {
+        	var result = teklaObject.GetDimensionSet(Select);
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
+    }
+}
+
 
 
 

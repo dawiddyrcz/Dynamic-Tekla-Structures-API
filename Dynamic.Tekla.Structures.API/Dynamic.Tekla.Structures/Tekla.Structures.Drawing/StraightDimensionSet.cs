@@ -94,12 +94,13 @@ namespace Dynamic.Tekla.Structures.Drawing
 			this.teklaObject = tsObject;
 		}
 
-		public static System.Collections.Generic.List<System.String> GetAllExcludePartsAccordingToFilter()
-		{
-			var parameters = new object[0];
-			var result = (System.Collections.Generic.List<System.String>) TSActivator.InvokeStaticMethod("Tekla.Structures.Drawing.StraightDimensionSet", "GetAllExcludePartsAccordingToFilter", parameters);
-			return result;
-		}
+
+public static System.Collections.Generic.List<System.String> GetAllExcludePartsAccordingToFilter()
+{
+	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.StraightDimensionSet", "GetAllExcludePartsAccordingToFilter");
+	return result;
+}
+
 
 
 

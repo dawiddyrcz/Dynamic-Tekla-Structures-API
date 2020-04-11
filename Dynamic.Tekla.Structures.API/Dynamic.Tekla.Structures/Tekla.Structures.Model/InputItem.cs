@@ -22,24 +22,40 @@ namespace Dynamic.Tekla.Structures.Model
 			this.teklaObject = tsObject;
 		}
 
-		public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-		{
-			try {
-			return Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(teklaObject.GetInputType());
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetInputType()", ex); }
-		}
 
-		public System.Object GetData()
-		{
-			try {
-			var result = teklaObject.GetData();
-			return result;
-			}
-			catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-			 { throw DynamicAPINotFoundException.CouldNotFindMethod("GetData()", ex); }
-		}
+public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
+{
+
+    try
+    {
+        	var result = teklaObject.GetInputType();
+
+        	var _result = Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInputType), ex);
+    }
+}
+
+
+
+public System.Object GetData()
+{
+
+    try
+    {
+        	var result = teklaObject.GetData();
+
+        	return result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetData), ex);
+    }
+}
+
 
 
 

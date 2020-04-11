@@ -30,15 +30,7 @@ namespace CodeGenerator
 
                 if (method.IsGenericMethod)
                     continue;
-
-                if (method.GetParameters().Length == 1)
-                {
-                    if (method.GetParameters()[0].ParameterType.Equals(typeof(System.Type[])))
-                    {
-                        continue;
-                    }
-                }
-
+                
                 var name = method.Name;
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
 

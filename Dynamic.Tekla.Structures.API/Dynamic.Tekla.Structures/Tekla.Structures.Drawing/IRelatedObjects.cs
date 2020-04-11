@@ -35,6 +35,26 @@ public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObject
 
 
 
+public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects(
+	System.Type[] TypeFilter_
+	)
+{
+	var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
+    try
+    {
+        	var result = teklaObject.GetRelatedObjects(TypeFilter);
+
+        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
+    }
+}
+
+
+
 
 
 

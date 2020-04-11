@@ -61,6 +61,26 @@ public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithTyp
 
 
 
+public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(
+	System.Type[] TypeFilter_
+	)
+{
+	var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
+    try
+    {
+        	var result = teklaObject.GetAllObjectsWithType(TypeFilter);
+
+        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+	return _result;
+    }
+    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+    {
+        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjectsWithType), ex);
+    }
+}
+
+
+
 public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(
 	Dynamic.Tekla.Structures.Geometry3d.Point MinPoint_,
 	Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint_

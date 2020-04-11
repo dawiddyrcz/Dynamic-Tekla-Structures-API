@@ -28,6 +28,9 @@ namespace CodeGenerator
                 if (method.GetBaseDefinition() != method) continue;
                 //if (method.ReturnType.Equals(typeof(System.Collections.ArrayList))) continue;
 
+                if (method.IsGenericMethod)
+                    continue;
+
                 if (method.GetParameters().Length == 1)
                 {
                     if (method.GetParameters()[0].ParameterType.Equals(typeof(System.Type[])))

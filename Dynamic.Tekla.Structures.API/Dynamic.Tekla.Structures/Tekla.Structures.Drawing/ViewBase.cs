@@ -183,7 +183,7 @@ public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllObjects(
 	System.Type Type_
 	)
 {
-	var Type = ObjectConverter.ToTSObject(Type_);
+	var Type = TypeConverter.ToTSObjects(Type_);
     try
     {
         	var result = teklaObject.GetAllObjects(Type);

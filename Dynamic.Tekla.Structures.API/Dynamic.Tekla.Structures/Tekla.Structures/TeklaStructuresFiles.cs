@@ -75,10 +75,9 @@ public System.IO.FileInfo GetAttributeFile(
 	
     try
     {
-        	var result = teklaObject.GetAttributeFile(fileName);
+        	var result = (System.IO.FileInfo) teklaObject.GetAttributeFile(fileName);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {
@@ -97,10 +96,9 @@ public System.IO.FileInfo GetAttributeFile(
 	
     try
     {
-        	var result = teklaObject.GetAttributeFile(searchDirectories, fileName);
+        	var result = (System.IO.FileInfo) teklaObject.GetAttributeFile(searchDirectories, fileName);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {

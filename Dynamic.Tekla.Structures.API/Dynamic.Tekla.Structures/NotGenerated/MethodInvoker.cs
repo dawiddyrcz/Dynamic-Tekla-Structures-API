@@ -18,26 +18,19 @@ namespace Dynamic.Tekla.Structures
             throw new NotImplementedException();
         }
 
-        public static object InvokeStaticMethod(string typeName, string methodName, object param1)
-        {
-            //TODO method
-            throw new NotImplementedException();
-        }
-
         public static object InvokeStaticMethod(string typeName, string methodName, ref object param1)
         {
             //TODO method
             throw new NotImplementedException();
         }
 
-        
-
-        public static object InvokeStaticMethod(string typeName, string methodName, object param1, object param2)
+        public static object InvokeStaticMethod(string typeName, string methodName, object param1)
         {
             //TODO method
             throw new NotImplementedException();
         }
-
+        
+       
         public static object InvokeStaticMethod(string typeName, string methodName, object param1, ref bool param2)
         {
             //TODO method
@@ -57,6 +50,18 @@ namespace Dynamic.Tekla.Structures
         }
 
         public static object InvokeStaticMethod(string typeName, string methodName, object param1, ref string param2)
+        {
+            //TODO method
+            throw new NotImplementedException();
+        }
+
+        public static object InvokeStaticMethod(string typeName, string methodName, object param1, ref object param2)
+        {
+            //TODO method
+            throw new NotImplementedException();
+        }
+
+        public static object InvokeStaticMethod(string typeName, string methodName, object param1, object param2)
         {
             //TODO method
             throw new NotImplementedException();
@@ -111,6 +116,12 @@ namespace Dynamic.Tekla.Structures
         }
 
         public static object InvokeStaticMethod(string typeName, string methodName, object param1, object param2, object param3, object param4, object param5, object param6, object param7, object param8)
+        {
+            //TODO method
+            throw new NotImplementedException();
+        }
+
+        public static object InvokeStaticMethod(string typeName, string methodName, object param1, object param2, object param3, ref string param4, object param5, object param6, object param7, object param8)
         {
             //TODO method
             throw new NotImplementedException();

@@ -256,7 +256,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceM
     {
         	var result = teklaObject.GetRevisions();
 
-        	var _result = ListConverter.FromTSObjects(result);
+        	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ReferenceModel.Revision>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

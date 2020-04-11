@@ -43,11 +43,11 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 public void AddExternalWindow(
 	System.String Name,
-	System.IntPtr Handle_
+	System.IntPtr Handle
 	)
 {
 	
-	var Handle = ObjectConverter.ToTSObject(Handle_);
+	
     try
     {
         	teklaObject.AddExternalWindow(Name, Handle);
@@ -64,11 +64,11 @@ public void AddExternalWindow(
 
 public void RemoveExternalWindow(
 	System.String Name,
-	System.IntPtr Handle_
+	System.IntPtr Handle
 	)
 {
 	
-	var Handle = ObjectConverter.ToTSObject(Handle_);
+	
     try
     {
         	teklaObject.RemoveExternalWindow(Name, Handle);

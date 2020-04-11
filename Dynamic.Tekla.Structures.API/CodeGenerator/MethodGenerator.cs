@@ -82,18 +82,18 @@ namespace CodeGenerator
                 sb.Append("\n\n");
             }
 
-            if (type.Name.Equals("Settings"))
-            {
-                sb.Replace("public static System.Boolean TryGetValue(System.String name, out Dynamic.Tekla.Structures.Datatype.Settings.T obj)"
-                    ,
-                    "public static System.Boolean TryGetValue<T>(System.String name, out T obj)");
-                sb.Replace("obj = new Dynamic.Tekla.Structures.Datatype.Settings.T();"
-                    ,
-                    "obj = default(T);");
-                sb.Replace("obj = (Dynamic.Tekla.Structures.Datatype.Settings.T) parameters[1];"
-                    ,
-                    "obj = (T) parameters[1];");
-            }
+            //if (type.Name.Equals("Settings"))
+            //{
+            //    sb.Replace("public static System.Boolean TryGetValue(System.String name, out Dynamic.Tekla.Structures.Datatype.Settings.T obj)"
+            //        ,
+            //        "public static System.Boolean TryGetValue<T>(System.String name, out T obj)");
+            //    sb.Replace("obj = new Dynamic.Tekla.Structures.Datatype.Settings.T();"
+            //        ,
+            //        "obj = default(T);");
+            //    sb.Replace("obj = (Dynamic.Tekla.Structures.Datatype.Settings.T) parameters[1];"
+            //        ,
+            //        "obj = (T) parameters[1];");
+            //}
 
             sb.Append(AditionalMethods(type));
             return sb.ToString();

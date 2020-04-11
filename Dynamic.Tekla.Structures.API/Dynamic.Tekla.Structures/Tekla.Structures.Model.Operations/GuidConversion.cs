@@ -45,16 +45,15 @@ public System.Collections.Generic.Dictionary<System.Guid, System.Guid> GetGuidMa
 
 
 public System.Guid GetNewGuid(
-	System.Guid oldGuid_
+	System.Guid oldGuid
 	)
 {
-	var oldGuid = ObjectConverter.ToTSObject(oldGuid_);
+	
     try
     {
-        	var result = teklaObject.GetNewGuid(oldGuid);
+        	var result = (System.Guid) teklaObject.GetNewGuid(oldGuid);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {

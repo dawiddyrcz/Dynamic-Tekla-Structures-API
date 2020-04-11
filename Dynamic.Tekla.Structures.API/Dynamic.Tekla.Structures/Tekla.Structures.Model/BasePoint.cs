@@ -451,10 +451,9 @@ public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> Ge
 
     try
     {
-        	var result = teklaObject.GetCompoundPlaneAngleLatitude();
+        	var result = (System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32>) teklaObject.GetCompoundPlaneAngleLatitude();
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {
@@ -469,10 +468,9 @@ public System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32> Ge
 
     try
     {
-        	var result = teklaObject.GetCompoundPlaneAngleLongitude();
+        	var result = (System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32>) teklaObject.GetCompoundPlaneAngleLongitude();
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {

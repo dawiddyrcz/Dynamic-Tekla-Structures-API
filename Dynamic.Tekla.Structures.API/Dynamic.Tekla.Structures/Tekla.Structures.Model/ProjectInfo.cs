@@ -628,7 +628,7 @@ public System.Boolean SetDynamicStringProperty(
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
 {
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints");
-	var _result = ListConverter.FromTSObjects(result);
+	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>>(result);
 	return _result;
 }
 
@@ -647,10 +647,10 @@ public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByName(
 
 
 public static Dynamic.Tekla.Structures.Model.BasePoint GetBasePointByGuid(
-	System.Guid guid_
+	System.Guid guid
 	)
 {
-	var guid = ObjectConverter.ToTSObject(guid_);
+	
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePointByGuid", guid);
 	var _result = Dynamic.Tekla.Structures.Model.BasePoint_.FromTSObject(result);
 	return _result;

@@ -48,10 +48,9 @@ public Microsoft.Win32.RegistryKey GetVersion(
 	
     try
     {
-        	var result = teklaObject.GetVersion(version);
+        	var result = (Microsoft.Win32.RegistryKey) teklaObject.GetVersion(version);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {
@@ -68,10 +67,9 @@ public System.Drawing.Rectangle LoadDialogBounds(
 	
     try
     {
-        	var result = teklaObject.LoadDialogBounds(dialogName);
+        	var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {
@@ -90,10 +88,9 @@ public System.Drawing.Rectangle LoadDialogBounds(
 	
     try
     {
-        	var result = teklaObject.LoadDialogBounds(dialogName, version);
+        	var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName, version);
 
-        	var _result = ObjectConverter.FromTSObject(result);
-	return _result;
+        	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
     {
@@ -105,11 +102,11 @@ public System.Drawing.Rectangle LoadDialogBounds(
 
 public void SaveDialogBounds(
 	System.String dialogName,
-	System.Drawing.Rectangle bounds_
+	System.Drawing.Rectangle bounds
 	)
 {
 	
-	var bounds = ObjectConverter.ToTSObject(bounds_);
+	
     try
     {
         	teklaObject.SaveDialogBounds(dialogName, bounds);
@@ -127,12 +124,12 @@ public void SaveDialogBounds(
 public void SaveDialogBounds(
 	System.String dialogName,
 	System.String version,
-	System.Drawing.Rectangle bounds_
+	System.Drawing.Rectangle bounds
 	)
 {
 	
 	
-	var bounds = ObjectConverter.ToTSObject(bounds_);
+	
     try
     {
         	teklaObject.SaveDialogBounds(dialogName, version, bounds);

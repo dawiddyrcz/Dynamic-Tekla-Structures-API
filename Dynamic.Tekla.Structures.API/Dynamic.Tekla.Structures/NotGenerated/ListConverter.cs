@@ -6,20 +6,24 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 using System;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Dynamic.Tekla.Structures
 {
-    internal static class ArrayListConverter
+    public static class ListConverter
     {
-        public static ArrayList ToTSObjects(ArrayList input)
+        public static object ToTSObjects(object input)
         {
             throw new NotImplementedException();
         }
 
-        public static ArrayList FromTSObjects(ArrayList input)
+        public static T FromTSObjects<T>(object input)
         {
             throw new NotImplementedException();
         }
     }
+    
 }

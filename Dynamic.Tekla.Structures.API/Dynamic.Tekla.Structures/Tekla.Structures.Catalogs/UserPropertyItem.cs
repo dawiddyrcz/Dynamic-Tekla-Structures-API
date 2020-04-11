@@ -574,7 +574,7 @@ public System.Boolean GetObjectTypes(
     try
     {
         	var result = (System.Boolean) teklaObject.GetObjectTypes(ref objectTypes);
-	objectTypes_ = ListConverter.FromTSObjects(objectTypes);
+	objectTypes_ = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Catalogs.CatalogObjectTypeEnum>>(objectTypes);
         	return result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

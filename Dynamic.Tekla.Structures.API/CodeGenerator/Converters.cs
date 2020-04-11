@@ -42,6 +42,15 @@ namespace CodeGenerator
             {
                 return outputName + " = IEnumerableConverter.ToTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
+            else if (typeof(System.Type).IsAssignableFrom(type)
+                || typeof(System.Type[]).IsAssignableFrom(type))
+            {
+                return outputName + " = TypeConverter.ToTSObjects(" + inputName + ");";
+            }
+            else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
+            {
+                return outputName + " = TupleConverter.ToTSObjects(" + inputName + ");";
+            }
             else
             {
                 return outputName + " = ObjectConverter.ToTSObject(" + inputName + ");";
@@ -67,11 +76,20 @@ namespace CodeGenerator
                 || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
                 )
             {
-                return outputName + " = ListConverter.FromTSObjects(" + inputName + ");";
+                return outputName + " = ListConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
                 return outputName + " = IEnumerableConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
+            }
+            else if (typeof(System.Type).IsAssignableFrom(type)
+               || typeof(System.Type[]).IsAssignableFrom(type))
+            {
+                return outputName + " = TypeConverter.FromTSObject(" + inputName + ");";
+            }
+            else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
+            {
+                return outputName + " = TupleConverter.FromTSObject<" + typeFullName + ">(" + inputName + ");";
             }
             else
             {
@@ -119,7 +137,19 @@ namespace CodeGenerator
                 || typeof(bool[]).IsAssignableFrom(type)
                 || typeof(System.IAsyncResult).IsAssignableFrom(type)
                 || typeof(System.IFormatProvider).IsAssignableFrom(type)
-                
+                || typeof(System.IntPtr).IsAssignableFrom(type)
+                || typeof(System.Guid).IsAssignableFrom(type)
+
+                || typeof(System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32>).IsAssignableFrom(type)
+                // 
+
+                || type.Namespace.StartsWith("System.Windows.Forms")
+                || type.Namespace.StartsWith("System.Configuration")
+                || type.Namespace.StartsWith("System.IO")
+                || type.Namespace.StartsWith("System.Drawing")
+                || type.Namespace.StartsWith("Microsoft.Win32")
+
+               
                 )
             {
                 return false;

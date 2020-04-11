@@ -73,7 +73,7 @@ public System.Tuple<Dynamic.Tekla.Structures.Geometry3d.Point, Dynamic.Tekla.Str
     {
         	var result = teklaObject.PickPoint(prompt);
 
-        	var _result = ObjectConverter.FromTSObject(result);
+        	var _result = TupleConverter.FromTSObject<System.Tuple<Dynamic.Tekla.Structures.Geometry3d.Point, Dynamic.Tekla.Structures.Drawing.ViewBase>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -184,7 +184,7 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.St
     {
         	var result = teklaObject.PickPoints(numberOfPicks, prompts);
 
-        	var _result = ObjectConverter.FromTSObject(result);
+        	var _result = TupleConverter.FromTSObject<System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.Structures.Drawing.ViewBase>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -228,7 +228,7 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.St
     {
         	var result = teklaObject.PickPoints(prompts);
 
-        	var _result = ObjectConverter.FromTSObject(result);
+        	var _result = TupleConverter.FromTSObject<System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.Structures.Drawing.ViewBase>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -272,7 +272,7 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekl
     {
         	var result = teklaObject.PickObject(prompt);
 
-        	var _result = ObjectConverter.FromTSObject(result);
+        	var _result = TupleConverter.FromTSObject<System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekla.Structures.Drawing.ViewBase>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -319,7 +319,7 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekl
     {
         	var result = teklaObject.PickObjectAndPoint(prompt);
 
-        	var _result = ObjectConverter.FromTSObject(result);
+        	var _result = TupleConverter.FromTSObject<System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekla.Structures.Drawing.ViewBase, Dynamic.Tekla.Structures.Geometry3d.Point>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

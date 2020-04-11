@@ -59,10 +59,10 @@ public void Activate()
 
 
 public void AttachChildForm(
-	System.Windows.Forms.Form form_
+	System.Windows.Forms.Form form
 	)
 {
-	var form = ObjectConverter.ToTSObject(form_);
+	
     try
     {
         	teklaObject.AttachChildForm(form);
@@ -78,10 +78,10 @@ public void AttachChildForm(
 
 
 public void DetachChildForm(
-	System.Windows.Forms.Form form_
+	System.Windows.Forms.Form form
 	)
 {
-	var form = ObjectConverter.ToTSObject(form_);
+	
     try
     {
         	teklaObject.DetachChildForm(form);

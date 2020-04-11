@@ -161,12 +161,12 @@ public void RegisterLocalizationCallback(
 
 
 public void LocalizeToolTip(
-	System.Windows.Forms.Control control_,
-	System.Windows.Forms.ToolTip toolTip_
+	System.Windows.Forms.Control control,
+	System.Windows.Forms.ToolTip toolTip
 	)
 {
-	var control = ObjectConverter.ToTSObject(control_);
-	var toolTip = ObjectConverter.ToTSObject(toolTip_);
+	
+	
     try
     {
         	teklaObject.LocalizeToolTip(control, toolTip);
@@ -182,10 +182,10 @@ public void LocalizeToolTip(
 
 
 public void Localize(
-	System.Windows.Forms.MenuItem menuItem_
+	System.Windows.Forms.MenuItem menuItem
 	)
 {
-	var menuItem = ObjectConverter.ToTSObject(menuItem_);
+	
     try
     {
         	teklaObject.Localize(menuItem);
@@ -201,10 +201,10 @@ public void Localize(
 
 
 public void Localize(
-	System.Windows.Forms.Control control_
+	System.Windows.Forms.Control control
 	)
 {
-	var control = ObjectConverter.ToTSObject(control_);
+	
     try
     {
         	teklaObject.Localize(control);
@@ -220,10 +220,10 @@ public void Localize(
 
 
 public void Localize(
-	System.Configuration.ApplicationSettingsBase applicationSettings_
+	System.Configuration.ApplicationSettingsBase applicationSettings
 	)
 {
-	var applicationSettings = ObjectConverter.ToTSObject(applicationSettings_);
+	
     try
     {
         	teklaObject.Localize(applicationSettings);

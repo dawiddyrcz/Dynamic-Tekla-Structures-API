@@ -146,7 +146,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObjec
     {
         	var result = teklaObject.FetchModelObjects(Guids, SelectInstances);
 
-        	var _result = ListConverter.FromTSObjects(result);
+        	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

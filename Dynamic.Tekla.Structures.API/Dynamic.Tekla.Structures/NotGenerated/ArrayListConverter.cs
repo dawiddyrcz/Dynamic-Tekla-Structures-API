@@ -14,11 +14,13 @@ namespace Dynamic.Tekla.Structures
     {
         public static ArrayList ToTSObjects(ArrayList input)
         {
+            //TODO method
             throw new NotImplementedException();
         }
 
         public static ArrayList FromTSObjects(ArrayList input)
         {
+            //TODO method
             throw new NotImplementedException();
         }
     }

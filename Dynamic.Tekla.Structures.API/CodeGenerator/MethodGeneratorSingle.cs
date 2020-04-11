@@ -103,6 +103,8 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
         {
             var sb = new StringBuilder(200);
             sb.Append("\t");
+            
+            bool hasOutParameter = methodInfo.GetParameters().Any(p => p.IsOut);
 
             if (!IsVoid(methodInfo))
                 sb.Append("var result = ");
@@ -118,6 +120,14 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
                 if (parameters.Count > 0)
                     sb.Append(", ");
             }
+            else if (hasOutParameter)
+            {
+                sb.Append("MethodInvoker.InvokeMethod(\"").Append("$typeFullName").Append("\", \"")
+                .Append(methodInfo.Name).Append("\", ").Append("teklaObject");
+
+                if (parameters.Count > 0)
+                    sb.Append(", ");
+            }
             else
             {
                 sb.Append("teklaObject.")
@@ -125,7 +135,6 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
                .Append("(");
             }
            
-
             if (parameters.Count > 0)
             {
                 foreach (var parameter in parameters)

@@ -239,7 +239,7 @@ public System.Boolean GetStringUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetStringUserProperties(names, out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetStringUserProperties", teklaObject, names, out values);
 	
         	return result;
     }
@@ -260,7 +260,7 @@ public System.Boolean GetDoubleUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(names, out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetDoubleUserProperties", teklaObject, names, out values);
 	
         	return result;
     }
@@ -281,7 +281,7 @@ public System.Boolean GetIntegerUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(names, out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetIntegerUserProperties", teklaObject, names, out values);
 	
         	return result;
     }
@@ -300,7 +300,7 @@ public System.Boolean GetStringUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetStringUserProperties(out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetStringUserProperties", teklaObject, out values);
 	
         	return result;
     }
@@ -319,7 +319,7 @@ public System.Boolean GetDoubleUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetDoubleUserProperties", teklaObject, out values);
 	
         	return result;
     }
@@ -338,7 +338,7 @@ public System.Boolean GetIntegerUserProperties(
 	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(out values);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Drawing.DatabaseObject", "GetIntegerUserProperties", teklaObject, out values);
 	
         	return result;
     }

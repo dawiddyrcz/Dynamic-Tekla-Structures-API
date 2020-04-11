@@ -82,7 +82,7 @@ public System.Boolean CalculatePolygon(
 	var polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(null);
     try
     {
-        	var result = (System.Boolean) teklaObject.CalculatePolygon(out polygon);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Model.Contour", "CalculatePolygon", teklaObject, out polygon);
 	polygon_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(polygon);
         	return result;
     }

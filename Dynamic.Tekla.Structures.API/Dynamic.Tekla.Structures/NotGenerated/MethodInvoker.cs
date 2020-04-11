@@ -12,6 +12,196 @@ namespace Dynamic.Tekla.Structures
 {
     public static class MethodInvoker
     {
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, out object param1)
+        {
+            param1 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, out System.Collections.Generic.Dictionary<string, double> param1)
+        {
+            param1 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = (System.Collections.Generic.Dictionary<string, double>)parameters[0];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, out System.Collections.Generic.Dictionary<string, int> param1)
+        {
+            param1 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = (System.Collections.Generic.Dictionary<string, int>)parameters[0];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, out System.Collections.Generic.Dictionary<string, string> param1)
+        {
+            param1 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = (System.Collections.Generic.Dictionary<string, string>)parameters[0];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out object param2)
+        {
+            param2 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2};
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out System.Collections.Generic.Dictionary<string, double> param2)
+        {
+            param2 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = (System.Collections.Generic.Dictionary<string, double>)parameters[1];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out System.Collections.Generic.Dictionary<string, int> param2)
+        {
+            param2 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = (System.Collections.Generic.Dictionary<string, int>)parameters[1];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out System.Collections.Generic.Dictionary<string, string> param2)
+        {
+            param2 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = (System.Collections.Generic.Dictionary<string, string>)parameters[1];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out object param2, out object param3)
+        {
+            param2 = null;
+            param3 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2 , param3};
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            param3 = parameters[2];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, object param2, out object param3, out object param4)
+        {
+            param3 = null;
+            param4 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2, param3, param4 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            param3 = parameters[2];
+            param4 = parameters[3];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, out object param2, out object param3, out object param4)
+        {
+            param2 = null;
+            param3 = null;
+            param4 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2, param3, param4 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            param3 = parameters[2];
+            param4 = parameters[3];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, object param2, out object param3, out object param4, out object param5)
+        {
+            param3 = null;
+            param4 = null;
+            param5 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2, param3, param4 , param5};
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            param3 = parameters[2];
+            param4 = parameters[3];
+            param5 = parameters[4];
+            return result;
+        }
+
+        public static object InvokeMethod(string typeName, string methodName, dynamic teklaObject, object param1, object param2, object param3, out object param4, out object param5, out object param6, out object param7)
+        {
+            param4 = null;
+            param5 = null;
+            param6 = null;
+            param7 = null;
+            var type = TSActivator.GetTypeFromTypeName(typeName);
+            var parameters = new object[] { param1, param2, param3, param4, param5, param6, param7 };
+            var method = TSActivator.GetMethod(methodName, parameters, type);
+
+            var result = method.Invoke(teklaObject, parameters);
+            param1 = parameters[0];
+            param2 = parameters[1];
+            param3 = parameters[2];
+            param4 = parameters[3];
+            param5 = parameters[4];
+            param6 = parameters[5];
+            param7 = parameters[6];
+            return result;
+        }
+
+        //**************************************************************
+
+
         public static object InvokeStaticMethod(string typeName, string methodName)
         {
             var type = TSActivator.GetTypeFromTypeName(typeName);
@@ -43,8 +233,8 @@ namespace Dynamic.Tekla.Structures
             param1 = parameters[0];
             return result;
         }
+
         
-       
         public static object InvokeStaticMethod(string typeName, string methodName, object param1, 
             ref bool param2)
         {

@@ -602,7 +602,7 @@ public System.Boolean GetPhase(
 	var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(null);
     try
     {
-        	var result = (System.Boolean) teklaObject.GetPhase(out phase);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Model.ModelObject", "GetPhase", teklaObject, out phase);
 	phase_ = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(phase);
         	return result;
     }

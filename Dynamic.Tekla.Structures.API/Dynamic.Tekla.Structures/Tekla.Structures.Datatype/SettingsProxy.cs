@@ -54,7 +54,7 @@ public System.Boolean TryGetValue(
 	obj = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.TryGetValue(name, out obj);
+        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Datatype.SettingsProxy", "TryGetValue", teklaObject, name, out obj);
 	
         	return result;
     }

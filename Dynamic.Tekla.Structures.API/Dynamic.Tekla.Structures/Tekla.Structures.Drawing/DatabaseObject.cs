@@ -232,14 +232,14 @@ public System.Boolean GetUserProperty(
 
 public System.Boolean GetStringUserProperties(
 	System.Collections.Generic.List<System.String> names,
-	ref System.Collections.Generic.Dictionary<System.String, System.String> values
+	out System.Collections.Generic.Dictionary<System.String, System.String> values
 	)
 {
 	
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetStringUserProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetStringUserProperties(names, out values);
 	
         	return result;
     }
@@ -253,14 +253,14 @@ public System.Boolean GetStringUserProperties(
 
 public System.Boolean GetDoubleUserProperties(
 	System.Collections.Generic.List<System.String> names,
-	ref System.Collections.Generic.Dictionary<System.String, System.Double> values
+	out System.Collections.Generic.Dictionary<System.String, System.Double> values
 	)
 {
 	
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(names, out values);
 	
         	return result;
     }
@@ -274,14 +274,14 @@ public System.Boolean GetDoubleUserProperties(
 
 public System.Boolean GetIntegerUserProperties(
 	System.Collections.Generic.List<System.String> names,
-	ref System.Collections.Generic.Dictionary<System.String, System.Int32> values
+	out System.Collections.Generic.Dictionary<System.String, System.Int32> values
 	)
 {
 	
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(names, ref values);
+        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(names, out values);
 	
         	return result;
     }
@@ -294,13 +294,13 @@ public System.Boolean GetIntegerUserProperties(
 
 
 public System.Boolean GetStringUserProperties(
-	ref System.Collections.Generic.Dictionary<System.String, System.String> values
+	out System.Collections.Generic.Dictionary<System.String, System.String> values
 	)
 {
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetStringUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetStringUserProperties(out values);
 	
         	return result;
     }
@@ -313,13 +313,13 @@ public System.Boolean GetStringUserProperties(
 
 
 public System.Boolean GetDoubleUserProperties(
-	ref System.Collections.Generic.Dictionary<System.String, System.Double> values
+	out System.Collections.Generic.Dictionary<System.String, System.Double> values
 	)
 {
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetDoubleUserProperties(out values);
 	
         	return result;
     }
@@ -332,13 +332,13 @@ public System.Boolean GetDoubleUserProperties(
 
 
 public System.Boolean GetIntegerUserProperties(
-	ref System.Collections.Generic.Dictionary<System.String, System.Int32> values
+	out System.Collections.Generic.Dictionary<System.String, System.Int32> values
 	)
 {
-	
+	values = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(ref values);
+        	var result = (System.Boolean) teklaObject.GetIntegerUserProperties(out values);
 	
         	return result;
     }

@@ -58,12 +58,13 @@ namespace CodeGenerator
                 else
                     declaration += correctedName;
 
-                if (parameterInfo.ParameterType.IsByRef)
-                    declaration = "ref " + declaration;
-                else if (parameterInfo.IsOut)
+                if (parameterInfo.IsOut)
                     declaration = "out " + declaration;
+                else if (parameterInfo.ParameterType.IsByRef)
+                    declaration = "ref " + declaration;
+                
 
-                return declaration;
+                    return declaration;
             }
         }
 
@@ -79,10 +80,10 @@ namespace CodeGenerator
         {
             get
             {
-                if (parameterInfo.ParameterType.IsByRef)
-                    return "ref " + correctedName;
-                else if (parameterInfo.IsOut)
+                 if (parameterInfo.IsOut)
                     return "out " + correctedName;
+                else if (parameterInfo.ParameterType.IsByRef)
+                    return "ref " + correctedName;
                 else
                     return correctedName;
             }
@@ -94,10 +95,26 @@ namespace CodeGenerator
             {
                 if (!haveToBeConverted)
                 {
-                     return string.Empty;
+                    if (parameterInfo.IsOut)
+                        return correctedName + " = null;";
+                    else
+                        return string.Empty;
                 }
 
-                return Converters.ToTSObjects(parameterInfo.ParameterType, correctedName_, "var " + correctedName);
+                Type elementType;
+                if (parameterInfo.ParameterType.IsByRef)
+                    elementType = parameterInfo.ParameterType.GetElementType();
+                else
+                    elementType = parameterInfo.ParameterType;
+
+                string inputName = correctedName_;
+
+                if (parameterInfo.IsOut && elementType.IsEnum)
+                    inputName = "0";
+                else if (parameterInfo.IsOut)
+                    inputName = "null";
+
+                return Converters.ToTSObjects(parameterInfo.ParameterType, inputName, "var " + correctedName);
             }
         }
 

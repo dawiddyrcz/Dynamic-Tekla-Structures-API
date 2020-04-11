@@ -70,11 +70,11 @@ public static System.Boolean CompareFingerprints(
 
 public static System.Boolean GetSolidBrep(
 	Dynamic.Tekla.Structures.Geometry3d.FacetedBrep inBrep_,
-	ref Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep_
+	out Dynamic.Tekla.Structures.Geometry3d.FacetedBrep outBrep_
 	)
 {
 	var inBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(inBrep_);
-	var outBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(outBrep_);
+	var outBrep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(null);
 	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Polymesh", "GetSolidBrep", inBrep, ref outBrep);
 	outBrep_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(outBrep);
 	return result;

@@ -42,16 +42,16 @@ public System.Boolean IsInteractive()
 
 public void PickPoint(
 	System.String prompt,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	
-	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pickedPoint_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickPoint(prompt, ref pickedPoint, ref pickedView);
+        	teklaObject.PickPoint(prompt, out pickedPoint, out pickedView);
 	pickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(pickedPoint);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
         
@@ -87,19 +87,19 @@ public System.Tuple<Dynamic.Tekla.Structures.Geometry3d.Point, Dynamic.Tekla.Str
 public void PickTwoPoints(
 	System.String firstPrompt,
 	System.String secondPrompt,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point firstPickedPoint_,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point secondPickedPoint_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Geometry3d.Point firstPickedPoint_,
+	out Dynamic.Tekla.Structures.Geometry3d.Point secondPickedPoint_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	
 	
-	var firstPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(firstPickedPoint_);
-	var secondPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(secondPickedPoint_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var firstPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var secondPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickTwoPoints(firstPrompt, secondPrompt, ref firstPickedPoint, ref secondPickedPoint, ref pickedView);
+        	teklaObject.PickTwoPoints(firstPrompt, secondPrompt, out firstPickedPoint, out secondPickedPoint, out pickedView);
 	firstPickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(firstPickedPoint);
 	secondPickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(secondPickedPoint);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
@@ -117,22 +117,22 @@ public void PickThreePoints(
 	System.String firstPrompt,
 	System.String secondPrompt,
 	System.String thirdPrompt,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point firstPickedPoint_,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point secondPickedPoint_,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point thirdPickedPoint_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Geometry3d.Point firstPickedPoint_,
+	out Dynamic.Tekla.Structures.Geometry3d.Point secondPickedPoint_,
+	out Dynamic.Tekla.Structures.Geometry3d.Point thirdPickedPoint_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	
 	
 	
-	var firstPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(firstPickedPoint_);
-	var secondPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(secondPickedPoint_);
-	var thirdPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(thirdPickedPoint_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var firstPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var secondPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var thirdPickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickThreePoints(firstPrompt, secondPrompt, thirdPrompt, ref firstPickedPoint, ref secondPickedPoint, ref thirdPickedPoint, ref pickedView);
+        	teklaObject.PickThreePoints(firstPrompt, secondPrompt, thirdPrompt, out firstPickedPoint, out secondPickedPoint, out thirdPickedPoint, out pickedView);
 	firstPickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(firstPickedPoint);
 	secondPickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(secondPickedPoint);
 	thirdPickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(thirdPickedPoint);
@@ -150,17 +150,17 @@ public void PickThreePoints(
 public void PickPoints(
 	System.Int32 numberOfPicks,
 	Dynamic.Tekla.Structures.Drawing.StringList prompts_,
-	ref Dynamic.Tekla.Structures.Drawing.PointList pickedPoints_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Drawing.PointList pickedPoints_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	
 	var prompts = Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts_);
-	var pickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(pickedPoints_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var pickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickPoints(numberOfPicks, prompts, ref pickedPoints, ref pickedView);
+        	teklaObject.PickPoints(numberOfPicks, prompts, out pickedPoints, out pickedView);
 	pickedPoints_ = Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(pickedPoints);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
         
@@ -197,16 +197,16 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.St
 
 public void PickPoints(
 	Dynamic.Tekla.Structures.Drawing.StringList prompts_,
-	ref Dynamic.Tekla.Structures.Drawing.PointList pickedPoints_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Drawing.PointList pickedPoints_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	var prompts = Dynamic.Tekla.Structures.Drawing.StringList_.GetTSObject(prompts_);
-	var pickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(pickedPoints_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var pickedPoints = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickPoints(prompts, ref pickedPoints, ref pickedView);
+        	teklaObject.PickPoints(prompts, out pickedPoints, out pickedView);
 	pickedPoints_ = Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(pickedPoints);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
         
@@ -241,16 +241,16 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.PointList, Dynamic.Tekla.St
 
 public void PickObject(
 	System.String prompt,
-	ref Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
+	out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_
 	)
 {
 	
-	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(pickedObject_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
+	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
     try
     {
-        	teklaObject.PickObject(prompt, ref pickedObject, ref pickedView);
+        	teklaObject.PickObject(prompt, out pickedObject, out pickedView);
 	pickedObject_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(pickedObject);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
         
@@ -285,18 +285,18 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekl
 
 public void PickObject(
 	System.String prompt,
-	ref Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_
+	out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_,
+	out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_
 	)
 {
 	
-	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(pickedObject_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
-	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pickedPoint_);
+	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
+	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
     try
     {
-        	teklaObject.PickObject(prompt, ref pickedObject, ref pickedView, ref pickedPoint);
+        	teklaObject.PickObject(prompt, out pickedObject, out pickedView, out pickedPoint);
 	pickedObject_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(pickedObject);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
 	pickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(pickedPoint);
@@ -333,19 +333,19 @@ public System.Tuple<Dynamic.Tekla.Structures.Drawing.DrawingObject, Dynamic.Tekl
 public void PickObject(
 	System.String prompt,
 	System.Type[] typeFilter_,
-	ref Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
-	ref Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_,
-	ref Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_
+	out Dynamic.Tekla.Structures.Drawing.DrawingObject pickedObject_,
+	out Dynamic.Tekla.Structures.Drawing.ViewBase pickedView_,
+	out Dynamic.Tekla.Structures.Geometry3d.Point pickedPoint_
 	)
 {
 	
 	var typeFilter = TypeConverter.ToTSObjects(typeFilter_);
-	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(pickedObject_);
-	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(pickedView_);
-	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(pickedPoint_);
+	var pickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(null);
+	var pickedView = Dynamic.Tekla.Structures.Drawing.ViewBase_.GetTSObject(null);
+	var pickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(null);
     try
     {
-        	teklaObject.PickObject(prompt, typeFilter, ref pickedObject, ref pickedView, ref pickedPoint);
+        	teklaObject.PickObject(prompt, typeFilter, out pickedObject, out pickedView, out pickedPoint);
 	pickedObject_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(pickedObject);
 	pickedView_ = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(pickedView);
 	pickedPoint_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(pickedPoint);

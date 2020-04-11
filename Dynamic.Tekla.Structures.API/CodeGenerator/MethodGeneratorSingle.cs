@@ -130,7 +130,12 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             {
                 foreach (var parameter in parameters)
                 {
-                    sb.Append(parameter.MethodCall).Append(", ");
+                    if (methodInfo.IsStatic)
+                        sb.Append(parameter.MethodCall.Replace("out ", "ref "));
+                    else
+                        sb.Append(parameter.MethodCall);
+
+                    sb.Append(", ");
                 }
 
                 sb.Remove(sb.Length - 2, 2);

@@ -74,9 +74,9 @@ namespace CodeGenerator.Tests
             var methodParameter = new MethodParameter(parameterInfo);
 
             Assert.AreEqual("System.Type[] TypeFilter_", methodParameter.MethodDeclaration);
-            Assert.AreEqual("var TypeFilter = IEnumerableConverter.ToTSObjects<System.Type[]>(TypeFilter_);", methodParameter.ConverterToTS);
+            Assert.AreEqual("var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);", methodParameter.ConverterToTS);
             Assert.AreEqual("TypeFilter", methodParameter.ParameterName);
-            Assert.AreEqual("TypeFilter_ = IEnumerableConverter.FromTSObjects<System.Type[]>(TypeFilter);", methodParameter.ConverterFromTS);
+            Assert.AreEqual("TypeFilter_ = TypeConverter.FromTSObject(TypeFilter);", methodParameter.ConverterFromTS);
 
         }
 
@@ -111,9 +111,9 @@ namespace CodeGenerator.Tests
             var methodParameter = new MethodParameter(parameterInfo);
 
             Assert.AreEqual("System.Type Type_", methodParameter.MethodDeclaration);
-            Assert.AreEqual("var Type = ObjectConverter.ToTSObject(Type_);", methodParameter.ConverterToTS);
+            Assert.AreEqual("var Type = TypeConverter.ToTSObjects(Type_);", methodParameter.ConverterToTS);
             Assert.AreEqual("Type", methodParameter.ParameterName);
-            Assert.AreEqual("Type_ = ObjectConverter.FromTSObject(Type);", methodParameter.ConverterFromTS);
+            Assert.AreEqual("Type_ = TypeConverter.FromTSObject(Type);", methodParameter.ConverterFromTS);
 
         }
 
@@ -131,6 +131,42 @@ namespace CodeGenerator.Tests
             Assert.AreEqual("System.Collections.Generic.List<System.String> names", methodParameter.MethodDeclaration);
             Assert.AreEqual(string.Empty, methodParameter.ConverterToTS);
             Assert.AreEqual("names", methodParameter.ParameterName);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterFromTS);
+
+        }
+
+        [Test]
+        public void For_Out_Phase()
+        {
+            var parameterInfo = typeof(Tekla.Structures.Model.Beam)
+               .GetMethods()
+               .FirstOrDefault(m => m.Name.Equals("GetPhase", StringComparison.InvariantCulture)
+               && m.GetParameters().Length > 0)
+               .GetParameters().FirstOrDefault();
+
+            var methodParameter = new MethodParameter(parameterInfo);
+
+            Assert.AreEqual("out Dynamic.Tekla.Structures.Model.Phase phase_", methodParameter.MethodDeclaration);
+            Assert.AreEqual("var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(null);", methodParameter.ConverterToTS);
+            Assert.AreEqual("phase", methodParameter.ParameterName);
+            Assert.AreEqual("phase_ = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(phase);", methodParameter.ConverterFromTS);
+
+        }
+
+        [Test]
+        public void For_Ref_String()
+        {
+            var parameterInfo = typeof(Tekla.Structures.Model.ModelObject)
+               .GetMethods()
+               .FirstOrDefault(m => m.Name.Equals("GetReportProperty", StringComparison.InvariantCulture)
+               && m.GetParameters().Length > 1)
+               .GetParameters().FirstOrDefault(p => p.ParameterType.IsByRef);
+
+            var methodParameter = new MethodParameter(parameterInfo);
+
+            Assert.AreEqual("ref System.String value", methodParameter.MethodDeclaration);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterToTS);
+            Assert.AreEqual("value", methodParameter.ParameterName);
             Assert.AreEqual(string.Empty, methodParameter.ConverterFromTS);
 
         }

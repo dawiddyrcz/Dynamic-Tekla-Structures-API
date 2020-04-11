@@ -76,13 +76,13 @@ public void AddContourPoint(
 
 
 public System.Boolean CalculatePolygon(
-	ref Dynamic.Tekla.Structures.Model.Polygon polygon_
+	out Dynamic.Tekla.Structures.Model.Polygon polygon_
 	)
 {
-	var polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(polygon_);
+	var polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(null);
     try
     {
-        	var result = (System.Boolean) teklaObject.CalculatePolygon(ref polygon);
+        	var result = (System.Boolean) teklaObject.CalculatePolygon(out polygon);
 	polygon_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(polygon);
         	return result;
     }

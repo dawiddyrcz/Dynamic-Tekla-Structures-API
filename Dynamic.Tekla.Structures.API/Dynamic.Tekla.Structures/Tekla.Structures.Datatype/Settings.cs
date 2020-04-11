@@ -39,11 +39,11 @@ public static System.Object GetValue(
 
 public static System.Boolean TryGetValue(
 	System.String name,
-	ref System.Object obj
+	out System.Object obj
 	)
 {
 	
-	
+	obj = null;
 	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
 	
 	return result;

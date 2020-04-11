@@ -47,14 +47,14 @@ public System.Object GetValue(
 
 public System.Boolean TryGetValue(
 	System.String name,
-	ref System.Object obj
+	out System.Object obj
 	)
 {
 	
-	
+	obj = null;
     try
     {
-        	var result = (System.Boolean) teklaObject.TryGetValue(name, ref obj);
+        	var result = (System.Boolean) teklaObject.TryGetValue(name, out obj);
 	
         	return result;
     }

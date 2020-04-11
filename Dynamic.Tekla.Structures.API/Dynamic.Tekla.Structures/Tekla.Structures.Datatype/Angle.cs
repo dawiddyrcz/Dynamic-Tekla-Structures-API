@@ -151,11 +151,11 @@ public static Dynamic.Tekla.Structures.Datatype.Angle Parse(
 
 public static System.Boolean TryParse(
 	System.String text,
-	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
+	out Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
-	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(null);
 	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, ref presult);
 	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;
@@ -166,12 +166,12 @@ public static System.Boolean TryParse(
 public static System.Boolean TryParse(
 	System.String text,
 	System.IFormatProvider formatProvider,
-	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
+	out Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
 	
-	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(null);
 	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, ref presult);
 	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;
@@ -183,13 +183,13 @@ public static System.Boolean TryParse(
 	System.String text,
 	System.IFormatProvider formatProvider,
 	Dynamic.Tekla.Structures.Datatype.Angle.UnitType unitType_,
-	ref Dynamic.Tekla.Structures.Datatype.Angle presult_
+	out Dynamic.Tekla.Structures.Datatype.Angle presult_
 	)
 {
 	
 	
 	var unitType = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(unitType_);
-	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(presult_);
+	var presult = Dynamic.Tekla.Structures.Datatype.Angle_.GetTSObject(null);
 	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Angle", "TryParse", text, formatProvider, unitType, ref presult);
 	presult_ = Dynamic.Tekla.Structures.Datatype.Angle_.FromTSObject(presult);
 	return result;

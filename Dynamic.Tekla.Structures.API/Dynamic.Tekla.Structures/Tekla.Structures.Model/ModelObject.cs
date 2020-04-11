@@ -596,13 +596,13 @@ public System.Boolean SetPhase(
 
 
 public System.Boolean GetPhase(
-	ref Dynamic.Tekla.Structures.Model.Phase phase_
+	out Dynamic.Tekla.Structures.Model.Phase phase_
 	)
 {
-	var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(phase_);
+	var phase = Dynamic.Tekla.Structures.Model.Phase_.GetTSObject(null);
     try
     {
-        	var result = (System.Boolean) teklaObject.GetPhase(ref phase);
+        	var result = (System.Boolean) teklaObject.GetPhase(out phase);
 	phase_ = Dynamic.Tekla.Structures.Model.Phase_.FromTSObject(phase);
         	return result;
     }

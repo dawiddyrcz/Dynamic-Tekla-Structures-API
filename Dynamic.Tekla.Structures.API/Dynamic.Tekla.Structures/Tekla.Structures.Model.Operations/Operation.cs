@@ -169,7 +169,7 @@ public static System.Boolean CreateNCFilesByPartId(
 	System.String NCFileSettings,
 	System.String DestinationFolder,
 	Dynamic.Tekla.Structures.Identifier PartID_,
-	ref System.String DstvOutput,
+	out System.String DstvOutput,
 	System.Boolean CreatePopMarks,
 	System.String PopMarkSettingsFileName,
 	System.Boolean CreateContourMarking,
@@ -179,7 +179,7 @@ public static System.Boolean CreateNCFilesByPartId(
 	
 	
 	var PartID = Dynamic.Tekla.Structures.Identifier_.GetTSObject(PartID_);
-	
+	DstvOutput = null;
 	
 	
 	

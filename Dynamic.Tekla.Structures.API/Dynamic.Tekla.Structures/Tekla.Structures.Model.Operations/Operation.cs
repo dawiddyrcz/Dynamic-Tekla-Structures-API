@@ -42,7 +42,7 @@ public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.Mod
 {
 	var ObjectToCompare = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(ObjectToCompare_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetSimilarNumberedObjects", ObjectToCompare);
-	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject>>(result);
+	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.ModelObject>(result);
 	return _result;
 }
 

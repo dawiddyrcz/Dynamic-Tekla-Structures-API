@@ -77,7 +77,8 @@ namespace CodeGenerator
                 || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
                 )
             {
-                return outputName + " = ListConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
+                var listParams = typeFullName.Replace("System.Collections.Generic.List", "").Replace("System.Collections.Generic.IList", "");
+                return outputName + " = ListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {

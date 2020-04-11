@@ -21,11 +21,59 @@ namespace Dynamic.Tekla.Structures
             throw new NotImplementedException();
         }
 
-        public static T FromTSObjects<T>(object input)
+        public static List<T> FromTSObjects<T>(dynamic tsObjects)
         {
-            //TODO method
-            throw new NotImplementedException();
+            if (tsObjects.Count.Equals(0))
+                return new List<T>();
+
+            var output = new List<T>(tsObjects.Count + 1);
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+            foreach (var tsObject in tsObjects)
+            {
+                string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
+                var converterType = assembly.GetType(converterName);
+                var parameters = new object[] { tsObject };
+                var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+
+                output.Add((T)fromTSObjectMethod.Invoke(null, parameters));
+            }
+            return output;
         }
+
+        //public static ArrayList ToTSObjects(ArrayList dynAPIObjects)
+        //{
+        //    if (dynAPIObjects.Count.Equals(0))
+        //        return new ArrayList();
+
+        //    var output = new ArrayList(dynAPIObjects.Count + 1);
+
+        //    foreach (dynamic dynObject in dynAPIObjects)
+        //    {
+        //        output.Add(dynObject.teklaObject);
+        //    }
+        //    return output;
+        //}
+
+        //public static ArrayList FromTSObjects(ArrayList tsObjects)
+        //{
+        //    if (tsObjects.Count.Equals(0))
+        //        return new ArrayList();
+
+        //    var output = new ArrayList(tsObjects.Count + 1);
+        //    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+        //    foreach (var tsObject in tsObjects)
+        //    {
+        //        string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
+        //        var converterType = assembly.GetType(converterName);
+        //        var parameters = new object[] { tsObject };
+        //        var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+
+        //        output.Add(fromTSObjectMethod.Invoke(null, parameters));
+        //    }
+        //    return output;
+        //}
     }
     
 }

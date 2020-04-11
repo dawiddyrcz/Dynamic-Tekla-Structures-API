@@ -266,7 +266,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> G
     {
         	var result = teklaObject.GetVisibleInViews();
 
-        	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View>>(result);
+        	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.UI.View>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -280,7 +280,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.UI.View> G
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud> GetPointClouds()
 {
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.PointCloud", "GetPointClouds");
-	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.PointCloud>>(result);
+	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.PointCloud>(result);
 	return _result;
 }
 

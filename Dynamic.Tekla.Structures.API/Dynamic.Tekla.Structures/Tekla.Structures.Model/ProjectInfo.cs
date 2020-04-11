@@ -628,7 +628,7 @@ public System.Boolean SetDynamicStringProperty(
 public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint> GetBasePoints()
 {
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ProjectInfo", "GetBasePoints");
-	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.BasePoint>>(result);
+	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.BasePoint>(result);
 	return _result;
 }
 

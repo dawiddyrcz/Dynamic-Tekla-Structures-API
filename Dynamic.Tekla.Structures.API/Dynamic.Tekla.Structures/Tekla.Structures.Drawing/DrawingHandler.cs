@@ -428,7 +428,7 @@ public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetM
     {
         	var result = teklaObject.GetModelObjectIdentifiers(drawing);
 
-        	var _result = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier>>(result);
+        	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Identifier>(result);
 	return _result;
     }
     catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

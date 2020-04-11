@@ -15,10 +15,20 @@ namespace Dynamic.Tekla.Structures
 {
     public static class ListConverter
     {
-        public static object ToTSObjects(object input)
+        //TODO check IList
+        //TODO test if it works
+        public static List<dynamic> ToTSObjects(dynamic dynAPIObjects)
         {
-            //TODO method
-            throw new NotImplementedException();
+            if (dynAPIObjects.Count.Equals(0))
+                return new List<dynamic>();
+
+            var output = new List<dynamic>(dynAPIObjects.Count + 1);
+
+            foreach (dynamic dynObject in dynAPIObjects)
+            {
+                output.Add(dynObject.teklaObject);
+            }
+            return output;
         }
 
         public static List<T> FromTSObjects<T>(dynamic tsObjects)

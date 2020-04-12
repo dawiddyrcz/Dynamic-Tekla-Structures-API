@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class MeshItemEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Catalogs.MeshItem Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Catalogs.MeshItem_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Catalogs.MeshItem Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.MeshItem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.MeshItem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

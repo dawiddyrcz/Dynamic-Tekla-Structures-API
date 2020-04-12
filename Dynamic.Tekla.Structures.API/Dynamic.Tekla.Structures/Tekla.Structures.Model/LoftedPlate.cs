@@ -13,42 +13,64 @@ namespace Dynamic.Tekla.Structures.Model
     public  class LoftedPlate  : Dynamic.Tekla.Structures.Model.Part
     {
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
-		{
-			get
-			{
-				try {
-					return teklaObject.BaseCurves;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BaseCurves", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BaseCurves = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BaseCurves", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum FaceType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(teklaObject.FaceType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FaceType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.FaceType = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FaceType", ex); }
-			}
-		}
+    public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.ICurve> BaseCurves
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BaseCurves;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.ICurve>(value);
+                return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.ICurve>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BaseCurves), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ListConverter.ToTSObjects(value);
+                teklaObject.BaseCurves = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BaseCurves), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum FaceType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.FaceType;
+                var value_ = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FaceType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.LoftedPlate.LoftedPlateFaceTypeEnum_.GetTSObject(value);
+                teklaObject.FaceType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FaceType), ex); 
+            }
+        }
+    }
         
 
         

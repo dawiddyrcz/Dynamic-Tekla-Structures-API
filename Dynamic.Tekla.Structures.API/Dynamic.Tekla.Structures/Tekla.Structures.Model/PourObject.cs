@@ -13,78 +13,110 @@ namespace Dynamic.Tekla.Structures.Model
     public  class PourObject  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.Int32 Class
-		{
-			get
-			{
-				try {
-					return teklaObject.Class;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Class", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Class = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Class", ex); }
-			}
-		}
 
-		public System.String PourNumber
-		{
-			get
-			{
-				try {
-					return teklaObject.PourNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourNumber", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PourNumber = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourNumber", ex); }
-			}
-		}
+    public System.Int32 Class
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Class;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Class), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Class = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Class), ex); 
+            }
+        }
+    }
 
-		public System.String PourType
-		{
-			get
-			{
-				try {
-					return teklaObject.PourType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PourType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourType", ex); }
-			}
-		}
+    public System.String PourNumber
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PourNumber;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourNumber), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PourNumber = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourNumber), ex); 
+            }
+        }
+    }
 
-		public System.String ConcreteMixture
-		{
-			get
-			{
-				try {
-					return teklaObject.ConcreteMixture;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConcreteMixture", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ConcreteMixture = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ConcreteMixture", ex); }
-			}
-		}
+    public System.String PourType
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PourType;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PourType = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourType), ex); 
+            }
+        }
+    }
 
+    public System.String ConcreteMixture
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ConcreteMixture;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConcreteMixture), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ConcreteMixture = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConcreteMixture), ex); 
+            }
+        }
+    }
         
 
         

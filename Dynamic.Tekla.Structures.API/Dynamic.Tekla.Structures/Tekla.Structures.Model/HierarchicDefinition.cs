@@ -13,132 +13,197 @@ namespace Dynamic.Tekla.Structures.Model
     public  class HierarchicDefinition  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
 
-		public System.String CustomType
-		{
-			get
-			{
-				try {
-					return teklaObject.CustomType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CustomType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CustomType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CustomType", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum HierarchyType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.FromTSObject(teklaObject.HierarchyType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchyType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HierarchyType = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchyType", ex); }
-			}
-		}
+    public System.String CustomType
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CustomType;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CustomType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CustomType = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CustomType), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.HierarchicDefinition Father
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(teklaObject.Father);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Father = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum HierarchyType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HierarchyType;
+                var value_ = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchyType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.HierarchicDefinitionTypeEnum_.GetTSObject(value);
+                teklaObject.HierarchyType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchyType), ex); 
+            }
+        }
+    }
 
-		public System.String HierarchyIdentifier
-		{
-			get
-			{
-				try {
-					return teklaObject.HierarchyIdentifier;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchyIdentifier", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.HierarchyIdentifier = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchyIdentifier", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.HierarchicDefinition Father
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Father;
+                var value_ = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.HierarchicDefinition) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.HierarchicDefinition_.GetTSObject(value);
+                teklaObject.Father = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+    }
 
-		public System.Boolean Drawable
-		{
-			get
-			{
-				try {
-					return teklaObject.Drawable;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Drawable", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Drawable = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Drawable", ex); }
-			}
-		}
+    public System.String HierarchyIdentifier
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.HierarchyIdentifier;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchyIdentifier), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.HierarchyIdentifier = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchyIdentifier), ex); 
+            }
+        }
+    }
 
-		public System.Collections.ArrayList HierarchicChildren
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.HierarchicChildren);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchicChildren", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.HierarchicChildren = TSActivator.ConvertToTSArrayList(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HierarchicChildren", ex); }
-			}
-		}
+    public System.Boolean Drawable
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Drawable;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Drawable), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Drawable = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Drawable), ex); 
+            }
+        }
+    }
 
+    public System.Collections.ArrayList HierarchicChildren
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HierarchicChildren;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchicChildren), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ArrayListConverter.ToTSObjects(value);
+                teklaObject.HierarchicChildren = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HierarchicChildren), ex); 
+            }
+        }
+    }
         
 
         

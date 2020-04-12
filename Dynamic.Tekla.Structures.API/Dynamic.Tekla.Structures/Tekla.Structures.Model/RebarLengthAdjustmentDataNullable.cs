@@ -13,42 +13,61 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarLengthAdjustmentDataNullable 
     {
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum> AdjustmentType
-		{
-			get
-			{
-				try {
-					return teklaObject.AdjustmentType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.AdjustmentType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentType", ex); }
-			}
-		}
 
-		public System.Nullable<System.Double> AdjustmentLength
-		{
-			get
-			{
-				try {
-					return teklaObject.AdjustmentLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.AdjustmentLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AdjustmentLength", ex); }
-			}
-		}
+    public System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum> AdjustmentType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.AdjustmentType;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AdjustmentType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.AdjustmentType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AdjustmentType), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<System.Double> AdjustmentLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.AdjustmentLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AdjustmentLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.AdjustmentLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AdjustmentLength), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

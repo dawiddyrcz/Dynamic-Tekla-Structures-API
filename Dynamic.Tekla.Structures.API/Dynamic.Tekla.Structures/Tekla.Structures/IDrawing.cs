@@ -13,41 +13,58 @@ namespace Dynamic.Tekla.Structures
     public abstract class IDrawing 
     {
 
-		public Dynamic.Tekla.Structures.Drawing.Drawing Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
-		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Drawing.Drawing> Drawings
-		{
-			get
-			{
-				try {
-					return teklaObject.Drawings;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Drawings", ex); }
-			}
+    public Dynamic.Tekla.Structures.Drawing.Drawing Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.Drawing) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Drawing.Drawing> Drawings
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Drawings;
+                var value_ = IEnumerableConverter.FromTSObjects<Dynamic.Tekla.Structures.Drawing.Drawing>(value);
+                return (System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Drawing.Drawing>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Drawings), ex); 
+            }
+        }
+        
+    }
 
-		public System.Boolean IsEditorOpen
-		{
-			get
-			{
-				try {
-					return teklaObject.IsEditorOpen;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEditorOpen", ex); }
-			}
-
-		}
-
+    public System.Boolean IsEditorOpen
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsEditorOpen;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsEditorOpen), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

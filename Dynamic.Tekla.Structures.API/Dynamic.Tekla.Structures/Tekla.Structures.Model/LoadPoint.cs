@@ -13,60 +13,93 @@ namespace Dynamic.Tekla.Structures.Model
     public  class LoadPoint  : Dynamic.Tekla.Structures.Model.Load
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point Position
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Position);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Position = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector P
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("P", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.P = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("P", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Point Position
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Position;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.Position = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector Moment
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Moment);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Moment", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Moment = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Moment", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Vector P
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.P;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(P), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+                teklaObject.P = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(P), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Geometry3d.Vector Moment
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Moment;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Moment), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+                teklaObject.Moment = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Moment), ex); 
+            }
+        }
+    }
         
 
         

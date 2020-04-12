@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PourBreak  : Dynamic.Tekla.Structures.Drawing.ModelObject
     {
 
-		public Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes Attributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes_.FromTSObject(teklaObject.Attributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes Attributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Attributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.PourBreak.PourBreakAttributes_.GetTSObject(value);
+                teklaObject.Attributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+    }
         
 
         
@@ -48,60 +59,90 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PourBreakAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VisibleLines", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VisibleLines", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HiddenLines", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HiddenLines", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.VisibleLines;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypeAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(VisibleLines), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+                teklaObject.VisibleLines = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(VisibleLines), ex); 
+            }
+        }
+    }
 
-		public System.Boolean DrawHiddenLines
-		{
-			get
-			{
-				try {
-					return teklaObject.DrawHiddenLines;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawHiddenLines", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DrawHiddenLines = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawHiddenLines", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HiddenLines;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypeAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HiddenLines), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+                teklaObject.HiddenLines = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HiddenLines), ex); 
+            }
+        }
+    }
 
+    public System.Boolean DrawHiddenLines
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DrawHiddenLines;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DrawHiddenLines), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DrawHiddenLines = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DrawHiddenLines), ex); 
+            }
+        }
+    }
         
 
         

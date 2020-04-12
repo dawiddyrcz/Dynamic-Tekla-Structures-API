@@ -13,54 +13,74 @@ namespace Dynamic.Tekla.Structures.Model.History
     public  class ModificationStamp 
     {
 
-		public System.Int32 LocalStamp
-		{
-			get
-			{
-				try {
-					return teklaObject.LocalStamp;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocalStamp", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LocalStamp = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocalStamp", ex); }
-			}
-		}
 
-		public System.Int32 ServerStamp
-		{
-			get
-			{
-				try {
-					return teklaObject.ServerStamp;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ServerStamp", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ServerStamp = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ServerStamp", ex); }
-			}
-		}
+    public System.Int32 LocalStamp
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LocalStamp;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocalStamp), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LocalStamp = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocalStamp), ex); 
+            }
+        }
+    }
 
-		public System.String Guid
-		{
-			get
-			{
-				try {
-					return teklaObject.Guid;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guid", ex); }
-			}
+    public System.Int32 ServerStamp
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ServerStamp;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ServerStamp), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ServerStamp = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ServerStamp), ex); 
+            }
+        }
+    }
 
-		}
-
+    public System.String Guid
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Guid;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Guid), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

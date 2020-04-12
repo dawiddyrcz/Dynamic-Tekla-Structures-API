@@ -13,28 +13,42 @@ namespace Dynamic.Tekla.Structures.Solid
     public abstract class ISolid 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MinimumPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumPoint", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MaximumPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumPoint", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Point MinimumPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MinimumPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumPoint), ex); 
+            }
+        }
+        
+    }
 
+    public Dynamic.Tekla.Structures.Geometry3d.Point MaximumPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MaximumPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximumPoint), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

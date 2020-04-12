@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class Boolean  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public Dynamic.Tekla.Structures.Model.ModelObject Father
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Father);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Father = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.ModelObject Father
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Father;
+                var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ModelObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(value);
+                teklaObject.Father = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+    }
         
 
         

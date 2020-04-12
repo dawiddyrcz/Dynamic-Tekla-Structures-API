@@ -13,54 +13,81 @@ namespace Dynamic.Tekla.Structures.Datatype
     public  class Angle 
     {
 
-		public static Dynamic.Tekla.Structures.Datatype.Angle.UnitType CurrentUnitType
-		{
-			get => Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","CurrentUnitType"));
-			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","CurrentUnitType",Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(value)); }
-		}
 
-		public static System.Int32 DecimalPlaces
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","DecimalPlaces");
-			set { TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle","DecimalPlaces", value); }
-		}
+    public static Dynamic.Tekla.Structures.Datatype.Angle.UnitType CurrentUnitType
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle", "CurrentUnitType");
+            var value_ = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Datatype.Angle.UnitType) value_;
+        }
+        set
+        {
+            var value_ = Dynamic.Tekla.Structures.Datatype.Angle.UnitType_.GetTSObject(value);
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle", "CurrentUnitType", value_);
+        }
+    }
+    public static System.Int32 DecimalPlaces
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle", "DecimalPlaces");
+            return (System.Int32) value;
+        }
+        set
+        {
+            var value_ = value;
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Angle", "DecimalPlaces", value_);
+        }
+    }
+    public System.Double Degrees
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Degrees;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Degrees), ex); 
+            }
+        }
+        
+    }
 
-		public System.Double Degrees
-		{
-			get
-			{
-				try {
-					return teklaObject.Degrees;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Degrees", ex); }
-			}
+    public System.Double Radians
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Radians;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radians), ex); 
+            }
+        }
+        
+    }
 
-		}
-
-		public System.Double Radians
-		{
-			get
-			{
-				try {
-					return teklaObject.Radians;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radians", ex); }
-			}
-
-		}
-
-		public System.Double CurrentUnitValue
-		{
-			get
-			{
-				try {
-					return teklaObject.CurrentUnitValue;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentUnitValue", ex); }
-			}
-
-		}
-
+    public System.Double CurrentUnitValue
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CurrentUnitValue;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurrentUnitValue), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

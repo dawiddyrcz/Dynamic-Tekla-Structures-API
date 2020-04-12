@@ -13,42 +13,61 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Assembly  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(teklaObject.AssemblyNumber);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyNumber", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.AssemblyNumber = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AssemblyNumber", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.NumberingSeries AssemblyNumber
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.AssemblyNumber;
+                var value_ = Dynamic.Tekla.Structures.Model.NumberingSeries_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.NumberingSeries) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AssemblyNumber), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.NumberingSeries_.GetTSObject(value);
+                teklaObject.AssemblyNumber = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AssemblyNumber), ex); 
+            }
+        }
+    }
         
 
         

@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReportTemplateElement  : Dynamic.Tekla.Structures.Drawing.ElementBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.TemplateInfo Template
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(teklaObject.Template);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Template", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Template = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Template", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.TemplateInfo Template
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Template;
+                var value_ = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.TemplateInfo) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Template), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value);
+                teklaObject.Template = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Template), ex); 
+            }
+        }
+    }
         
 
         

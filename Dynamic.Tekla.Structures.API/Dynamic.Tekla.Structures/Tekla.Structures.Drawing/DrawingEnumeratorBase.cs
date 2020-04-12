@@ -13,30 +13,45 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class DrawingEnumeratorBase 
     {
 
-		public static System.Boolean AutoFetch
-		{
-			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase","AutoFetch");
-			set { TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase","AutoFetch", value); }
-		}
 
-		public System.Boolean SelectInstances
-		{
-			get
-			{
-				try {
-					return teklaObject.SelectInstances;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SelectInstances = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-		}
-
+    public static System.Boolean AutoFetch
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch");
+            return (System.Boolean) value;
+        }
+        set
+        {
+            var value_ = value;
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch", value_);
+        }
+    }
+    public System.Boolean SelectInstances
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SelectInstances;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SelectInstances = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

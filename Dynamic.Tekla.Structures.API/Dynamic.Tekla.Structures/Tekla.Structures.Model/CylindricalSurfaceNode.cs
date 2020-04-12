@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Model
     public  class CylindricalSurfaceNode  : Dynamic.Tekla.Structures.Model.BendSurfaceNode
     {
 
-		public Dynamic.Tekla.Structures.Model.CylindricalSurface Surface
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(teklaObject.Surface);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.CylindricalSurface Surface
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Surface;
+                var value_ = Dynamic.Tekla.Structures.Model.CylindricalSurface_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.CylindricalSurface) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Surface), ex); 
+            }
+        }
+        
+    }
         
 
         

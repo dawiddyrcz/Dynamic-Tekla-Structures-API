@@ -13,114 +13,171 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Position 
     {
 
-		public System.Double PlaneOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.PlaneOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlaneOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PlaneOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PlaneOffset", ex); }
-			}
-		}
 
-		public System.Double DepthOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.DepthOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DepthOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DepthOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DepthOffset", ex); }
-			}
-		}
+    public System.Double PlaneOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PlaneOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlaneOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PlaneOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlaneOffset), ex); 
+            }
+        }
+    }
 
-		public System.Double RotationOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.RotationOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RotationOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.RotationOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RotationOffset", ex); }
-			}
-		}
+    public System.Double DepthOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DepthOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DepthOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DepthOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DepthOffset), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.Position.PlaneEnum Plane
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(teklaObject.Plane);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane", ex); }
-			}
-		}
+    public System.Double RotationOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.RotationOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.RotationOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationOffset), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.Position.DepthEnum Depth
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(teklaObject.Depth);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Depth", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Depth = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Depth", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.Position.PlaneEnum Plane
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Plane;
+                var value_ = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Position.PlaneEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Position.PlaneEnum_.GetTSObject(value);
+                teklaObject.Plane = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.Position.RotationEnum Rotation
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(teklaObject.Rotation);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Rotation", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Rotation = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Rotation", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.Position.DepthEnum Depth
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Depth;
+                var value_ = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Position.DepthEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Depth), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Position.DepthEnum_.GetTSObject(value);
+                teklaObject.Depth = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Depth), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.Position.RotationEnum Rotation
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Rotation;
+                var value_ = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Position.RotationEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Rotation), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Position.RotationEnum_.GetTSObject(value);
+                teklaObject.Rotation = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Rotation), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

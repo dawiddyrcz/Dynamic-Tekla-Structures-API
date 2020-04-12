@@ -11,6 +11,7 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class IEnumerableConverter
     {
+        //TODO list<dynamic>
         public static List<T> ToTSObjects<T>(IEnumerable<T> dynAPIObjects)
         {
             var enumerator = dynAPIObjects.GetEnumerator();

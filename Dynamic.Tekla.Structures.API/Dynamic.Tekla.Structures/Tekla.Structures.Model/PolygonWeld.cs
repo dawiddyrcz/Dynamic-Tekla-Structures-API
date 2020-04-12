@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public  class PolygonWeld  : Dynamic.Tekla.Structures.Model.BaseWeld
     {
 
-		public Dynamic.Tekla.Structures.Model.Polygon Polygon
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.Polygon Polygon
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Polygon;
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Polygon) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
+                teklaObject.Polygon = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+    }
         
 
         

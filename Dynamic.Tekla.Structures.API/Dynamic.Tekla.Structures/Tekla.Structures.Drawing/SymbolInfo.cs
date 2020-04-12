@@ -13,49 +13,73 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class SymbolInfo 
     {
 
-		public System.Int32 SymbolIndex
-		{
-			get
-			{
-				try {
-					return teklaObject.SymbolIndex;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolIndex", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SymbolIndex = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolIndex", ex); }
-			}
-		}
 
-		public System.String SymbolFile
-		{
-			get
-			{
-				try {
-					return teklaObject.SymbolFile;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolFile", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SymbolFile = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SymbolFile", ex); }
-			}
-		}
+    public System.Int32 SymbolIndex
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SymbolIndex;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SymbolIndex = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
+            }
+        }
+    }
 
-		public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default
-		{
-			get => Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo","Default"));
-			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo","Default",Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value)); }
-		}
+    public System.String SymbolFile
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SymbolFile;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SymbolFile = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
+            }
+        }
+    }
 
-        
+    public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default");
+            var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.SymbolInfo) value_;
+        }
+        set
+        {
+            var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value);
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default", value_);
+        }
+    }        
 
         internal dynamic teklaObject;
 

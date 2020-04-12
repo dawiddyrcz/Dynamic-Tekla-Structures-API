@@ -13,78 +13,122 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DetailMark  : Dynamic.Tekla.Structures.Drawing.DrawingObject
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.CenterPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CenterPoint", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.CenterPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CenterPoint", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point BoundaryPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.BoundaryPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryPoint", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BoundaryPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryPoint", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Point CenterPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CenterPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CenterPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.CenterPoint = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CenterPoint), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point LabelPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.LabelPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPoint", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LabelPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPoint", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Point BoundaryPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BoundaryPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.BoundaryPoint = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryPoint), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes Attributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.FromTSObject(teklaObject.Attributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Point LabelPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LabelPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.LabelPoint = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPoint), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes Attributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Attributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes_.GetTSObject(value);
+                teklaObject.Attributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+    }
         
 
         
@@ -121,150 +165,235 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DetailMarkAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public System.String MarkName
-		{
-			get
-			{
-				try {
-					return teklaObject.MarkName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkName", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MarkName = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkName", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes BoundingLine
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.BoundingLine);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundingLine", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BoundingLine = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundingLine", ex); }
-			}
-		}
+    public System.String MarkName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MarkName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkName), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MarkName = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkName), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape BoundaryShape
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.FromTSObject(teklaObject.BoundaryShape);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryShape", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BoundaryShape = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryShape", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes BoundingLine
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BoundingLine;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypeAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundingLine), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+                teklaObject.BoundingLine = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundingLine), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingColors MarkSymbolColor
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.MarkSymbolColor);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolColor", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MarkSymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolColor", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape BoundaryShape
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BoundaryShape;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryShape), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMark.DetailMarkAttributes.DetailBoundaryShape_.GetTSObject(value);
+                teklaObject.BoundaryShape = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryShape), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes MarkSymbolAttributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.FromTSObject(teklaObject.MarkSymbolAttributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolAttributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MarkSymbolAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolAttributes", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DrawingColors MarkSymbolColor
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MarkSymbolColor;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingColors) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolColor), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+                teklaObject.MarkSymbolColor = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolColor), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes TagsAttributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagsAttributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagsAttributes", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes MarkSymbolAttributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MarkSymbolAttributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolAttributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMarkSymbolAttributes_.GetTSObject(value);
+                teklaObject.MarkSymbolAttributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolAttributes), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypes BoundaryLineType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(teklaObject.BoundaryLineType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryLineType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BoundaryLineType = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryLineType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes TagsAttributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagsAttributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagsAttributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DetailMarkTagsAttributes_.GetTSObject(value);
+                teklaObject.TagsAttributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagsAttributes), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingColors BoundaryLineColor
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.BoundaryLineColor);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryLineColor", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BoundaryLineColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoundaryLineColor", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypes BoundaryLineType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BoundaryLineType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryLineType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(value);
+                teklaObject.BoundaryLineType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryLineType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.DrawingColors BoundaryLineColor
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BoundaryLineColor;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingColors) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryLineColor), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+                teklaObject.BoundaryLineColor = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoundaryLineColor), ex); 
+            }
+        }
+    }
         
 
         

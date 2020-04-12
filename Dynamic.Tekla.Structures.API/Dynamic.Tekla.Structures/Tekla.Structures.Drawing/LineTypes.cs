@@ -13,55 +13,87 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class LineTypes 
     {
 
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes UndefinedLine
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","UndefinedLine"));
 
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes SolidLine
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","SolidLine"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes DashedLine
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","DashedLine"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashedLine
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","SlashedLine"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDot
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","DashDot"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes DottedLine
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","DottedLine"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDoubleDot
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","DashDoubleDot"));
-
-		}
-
-		public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashDash
-		{
-			get => Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes","SlashDash"));
-
-		}
-
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes UndefinedLine
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "UndefinedLine");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
         
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes SolidLine
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SolidLine");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashedLine
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashedLine");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashedLine
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashedLine");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDot
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDot");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes DottedLine
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DottedLine");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDoubleDot
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDoubleDot");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }
+    public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashDash
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashDash");
+            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+        }
+        
+    }        
 
         internal dynamic teklaObject;
 

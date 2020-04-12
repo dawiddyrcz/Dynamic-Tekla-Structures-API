@@ -13,54 +13,72 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class FacetedBrepFaceHole 
     {
 
-		public System.Int32 Count
-		{
-			get
-			{
-				try {
-					return teklaObject.Count;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count", ex); }
-			}
 
-		}
+    public System.Int32 Count
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Count;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
+            }
+        }
+        
+    }
 
-		public System.Boolean IsReadOnly
-		{
-			get
-			{
-				try {
-					return teklaObject.IsReadOnly;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsReadOnly", ex); }
-			}
+    public System.Boolean IsReadOnly
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsReadOnly;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsReadOnly), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Collections.Generic.IList<System.Int32> VerticeIndexes
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.VerticeIndexes;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(VerticeIndexes), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IList<System.Int32> VerticeIndexes
-		{
-			get
-			{
-				try {
-					return teklaObject.VerticeIndexes;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VerticeIndexes", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
-		{
-			get
-			{
-				try {
-					return teklaObject.Vertices;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Vertices", ex); }
-			}
-
-		}
-
+    public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Vertices;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Vector>(value);
+                return (System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Vertices), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     public  class IFC2X3_ParametricObject_CircleProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
-		public System.Double Radius
-		{
-			get
-			{
-				try {
-					return teklaObject.Radius;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radius", ex); }
-			}
 
-		}
-
+    public System.Double Radius
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Radius;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radius), ex); 
+            }
+        }
+        
+    }
         
 
         

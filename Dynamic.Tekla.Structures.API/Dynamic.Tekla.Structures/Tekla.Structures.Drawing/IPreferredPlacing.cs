@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class IPreferredPlacing 
     {
 
-		public Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PreferredPlacing
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(teklaObject.PreferredPlacing);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PreferredPlacing", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.PreferredPlacing = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PreferredPlacing", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase PreferredPlacing
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.PreferredPlacing;
+                var value_ = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PreferredPlacing), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.PreferredPlacingTypeBase_.GetTSObject(value);
+                teklaObject.PreferredPlacing = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PreferredPlacing), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

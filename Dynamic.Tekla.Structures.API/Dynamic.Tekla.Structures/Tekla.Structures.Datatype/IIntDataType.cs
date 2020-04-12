@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Datatype
     public abstract class IIntDataType 
     {
 
-		public System.Int32 Value
-		{
-			get
-			{
-				try {
-					return teklaObject.Value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Value = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
-			}
-		}
 
+    public System.Int32 Value
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Value = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

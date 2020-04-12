@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class MaterialMarketSizesItem 
     {
 
-		public System.String MaterialName
-		{
-			get
-			{
-				try {
-					return teklaObject.MaterialName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialName", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MaterialName = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaterialName", ex); }
-			}
-		}
 
-		public System.Double[] MarketSizes
-		{
-			get
-			{
-				try {
-					return teklaObject.MarketSizes;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarketSizes", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MarketSizes = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarketSizes", ex); }
-			}
-		}
+    public System.String MaterialName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MaterialName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaterialName), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MaterialName = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaterialName), ex); 
+            }
+        }
+    }
 
+    public System.Double[] MarketSizes
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MarketSizes;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarketSizes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MarketSizes = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarketSizes), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

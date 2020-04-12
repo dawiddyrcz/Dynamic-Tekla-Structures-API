@@ -13,186 +13,275 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementPulloutElement  : Dynamic.Tekla.Structures.Drawing.ElementBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(teklaObject.Font);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Font", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Font = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Font", ex); }
-			}
-		}
 
-		public System.Boolean AutomaticScaling
-		{
-			get
-			{
-				try {
-					return teklaObject.AutomaticScaling;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.AutomaticScaling = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Font;
+                var value_ = Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.FontAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
+                teklaObject.Font = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
+            }
+        }
+    }
 
-		public System.Double ScaleX
-		{
-			get
-			{
-				try {
-					return teklaObject.ScaleX;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScaleX", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ScaleX = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScaleX", ex); }
-			}
-		}
+    public System.Boolean AutomaticScaling
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.AutomaticScaling;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutomaticScaling), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.AutomaticScaling = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutomaticScaling), ex); 
+            }
+        }
+    }
 
-		public System.Double ScaleY
-		{
-			get
-			{
-				try {
-					return teklaObject.ScaleY;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScaleY", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ScaleY = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ScaleY", ex); }
-			}
-		}
+    public System.Double ScaleX
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ScaleX;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ScaleX), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ScaleX = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ScaleX), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation RotationAxis
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.FromTSObject(teklaObject.RotationAxis);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RotationAxis", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RotationAxis = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RotationAxis", ex); }
-			}
-		}
+    public System.Double ScaleY
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ScaleY;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ScaleY), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ScaleY = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ScaleY), ex); 
+            }
+        }
+    }
 
-		public System.Boolean Exaggeration
-		{
-			get
-			{
-				try {
-					return teklaObject.Exaggeration;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Exaggeration", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Exaggeration = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Exaggeration", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation RotationAxis
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RotationAxis;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationAxis), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.Rotation_.GetTSObject(value);
+                teklaObject.RotationAxis = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationAxis), ex); 
+            }
+        }
+    }
 
-		public System.Boolean BendingRadius
-		{
-			get
-			{
-				try {
-					return teklaObject.BendingRadius;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingRadius", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BendingRadius = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingRadius", ex); }
-			}
-		}
+    public System.Boolean Exaggeration
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Exaggeration;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Exaggeration), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Exaggeration = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Exaggeration), ex); 
+            }
+        }
+    }
 
-		public System.Boolean BendingAngle
-		{
-			get
-			{
-				try {
-					return teklaObject.BendingAngle;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingAngle", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BendingAngle = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BendingAngle", ex); }
-			}
-		}
+    public System.Boolean BendingRadius
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.BendingRadius;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingRadius), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.BendingRadius = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingRadius), ex); 
+            }
+        }
+    }
 
-		public System.Boolean Dimensioning
-		{
-			get
-			{
-				try {
-					return teklaObject.Dimensioning;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dimensioning", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Dimensioning = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Dimensioning", ex); }
-			}
-		}
+    public System.Boolean BendingAngle
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.BendingAngle;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingAngle), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.BendingAngle = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingAngle), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols EndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.FromTSObject(teklaObject.EndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.EndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndSymbolType", ex); }
-			}
-		}
+    public System.Boolean Dimensioning
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Dimensioning;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Dimensioning), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Dimensioning = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Dimensioning), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols EndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.EndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementPulloutElement.EndSymbols_.GetTSObject(value);
+                teklaObject.EndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndSymbolType), ex); 
+            }
+        }
+    }
         
 
         

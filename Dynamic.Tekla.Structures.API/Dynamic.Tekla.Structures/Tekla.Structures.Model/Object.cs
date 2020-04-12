@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class Object 
     {
 
-		public Dynamic.Tekla.Structures.Identifier Identifier
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.Identifier);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Identifier", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Identifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Identifier", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Identifier Identifier
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Identifier;
+                var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Identifier) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Identifier), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+                teklaObject.Identifier = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Identifier), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

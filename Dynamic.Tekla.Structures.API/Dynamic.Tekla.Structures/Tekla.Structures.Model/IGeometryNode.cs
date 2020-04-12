@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class IGeometryNode 
     {
 
-		public System.Boolean IsAutomatic
-		{
-			get
-			{
-				try {
-					return teklaObject.IsAutomatic;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic", ex); }
-			}
 
-		}
-
+    public System.Boolean IsAutomatic
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsAutomatic;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

@@ -13,35 +13,50 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class ProfileItemEnumerator 
     {
 
-		public System.Boolean SelectInstances
-		{
-			get
-			{
-				try {
-					return teklaObject.SelectInstances;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SelectInstances = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Catalogs.ProfileItem Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
+    public System.Boolean SelectInstances
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SelectInstances;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SelectInstances = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Catalogs.ProfileItem Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.ProfileItem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.ProfileItem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class ReinforcementBase  : Dynamic.Tekla.Structures.Drawing.ModelObject
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes Attributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.FromTSObject(teklaObject.Attributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes Attributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Attributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes_.GetTSObject(value);
+                teklaObject.Attributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+    }
         
 
         
@@ -277,60 +288,93 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementSingleAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ReinforcementVisibility;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.ReinforcementVisibility = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StraightEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+                teklaObject.StraightEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HookedEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+                teklaObject.HookedEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+    }
         
 
         
@@ -411,60 +455,93 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementGroupAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ReinforcementVisibility;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.ReinforcementVisibility = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StraightEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+                teklaObject.StraightEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HookedEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+                teklaObject.HookedEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+    }
         
 
         
@@ -545,60 +622,93 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementSetGroupAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ReinforcementVisibility;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.ReinforcementVisibility = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StraightEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+                teklaObject.StraightEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HookedEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+                teklaObject.HookedEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+    }
         
 
         
@@ -679,60 +789,93 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementStrandAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.ReinforcementVisibility);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ReinforcementVisibility = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementVisibility", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(teklaObject.StraightEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StraightEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StraightEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes ReinforcementVisibility
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ReinforcementVisibility;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.ReinforcementVisibility = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementVisibility), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(teklaObject.HookedEndSymbolType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HookedEndSymbolType = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HookedEndSymbolType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes StraightEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StraightEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.StraightEndSymbolTypes_.GetTSObject(value);
+                teklaObject.StraightEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StraightEndSymbolType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes HookedEndSymbolType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HookedEndSymbolType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.HookedEndSymbolTypes_.GetTSObject(value);
+                teklaObject.HookedEndSymbolType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HookedEndSymbolType), ex); 
+            }
+        }
+    }
         
 
         
@@ -819,78 +962,116 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ReinforcementMeshAttributes  : Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityLongitudinal
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityLongitudinal);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementVisibilityLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MeshReinforcementVisibilityLongitudinal = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementVisibilityLongitudinal", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityCrossing
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(teklaObject.MeshReinforcementVisibilityCrossing);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementVisibilityCrossing", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MeshReinforcementVisibilityCrossing = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementVisibilityCrossing", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityLongitudinal
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MeshReinforcementVisibilityLongitudinal;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementVisibilityLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.MeshReinforcementVisibilityLongitudinal = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementVisibilityLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.Int32 MeshReinforcementSymbolIndex
-		{
-			get
-			{
-				try {
-					return teklaObject.MeshReinforcementSymbolIndex;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementSymbolIndex", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MeshReinforcementSymbolIndex = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementSymbolIndex", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes MeshReinforcementVisibilityCrossing
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MeshReinforcementVisibilityCrossing;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementVisibilityCrossing), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementVisibilityTypes_.GetTSObject(value);
+                teklaObject.MeshReinforcementVisibilityCrossing = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementVisibilityCrossing), ex); 
+            }
+        }
+    }
 
-		public System.Double MeshReinforcementSymbolSize
-		{
-			get
-			{
-				try {
-					return teklaObject.MeshReinforcementSymbolSize;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementSymbolSize", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MeshReinforcementSymbolSize = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MeshReinforcementSymbolSize", ex); }
-			}
-		}
+    public System.Int32 MeshReinforcementSymbolIndex
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MeshReinforcementSymbolIndex;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementSymbolIndex), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MeshReinforcementSymbolIndex = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementSymbolIndex), ex); 
+            }
+        }
+    }
 
+    public System.Double MeshReinforcementSymbolSize
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MeshReinforcementSymbolSize;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementSymbolSize), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MeshReinforcementSymbolSize = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MeshReinforcementSymbolSize), ex); 
+            }
+        }
+    }
         
 
         
@@ -977,114 +1158,171 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class ReinforcementBaseAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes ReinforcementRepresentation
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.FromTSObject(teklaObject.ReinforcementRepresentation);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementRepresentation", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ReinforcementRepresentation = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReinforcementRepresentation", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.VisibleLines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VisibleLines", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.VisibleLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("VisibleLines", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes ReinforcementRepresentation
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ReinforcementRepresentation;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementRepresentation), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementRepresentationTypes_.GetTSObject(value);
+                teklaObject.ReinforcementRepresentation = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementRepresentation), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(teklaObject.HiddenLines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HiddenLines", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.HiddenLines = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HiddenLines", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes VisibleLines
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.VisibleLines;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypeAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(VisibleLines), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+                teklaObject.VisibleLines = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(VisibleLines), ex); 
+            }
+        }
+    }
 
-		public System.Boolean HideLinesHiddenByPart
-		{
-			get
-			{
-				try {
-					return teklaObject.HideLinesHiddenByPart;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HideLinesHiddenByPart", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.HideLinesHiddenByPart = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HideLinesHiddenByPart", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.LineTypeAttributes HiddenLines
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.HiddenLines;
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.LineTypeAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HiddenLines), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypeAttributes_.GetTSObject(value);
+                teklaObject.HiddenLines = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HiddenLines), ex); 
+            }
+        }
+    }
 
-		public System.Boolean HideLinesHiddenByReinforcement
-		{
-			get
-			{
-				try {
-					return teklaObject.HideLinesHiddenByReinforcement;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HideLinesHiddenByReinforcement", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.HideLinesHiddenByReinforcement = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("HideLinesHiddenByReinforcement", ex); }
-			}
-		}
+    public System.Boolean HideLinesHiddenByPart
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.HideLinesHiddenByPart;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HideLinesHiddenByPart), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.HideLinesHiddenByPart = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HideLinesHiddenByPart), ex); 
+            }
+        }
+    }
 
-		public System.String CustomPresentation
-		{
-			get
-			{
-				try {
-					return teklaObject.CustomPresentation;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CustomPresentation", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CustomPresentation = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CustomPresentation", ex); }
-			}
-		}
+    public System.Boolean HideLinesHiddenByReinforcement
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.HideLinesHiddenByReinforcement;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HideLinesHiddenByReinforcement), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.HideLinesHiddenByReinforcement = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HideLinesHiddenByReinforcement), ex); 
+            }
+        }
+    }
 
+    public System.String CustomPresentation
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CustomPresentation;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CustomPresentation), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CustomPresentation = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CustomPresentation), ex); 
+            }
+        }
+    }
         
 
         

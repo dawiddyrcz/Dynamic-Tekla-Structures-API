@@ -13,42 +13,61 @@ namespace Dynamic.Tekla.Structures.Model
     public  class PolygonNode 
     {
 
-		public System.Boolean IsAutomatic
-		{
-			get
-			{
-				try {
-					return teklaObject.IsAutomatic;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsAutomatic = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.Contour Contour
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Contour);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Contour = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Contour", ex); }
-			}
-		}
+    public System.Boolean IsAutomatic
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsAutomatic;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsAutomatic = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.Contour Contour
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Contour;
+                var value_ = Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Contour) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+                teklaObject.Contour = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

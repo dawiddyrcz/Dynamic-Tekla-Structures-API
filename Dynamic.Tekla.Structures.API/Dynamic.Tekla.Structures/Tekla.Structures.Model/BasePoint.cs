@@ -13,330 +13,474 @@ namespace Dynamic.Tekla.Structures.Model
     public  class BasePoint 
     {
 
-		public System.Int32 Id
-		{
-			get
-			{
-				try {
-					return teklaObject.Id;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Id", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Id = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Id", ex); }
-			}
-		}
 
-		public System.Guid Guid
-		{
-			get
-			{
-				try {
-					return teklaObject.Guid;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guid", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Guid = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Guid", ex); }
-			}
-		}
+    public System.Int32 Id
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Id;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Id = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
+            }
+        }
+    }
 
-		public System.String InitialGuid
-		{
-			get
-			{
-				try {
-					return teklaObject.InitialGuid;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InitialGuid", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.InitialGuid = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InitialGuid", ex); }
-			}
-		}
+    public System.Guid Guid
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Guid;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Guid), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Guid = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Guid), ex); 
+            }
+        }
+    }
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
+    public System.String InitialGuid
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.InitialGuid;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(InitialGuid), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.InitialGuid = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(InitialGuid), ex); 
+            }
+        }
+    }
 
-		public System.String Description
-		{
-			get
-			{
-				try {
-					return teklaObject.Description;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Description", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Description = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Description", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-		public System.String CoordinateSystem
-		{
-			get
-			{
-				try {
-					return teklaObject.CoordinateSystem;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CoordinateSystem", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CoordinateSystem = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CoordinateSystem", ex); }
-			}
-		}
+    public System.String Description
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Description;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Description), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Description = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Description), ex); 
+            }
+        }
+    }
 
-		public System.Double NorthSouth
-		{
-			get
-			{
-				try {
-					return teklaObject.NorthSouth;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NorthSouth", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.NorthSouth = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NorthSouth", ex); }
-			}
-		}
+    public System.String CoordinateSystem
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CoordinateSystem;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CoordinateSystem), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CoordinateSystem = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CoordinateSystem), ex); 
+            }
+        }
+    }
 
-		public System.Double EastWest
-		{
-			get
-			{
-				try {
-					return teklaObject.EastWest;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EastWest", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.EastWest = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EastWest", ex); }
-			}
-		}
+    public System.Double NorthSouth
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.NorthSouth;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NorthSouth), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.NorthSouth = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NorthSouth), ex); 
+            }
+        }
+    }
 
-		public System.Double Elevation
-		{
-			get
-			{
-				try {
-					return teklaObject.Elevation;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Elevation", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Elevation = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Elevation", ex); }
-			}
-		}
+    public System.Double EastWest
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.EastWest;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EastWest), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.EastWest = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EastWest), ex); 
+            }
+        }
+    }
 
-		public System.Double Latitude
-		{
-			get
-			{
-				try {
-					return teklaObject.Latitude;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Latitude", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Latitude = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Latitude", ex); }
-			}
-		}
+    public System.Double Elevation
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Elevation;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Elevation), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Elevation = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Elevation), ex); 
+            }
+        }
+    }
 
-		public System.Double Longitude
-		{
-			get
-			{
-				try {
-					return teklaObject.Longitude;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Longitude", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Longitude = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Longitude", ex); }
-			}
-		}
+    public System.Double Latitude
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Latitude;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Latitude), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Latitude = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Latitude), ex); 
+            }
+        }
+    }
 
-		public System.Double LocationInModelX
-		{
-			get
-			{
-				try {
-					return teklaObject.LocationInModelX;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelX", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LocationInModelX = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelX", ex); }
-			}
-		}
+    public System.Double Longitude
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Longitude;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Longitude), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Longitude = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Longitude), ex); 
+            }
+        }
+    }
 
-		public System.Double LocationInModelY
-		{
-			get
-			{
-				try {
-					return teklaObject.LocationInModelY;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelY", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LocationInModelY = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelY", ex); }
-			}
-		}
+    public System.Double LocationInModelX
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LocationInModelX;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelX), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LocationInModelX = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelX), ex); 
+            }
+        }
+    }
 
-		public System.Double LocationInModelZ
-		{
-			get
-			{
-				try {
-					return teklaObject.LocationInModelZ;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelZ", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LocationInModelZ = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationInModelZ", ex); }
-			}
-		}
+    public System.Double LocationInModelY
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LocationInModelY;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelY), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LocationInModelY = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelY), ex); 
+            }
+        }
+    }
 
-		public System.Double AngleToNorth
-		{
-			get
-			{
-				try {
-					return teklaObject.AngleToNorth;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AngleToNorth", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.AngleToNorth = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AngleToNorth", ex); }
-			}
-		}
+    public System.Double LocationInModelZ
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LocationInModelZ;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelZ), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LocationInModelZ = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationInModelZ), ex); 
+            }
+        }
+    }
 
-		public System.Boolean IsProjectBasePoint
-		{
-			get
-			{
-				try {
-					return teklaObject.IsProjectBasePoint;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsProjectBasePoint", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsProjectBasePoint = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsProjectBasePoint", ex); }
-			}
-		}
+    public System.Double AngleToNorth
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.AngleToNorth;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AngleToNorth), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.AngleToNorth = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AngleToNorth), ex); 
+            }
+        }
+    }
 
-		public System.Boolean IsCurrentBasePoint
-		{
-			get
-			{
-				try {
-					return teklaObject.IsCurrentBasePoint;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsCurrentBasePoint", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsCurrentBasePoint = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsCurrentBasePoint", ex); }
-			}
-		}
+    public System.Boolean IsProjectBasePoint
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsProjectBasePoint;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsProjectBasePoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsProjectBasePoint = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsProjectBasePoint), ex); 
+            }
+        }
+    }
 
-		public System.Boolean IsScopedCurrentBasePoint
-		{
-			get
-			{
-				try {
-					return teklaObject.IsScopedCurrentBasePoint;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsScopedCurrentBasePoint", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsScopedCurrentBasePoint = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsScopedCurrentBasePoint", ex); }
-			}
-		}
+    public System.Boolean IsCurrentBasePoint
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsCurrentBasePoint;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsCurrentBasePoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsCurrentBasePoint = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsCurrentBasePoint), ex); 
+            }
+        }
+    }
 
+    public System.Boolean IsScopedCurrentBasePoint
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsScopedCurrentBasePoint;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsScopedCurrentBasePoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsScopedCurrentBasePoint = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsScopedCurrentBasePoint), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

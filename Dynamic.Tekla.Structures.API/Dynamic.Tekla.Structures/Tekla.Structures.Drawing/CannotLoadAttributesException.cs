@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class CannotLoadAttributesException  : Dynamic.Tekla.Structures.Drawing.TeklaStructuresDrawingsApplicationException
     {
 
-		public System.String AttributeFile
-		{
-			get
-			{
-				try {
-					return teklaObject.AttributeFile;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AttributeFile", ex); }
-			}
 
-		}
-
+    public System.String AttributeFile
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.AttributeFile;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AttributeFile), ex); 
+            }
+        }
+        
+    }
         
 
         

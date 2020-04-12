@@ -13,30 +13,38 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     public  class IFC2X3_ParametricObject_EllipseProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
-		public System.Double SemiAxis1
-		{
-			get
-			{
-				try {
-					return teklaObject.SemiAxis1;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SemiAxis1", ex); }
-			}
 
-		}
+    public System.Double SemiAxis1
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SemiAxis1;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis1), ex); 
+            }
+        }
+        
+    }
 
-		public System.Double SemiAxis2
-		{
-			get
-			{
-				try {
-					return teklaObject.SemiAxis2;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SemiAxis2", ex); }
-			}
-
-		}
-
+    public System.Double SemiAxis2
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SemiAxis2;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis2), ex); 
+            }
+        }
+        
+    }
         
 
         

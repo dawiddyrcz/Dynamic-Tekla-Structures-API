@@ -13,60 +13,84 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarThreadingDataNullable 
     {
 
-		public System.String ThreadingType
-		{
-			get
-			{
-				try {
-					return teklaObject.ThreadingType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ThreadingType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ThreadingType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ThreadingType", ex); }
-			}
-		}
 
-		public System.Nullable<System.Double> Length
-		{
-			get
-			{
-				try {
-					return teklaObject.Length;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Length = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length", ex); }
-			}
-		}
+    public System.String ThreadingType
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ThreadingType;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadingType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ThreadingType = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadingType), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<System.Double> ExtraFabricationLength
-		{
-			get
-			{
-				try {
-					return teklaObject.ExtraFabricationLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtraFabricationLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ExtraFabricationLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ExtraFabricationLength", ex); }
-			}
-		}
+    public System.Nullable<System.Double> Length
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Length;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Length = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<System.Double> ExtraFabricationLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ExtraFabricationLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraFabricationLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ExtraFabricationLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraFabricationLength), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

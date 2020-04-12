@@ -13,67 +13,95 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class BaseComponent  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
 
-		public System.Int32 Number
-		{
-			get
-			{
-				try {
-					return teklaObject.Number;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Number", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Number = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Number", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-		public static System.Int32 CUSTOM_OBJECT_NUMBER
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","CUSTOM_OBJECT_NUMBER");
+    public System.Int32 Number
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Number;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Number = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+            }
+        }
+    }
 
-		}
-
-		public static System.Int32 PLUGIN_OBJECT_NUMBER
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","PLUGIN_OBJECT_NUMBER");
-
-		}
-
-		public static System.String ConnectionCodeFromAttributeFile
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","ConnectionCodeFromAttributeFile");
-
-		}
-
-		public static System.Int32 ClassFromAttributeFile
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent","ClassFromAttributeFile");
-
-		}
-
+    public static System.Int32 CUSTOM_OBJECT_NUMBER
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "CUSTOM_OBJECT_NUMBER");
+            return (System.Int32) value;
+        }
         
+    }
+    public static System.Int32 PLUGIN_OBJECT_NUMBER
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "PLUGIN_OBJECT_NUMBER");
+            return (System.Int32) value;
+        }
+        
+    }
+    public static System.String ConnectionCodeFromAttributeFile
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ConnectionCodeFromAttributeFile");
+            return (System.String) value;
+        }
+        
+    }
+    public static System.Int32 ClassFromAttributeFile
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ClassFromAttributeFile");
+            return (System.Int32) value;
+        }
+        
+    }        
 
         
 

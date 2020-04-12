@@ -13,37 +13,54 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Contour 
     {
 
-		public System.Collections.ArrayList ContourPoints
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.ContourPoints);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ContourPoints = TSActivator.ConvertToTSArrayList(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ContourPoints", ex); }
-			}
-		}
 
-		public static System.Int32 MAX_CONTOUR_POINTS
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Contour","MAX_CONTOUR_POINTS");
+    public System.Collections.ArrayList ContourPoints
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ContourPoints;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ArrayListConverter.ToTSObjects(value);
+                teklaObject.ContourPoints = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
+            }
+        }
+    }
 
-		}
-
-		public static System.Int32 MIN_CONTOUR_POINTS
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Contour","MIN_CONTOUR_POINTS");
-
-		}
-
+    public static System.Int32 MAX_CONTOUR_POINTS
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MAX_CONTOUR_POINTS");
+            return (System.Int32) value;
+        }
         
+    }
+    public static System.Int32 MIN_CONTOUR_POINTS
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MIN_CONTOUR_POINTS");
+            return (System.Int32) value;
+        }
+        
+    }        
 
         internal dynamic teklaObject;
 

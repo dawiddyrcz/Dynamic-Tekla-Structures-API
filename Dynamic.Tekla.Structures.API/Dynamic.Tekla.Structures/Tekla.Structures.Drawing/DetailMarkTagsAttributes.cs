@@ -13,96 +13,151 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DetailMarkTagsAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA1
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA1);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA1", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA1", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA2
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA2);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA2", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA2", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA1
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA1;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA1), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+                teklaObject.TagA1 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA1), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA3
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA3);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA3", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA3", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA2
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA2;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA2), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+                teklaObject.TagA2 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA2), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA4
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA4);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA4", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA4", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA3
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA3;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA3), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+                teklaObject.TagA3 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA3), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA5
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(teklaObject.TagA5);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA5", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA5", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA4
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA4;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA4), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+                teklaObject.TagA4 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA4), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes TagA5
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA5;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA5), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes_.GetTSObject(value);
+                teklaObject.TagA5 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA5), ex); 
+            }
+        }
+    }
         
 
         

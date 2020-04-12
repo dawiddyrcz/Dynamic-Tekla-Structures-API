@@ -13,114 +13,177 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class View  : Dynamic.Tekla.Structures.Drawing.ViewBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewAttributes Attributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.FromTSObject(teklaObject.Attributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.AABB RestrictionBox
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(teklaObject.RestrictionBox);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RestrictionBox", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RestrictionBox = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RestrictionBox", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewAttributes Attributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Attributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewAttributes_.GetTSObject(value);
+                teklaObject.Attributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+    }
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.AABB RestrictionBox
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RestrictionBox;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.AABB_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.AABB) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RestrictionBox), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.AABB_.GetTSObject(value);
+                teklaObject.RestrictionBox = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RestrictionBox), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem ViewCoordinateSystem
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.ViewCoordinateSystem);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewCoordinateSystem", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ViewCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewCoordinateSystem", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem DisplayCoordinateSystem
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(teklaObject.DisplayCoordinateSystem);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DisplayCoordinateSystem", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.DisplayCoordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DisplayCoordinateSystem", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem ViewCoordinateSystem
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ViewCoordinateSystem;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewCoordinateSystem), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
+                teklaObject.ViewCoordinateSystem = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewCoordinateSystem), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewTypes ViewType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewTypes_.FromTSObject(teklaObject.ViewType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ViewType = Dynamic.Tekla.Structures.Drawing.View.ViewTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem DisplayCoordinateSystem
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.DisplayCoordinateSystem;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DisplayCoordinateSystem), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(value);
+                teklaObject.DisplayCoordinateSystem = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DisplayCoordinateSystem), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.View.ViewTypes ViewType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ViewType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewTypes_.GetTSObject(value);
+                teklaObject.ViewType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewType), ex); 
+            }
+        }
+    }
         
 
         
@@ -832,361 +895,537 @@ public System.Boolean RotateViewOnDrawingPlane(
     public  class ViewAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public System.Double PartialProfileLength
-		{
-			get
-			{
-				try {
-					return teklaObject.PartialProfileLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartialProfileLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PartialProfileLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartialProfileLength", ex); }
-			}
-		}
 
-		public System.Double PartialProfileOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.PartialProfileOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartialProfileOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PartialProfileOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartialProfileOffset", ex); }
-			}
-		}
+    public System.Double PartialProfileLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PartialProfileLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartialProfileLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PartialProfileLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartialProfileLength), ex); 
+            }
+        }
+    }
 
-		public System.Boolean ReflectedView
-		{
-			get
-			{
-				try {
-					return teklaObject.ReflectedView;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReflectedView", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ReflectedView = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ReflectedView", ex); }
-			}
-		}
+    public System.Double PartialProfileOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PartialProfileOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartialProfileOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PartialProfileOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartialProfileOffset), ex); 
+            }
+        }
+    }
 
-		public System.Boolean UnfoldedView
-		{
-			get
-			{
-				try {
-					return teklaObject.UnfoldedView;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UnfoldedView", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.UnfoldedView = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UnfoldedView", ex); }
-			}
-		}
+    public System.Boolean ReflectedView
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ReflectedView;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReflectedView), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ReflectedView = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReflectedView), ex); 
+            }
+        }
+    }
 
-		public System.Boolean UndeformedView
-		{
-			get
-			{
-				try {
-					return teklaObject.UndeformedView;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UndeformedView", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.UndeformedView = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UndeformedView", ex); }
-			}
-		}
+    public System.Boolean UnfoldedView
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.UnfoldedView;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UnfoldedView), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.UnfoldedView = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UnfoldedView), ex); 
+            }
+        }
+    }
 
-		public System.Double ViewExtensionForNeighbourParts
-		{
-			get
-			{
-				try {
-					return teklaObject.ViewExtensionForNeighbourParts;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewExtensionForNeighbourParts", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ViewExtensionForNeighbourParts = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewExtensionForNeighbourParts", ex); }
-			}
-		}
+    public System.Boolean UndeformedView
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.UndeformedView;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UndeformedView), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.UndeformedView = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UndeformedView), ex); 
+            }
+        }
+    }
 
-		public System.Boolean FixedViewPlacing
-		{
-			get
-			{
-				try {
-					return teklaObject.FixedViewPlacing;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FixedViewPlacing", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.FixedViewPlacing = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FixedViewPlacing", ex); }
-			}
-		}
+    public System.Double ViewExtensionForNeighbourParts
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ViewExtensionForNeighbourParts;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewExtensionForNeighbourParts), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ViewExtensionForNeighbourParts = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewExtensionForNeighbourParts), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes Shortening
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes_.FromTSObject(teklaObject.Shortening);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Shortening = Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening", ex); }
-			}
-		}
+    public System.Boolean FixedViewPlacing
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.FixedViewPlacing;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FixedViewPlacing), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.FixedViewPlacing = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FixedViewPlacing), ex); 
+            }
+        }
+    }
 
-		public System.Boolean ShowPartOpeningsOrRecessSymbol
-		{
-			get
-			{
-				try {
-					return teklaObject.ShowPartOpeningsOrRecessSymbol;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShowPartOpeningsOrRecessSymbol", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ShowPartOpeningsOrRecessSymbol = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShowPartOpeningsOrRecessSymbol", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes Shortening
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Shortening;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shortening), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewShorteningAttributes_.GetTSObject(value);
+                teklaObject.Shortening = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shortening), ex); 
+            }
+        }
+    }
 
-		public System.Double Scale
-		{
-			get
-			{
-				try {
-					return teklaObject.Scale;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scale", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Scale = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scale", ex); }
-			}
-		}
+    public System.Boolean ShowPartOpeningsOrRecessSymbol
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ShowPartOpeningsOrRecessSymbol;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ShowPartOpeningsOrRecessSymbol), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ShowPartOpeningsOrRecessSymbol = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ShowPartOpeningsOrRecessSymbol), ex); 
+            }
+        }
+    }
 
-		public System.Boolean ViewPlaneDatumPointForElevations
-		{
-			get
-			{
-				try {
-					return teklaObject.ViewPlaneDatumPointForElevations;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewPlaneDatumPointForElevations", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ViewPlaneDatumPointForElevations = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ViewPlaneDatumPointForElevations", ex); }
-			}
-		}
+    public System.Double Scale
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Scale;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Scale), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Scale = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Scale), ex); 
+            }
+        }
+    }
 
-		public System.String LocationBy
-		{
-			get
-			{
-				try {
-					return teklaObject.LocationBy;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationBy", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LocationBy = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LocationBy", ex); }
-			}
-		}
+    public System.Boolean ViewPlaneDatumPointForElevations
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ViewPlaneDatumPointForElevations;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewPlaneDatumPointForElevations), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ViewPlaneDatumPointForElevations = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewPlaneDatumPointForElevations), ex); 
+            }
+        }
+    }
 
-		public System.Double DatumLevel
-		{
-			get
-			{
-				try {
-					return teklaObject.DatumLevel;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DatumLevel", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DatumLevel = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DatumLevel", ex); }
-			}
-		}
+    public System.String LocationBy
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LocationBy;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationBy), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LocationBy = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LocationBy), ex); 
+            }
+        }
+    }
 
-		public System.Boolean PourView
-		{
-			get
-			{
-				try {
-					return teklaObject.PourView;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourView", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PourView = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PourView", ex); }
-			}
-		}
+    public System.Double DatumLevel
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DatumLevel;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DatumLevel), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DatumLevel = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DatumLevel), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingColors MarkSymbolColor
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.MarkSymbolColor);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolColor", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MarkSymbolColor = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolColor", ex); }
-			}
-		}
+    public System.Boolean PourView
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PourView;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourView), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PourView = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PourView), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes MarkSymbolAttributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes_.FromTSObject(teklaObject.MarkSymbolAttributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolAttributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MarkSymbolAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MarkSymbolAttributes", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DrawingColors MarkSymbolColor
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MarkSymbolColor;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingColors) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolColor), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+                teklaObject.MarkSymbolColor = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolColor), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition LabelPositionVertical
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition_.FromTSObject(teklaObject.LabelPositionVertical);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPositionVertical", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LabelPositionVertical = Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPositionVertical", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes MarkSymbolAttributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MarkSymbolAttributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolAttributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkSymbolAttributes_.GetTSObject(value);
+                teklaObject.MarkSymbolAttributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MarkSymbolAttributes), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition LabelPositionHorizontal
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition_.FromTSObject(teklaObject.LabelPositionHorizontal);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPositionHorizontal", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LabelPositionHorizontal = Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LabelPositionHorizontal", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition LabelPositionVertical
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LabelPositionVertical;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPositionVertical), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.VerticalLabelPosition_.GetTSObject(value);
+                teklaObject.LabelPositionVertical = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPositionVertical), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes TagsAttributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes_.FromTSObject(teklaObject.TagsAttributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagsAttributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagsAttributes = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagsAttributes", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition LabelPositionHorizontal
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LabelPositionHorizontal;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPositionHorizontal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.HorizontalLabelPosition_.GetTSObject(value);
+                teklaObject.LabelPositionHorizontal = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LabelPositionHorizontal), ex); 
+            }
+        }
+    }
 
-		public static System.String LocationByModelOrigin
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes","LocationByModelOrigin");
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes TagsAttributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagsAttributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagsAttributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagsAttributes_.GetTSObject(value);
+                teklaObject.TagsAttributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagsAttributes), ex); 
+            }
+        }
+    }
 
-		}
-
-		public static System.String LocationByProjectBasePoint
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes","LocationByProjectBasePoint");
-
-		}
-
+    public static System.String LocationByModelOrigin
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes", "LocationByModelOrigin");
+            return (System.String) value;
+        }
         
+    }
+    public static System.String LocationByProjectBasePoint
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.View.ViewAttributes", "LocationByProjectBasePoint");
+            return (System.String) value;
+        }
+        
+    }        
 
         
 
@@ -1266,96 +1505,139 @@ public System.Boolean RotateViewOnDrawingPlane(
     public  class ViewShorteningAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public System.Boolean CutParts
-		{
-			get
-			{
-				try {
-					return teklaObject.CutParts;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutParts", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CutParts = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutParts", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType CutPartType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType_.FromTSObject(teklaObject.CutPartType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutPartType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.CutPartType = Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutPartType", ex); }
-			}
-		}
+    public System.Boolean CutParts
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CutParts;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutParts), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CutParts = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutParts), ex); 
+            }
+        }
+    }
 
-		public System.Boolean CutSkewParts
-		{
-			get
-			{
-				try {
-					return teklaObject.CutSkewParts;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutSkewParts", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CutSkewParts = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CutSkewParts", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType CutPartType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CutPartType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutPartType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ShorteningCutPartType_.GetTSObject(value);
+                teklaObject.CutPartType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutPartType), ex); 
+            }
+        }
+    }
 
-		public System.Double MinimumLength
-		{
-			get
-			{
-				try {
-					return teklaObject.MinimumLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MinimumLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumLength", ex); }
-			}
-		}
+    public System.Boolean CutSkewParts
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CutSkewParts;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutSkewParts), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CutSkewParts = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutSkewParts), ex); 
+            }
+        }
+    }
 
-		public System.Double Offset
-		{
-			get
-			{
-				try {
-					return teklaObject.Offset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Offset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Offset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Offset", ex); }
-			}
-		}
+    public System.Double MinimumLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MinimumLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MinimumLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumLength), ex); 
+            }
+        }
+    }
 
+    public System.Double Offset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Offset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Offset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Offset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Offset), ex); 
+            }
+        }
+    }
         
 
         
@@ -1440,42 +1722,61 @@ public System.Boolean RotateViewOnDrawingPlane(
     public  class ViewMarkSymbolAttributes  : Dynamic.Tekla.Structures.Drawing.ViewMarkBasicSymbolAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType LineLengthType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType_.FromTSObject(teklaObject.LineLengthType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineLengthType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LineLengthType = Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineLengthType", ex); }
-			}
-		}
 
-		public System.Double LineLength
-		{
-			get
-			{
-				try {
-					return teklaObject.LineLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LineLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LineLength", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType LineLengthType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LineLengthType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LineLengthType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.LabelLineLengthType_.GetTSObject(value);
+                teklaObject.LineLengthType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LineLengthType), ex); 
+            }
+        }
+    }
 
+    public System.Double LineLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LineLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LineLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LineLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LineLength), ex); 
+            }
+        }
+    }
         
 
         
@@ -1559,24 +1860,35 @@ public System.Boolean RotateViewOnDrawingPlane(
     public  class ViewMarkTagAttributes  : Dynamic.Tekla.Structures.Drawing.ViewMarkBasicTagAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.TextAlignment TagAlignment
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.TextAlignment_.FromTSObject(teklaObject.TagAlignment);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagAlignment", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagAlignment = Dynamic.Tekla.Structures.Drawing.TextAlignment_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagAlignment", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.TextAlignment TagAlignment
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagAlignment;
+                var value_ = Dynamic.Tekla.Structures.Drawing.TextAlignment_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.TextAlignment) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagAlignment), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.TextAlignment_.GetTSObject(value);
+                teklaObject.TagAlignment = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagAlignment), ex); 
+            }
+        }
+    }
         
 
         
@@ -1660,96 +1972,151 @@ public System.Boolean RotateViewOnDrawingPlane(
     public  class ViewMarkTagsAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA1
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(teklaObject.TagA1);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA1", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA1 = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA1", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA2
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(teklaObject.TagA2);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA2", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA2 = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA2", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA1
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA1;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA1), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
+                teklaObject.TagA1 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA1), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA3
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(teklaObject.TagA3);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA3", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA3 = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA3", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA2
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA2;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA2), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
+                teklaObject.TagA2 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA2), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA4
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(teklaObject.TagA4);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA4", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA4 = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA4", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA3
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA3;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA3), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
+                teklaObject.TagA3 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA3), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA5
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(teklaObject.TagA5);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA5", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.TagA5 = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TagA5", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA4
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA4;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA4), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
+                teklaObject.TagA4 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA4), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes TagA5
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TagA5;
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA5), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.View.ViewMarkTagAttributes_.GetTSObject(value);
+                teklaObject.TagA5 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TagA5), ex); 
+            }
+        }
+    }
         
 
         

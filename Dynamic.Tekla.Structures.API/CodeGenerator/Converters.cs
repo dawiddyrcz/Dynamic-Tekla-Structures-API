@@ -45,13 +45,13 @@ namespace CodeGenerator
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                var ienumerableParameters = typeFullName.Replace("System.Collections.Generic.IEnumerable", "");
+                var ienumerableParameters = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = IEnumerableConverter.ToTSObjects" + ienumerableParameters + "(" + inputName + ");";
             }
             
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
-                var tupleParams = typeFullNameWithDynamic.Replace("System.Tuple", "");
+                var tupleParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = TupleConverter.ToTSObjects"+ tupleParams+"(" + inputName + ");";
             }
             else
@@ -79,7 +79,7 @@ namespace CodeGenerator
                 || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
                 )
             {
-                var listParams = typeFullName.Replace("System.Collections.Generic.List", "").Replace("System.Collections.Generic.IList", "");
+                var listParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = ListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
             }
             else if (typeof(System.Type).IsAssignableFrom(type)
@@ -89,13 +89,13 @@ namespace CodeGenerator
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                var ienumerableParameters = typeFullName.Replace("System.Collections.Generic.IEnumerable", "");
+                var ienumerableParameters = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = IEnumerableConverter.FromTSObjects" + ienumerableParameters + "(" + inputName + ");";
             }
            
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
-                var tupleParams = typeFullName.Replace("System.Tuple", "");
+                var tupleParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = TupleConverter.FromTSObject" + tupleParams + "(" + inputName + ");";
             }
             else
@@ -124,6 +124,13 @@ namespace CodeGenerator
                 || typeof(List<int>).IsAssignableFrom(type)
                 || typeof(List<double>).IsAssignableFrom(type)
                 || typeof(List<bool>).IsAssignableFrom(type)
+
+                || typeof(int[]).IsAssignableFrom(type)
+                || typeof(int[][]).IsAssignableFrom(type)
+
+                || typeof(IEnumerable<string>).IsAssignableFrom(type)
+                || typeof(IEnumerable<int>).IsAssignableFrom(type)
+                || typeof(IEnumerable<double>).IsAssignableFrom(type)
 
                 || typeof(Dictionary<string, string>).IsAssignableFrom(type)
                 || typeof(Dictionary<string, int>).IsAssignableFrom(type)

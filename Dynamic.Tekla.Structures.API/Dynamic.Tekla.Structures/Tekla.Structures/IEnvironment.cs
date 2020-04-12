@@ -13,197 +13,248 @@ namespace Dynamic.Tekla.Structures
     public abstract class IEnvironment 
     {
 
-		public System.Collections.Generic.IEnumerable<System.String> CloningTemplateModelFolders
-		{
-			get
-			{
-				try {
-					return teklaObject.CloningTemplateModelFolders;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CloningTemplateModelFolders", ex); }
-			}
 
-		}
+    public System.Collections.Generic.IEnumerable<System.String> CloningTemplateModelFolders
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CloningTemplateModelFolders;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CloningTemplateModelFolders), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IEnumerable<System.String> CompanyFolders
-		{
-			get
-			{
-				try {
-					return teklaObject.CompanyFolders;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CompanyFolders", ex); }
-			}
+    public System.Collections.Generic.IEnumerable<System.String> CompanyFolders
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CompanyFolders;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CompanyFolders), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Globalization.CultureInfo CultureInfo
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CultureInfo;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CultureInfo), ex); 
+            }
+        }
+        
+    }
 
-		public System.Globalization.CultureInfo CultureInfo
-		{
-			get
-			{
-				try {
-					return teklaObject.CultureInfo;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CultureInfo", ex); }
-			}
+    public System.Collections.Generic.IEnumerable<System.String> DrawingMacros
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DrawingMacros;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DrawingMacros), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.String Language
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Language;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Language), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IEnumerable<System.String> DrawingMacros
-		{
-			get
-			{
-				try {
-					return teklaObject.DrawingMacros;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DrawingMacros", ex); }
-			}
+    public Dynamic.Tekla.Structures.Dialog.Localization Localization
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Localization;
+                var value_ = Dynamic.Tekla.Structures.Dialog.Localization_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Dialog.Localization) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Localization), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.String MacrosFolder
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MacrosFolder;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MacrosFolder), ex); 
+            }
+        }
+        
+    }
 
-		public System.String Language
-		{
-			get
-			{
-				try {
-					return teklaObject.Language;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language", ex); }
-			}
+    public System.Collections.Generic.IEnumerable<System.String> ModelMacros
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ModelMacros;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ModelMacros), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Collections.Generic.IEnumerable<System.String> ProjectFolders
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ProjectFolders;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProjectFolders), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Dialog.Localization Localization
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Dialog.Localization_.FromTSObject(teklaObject.Localization);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Localization", ex); }
-			}
-		}
+    public System.String SearchPath
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SearchPath;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SearchPath), ex); 
+            }
+        }
+        
+    }
 
-		public System.String MacrosFolder
-		{
-			get
-			{
-				try {
-					return teklaObject.MacrosFolder;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MacrosFolder", ex); }
-			}
+    public System.Collections.Generic.IEnumerable<System.String> SystemFolders
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SystemFolders;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SystemFolders), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Boolean UseUSImperialUnitsInInput
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.UseUSImperialUnitsInInput;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UseUSImperialUnitsInInput), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IEnumerable<System.String> ModelMacros
-		{
-			get
-			{
-				try {
-					return teklaObject.ModelMacros;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelMacros", ex); }
-			}
+    public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributes
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.UserDefinedAttributes;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UserDefinedAttributes), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributesOptionType
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.UserDefinedAttributesOptionType;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UserDefinedAttributesOptionType), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IEnumerable<System.Collections.Generic.Dictionary<System.String, System.String>> OptionTypeUDAIndexAndValue
-		{
-			get
-			{
-				try {
-					return teklaObject.OptionTypeUDAIndexAndValue;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OptionTypeUDAIndexAndValue", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IEnumerable<System.String> ProjectFolders
-		{
-			get
-			{
-				try {
-					return teklaObject.ProjectFolders;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProjectFolders", ex); }
-			}
-
-		}
-
-		public System.String SearchPath
-		{
-			get
-			{
-				try {
-					return teklaObject.SearchPath;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchPath", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IEnumerable<System.String> SystemFolders
-		{
-			get
-			{
-				try {
-					return teklaObject.SystemFolders;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SystemFolders", ex); }
-			}
-
-		}
-
-		public System.Boolean UseUSImperialUnitsInInput
-		{
-			get
-			{
-				try {
-					return teklaObject.UseUSImperialUnitsInInput;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UseUSImperialUnitsInInput", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributes
-		{
-			get
-			{
-				try {
-					return teklaObject.UserDefinedAttributes;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UserDefinedAttributes", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IEnumerable<System.String> UserDefinedAttributesOptionType
-		{
-			get
-			{
-				try {
-					return teklaObject.UserDefinedAttributesOptionType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UserDefinedAttributesOptionType", ex); }
-			}
-
-		}
-
-		public System.String Item
-		{
-			get
-			{
-				try {
-					return teklaObject.Item;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item", ex); }
-			}
-
-		}
-
+    public System.String Item
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Item;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

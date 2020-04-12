@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     public  class ReferenceModelObjectAttributeEnumerator 
     {
 
-		public System.Object Current
-		{
-			get
-			{
-				try {
-					return teklaObject.Current;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
 
-		}
-
+    public System.Object Current
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Current;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

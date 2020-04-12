@@ -13,78 +13,119 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class LayoutAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public System.Boolean ListHiddenObjectsInTemplates
-		{
-			get
-			{
-				try {
-					return teklaObject.ListHiddenObjectsInTemplates;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ListHiddenObjectsInTemplates", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ListHiddenObjectsInTemplates = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ListHiddenObjectsInTemplates", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode SizeDefinitionMode
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.FromTSObject(teklaObject.SizeDefinitionMode);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SizeDefinitionMode", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.SizeDefinitionMode = Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SizeDefinitionMode", ex); }
-			}
-		}
+    public System.Boolean ListHiddenObjectsInTemplates
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ListHiddenObjectsInTemplates;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ListHiddenObjectsInTemplates), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ListHiddenObjectsInTemplates = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ListHiddenObjectsInTemplates), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.AutoSizeOptions AutoSizeOptions
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.FromTSObject(teklaObject.AutoSizeOptions);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutoSizeOptions", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.AutoSizeOptions = Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutoSizeOptions", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode SizeDefinitionMode
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.SizeDefinitionMode;
+                var value_ = Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SizeDefinitionMode), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.SizeDefinitionMode_.GetTSObject(value);
+                teklaObject.SizeDefinitionMode = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SizeDefinitionMode), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.Size SheetSize
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Size_.FromTSObject(teklaObject.SheetSize);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetSize", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.SheetSize = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetSize", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.AutoSizeOptions AutoSizeOptions
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.AutoSizeOptions;
+                var value_ = Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.AutoSizeOptions) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutoSizeOptions), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.AutoSizeOptions_.GetTSObject(value);
+                teklaObject.AutoSizeOptions = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutoSizeOptions), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.Size SheetSize
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.SheetSize;
+                var value_ = Dynamic.Tekla.Structures.Drawing.Size_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.Size) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SheetSize), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.Size_.GetTSObject(value);
+                teklaObject.SheetSize = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SheetSize), ex); 
+            }
+        }
+    }
         
 
         

@@ -13,13 +13,16 @@ namespace Dynamic.Tekla.Structures
     public abstract class TeklaStructuresVariables 
     {
 
-		public static System.String PourManagementOptionName
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresVariables","PourManagementOptionName");
 
-		}
-
+    public static System.String PourManagementOptionName
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresVariables", "PourManagementOptionName");
+            return (System.String) value;
+        }
         
+    }        
 
         internal dynamic teklaObject;
 

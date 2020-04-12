@@ -13,42 +13,61 @@ namespace Dynamic.Tekla.Structures.Model
     public  class GridCylindricalSurface  : Dynamic.Tekla.Structures.Model.GridSurface
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Arc CylinderBase
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(teklaObject.CylinderBase);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderBase", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.CylinderBase = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderBase", ex); }
-			}
-		}
 
-		public System.Double CylinderHeight
-		{
-			get
-			{
-				try {
-					return teklaObject.CylinderHeight;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderHeight", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CylinderHeight = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CylinderHeight", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Arc CylinderBase
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CylinderBase;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Arc_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Arc) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CylinderBase), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Arc_.GetTSObject(value);
+                teklaObject.CylinderBase = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CylinderBase), ex); 
+            }
+        }
+    }
 
+    public System.Double CylinderHeight
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CylinderHeight;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CylinderHeight), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CylinderHeight = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CylinderHeight), ex); 
+            }
+        }
+    }
         
 
         

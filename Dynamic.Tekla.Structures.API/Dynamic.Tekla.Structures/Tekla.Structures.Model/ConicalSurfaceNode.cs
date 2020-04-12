@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ConicalSurfaceNode  : Dynamic.Tekla.Structures.Model.BendSurfaceNode
     {
 
-		public Dynamic.Tekla.Structures.Model.ConicalSurface Surface
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ConicalSurface_.FromTSObject(teklaObject.Surface);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.ConicalSurface Surface
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Surface;
+                var value_ = Dynamic.Tekla.Structures.Model.ConicalSurface_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ConicalSurface) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Surface), ex); 
+            }
+        }
+        
+    }
         
 
         

@@ -13,42 +13,61 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class AngleDimensionAttributes  : Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.AngleTypes Type
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(teklaObject.Type);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Type = Dynamic.Tekla.Structures.Drawing.AngleTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type", ex); }
-			}
-		}
 
-		public System.Int32 TriangleBase
-		{
-			get
-			{
-				try {
-					return teklaObject.TriangleBase;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TriangleBase", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.TriangleBase = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TriangleBase", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.AngleTypes Type
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Type;
+                var value_ = Dynamic.Tekla.Structures.Drawing.AngleTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.AngleTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.AngleTypes_.GetTSObject(value);
+                teklaObject.Type = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+            }
+        }
+    }
 
+    public System.Int32 TriangleBase
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.TriangleBase;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TriangleBase), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.TriangleBase = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TriangleBase), ex); 
+            }
+        }
+    }
         
 
         

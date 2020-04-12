@@ -192,6 +192,7 @@ namespace CodeGenerator
 
             foreach (var propertyOrField in propertiesAndFields)
             {
+                if (propertyOrField.Name.Equals("OptionTypeUDAIndexAndValue", StringComparison.InvariantCulture)) continue;
                 sb.Append(SinglePropertyGenerator.GetCode(propertyOrField));
             }
 

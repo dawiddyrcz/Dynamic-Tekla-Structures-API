@@ -13,29 +13,40 @@ namespace Dynamic.Tekla.Structures
     public abstract class IModel 
     {
 
-		public Dynamic.Tekla.Structures.ModelFolder Folder
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(teklaObject.Folder);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Folder", ex); }
-			}
-		}
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
+    public Dynamic.Tekla.Structures.ModelFolder Folder
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Folder;
+                var value_ = Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.ModelFolder) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folder), ex); 
+            }
+        }
+        
+    }
 
-		}
-
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

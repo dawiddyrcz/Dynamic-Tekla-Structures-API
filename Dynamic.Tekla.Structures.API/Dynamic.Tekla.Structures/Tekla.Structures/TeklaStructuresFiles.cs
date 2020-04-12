@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures
     public  class TeklaStructuresFiles 
     {
 
-		public System.Collections.Generic.List<System.String> PropertyFileDirectories
-		{
-			get
-			{
-				try {
-					return teklaObject.PropertyFileDirectories;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PropertyFileDirectories", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PropertyFileDirectories = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PropertyFileDirectories", ex); }
-			}
-		}
 
+    public System.Collections.Generic.List<System.String> PropertyFileDirectories
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PropertyFileDirectories;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyFileDirectories), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PropertyFileDirectories = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyFileDirectories), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Fitting  : Dynamic.Tekla.Structures.Model.Boolean
     {
 
-		public Dynamic.Tekla.Structures.Model.Plane Plane
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(teklaObject.Plane);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Plane = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Plane", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.Plane Plane
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Plane;
+                var value_ = Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Plane) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
+                teklaObject.Plane = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+            }
+        }
+    }
         
 
         

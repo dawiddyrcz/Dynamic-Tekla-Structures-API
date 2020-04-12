@@ -13,78 +13,110 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PlacingQuarterAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public System.Boolean TopLeft
-		{
-			get
-			{
-				try {
-					return teklaObject.TopLeft;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TopLeft", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.TopLeft = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TopLeft", ex); }
-			}
-		}
 
-		public System.Boolean TopRight
-		{
-			get
-			{
-				try {
-					return teklaObject.TopRight;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TopRight", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.TopRight = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TopRight", ex); }
-			}
-		}
+    public System.Boolean TopLeft
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.TopLeft;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TopLeft), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.TopLeft = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TopLeft), ex); 
+            }
+        }
+    }
 
-		public System.Boolean BottomLeft
-		{
-			get
-			{
-				try {
-					return teklaObject.BottomLeft;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BottomLeft", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BottomLeft = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BottomLeft", ex); }
-			}
-		}
+    public System.Boolean TopRight
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.TopRight;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TopRight), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.TopRight = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TopRight), ex); 
+            }
+        }
+    }
 
-		public System.Boolean BottomRight
-		{
-			get
-			{
-				try {
-					return teklaObject.BottomRight;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BottomRight", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BottomRight = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BottomRight", ex); }
-			}
-		}
+    public System.Boolean BottomLeft
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.BottomLeft;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BottomLeft), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.BottomLeft = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BottomLeft), ex); 
+            }
+        }
+    }
 
+    public System.Boolean BottomRight
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.BottomRight;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BottomRight), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.BottomRight = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BottomRight), ex); 
+            }
+        }
+    }
         
 
         

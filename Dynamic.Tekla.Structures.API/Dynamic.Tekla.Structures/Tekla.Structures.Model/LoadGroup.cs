@@ -13,114 +13,171 @@ namespace Dynamic.Tekla.Structures.Model
     public  class LoadGroup  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.String GroupName
-		{
-			get
-			{
-				try {
-					return teklaObject.GroupName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupName", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.GroupName = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupName", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType GroupType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(teklaObject.GroupType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.GroupType = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupType", ex); }
-			}
-		}
+    public System.String GroupName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.GroupName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupName), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.GroupName = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupName), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection Direction
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(teklaObject.Direction);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Direction", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Direction = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Direction", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType GroupType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.GroupType;
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupType_.GetTSObject(value);
+                teklaObject.GroupType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupType), ex); 
+            }
+        }
+    }
 
-		public System.Int32 Compatible
-		{
-			get
-			{
-				try {
-					return teklaObject.Compatible;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Compatible", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Compatible = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Compatible", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection Direction
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Direction;
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Direction), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.LoadGroupDirection_.GetTSObject(value);
+                teklaObject.Direction = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Direction), ex); 
+            }
+        }
+    }
 
-		public System.Int32 Incompatible
-		{
-			get
-			{
-				try {
-					return teklaObject.Incompatible;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Incompatible", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Incompatible = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Incompatible", ex); }
-			}
-		}
+    public System.Int32 Compatible
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Compatible;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Compatible), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Compatible = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Compatible), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.LoadGroup.Colors Color
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(teklaObject.Color);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Color = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color", ex); }
-			}
-		}
+    public System.Int32 Incompatible
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Incompatible;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Incompatible), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Incompatible = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Incompatible), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.LoadGroup.Colors Color
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Color;
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.LoadGroup.Colors) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.LoadGroup.Colors_.GetTSObject(value);
+                teklaObject.Color = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+            }
+        }
+    }
         
 
         

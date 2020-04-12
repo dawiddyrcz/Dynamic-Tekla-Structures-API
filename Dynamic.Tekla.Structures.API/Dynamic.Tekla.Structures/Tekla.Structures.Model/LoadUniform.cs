@@ -13,60 +13,90 @@ namespace Dynamic.Tekla.Structures.Model
     public  class LoadUniform  : Dynamic.Tekla.Structures.Model.Load
     {
 
-		public Dynamic.Tekla.Structures.Model.Polygon Polygon
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector P1
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.P1);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("P1", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.P1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("P1", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.Polygon Polygon
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Polygon;
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Polygon) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
+                teklaObject.Polygon = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+    }
 
-		public System.Double DistanceA
-		{
-			get
-			{
-				try {
-					return teklaObject.DistanceA;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceA", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DistanceA = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceA", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Vector P1
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.P1;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(P1), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+                teklaObject.P1 = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(P1), ex); 
+            }
+        }
+    }
 
+    public System.Double DistanceA
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DistanceA;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceA), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DistanceA = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceA), ex); 
+            }
+        }
+    }
         
 
         

@@ -13,78 +13,113 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class IndirectPolymeshEdge 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum EdgeType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(teklaObject.EdgeType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EdgeType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.EdgeType = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EdgeType", ex); }
-			}
-		}
 
-		public System.Int32 StartPoint
-		{
-			get
-			{
-				try {
-					return teklaObject.StartPoint;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartPoint", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.StartPoint = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartPoint", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum EdgeType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.EdgeType;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EdgeType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.PolymeshEdgeTypeEnum_.GetTSObject(value);
+                teklaObject.EdgeType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EdgeType), ex); 
+            }
+        }
+    }
 
-		public System.Int32 EndPoint
-		{
-			get
-			{
-				try {
-					return teklaObject.EndPoint;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndPoint", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.EndPoint = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndPoint", ex); }
-			}
-		}
+    public System.Int32 StartPoint
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.StartPoint;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.StartPoint = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPoint), ex); 
+            }
+        }
+    }
 
-		public System.Int32 ShellIndex
-		{
-			get
-			{
-				try {
-					return teklaObject.ShellIndex;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShellIndex", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ShellIndex = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ShellIndex", ex); }
-			}
-		}
+    public System.Int32 EndPoint
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.EndPoint;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.EndPoint = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPoint), ex); 
+            }
+        }
+    }
 
+    public System.Int32 ShellIndex
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ShellIndex;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ShellIndex), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ShellIndex = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ShellIndex), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

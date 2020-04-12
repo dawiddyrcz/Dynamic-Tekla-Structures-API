@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class CurvedDimensionSetRadial  : Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes Attributes
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes_.FromTSObject(teklaObject.Attributes);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Attributes = Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Attributes", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes Attributes
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Attributes;
+                var value_ = Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetRadial.CurvedDimensionSetRadialAttributes_.GetTSObject(value);
+                teklaObject.Attributes = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+            }
+        }
+    }
         
 
         
@@ -48,42 +59,64 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class CurvedDimensionSetRadialAttributes  : Dynamic.Tekla.Structures.Drawing.CurvedDimensionSetBase.CurvedDimensionSetBaseAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes CurvedDimensionType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes_.FromTSObject(teklaObject.CurvedDimensionType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurvedDimensionType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.CurvedDimensionType = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurvedDimensionType", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes DimensionType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.FromTSObject(teklaObject.DimensionType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DimensionType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.DimensionType = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DimensionType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes CurvedDimensionType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CurvedDimensionType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurvedDimensionType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.CurvedDimensionTypes_.GetTSObject(value);
+                teklaObject.CurvedDimensionType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurvedDimensionType), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes DimensionType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.DimensionType;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DimensionType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DimensionSetBaseAttributes.DimensionTypes_.GetTSObject(value);
+                teklaObject.DimensionType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DimensionType), ex); 
+            }
+        }
+    }
         
 
         

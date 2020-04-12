@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Profile 
     {
 
-		public System.String ProfileString
-		{
-			get
-			{
-				try {
-					return teklaObject.ProfileString;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileString", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ProfileString = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileString", ex); }
-			}
-		}
 
+    public System.String ProfileString
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ProfileString;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ProfileString = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

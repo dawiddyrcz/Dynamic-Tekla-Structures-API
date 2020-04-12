@@ -13,25 +13,34 @@ namespace Dynamic.Tekla.Structures.Dialog
     public  class StructuresInstallation 
     {
 
-		public static System.String BinFolder
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation","BinFolder");
 
-		}
-
-		public static System.String InstallFolder
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation","InstallFolder");
-
-		}
-
-		public static System.String MessageFolder
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation","MessageFolder");
-
-		}
-
+    public static System.String BinFolder
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "BinFolder");
+            return (System.String) value;
+        }
         
+    }
+    public static System.String InstallFolder
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "InstallFolder");
+            return (System.String) value;
+        }
+        
+    }
+    public static System.String MessageFolder
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "MessageFolder");
+            return (System.String) value;
+        }
+        
+    }        
 
         internal dynamic teklaObject;
 

@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class PrinterItemEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Catalogs.PrinterItem Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Catalogs.PrinterItem_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Catalogs.PrinterItem Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.PrinterItem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.PrinterItem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

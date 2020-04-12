@@ -13,13 +13,17 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DrawingHandler 
     {
 
-		public static Dynamic.Tekla.Structures.Drawing.DrawingHandler Instance
-		{
-			get => Dynamic.Tekla.Structures.Drawing.DrawingHandler_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingHandler","Instance"));
 
-		}
-
+    public static Dynamic.Tekla.Structures.Drawing.DrawingHandler Instance
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingHandler", "Instance");
+            var value_ = Dynamic.Tekla.Structures.Drawing.DrawingHandler_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.DrawingHandler) value_;
+        }
         
+    }        
 
         internal dynamic teklaObject;
 

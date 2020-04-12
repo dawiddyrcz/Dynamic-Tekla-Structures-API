@@ -13,29 +13,42 @@ namespace Dynamic.Tekla.Structures.Model.Welding
     public  class WeldGeometry 
     {
 
-		public Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum Position
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(teklaObject.Position);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Position", ex); }
-			}
-		}
 
-		public System.Collections.ArrayList Polygons
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Polygons);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygons", ex); }
-			}
+    public Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum Position
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Position;
+                var value_ = Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Welding.WeldSeamPositionEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+            }
+        }
+        
+    }
 
-		}
-
+    public System.Collections.ArrayList Polygons
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Polygons;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygons), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

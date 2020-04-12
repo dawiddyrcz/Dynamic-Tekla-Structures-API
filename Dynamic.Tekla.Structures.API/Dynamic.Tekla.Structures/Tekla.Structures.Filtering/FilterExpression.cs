@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Filtering
     public abstract class FilterExpression  : Dynamic.Tekla.Structures.Filtering.Expression
     {
 
-		public System.Boolean IsEnable
-		{
-			get
-			{
-				try {
-					return teklaObject.IsEnable;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsEnable = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsEnable", ex); }
-			}
-		}
 
+    public System.Boolean IsEnable
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsEnable;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsEnable), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsEnable = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsEnable), ex); 
+            }
+        }
+    }
         
 
         

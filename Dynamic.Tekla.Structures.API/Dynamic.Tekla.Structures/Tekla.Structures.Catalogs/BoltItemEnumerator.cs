@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class BoltItemEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Catalogs.BoltItem Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Catalogs.BoltItem_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Catalogs.BoltItem Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.BoltItem_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.BoltItem) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

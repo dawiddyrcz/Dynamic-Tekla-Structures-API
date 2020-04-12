@@ -13,42 +13,64 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarSetAddition  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
-		{
-			get
-			{
-				try {
-					return teklaObject.LegFaces;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LegFaces", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LegFaces = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LegFaces", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.RebarSet Father
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-		}
+    public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace> LegFaces
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LegFaces;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.RebarLegFace>(value);
+                return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarLegFace>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LegFaces), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ListConverter.ToTSObjects(value);
+                teklaObject.LegFaces = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LegFaces), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.RebarSet Father
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Father;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSet) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value);
+                teklaObject.Father = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+    }
         
 
         

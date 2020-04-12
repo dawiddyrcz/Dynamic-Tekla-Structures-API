@@ -13,29 +13,40 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class SinglePartDrawing  : Dynamic.Tekla.Structures.Drawing.Drawing
     {
 
-		public Dynamic.Tekla.Structures.Identifier PartIdentifier
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.PartIdentifier);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PartIdentifier", ex); }
-			}
-		}
 
-		public System.Int32 SheetNumber
-		{
-			get
-			{
-				try {
-					return teklaObject.SheetNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SheetNumber", ex); }
-			}
+    public Dynamic.Tekla.Structures.Identifier PartIdentifier
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.PartIdentifier;
+                var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Identifier) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartIdentifier), ex); 
+            }
+        }
+        
+    }
 
-		}
-
+    public System.Int32 SheetNumber
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SheetNumber;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SheetNumber), ex); 
+            }
+        }
+        
+    }
         
 
         

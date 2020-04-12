@@ -13,28 +13,42 @@ namespace Dynamic.Tekla.Structures.Solid
     public  class Face 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.Normal);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Normal", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Identifier OriginPartId
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.OriginPartId);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OriginPartId", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Normal;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normal), ex); 
+            }
+        }
+        
+    }
 
+    public Dynamic.Tekla.Structures.Identifier OriginPartId
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.OriginPartId;
+                var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Identifier) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OriginPartId), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

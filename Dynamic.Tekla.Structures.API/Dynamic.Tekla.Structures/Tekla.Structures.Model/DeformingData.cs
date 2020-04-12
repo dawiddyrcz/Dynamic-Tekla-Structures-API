@@ -13,78 +13,110 @@ namespace Dynamic.Tekla.Structures.Model
     public  class DeformingData 
     {
 
-		public System.Double Angle
-		{
-			get
-			{
-				try {
-					return teklaObject.Angle;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Angle = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle", ex); }
-			}
-		}
 
-		public System.Double Angle2
-		{
-			get
-			{
-				try {
-					return teklaObject.Angle2;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle2", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Angle2 = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Angle2", ex); }
-			}
-		}
+    public System.Double Angle
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Angle;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Angle), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Angle = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Angle), ex); 
+            }
+        }
+    }
 
-		public System.Double Cambering
-		{
-			get
-			{
-				try {
-					return teklaObject.Cambering;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cambering", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Cambering = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cambering", ex); }
-			}
-		}
+    public System.Double Angle2
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Angle2;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Angle2), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Angle2 = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Angle2), ex); 
+            }
+        }
+    }
 
-		public System.Double Shortening
-		{
-			get
-			{
-				try {
-					return teklaObject.Shortening;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Shortening = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Shortening", ex); }
-			}
-		}
+    public System.Double Cambering
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Cambering;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Cambering), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Cambering = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Cambering), ex); 
+            }
+        }
+    }
 
+    public System.Double Shortening
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Shortening;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shortening), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Shortening = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shortening), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

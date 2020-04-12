@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ConnectiveGeometryException  : System.Exception
     {
 
-		public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(teklaObject.OperationStatus);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OperationStatus", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.OperationStatus;
+                var value_ = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperationStatus), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

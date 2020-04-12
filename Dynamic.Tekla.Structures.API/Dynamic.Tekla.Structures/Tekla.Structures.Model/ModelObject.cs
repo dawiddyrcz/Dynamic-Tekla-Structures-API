@@ -13,30 +13,40 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class ModelObject  : Dynamic.Tekla.Structures.Model.Object
     {
 
-		public System.Nullable<System.DateTime> ModificationTime
-		{
-			get
-			{
-				try {
-					return teklaObject.ModificationTime;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModificationTime", ex); }
-			}
 
-		}
+    public System.Nullable<System.DateTime> ModificationTime
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ModificationTime;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<System.DateTime>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ModificationTime), ex); 
+            }
+        }
+        
+    }
 
-		public System.Boolean IsUpToDate
-		{
-			get
-			{
-				try {
-					return teklaObject.IsUpToDate;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsUpToDate", ex); }
-			}
-
-		}
-
+    public System.Boolean IsUpToDate
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsUpToDate;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsUpToDate), ex); 
+            }
+        }
+        
+    }
         
 
         

@@ -13,31 +13,47 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class TemplateInfo  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
 
-		public static Dynamic.Tekla.Structures.Drawing.TemplateInfo Default
-		{
-			get => Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo","Default"));
-			set {  TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo","Default",Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value)); }
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-        
+    public static Dynamic.Tekla.Structures.Drawing.TemplateInfo Default
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo", "Default");
+            var value_ = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Drawing.TemplateInfo) value_;
+        }
+        set
+        {
+            var value_ = Dynamic.Tekla.Structures.Drawing.TemplateInfo_.GetTSObject(value);
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.TemplateInfo", "Default", value_);
+        }
+    }        
 
         
 

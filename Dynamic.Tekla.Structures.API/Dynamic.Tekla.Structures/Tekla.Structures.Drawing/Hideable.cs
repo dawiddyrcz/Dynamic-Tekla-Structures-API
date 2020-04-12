@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class Hideable 
     {
 
-		public System.Boolean IsHidden
-		{
-			get
-			{
-				try {
-					return teklaObject.IsHidden;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsHidden", ex); }
-			}
 
-		}
-
+    public System.Boolean IsHidden
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsHidden;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsHidden), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

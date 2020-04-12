@@ -13,66 +13,94 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class FacetedBrep 
     {
 
-		public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
-		{
-			get
-			{
-				try {
-					return teklaObject.Faces;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Faces", ex); }
-			}
 
-		}
+    public System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace> Faces
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Faces;
+                var value_ = IEnumerableConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace>(value);
+                return (System.Collections.Generic.ICollection<Dynamic.Tekla.Structures.Geometry3d.FacetedBrepFace>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Faces), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> InnerWires
-		{
-			get
-			{
-				try {
-					return teklaObject.InnerWires;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("InnerWires", ex); }
-			}
+    public System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]> InnerWires
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.InnerWires;
+                var value_ = IEnumerableConverter.FromTSObjects<System.Int32, System.Int32[][]>(value);
+                return (System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(InnerWires), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Int32[][] OuterWires
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.OuterWires;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OuterWires), ex); 
+            }
+        }
+        
+    }
 
-		public System.Int32[][] OuterWires
-		{
-			get
-			{
-				try {
-					return teklaObject.OuterWires;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OuterWires", ex); }
-			}
+    public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.GetEdges;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge>(value);
+                return (System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GetEdges), ex); 
+            }
+        }
+        
+    }
 
-		}
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.IndirectPolymeshEdge> GetEdges
-		{
-			get
-			{
-				try {
-					return teklaObject.GetEdges;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GetEdges", ex); }
-			}
-
-		}
-
-		public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
-		{
-			get
-			{
-				try {
-					return teklaObject.Vertices;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Vertices", ex); }
-			}
-
-		}
-
+    public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector> Vertices
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Vertices;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Vector>(value);
+                return (System.Collections.Generic.IList<Dynamic.Tekla.Structures.Geometry3d.Vector>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Vertices), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

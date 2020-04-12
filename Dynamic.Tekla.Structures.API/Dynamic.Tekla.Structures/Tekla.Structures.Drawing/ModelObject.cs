@@ -13,42 +13,64 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class ModelObject  : Dynamic.Tekla.Structures.Drawing.DrawingObject
     {
 
-		public Dynamic.Tekla.Structures.Identifier ModelIdentifier
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Identifier_.FromTSObject(teklaObject.ModelIdentifier);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelIdentifier", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.ModelIdentifier = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ModelIdentifier", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(teklaObject.Hideable);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Hideable", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Hideable = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Hideable", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Identifier ModelIdentifier
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ModelIdentifier;
+                var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Identifier) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ModelIdentifier), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Identifier_.GetTSObject(value);
+                teklaObject.ModelIdentifier = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ModelIdentifier), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Hideable;
+                var value_ = Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.Hideable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value);
+                teklaObject.Hideable = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
+            }
+        }
+    }
         
 
         

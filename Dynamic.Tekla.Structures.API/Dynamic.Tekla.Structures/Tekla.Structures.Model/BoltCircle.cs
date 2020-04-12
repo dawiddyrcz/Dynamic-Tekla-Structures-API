@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures.Model
     public  class BoltCircle  : Dynamic.Tekla.Structures.Model.BoltGroup
     {
 
-		public System.Double NumberOfBolts
-		{
-			get
-			{
-				try {
-					return teklaObject.NumberOfBolts;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfBolts", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.NumberOfBolts = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NumberOfBolts", ex); }
-			}
-		}
 
-		public System.Double Diameter
-		{
-			get
-			{
-				try {
-					return teklaObject.Diameter;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Diameter", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Diameter = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Diameter", ex); }
-			}
-		}
+    public System.Double NumberOfBolts
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.NumberOfBolts;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfBolts), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.NumberOfBolts = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfBolts), ex); 
+            }
+        }
+    }
 
+    public System.Double Diameter
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Diameter;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Diameter), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Diameter = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Diameter), ex); 
+            }
+        }
+    }
         
 
         

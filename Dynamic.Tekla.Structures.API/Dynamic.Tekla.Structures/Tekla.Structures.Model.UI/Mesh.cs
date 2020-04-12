@@ -13,42 +13,60 @@ namespace Dynamic.Tekla.Structures.Model.UI
     public  class Mesh 
     {
 
-		public System.Collections.ArrayList Points
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Points);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
-			}
 
-		}
+    public System.Collections.ArrayList Points
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Points;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.ArrayList Triangles
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Triangles);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Triangles", ex); }
-			}
+    public System.Collections.ArrayList Triangles
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Triangles;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Triangles), ex); 
+            }
+        }
+        
+    }
 
-		}
-
-		public System.Collections.ArrayList Lines
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Lines);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lines", ex); }
-			}
-
-		}
-
+    public System.Collections.ArrayList Lines
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Lines;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lines), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

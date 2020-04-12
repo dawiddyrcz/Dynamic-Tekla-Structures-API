@@ -13,60 +13,90 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class SymbolElement  : Dynamic.Tekla.Structures.Drawing.ElementBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.SymbolInfo Symbol
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(teklaObject.Symbol);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Symbol", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Symbol = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Symbol", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingColors Color
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(teklaObject.Color);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Color = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Color", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.SymbolInfo Symbol
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Symbol;
+                var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.SymbolInfo) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Symbol), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value);
+                teklaObject.Symbol = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Symbol), ex); 
+            }
+        }
+    }
 
-		public System.Double Height
-		{
-			get
-			{
-				try {
-					return teklaObject.Height;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Height = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Height", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.DrawingColors Color
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Color;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingColors) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
+                teklaObject.Color = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+            }
+        }
+    }
 
+    public System.Double Height
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Height;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Height = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
+            }
+        }
+    }
         
 
         

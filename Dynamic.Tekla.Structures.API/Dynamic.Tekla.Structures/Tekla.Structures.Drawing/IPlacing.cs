@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class IPlacing 
     {
 
-		public Dynamic.Tekla.Structures.Drawing.PlacingBase Placing
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(teklaObject.Placing);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Placing", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Placing = Dynamic.Tekla.Structures.Drawing.PlacingBase_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Placing", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.PlacingBase Placing
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Placing;
+                var value_ = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.PlacingBase) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.PlacingBase_.GetTSObject(value);
+                teklaObject.Placing = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DrawingObjectEnumerator  : Dynamic.Tekla.Structures.Drawing.DrawingEnumeratorBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObject Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.DrawingObject Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         

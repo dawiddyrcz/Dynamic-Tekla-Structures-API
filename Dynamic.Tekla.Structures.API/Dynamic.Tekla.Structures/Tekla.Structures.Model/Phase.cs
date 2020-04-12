@@ -13,78 +13,110 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Phase 
     {
 
-		public System.Int32 PhaseNumber
-		{
-			get
-			{
-				try {
-					return teklaObject.PhaseNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseNumber", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PhaseNumber = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseNumber", ex); }
-			}
-		}
 
-		public System.String PhaseName
-		{
-			get
-			{
-				try {
-					return teklaObject.PhaseName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseName", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PhaseName = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseName", ex); }
-			}
-		}
+    public System.Int32 PhaseNumber
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PhaseNumber;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseNumber), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PhaseNumber = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseNumber), ex); 
+            }
+        }
+    }
 
-		public System.String PhaseComment
-		{
-			get
-			{
-				try {
-					return teklaObject.PhaseComment;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseComment", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.PhaseComment = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PhaseComment", ex); }
-			}
-		}
+    public System.String PhaseName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PhaseName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseName), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PhaseName = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseName), ex); 
+            }
+        }
+    }
 
-		public System.Int32 IsCurrentPhase
-		{
-			get
-			{
-				try {
-					return teklaObject.IsCurrentPhase;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsCurrentPhase", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.IsCurrentPhase = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsCurrentPhase", ex); }
-			}
-		}
+    public System.String PhaseComment
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.PhaseComment;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseComment), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.PhaseComment = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PhaseComment), ex); 
+            }
+        }
+    }
 
+    public System.Int32 IsCurrentPhase
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsCurrentPhase;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsCurrentPhase), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.IsCurrentPhase = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsCurrentPhase), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

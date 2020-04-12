@@ -13,36 +13,50 @@ namespace Dynamic.Tekla.Structures.Dialog
     public  class Localization  : System.MarshalByRefObject
     {
 
-		public static System.String DefaultLocalizationFile
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization","DefaultLocalizationFile");
 
-		}
-
-		public static System.String DefaultLocalizationPath
-		{
-			get => (System.String) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization","DefaultLocalizationPath");
-
-		}
-
-		public System.String Language
-		{
-			get
-			{
-				try {
-					return teklaObject.Language;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Language = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Language", ex); }
-			}
-		}
-
+    public static System.String DefaultLocalizationFile
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization", "DefaultLocalizationFile");
+            return (System.String) value;
+        }
+        
+    }
+    public static System.String DefaultLocalizationPath
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.Localization", "DefaultLocalizationPath");
+            return (System.String) value;
+        }
+        
+    }
+    public System.String Language
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Language;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Language), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Language = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Language), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

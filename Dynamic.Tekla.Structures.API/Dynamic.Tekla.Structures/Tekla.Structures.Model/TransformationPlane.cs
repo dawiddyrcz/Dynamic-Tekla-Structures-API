@@ -13,28 +13,42 @@ namespace Dynamic.Tekla.Structures.Model
     public  class TransformationPlane 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToGlobal
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToGlobal);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TransformationMatrixToGlobal", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToLocal
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(teklaObject.TransformationMatrixToLocal);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("TransformationMatrixToLocal", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToGlobal
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TransformationMatrixToGlobal;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Matrix) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TransformationMatrixToGlobal), ex); 
+            }
+        }
+        
+    }
 
+    public Dynamic.Tekla.Structures.Geometry3d.Matrix TransformationMatrixToLocal
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.TransformationMatrixToLocal;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Matrix) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TransformationMatrixToLocal), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

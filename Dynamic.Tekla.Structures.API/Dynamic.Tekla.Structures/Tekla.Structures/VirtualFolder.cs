@@ -13,30 +13,38 @@ namespace Dynamic.Tekla.Structures
     public  class VirtualFolder 
     {
 
-		public System.String FolderName
-		{
-			get
-			{
-				try {
-					return teklaObject.FolderName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FolderName", ex); }
-			}
 
-		}
+    public System.String FolderName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.FolderName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FolderName), ex); 
+            }
+        }
+        
+    }
 
-		public System.String FolderPath
-		{
-			get
-			{
-				try {
-					return teklaObject.FolderPath;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FolderPath", ex); }
-			}
-
-		}
-
+    public System.String FolderPath
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.FolderPath;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FolderPath), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

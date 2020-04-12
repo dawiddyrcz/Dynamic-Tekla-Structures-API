@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Polymesh 
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Brep
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(teklaObject.Brep);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Brep", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Brep = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Brep", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Brep
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Brep;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.FacetedBrep) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Brep), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value);
+                teklaObject.Brep = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Brep), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

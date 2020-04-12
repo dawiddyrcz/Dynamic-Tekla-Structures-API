@@ -13,41 +13,63 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ModelObjectEnumerator 
     {
 
-		public System.Boolean SelectInstances
-		{
-			get
-			{
-				try {
-					return teklaObject.SelectInstances;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SelectInstances = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SelectInstances", ex); }
-			}
-		}
 
-		public static System.Boolean AutoFetch
-		{
-			get => (System.Boolean) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator","AutoFetch");
-			set { TSActivator.Set_StaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator","AutoFetch", value); }
-		}
+    public System.Boolean SelectInstances
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SelectInstances;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SelectInstances = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.ModelObject Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
-
+    public static System.Boolean AutoFetch
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator", "AutoFetch");
+            return (System.Boolean) value;
+        }
+        set
+        {
+            var value_ = value;
+            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Model.ModelObjectEnumerator", "AutoFetch", value_);
+        }
+    }
+    public Dynamic.Tekla.Structures.Model.ModelObject Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ModelObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

@@ -13,96 +13,151 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarEndDetailModifier  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
-		public Dynamic.Tekla.Structures.Model.RebarHookDataNullable RebarHook
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(teklaObject.RebarHook);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarHook", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RebarHook = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarHook", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable RebarThreading
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(teklaObject.RebarThreading);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarThreading", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RebarThreading = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarThreading", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarHookDataNullable RebarHook
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RebarHook;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarHookDataNullable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarHook), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookDataNullable_.GetTSObject(value);
+                teklaObject.RebarHook = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarHook), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable RebarLengthAdjustment
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(teklaObject.RebarLengthAdjustment);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarLengthAdjustment", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RebarLengthAdjustment = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarLengthAdjustment", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable RebarThreading
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RebarThreading;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarThreading), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarThreadingDataNullable_.GetTSObject(value);
+                teklaObject.RebarThreading = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarThreading), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarCrankingNullable RebarCranking
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(teklaObject.RebarCranking);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarCranking", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RebarCranking = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarCranking", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable RebarLengthAdjustment
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RebarLengthAdjustment;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarLengthAdjustment), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable_.GetTSObject(value);
+                teklaObject.RebarLengthAdjustment = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarLengthAdjustment), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType
-		{
-			get
-			{
-				try {
-					return teklaObject.EndType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.EndType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarCrankingNullable RebarCranking
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RebarCranking;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarCrankingNullable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarCranking), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarCrankingNullable_.GetTSObject(value);
+                teklaObject.RebarCranking = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarCranking), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum> EndType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.EndType;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.EndType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndType), ex); 
+            }
+        }
+    }
         
 
         

@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PlacingDirectionAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public System.Boolean Positive
-		{
-			get
-			{
-				try {
-					return teklaObject.Positive;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Positive", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Positive = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Positive", ex); }
-			}
-		}
 
-		public System.Boolean Negative
-		{
-			get
-			{
-				try {
-					return teklaObject.Negative;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Negative", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Negative = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Negative", ex); }
-			}
-		}
+    public System.Boolean Positive
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Positive;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Positive), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Positive = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Positive), ex); 
+            }
+        }
+    }
 
+    public System.Boolean Negative
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Negative;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Negative), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Negative = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Negative), ex); 
+            }
+        }
+    }
         
 
         

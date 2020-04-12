@@ -13,30 +13,38 @@ namespace Dynamic.Tekla.Structures
     public abstract class IMainWindow 
     {
 
-		public System.Boolean IsActive
-		{
-			get
-			{
-				try {
-					return teklaObject.IsActive;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsActive", ex); }
-			}
 
-		}
+    public System.Boolean IsActive
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsActive;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsActive), ex); 
+            }
+        }
+        
+    }
 
-		public System.Boolean IsMinimized
-		{
-			get
-			{
-				try {
-					return teklaObject.IsMinimized;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsMinimized", ex); }
-			}
-
-		}
-
+    public System.Boolean IsMinimized
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsMinimized;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsMinimized), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

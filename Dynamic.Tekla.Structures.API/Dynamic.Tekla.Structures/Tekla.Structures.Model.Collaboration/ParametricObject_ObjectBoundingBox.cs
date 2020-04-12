@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     public  class ParametricObject_ObjectBoundingBox  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.yDir);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("yDir", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.yDir;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(yDir), ex); 
+            }
+        }
+        
+    }
         
 
         

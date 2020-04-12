@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class DrawingLink  : Dynamic.Tekla.Structures.Drawing.LinkBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.Drawing Target
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(teklaObject.Target);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Target", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Target = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Target", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.Drawing Target
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Target;
+                var value_ = Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.Drawing) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Target), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.Drawing_.GetTSObject(value);
+                teklaObject.Target = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Target), ex); 
+            }
+        }
+    }
         
 
         

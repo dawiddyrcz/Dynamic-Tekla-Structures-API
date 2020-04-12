@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Solid
     public  class LoopEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Solid.Loop Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Solid.Loop Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Solid.Loop_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Solid.Loop) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

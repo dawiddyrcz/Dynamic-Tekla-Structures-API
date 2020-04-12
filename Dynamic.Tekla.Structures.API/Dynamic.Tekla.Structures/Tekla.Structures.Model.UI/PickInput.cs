@@ -13,42 +13,54 @@ namespace Dynamic.Tekla.Structures.Model.UI
     public  class PickInput 
     {
 
-		public System.Int32 Count
-		{
-			get
-			{
-				try {
-					return teklaObject.Count;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count", ex); }
-			}
 
-		}
+    public System.Int32 Count
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Count;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
+            }
+        }
+        
+    }
 
-		public System.Boolean IsSynchronized
-		{
-			get
-			{
-				try {
-					return teklaObject.IsSynchronized;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsSynchronized", ex); }
-			}
+    public System.Boolean IsSynchronized
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsSynchronized;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsSynchronized), ex); 
+            }
+        }
+        
+    }
 
-		}
-
-		public System.Object SyncRoot
-		{
-			get
-			{
-				try {
-					return teklaObject.SyncRoot;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SyncRoot", ex); }
-			}
-
-		}
-
+    public System.Object SyncRoot
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SyncRoot;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SyncRoot), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

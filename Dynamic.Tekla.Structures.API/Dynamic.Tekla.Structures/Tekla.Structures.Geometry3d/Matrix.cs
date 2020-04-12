@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class Matrix 
     {
 
-		public System.Double Item
-		{
-			get
-			{
-				try {
-					return teklaObject.Item;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Item = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Item", ex); }
-			}
-		}
 
+    public System.Double Item
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Item;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Item = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

@@ -13,60 +13,84 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PlacingDistanceAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public System.Double SearchMargin
-		{
-			get
-			{
-				try {
-					return teklaObject.SearchMargin;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchMargin", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SearchMargin = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SearchMargin", ex); }
-			}
-		}
 
-		public System.Double MinimalDistance
-		{
-			get
-			{
-				try {
-					return teklaObject.MinimalDistance;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimalDistance", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MinimalDistance = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimalDistance", ex); }
-			}
-		}
+    public System.Double SearchMargin
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SearchMargin;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SearchMargin), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SearchMargin = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SearchMargin), ex); 
+            }
+        }
+    }
 
-		public System.Double MaximalDistance
-		{
-			get
-			{
-				try {
-					return teklaObject.MaximalDistance;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximalDistance", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MaximalDistance = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximalDistance", ex); }
-			}
-		}
+    public System.Double MinimalDistance
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MinimalDistance;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimalDistance), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MinimalDistance = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimalDistance), ex); 
+            }
+        }
+    }
 
+    public System.Double MaximalDistance
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MaximalDistance;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximalDistance), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MaximalDistance = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximalDistance), ex); 
+            }
+        }
+    }
         
 
         

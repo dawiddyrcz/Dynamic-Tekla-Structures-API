@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     public  class PolyLine 
     {
 
-		public System.Collections.ArrayList Points
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Points);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Points = TSActivator.ConvertToTSArrayList(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
-			}
-		}
 
+    public System.Collections.ArrayList Points
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Points;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ArrayListConverter.ToTSObjects(value);
+                teklaObject.Points = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

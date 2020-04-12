@@ -13,78 +13,119 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class BaseRebarModifier  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public Dynamic.Tekla.Structures.Model.RebarSet Father
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(teklaObject.Father);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Father = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Father", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.Contour Curve
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(teklaObject.Curve);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Curve", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Curve = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Curve", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarSet Father
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Father;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSet) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSet_.GetTSObject(value);
+                teklaObject.Father = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Father), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(teklaObject.BarsAffected);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BarsAffected", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.BarsAffected = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BarsAffected", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.Contour Curve
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Curve;
+                var value_ = Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Contour) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
+                teklaObject.Curve = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
+            }
+        }
+    }
 
-		public System.Int32 FirstAffectedBar
-		{
-			get
-			{
-				try {
-					return teklaObject.FirstAffectedBar;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstAffectedBar", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.FirstAffectedBar = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FirstAffectedBar", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum BarsAffected
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.BarsAffected;
+                var value_ = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BarsAffected), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.BaseRebarModifier.BarsAffectedEnum_.GetTSObject(value);
+                teklaObject.BarsAffected = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BarsAffected), ex); 
+            }
+        }
+    }
 
+    public System.Int32 FirstAffectedBar
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.FirstAffectedBar;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstAffectedBar), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.FirstAffectedBar = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstAffectedBar), ex); 
+            }
+        }
+    }
         
 
         

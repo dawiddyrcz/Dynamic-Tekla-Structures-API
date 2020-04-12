@@ -13,51 +13,76 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ClashCheckData 
     {
 
-		public Dynamic.Tekla.Structures.Model.ModelObject Object1
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object1);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Object1", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.ModelObject Object2
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(teklaObject.Object2);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Object2", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.ModelObject Object1
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Object1;
+                var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ModelObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Object1), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum Type
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(teklaObject.Type);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.ModelObject Object2
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Object2;
+                var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ModelObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Object2), ex); 
+            }
+        }
+        
+    }
 
-		public System.Double Overlap
-		{
-			get
-			{
-				try {
-					return teklaObject.Overlap;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Overlap", ex); }
-			}
+    public Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum Type
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Type;
+                var value_ = Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ClashCheckData.ClashTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+            }
+        }
+        
+    }
 
-		}
-
+    public System.Double Overlap
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Overlap;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Overlap), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

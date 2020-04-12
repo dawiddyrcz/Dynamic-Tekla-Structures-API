@@ -13,42 +13,64 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarPropertyModifier  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
-		public Dynamic.Tekla.Structures.Model.RebarPropertiesNullable RebarProperties
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(teklaObject.RebarProperties);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.RebarProperties = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RebarProperties", ex); }
-			}
-		}
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType
-		{
-			get
-			{
-				try {
-					return teklaObject.GroupingType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupingType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.GroupingType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GroupingType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarPropertiesNullable RebarProperties
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.RebarProperties;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarPropertiesNullable) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarProperties), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarPropertiesNullable_.GetTSObject(value);
+                teklaObject.RebarProperties = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RebarProperties), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum> GroupingType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.GroupingType;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupingType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.GroupingType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupingType), ex); 
+            }
+        }
+    }
         
 
         

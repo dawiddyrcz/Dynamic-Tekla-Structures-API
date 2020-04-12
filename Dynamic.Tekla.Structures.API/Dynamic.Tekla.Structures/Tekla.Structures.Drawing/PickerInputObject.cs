@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PickerInputObject  : Dynamic.Tekla.Structures.Drawing.PickerInputWithinAView
     {
 
-		public Dynamic.Tekla.Structures.Drawing.DrawingObject PickedObject
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(teklaObject.PickedObject);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedObject", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.PickedObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedObject", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.DrawingObject PickedObject
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.PickedObject;
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.DrawingObject) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(value);
+                teklaObject.PickedObject = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
+            }
+        }
+    }
         
 
         

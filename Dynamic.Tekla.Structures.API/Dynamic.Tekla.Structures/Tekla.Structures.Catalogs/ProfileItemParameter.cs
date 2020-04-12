@@ -13,89 +13,124 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class ProfileItemParameter 
     {
 
-		public System.String Property
-		{
-			get
-			{
-				try {
-					return teklaObject.Property;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Property", ex); }
-			}
 
-		}
+    public System.String Property
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Property;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Property), ex); 
+            }
+        }
+        
+    }
 
-		public System.Double Value
-		{
-			get
-			{
-				try {
-					return teklaObject.Value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Value = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Value", ex); }
-			}
-		}
+    public System.Double Value
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Value = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+            }
+        }
+    }
 
-		public System.String StringValue
-		{
-			get
-			{
-				try {
-					return teklaObject.StringValue;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StringValue", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.StringValue = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StringValue", ex); }
-			}
-		}
+    public System.String StringValue
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.StringValue;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StringValue), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.StringValue = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StringValue), ex); 
+            }
+        }
+    }
 
-		public System.String Symbol
-		{
-			get
-			{
-				try {
-					return teklaObject.Symbol;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Symbol", ex); }
-			}
+    public System.String Symbol
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Symbol;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Symbol), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum ParameterUnitType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.ParameterUnitType;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ParameterUnitType), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum ParameterUnitType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Catalogs.ProfileItemParameter.ParameterUnitTypeEnum_.FromTSObject(teklaObject.ParameterUnitType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ParameterUnitType", ex); }
-			}
-		}
-
-		public System.Int32 CrossSectionNumber
-		{
-			get
-			{
-				try {
-					return teklaObject.CrossSectionNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrossSectionNumber", ex); }
-			}
-
-		}
-
+    public System.Int32 CrossSectionNumber
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrossSectionNumber;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrossSectionNumber), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

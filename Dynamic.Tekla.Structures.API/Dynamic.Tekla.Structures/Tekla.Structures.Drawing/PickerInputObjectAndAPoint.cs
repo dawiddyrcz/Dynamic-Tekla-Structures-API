@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class PickerInputObjectAndAPoint  : Dynamic.Tekla.Structures.Drawing.PickerInputObject
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point PickedPoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.PickedPoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedPoint", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.PickedPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PickedPoint", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Geometry3d.Point PickedPoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.PickedPoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedPoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.PickedPoint = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedPoint), ex); 
+            }
+        }
+    }
         
 
         

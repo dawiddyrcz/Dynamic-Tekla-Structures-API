@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class CurvedSectionMark  : Dynamic.Tekla.Structures.Drawing.SectionMarkBase
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point MiddlePoint
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.MiddlePoint);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddlePoint", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.MiddlePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MiddlePoint", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Geometry3d.Point MiddlePoint
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.MiddlePoint;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MiddlePoint), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
+                teklaObject.MiddlePoint = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MiddlePoint), ex); 
+            }
+        }
+    }
         
 
         

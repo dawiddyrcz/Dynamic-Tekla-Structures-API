@@ -13,25 +13,33 @@ namespace Dynamic.Tekla.Structures.Dialog
     public  class MainWindow 
     {
 
-		public System.IntPtr Handle
-		{
-			get
-			{
-				try {
-					return teklaObject.Handle;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Handle", ex); }
-			}
 
-		}
-
-		public static Dynamic.Tekla.Structures.Dialog.MainWindow Frame
-		{
-			get => Dynamic.Tekla.Structures.Dialog.MainWindow_.FromTSObject(TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Dialog.MainWindow","Frame"));
-
-		}
-
+    public System.IntPtr Handle
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Handle;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Handle), ex); 
+            }
+        }
         
+    }
+
+    public static Dynamic.Tekla.Structures.Dialog.MainWindow Frame
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.MainWindow", "Frame");
+            var value_ = Dynamic.Tekla.Structures.Dialog.MainWindow_.FromTSObject(value);
+	return (Dynamic.Tekla.Structures.Dialog.MainWindow) value_;
+        }
+        
+    }        
 
         internal dynamic teklaObject;
 

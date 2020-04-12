@@ -13,30 +13,38 @@ namespace Dynamic.Tekla.Structures
     public abstract class IRegistry 
     {
 
-		public Microsoft.Win32.RegistryKey CurrentVersion
-		{
-			get
-			{
-				try {
-					return teklaObject.CurrentVersion;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentVersion", ex); }
-			}
 
-		}
+    public Microsoft.Win32.RegistryKey CurrentVersion
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CurrentVersion;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurrentVersion), ex); 
+            }
+        }
+        
+    }
 
-		public Microsoft.Win32.RegistryKey Root
-		{
-			get
-			{
-				try {
-					return teklaObject.Root;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Root", ex); }
-			}
-
-		}
-
+    public Microsoft.Win32.RegistryKey Root
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Root;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Root), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

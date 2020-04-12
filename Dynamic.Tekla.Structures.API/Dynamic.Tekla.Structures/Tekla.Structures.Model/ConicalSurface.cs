@@ -13,29 +13,42 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ConicalSurface  : Dynamic.Tekla.Structures.Model.BendSurface
     {
 
-		public System.Tuple<System.Double, System.Double> Radiuses
-		{
-			get
-			{
-				try {
-					return teklaObject.Radiuses;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radiuses", ex); }
-			}
 
-		}
+    public System.Tuple<System.Double, System.Double> Radiuses
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Radiuses;
+                var value_ = TupleConverter.FromTSObject<System.Double, System.Double>(value);
+                return (System.Tuple<System.Double, System.Double>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radiuses), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Geometry3d.Point Apex
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(teklaObject.Apex);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Apex", ex); }
-			}
-		}
-
+    public Dynamic.Tekla.Structures.Geometry3d.Point Apex
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Apex;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Apex), ex); 
+            }
+        }
+        
+    }
         
 
         

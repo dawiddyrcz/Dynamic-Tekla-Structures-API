@@ -39,13 +39,13 @@ namespace CodeGenerator
 
             if (isStatic)
             {
-                return GenerateStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
-                //return StaticProperty(propertyOrField, currentType, hasGet, hasSet);
+                //return GenerateStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
+                return StaticProperty(propertyOrField, currentType, hasGet, hasSet);
             }
             else
             {
-                //return NonStaticProperty(propertyOrField, currentType, hasGet, hasSet);
-                return GenerateNonStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
+                return NonStaticProperty(propertyOrField, currentType, hasGet, hasSet);
+                //return GenerateNonStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
             }
         }
 

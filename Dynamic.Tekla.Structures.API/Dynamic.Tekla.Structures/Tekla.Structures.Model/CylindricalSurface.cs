@@ -13,18 +13,22 @@ namespace Dynamic.Tekla.Structures.Model
     public  class CylindricalSurface  : Dynamic.Tekla.Structures.Model.BendSurface
     {
 
-		public System.Double Radius
-		{
-			get
-			{
-				try {
-					return teklaObject.Radius;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Radius", ex); }
-			}
 
-		}
-
+    public System.Double Radius
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Radius;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radius), ex); 
+            }
+        }
+        
+    }
         
 
         

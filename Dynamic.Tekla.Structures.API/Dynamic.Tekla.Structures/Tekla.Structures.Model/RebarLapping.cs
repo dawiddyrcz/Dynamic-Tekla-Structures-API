@@ -13,78 +13,119 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarLapping 
     {
 
-		public System.Double LapLength
-		{
-			get
-			{
-				try {
-					return teklaObject.LapLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LapLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapLength", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum LapSide
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(teklaObject.LapSide);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapSide", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LapSide = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapSide", ex); }
-			}
-		}
+    public System.Double LapLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LapLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LapLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapLength), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum LapPlacement
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(teklaObject.LapPlacement);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapPlacement", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LapPlacement = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LapPlacement", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum LapSide
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LapSide;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapSide), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LapSideEnum_.GetTSObject(value);
+                teklaObject.LapSide = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapSide), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum LappingType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(teklaObject.LappingType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LappingType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.LappingType = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LappingType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum LapPlacement
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LapPlacement;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapPlacement), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LapPlacementEnum_.GetTSObject(value);
+                teklaObject.LapPlacement = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LapPlacement), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum LappingType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.LappingType;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LappingType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping.LappingTypeEnum_.GetTSObject(value);
+                teklaObject.LappingType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LappingType), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

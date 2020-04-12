@@ -13,132 +13,194 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarCrankingNullable 
     {
 
-		public System.Nullable<System.Double> CrankRotation
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankRotation;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankRotation", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankRotation = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankRotation", ex); }
-			}
-		}
 
-		public System.Nullable<System.Double> CrankStraightLength
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankStraightLength;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankStraightLength", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankStraightLength = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankStraightLength", ex); }
-			}
-		}
+    public System.Nullable<System.Double> CrankRotation
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrankRotation;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankRotation), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CrankRotation = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankRotation), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum> CrankedLengthType
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankedLengthType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedLengthType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankedLengthType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedLengthType", ex); }
-			}
-		}
+    public System.Nullable<System.Double> CrankStraightLength
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrankStraightLength;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankStraightLength), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CrankStraightLength = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankStraightLength), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<System.Double> CrankedRatio
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankedRatio;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedRatio", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankedRatio = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedRatio", ex); }
-			}
-		}
+    public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum> CrankedLengthType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CrankedLengthType;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedLengthType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.CrankedLengthType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedLengthType), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<System.Double> CrankedDistance
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankedDistance;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedDistance", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankedDistance = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedDistance", ex); }
-			}
-		}
+    public System.Nullable<System.Double> CrankedRatio
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrankedRatio;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedRatio), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CrankedRatio = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedRatio), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<System.Double> CrankedOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankedOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankedOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankedOffset", ex); }
-			}
-		}
+    public System.Nullable<System.Double> CrankedDistance
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrankedDistance;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedDistance), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CrankedDistance = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedDistance), ex); 
+            }
+        }
+    }
 
-		public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum> CrankingType
-		{
-			get
-			{
-				try {
-					return teklaObject.CrankingType;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankingType", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.CrankingType = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CrankingType", ex); }
-			}
-		}
+    public System.Nullable<System.Double> CrankedOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CrankedOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.CrankedOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankedOffset), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum> CrankingType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.CrankingType;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum>) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankingType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.CrankingType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CrankingType), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

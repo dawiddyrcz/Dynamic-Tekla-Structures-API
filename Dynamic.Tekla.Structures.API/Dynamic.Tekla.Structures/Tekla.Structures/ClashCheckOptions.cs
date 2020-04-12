@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures
     public  class ClashCheckOptions 
     {
 
-		public System.Double BoltHeadDiameter
-		{
-			get
-			{
-				try {
-					return teklaObject.BoltHeadDiameter;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHeadDiameter", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.BoltHeadDiameter = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("BoltHeadDiameter", ex); }
-			}
-		}
 
-		public System.Double NutThickness
-		{
-			get
-			{
-				try {
-					return teklaObject.NutThickness;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NutThickness", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.NutThickness = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("NutThickness", ex); }
-			}
-		}
+    public System.Double BoltHeadDiameter
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.BoltHeadDiameter;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltHeadDiameter), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.BoltHeadDiameter = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltHeadDiameter), ex); 
+            }
+        }
+    }
 
+    public System.Double NutThickness
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.NutThickness;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NutThickness), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.NutThickness = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NutThickness), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

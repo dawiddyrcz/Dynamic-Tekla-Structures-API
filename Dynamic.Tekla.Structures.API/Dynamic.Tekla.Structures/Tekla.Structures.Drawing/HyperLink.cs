@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class HyperLink  : Dynamic.Tekla.Structures.Drawing.LinkBase
     {
 
-		public System.Uri Target
-		{
-			get
-			{
-				try {
-					return teklaObject.Target;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Target", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Target = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Target", ex); }
-			}
-		}
 
+    public System.Uri Target
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Target;
+                var value_ = ObjectConverter.FromTSObject(value);
+                return (System.Uri) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Target), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ObjectConverter.ToTSObject(value);
+                teklaObject.Target = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Target), ex); 
+            }
+        }
+    }
         
 
         

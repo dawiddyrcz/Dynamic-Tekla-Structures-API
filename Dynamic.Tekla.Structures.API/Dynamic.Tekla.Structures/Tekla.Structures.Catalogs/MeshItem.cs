@@ -13,294 +13,422 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class MeshItem 
     {
 
-		public System.String Grade
-		{
-			get
-			{
-				try {
-					return teklaObject.Grade;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Grade", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Grade = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Grade", ex); }
-			}
-		}
 
-		public System.String Name
-		{
-			get
-			{
-				try {
-					return teklaObject.Name;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Name = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Name", ex); }
-			}
-		}
+    public System.String Grade
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Grade;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Grade), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Grade = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Grade), ex); 
+            }
+        }
+    }
 
-		public System.String DiameterLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.DiameterLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DiameterLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DiameterLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DiameterLongitudinal", ex); }
-			}
-		}
+    public System.String Name
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Name;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Name = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+            }
+        }
+    }
 
-		public System.String DistanceLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.DistanceLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DistanceLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceLongitudinal", ex); }
-			}
-		}
+    public System.String DiameterLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DiameterLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DiameterLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DiameterLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DiameterLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.Double Length
-		{
-			get
-			{
-				try {
-					return teklaObject.Length;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Length = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Length", ex); }
-			}
-		}
+    public System.String DistanceLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DistanceLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DistanceLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.Double MinimumOverlappingLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.MinimumOverlappingLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumOverlappingLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MinimumOverlappingLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumOverlappingLongitudinal", ex); }
-			}
-		}
+    public System.Double Length
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Length;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Length = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+            }
+        }
+    }
 
-		public System.Double MaximumOverlappingLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.MaximumOverlappingLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumOverlappingLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MaximumOverlappingLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumOverlappingLongitudinal", ex); }
-			}
-		}
+    public System.Double MinimumOverlappingLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MinimumOverlappingLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumOverlappingLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MinimumOverlappingLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumOverlappingLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.Double LeftOverhangLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.LeftOverhangLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftOverhangLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LeftOverhangLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftOverhangLongitudinal", ex); }
-			}
-		}
+    public System.Double MaximumOverlappingLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MaximumOverlappingLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximumOverlappingLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MaximumOverlappingLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximumOverlappingLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.Double RightOverhangLongitudinal
-		{
-			get
-			{
-				try {
-					return teklaObject.RightOverhangLongitudinal;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightOverhangLongitudinal", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.RightOverhangLongitudinal = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightOverhangLongitudinal", ex); }
-			}
-		}
+    public System.Double LeftOverhangLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LeftOverhangLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LeftOverhangLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LeftOverhangLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LeftOverhangLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.String DiameterCross
-		{
-			get
-			{
-				try {
-					return teklaObject.DiameterCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DiameterCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DiameterCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DiameterCross", ex); }
-			}
-		}
+    public System.Double RightOverhangLongitudinal
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.RightOverhangLongitudinal;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RightOverhangLongitudinal), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.RightOverhangLongitudinal = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RightOverhangLongitudinal), ex); 
+            }
+        }
+    }
 
-		public System.String DistanceCross
-		{
-			get
-			{
-				try {
-					return teklaObject.DistanceCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DistanceCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DistanceCross", ex); }
-			}
-		}
+    public System.String DiameterCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DiameterCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DiameterCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DiameterCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DiameterCross), ex); 
+            }
+        }
+    }
 
-		public System.Double Width
-		{
-			get
-			{
-				try {
-					return teklaObject.Width;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Width = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Width", ex); }
-			}
-		}
+    public System.String DistanceCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DistanceCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DistanceCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DistanceCross), ex); 
+            }
+        }
+    }
 
-		public System.Double MinimumOverlappingCross
-		{
-			get
-			{
-				try {
-					return teklaObject.MinimumOverlappingCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumOverlappingCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MinimumOverlappingCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MinimumOverlappingCross", ex); }
-			}
-		}
+    public System.Double Width
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Width;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Width = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
+            }
+        }
+    }
 
-		public System.Double MaximumOverlappingCross
-		{
-			get
-			{
-				try {
-					return teklaObject.MaximumOverlappingCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumOverlappingCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.MaximumOverlappingCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("MaximumOverlappingCross", ex); }
-			}
-		}
+    public System.Double MinimumOverlappingCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MinimumOverlappingCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumOverlappingCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MinimumOverlappingCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MinimumOverlappingCross), ex); 
+            }
+        }
+    }
 
-		public System.Double LeftOverhangCross
-		{
-			get
-			{
-				try {
-					return teklaObject.LeftOverhangCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftOverhangCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.LeftOverhangCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("LeftOverhangCross", ex); }
-			}
-		}
+    public System.Double MaximumOverlappingCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.MaximumOverlappingCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximumOverlappingCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.MaximumOverlappingCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaximumOverlappingCross), ex); 
+            }
+        }
+    }
 
-		public System.Double RightOverhangCross
-		{
-			get
-			{
-				try {
-					return teklaObject.RightOverhangCross;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightOverhangCross", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.RightOverhangCross = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("RightOverhangCross", ex); }
-			}
-		}
+    public System.Double LeftOverhangCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.LeftOverhangCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LeftOverhangCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.LeftOverhangCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LeftOverhangCross), ex); 
+            }
+        }
+    }
 
+    public System.Double RightOverhangCross
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.RightOverhangCross;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RightOverhangCross), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.RightOverhangCross = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RightOverhangCross), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

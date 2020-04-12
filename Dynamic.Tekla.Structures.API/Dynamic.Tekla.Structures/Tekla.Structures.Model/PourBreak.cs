@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public  class PourBreak  : Dynamic.Tekla.Structures.Model.ModelObject
     {
 
-		public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Polymesh
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(teklaObject.Polymesh);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polymesh", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Polymesh = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polymesh", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Polymesh
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Polymesh;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.FacetedBrep) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polymesh), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(value);
+                teklaObject.Polymesh = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polymesh), ex); 
+            }
+        }
+    }
         
 
         

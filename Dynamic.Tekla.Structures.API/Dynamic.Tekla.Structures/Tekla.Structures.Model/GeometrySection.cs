@@ -13,29 +13,40 @@ namespace Dynamic.Tekla.Structures.Model
     public  class GeometrySection 
     {
 
-		public System.Int32 Index
-		{
-			get
-			{
-				try {
-					return teklaObject.Index;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Index", ex); }
-			}
 
-		}
+    public System.Int32 Index
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Index;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Index), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(teklaObject.GeometryNode);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("GeometryNode", ex); }
-			}
-		}
-
+    public Dynamic.Tekla.Structures.Model.IGeometryNode GeometryNode
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.GeometryNode;
+                var value_ = Dynamic.Tekla.Structures.Model.IGeometryNode_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.IGeometryNode) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GeometryNode), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

@@ -13,30 +13,38 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     public  class IFC2X3_ParametricObject_RectangleProfile  : Dynamic.Tekla.Structures.Model.Collaboration.ReferenceModelObjectAttribute
     {
 
-		public System.Double XDim
-		{
-			get
-			{
-				try {
-					return teklaObject.XDim;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("XDim", ex); }
-			}
 
-		}
+    public System.Double XDim
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.XDim;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(XDim), ex); 
+            }
+        }
+        
+    }
 
-		public System.Double YDim
-		{
-			get
-			{
-				try {
-					return teklaObject.YDim;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("YDim", ex); }
-			}
-
-		}
-
+    public System.Double YDim
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.YDim;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(YDim), ex); 
+            }
+        }
+        
+    }
         
 
         

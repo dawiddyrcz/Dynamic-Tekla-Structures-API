@@ -13,42 +13,64 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class UnitAttributes  : Dynamic.Tekla.Structures.Drawing.GenericAttributesBase
     {
 
-		public Dynamic.Tekla.Structures.Drawing.Units Unit
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.Units_.FromTSObject(teklaObject.Unit);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Unit", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Unit = Dynamic.Tekla.Structures.Drawing.Units_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Unit", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Drawing.FormatTypes Format
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.FormatTypes_.FromTSObject(teklaObject.Format);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Format", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Format = Dynamic.Tekla.Structures.Drawing.FormatTypes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Format", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.Units Unit
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Unit;
+                var value_ = Dynamic.Tekla.Structures.Drawing.Units_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.Units) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Unit), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.Units_.GetTSObject(value);
+                teklaObject.Unit = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Unit), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.FormatTypes Format
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Format;
+                var value_ = Dynamic.Tekla.Structures.Drawing.FormatTypes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.FormatTypes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Format), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.FormatTypes_.GetTSObject(value);
+                teklaObject.Format = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Format), ex); 
+            }
+        }
+    }
         
 
         

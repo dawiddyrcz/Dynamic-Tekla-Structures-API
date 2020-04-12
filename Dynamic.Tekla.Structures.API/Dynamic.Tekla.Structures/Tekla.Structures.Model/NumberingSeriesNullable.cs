@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures.Model
     public  class NumberingSeriesNullable 
     {
 
-		public System.String Prefix
-		{
-			get
-			{
-				try {
-					return teklaObject.Prefix;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Prefix", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Prefix = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Prefix", ex); }
-			}
-		}
 
-		public System.Nullable<System.Int32> StartNumber
-		{
-			get
-			{
-				try {
-					return teklaObject.StartNumber;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartNumber", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.StartNumber = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartNumber", ex); }
-			}
-		}
+    public System.String Prefix
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Prefix;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Prefix), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Prefix = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Prefix), ex); 
+            }
+        }
+    }
 
+    public System.Nullable<System.Int32> StartNumber
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.StartNumber;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartNumber), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.StartNumber = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartNumber), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

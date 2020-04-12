@@ -13,78 +13,116 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class EmbeddedObjectAttributes  : Dynamic.Tekla.Structures.Drawing.AttributesBase
     {
 
-		public System.Double XScale
-		{
-			get
-			{
-				try {
-					return teklaObject.XScale;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("XScale", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.XScale = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("XScale", ex); }
-			}
-		}
 
-		public System.Double YScale
-		{
-			get
-			{
-				try {
-					return teklaObject.YScale;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("YScale", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.YScale = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("YScale", ex); }
-			}
-		}
+    public System.Double XScale
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.XScale;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(XScale), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.XScale = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(XScale), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions Scaling
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.FromTSObject(teklaObject.Scaling);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scaling", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Scaling = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Scaling", ex); }
-			}
-		}
+    public System.Double YScale
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.YScale;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(YScale), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.YScale = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(YScale), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame Frame
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.FromTSObject(teklaObject.Frame);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Frame", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Frame = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Frame", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions Scaling
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Scaling;
+                var value_ = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Scaling), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectScalingOptions_.GetTSObject(value);
+                teklaObject.Scaling = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Scaling), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame Frame
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Frame;
+                var value_ = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Frame), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.EmbeddedObjectFrame_.GetTSObject(value);
+                teklaObject.Frame = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Frame), ex); 
+            }
+        }
+    }
         
 
         

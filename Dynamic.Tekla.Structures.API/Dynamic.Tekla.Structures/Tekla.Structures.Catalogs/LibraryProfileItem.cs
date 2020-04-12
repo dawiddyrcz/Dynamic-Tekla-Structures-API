@@ -13,48 +13,68 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class LibraryProfileItem  : Dynamic.Tekla.Structures.Catalogs.ProfileItem
     {
 
-		public System.Collections.ArrayList aProfileItemAnalysisParameters
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.aProfileItemAnalysisParameters);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemAnalysisParameters", ex); }
-			}
 
-		}
+    public System.Collections.ArrayList aProfileItemAnalysisParameters
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.aProfileItemAnalysisParameters;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(aProfileItemAnalysisParameters), ex); 
+            }
+        }
+        
+    }
 
-		public System.Collections.ArrayList aProfileItemUserParameters
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.aProfileItemUserParameters);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("aProfileItemUserParameters", ex); }
-			}
+    public System.Collections.ArrayList aProfileItemUserParameters
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.aProfileItemUserParameters;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(aProfileItemUserParameters), ex); 
+            }
+        }
+        
+    }
 
-		}
-
-		public System.String ProfileName
-		{
-			get
-			{
-				try {
-					return teklaObject.ProfileName;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileName", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ProfileName = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfileName", ex); }
-			}
-		}
-
+    public System.String ProfileName
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ProfileName;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileName), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ProfileName = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileName), ex); 
+            }
+        }
+    }
         
 
         

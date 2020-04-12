@@ -24,24 +24,35 @@ namespace Dynamic.Tekla.Structures.Drawing
     public abstract class OpenGraphicObjectAttributes  : Dynamic.Tekla.Structures.Drawing.GraphicObject.GraphicObjectAttributes
     {
 
-		public Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes Arrowhead
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.FromTSObject(teklaObject.Arrowhead);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Arrowhead", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Arrowhead = Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Arrowhead", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes Arrowhead
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Arrowhead;
+                var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Arrowhead), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadAttributes_.GetTSObject(value);
+                teklaObject.Arrowhead = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Arrowhead), ex); 
+            }
+        }
+    }
         
 
         

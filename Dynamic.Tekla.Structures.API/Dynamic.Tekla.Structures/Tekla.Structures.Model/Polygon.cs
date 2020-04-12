@@ -13,37 +13,54 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Polygon 
     {
 
-		public System.Collections.ArrayList Points
-		{
-			get
-			{
-				try {
-					return TSActivator.ConvertArrayList(teklaObject.Points);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Points = TSActivator.ConvertToTSArrayList(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Points", ex); }
-			}
-		}
 
-		public static System.Int32 MAX_POLYGON_POINTS
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon","MAX_POLYGON_POINTS");
+    public System.Collections.ArrayList Points
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Points;
+                var value_ = ArrayListConverter.FromTSObjects(value);
+                return (System.Collections.ArrayList) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = ArrayListConverter.ToTSObjects(value);
+                teklaObject.Points = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+            }
+        }
+    }
 
-		}
-
-		public static System.Int32 MIN_POLYGON_POINTS
-		{
-			get => (System.Int32) TSActivator.Get_StaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon","MIN_POLYGON_POINTS");
-
-		}
-
+    public static System.Int32 MAX_POLYGON_POINTS
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon", "MAX_POLYGON_POINTS");
+            return (System.Int32) value;
+        }
         
+    }
+    public static System.Int32 MIN_POLYGON_POINTS
+    {
+        get
+        {
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Polygon", "MIN_POLYGON_POINTS");
+            return (System.Int32) value;
+        }
+        
+    }        
 
         internal dynamic teklaObject;
 

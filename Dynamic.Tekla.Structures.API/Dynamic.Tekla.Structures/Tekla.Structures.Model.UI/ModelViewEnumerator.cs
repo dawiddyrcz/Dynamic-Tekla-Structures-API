@@ -13,41 +13,56 @@ namespace Dynamic.Tekla.Structures.Model.UI
     public  class ModelViewEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Model.UI.View Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
-		public System.Int32 Count
-		{
-			get
-			{
-				try {
-					return teklaObject.Count;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Count", ex); }
-			}
+    public Dynamic.Tekla.Structures.Model.UI.View Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Model.UI.View_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.UI.View) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
 
-		}
+    public System.Int32 Count
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Count;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
+            }
+        }
+        
+    }
 
-		public System.Int32 CurrentViewId
-		{
-			get
-			{
-				try {
-					return teklaObject.CurrentViewId;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("CurrentViewId", ex); }
-			}
-
-		}
-
+    public System.Int32 CurrentViewId
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.CurrentViewId;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurrentViewId), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

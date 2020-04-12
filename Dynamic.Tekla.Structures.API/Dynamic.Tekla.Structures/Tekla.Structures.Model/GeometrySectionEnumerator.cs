@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Model
     public  class GeometrySectionEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Model.GeometrySection Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.GeometrySection_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.GeometrySection Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Model.GeometrySection_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.GeometrySection) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

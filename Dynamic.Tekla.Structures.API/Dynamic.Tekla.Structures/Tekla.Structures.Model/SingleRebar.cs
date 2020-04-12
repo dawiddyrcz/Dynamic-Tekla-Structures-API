@@ -13,78 +13,119 @@ namespace Dynamic.Tekla.Structures.Model
     public  class SingleRebar  : Dynamic.Tekla.Structures.Model.Reinforcement
     {
 
-		public System.String Size
-		{
-			get
-			{
-				try {
-					return teklaObject.Size;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Size = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Size", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.StartHook);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartHook", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StartHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StartHook", ex); }
-			}
-		}
+    public System.String Size
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Size;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Size = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(teklaObject.EndHook);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndHook", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.EndHook = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("EndHook", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StartHook;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarHookData) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
+                teklaObject.StartHook = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.Polygon Polygon
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(teklaObject.Polygon);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Polygon", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.EndHook;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarHookData) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
+                teklaObject.EndHook = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.Polygon Polygon
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Polygon;
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Polygon) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
+                teklaObject.Polygon = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+            }
+        }
+    }
         
 
         

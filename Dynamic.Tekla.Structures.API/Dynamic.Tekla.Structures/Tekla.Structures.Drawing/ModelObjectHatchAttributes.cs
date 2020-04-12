@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class ModelObjectHatchAttributes  : Dynamic.Tekla.Structures.Drawing.HatchAttributes
     {
 
-		public System.Boolean AutomaticScaling
-		{
-			get
-			{
-				try {
-					return teklaObject.AutomaticScaling;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.AutomaticScaling = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutomaticScaling", ex); }
-			}
-		}
 
+    public System.Boolean AutomaticScaling
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.AutomaticScaling;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutomaticScaling), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.AutomaticScaling = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutomaticScaling), ex); 
+            }
+        }
+    }
         
 
         

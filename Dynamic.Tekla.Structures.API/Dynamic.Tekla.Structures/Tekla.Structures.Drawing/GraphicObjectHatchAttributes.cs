@@ -13,42 +13,58 @@ namespace Dynamic.Tekla.Structures.Drawing
     public  class GraphicObjectHatchAttributes  : Dynamic.Tekla.Structures.Drawing.HatchAttributes
     {
 
-		public System.Double OffsetX
-		{
-			get
-			{
-				try {
-					return teklaObject.OffsetX;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.OffsetX = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetX", ex); }
-			}
-		}
 
-		public System.Double OffsetY
-		{
-			get
-			{
-				try {
-					return teklaObject.OffsetY;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.OffsetY = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("OffsetY", ex); }
-			}
-		}
+    public System.Double OffsetX
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.OffsetX;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetX), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.OffsetX = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetX), ex); 
+            }
+        }
+    }
 
+    public System.Double OffsetY
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.OffsetY;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetY), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.OffsetY = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetY), ex); 
+            }
+        }
+    }
         
 
         

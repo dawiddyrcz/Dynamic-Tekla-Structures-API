@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Model
     public  class ContourPoint  : Dynamic.Tekla.Structures.Geometry3d.Point
     {
 
-		public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(teklaObject.Chamfer);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Chamfer", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Chamfer = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Chamfer", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Chamfer;
+                var value_ = Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Chamfer) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value);
+                teklaObject.Chamfer = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
+            }
+        }
+    }
         
 
         

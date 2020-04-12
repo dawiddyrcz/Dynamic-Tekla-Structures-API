@@ -13,107 +13,163 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Connection  : Dynamic.Tekla.Structures.Model.BaseComponent
     {
 
-		public System.Int32 Class
-		{
-			get
-			{
-				try {
-					return teklaObject.Class;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Class", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Class = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Class", ex); }
-			}
-		}
 
-		public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(teklaObject.UpVector);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UpVector", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.UpVector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("UpVector", ex); }
-			}
-		}
+    public System.Int32 Class
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Class;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Class), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Class = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Class), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(teklaObject.AutoDirectionType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutoDirectionType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.AutoDirectionType = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("AutoDirectionType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Geometry3d.Vector UpVector
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.UpVector;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UpVector), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(value);
+                teklaObject.UpVector = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(UpVector), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.PositionTypeEnum PositionType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(teklaObject.PositionType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PositionType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.PositionType = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("PositionType", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.AutoDirectionTypeEnum AutoDirectionType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.AutoDirectionType;
+                var value_ = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.AutoDirectionTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutoDirectionType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.AutoDirectionTypeEnum_.GetTSObject(value);
+                teklaObject.AutoDirectionType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AutoDirectionType), ex); 
+            }
+        }
+    }
 
-		public System.String Code
-		{
-			get
-			{
-				try {
-					return teklaObject.Code;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Code", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Code = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Code", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.PositionTypeEnum PositionType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.PositionType;
+                var value_ = Dynamic.Tekla.Structures.PositionTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.PositionTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PositionType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.PositionTypeEnum_.GetTSObject(value);
+                teklaObject.PositionType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PositionType), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(teklaObject.Status);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Status", ex); }
-			}
-		}
+    public System.String Code
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Code;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Code), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Code = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Code), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.ConnectionStatusEnum Status
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Status;
+                var value_ = Dynamic.Tekla.Structures.ConnectionStatusEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.ConnectionStatusEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Status), ex); 
+            }
+        }
+        
+    }
         
 
         

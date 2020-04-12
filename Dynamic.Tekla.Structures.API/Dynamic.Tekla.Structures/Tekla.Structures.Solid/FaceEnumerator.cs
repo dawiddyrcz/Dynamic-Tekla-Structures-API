@@ -13,17 +13,24 @@ namespace Dynamic.Tekla.Structures.Solid
     public  class FaceEnumerator 
     {
 
-		public Dynamic.Tekla.Structures.Solid.Face Current
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Solid.Face_.FromTSObject(teklaObject.Current);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Current", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Solid.Face Current
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Current;
+                var value_ = Dynamic.Tekla.Structures.Solid.Face_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Solid.Face) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+            }
+        }
+        
+    }
         
 
         internal dynamic teklaObject;

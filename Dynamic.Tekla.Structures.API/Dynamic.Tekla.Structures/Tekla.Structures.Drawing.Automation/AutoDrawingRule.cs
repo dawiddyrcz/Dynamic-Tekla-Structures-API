@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Drawing.Automation
     public  class AutoDrawingRule 
     {
 
-		public System.String Filename
-		{
-			get
-			{
-				try {
-					return teklaObject.Filename;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Filename", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Filename = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Filename", ex); }
-			}
-		}
 
+    public System.String Filename
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Filename;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Filename), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Filename = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Filename), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

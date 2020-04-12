@@ -13,114 +13,174 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarSplitter  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
-		public Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum StaggerType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(teklaObject.StaggerType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.StaggerType = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerType", ex); }
-			}
-		}
 
-		public System.Double StaggerOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.StaggerOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.StaggerOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("StaggerOffset", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum StaggerType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.StaggerType;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StaggerType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSplitter.StaggerTypeEnum_.GetTSObject(value);
+                teklaObject.StaggerType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StaggerType), ex); 
+            }
+        }
+    }
 
-		public System.Double SplitOffset
-		{
-			get
-			{
-				try {
-					return teklaObject.SplitOffset;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitOffset", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.SplitOffset = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitOffset", ex); }
-			}
-		}
+    public System.Double StaggerOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.StaggerOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StaggerOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.StaggerOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StaggerOffset), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(teklaObject.SplitType);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitType", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.SplitType = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("SplitType", ex); }
-			}
-		}
+    public System.Double SplitOffset
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.SplitOffset;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SplitOffset), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.SplitOffset = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SplitOffset), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarLapping Lapping
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(teklaObject.Lapping);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lapping", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Lapping = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Lapping", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum SplitType
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.SplitType;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SplitType), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSplitter.SplitTypeEnum_.GetTSObject(value);
+                teklaObject.SplitType = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SplitType), ex); 
+            }
+        }
+    }
 
-		public Dynamic.Tekla.Structures.Model.RebarCranking Cranking
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(teklaObject.Cranking);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cranking", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Cranking = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Cranking", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.RebarLapping Lapping
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Lapping;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarLapping) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lapping), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarLapping_.GetTSObject(value);
+                teklaObject.Lapping = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lapping), ex); 
+            }
+        }
+    }
 
+    public Dynamic.Tekla.Structures.Model.RebarCranking Cranking
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Cranking;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarCranking_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarCranking) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Cranking), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarCranking_.GetTSObject(value);
+                teklaObject.Cranking = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Cranking), ex); 
+            }
+        }
+    }
         
 
         

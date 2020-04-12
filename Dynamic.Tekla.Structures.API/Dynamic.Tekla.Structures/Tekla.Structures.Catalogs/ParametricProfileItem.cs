@@ -13,24 +13,32 @@ namespace Dynamic.Tekla.Structures.Catalogs
     public  class ParametricProfileItem  : Dynamic.Tekla.Structures.Catalogs.ProfileItem
     {
 
-		public System.String ProfilePrefix
-		{
-			get
-			{
-				try {
-					return teklaObject.ProfilePrefix;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfilePrefix", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.ProfilePrefix = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("ProfilePrefix", ex); }
-			}
-		}
 
+    public System.String ProfilePrefix
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.ProfilePrefix;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.ProfilePrefix = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
+            }
+        }
+    }
         
 
         

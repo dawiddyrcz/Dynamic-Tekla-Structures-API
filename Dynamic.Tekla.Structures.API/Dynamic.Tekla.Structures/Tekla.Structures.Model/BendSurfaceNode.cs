@@ -13,36 +13,51 @@ namespace Dynamic.Tekla.Structures.Model
     public abstract class BendSurfaceNode 
     {
 
-		public System.Boolean IsAutomatic
-		{
-			get
-			{
-				try {
-					return teklaObject.IsAutomatic;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("IsAutomatic", ex); }
-			}
 
-		}
+    public System.Boolean IsAutomatic
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.IsAutomatic;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+            }
+        }
+        
+    }
 
-		public Dynamic.Tekla.Structures.Model.BendSurface Surface
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(teklaObject.Surface);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Surface = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Surface", ex); }
-			}
-		}
-
+    public Dynamic.Tekla.Structures.Model.BendSurface Surface
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Surface;
+                var value_ = Dynamic.Tekla.Structures.Model.BendSurface_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.BendSurface) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Surface), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.BendSurface_.GetTSObject(value);
+                teklaObject.Surface = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Surface), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

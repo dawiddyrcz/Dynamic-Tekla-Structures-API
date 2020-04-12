@@ -13,96 +13,139 @@ namespace Dynamic.Tekla.Structures.Model
     public  class Chamfer 
     {
 
-		public Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(teklaObject.Type);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Type = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Type", ex); }
-			}
-		}
 
-		public System.Double X
-		{
-			get
-			{
-				try {
-					return teklaObject.X;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("X", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.X = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("X", ex); }
-			}
-		}
+    public Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum Type
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Type;
+                var value_ = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.Chamfer.ChamferTypeEnum_.GetTSObject(value);
+                teklaObject.Type = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+            }
+        }
+    }
 
-		public System.Double Y
-		{
-			get
-			{
-				try {
-					return teklaObject.Y;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Y", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.Y = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Y", ex); }
-			}
-		}
+    public System.Double X
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.X;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(X), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.X = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(X), ex); 
+            }
+        }
+    }
 
-		public System.Double DZ1
-		{
-			get
-			{
-				try {
-					return teklaObject.DZ1;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DZ1", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DZ1 = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DZ1", ex); }
-			}
-		}
+    public System.Double Y
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Y;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Y), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.Y = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Y), ex); 
+            }
+        }
+    }
 
-		public System.Double DZ2
-		{
-			get
-			{
-				try {
-					return teklaObject.DZ2;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DZ2", ex); }
-			}
-			set
-			{
-				try {
-					teklaObject.DZ2 = value;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("DZ2", ex); }
-			}
-		}
+    public System.Double DZ1
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DZ1;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DZ1), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DZ1 = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DZ1), ex); 
+            }
+        }
+    }
 
+    public System.Double DZ2
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.DZ2;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DZ2), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                teklaObject.DZ2 = value;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DZ2), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

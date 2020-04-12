@@ -13,24 +13,35 @@ namespace Dynamic.Tekla.Structures.Filtering
     public  class Filter 
     {
 
-		public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(teklaObject.FilterExpression);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FilterExpression", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("FilterExpression", ex); }
-			}
-		}
 
+    public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.FilterExpression;
+                var value_ = Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Filtering.FilterExpression) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value);
+                teklaObject.FilterExpression = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
+            }
+        }
+    }
         
 
         internal dynamic teklaObject;

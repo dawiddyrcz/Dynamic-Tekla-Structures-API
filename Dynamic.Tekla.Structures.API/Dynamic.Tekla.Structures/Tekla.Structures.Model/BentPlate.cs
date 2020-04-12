@@ -13,36 +13,51 @@ namespace Dynamic.Tekla.Structures.Model
     public  class BentPlate  : Dynamic.Tekla.Structures.Model.Part
     {
 
-		public Dynamic.Tekla.Structures.Model.ConnectiveGeometry Geometry
-		{
-			get
-			{
-				try {
-				return Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(teklaObject.Geometry);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Geometry", ex); }
-			}
-			set
-			{
-				try {
-				teklaObject.Geometry = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value);
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Geometry", ex); }
-			}
-		}
 
-		public System.Double Thickness
-		{
-			get
-			{
-				try {
-					return teklaObject.Thickness;
-				} catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-				 { throw DynamicAPINotFoundException.CouldNotFindProperty("Thickness", ex); }
-			}
+    public Dynamic.Tekla.Structures.Model.ConnectiveGeometry Geometry
+    {
+        get
+        {
+            try
+            {
+                var value = teklaObject.Geometry;
+                var value_ = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ConnectiveGeometry) value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Geometry), ex); 
+            }
+        }
+        set
+        {
+            try
+            {
+                var value_ = Dynamic.Tekla.Structures.Model.ConnectiveGeometry_.GetTSObject(value);
+                teklaObject.Geometry = value_;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Geometry), ex); 
+            }
+        }
+    }
 
-		}
-
+    public System.Double Thickness
+    {
+        get
+        {
+            try
+            {
+                return teklaObject.Thickness;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Thickness), ex); 
+            }
+        }
+        
+    }
         
 
         

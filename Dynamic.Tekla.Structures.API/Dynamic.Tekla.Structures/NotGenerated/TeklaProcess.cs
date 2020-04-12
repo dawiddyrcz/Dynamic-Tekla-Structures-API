@@ -124,6 +124,7 @@ namespace Dynamic.Tekla.Structures
                 Path.Combine(binPath, "plugins",  "Tekla.Structures.Model.dll"),
                 Path.Combine(binPath, "plugins",  "Tekla.Structures.Datatype.dll"),
                 Path.Combine(binPath, "plugins",  "Tekla.Structures.Drawing.dll"),
+                Path.Combine(binPath, "plugins",  "Tekla.Structures.Catalogs.dll"),
                 Path.Combine(binPath, "applications", "Tekla", "Common", "Tekla.Application.Library.dll"),
                 Path.Combine(binPath, "dialogs", "Tekla.Structures.Dialog.dll"),
             };

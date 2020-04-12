@@ -87,6 +87,7 @@
     <Compile Include="MethodGeneratorTests.cs" />
     <Compile Include="MethodParameterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyGeneratorTests.cs" />
     <Compile Include="TypeNameTests.cs" />
   </ItemGroup>
   <ItemGroup>

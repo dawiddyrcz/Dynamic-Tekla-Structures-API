@@ -39,11 +39,13 @@ namespace CodeGenerator
 
             if (isStatic)
             {
-                return GenerateStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
+                //return GenerateStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
+                return StaticProperty(propertyOrField, currentType, hasGet, hasSet);
             }
             else
             {
-                return GenerateNonStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
+                return NonStaticProperty(propertyOrField, currentType, hasGet, hasSet);
+                //return GenerateNonStatic_FieldOrProperty(propertyOrField, currentType, hasGet, hasSet);
             }
         }
 
@@ -57,30 +59,30 @@ namespace CodeGenerator
             if (hasSet) staticSet = GetStaticSet(propertyOrField, currentType);
 
             return $@"
-public static {typeFullNameWithDynamic} {propertyOrField.Name}
-{{
-    {staticGet}
-    {staticSet}
-}}
-";
+    public static {typeFullNameWithDynamic} {propertyOrField.Name}
+    {{
+        {staticGet}
+        {staticSet}
+    }}";
         }
 
         private static string GetStaticGet(MemberInfo propertyOrField, Type propertyOrFieldType)
         {
-            string valueConverter = "return value;";
+
+            var propTypeFullName = TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType);
+            string valueConverter = $"return ({propTypeFullName}) value;";
 
             if (Converters.HaveToBeConverted(propertyOrFieldType))
             {
                 valueConverter = Converters.FromTSObjects(propertyOrFieldType, "value", "var value_");
-                valueConverter += $"\n\treturn ({TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType)})value_;";
+                valueConverter += $"\n\treturn ({propTypeFullName}) value_;";
             }
 
-            return $@"set
-{{
-    var value = PropertyInvoker.GetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"");
-    {valueConverter}
-}}
-";
+            return $@"get
+        {{
+            var value = PropertyInvoker.GetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"");
+            {valueConverter}
+        }}";
         }
 
         private static string GetStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
@@ -91,11 +93,10 @@ public static {typeFullNameWithDynamic} {propertyOrField.Name}
                 valueConverter = Converters.ToTSObjects(propertyOrFieldType, "value", "var value_");
 
             return $@"set
-{{
-    {valueConverter}
-    PropertyInvoker.SetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"", value_);
-}}
-";
+        {{
+            {valueConverter}
+            PropertyInvoker.SetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"", value_);
+        }}";
         }
 
         private static string NonStaticProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
@@ -108,45 +109,69 @@ public static {typeFullNameWithDynamic} {propertyOrField.Name}
             if (hasSet) nonstaticSet = GetNonStaticSet(propertyOrField, currentType);
 
             return $@"
-public {typeFullNameWithDynamic} {propertyOrField.Name}
-{{
-    {nonstaticGet}
-    {nonstaticSet}
-}}
+    public {typeFullNameWithDynamic} {propertyOrField.Name}
+    {{
+        {nonstaticGet}
+        {nonstaticSet}
+    }}
 ";
         }
 
         private static string GetNonStaticGet(MemberInfo propertyOrField, Type propertyOrFieldType)
         {
-            string valueConverter = "return value;";
+            string getCode = string.Empty;
 
             if (Converters.HaveToBeConverted(propertyOrFieldType))
             {
-                valueConverter = Converters.FromTSObjects(propertyOrFieldType, "value", "var value_");
-                valueConverter += $"\n\treturn ({TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType)})value_;";
+                getCode = $@"
+                var value = teklaObject.{propertyOrField.Name};
+                {Converters.FromTSObjects(propertyOrFieldType, "value", "var value_")}
+                return ({TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType)}) value_;";
+            }
+            else
+            {
+                getCode = $@"
+                return teklaObject.{ propertyOrField.Name};";
             }
 
-            return $@"set
-{{
-    var value = teklaObject.{propertyOrField.Name};
-    {valueConverter}
-}}
-";
+            return $@"get
+        {{
+            try
+            {{{getCode}
+            }}
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {{
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
+            }}
+        }}";
         }
 
         private static string GetNonStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
         {
-            string valueConverter = "var value_ = value;";
+            string setCode = string.Empty;
 
             if (Converters.HaveToBeConverted(propertyOrFieldType))
-                valueConverter = Converters.ToTSObjects(propertyOrFieldType, "value", "var value_");
+            {
+                setCode = $@"
+                {Converters.ToTSObjects(propertyOrFieldType, "value", "var value_")}
+                teklaObject.{propertyOrField.Name} = value_;";
+            }
+            else
+            {
+                setCode = $@"
+                teklaObject.{ propertyOrField.Name} = value;";
+            }
 
             return $@"set
-{{
-    {valueConverter}
-    teklaObject.{propertyOrField.Name} = value_;
-}}
-";
+        {{
+            try
+            {{{setCode}
+            }}
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {{
+                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
+            }}
+        }}";
         }
         
         private static string GenerateStatic_FieldOrProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)

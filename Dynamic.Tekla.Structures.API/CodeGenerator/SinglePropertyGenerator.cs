@@ -47,6 +47,108 @@ namespace CodeGenerator
             }
         }
 
+        private static string StaticProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
+        {
+            var typeFullNameWithDynamic = TypeFullName.GetTypeFullName_WithDynamic(currentType);
+
+            string staticGet = string.Empty;
+            if (hasGet) staticGet = GetStaticGet(propertyOrField, currentType);
+            string staticSet = string.Empty;
+            if (hasSet) staticSet = GetStaticSet(propertyOrField, currentType);
+
+            return $@"
+public static {typeFullNameWithDynamic} {propertyOrField.Name}
+{{
+    {staticGet}
+    {staticSet}
+}}
+";
+        }
+
+        private static string GetStaticGet(MemberInfo propertyOrField, Type propertyOrFieldType)
+        {
+            string valueConverter = "return value;";
+
+            if (Converters.HaveToBeConverted(propertyOrFieldType))
+            {
+                valueConverter = Converters.FromTSObjects(propertyOrFieldType, "value", "var value_");
+                valueConverter += $"\n\treturn ({TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType)})value_;";
+            }
+
+            return $@"set
+{{
+    var value = PropertyInvoker.GetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"");
+    {valueConverter}
+}}
+";
+        }
+
+        private static string GetStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
+        {
+            string valueConverter = "var value_ = value;";
+
+            if (Converters.HaveToBeConverted(propertyOrFieldType))
+                valueConverter = Converters.ToTSObjects(propertyOrFieldType, "value", "var value_");
+
+            return $@"set
+{{
+    {valueConverter}
+    PropertyInvoker.SetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"", value_);
+}}
+";
+        }
+
+        private static string NonStaticProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
+        {
+            var typeFullNameWithDynamic = TypeFullName.GetTypeFullName_WithDynamic(currentType);
+
+            string nonstaticGet = string.Empty;
+            if (hasGet) nonstaticGet = GetNonStaticGet(propertyOrField, currentType);
+            string nonstaticSet = string.Empty;
+            if (hasSet) nonstaticSet = GetNonStaticSet(propertyOrField, currentType);
+
+            return $@"
+public {typeFullNameWithDynamic} {propertyOrField.Name}
+{{
+    {nonstaticGet}
+    {nonstaticSet}
+}}
+";
+        }
+
+        private static string GetNonStaticGet(MemberInfo propertyOrField, Type propertyOrFieldType)
+        {
+            string valueConverter = "return value;";
+
+            if (Converters.HaveToBeConverted(propertyOrFieldType))
+            {
+                valueConverter = Converters.FromTSObjects(propertyOrFieldType, "value", "var value_");
+                valueConverter += $"\n\treturn ({TypeFullName.GetTypeFullName_WithDynamic(propertyOrFieldType)})value_;";
+            }
+
+            return $@"set
+{{
+    var value = teklaObject.{propertyOrField.Name};
+    {valueConverter}
+}}
+";
+        }
+
+        private static string GetNonStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
+        {
+            string valueConverter = "var value_ = value;";
+
+            if (Converters.HaveToBeConverted(propertyOrFieldType))
+                valueConverter = Converters.ToTSObjects(propertyOrFieldType, "value", "var value_");
+
+            return $@"set
+{{
+    {valueConverter}
+    teklaObject.{propertyOrField.Name} = value_;
+}}
+";
+        }
+        
         private static string GenerateStatic_FieldOrProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
         {
             var sb = new StringBuilder();

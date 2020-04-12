@@ -54,6 +54,7 @@
     <Compile Include="MethodGenerator.cs" />
     <Compile Include="SingleMethodGenerator.cs" />
     <Compile Include="MethodParameter.cs" />
+    <Compile Include="SinglePropertyGenerator.cs" />
     <Compile Include="StructGenerator.cs" />
     <Compile Include="FileGenerator.cs" />
     <Compile Include="TypeFullName.cs" />

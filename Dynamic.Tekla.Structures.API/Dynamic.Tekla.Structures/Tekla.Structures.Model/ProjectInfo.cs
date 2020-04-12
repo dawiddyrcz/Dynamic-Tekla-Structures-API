@@ -436,9 +436,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.ModelSharingServerPath;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.Uri) value_;
+                return teklaObject.ModelSharingServerPath;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -449,8 +447,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.ModelSharingServerPath = value_;
+                teklaObject.ModelSharingServerPath = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {

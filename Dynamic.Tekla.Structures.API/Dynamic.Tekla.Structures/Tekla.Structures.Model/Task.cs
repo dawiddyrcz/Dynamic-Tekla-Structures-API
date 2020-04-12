@@ -205,9 +205,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.PlannedStartDate;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.DateTime) value_;
+                return teklaObject.PlannedStartDate;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -218,8 +216,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.PlannedStartDate = value_;
+                teklaObject.PlannedStartDate = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -234,9 +231,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.PlannedEndDate;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.DateTime) value_;
+                return teklaObject.PlannedEndDate;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -247,8 +242,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.PlannedEndDate = value_;
+                teklaObject.PlannedEndDate = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -289,9 +283,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.ActualStartDate;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.DateTime) value_;
+                return teklaObject.ActualStartDate;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -302,8 +294,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.ActualStartDate = value_;
+                teklaObject.ActualStartDate = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -318,9 +309,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.ActualEndDate;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.DateTime) value_;
+                return teklaObject.ActualEndDate;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -331,8 +320,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.ActualEndDate = value_;
+                teklaObject.ActualEndDate = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {

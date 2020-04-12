@@ -20,9 +20,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             try
             {
-                var value = teklaObject.Target;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.Uri) value_;
+                return teklaObject.Target;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
@@ -33,8 +31,7 @@ namespace Dynamic.Tekla.Structures.Drawing
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
-                teklaObject.Target = value_;
+                teklaObject.Target = value;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {

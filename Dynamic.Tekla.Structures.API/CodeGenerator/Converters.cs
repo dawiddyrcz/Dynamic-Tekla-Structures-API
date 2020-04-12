@@ -156,6 +156,9 @@ namespace CodeGenerator
 
                 || typeof(System.Tuple<System.Boolean, System.Int32, System.Int32, System.Int32>).IsAssignableFrom(type)
                 || typeof(System.Collections.Generic.Dictionary<System.Guid, System.Guid>).IsAssignableFrom(type)
+                || typeof(System.Nullable<System.DateTime>).IsAssignableFrom(type)
+                || typeof(System.DateTime).IsAssignableFrom(type)
+                || typeof(System.Uri).IsAssignableFrom(type)
 
                 // 
 

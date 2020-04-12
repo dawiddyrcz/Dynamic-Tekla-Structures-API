@@ -20,9 +20,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value = teklaObject.ModificationTime;
-                var value_ = ObjectConverter.FromTSObject(value);
-                return (System.Nullable<System.DateTime>) value_;
+                return teklaObject.ModificationTime;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {

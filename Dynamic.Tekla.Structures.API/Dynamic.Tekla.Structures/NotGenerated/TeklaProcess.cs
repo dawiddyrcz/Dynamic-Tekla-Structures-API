@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Dynamic.Tekla.Structures
@@ -63,7 +64,21 @@ namespace Dynamic.Tekla.Structures
 
         private static string GetProcessFilename(Process process)
         {
-            return process.MainModule.FileName; //TODO for 32 bits
+            //return process.MainModule.FileName; //TODO for 32 bits
+            return GetMainModuleFileName(process);
+        }
+
+        //https://stackoverflow.com/questions/5497064/how-to-get-the-full-path-of-running-process
+        [DllImport("Kernel32.dll")]
+        private static extern bool QueryFullProcessImageName([In] IntPtr hProcess, [In] uint dwFlags, [Out] StringBuilder lpExeName, [In, Out] ref uint lpdwSize);
+
+        private static string GetMainModuleFileName(Process process, int buffer = 1024)
+        {
+            var fileNameBuilder = new StringBuilder(buffer);
+            uint bufferLength = (uint)fileNameBuilder.Capacity + 1;
+            return QueryFullProcessImageName(process.Handle, 0, fileNameBuilder, ref bufferLength) ?
+                fileNameBuilder.ToString() :
+                null;
         }
 
         private static TeklaFileVersion GetFileVersion(string teklaFilePath)

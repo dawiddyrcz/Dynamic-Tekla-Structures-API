@@ -33,6 +33,7 @@ namespace Examples
 
             //Show beam identifiers
             Console.WriteLine("Beam inserted");
+            Console.WriteLine("Beam name:\t" + beam.Name);
             Console.WriteLine("Beam id:\t" + beam.Identifier.ID);
             Console.WriteLine("Beam guid:\t" + beam.Identifier.GUID);
 
@@ -45,6 +46,11 @@ namespace Examples
             beam.GetReportProperty("WEIGHT", ref weight);
             Console.WriteLine("Beam weight:\t" + weight);
 
+            //Check profile
+            string profile = "";
+            beam.GetReportProperty("PROFILE", ref profile);
+            Console.WriteLine("Beam profile:\t" + weight);
+            
             //Select beam
             var selector = new TSM.UI.ModelObjectSelector();
             selector.Select(new ArrayList() { beam });

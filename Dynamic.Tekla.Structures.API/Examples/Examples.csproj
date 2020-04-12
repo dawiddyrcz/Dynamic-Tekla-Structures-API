@@ -46,7 +46,9 @@
     <Compile Include="Check_If_Tekla_Is_Running.cs" />
     <Compile Include="Events_Example.cs" />
     <Compile Include="ExampleBase.cs" />
+    <Compile Include="Get_Beams_From_Model.cs" />
     <Compile Include="Get_Model_Info.cs" />
+    <Compile Include="Get_Profiles_From_Catalog.cs" />
     <Compile Include="Insert_Beam_In_Model.cs" />
     <Compile Include="Print_Drawing_Names.cs" />
     <Compile Include="Program.cs" />

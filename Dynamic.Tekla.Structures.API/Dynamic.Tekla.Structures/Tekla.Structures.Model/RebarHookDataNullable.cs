@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.Shape;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarHookData.RebarHookShapeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -33,7 +33,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.Shape = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

@@ -38,9 +38,7 @@ namespace Dynamic.Tekla.Structures.Geometry3d
         {
             try
             {
-                var value = teklaObject.InnerWires;
-                var value_ = IEnumerableConverter.FromTSObjects<System.Int32, System.Int32[][]>(value);
-                return (System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]>) value_;
+                return teklaObject.InnerWires;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {

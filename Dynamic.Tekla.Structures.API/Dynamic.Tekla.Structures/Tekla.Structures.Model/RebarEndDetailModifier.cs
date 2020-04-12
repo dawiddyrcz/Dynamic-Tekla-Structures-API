@@ -137,7 +137,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.EndType;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarEndDetailModifier.EndTypeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -149,7 +149,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.EndType = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

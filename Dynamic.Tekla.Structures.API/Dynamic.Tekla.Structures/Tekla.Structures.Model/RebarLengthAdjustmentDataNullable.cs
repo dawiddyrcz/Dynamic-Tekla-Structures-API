@@ -21,7 +21,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.AdjustmentType;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarLengthAdjustmentDataNullable.LengthAdjustmentTypeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -33,7 +33,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.AdjustmentType = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

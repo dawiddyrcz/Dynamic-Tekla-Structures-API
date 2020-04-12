@@ -45,14 +45,18 @@ namespace CodeGenerator
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                var ienumerableParameters = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
-                return outputName + " = IEnumerableConverter.ToTSObjects" + ienumerableParameters + "(" + inputName + ");";
+                //var ienumerableParameters = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
+                return outputName + " = IEnumerableConverter.ToTSObjects(" + inputName + ");";
             }
             
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
             {
                 var tupleParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = TupleConverter.ToTSObjects"+ tupleParams+"(" + inputName + ");";
+            }
+            else if (typeFullName.StartsWith("System.Nullable", StringComparison.InvariantCulture)) //TODO check every startswith
+            {
+                return outputName + " = NullableConverter.ToTSObjects(" + inputName + ");";
             }
             else
             {
@@ -97,6 +101,11 @@ namespace CodeGenerator
             {
                 var tupleParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = TupleConverter.FromTSObject" + tupleParams + "(" + inputName + ");";
+            }
+            else if (typeFullName.StartsWith("System.Nullable", StringComparison.InvariantCulture)) 
+            {
+                var nulableParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
+                return outputName + " = NullableConverter.FromTSObject" + nulableParams + "(" + inputName + ");";
             }
             else
             {
@@ -159,6 +168,9 @@ namespace CodeGenerator
                 || typeof(System.Nullable<System.DateTime>).IsAssignableFrom(type)
                 || typeof(System.DateTime).IsAssignableFrom(type)
                 || typeof(System.Uri).IsAssignableFrom(type)
+
+                || typeof(System.Collections.Generic.IDictionary<System.Int32, System.Int32[][]>).IsAssignableFrom(type)
+
 
                 // 
 

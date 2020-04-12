@@ -50,7 +50,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.GroupingType;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarPropertyModifier.GroupingTypeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -62,7 +62,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.GroupingType = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

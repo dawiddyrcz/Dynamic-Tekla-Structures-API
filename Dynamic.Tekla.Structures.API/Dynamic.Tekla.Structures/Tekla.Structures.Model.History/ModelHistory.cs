@@ -119,7 +119,7 @@ public static Dynamic.Tekla.Structures.Model.History.ModificationInfo TakeModifi
 	)
 {
 	
-	var ObjectTypes = IEnumerableConverter.ToTSObjects<Tekla.Structures.Model.ModelObject.ModelObjectEnum>(ObjectTypes_);
+	var ObjectTypes = IEnumerableConverter.ToTSObjects(ObjectTypes_);
 	var PrevStamp = Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.History.ModelHistory", "TakeModifications", Name, ObjectTypes, PrevStamp);
 	var _result = Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(result);
@@ -160,7 +160,7 @@ public static Dynamic.Tekla.Structures.Model.History.ModificationInfo GetModific
 	)
 {
 	
-	var ObjectTypes = IEnumerableConverter.ToTSObjects<Tekla.Structures.Model.ModelObject.ModelObjectEnum>(ObjectTypes_);
+	var ObjectTypes = IEnumerableConverter.ToTSObjects(ObjectTypes_);
 	var PrevStamp = Dynamic.Tekla.Structures.Model.History.ModificationStamp_.GetTSObject(PrevStamp_);
 	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.History.ModelHistory", "GetModifications", Name, ObjectTypes, PrevStamp);
 	var _result = Dynamic.Tekla.Structures.Model.History.ModificationInfo_.FromTSObject(result);

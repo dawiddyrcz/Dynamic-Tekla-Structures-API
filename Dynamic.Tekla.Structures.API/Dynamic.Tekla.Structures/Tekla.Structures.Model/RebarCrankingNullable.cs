@@ -73,7 +73,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.CrankedLengthType;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarCranking.CrankedLengthTypeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -85,7 +85,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.CrankedLengthType = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -180,7 +180,7 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var value = teklaObject.CrankingType;
-                var value_ = ObjectConverter.FromTSObject(value);
+                var value_ = NullableConverter.FromTSObject<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum>(value);
                 return (System.Nullable<Dynamic.Tekla.Structures.Model.RebarCrankingNullable.EndCrankingTypeEnum>) value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -192,7 +192,7 @@ namespace Dynamic.Tekla.Structures.Model
         {
             try
             {
-                var value_ = ObjectConverter.ToTSObject(value);
+                var value_ = NullableConverter.ToTSObjects(value);
                 teklaObject.CrankingType = value_;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

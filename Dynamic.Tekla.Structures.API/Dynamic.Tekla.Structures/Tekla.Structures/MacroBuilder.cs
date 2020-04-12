@@ -207,7 +207,7 @@ public Dynamic.Tekla.Structures.MacroBuilder FileSelection(
 public Dynamic.Tekla.Structures.MacroBuilder ListSelect(
 	System.String dialog,
 	System.String field,
-	params System.String[] items
+	System.String[] items
 	)
 {
 	
@@ -389,7 +389,7 @@ public Dynamic.Tekla.Structures.MacroBuilder TabChange(
 public Dynamic.Tekla.Structures.MacroBuilder TableSelect(
 	System.String dialog,
 	System.String field,
-	params System.Int32[] items
+	System.Int32[] items
 	)
 {
 	

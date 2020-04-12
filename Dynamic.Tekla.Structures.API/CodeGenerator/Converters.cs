@@ -45,7 +45,8 @@ namespace CodeGenerator
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                return outputName + " = IEnumerableConverter.ToTSObjects<" + typeFullName + ">(" + inputName + ");";
+                var ienumerableParameters = typeFullName.Replace("System.Collections.Generic.IEnumerable", "");
+                return outputName + " = IEnumerableConverter.ToTSObjects" + ienumerableParameters + "(" + inputName + ");";
             }
             
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))
@@ -88,7 +89,8 @@ namespace CodeGenerator
             }
             else if (typeof(IEnumerable).IsAssignableFrom(type))
             {
-                return outputName + " = IEnumerableConverter.FromTSObjects<" + typeFullName + ">(" + inputName + ");";
+                var ienumerableParameters = typeFullName.Replace("System.Collections.Generic.IEnumerable", "");
+                return outputName + " = IEnumerableConverter.FromTSObjects" + ienumerableParameters + "(" + inputName + ");";
             }
            
             else if (typeFullName.StartsWith("System.Tuple", StringComparison.InvariantCulture))

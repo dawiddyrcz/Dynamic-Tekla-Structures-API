@@ -35,7 +35,7 @@ namespace CodeGenerator
                 if (name.Equals("GetType") || name.Equals("Equals") || name.Equals("ToString") || name.Equals("GetHashCode")) continue;
 
 
-                sb.Append(MethodGeneratorSingle.GenerateCode(method));
+                sb.Append(SingleMethodGenerator.GenerateCode(method));
 
                 //if (method.IsStatic)
                 //{

@@ -13,7 +13,7 @@ using System.Text;
 
 namespace CodeGenerator
 {
-    public static class MethodGeneratorSingle
+    public static class SingleMethodGenerator
     {
         public static string GenerateCode(MethodInfo methodInfo)
         {

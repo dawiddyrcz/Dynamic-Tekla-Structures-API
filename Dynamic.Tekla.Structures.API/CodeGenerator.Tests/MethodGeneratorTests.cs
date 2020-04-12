@@ -21,7 +21,7 @@ namespace CodeGenerator.Tests
                 .Where(m => m.Name.Equals("Intersect", StringComparison.InvariantCulture) && m.GetParameters().Length >2)
                 .FirstOrDefault();
 
-            var methodCode = MethodGeneratorSingle.GenerateCode(methodInfo);
+            var methodCode = SingleMethodGenerator.GenerateCode(methodInfo);
             Console.WriteLine(methodCode);
         }
 
@@ -32,7 +32,7 @@ namespace CodeGenerator.Tests
                 .Where(m => m.Name.Equals("GetIntegerReportProperties", StringComparison.InvariantCulture) && m.GetParameters().Length > 1)
                 .FirstOrDefault();
 
-            var methodCode = MethodGeneratorSingle.GenerateCode(methodInfo);
+            var methodCode = SingleMethodGenerator.GenerateCode(methodInfo);
             Console.WriteLine(methodCode);
         }
 
@@ -43,7 +43,7 @@ namespace CodeGenerator.Tests
                 .Where(m => m.Name.Equals("Combine", StringComparison.InvariantCulture) && m.GetParameters().Length > 1)
                 .FirstOrDefault();
 
-            var methodCode = MethodGeneratorSingle.GenerateCode(methodInfo);
+            var methodCode = SingleMethodGenerator.GenerateCode(methodInfo);
             Console.WriteLine(methodCode);
         }
     }

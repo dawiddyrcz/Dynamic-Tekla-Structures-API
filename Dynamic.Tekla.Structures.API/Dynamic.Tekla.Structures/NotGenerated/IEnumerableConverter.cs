@@ -5,23 +5,23 @@
 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
-using System;
+using System.Collections.Generic;
 
 namespace Dynamic.Tekla.Structures
 {
     internal static class IEnumerableConverter
     {
-        public static T ToTSObjects<T>(T input)
+        public static List<T> ToTSObjects<T>(IEnumerable<T> dynAPIObjects)
         {
-            //TODO method
-            throw new NotImplementedException();
-        }
+            var enumerator = dynAPIObjects.GetEnumerator();
+            var output = new List<T>();
 
-        public static T FromTSObjects<T>(dynamic input)
-        {
-            //TODO method
-            throw new NotImplementedException();
-        }
+            foreach (dynamic dynObject in dynAPIObjects)
+            {
+                output.Add(dynObject.teklaObject);
+            }
 
+            return output;
+        }
     }
 }

@@ -7,9 +7,6 @@
 */
 
 
-//TODO bug: w constructorze parametry jako listy nie są konwertowane
-//TODO bug: GetAllObjects(System.Type Type)
-
 //TODO obejrzeć wszystkie klasy
 //TODO nuget package
 

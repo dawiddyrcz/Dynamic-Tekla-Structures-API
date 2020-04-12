@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Converters.cs" />
     <Compile Include="MethodGenerator.cs" />
-    <Compile Include="MethodGeneratorSingle.cs" />
+    <Compile Include="SingleMethodGenerator.cs" />
     <Compile Include="MethodParameter.cs" />
     <Compile Include="StructGenerator.cs" />
     <Compile Include="FileGenerator.cs" />

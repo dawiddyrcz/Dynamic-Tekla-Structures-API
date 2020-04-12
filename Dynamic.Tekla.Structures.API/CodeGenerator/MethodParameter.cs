@@ -7,9 +7,6 @@
 */
 
 
-//TODO ref and out parameters
-
-
 using Dynamic.Tekla.Structures;
 using System;
 using System.Reflection;

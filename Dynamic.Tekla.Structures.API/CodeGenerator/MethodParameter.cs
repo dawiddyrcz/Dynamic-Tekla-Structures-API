@@ -59,7 +59,8 @@ namespace CodeGenerator
                     declaration = "out " + declaration;
                 else if (parameterInfo.ParameterType.IsByRef)
                     declaration = "ref " + declaration;
-                
+                else if (parameterInfo.GetCustomAttributes(typeof(ParamArrayAttribute), false).Length > 0)
+                    declaration = "params " + declaration;
 
                     return declaration;
             }

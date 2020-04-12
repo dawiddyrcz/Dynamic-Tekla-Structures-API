@@ -170,5 +170,23 @@ namespace CodeGenerator.Tests
             Assert.AreEqual(string.Empty, methodParameter.ConverterFromTS);
 
         }
+
+        [Test]
+        public void For_Params_Int()
+        {
+            var parameterInfo = typeof(Tekla.Structures.MacroBuilder)
+               .GetMethods()
+               .FirstOrDefault(m => m.Name.Equals("TableSelect", StringComparison.InvariantCulture)
+               && m.GetParameters().Length > 1)
+               .GetParameters().FirstOrDefault(p => p.GetCustomAttributes(typeof(ParamArrayAttribute), false).Length > 0);
+
+            var methodParameter = new MethodParameter(parameterInfo);
+
+            Assert.AreEqual("params System.Int32[] items", methodParameter.MethodDeclaration);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterToTS);
+            Assert.AreEqual("items", methodParameter.ParameterName);
+            Assert.AreEqual(string.Empty, methodParameter.ConverterFromTS);
+
+        }
     }
 }

@@ -11,5 +11,4 @@ using System.Threading.Tasks;
 namespace Dynamic.Tekla.Structures.NotGenerated
 {
     //TODO new CatalogHandler() rzuca wyjątek że go nie ma
-    //TODO parametery params w Macrobuilder.ListSelect  i TableSelect
 }

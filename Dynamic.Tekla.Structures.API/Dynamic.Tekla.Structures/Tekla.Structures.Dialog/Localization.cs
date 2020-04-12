@@ -143,7 +143,7 @@ public void LoadXMLFile(
 
 public void RegisterLocalizationCallback(
 	Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback cb_,
-	System.Type[] types_
+	params System.Type[] types_
 	)
 {
 	var cb = Dynamic.Tekla.Structures.Dialog.Localization.LocalizationCallback_.GetTSObject(cb_);

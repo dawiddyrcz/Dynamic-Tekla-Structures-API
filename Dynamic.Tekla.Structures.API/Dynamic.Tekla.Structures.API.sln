@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1062
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic.Tekla.Structures", "Dynamic.Tekla.Structures\Dynamic.Tekla.Structures.csproj", "{A2E884CA-BAF8-4EFB-9FEE-5FFB3E4A1397}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic.Tekla.Structures.API", "Dynamic.Tekla.Structures\Dynamic.Tekla.Structures.API.csproj", "{A2E884CA-BAF8-4EFB-9FEE-5FFB3E4A1397}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{E550AE6D-4A98-4161-A396-487D704BF00F}"
 EndProject

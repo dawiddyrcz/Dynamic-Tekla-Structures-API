@@ -7,7 +7,7 @@
     <authors>Dawid Dyrcz</authors>
     <owners>Dawid Dyrcz</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <license type="expression">LGPL3</license>
+    <license type="expression">LGPL-3.0-only</license>
     <projectUrl>https://github.com/dawiddyrcz/Dynamic-Tekla-Structures-API</projectUrl>
     <iconUrl>https://github.com/dawiddyrcz/Dynamic-Tekla-Structures-API/blob/master/icon.png</iconUrl>
     <description>Wrapper for Tekla Structures API. This assembly loads dynamically Tekla Structtures dll files and allow to make version independent applications.</description>

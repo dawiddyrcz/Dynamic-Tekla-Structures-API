@@ -58,9 +58,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dynamic.Tekla.Structures\Dynamic.Tekla.Structures.csproj">
+    <ProjectReference Include="..\Dynamic.Tekla.Structures\Dynamic.Tekla.Structures.API.csproj">
       <Project>{a2e884ca-baf8-4efb-9fee-5ffb3e4a1397}</Project>
-      <Name>Dynamic.Tekla.Structures</Name>
+      <Name>Dynamic.Tekla.Structures.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

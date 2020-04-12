@@ -5,6 +5,7 @@
 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -20,7 +21,7 @@ namespace Dynamic.Tekla.Structures
 
             foreach (dynamic dynObject in dynAPIObjects)
             {
-                if (dynObject.GetType().ToString().StartsWith("Dynamic.Tekla.Structures."))
+                if (dynObject.GetType().ToString().StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
                     output.Add(dynObject.teklaObject);
                 else if (typeof(IEnumerable).IsAssignableFrom(dynObject.GetType()))
                     output.Add(ToTSObjects(dynObject));
@@ -39,7 +40,7 @@ namespace Dynamic.Tekla.Structures
 
             foreach (var tsObject in tsObjects)
             {
-                if (tsObject.GetType().ToString().StartsWith("Tekla.Structures."))
+                if (tsObject.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
                 {
                     string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
                     var converterType = assembly.GetType(converterName);

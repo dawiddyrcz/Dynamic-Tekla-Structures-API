@@ -8,15 +8,11 @@
 
 
 //TODO obejrzeć wszystkie klasy
-//TODO nuget package
 
 //TODO project with unit tests
 //TODO test model
 //TODO exception in Drawing enumerator
 //TODO add info in license informaing that you have to have Tekla Structures Software
-
-
-
 
 #define OVERRIDE
 

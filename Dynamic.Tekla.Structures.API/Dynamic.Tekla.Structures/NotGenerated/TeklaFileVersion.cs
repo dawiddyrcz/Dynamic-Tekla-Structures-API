@@ -9,6 +9,8 @@ namespace Dynamic.Tekla.Structures
 {
     public struct TeklaFileVersion
     {
+        //TODO do something when lost connection
+
         public int Major;
         public int Minor;
         public int Build;

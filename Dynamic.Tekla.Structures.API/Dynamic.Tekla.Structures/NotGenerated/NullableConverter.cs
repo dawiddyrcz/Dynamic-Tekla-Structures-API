@@ -18,11 +18,13 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic ToTSObjects(dynamic input)
         {
+            //TODO method
             throw new NotImplementedException();
         }
 
         public static dynamic FromTSObject<T>(dynamic input)
         {
+            //TODO method
             throw new NotImplementedException();
         }
     }

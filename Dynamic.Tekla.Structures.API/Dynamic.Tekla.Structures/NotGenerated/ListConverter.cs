@@ -13,6 +13,7 @@ namespace Dynamic.Tekla.Structures
     {
         //TODO check IList
         //TODO test if it works
+        //TODO list of lists
         public static List<dynamic> ToTSObjects(dynamic dynAPIObjects)
         {
             if (dynAPIObjects.Count.Equals(0))
@@ -46,40 +47,6 @@ namespace Dynamic.Tekla.Structures
             }
             return output;
         }
-
-        //public static ArrayList ToTSObjects(ArrayList dynAPIObjects)
-        //{
-        //    if (dynAPIObjects.Count.Equals(0))
-        //        return new ArrayList();
-
-        //    var output = new ArrayList(dynAPIObjects.Count + 1);
-
-        //    foreach (dynamic dynObject in dynAPIObjects)
-        //    {
-        //        output.Add(dynObject.teklaObject);
-        //    }
-        //    return output;
-        //}
-
-        //public static ArrayList FromTSObjects(ArrayList tsObjects)
-        //{
-        //    if (tsObjects.Count.Equals(0))
-        //        return new ArrayList();
-
-        //    var output = new ArrayList(tsObjects.Count + 1);
-        //    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-
-        //    foreach (var tsObject in tsObjects)
-        //    {
-        //        string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
-        //        var converterType = assembly.GetType(converterName);
-        //        var parameters = new object[] { tsObject };
-        //        var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
-
-        //        output.Add(fromTSObjectMethod.Invoke(null, parameters));
-        //    }
-        //    return output;
-        //}
     }
     
 }

@@ -668,5 +668,8 @@
     <Compile Include="Tekla.Structures\VirtualFolder.cs" />
     <Compile Include="NotGenerated\TupleConverter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Dynamic.Tekla.Structures.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

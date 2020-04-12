@@ -12,7 +12,7 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class ArrayListConverter
     {
-        //TODO sprawdzić wszystkie wystąpienia 
+        //TODO tests
         public static ArrayList ToTSObjects(ArrayList dynAPIObjects)
         {
             if (dynAPIObjects.Count.Equals(0))

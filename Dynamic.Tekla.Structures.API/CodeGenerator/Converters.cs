@@ -54,7 +54,7 @@ namespace CodeGenerator
                 var tupleParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
                 return outputName + " = TupleConverter.ToTSObjects"+ tupleParams+"(" + inputName + ");";
             }
-            else if (typeFullName.StartsWith("System.Nullable", StringComparison.InvariantCulture)) //TODO check every startswith
+            else if (typeFullName.StartsWith("System.Nullable", StringComparison.InvariantCulture))
             {
                 return outputName + " = NullableConverter.ToTSObjects(" + inputName + ");";
             }

@@ -6,7 +6,6 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 using System;
-using System.Collections;
 using System.Linq;
 using System.Reflection;
 
@@ -33,67 +32,7 @@ namespace Dynamic.Tekla.Structures
             var type = GetTypeFromTypeName(typeName);
             return Activator.CreateInstance(type, args);
         }
-
-        ///<summary>Gets value of static field or property in type with typeName</summary>
-        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
-        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
-        public static object Get_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName)
-        {
-            var type = GetTypeFromTypeName(typeName);
-            var fieldInfo = type.GetField(fieldOrPropertyName);
-            if (fieldInfo != null)
-            {
-                var result = fieldInfo.GetValue(null);
-                if (result is null) return null;
-
-                if (result is System.Collections.ArrayList)
-                    return ConvertArrayList((ArrayList)result);
-                else return result;
-            }
-
-            var propertyInfo = type.GetProperty(fieldOrPropertyName);
-            if (propertyInfo != null)
-            {
-                var result = propertyInfo.GetValue(null);
-                if (result is null) return null;
-
-                if (result is System.Collections.ArrayList)
-                    return ConvertArrayList((ArrayList)result);
-                else return result;
-            }
-
-            throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
-        }
-
-        ///<summary>Sets value of static field or property in type with typeName</summary>
-        /// <exception cref="DynamicAPINotFoundException">If could not find type</exception>
-        /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
-        public static void Set_StaticPropertyOrFieldValue(string typeName, string fieldOrPropertyName, object value)
-        {
-            object valueCorrected;
-            if (value is ArrayList)
-                valueCorrected = ConvertToTSArrayList((ArrayList)value);
-            else
-                valueCorrected = value;
-
-            var type = GetTypeFromTypeName(typeName);
-            var fieldInfo = type.GetField(fieldOrPropertyName);
-
-            if (fieldInfo != null)
-            {
-                fieldInfo.SetValue(null, valueCorrected);
-                return;
-            }
-            var propertyInfo = type.GetProperty(fieldOrPropertyName);
-            if (propertyInfo != null)
-            {
-                propertyInfo.SetValue(null, valueCorrected);
-                return;
-            }
-
-            throw new DynamicAPINotFoundException("Could not find static property or field " + fieldOrPropertyName + " in type " + typeName);
-        }
-
+        
         /// <summary>Gets the method from the type</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find metod</exception>
         public static MethodInfo GetMethod(string methodName, object[] parameters, Type type)
@@ -185,38 +124,5 @@ namespace Dynamic.Tekla.Structures
             else return assembly.GetType(typeName);
         }
 
-        public static ArrayList ConvertArrayList(ArrayList tsObjects)
-        {
-            if (tsObjects.Count.Equals(0))
-                return new ArrayList();
-
-            var output = new ArrayList(tsObjects.Count + 1);
-            var assembly = Assembly.GetExecutingAssembly();
-
-            foreach (var tsObject in tsObjects)
-            {
-                string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
-                var converterType = assembly.GetType(converterName);
-                var parameters = new object[] { tsObject };
-                var fromTSObjectMethod = GetMethod("FromTSObject", parameters, converterType);
-
-                output.Add(fromTSObjectMethod.Invoke(null, parameters));
-            }
-            return output;
-        }
-
-        public static ArrayList ConvertToTSArrayList(ArrayList dynAPIObjects)
-        {
-            if (dynAPIObjects.Count.Equals(0))
-                return new ArrayList();
-
-            var output = new ArrayList(dynAPIObjects.Count + 1);
-
-            foreach (dynamic dynObject in dynAPIObjects)
-            {
-                output.Add(dynObject.teklaObject);
-            }
-            return output;
-        }
     }
 }

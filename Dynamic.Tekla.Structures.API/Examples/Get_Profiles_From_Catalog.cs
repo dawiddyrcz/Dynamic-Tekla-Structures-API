@@ -8,6 +8,7 @@
 
 using System;
 using TSC = Dynamic.Tekla.Structures.Catalogs;
+using TS = Dynamic.Tekla.Structures;
 
 namespace Examples
 {
@@ -15,21 +16,66 @@ namespace Examples
     {
         public override void Run()
         {
-            var catalogHandler = new TSC.CatalogHandler();
-            var profileItemEnumerator = catalogHandler.GetLibraryProfileItems();
-
-            int i = 0;
-            while (profileItemEnumerator.MoveNext())
+            try
             {
-                Console.Write(profileItemEnumerator.Current.ProfileItemType);
-                Console.Write("\t");
-                Console.Write(profileItemEnumerator.Current.ParameterString);
-                Console.Write("\t");
-                Console.WriteLine(profileItemEnumerator.Current.GetCrossSection(0).Profile.Name);
-                i++;
-                if (i == 500) break;
+                var catalogHandler = new TSC.CatalogHandler();
+                var profileItemEnumerator = catalogHandler.GetLibraryProfileItems();
+
+                int i = 0;
+                while (profileItemEnumerator.MoveNext())
+                {
+                    Console.Write(profileItemEnumerator.Current.ProfileItemType);
+                    Console.Write("\t");
+                    Console.Write(profileItemEnumerator.Current.ParameterString);
+                    Console.Write("\t");
+
+                    //Crosssection is avaiable from version 2019 of Tekla Structures
+                    if (TS.TeklaProcess.TeklaFileVersion.Major >= 2019)
+                        Console.WriteLine(profileItemEnumerator.Current.GetCrossSection(0).Profile.Name); 
+
+                    i++;
+                    if (i == 500) break;
+                }
+
+                if (profileItemEnumerator.GetSize() == 0)
+                {
+                    Console.WriteLine("There are no profiles. Open tekla and load any model");
+                    return;
+                }
+
+                Console.WriteLine("Printed first 500 profiles from catalog");
+               
+                //Crosssection is avaiable from version 2019 of Tekla Structures
+                if (TS.TeklaProcess.TeklaFileVersion.Major >= 2019)
+                {
+                    Console.WriteLine();                    
+                    var crossSection = profileItemEnumerator.Current.GetCrossSection(0);
+                    var outerPoints = crossSection.OuterSurfacePoints;
+                    var listOfListOfInnerPoints = crossSection.InnerSurfacePoints;
+
+                    Console.WriteLine("Outer points for profile: " + crossSection.Profile.Name);
+                    foreach (var point in outerPoints)
+                    {
+                        Console.WriteLine($"Point: {point.X} {point.Y} {point.Z}");
+                    }
+
+                    Console.WriteLine();
+                    Console.WriteLine("Inner points:");
+                    foreach (var list in listOfListOfInnerPoints)
+                    {
+                        Console.WriteLine("List:");
+                        foreach (var point in list)
+                        {
+                            Console.WriteLine($"\tPoint: {point.X} {point.Y} {point.Z}");
+                        }
+                    }
+                }
             }
-            Console.WriteLine("Printed first 500 profiles from catalog");
+            catch (TS.DynamicAPITeklaNotRunningException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }

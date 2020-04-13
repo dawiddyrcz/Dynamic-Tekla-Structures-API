@@ -12,7 +12,6 @@ namespace Dynamic.Tekla.Structures
 {
     public static class ListConverter
     {
-        //TODO test if it works
         public static List<dynamic> ToTSObjects(dynamic dynAPIObjects)
         {
             try

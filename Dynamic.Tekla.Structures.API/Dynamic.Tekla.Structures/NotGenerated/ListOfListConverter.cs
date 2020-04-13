@@ -12,43 +12,6 @@ namespace Dynamic.Tekla.Structures
 {
     public static class ListOfListConverter
     {
-        ////TODO test if it works
-        //public static List<dynamic> ToTSObjects(dynamic dynAPIObjects)
-        //{
-        //    try
-        //    {
-        //        if (dynAPIObjects.Count.Equals(0))
-        //            return new List<dynamic>();
-
-        //        var output = new List<dynamic>(dynAPIObjects.Count + 1);
-        //        var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-
-        //        foreach (dynamic dynObject in dynAPIObjects)
-        //        {
-        //            if (dynObject.GetType().ToString().StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
-        //            {
-        //                string converterName = dynObject.GetType().ToString() + "_";
-        //                var converterType = assembly.GetType(converterName);
-        //                var parameters = new object[] { dynObject };
-        //                var fromTSObjectMethod = TSActivator.GetMethod("GetTSObject", parameters, converterType);
-
-        //                output.Add(fromTSObjectMethod.Invoke(null, parameters));
-        //            }
-        //            else
-        //            {
-        //                output.Add(dynObject);
-        //            }
-        //        }
-
-        //        return output;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new DynamicAPIException("Error in method ListConverter.ToTSObjects() Input type: "
-        //            + dynAPIObjects.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
-        //    }
-        //}
-
         public static List<List<T>> FromTSObjects<T>(dynamic tsLists)
         {
             try

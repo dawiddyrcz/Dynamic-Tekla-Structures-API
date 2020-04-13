@@ -10,7 +10,6 @@ namespace Dynamic.Tekla.Structures
 {
     public static class TypeConverter
     {
-        //TODO tests
         public static System.Type ToTSObjects(System.Type input)
         {
             try

@@ -69,10 +69,6 @@ namespace Dynamic.Tekla.Structures
 
                         output.Add((T)fromTSObjectMethod.Invoke(null, parameters));
                     }
-                    else if (typeof(IEnumerable).IsAssignableFrom(tsObject.GetType()))
-                    {
-                        output.Add(FromTSObjects(tsObject));
-                    }
                     else
                     {
                         output.Add((T)tsObject);

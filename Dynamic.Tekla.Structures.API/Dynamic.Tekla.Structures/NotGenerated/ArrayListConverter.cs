@@ -12,7 +12,6 @@ namespace Dynamic.Tekla.Structures
 {
     internal static class ArrayListConverter
     {
-        //TODO tests
         public static ArrayList ToTSObjects(ArrayList dynAPIObjects)
         {
             try

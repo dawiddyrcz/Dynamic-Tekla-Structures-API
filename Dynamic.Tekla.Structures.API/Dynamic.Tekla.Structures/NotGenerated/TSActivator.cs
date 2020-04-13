@@ -28,9 +28,25 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static dynamic CreateInstance(string typeName, object[] args)
         {
-            //TODO convert parameters
+            
             var type = GetTypeFromTypeName(typeName);
             return Activator.CreateInstance(type, args);
+        }
+
+        private static object[] ConvertParameters(object[] input)
+        {
+            if (input.Length.Equals(0)) return new object[0];
+            
+            var output = new object[input.Length];
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                var type = input[i].GetType();
+
+            }
+
+            //TODO convert parameters
+            throw new NotImplementedException();
         }
         
         /// <summary>Gets the method from the type</summary>

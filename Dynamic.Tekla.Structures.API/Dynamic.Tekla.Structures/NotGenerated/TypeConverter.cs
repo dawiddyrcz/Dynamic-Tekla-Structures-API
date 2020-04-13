@@ -13,8 +13,25 @@ namespace Dynamic.Tekla.Structures
         //TODO tests
         public static System.Type ToTSObjects(System.Type input)
         {
-            var typeName = TypeFullName.GetTypeFullName(input).Replace("Dynamic.Tekla.Structures.", "Tekla.Structures.");
-            return TSActivator.GetTypeFromTypeName(typeName);
+            try
+            {
+                var typeFullName = TypeFullName.GetTypeFullName(input);
+
+                if (typeFullName.StartsWith("Dynamic.Tekla.Structures.", System.StringComparison.InvariantCulture))
+                {
+                    var typeName = typeFullName.Replace("Dynamic.Tekla.Structures.", "Tekla.Structures.");
+                    return TSActivator.GetTypeFromTypeName(typeName);
+                }
+                else
+                {
+                    return input;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw new DynamicAPIException("Error in method TypeConverter.ToTSObjects() Input type: "
+                                    + input.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
+            }
         }
 
         public static System.Type[] ToTSObjects(System.Type[] input)
@@ -31,8 +48,25 @@ namespace Dynamic.Tekla.Structures
 
         public static System.Type FromTSObjects(System.Type input)
         {
-            var typeName = TypeFullName.GetTypeFullName(input).Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
-            return TSActivator.GetTypeFromTypeName(typeName);
+            try
+            {
+                var typeFullName = TypeFullName.GetTypeFullName(input);
+
+                if (typeFullName.StartsWith("Tekla.Structures.", System.StringComparison.InvariantCulture))
+                {
+                    var typeName = typeFullName.Replace("Tekla.Structures.", "Dynamic.Tekla.Structures.");
+                    return TSActivator.GetTypeFromTypeName(typeName);
+                }
+                else
+                {
+                    return input;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw new DynamicAPIException("Error in method TypeConverter.FromTSObjects() Input type: "
+                                                   + input.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
+            }
         }
 
         public static System.Type[] FromTSObjects(System.Type[] input)

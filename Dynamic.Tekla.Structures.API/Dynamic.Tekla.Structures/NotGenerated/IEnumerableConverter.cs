@@ -16,45 +16,76 @@ namespace Dynamic.Tekla.Structures
         //TODO test
         public static List<dynamic> ToTSObjects(IEnumerable dynAPIObjects)
         {
-            var enumerator = dynAPIObjects.GetEnumerator();
-            var output = new List<dynamic>();
-
-            foreach (dynamic dynObject in dynAPIObjects)
+            try
             {
-                if (dynObject.GetType().ToString().StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
-                    output.Add(dynObject.teklaObject);
-                else if (typeof(IEnumerable).IsAssignableFrom(dynObject.GetType()))
-                    output.Add(ToTSObjects(dynObject));
-                else
-                    output.Add(dynObject);
+                var enumerator = dynAPIObjects.GetEnumerator();
+                var output = new List<dynamic>();
+                var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
+                foreach (dynamic dynObject in dynAPIObjects)
+                {
+                    if (dynObject.GetType().ToString().StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
+                    {
+                        string converterName = dynObject.GetType().ToString() + "_";
+                        var converterType = assembly.GetType(converterName);
+                        var parameters = new object[] { dynObject };
+                        var getTSObjectMethod = TSActivator.GetMethod("GetTSObject", parameters, converterType);
+
+                        output.Add(getTSObjectMethod.Invoke(null, parameters));
+                    }
+                    else if (typeof(IEnumerable).IsAssignableFrom(dynObject.GetType()))
+                    {
+                        output.Add(ToTSObjects(dynObject));
+                    }
+                    else
+                    {
+                        output.Add(dynObject);
+                    }
+                }
+
+                return output;
             }
-
-            return output;
+            catch (Exception ex)
+            {
+                throw new DynamicAPIException("Error in method IEnumerableConverter.ToTSObjects() Input type: "
+                                                                    + dynAPIObjects.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
+            }
         }
 
         public static List<T> FromTSObjects<T>(dynamic tsObjects)
         {
-            var output = new List<T>();            
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-
-            foreach (var tsObject in tsObjects)
+            try
             {
-                if (tsObject.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
-                {
-                    string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
-                    var converterType = assembly.GetType(converterName);
-                    var parameters = new object[] { tsObject };
-                    var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+                var output = new List<T>();
+                var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
-                    output.Add((T)fromTSObjectMethod.Invoke(null, parameters));
+                foreach (var tsObject in tsObjects)
+                {
+                    if (tsObject.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
+                    {
+                        string converterName = "Dynamic." + tsObject.GetType().ToString() + "_";
+                        var converterType = assembly.GetType(converterName);
+                        var parameters = new object[] { tsObject };
+                        var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+
+                        output.Add((T)fromTSObjectMethod.Invoke(null, parameters));
+                    }
+                    else if (typeof(IEnumerable).IsAssignableFrom(tsObject.GetType()))
+                    {
+                        output.Add(FromTSObjects(tsObject));
+                    }
+                    else
+                    {
+                        output.Add((T)tsObject);
+                    }
                 }
-                else if (typeof(IEnumerable).IsAssignableFrom(tsObject.GetType()))
-                    output.Add(FromTSObjects(tsObject));
-                else
-                    output.Add((T)tsObject);
+                return output;
             }
-            return output;
+            catch (Exception ex)
+            {
+                throw new DynamicAPIException("Error in method IEnumerableConverter.FromTSObjects() Input type: "
+                                                                      + tsObjects.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
+            }
         }
     }
 }

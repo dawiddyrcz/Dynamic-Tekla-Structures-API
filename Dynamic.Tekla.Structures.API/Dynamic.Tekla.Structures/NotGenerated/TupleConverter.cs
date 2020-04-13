@@ -41,28 +41,36 @@ namespace Dynamic.Tekla.Structures
 
         private static object[] ConvertTupleTSTypes(object input)
         {
-            object[] values = input.GetType()
-                  .GetProperties()
-                  .Select(property => property.GetValue(input))
-                  .ToArray();
-            if (values.Length.Equals(0)) return values;
-
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-
-            for (int i = 0; i < values.Length; i++)
+            try
             {
-                var currentValue = values[i];
-                if (currentValue.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
+                object[] values = input.GetType()
+                          .GetProperties()
+                          .Select(property => property.GetValue(input))
+                          .ToArray();
+                if (values.Length.Equals(0)) return values;
+
+                var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+                for (int i = 0; i < values.Length; i++)
                 {
-                    string converterName = "Dynamic." + currentValue.GetType().ToString() + "_";
-                    var converterType = assembly.GetType(converterName);
-                    var parameters = new object[] { currentValue };
-                    var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
-                    var converted = fromTSObjectMethod.Invoke(null, parameters);
-                    values[i] = converted;
+                    var currentValue = values[i];
+                    if (currentValue.GetType().ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
+                    {
+                        string converterName = "Dynamic." + currentValue.GetType().ToString() + "_";
+                        var converterType = assembly.GetType(converterName);
+                        var parameters = new object[] { currentValue };
+                        var fromTSObjectMethod = TSActivator.GetMethod("FromTSObject", parameters, converterType);
+                        var converted = fromTSObjectMethod.Invoke(null, parameters);
+                        values[i] = converted;
+                    }
                 }
+                return values;
             }
-            return values;
+            catch (Exception ex)
+            {
+                throw new DynamicAPIException("Error in method TupleConverter.ConvertTupleTSTypes() Input type: "
+                                                                  + input.GetType().ToString() + "\n Internal error message: " + ex.Message, ex);
+            }
         }
 
     }

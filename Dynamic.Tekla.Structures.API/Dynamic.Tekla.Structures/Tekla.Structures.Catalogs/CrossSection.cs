@@ -138,7 +138,7 @@ namespace Dynamic.Tekla.Structures.Catalogs
                 try
                 {
                 var value = teklaObject.InnerSurfaces;
-                var value_ = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Catalogs.CrossSectionPoint>>(value);
+                var value_ = ListOfListConverter.FromTSObjects<Dynamic.Tekla.Structures.Catalogs.CrossSectionPoint>(value);
                 return (System.Collections.Generic.List<System.Collections.Generic.List<Dynamic.Tekla.Structures.Catalogs.CrossSectionPoint>>) value_;
                 }
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
@@ -156,7 +156,7 @@ namespace Dynamic.Tekla.Structures.Catalogs
                 try
                 {
                 var value = teklaObject.InnerSurfacePoints;
-                var value_ = ListConverter.FromTSObjects<System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point>>(value);
+                var value_ = ListOfListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Point>(value);
                 return (System.Collections.Generic.List<System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point>>) value_;
                 }
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)

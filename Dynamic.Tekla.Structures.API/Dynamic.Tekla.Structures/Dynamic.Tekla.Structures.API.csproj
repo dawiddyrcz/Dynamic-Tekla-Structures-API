@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="NotGenerated\ArrayListConverter.cs" />
     <Compile Include="NotGenerated\IEnumerableConverter.cs" />
+    <Compile Include="NotGenerated\ListOfListConverter.cs" />
     <Compile Include="NotGenerated\ListConverter.cs" />
     <Compile Include="NotGenerated\MethodInvoker.cs" />
     <Compile Include="NotGenerated\DrawingEvents.cs" />

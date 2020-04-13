@@ -6,15 +6,12 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Dynamic.Tekla.Structures
 {
-    //TODO add another converter: list of lists
     public static class ListConverter
     {
-        //TODO check IList
         //TODO test if it works
         public static List<dynamic> ToTSObjects(dynamic dynAPIObjects)
         {

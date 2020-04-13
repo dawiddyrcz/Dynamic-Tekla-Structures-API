@@ -35,8 +35,16 @@ namespace CodeGenerator
             else if (typeFullName.StartsWith("System.Collections.Generic.List<", StringComparison.InvariantCulture)
                || typeFullName.StartsWith("System.Collections.Generic.IList<", StringComparison.InvariantCulture)
                )
-            { 
-                return outputName + " = ListConverter.ToTSObjects(" + inputName + ");";
+            {
+                 if (typeFullName.StartsWith("System.Collections.Generic.List<System.Collections.Generic.List<", StringComparison.InvariantCulture)
+               || typeFullName.StartsWith("System.Collections.Generic.IList<System.Collections.Generic.IList<", StringComparison.InvariantCulture))
+                {
+                    return outputName + " = ListOfListConverter.ToTSObjects(" + inputName + ");";
+                }
+                else
+                {
+                    return outputName + " = ListConverter.ToTSObjects(" + inputName + ");";
+                }
             }
             else if (typeof(System.Type).IsAssignableFrom(type)
                || typeof(System.Type[]).IsAssignableFrom(type))
@@ -84,7 +92,18 @@ namespace CodeGenerator
                 )
             {
                 var listParams = typeFullName.Substring(typeFullName.IndexOf("<"), typeFullName.Length - typeFullName.IndexOf("<"));
-                return outputName + " = ListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
+
+                if (typeFullName.StartsWith("System.Collections.Generic.List<System.Collections.Generic.List<", StringComparison.InvariantCulture)
+              || typeFullName.StartsWith("System.Collections.Generic.IList<System.Collections.Generic.IList<", StringComparison.InvariantCulture))
+                {
+                    listParams = listParams.Substring(1);
+                    listParams = listParams.Substring(listParams.IndexOf("<"), listParams.Length - listParams.IndexOf("<")-1);
+                    return outputName + " = ListOfListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
+                }
+                else
+                {
+                    return outputName + " = ListConverter.FromTSObjects" + listParams + "(" + inputName + ");";
+                }
             }
             else if (typeof(System.Type).IsAssignableFrom(type)
               || typeof(System.Type[]).IsAssignableFrom(type))

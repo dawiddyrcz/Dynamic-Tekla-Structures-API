@@ -14,41 +14,41 @@ namespace Dynamic.Tekla.Structures.Solid
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector Normal
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Normal;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normal), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normal), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Identifier OriginPartId
-    {
-        get
+        public Dynamic.Tekla.Structures.Identifier OriginPartId
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.OriginPartId;
                 var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Identifier) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OriginPartId), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OriginPartId), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;
@@ -61,21 +61,21 @@ namespace Dynamic.Tekla.Structures.Solid
 		}
 
 
-public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
-{
-
-    try
-    {
-        	var result = teklaObject.GetLoopEnumerator();
-
-        	var _result = Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLoopEnumerator), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Solid.LoopEnumerator GetLoopEnumerator()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetLoopEnumerator();
+            
+                var _result = Dynamic.Tekla.Structures.Solid.LoopEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLoopEnumerator), ex);
+            }
+        }
 
 
 

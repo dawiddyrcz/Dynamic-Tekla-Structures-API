@@ -14,1013 +14,1010 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Double BoltSize
-    {
-        get
+        public System.Double BoltSize
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.BoltSize;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltSize), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltSize), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.BoltSize = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltSize), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltSize), ex); 
+                }
             }
         }
-    }
 
-    public System.String BoltStandard
-    {
-        get
+        public System.String BoltStandard
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.BoltStandard;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltStandard), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltStandard), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.BoltStandard = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltStandard), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltStandard), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum BoltType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum BoltType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.BoltType;
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltTypeEnum_.GetTSObject(value);
                 teklaObject.BoltType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltType), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum ThreadInMaterial
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum ThreadInMaterial
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.ThreadInMaterial;
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadInMaterial), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadInMaterial), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltThreadInMaterialEnum_.GetTSObject(value);
                 teklaObject.ThreadInMaterial = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadInMaterial), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ThreadInMaterial), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Length
-    {
-        get
+        public System.Double Length
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Length;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Length = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
             }
         }
-    }
 
-    public System.Double CutLength
-    {
-        get
+        public System.Double CutLength
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.CutLength;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutLength), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutLength), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.CutLength = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutLength), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CutLength), ex); 
+                }
             }
         }
-    }
 
-    public System.Double ExtraLength
-    {
-        get
+        public System.Double ExtraLength
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.ExtraLength;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraLength), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraLength), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.ExtraLength = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraLength), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraLength), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Tolerance
-    {
-        get
+        public System.Double Tolerance
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Tolerance;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Tolerance), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Tolerance), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Tolerance = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Tolerance), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Tolerance), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum HoleType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum HoleType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.HoleType;
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HoleType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HoleType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltHoleTypeEnum_.GetTSObject(value);
                 teklaObject.HoleType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HoleType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HoleType), ex); 
+                }
             }
         }
-    }
 
-    public System.Double SlottedHoleX
-    {
-        get
+        public System.Double SlottedHoleX
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SlottedHoleX;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleX), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleX), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.SlottedHoleX = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleX), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleX), ex); 
+                }
             }
         }
-    }
 
-    public System.Double SlottedHoleY
-    {
-        get
+        public System.Double SlottedHoleY
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SlottedHoleY;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleY), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleY), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.SlottedHoleY = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleY), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleY), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum RotateSlots
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum RotateSlots
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.RotateSlots;
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotateSlots), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotateSlots), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltRotateSlotsEnum_.GetTSObject(value);
                 teklaObject.RotateSlots = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotateSlots), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotateSlots), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Position Position
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Position Position
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Position;
                 var value_ = Dynamic.Tekla.Structures.Model.Position_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Position) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Position_.GetTSObject(value);
                 teklaObject.Position = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Position), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Offset StartPointOffset
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Offset StartPointOffset
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.StartPointOffset;
                 var value_ = Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Offset) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPointOffset), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPointOffset), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value);
                 teklaObject.StartPointOffset = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPointOffset), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartPointOffset), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Offset EndPointOffset
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Offset EndPointOffset
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.EndPointOffset;
                 var value_ = Dynamic.Tekla.Structures.Model.Offset_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Offset) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPointOffset), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPointOffset), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Offset_.GetTSObject(value);
                 teklaObject.EndPointOffset = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPointOffset), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndPointOffset), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Washer1
-    {
-        get
+        public System.Boolean Washer1
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Washer1;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer1), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Washer1 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer1), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer1), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Washer2
-    {
-        get
+        public System.Boolean Washer2
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Washer2;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer2), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Washer2 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer2), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer2), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Washer3
-    {
-        get
+        public System.Boolean Washer3
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Washer3;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer3), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer3), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Washer3 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer3), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Washer3), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Nut1
-    {
-        get
+        public System.Boolean Nut1
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Nut1;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut1), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Nut1 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut1), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut1), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Nut2
-    {
-        get
+        public System.Boolean Nut2
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Nut2;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut2), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Nut2 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut2), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Nut2), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Bolt
-    {
-        get
+        public System.Boolean Bolt
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Bolt;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bolt), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bolt), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Bolt = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bolt), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bolt), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Hole1
-    {
-        get
+        public System.Boolean Hole1
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Hole1;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole1), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Hole1 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole1), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole1), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Hole2
-    {
-        get
+        public System.Boolean Hole2
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Hole2;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole2), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Hole2 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole2), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole2), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Hole3
-    {
-        get
+        public System.Boolean Hole3
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Hole3;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole3), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole3), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Hole3 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole3), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole3), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Hole4
-    {
-        get
+        public System.Boolean Hole4
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Hole4;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole4), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole4), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Hole4 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole4), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole4), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Hole5
-    {
-        get
+        public System.Boolean Hole5
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Hole5;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole5), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole5), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Hole5 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole5), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hole5), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Part PartToBoltTo
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Part PartToBoltTo
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PartToBoltTo;
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Part) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBoltTo), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBoltTo), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
                 teklaObject.PartToBoltTo = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBoltTo), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBoltTo), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Part PartToBeBolted
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Part PartToBeBolted
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PartToBeBolted;
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Part) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBeBolted), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBeBolted), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
                 teklaObject.PartToBeBolted = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBeBolted), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PartToBeBolted), ex); 
+                }
             }
         }
-    }
 
-    public System.Collections.ArrayList OtherPartsToBolt
-    {
-        get
+        public System.Collections.ArrayList OtherPartsToBolt
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.OtherPartsToBolt;
                 var value_ = ArrayListConverter.FromTSObjects(value);
                 return (System.Collections.ArrayList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OtherPartsToBolt), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OtherPartsToBolt), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.FirstPosition;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstPosition), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstPosition), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
                 teklaObject.FirstPosition = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstPosition), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FirstPosition), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Point SecondPosition
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Point SecondPosition
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.SecondPosition;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SecondPosition), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SecondPosition), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
                 teklaObject.SecondPosition = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SecondPosition), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SecondPosition), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean ConnectAssemblies
-    {
-        get
+        public System.Boolean ConnectAssemblies
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.ConnectAssemblies;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConnectAssemblies), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConnectAssemblies), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.ConnectAssemblies = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConnectAssemblies), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ConnectAssemblies), ex); 
+                }
             }
         }
-    }
 
-    public System.Collections.ArrayList BoltPositions
-    {
-        get
+        public System.Collections.ArrayList BoltPositions
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.BoltPositions;
                 var value_ = ArrayListConverter.FromTSObjects(value);
                 return (System.Collections.ArrayList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltPositions), ex); 
+                }
+            }
+            
+        }
+        
+
+        
+
+
+
+        public System.Boolean AddOtherPartToBolt(
+			Dynamic.Tekla.Structures.Model.Part M_)
+        {
+            var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.AddOtherPartToBolt(M);
+            
+                return result;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltPositions), ex); 
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddOtherPartToBolt), ex);
             }
         }
-        
-    }
-        
-
-        
 
 
 
-public System.Boolean AddOtherPartToBolt(
-	Dynamic.Tekla.Structures.Model.Part M_
-	)
-{
-	var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.AddOtherPartToBolt(M);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddOtherPartToBolt), ex);
-    }
-}
-
-
-
-public System.Boolean RemoveOtherPartToBolt(
-	Dynamic.Tekla.Structures.Model.Part M_
-	)
-{
-	var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.RemoveOtherPartToBolt(M);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveOtherPartToBolt), ex);
-    }
-}
+        public System.Boolean RemoveOtherPartToBolt(
+			Dynamic.Tekla.Structures.Model.Part M_)
+        {
+            var M = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(M_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.RemoveOtherPartToBolt(M);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveOtherPartToBolt), ex);
+            }
+        }
 
 
 
-public System.Collections.ArrayList GetOtherPartsToBolt()
-{
-
-    try
-    {
-        	var result = teklaObject.GetOtherPartsToBolt();
-
-        	var _result = ArrayListConverter.FromTSObjects(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetOtherPartsToBolt), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.Solid GetSolid()
-{
-
-    try
-    {
-        	var result = teklaObject.GetSolid();
-
-        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
-    }
-}
+        public System.Collections.ArrayList GetOtherPartsToBolt()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetOtherPartsToBolt();
+            
+                var _result = ArrayListConverter.FromTSObjects(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetOtherPartsToBolt), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.Solid GetSolid(
-	System.Boolean withHighAccuracy
-	)
-{
-	
-    try
-    {
-        	var result = teklaObject.GetSolid(withHighAccuracy);
-
-        	var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.Solid GetSolid()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetSolid();
+            
+                var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
-{
+        public Dynamic.Tekla.Structures.Model.Solid GetSolid(
+			System.Boolean withHighAccuracy)
+        {
+            
+            try
+            {
+                var result = teklaObject.GetSolid(withHighAccuracy);
+            
+                var _result = Dynamic.Tekla.Structures.Model.Solid_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSolid), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetFatherPour();
-
-        	var _result = Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFatherPour), ex);
-    }
-}
 
 
+        public Dynamic.Tekla.Structures.Model.PourObject GetFatherPour()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetFatherPour();
+            
+                var _result = Dynamic.Tekla.Structures.Model.PourObject_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFatherPour), ex);
+            }
+        }
 
-public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
-{
 
-    try
-    {
-        	var result = teklaObject.GetFatherPourUnit();
 
-        	var _result = Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFatherPourUnit), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.PourUnit GetFatherPourUnit()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetFatherPourUnit();
+            
+                var _result = Dynamic.Tekla.Structures.Model.PourUnit_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFatherPourUnit), ex);
+            }
+        }
 
 
 

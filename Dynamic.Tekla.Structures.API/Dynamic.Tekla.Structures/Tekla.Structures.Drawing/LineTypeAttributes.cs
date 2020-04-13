@@ -14,63 +14,63 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.LineTypes Type
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.LineTypes Type
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Type;
                 var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.GetTSObject(value);
                 teklaObject.Type = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.DrawingColors Color
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.DrawingColors Color
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Color;
                 var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.DrawingColors) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.DrawingColors_.GetTSObject(value);
                 teklaObject.Color = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Color), ex); 
+                }
             }
         }
-    }
         
 
         

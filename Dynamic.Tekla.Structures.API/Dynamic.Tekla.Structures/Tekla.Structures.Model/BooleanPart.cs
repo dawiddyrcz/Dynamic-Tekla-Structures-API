@@ -14,73 +14,73 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum Type
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum Type
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Type;
                 var value_ = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.BooleanPart.BooleanTypeEnum_.GetTSObject(value);
                 teklaObject.Type = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Part OperativePart
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Part OperativePart
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.OperativePart;
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Part) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperativePart), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperativePart), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
                 teklaObject.OperativePart = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperativePart), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperativePart), ex); 
+                }
             }
         }
-    }
 
-    public static System.String BooleanOperativeClassName
-    {
-        get
+        public static System.String BooleanOperativeClassName
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BooleanPart", "BooleanOperativeClassName");
-            return (System.String) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BooleanPart", "BooleanOperativeClassName");
+                return (System.String) value;
+            }
+            
+        }        
 
         
 
@@ -95,22 +95,21 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public System.Boolean SetOperativePart(
-	Dynamic.Tekla.Structures.Model.Part Part_
-	)
-{
-	var Part = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.SetOperativePart(Part);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetOperativePart), ex);
-    }
-}
+        public System.Boolean SetOperativePart(
+			Dynamic.Tekla.Structures.Model.Part Part_)
+        {
+            var Part = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(Part_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetOperativePart(Part);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetOperativePart), ex);
+            }
+        }
 
 
 

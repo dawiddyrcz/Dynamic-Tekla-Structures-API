@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes Attributes
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes Attributes
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Attributes;
                 var value_ = Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.Mark.MarkAttributes_.GetTSObject(value);
                 teklaObject.Attributes = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -66,34 +66,34 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.ContainerElement Content
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.ContainerElement Content
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Content;
                 var value_ = Dynamic.Tekla.Structures.Drawing.ContainerElement_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.ContainerElement) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Content), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Content), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.ContainerElement_.GetTSObject(value);
                 teklaObject.Content = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Content), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Content), ex); 
+                }
             }
         }
-    }
         
 
         

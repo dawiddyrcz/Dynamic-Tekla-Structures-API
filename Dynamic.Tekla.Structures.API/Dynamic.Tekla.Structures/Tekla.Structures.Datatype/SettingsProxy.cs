@@ -28,64 +28,58 @@ namespace Dynamic.Tekla.Structures.Datatype
 		}
 
 
-public System.Object GetValue(
-	System.String name
-	)
-{
-	
-    try
-    {
-        	var result = (System.Object) teklaObject.GetValue(name);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetValue), ex);
-    }
-}
-
-
-
-public System.Boolean TryGetValue(
-	System.String name,
-	out System.Object obj
-	)
-{
-	
-	obj = null;
-    try
-    {
-        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Datatype.SettingsProxy", "TryGetValue", teklaObject, name, out obj);
-	
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(TryGetValue), ex);
-    }
-}
+        public System.Object GetValue(
+			System.String name)
+        {
+            
+            try
+            {
+                var result = (System.Object) teklaObject.GetValue(name);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetValue), ex);
+            }
+        }
 
 
 
-public void SetValue(
-	System.String name,
-	System.Object value
-	)
-{
-	
-	
-    try
-    {
-        	teklaObject.SetValue(name, value);
+        public System.Boolean TryGetValue(
+			System.String name,
+			out System.Object obj)
+        {
+obj = null;
+            try
+            {
+                var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Datatype.SettingsProxy", "TryGetValue", teklaObject, name, out obj);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(TryGetValue), ex);
+            }
+        }
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetValue), ex);
-    }
-}
+
+
+        public void SetValue(
+			System.String name,
+			System.Object value)
+        {
+            try
+            {
+                teklaObject.SetValue(name, value);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetValue), ex);
+            }
+        }
 
 
 

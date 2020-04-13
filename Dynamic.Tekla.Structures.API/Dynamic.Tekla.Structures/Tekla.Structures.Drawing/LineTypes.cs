@@ -14,136 +14,133 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes UndefinedLine
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes UndefinedLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "UndefinedLine");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "UndefinedLine");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes SolidLine
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes SolidLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SolidLine");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SolidLine");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashedLine
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes DashedLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashedLine");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashedLine");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashedLine
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashedLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashedLine");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashedLine");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDot
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDot
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDot");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDot");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes DottedLine
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes DottedLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DottedLine");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DottedLine");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDoubleDot
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes DashDoubleDot
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDoubleDot");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "DashDoubleDot");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashDash
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes SlashDash
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashDash");
-            var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.LineTypes", "SlashDash");
+                var value_ = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.LineTypes) value_;
-        }
-        
-    }        
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.LineTypes Custom(
-	System.String CustomLineTypeName
-	)
-{
-	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "Custom", CustomLineTypeName);
-	var _result = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.LineTypes Custom(
+			System.String CustomLineTypeName)
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.LineTypes", "Custom", CustomLineTypeName);
+            var _result = Dynamic.Tekla.Structures.Drawing.LineTypes_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public System.Boolean IsEqual(
-	System.Object ObjectToCompare
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
-    }
-}
-
+        public System.Boolean IsEqual(
+			System.Object ObjectToCompare)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+            }
+        }
 
 
-public System.Object Clone()
-{
 
-    try
-    {
-        	var result = (System.Object) teklaObject.Clone();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
-    }
-}
+        public System.Object Clone()
+        {
+            
+            try
+            {
+                var result = (System.Object) teklaObject.Clone();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+            }
+        }
 
 
 

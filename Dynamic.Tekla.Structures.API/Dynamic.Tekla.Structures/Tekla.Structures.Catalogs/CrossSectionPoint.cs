@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Catalogs
     {
 
 
-    public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Chamfer Chamfer
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Chamfer;
                 var value_ = Dynamic.Tekla.Structures.Model.Chamfer_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Chamfer) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Chamfer_.GetTSObject(value);
                 teklaObject.Chamfer = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Chamfer), ex); 
+                }
             }
         }
-    }
         
 
         

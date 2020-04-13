@@ -34,76 +34,75 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public System.Boolean SetComponentInput(
-	Dynamic.Tekla.Structures.Model.ComponentInput I_
-	)
-{
-	var I = Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.SetComponentInput(I);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetComponentInput), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.ComponentInput GetComponentInput()
-{
-
-    try
-    {
-        	var result = teklaObject.GetComponentInput();
-
-        	var _result = Dynamic.Tekla.Structures.Model.ComponentInput_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponentInput), ex);
-    }
-}
+        public System.Boolean SetComponentInput(
+			Dynamic.Tekla.Structures.Model.ComponentInput I_)
+        {
+            var I = Dynamic.Tekla.Structures.Model.ComponentInput_.GetTSObject(I_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetComponentInput(I);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetComponentInput), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
-{
+        public Dynamic.Tekla.Structures.Model.ComponentInput GetComponentInput()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetComponentInput();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ComponentInput_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponentInput), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetAssembly();
-
-        	var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
-    }
-}
 
 
+        public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetAssembly();
+            
+                var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
+            }
+        }
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
-{
 
-    try
-    {
-        	var result = teklaObject.GetComponents();
 
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponents), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetComponents()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetComponents();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetComponents), ex);
+            }
+        }
 
 
 

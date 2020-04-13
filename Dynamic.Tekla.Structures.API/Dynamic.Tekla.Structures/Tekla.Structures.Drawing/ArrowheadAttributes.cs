@@ -14,115 +14,115 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.ArrowheadPositions ArrowPosition
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.ArrowheadPositions ArrowPosition
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.ArrowPosition;
                 var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.ArrowheadPositions) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ArrowPosition), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ArrowPosition), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadPositions_.GetTSObject(value);
                 teklaObject.ArrowPosition = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ArrowPosition), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ArrowPosition), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.ArrowheadTypes Head
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.ArrowheadTypes Head
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Head;
                 var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.ArrowheadTypes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Head), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Head), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.ArrowheadTypes_.GetTSObject(value);
                 teklaObject.Head = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Head), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Head), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Height
-    {
-        get
+        public System.Double Height
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Height;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Height = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Height), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Width
-    {
-        get
+        public System.Double Width
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Width;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Width = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Width), ex); 
+                }
             }
         }
-    }
         
 
         

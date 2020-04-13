@@ -14,89 +14,89 @@ namespace Dynamic.Tekla.Structures.Catalogs
     {
 
 
-    public System.String Name
-    {
-        get
+        public System.String Name
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Name;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Name = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
         }
-    }
 
-    public System.Collections.Generic.List<System.IO.FileInfo> Files
-    {
-        get
+        public System.Collections.Generic.List<System.IO.FileInfo> Files
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Files;
                 var value_ = ListConverter.FromTSObjects<System.IO.FileInfo>(value);
                 return (System.Collections.Generic.List<System.IO.FileInfo>) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Files), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Files), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = ListConverter.ToTSObjects(value);
                 teklaObject.Files = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Files), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Files), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes Type
-    {
-        get
+        public Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes Type
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Type;
                 var value_ = Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Catalogs.AttributeConfiguration.DrawingTypes_.GetTSObject(value);
                 teklaObject.Type = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -112,41 +112,39 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		}
 
 
-public System.Boolean Select(
-	System.String Name
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Select(Name);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
-    }
-}
-
+        public System.Boolean Select(
+			System.String Name)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(Name);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
 
 
-public System.Boolean Export(
-	ref System.String filename
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Export(ref filename);
-	
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Export), ex);
-    }
-}
+
+        public System.Boolean Export(
+			ref System.String filename)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Export(ref filename);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Export), ex);
+            }
+        }
 
 
 

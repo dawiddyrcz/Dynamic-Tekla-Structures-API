@@ -19,22 +19,21 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 
 
-public System.Boolean IsEqual(
-	System.Object ObjectToCompare
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
-    }
-}
+        public System.Boolean IsEqual(
+			System.Object ObjectToCompare)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+            }
+        }
 
 
 

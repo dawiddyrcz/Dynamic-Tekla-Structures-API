@@ -14,72 +14,72 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public System.Int32 SymbolIndex
-    {
-        get
+        public System.Int32 SymbolIndex
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SymbolIndex;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.SymbolIndex = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolIndex), ex); 
+                }
             }
         }
-    }
 
-    public System.String SymbolFile
-    {
-        get
+        public System.String SymbolFile
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SymbolFile;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.SymbolFile = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SymbolFile), ex); 
+                }
             }
         }
-    }
 
-    public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default
-    {
-        get
+        public static Dynamic.Tekla.Structures.Drawing.SymbolInfo Default
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default");
-            var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default");
+                var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Drawing.SymbolInfo) value_;
-        }
-        set
-        {
-            var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value);
-            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default", value_);
-        }
-    }        
+            }
+            set
+            {
+                var value_ = Dynamic.Tekla.Structures.Drawing.SymbolInfo_.GetTSObject(value);
+                PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.SymbolInfo", "Default", value_);
+            }
+        }        
 
         internal dynamic teklaObject;
 
@@ -101,22 +101,21 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public System.Boolean IsEqual(
-	System.Object ObjectToCompare
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
-    }
-}
+        public System.Boolean IsEqual(
+			System.Object ObjectToCompare)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+            }
+        }
 
 
 

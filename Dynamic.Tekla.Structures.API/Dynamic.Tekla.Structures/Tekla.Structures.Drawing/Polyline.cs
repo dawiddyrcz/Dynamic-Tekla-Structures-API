@@ -14,115 +14,115 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.PointList Points
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.PointList Points
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Points;
                 var value_ = Dynamic.Tekla.Structures.Drawing.PointList_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.PointList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.PointList_.GetTSObject(value);
                 teklaObject.Points = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
             }
         }
-    }
 
-    public System.Collections.Generic.List<System.Double> Bulges
-    {
-        get
+        public System.Collections.Generic.List<System.Double> Bulges
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Bulges;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulges), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulges), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Bulges = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulges), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulges), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Bulge
-    {
-        get
+        public System.Double Bulge
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Bulge;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulge), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulge), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Bulge = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulge), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Bulge), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.Polyline.PolylineAttributes Attributes
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.Polyline.PolylineAttributes Attributes
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Attributes;
                 var value_ = Dynamic.Tekla.Structures.Drawing.Polyline.PolylineAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.Polyline.PolylineAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.Polyline.PolylineAttributes_.GetTSObject(value);
                 teklaObject.Attributes = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
         }
-    }
         
 
         

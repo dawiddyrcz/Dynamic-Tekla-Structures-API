@@ -14,144 +14,144 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Int32 Lag
-    {
-        get
+        public System.Int32 Lag
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Lag;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lag), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lag), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Lag = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lag), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Lag), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean Local
-    {
-        get
+        public System.Boolean Local
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Local;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Local), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Local), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Local = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Local), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Local), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Task Primary
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Task Primary
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Primary;
                 var value_ = Dynamic.Tekla.Structures.Model.Task_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Task) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Primary), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Primary), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value);
                 teklaObject.Primary = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Primary), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Primary), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Task Secondary
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Task Secondary
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Secondary;
                 var value_ = Dynamic.Tekla.Structures.Model.Task_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Task) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Secondary), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Secondary), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Task_.GetTSObject(value);
                 teklaObject.Secondary = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Secondary), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Secondary), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum DependencyType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.DependencyType;
                 var value_ = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DependencyType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DependencyType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.TaskDependency.DependencyTypeEnum_.GetTSObject(value);
                 teklaObject.DependencyType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DependencyType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DependencyType), ex); 
+                }
             }
         }
-    }
         
 
         

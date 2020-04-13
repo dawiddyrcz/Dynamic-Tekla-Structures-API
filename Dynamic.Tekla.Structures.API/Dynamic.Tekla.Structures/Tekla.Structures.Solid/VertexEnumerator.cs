@@ -14,23 +14,23 @@ namespace Dynamic.Tekla.Structures.Solid
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.Point Current
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Point Current
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Current;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Current), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;
@@ -43,37 +43,37 @@ namespace Dynamic.Tekla.Structures.Solid
 		}
 
 
-public System.Boolean MoveNext()
-{
+        public System.Boolean MoveNext()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.MoveNext();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.Boolean) teklaObject.MoveNext();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
-    }
-}
 
 
-
-public void Reset()
-{
-
-    try
-    {
-        	teklaObject.Reset();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
-    }
-}
+        public void Reset()
+        {
+            
+            try
+            {
+                teklaObject.Reset();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
+            }
+        }
 
 
 

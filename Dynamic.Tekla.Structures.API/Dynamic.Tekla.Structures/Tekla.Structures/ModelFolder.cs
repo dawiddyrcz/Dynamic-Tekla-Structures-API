@@ -14,159 +14,159 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public Dynamic.Tekla.Structures.VirtualFolder AttributesFolder
-    {
-        get
+        public Dynamic.Tekla.Structures.VirtualFolder AttributesFolder
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.AttributesFolder;
                 var value_ = Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.VirtualFolder) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AttributesFolder), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AttributesFolder), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.VirtualFolder DrawingsFolder
-    {
-        get
+        public Dynamic.Tekla.Structures.VirtualFolder DrawingsFolder
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.DrawingsFolder;
                 var value_ = Dynamic.Tekla.Structures.VirtualFolder_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.VirtualFolder) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DrawingsFolder), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(DrawingsFolder), ex); 
-            }
+            
         }
-        
-    }
 
-    public static System.String AssemblyFileExtension
-    {
-        get
+        public static System.String AssemblyFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "AssemblyFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "AssemblyFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String AttributesFolderName
-    {
-        get
+        public static System.String AttributesFolderName
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "AttributesFolderName");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "AttributesFolderName");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String CastUnitFileExtension
-    {
-        get
+        public static System.String CastUnitFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "CastUnitFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "CastUnitFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String DatabaseFileExtension
-    {
-        get
+        public static System.String DatabaseFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "DatabaseFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "DatabaseFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String DrawingsFolderName
-    {
-        get
+        public static System.String DrawingsFolderName
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "DrawingsFolderName");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "DrawingsFolderName");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ExtendedRulesetFileExtension
-    {
-        get
+        public static System.String ExtendedRulesetFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ExtendedRulesetFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ExtendedRulesetFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String GeneralArrangementFileExtension
-    {
-        get
+        public static System.String GeneralArrangementFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "GeneralArrangementFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "GeneralArrangementFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ObjectDefinitionFile
-    {
-        get
+        public static System.String ObjectDefinitionFile
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ObjectDefinitionFile");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ObjectDefinitionFile");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ObjectSettingsFileExtension
-    {
-        get
+        public static System.String ObjectSettingsFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ObjectSettingsFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ObjectSettingsFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String RulesetFileExtension
-    {
-        get
+        public static System.String RulesetFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "RulesetFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "RulesetFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SelectFilterFileExtension
-    {
-        get
+        public static System.String SelectFilterFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "SelectFilterFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "SelectFilterFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SinglePartFileExtension
-    {
-        get
+        public static System.String SinglePartFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "SinglePartFileExtension");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "SinglePartFileExtension");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ViewFilterFileExtension
-    {
-        get
+        public static System.String ViewFilterFileExtension
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ViewFilterFileExtension");
-            return (System.String) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModelFolder", "ViewFilterFileExtension");
+                return (System.String) value;
+            }
+            
+        }        
 
         
 
@@ -185,14 +185,12 @@ namespace Dynamic.Tekla.Structures
 		}
 
 
-public static System.Boolean ContainsModelDatabase(
-	System.String modelFolder
-	)
-{
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", modelFolder);
-	return result;
-}
+        public static System.Boolean ContainsModelDatabase(
+			System.String modelFolder)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.ModelFolder", "ContainsModelDatabase", modelFolder);
+            return result;
+        }
 
 
 

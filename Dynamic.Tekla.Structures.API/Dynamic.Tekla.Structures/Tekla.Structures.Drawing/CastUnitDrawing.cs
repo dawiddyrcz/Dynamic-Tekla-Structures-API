@@ -14,55 +14,55 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Identifier CastUnitIdentifier
-    {
-        get
+        public Dynamic.Tekla.Structures.Identifier CastUnitIdentifier
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.CastUnitIdentifier;
                 var value_ = Dynamic.Tekla.Structures.Identifier_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Identifier) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CastUnitIdentifier), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CastUnitIdentifier), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Int32 SheetNumber
-    {
-        get
+        public System.Int32 SheetNumber
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SheetNumber;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SheetNumber), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SheetNumber), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Boolean CastUnitById
-    {
-        get
+        public System.Boolean CastUnitById
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.CastUnitById;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CastUnitById), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CastUnitById), ex); 
-            }
+            
         }
-        
-    }
         
 
         

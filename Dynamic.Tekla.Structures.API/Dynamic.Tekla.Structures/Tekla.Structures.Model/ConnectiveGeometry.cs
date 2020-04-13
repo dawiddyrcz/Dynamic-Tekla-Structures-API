@@ -14,15 +14,15 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public static System.Int32 InvalidGeometrySectionIndex
-    {
-        get
+        public static System.Int32 InvalidGeometrySectionIndex
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.ConnectiveGeometry", "InvalidGeometrySectionIndex");
-            return (System.Int32) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.ConnectiveGeometry", "InvalidGeometrySectionIndex");
+                return (System.Int32) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
@@ -46,38 +46,38 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public System.Boolean IsEmpty()
-{
+        public System.Boolean IsEmpty()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEmpty();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEmpty), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEmpty();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEmpty), ex);
-    }
-}
 
 
-
-public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
-{
-
-    try
-    {
-        	var result = teklaObject.GetGeometryEnumerator();
-
-        	var _result = Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetGeometryEnumerator), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator GetGeometryEnumerator()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetGeometryEnumerator();
+            
+                var _result = Dynamic.Tekla.Structures.Model.GeometrySectionEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetGeometryEnumerator), ex);
+            }
+        }
 
 
 

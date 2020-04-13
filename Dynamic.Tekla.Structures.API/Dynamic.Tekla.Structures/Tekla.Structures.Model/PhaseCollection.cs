@@ -14,53 +14,53 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Int32 Count
-    {
-        get
+        public System.Int32 Count
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Count;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Boolean IsSynchronized
-    {
-        get
+        public System.Boolean IsSynchronized
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsSynchronized;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsSynchronized), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsSynchronized), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Object SyncRoot
-    {
-        get
+        public System.Object SyncRoot
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SyncRoot;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SyncRoot), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SyncRoot), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

@@ -14,241 +14,222 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.String Name
-    {
-        get
+        public System.String Name
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Name;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Name = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
         }
-    }
 
-    public System.Int32 Number
-    {
-        get
+        public System.Int32 Number
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Number;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+                try
+                {
+                teklaObject.Number = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+                }
             }
         }
-        set
+
+        public static System.Int32 CUSTOM_OBJECT_NUMBER
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "CUSTOM_OBJECT_NUMBER");
+                return (System.Int32) value;
+            }
+            
+        }
+        public static System.Int32 PLUGIN_OBJECT_NUMBER
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "PLUGIN_OBJECT_NUMBER");
+                return (System.Int32) value;
+            }
+            
+        }
+        public static System.String ConnectionCodeFromAttributeFile
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ConnectionCodeFromAttributeFile");
+                return (System.String) value;
+            }
+            
+        }
+        public static System.Int32 ClassFromAttributeFile
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ClassFromAttributeFile");
+                return (System.Int32) value;
+            }
+            
+        }        
+
+        
+
+
+
+        public void SetAttribute(
+			System.String AttrName,
+			System.String StrValue)
         {
             try
             {
-                teklaObject.Number = value;
+                teklaObject.SetAttribute(AttrName, StrValue);
+            
+                
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Number), ex); 
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
             }
         }
-    }
 
-    public static System.Int32 CUSTOM_OBJECT_NUMBER
-    {
-        get
+
+
+        public void SetAttribute(
+			System.String AttrName,
+			System.Int32 Value)
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "CUSTOM_OBJECT_NUMBER");
-            return (System.Int32) value;
+            try
+            {
+                teklaObject.SetAttribute(AttrName, Value);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
+            }
         }
-        
-    }
-    public static System.Int32 PLUGIN_OBJECT_NUMBER
-    {
-        get
+
+
+
+        public void SetAttribute(
+			System.String AttrName,
+			System.Double DValue)
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "PLUGIN_OBJECT_NUMBER");
-            return (System.Int32) value;
+            try
+            {
+                teklaObject.SetAttribute(AttrName, DValue);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
+            }
         }
-        
-    }
-    public static System.String ConnectionCodeFromAttributeFile
-    {
-        get
+
+
+
+        public System.Boolean GetAttribute(
+			System.String AttrName,
+			ref System.String StrValue)
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ConnectionCodeFromAttributeFile");
-            return (System.String) value;
+            try
+            {
+                var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref StrValue);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
+            }
         }
-        
-    }
-    public static System.Int32 ClassFromAttributeFile
-    {
-        get
+
+
+
+        public System.Boolean GetAttribute(
+			System.String AttrName,
+			ref System.Int32 Value)
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.BaseComponent", "ClassFromAttributeFile");
-            return (System.Int32) value;
+            try
+            {
+                var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref Value);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
+            }
         }
-        
-    }        
-
-        
 
 
 
-public void SetAttribute(
-	System.String AttrName,
-	System.String StrValue
-	)
-{
-	
-	
-    try
-    {
-        	teklaObject.SetAttribute(AttrName, StrValue);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
-    }
-}
+        public System.Boolean GetAttribute(
+			System.String AttrName,
+			ref System.Double DValue)
+        {
+            try
+            {
+                var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref DValue);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
+            }
+        }
 
 
 
-public void SetAttribute(
-	System.String AttrName,
-	System.Int32 Value
-	)
-{
-	
-	
-    try
-    {
-        	teklaObject.SetAttribute(AttrName, Value);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
-    }
-}
-
-
-
-public void SetAttribute(
-	System.String AttrName,
-	System.Double DValue
-	)
-{
-	
-	
-    try
-    {
-        	teklaObject.SetAttribute(AttrName, DValue);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAttribute), ex);
-    }
-}
-
-
-
-public System.Boolean GetAttribute(
-	System.String AttrName,
-	ref System.String StrValue
-	)
-{
-	
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref StrValue);
-	
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
-    }
-}
-
-
-
-public System.Boolean GetAttribute(
-	System.String AttrName,
-	ref System.Int32 Value
-	)
-{
-	
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref Value);
-	
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
-    }
-}
-
-
-
-public System.Boolean GetAttribute(
-	System.String AttrName,
-	ref System.Double DValue
-	)
-{
-	
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.GetAttribute(AttrName, ref DValue);
-	
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAttribute), ex);
-    }
-}
-
-
-
-public System.Boolean LoadAttributesFromFile(
-	System.String Filename
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.LoadAttributesFromFile(Filename);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadAttributesFromFile), ex);
-    }
-}
+        public System.Boolean LoadAttributesFromFile(
+			System.String Filename)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.LoadAttributesFromFile(Filename);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadAttributesFromFile), ex);
+            }
+        }
 
 
 

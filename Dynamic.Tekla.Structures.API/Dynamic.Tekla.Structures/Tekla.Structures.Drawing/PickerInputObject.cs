@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.DrawingObject PickedObject
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.DrawingObject PickedObject
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PickedObject;
                 var value_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.DrawingObject) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(value);
                 teklaObject.PickedObject = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PickedObject), ex); 
+                }
             }
         }
-    }
         
 
         

@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.Plane Plane
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Plane Plane
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Plane;
                 var value_ = Dynamic.Tekla.Structures.Model.Plane_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Plane) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Plane_.GetTSObject(value);
                 teklaObject.Plane = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Plane), ex); 
+                }
             }
         }
-    }
         
 
         

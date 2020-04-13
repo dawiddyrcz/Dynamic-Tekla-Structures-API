@@ -14,37 +14,37 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
 
 
-    public System.Double SemiAxis1
-    {
-        get
+        public System.Double SemiAxis1
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SemiAxis1;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis1), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double SemiAxis2
-    {
-        get
+        public System.Double SemiAxis2
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SemiAxis2;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SemiAxis2), ex); 
-            }
+            
         }
-        
-    }
         
 
         

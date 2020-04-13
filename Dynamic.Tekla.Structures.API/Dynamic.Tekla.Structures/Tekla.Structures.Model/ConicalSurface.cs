@@ -14,41 +14,41 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Tuple<System.Double, System.Double> Radiuses
-    {
-        get
+        public System.Tuple<System.Double, System.Double> Radiuses
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Radiuses;
                 var value_ = TupleConverter.FromTSObject<System.Double, System.Double>(value);
                 return (System.Tuple<System.Double, System.Double>) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radiuses), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radiuses), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Point Apex
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Point Apex
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Apex;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Apex), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Apex), ex); 
-            }
+            
         }
-        
-    }
         
 
         

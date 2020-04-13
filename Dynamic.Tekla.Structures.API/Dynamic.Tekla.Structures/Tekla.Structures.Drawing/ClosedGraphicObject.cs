@@ -25,60 +25,60 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes Hatch
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes Hatch
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Hatch;
                 var value_ = Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hatch), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hatch), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.GraphicObjectHatchAttributes_.GetTSObject(value);
                 teklaObject.Hatch = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hatch), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hatch), ex); 
+                }
             }
         }
-    }
 
-    public System.Boolean BehindModelObjects
-    {
-        get
+        public System.Boolean BehindModelObjects
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.BehindModelObjects;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BehindModelObjects), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BehindModelObjects), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.BehindModelObjects = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BehindModelObjects), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BehindModelObjects), ex); 
+                }
             }
         }
-    }
         
 
         

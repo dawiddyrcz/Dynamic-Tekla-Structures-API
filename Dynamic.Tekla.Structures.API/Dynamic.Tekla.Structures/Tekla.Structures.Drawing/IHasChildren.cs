@@ -19,41 +19,40 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 
 
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
-{
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetObjects();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjects), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetObjects();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjects), ex);
-    }
-}
 
 
-
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects(
-	System.Type[] TypeFilter_
-	)
-{
-	var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
-    try
-    {
-        	var result = teklaObject.GetObjects(TypeFilter);
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjects), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetObjects(
+			System.Type[] TypeFilter_)
+        {
+            var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
+            try
+            {
+                var result = teklaObject.GetObjects(TypeFilter);
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjects), ex);
+            }
+        }
 
 
 

@@ -25,39 +25,39 @@ namespace Dynamic.Tekla.Structures.Solid
 		}
 
 
-public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
-{
+        public Dynamic.Tekla.Structures.Solid.FaceEnumerator GetFaceEnumerator()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetFaceEnumerator();
+            
+                var _result = Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFaceEnumerator), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetFaceEnumerator();
-
-        	var _result = Dynamic.Tekla.Structures.Solid.FaceEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFaceEnumerator), ex);
-    }
-}
 
 
-
-public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
-{
-
-    try
-    {
-        	var result = teklaObject.GetEdgeEnumerator();
-
-        	var _result = Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetEdgeEnumerator), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Solid.EdgeEnumerator GetEdgeEnumerator()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetEdgeEnumerator();
+            
+                var _result = Dynamic.Tekla.Structures.Solid.EdgeEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetEdgeEnumerator), ex);
+            }
+        }
 
 
 

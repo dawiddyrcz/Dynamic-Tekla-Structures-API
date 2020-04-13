@@ -31,17 +31,17 @@ namespace CodeGenerator
             string result = GetResult(methodInfo);
 
             string methodCode = $@"
-
-public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
-{{
-{parametersConvertersToTS}
-{methodCall}
-{parametersConvertersFromTS}
-{result}
-}}
+        public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
+        {{
+            {parametersConvertersToTS}
+            {methodCall}
+            {parametersConvertersFromTS}
+            {result}
+        }}
 ";
 
-            return methodCode.Replace(System.Environment.NewLine + System.Environment.NewLine, System.Environment.NewLine);
+            return methodCode.Replace(System.Environment.NewLine + "            " + System.Environment.NewLine, System.Environment.NewLine)
+                .Replace(System.Environment.NewLine + System.Environment.NewLine, System.Environment.NewLine);
         }
         
         private static List<MethodParameter> GetMethodParameters(MethodInfo methodInfo)
@@ -76,11 +76,10 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
             foreach (var parameter in parameters)
             {
-                sb.Append("\t").Append(parameter.MethodDeclaration).AppendLine(",");
+                sb.Append("\t\t\t").Append(parameter.MethodDeclaration).AppendLine(",");
             }
 
-            sb.Remove(sb.Length - 3, 2);
-            sb.Append("\t");
+            sb.Remove(sb.Length - 3, 3);;
 
             return sb.ToString();
         }
@@ -92,7 +91,7 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
 
             foreach (var parameter in parameters)
             {
-                sb.Append("\t").AppendLine(parameter.ConverterToTS);
+                sb.AppendLine(parameter.ConverterToTS);
             }
 
             sb.Remove(sb.Length - 2, 2);
@@ -102,7 +101,6 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
         private static string GetMethodCall(MethodInfo methodInfo, List<MethodParameter> parameters)
         {
             var sb = new StringBuilder(200);
-            sb.Append("\t");
             
             bool hasOutParameter = methodInfo.GetParameters().Any(p => p.IsOut);
 
@@ -155,9 +153,9 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             if (methodInfo.IsStatic == false)
             {
                 return $@"
-    try
-    {{
-        {sb.ToString()}";
+            try
+            {{
+                {sb.ToString()}";
             }
             else
                 return sb.ToString();
@@ -172,7 +170,7 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             
             foreach (var parameter in refOutParameters)
             {
-                sb.Append("\t").AppendLine(parameter.ConverterFromTS);
+                sb.AppendLine(parameter.ConverterFromTS);
             }
 
             sb.Remove(sb.Length - 2, 2);
@@ -185,31 +183,28 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
             var sb = new StringBuilder(200);
             if (!IsVoid(methodInfo))
             {
-
-
-
                 var type = methodInfo.ReturnType;
 
                 if (Converters.HaveToBeConverted(type))
                 {
-                    sb.Append("\t").AppendLine(Converters.FromTSObjects(type, "result", "var _result"));
-                    sb.Append("\t").Append("return _result;");
+                    sb.AppendLine(Converters.FromTSObjects(type, "result", "var _result"));
+                    sb.Append("\t\t\t\t").Append("return _result;");
                 }
                 else
                 {
-                    sb.Append("\t").Append("return result;");
+                    sb.Append("return result;");
                 }
             }
 
             if (!methodInfo.IsStatic)
             {
                 return $@"
-        {sb.ToString()}
-    }}
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {{
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof({methodInfo.Name}), ex);
-    }}";
+                {sb.ToString()}
+            }}
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {{
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof({methodInfo.Name}), ex);
+            }}";
             }
             else
                 return sb.ToString();
@@ -219,9 +214,5 @@ public{staticc} {returnType} {methodInfo.Name}({parametersDeclaration})
         {
             return methodInfo.ReturnType.Equals(typeof(void));
         }
-
-
-
-
     }
 }

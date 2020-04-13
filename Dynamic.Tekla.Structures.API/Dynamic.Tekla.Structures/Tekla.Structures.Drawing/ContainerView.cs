@@ -25,39 +25,39 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetViews()
-{
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetViews()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetViews();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetViews), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetViews();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetViews), ex);
-    }
-}
 
 
-
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllViews()
-{
-
-    try
-    {
-        	var result = teklaObject.GetAllViews();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllViews), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetAllViews()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetAllViews();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllViews), ex);
+            }
+        }
 
 
 

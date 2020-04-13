@@ -14,21 +14,21 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public System.String AttributeFile
-    {
-        get
+        public System.String AttributeFile
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.AttributeFile;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AttributeFile), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AttributeFile), ex); 
-            }
+            
         }
-        
-    }
         
 
         

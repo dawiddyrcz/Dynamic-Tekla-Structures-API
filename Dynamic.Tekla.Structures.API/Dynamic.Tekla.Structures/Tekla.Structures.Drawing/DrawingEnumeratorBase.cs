@@ -14,98 +14,98 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public static System.Boolean AutoFetch
-    {
-        get
+        public static System.Boolean AutoFetch
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch");
-            return (System.Boolean) value;
-        }
-        set
-        {
-            var value_ = value;
-            PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch", value_);
-        }
-    }
-    public System.Boolean SelectInstances
-    {
-        get
-        {
-            try
+            get
             {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch");
+                return (System.Boolean) value;
+            }
+            set
+            {
+                var value_ = value;
+                PropertyInvoker.SetStaticPropertyOrFieldValue("Tekla.Structures.Drawing.DrawingEnumeratorBase", "AutoFetch", value_);
+            }
+        }
+        public System.Boolean SelectInstances
+        {
+            get
+            {
+                try
+                {
                 return teklaObject.SelectInstances;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.SelectInstances = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SelectInstances), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
 
 
 
-public System.Boolean MoveNext()
-{
-
-    try
-    {
-        	var result = (System.Boolean) teklaObject.MoveNext();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
-    }
-}
-
-
-
-public void Reset()
-{
-
-    try
-    {
-        	teklaObject.Reset();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
-    }
-}
+        public System.Boolean MoveNext()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.MoveNext();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(MoveNext), ex);
+            }
+        }
 
 
 
-public System.Int32 GetSize()
-{
+        public void Reset()
+        {
+            
+            try
+            {
+                teklaObject.Reset();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Reset), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.Int32) teklaObject.GetSize();
 
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSize), ex);
-    }
-}
+
+        public System.Int32 GetSize()
+        {
+            
+            try
+            {
+                var result = (System.Int32) teklaObject.GetSize();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSize), ex);
+            }
+        }
 
 
 

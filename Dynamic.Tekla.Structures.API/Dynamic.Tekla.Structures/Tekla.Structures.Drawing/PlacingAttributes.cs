@@ -14,89 +14,89 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public System.Boolean IsFixed
-    {
-        get
+        public System.Boolean IsFixed
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsFixed;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsFixed), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsFixed), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.IsFixed = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsFixed), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsFixed), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes PlacingDistance
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes PlacingDistance
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PlacingDistance;
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingDistance), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingDistance), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingDistanceAttributes_.GetTSObject(value);
                 teklaObject.PlacingDistance = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingDistance), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingDistance), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes PlacingQuarter
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes PlacingQuarter
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PlacingQuarter;
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingQuarter), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingQuarter), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingQuarterAttributes_.GetTSObject(value);
                 teklaObject.PlacingQuarter = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingQuarter), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlacingQuarter), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -120,20 +120,20 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public System.Object Clone()
-{
-
-    try
-    {
-        	var result = (System.Object) teklaObject.Clone();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
-    }
-}
+        public System.Object Clone()
+        {
+            
+            try
+            {
+                var result = (System.Object) teklaObject.Clone();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+            }
+        }
 
 
 

@@ -19,24 +19,22 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries");
-	var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries");
+            var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries(
-	System.Boolean forceRefresh
-	)
-{
-	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries", forceRefresh);
-	var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.StringList GetSymbolLibraries(
+			System.Boolean forceRefresh)
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.SymbolLibrary", "GetSymbolLibraries", forceRefresh);
+            var _result = Dynamic.Tekla.Structures.Drawing.StringList_.FromTSObject(result);
+				return _result;
+        }
 
 
 

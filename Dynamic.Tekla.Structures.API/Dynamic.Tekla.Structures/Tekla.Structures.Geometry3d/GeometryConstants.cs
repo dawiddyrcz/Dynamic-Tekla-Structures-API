@@ -14,33 +14,33 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
 
 
-    public static System.Double DISTANCE_EPSILON
-    {
-        get
+        public static System.Double DISTANCE_EPSILON
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "DISTANCE_EPSILON");
-            return (System.Double) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "DISTANCE_EPSILON");
+                return (System.Double) value;
+            }
+            
         }
-        
-    }
-    public static System.Double ANGULAR_EPSILON
-    {
-        get
+        public static System.Double ANGULAR_EPSILON
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "ANGULAR_EPSILON");
-            return (System.Double) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "ANGULAR_EPSILON");
+                return (System.Double) value;
+            }
+            
         }
-        
-    }
-    public static System.Double SCALAR_EPSILON
-    {
-        get
+        public static System.Double SCALAR_EPSILON
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "SCALAR_EPSILON");
-            return (System.Double) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Geometry3d.GeometryConstants", "SCALAR_EPSILON");
+                return (System.Double) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 

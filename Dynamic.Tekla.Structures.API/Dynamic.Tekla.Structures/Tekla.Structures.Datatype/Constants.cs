@@ -14,15 +14,15 @@ namespace Dynamic.Tekla.Structures.Datatype
     {
 
 
-    public static System.Int32 XS_DEFAULT
-    {
-        get
+        public static System.Int32 XS_DEFAULT
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Constants", "XS_DEFAULT");
-            return (System.Int32) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Datatype.Constants", "XS_DEFAULT");
+                return (System.Int32) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 

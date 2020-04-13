@@ -28,41 +28,33 @@ namespace Dynamic.Tekla.Structures.Datatype
 		}
 
 
-public static System.Object GetValue(
-	System.String name
-	)
-{
-	
-	var result = (System.Object) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", name);
-	return result;
-}
+        public static System.Object GetValue(
+			System.String name)
+        {
+            var result = (System.Object) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "GetValue", name);
+            return result;
+        }
 
 
 
-public static System.Boolean TryGetValue(
-	System.String name,
-	out System.Object obj
-	)
-{
-	
-	obj = null;
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
-	
-	return result;
-}
+        public static System.Boolean TryGetValue(
+			System.String name,
+			out System.Object obj)
+        {
+obj = null;
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "TryGetValue", name, ref obj);
+            return result;
+        }
 
 
 
-public static void SetValue(
-	System.String name,
-	System.Object value
-	)
-{
-	
-	
-	MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "SetValue", name, value);
-
-}
+        public static void SetValue(
+			System.String name,
+			System.Object value)
+        {
+            MethodInvoker.InvokeStaticMethod("Tekla.Structures.Datatype.Settings", "SetValue", name, value);
+            
+        }
 
 
 

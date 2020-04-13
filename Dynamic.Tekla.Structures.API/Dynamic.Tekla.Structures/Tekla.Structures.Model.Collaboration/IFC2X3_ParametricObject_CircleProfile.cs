@@ -14,21 +14,21 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
 
 
-    public System.Double Radius
-    {
-        get
+        public System.Double Radius
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Radius;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radius), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Radius), ex); 
-            }
+            
         }
-        
-    }
         
 
         

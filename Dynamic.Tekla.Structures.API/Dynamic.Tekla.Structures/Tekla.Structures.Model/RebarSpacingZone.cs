@@ -14,170 +14,170 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Int32 NumberOfSpaces
-    {
-        get
+        public System.Int32 NumberOfSpaces
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.NumberOfSpaces;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpaces), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpaces), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.NumberOfSpaces = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpaces), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpaces), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Spacing
-    {
-        get
+        public System.Double Spacing
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Spacing;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Spacing = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Length
-    {
-        get
+        public System.Double Length
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Length;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Length = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum NumberOfSpacesType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum NumberOfSpacesType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.NumberOfSpacesType;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpacesType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpacesType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.GetTSObject(value);
                 teklaObject.NumberOfSpacesType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpacesType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfSpacesType), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum SpacingType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum SpacingType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.SpacingType;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.SpacingEnum_.GetTSObject(value);
                 teklaObject.SpacingType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingType), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum LengthType
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum LengthType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.LengthType;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LengthType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LengthType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacingZone.LengthEnum_.GetTSObject(value);
                 teklaObject.LengthType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LengthType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(LengthType), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;

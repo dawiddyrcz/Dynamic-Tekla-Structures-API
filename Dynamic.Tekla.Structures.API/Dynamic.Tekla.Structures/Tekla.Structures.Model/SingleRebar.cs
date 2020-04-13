@@ -14,118 +14,118 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.String Size
-    {
-        get
+        public System.String Size
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Size;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Size = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Size), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarHookData StartHook
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.StartHook;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarHookData) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
                 teklaObject.StartHook = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(StartHook), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarHookData EndHook
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.EndHook;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarHookData) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarHookData_.GetTSObject(value);
                 teklaObject.EndHook = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndHook), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Polygon Polygon
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Polygon Polygon
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Polygon;
                 var value_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Polygon) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(value);
                 teklaObject.Polygon = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Polygon), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -141,21 +141,21 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public Dynamic.Tekla.Structures.Model.RebarSet GetRebarSet()
-{
-
-    try
-    {
-        	var result = teklaObject.GetRebarSet();
-
-        	var _result = Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarSet), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.RebarSet GetRebarSet()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetRebarSet();
+            
+                var _result = Dynamic.Tekla.Structures.Model.RebarSet_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarSet), ex);
+            }
+        }
 
 
 

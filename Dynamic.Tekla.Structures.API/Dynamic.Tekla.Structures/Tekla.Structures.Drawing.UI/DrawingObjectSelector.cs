@@ -25,116 +25,111 @@ namespace Dynamic.Tekla.Structures.Drawing.UI
 		}
 
 
-public System.Boolean SelectObject(
-	Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject_
-	)
-{
-	var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.SelectObject(DrawingObject);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectObject), ex);
-    }
-}
-
-
-
-public System.Boolean SelectObjects(
-	System.Collections.ArrayList DrawingObjects_,
-	System.Boolean ExtendSelection
-	)
-{
-	var DrawingObjects = ArrayListConverter.ToTSObjects(DrawingObjects_);
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectObjects), ex);
-    }
-}
+        public System.Boolean SelectObject(
+			Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject_)
+        {
+            var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SelectObject(DrawingObject);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectObject), ex);
+            }
+        }
 
 
 
-public System.Boolean UnselectObject(
-	Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject_
-	)
-{
-	var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.UnselectObject(DrawingObject);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectObject), ex);
-    }
-}
-
-
-
-public System.Boolean UnselectObjects(
-	System.Collections.ArrayList DrawingObjects_
-	)
-{
-	var DrawingObjects = ArrayListConverter.ToTSObjects(DrawingObjects_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.UnselectObjects(DrawingObjects);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectObjects), ex);
-    }
-}
+        public System.Boolean SelectObjects(
+			System.Collections.ArrayList DrawingObjects_,
+			System.Boolean ExtendSelection)
+        {
+            var DrawingObjects = ArrayListConverter.ToTSObjects(DrawingObjects_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SelectObjects(DrawingObjects, ExtendSelection);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectObjects), ex);
+            }
+        }
 
 
 
-public System.Boolean UnselectAllObjects()
-{
+        public System.Boolean UnselectObject(
+			Dynamic.Tekla.Structures.Drawing.DrawingObject DrawingObject_)
+        {
+            var DrawingObject = Dynamic.Tekla.Structures.Drawing.DrawingObject_.GetTSObject(DrawingObject_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.UnselectObject(DrawingObject);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectObject), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.Boolean) teklaObject.UnselectAllObjects();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectAllObjects), ex);
-    }
-}
 
 
+        public System.Boolean UnselectObjects(
+			System.Collections.ArrayList DrawingObjects_)
+        {
+            var DrawingObjects = ArrayListConverter.ToTSObjects(DrawingObjects_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.UnselectObjects(DrawingObjects);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectObjects), ex);
+            }
+        }
 
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetSelected()
-{
 
-    try
-    {
-        	var result = teklaObject.GetSelected();
 
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSelected), ex);
-    }
-}
+        public System.Boolean UnselectAllObjects()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.UnselectAllObjects();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(UnselectAllObjects), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetSelected()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetSelected();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSelected), ex);
+            }
+        }
 
 
 

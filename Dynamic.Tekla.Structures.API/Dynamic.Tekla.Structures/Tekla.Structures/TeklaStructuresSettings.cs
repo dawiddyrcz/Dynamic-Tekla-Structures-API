@@ -28,124 +28,102 @@ namespace Dynamic.Tekla.Structures
 		}
 
 
-public static System.Boolean GetAdvancedOption(
-	System.String VariableName,
-	ref System.Boolean Value
-	)
-{
-	
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
-	
-	return result;
-}
+        public static System.Boolean GetAdvancedOption(
+			System.String VariableName,
+			ref System.Boolean Value)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+            return result;
+        }
 
 
 
-public static System.Boolean GetAdvancedOption(
-	System.String VariableName,
-	ref System.Int32 Value
-	)
-{
-	
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
-	
-	return result;
-}
+        public static System.Boolean GetAdvancedOption(
+			System.String VariableName,
+			ref System.Int32 Value)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+            return result;
+        }
 
 
 
-public static System.Boolean GetAdvancedOption(
-	System.String VariableName,
-	ref System.String Value
-	)
-{
-	
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
-	
-	return result;
-}
+        public static System.Boolean GetAdvancedOption(
+			System.String VariableName,
+			ref System.String Value)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+            return result;
+        }
 
 
 
-public static System.Boolean GetAdvancedOption(
-	System.String VariableName,
-	ref System.Double Value
-	)
-{
-	
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
-	
-	return result;
-}
+        public static System.Boolean GetAdvancedOption(
+			System.String VariableName,
+			ref System.Double Value)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+            return result;
+        }
 
 
 
-public static System.Boolean GetOptions(
-	ref Dynamic.Tekla.Structures.ClashCheckOptions Options_
-	)
-{
-	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
-	Options_ = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(Options);
-	return result;
-}
+        public static System.Boolean GetOptions(
+			ref Dynamic.Tekla.Structures.ClashCheckOptions Options_)
+        {
+            var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+            Options_ = Dynamic.Tekla.Structures.ClashCheckOptions_.FromTSObject(Options);
+            return result;
+        }
 
 
 
-public static System.Boolean SetOptions(
-	Dynamic.Tekla.Structures.ClashCheckOptions Options_
-	)
-{
-	var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
-	return result;
-}
+        public static System.Boolean SetOptions(
+			Dynamic.Tekla.Structures.ClashCheckOptions Options_)
+        {
+            var Options = Dynamic.Tekla.Structures.ClashCheckOptions_.GetTSObject(Options_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+            return result;
+        }
 
 
 
-public static System.Boolean GetOptions(
-	ref Dynamic.Tekla.Structures.ComponentOptions Options_
-	)
-{
-	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
-	Options_ = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(Options);
-	return result;
-}
+        public static System.Boolean GetOptions(
+			ref Dynamic.Tekla.Structures.ComponentOptions Options_)
+        {
+            var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetOptions", ref Options);
+            Options_ = Dynamic.Tekla.Structures.ComponentOptions_.FromTSObject(Options);
+            return result;
+        }
 
 
 
-public static System.Boolean SetOptions(
-	Dynamic.Tekla.Structures.ComponentOptions Options_
-	)
-{
-	var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
-	return result;
-}
+        public static System.Boolean SetOptions(
+			Dynamic.Tekla.Structures.ComponentOptions Options_)
+        {
+            var Options = Dynamic.Tekla.Structures.ComponentOptions_.GetTSObject(Options_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "SetOptions", Options);
+            return result;
+        }
 
 
 
-public static System.Boolean IsToolOptionOn(
-	System.String toolOptionName
-	)
-{
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", toolOptionName);
-	return result;
-}
+        public static System.Boolean IsToolOptionOn(
+			System.String toolOptionName)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsToolOptionOn", toolOptionName);
+            return result;
+        }
 
 
 
-public static System.Boolean IsPourEnabled()
-{
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled");
-	return result;
-}
+        public static System.Boolean IsPourEnabled()
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "IsPourEnabled");
+            return result;
+        }
 
 
 
@@ -173,45 +151,41 @@ public static System.Boolean IsPourEnabled()
 		}
 
 
-public void Invoke(
-	System.String advancedOption,
-	System.String invalidString,
-	System.String exceptionMessage
-	)
-{
-	
-	
-	
-    try
-    {
-        	teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+        public void Invoke(
+			System.String advancedOption,
+			System.String invalidString,
+			System.String exceptionMessage)
+        {
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
-    }
-}
+            try
+            {
+                teklaObject.Invoke(advancedOption, invalidString, exceptionMessage);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
+            }
+        }
 
 
 
-public void EndInvoke(
-	System.IAsyncResult presult
-	)
-{
-	
-    try
-    {
-        	teklaObject.EndInvoke(presult);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
-    }
-}
+        public void EndInvoke(
+			System.IAsyncResult presult)
+        {
+            
+            try
+            {
+                teklaObject.EndInvoke(presult);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
+            }
+        }
 
 
 
@@ -275,285 +249,285 @@ public void EndInvoke(
     {
 
 
-    public static System.String All
-    {
-        get
+        public static System.String All
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "All");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "All");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Joints
-    {
-        get
+        public static System.String Joints
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Joints");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Joints");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Parts
-    {
-        get
+        public static System.String Parts
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Parts");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Parts");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Surfaces
-    {
-        get
+        public static System.String Surfaces
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Surfaces");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Surfaces");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Points
-    {
-        get
+        public static System.String Points
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Points");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Points");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ConstructionLines
-    {
-        get
+        public static System.String ConstructionLines
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ConstructionLines");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ConstructionLines");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ReferenceModels
-    {
-        get
+        public static System.String ReferenceModels
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ReferenceModels");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ReferenceModels");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Grid
-    {
-        get
+        public static System.String Grid
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Grid");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Grid");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String GridLine
-    {
-        get
+        public static System.String GridLine
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "GridLine");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "GridLine");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Weldings
-    {
-        get
+        public static System.String Weldings
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Weldings");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Weldings");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Cuts
-    {
-        get
+        public static System.String Cuts
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Cuts");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Cuts");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Views
-    {
-        get
+        public static System.String Views
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Views");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Views");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Screws
-    {
-        get
+        public static System.String Screws
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Screws");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Screws");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SingleScrews
-    {
-        get
+        public static System.String SingleScrews
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SingleScrews");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SingleScrews");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Rebars
-    {
-        get
+        public static System.String Rebars
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Rebars");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Rebars");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String RebarGroup
-    {
-        get
+        public static System.String RebarGroup
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "RebarGroup");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "RebarGroup");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String RebarSingle
-    {
-        get
+        public static System.String RebarSingle
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "RebarSingle");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "RebarSingle");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String PourBreaks
-    {
-        get
+        public static System.String PourBreaks
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "PourBreaks");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "PourBreaks");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Planes
-    {
-        get
+        public static System.String Planes
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Planes");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Planes");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Distances
-    {
-        get
+        public static System.String Distances
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Distances");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Distances");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String Loads
-    {
-        get
+        public static System.String Loads
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Loads");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "Loads");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String AnalysisParts
-    {
-        get
+        public static System.String AnalysisParts
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisParts");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisParts");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String AnalysisNodes
-    {
-        get
+        public static System.String AnalysisNodes
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisNodes");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisNodes");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String AnalysisNodeLinks
-    {
-        get
+        public static System.String AnalysisNodeLinks
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisNodeLinks");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "AnalysisNodeLinks");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String CustomObjects
-    {
-        get
+        public static System.String CustomObjects
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "CustomObjects");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "CustomObjects");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String ObjectsInJoints
-    {
-        get
+        public static System.String ObjectsInJoints
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ObjectsInJoints");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "ObjectsInJoints");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SelectAssemblies
-    {
-        get
+        public static System.String SelectAssemblies
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectAssemblies");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectAssemblies");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SelectObjectsInAssemblies
-    {
-        get
+        public static System.String SelectObjectsInAssemblies
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectObjectsInAssemblies");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectObjectsInAssemblies");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String SelectTasks
-    {
-        get
+        public static System.String SelectTasks
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectTasks");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "SelectTasks");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String DisplaySelectionFilterDialog
-    {
-        get
+        public static System.String DisplaySelectionFilterDialog
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "DisplaySelectionFilterDialog");
-            return (System.String) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "DisplaySelectionFilterDialog");
+                return (System.String) value;
+            }
+            
         }
-        
-    }
-    public static System.String DirectManipulation
-    {
-        get
+        public static System.String DirectManipulation
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "DirectManipulation");
-            return (System.String) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresSettings.ToolOptionNames", "DirectManipulation");
+                return (System.String) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 

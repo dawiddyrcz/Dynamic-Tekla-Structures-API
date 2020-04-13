@@ -19,36 +19,32 @@ namespace Dynamic.Tekla.Structures.Drawing
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
-	System.Int32 CustomLineTypeId
-	)
-{
-	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", CustomLineTypeId);
-	var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
+			System.Int32 CustomLineTypeId)
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", CustomLineTypeId);
+            var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
-	System.String Name
-	)
-{
-	
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", Name);
-	var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.CustomLineType Get(
+			System.String Name)
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get", Name);
+            var _result = Dynamic.Tekla.Structures.Drawing.CustomLineType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType> Get()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get");
-	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Drawing.CustomLineType>(result);
-	return _result;
-}
+        public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Drawing.CustomLineType> Get()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.CustomLineTypeCatalog", "Get");
+            var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Drawing.CustomLineType>(result);
+				return _result;
+        }
 
 
 

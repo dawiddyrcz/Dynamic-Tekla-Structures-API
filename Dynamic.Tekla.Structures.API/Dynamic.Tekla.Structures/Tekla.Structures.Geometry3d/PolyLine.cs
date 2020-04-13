@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
 
 
-    public System.Collections.ArrayList Points
-    {
-        get
+        public System.Collections.ArrayList Points
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Points;
                 var value_ = ArrayListConverter.FromTSObjects(value);
                 return (System.Collections.ArrayList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = ArrayListConverter.ToTSObjects(value);
                 teklaObject.Points = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Points), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -60,20 +60,20 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
-public System.Double Length()
-{
-
-    try
-    {
-        	var result = (System.Double) teklaObject.Length();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Length), ex);
-    }
-}
+        public System.Double Length()
+        {
+            
+            try
+            {
+                var result = (System.Double) teklaObject.Length();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Length), ex);
+            }
+        }
 
 
 

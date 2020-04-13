@@ -14,89 +14,89 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Int32 Id
-    {
-        get
+        public System.Int32 Id
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Id;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Id = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Id), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Contour Curve
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Contour Curve
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Curve;
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Contour) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
                 teklaObject.Curve = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Curve), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.RebarSpacing Spacing
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.RebarSpacing Spacing
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Spacing;
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.RebarSpacing) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value);
                 teklaObject.Spacing = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;

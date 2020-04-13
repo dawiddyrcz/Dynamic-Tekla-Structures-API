@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
 
 
-    public System.Double Item
-    {
-        get
+        public System.Double Item
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Item;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Item = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -60,58 +60,57 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
-public void Transpose()
-{
-
-    try
-    {
-        	teklaObject.Transpose();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transpose), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
-{
-
-    try
-    {
-        	var result = teklaObject.GetTranspose();
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetTranspose), ex);
-    }
-}
+        public void Transpose()
+        {
+            
+            try
+            {
+                teklaObject.Transpose();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transpose), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Geometry3d.Point Transform(
-	Dynamic.Tekla.Structures.Geometry3d.Point p_
-	)
-{
-	var p = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p_);
-    try
-    {
-        	var result = teklaObject.Transform(p);
+        public Dynamic.Tekla.Structures.Geometry3d.Matrix GetTranspose()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetTranspose();
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetTranspose), ex);
+            }
+        }
 
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transform), ex);
-    }
-}
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point Transform(
+			Dynamic.Tekla.Structures.Geometry3d.Point p_)
+        {
+            var p = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(p_);
+            try
+            {
+                var result = teklaObject.Transform(p);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Transform), ex);
+            }
+        }
 
 
 

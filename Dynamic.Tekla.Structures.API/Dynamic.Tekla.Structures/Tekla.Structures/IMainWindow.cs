@@ -14,95 +14,93 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public System.Boolean IsActive
-    {
-        get
+        public System.Boolean IsActive
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsActive;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsActive), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsActive), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Boolean IsMinimized
-    {
-        get
+        public System.Boolean IsMinimized
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsMinimized;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsMinimized), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsMinimized), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;
 
 
 
-public void Activate()
-{
-
-    try
-    {
-        	teklaObject.Activate();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Activate), ex);
-    }
-}
-
-
-
-public void AttachChildForm(
-	System.Windows.Forms.Form form
-	)
-{
-	
-    try
-    {
-        	teklaObject.AttachChildForm(form);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AttachChildForm), ex);
-    }
-}
+        public void Activate()
+        {
+            
+            try
+            {
+                teklaObject.Activate();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Activate), ex);
+            }
+        }
 
 
 
-public void DetachChildForm(
-	System.Windows.Forms.Form form
-	)
-{
-	
-    try
-    {
-        	teklaObject.DetachChildForm(form);
+        public void AttachChildForm(
+			System.Windows.Forms.Form form)
+        {
+            
+            try
+            {
+                teklaObject.AttachChildForm(form);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AttachChildForm), ex);
+            }
+        }
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DetachChildForm), ex);
-    }
-}
+
+
+        public void DetachChildForm(
+			System.Windows.Forms.Form form)
+        {
+            
+            try
+            {
+                teklaObject.DetachChildForm(form);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DetachChildForm), ex);
+            }
+        }
 
 
 

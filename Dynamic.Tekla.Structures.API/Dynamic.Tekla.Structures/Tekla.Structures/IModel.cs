@@ -14,39 +14,39 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public Dynamic.Tekla.Structures.ModelFolder Folder
-    {
-        get
+        public Dynamic.Tekla.Structures.ModelFolder Folder
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Folder;
                 var value_ = Dynamic.Tekla.Structures.ModelFolder_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.ModelFolder) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folder), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folder), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.String Name
-    {
-        get
+        public System.String Name
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Name;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

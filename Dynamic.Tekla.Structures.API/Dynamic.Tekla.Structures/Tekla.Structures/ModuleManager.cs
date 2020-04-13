@@ -14,79 +14,79 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public static Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
-    {
-        get
+        public static Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum Configuration
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "Configuration");
-            var value_ = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "Configuration");
+                var value_ = Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.ModuleManager.ProgramConfigurationEnum) value_;
+            }
+            
         }
-        
-    }
-    public static System.Boolean MultimaterialModeling
-    {
-        get
+        public static System.Boolean MultimaterialModeling
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "MultimaterialModeling");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "MultimaterialModeling");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean LoadModeling
-    {
-        get
+        public static System.Boolean LoadModeling
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "LoadModeling");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "LoadModeling");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean SteelDetailing
-    {
-        get
+        public static System.Boolean SteelDetailing
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "SteelDetailing");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "SteelDetailing");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean ConcreteDetailing
-    {
-        get
+        public static System.Boolean ConcreteDetailing
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "ConcreteDetailing");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "ConcreteDetailing");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean RebarModeling
-    {
-        get
+        public static System.Boolean RebarModeling
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "RebarModeling");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "RebarModeling");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean AnalysisAndDesign
-    {
-        get
+        public static System.Boolean AnalysisAndDesign
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "AnalysisAndDesign");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "AnalysisAndDesign");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static System.Boolean TaskManagement
-    {
-        get
+        public static System.Boolean TaskManagement
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "TaskManagement");
-            return (System.Boolean) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.ModuleManager", "TaskManagement");
+                return (System.Boolean) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 

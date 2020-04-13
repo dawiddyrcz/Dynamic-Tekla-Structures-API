@@ -19,12 +19,12 @@ namespace Dynamic.Tekla.Structures.Model.ClashChecker
 
 
 
-public static Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ClashChecker.ClashChekerEvent", "GetClashCheckHandler");
-	var _result = Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHandler()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.ClashChecker.ClashChekerEvent", "GetClashCheckHandler");
+            var _result = Dynamic.Tekla.Structures.Model.ClashCheckHandler_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -52,41 +52,39 @@ public static Dynamic.Tekla.Structures.Model.ClashCheckHandler GetClashCheckHand
 		}
 
 
-public void Invoke(
-	System.Int32 nClashes
-	)
-{
-	
-    try
-    {
-        	teklaObject.Invoke(nClashes);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
-    }
-}
-
+        public void Invoke(
+			System.Int32 nClashes)
+        {
+            
+            try
+            {
+                teklaObject.Invoke(nClashes);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
+            }
+        }
 
 
-public void EndInvoke(
-	System.IAsyncResult presult
-	)
-{
-	
-    try
-    {
-        	teklaObject.EndInvoke(presult);
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
-    }
-}
+        public void EndInvoke(
+			System.IAsyncResult presult)
+        {
+            
+            try
+            {
+                teklaObject.EndInvoke(presult);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
+            }
+        }
 
 
 
@@ -168,41 +166,39 @@ public void EndInvoke(
 		}
 
 
-public void Invoke(
-	Dynamic.Tekla.Structures.Model.ClashCheckData ClashData_
-	)
-{
-	var ClashData = Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData_);
-    try
-    {
-        	teklaObject.Invoke(ClashData);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
-    }
-}
-
+        public void Invoke(
+			Dynamic.Tekla.Structures.Model.ClashCheckData ClashData_)
+        {
+            var ClashData = Dynamic.Tekla.Structures.Model.ClashCheckData_.GetTSObject(ClashData_);
+            try
+            {
+                teklaObject.Invoke(ClashData);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Invoke), ex);
+            }
+        }
 
 
-public void EndInvoke(
-	System.IAsyncResult presult
-	)
-{
-	
-    try
-    {
-        	teklaObject.EndInvoke(presult);
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
-    }
-}
+        public void EndInvoke(
+			System.IAsyncResult presult)
+        {
+            
+            try
+            {
+                teklaObject.EndInvoke(presult);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(EndInvoke), ex);
+            }
+        }
 
 
 

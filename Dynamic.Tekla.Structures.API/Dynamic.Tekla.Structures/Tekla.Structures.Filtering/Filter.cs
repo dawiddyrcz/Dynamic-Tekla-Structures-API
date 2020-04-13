@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
 
 
-    public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
-    {
-        get
+        public Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.FilterExpression;
                 var value_ = Dynamic.Tekla.Structures.Filtering.FilterExpression_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Filtering.FilterExpression) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(value);
                 teklaObject.FilterExpression = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilterExpression), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -67,24 +67,22 @@ namespace Dynamic.Tekla.Structures.Filtering
 		}
 
 
-public System.String CreateFile(
-	Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType_,
-	System.String FullFileName
-	)
-{
-	var FilterExpressionFileType = Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType_.GetTSObject(FilterExpressionFileType_);
-	
-    try
-    {
-        	var result = (System.String) teklaObject.CreateFile(FilterExpressionFileType, FullFileName);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CreateFile), ex);
-    }
-}
+        public System.String CreateFile(
+			Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType FilterExpressionFileType_,
+			System.String FullFileName)
+        {
+            var FilterExpressionFileType = Dynamic.Tekla.Structures.Filtering.FilterExpressionFileType_.GetTSObject(FilterExpressionFileType_);
+            try
+            {
+                var result = (System.String) teklaObject.CreateFile(FilterExpressionFileType, FullFileName);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CreateFile), ex);
+            }
+        }
 
 
 

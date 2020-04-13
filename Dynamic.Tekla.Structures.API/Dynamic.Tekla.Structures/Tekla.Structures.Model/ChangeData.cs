@@ -14,41 +14,41 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.ModelObject Object
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.ModelObject Object
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Object;
                 var value_ = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.ModelObject) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Object), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Object), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum Type
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Type;
                 var value_ = Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.ChangeData.ChangeTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

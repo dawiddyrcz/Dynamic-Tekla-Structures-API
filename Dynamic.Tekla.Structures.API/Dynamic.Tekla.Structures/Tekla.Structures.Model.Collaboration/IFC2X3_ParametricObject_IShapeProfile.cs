@@ -14,85 +14,85 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
 
 
-    public System.Double OverallWidth
-    {
-        get
+        public System.Double OverallWidth
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.OverallWidth;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OverallWidth), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OverallWidth), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double OverallDepth
-    {
-        get
+        public System.Double OverallDepth
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.OverallDepth;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OverallDepth), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OverallDepth), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double WebThickness
-    {
-        get
+        public System.Double WebThickness
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.WebThickness;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(WebThickness), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(WebThickness), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double FlangeThickness
-    {
-        get
+        public System.Double FlangeThickness
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.FlangeThickness;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FlangeThickness), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FlangeThickness), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double FilletRadius
-    {
-        get
+        public System.Double FilletRadius
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.FilletRadius;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilletRadius), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FilletRadius), ex); 
-            }
+            
         }
-        
-    }
         
 
         

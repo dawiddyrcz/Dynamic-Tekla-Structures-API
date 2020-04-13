@@ -19,55 +19,51 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 
 
 
-public static System.Double PointToPoint(
-	Dynamic.Tekla.Structures.Geometry3d.Point Point1_,
-	Dynamic.Tekla.Structures.Geometry3d.Point Point2_
-	)
-{
-	var Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1_);
-	var Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2_);
-	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPoint", Point1, Point2);
-	return result;
-}
+        public static System.Double PointToPoint(
+			Dynamic.Tekla.Structures.Geometry3d.Point Point1_,
+			Dynamic.Tekla.Structures.Geometry3d.Point Point2_)
+        {
+            var Point1 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point1_);
+var Point2 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point2_);
+            var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPoint", Point1, Point2);
+            return result;
+        }
 
 
 
-public static System.Double PointToLine(
-	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
-	Dynamic.Tekla.Structures.Geometry3d.Line Line_
-	)
-{
-	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
-	var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
-	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLine", Point, Line);
-	return result;
-}
+        public static System.Double PointToLine(
+			Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+			Dynamic.Tekla.Structures.Geometry3d.Line Line_)
+        {
+            var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+var Line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(Line_);
+            var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLine", Point, Line);
+            return result;
+        }
 
 
 
-public static System.Double PointToLineSegment(
-	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment_
-	)
-{
-	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
-	var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
-	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLineSegment", Point, LineSegment);
-	return result;
-}
+        public static System.Double PointToLineSegment(
+			Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment LineSegment_)
+        {
+            var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+var LineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(LineSegment_);
+            var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToLineSegment", Point, LineSegment);
+            return result;
+        }
 
 
 
-public static System.Double PointToPlane(
-	Dynamic.Tekla.Structures.Geometry3d.Point Point_,
-	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_
-	)
-{
-	var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
-	var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
-	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPlane", Point, Plane);
-	return result;
-}
+        public static System.Double PointToPlane(
+			Dynamic.Tekla.Structures.Geometry3d.Point Point_,
+			Dynamic.Tekla.Structures.Geometry3d.GeometricPlane Plane_)
+        {
+            var Point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(Point_);
+var Plane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(Plane_);
+            var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Distance", "PointToPlane", Point, Plane);
+            return result;
+        }
 
 
 

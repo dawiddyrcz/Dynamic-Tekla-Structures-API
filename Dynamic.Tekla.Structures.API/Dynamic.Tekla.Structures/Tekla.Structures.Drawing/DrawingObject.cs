@@ -14,130 +14,128 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.AttributesBase Attributes
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.AttributesBase Attributes
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Attributes;
                 var value_ = Dynamic.Tekla.Structures.Drawing.AttributesBase_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.AttributesBase) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.AttributesBase_.GetTSObject(value);
                 teklaObject.Attributes = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
+            }
+        }
+        
+
+        
+
+
+
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetRelatedObjects();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
             }
         }
-    }
-        
-
-        
 
 
 
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects()
-{
-
-    try
-    {
-        	var result = teklaObject.GetRelatedObjects();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects(
-	System.Type[] typeFilter_
-	)
-{
-	var typeFilter = TypeConverter.ToTSObjects(typeFilter_);
-    try
-    {
-        	var result = teklaObject.GetRelatedObjects(typeFilter);
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator GetRelatedObjects(
+			System.Type[] typeFilter_)
+        {
+            var typeFilter = TypeConverter.ToTSObjects(typeFilter_);
+            try
+            {
+                var result = teklaObject.GetRelatedObjects(typeFilter);
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DrawingObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRelatedObjects), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Drawing.ViewBase GetView()
-{
-
-    try
-    {
-        	var result = teklaObject.GetView();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetView), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Drawing.Drawing GetDrawing()
-{
-
-    try
-    {
-        	var result = teklaObject.GetDrawing();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDrawing), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.ViewBase GetView()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetView();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.ViewBase_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetView), ex);
+            }
+        }
 
 
 
-public System.Boolean IsEqual(
-	System.Object ObjectToCompare
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+        public Dynamic.Tekla.Structures.Drawing.Drawing GetDrawing()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetDrawing();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.Drawing_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDrawing), ex);
+            }
+        }
 
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
-    }
-}
+
+
+        public System.Boolean IsEqual(
+			System.Object ObjectToCompare)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+            }
+        }
 
 
 

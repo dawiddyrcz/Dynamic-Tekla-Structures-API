@@ -31,114 +31,110 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public System.Boolean AddWeld(
-	Dynamic.Tekla.Structures.Model.BaseWeld Weld_
-	)
-{
-	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.AddWeld(Weld);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddWeld), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.BaseWeld GetMainWeld()
-{
-
-    try
-    {
-        	var result = teklaObject.GetMainWeld();
-
-        	var _result = Dynamic.Tekla.Structures.Model.BaseWeld_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMainWeld), ex);
-    }
-}
+        public System.Boolean AddWeld(
+			Dynamic.Tekla.Structures.Model.BaseWeld Weld_)
+        {
+            var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.AddWeld(Weld);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddWeld), ex);
+            }
+        }
 
 
 
-public System.Boolean SetMainWeld(
-	Dynamic.Tekla.Structures.Model.BaseWeld Weld_
-	)
-{
-	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.SetMainWeld(Weld);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetMainWeld), ex);
-    }
-}
-
-
-
-public System.Boolean RemoveWeld(
-	Dynamic.Tekla.Structures.Model.BaseWeld Weld_
-	)
-{
-	var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.RemoveWeld(Weld);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveWeld), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.BaseWeld GetMainWeld()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetMainWeld();
+            
+                var _result = Dynamic.Tekla.Structures.Model.BaseWeld_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMainWeld), ex);
+            }
+        }
 
 
 
-public System.Boolean Explode()
-{
+        public System.Boolean SetMainWeld(
+			Dynamic.Tekla.Structures.Model.BaseWeld Weld_)
+        {
+            var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetMainWeld(Weld);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetMainWeld), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Explode();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Explode), ex);
-    }
-}
 
 
+        public System.Boolean RemoveWeld(
+			Dynamic.Tekla.Structures.Model.BaseWeld Weld_)
+        {
+            var Weld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(Weld_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.RemoveWeld(Weld);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveWeld), ex);
+            }
+        }
 
-public System.Boolean Select(
-	Dynamic.Tekla.Structures.Model.BaseWeld ChildWeld_
-	)
-{
-	var ChildWeld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(ChildWeld_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Select(ChildWeld);
 
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
-    }
-}
+
+        public System.Boolean Explode()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Explode();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Explode), ex);
+            }
+        }
+
+
+
+        public System.Boolean Select(
+			Dynamic.Tekla.Structures.Model.BaseWeld ChildWeld_)
+        {
+            var ChildWeld = Dynamic.Tekla.Structures.Model.BaseWeld_.GetTSObject(ChildWeld_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(ChildWeld);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
 
 
 

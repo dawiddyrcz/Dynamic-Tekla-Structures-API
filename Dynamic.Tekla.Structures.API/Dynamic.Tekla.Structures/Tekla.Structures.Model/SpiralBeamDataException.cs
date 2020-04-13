@@ -14,23 +14,23 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus ErrorStatus
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.ErrorStatus;
                 var value_ = Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.SpiralBeam.ErrorStatus) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ErrorStatus), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ErrorStatus), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

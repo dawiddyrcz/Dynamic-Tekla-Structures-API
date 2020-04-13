@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Catalogs
     {
 
 
-    public System.String ProfilePrefix
-    {
-        get
+        public System.String ProfilePrefix
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.ProfilePrefix;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.ProfilePrefix = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfilePrefix), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -54,50 +54,47 @@ namespace Dynamic.Tekla.Structures.Catalogs
 		}
 
 
-public static System.String GetParametricProfilePrefix(
-	System.Int32 Subtype
-	)
-{
-	
-	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.ParametricProfileItem", "GetParametricProfilePrefix", Subtype);
-	return result;
-}
+        public static System.String GetParametricProfilePrefix(
+			System.Int32 Subtype)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.ParametricProfileItem", "GetParametricProfilePrefix", Subtype);
+            return result;
+        }
 
 
 
-public System.String CreateProfileString()
-{
+        public System.String CreateProfileString()
+        {
+            
+            try
+            {
+                var result = (System.String) teklaObject.CreateProfileString();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CreateProfileString), ex);
+            }
+        }
 
-    try
-    {
-        	var result = (System.String) teklaObject.CreateProfileString();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CreateProfileString), ex);
-    }
-}
 
 
-
-public System.Boolean Select(
-	System.String ProfileName
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Select(ProfileName);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
-    }
-}
+        public System.Boolean Select(
+			System.String ProfileName)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(ProfileName);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
 
 
 

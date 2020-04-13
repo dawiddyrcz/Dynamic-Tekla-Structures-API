@@ -14,21 +14,21 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public System.Boolean IsActive
-    {
-        get
+        public System.Boolean IsActive
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsActive;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsActive), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsActive), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

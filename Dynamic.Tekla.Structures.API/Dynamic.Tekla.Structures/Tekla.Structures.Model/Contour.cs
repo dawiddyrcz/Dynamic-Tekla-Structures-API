@@ -14,53 +14,53 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Collections.ArrayList ContourPoints
-    {
-        get
+        public System.Collections.ArrayList ContourPoints
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.ContourPoints;
                 var value_ = ArrayListConverter.FromTSObjects(value);
                 return (System.Collections.ArrayList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = ArrayListConverter.ToTSObjects(value);
                 teklaObject.ContourPoints = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ContourPoints), ex); 
+                }
             }
         }
-    }
 
-    public static System.Int32 MAX_CONTOUR_POINTS
-    {
-        get
+        public static System.Int32 MAX_CONTOUR_POINTS
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MAX_CONTOUR_POINTS");
-            return (System.Int32) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MAX_CONTOUR_POINTS");
+                return (System.Int32) value;
+            }
+            
         }
-        
-    }
-    public static System.Int32 MIN_CONTOUR_POINTS
-    {
-        get
+        public static System.Int32 MIN_CONTOUR_POINTS
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MIN_CONTOUR_POINTS");
-            return (System.Int32) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.Contour", "MIN_CONTOUR_POINTS");
+                return (System.Int32) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
@@ -75,41 +75,39 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public void AddContourPoint(
-	Dynamic.Tekla.Structures.Model.ContourPoint Point_
-	)
-{
-	var Point = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point_);
-    try
-    {
-        	teklaObject.AddContourPoint(Point);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddContourPoint), ex);
-    }
-}
-
+        public void AddContourPoint(
+			Dynamic.Tekla.Structures.Model.ContourPoint Point_)
+        {
+            var Point = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(Point_);
+            try
+            {
+                teklaObject.AddContourPoint(Point);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddContourPoint), ex);
+            }
+        }
 
 
-public System.Boolean CalculatePolygon(
-	out Dynamic.Tekla.Structures.Model.Polygon polygon_
-	)
-{
-	var polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(null);
-    try
-    {
-        	var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Model.Contour", "CalculatePolygon", teklaObject, out polygon);
-	polygon_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(polygon);
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CalculatePolygon), ex);
-    }
-}
+
+        public System.Boolean CalculatePolygon(
+			out Dynamic.Tekla.Structures.Model.Polygon polygon_)
+        {
+            var polygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(null);
+            try
+            {
+                var result = (System.Boolean) MethodInvoker.InvokeMethod("Tekla.Structures.Model.Contour", "CalculatePolygon", teklaObject, out polygon);
+            polygon_ = Dynamic.Tekla.Structures.Model.Polygon_.FromTSObject(polygon);
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CalculatePolygon), ex);
+            }
+        }
 
 
 

@@ -14,52 +14,52 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum Type
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum Type
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Type;
                 var value_ = Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.ContourPlate.ContourPlateTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Model.Contour Contour
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Contour Contour
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Contour;
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Contour) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
                 teklaObject.Contour = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -75,22 +75,21 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public System.Boolean AddContourPoint(
-	Dynamic.Tekla.Structures.Model.ContourPoint contourPoint_
-	)
-{
-	var contourPoint = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.AddContourPoint(contourPoint);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddContourPoint), ex);
-    }
-}
+        public System.Boolean AddContourPoint(
+			Dynamic.Tekla.Structures.Model.ContourPoint contourPoint_)
+        {
+            var contourPoint = Dynamic.Tekla.Structures.Model.ContourPoint_.GetTSObject(contourPoint_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.AddContourPoint(contourPoint);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AddContourPoint), ex);
+            }
+        }
 
 
 

@@ -19,29 +19,24 @@ namespace Dynamic.Tekla.Structures.Dialog
 
 
 
-public static System.Boolean DisplayHelpTopic(
-	System.String helpTopic
-	)
-{
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopic", helpTopic);
-	return result;
-}
+        public static System.Boolean DisplayHelpTopic(
+			System.String helpTopic)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopic", helpTopic);
+            return result;
+        }
 
 
 
-public static System.Boolean DisplayHelpTopicIndependent(
-	System.String helpViewerFilePath,
-	System.String helpTopic,
-	System.String language
-	)
-{
-	
-	
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopicIndependent", helpViewerFilePath, helpTopic, language);
-	return result;
-}
+        public static System.Boolean DisplayHelpTopicIndependent(
+			System.String helpViewerFilePath,
+			System.String helpTopic,
+			System.String language)
+        {
+
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.HelpViewer", "DisplayHelpTopicIndependent", helpViewerFilePath, helpTopic, language);
+            return result;
+        }
 
 
 

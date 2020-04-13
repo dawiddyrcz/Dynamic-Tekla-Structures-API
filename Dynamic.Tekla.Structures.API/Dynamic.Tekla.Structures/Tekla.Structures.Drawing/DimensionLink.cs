@@ -32,39 +32,39 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension1()
-{
+        public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension1()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetDimension1();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimension1), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetDimension1();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimension1), ex);
-    }
-}
 
 
-
-public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension2()
-{
-
-    try
-    {
-        	var result = teklaObject.GetDimension2();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimension2), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.StraightDimensionSet GetDimension2()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetDimension2();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.StraightDimensionSet_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimension2), ex);
+            }
+        }
 
 
 

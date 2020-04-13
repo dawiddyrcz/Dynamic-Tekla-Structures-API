@@ -14,115 +14,115 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public System.String Name
-    {
-        get
+        public System.String Name
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Name;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Name = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Name), ex); 
+                }
             }
         }
-    }
 
-    public System.String Value
-    {
-        get
+        public System.String Value
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Value = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Value), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.FontAttributes Font
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Font;
                 var value_ = Dynamic.Tekla.Structures.Drawing.FontAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.FontAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.FontAttributes_.GetTSObject(value);
                 teklaObject.Font = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Font), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PropertyType
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PropertyType
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.PropertyType;
                 var value_ = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyType), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyType), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.GetTSObject(value);
                 teklaObject.PropertyType = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyType), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PropertyType), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -158,22 +158,21 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public System.Boolean IsEqual(
-	System.Object ObjectToCompare
-	)
-{
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
-    }
-}
+        public System.Boolean IsEqual(
+			System.Object ObjectToCompare)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsEqual(ObjectToCompare);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsEqual), ex);
+            }
+        }
 
 
 
@@ -188,156 +187,156 @@ public System.Boolean IsEqual(
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BoltLength()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "BoltLength");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BoltLength()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "BoltLength");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BoltDiameter()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "BoltDiameter");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BoltDiameter()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "BoltDiameter");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType HoleDiameter()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "HoleDiameter");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType HoleDiameter()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "HoleDiameter");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Material");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Material");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Standard()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Standard");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Standard()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Standard");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ShortName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "ShortName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ShortName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "ShortName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FullName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "FullName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FullName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "FullName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType AssemblyType()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "AssemblyType");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType AssemblyType()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "AssemblyType");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType NumberOfBolts()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "NumberOfBolts");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType NumberOfBolts()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "NumberOfBolts");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLengthX()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLengthX");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLengthX()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLengthX");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLengthY()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLengthY");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLengthY()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLengthY");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotHeight()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotHeight");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotHeight()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotHeight");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLength()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLength");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SlotLength()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "SlotLength");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Size");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Size");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Countersunk()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Countersunk");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Countersunk()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "Countersunk");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType GageOfOutstandingLeg()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "GageOfOutstandingLeg");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType GageOfOutstandingLeg()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "GageOfOutstandingLeg");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CenterToCenterDistance()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "CenterToCenterDistance");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CenterToCenterDistance()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "CenterToCenterDistance");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -406,138 +405,138 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType AssemblyPosition()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "AssemblyPosition");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType AssemblyPosition()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "AssemblyPosition");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PartPosition()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "PartPosition");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PartPosition()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "PartPosition");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Profile()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Profile");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Profile()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Profile");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Material");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Material");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Class");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Class");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Finish()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Finish");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Finish()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Finish");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Size");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Size");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Length");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Length");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Camber()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Camber");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Camber()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "Camber");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FittingsNsFs()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "FittingsNsFs");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FittingsNsFs()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "FittingsNsFs");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FaceDirection()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "FaceDirection");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType FaceDirection()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "FaceDirection");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType GageOfOutstandingLeg()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "GageOfOutstandingLeg");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType GageOfOutstandingLeg()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "GageOfOutstandingLeg");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CenterToCenterDistance()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "CenterToCenterDistance");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CenterToCenterDistance()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "CenterToCenterDistance");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType RotationAngle()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "RotationAngle");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType RotationAngle()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PartMarkPropertyElementTypes", "RotationAngle");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -606,129 +605,129 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Grade()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Grade");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Grade()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Grade");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Diameter()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Diameter");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Diameter()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Diameter");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Class");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Class");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Length");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Length");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Number()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Number");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Number()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Number");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Position()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Position");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Position()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Position");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Shape()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Shape");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Shape()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Shape");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Weight()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Weight");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Weight()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Weight");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Cc()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Cc");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Cc()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "Cc");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMin()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcMin");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMin()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcMin");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMax()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcMax");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMax()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcMax");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExact()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcExact");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExact()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcExact");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcTarget()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcTarget");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcTarget()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMarkPropertyElementTypes", "CcTarget");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -797,183 +796,183 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Grade()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Grade");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Grade()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Grade");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Size");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Size()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Size");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Class");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Class");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType MeshLength()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "MeshLength");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType MeshLength()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "MeshLength");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType MeshWidth()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "MeshWidth");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType MeshWidth()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "MeshWidth");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Number()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Number");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Number()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Number");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Position()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Position");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Position()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Position");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Shape()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Shape");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Shape()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Shape");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Weight()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Weight");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Weight()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "Weight");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcLongitudinal()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcLongitudinal");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcLongitudinal()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcLongitudinal");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMinLongitudinal()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMinLongitudinal");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMinLongitudinal()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMinLongitudinal");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMaxLongitudinal()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMaxLongitudinal");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMaxLongitudinal()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMaxLongitudinal");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExactLongitudinal()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcExactLongitudinal");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExactLongitudinal()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcExactLongitudinal");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcCrossing()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcCrossing");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcCrossing()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcCrossing");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMinCrossing()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMinCrossing");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMinCrossing()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMinCrossing");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMaxCrossing()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMaxCrossing");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcMaxCrossing()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcMaxCrossing");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExactCrossing()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcExactCrossing");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CcExactCrossing()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "CcExactCrossing");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DiameterLongitudinal()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "DiameterLongitudinal");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DiameterLongitudinal()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "DiameterLongitudinal");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DiameterCrossing()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "DiameterCrossing");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DiameterCrossing()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ReinforcementMeshMarkPropertyElementTypes", "DiameterCrossing");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1042,39 +1041,39 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BlockPrefix()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "BlockPrefix");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType BlockPrefix()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "BlockPrefix");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SingleMarkContent()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "SingleMarkContent");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SingleMarkContent()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "SingleMarkContent");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DistancesBetweenGroups()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "DistancesBetweenGroups");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DistancesBetweenGroups()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "DistancesBetweenGroups");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SymbolSeparatingBlocksInMarks()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "SymbolSeparatingBlocksInMarks");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SymbolSeparatingBlocksInMarks()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.MergedMarkPropertyElementTypes", "SymbolSeparatingBlocksInMarks");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1143,48 +1142,48 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Material");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Material");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Class");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Class");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Code()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Code");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Code()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "Code");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SurfaceTreatmentName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "SurfaceTreatmentName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SurfaceTreatmentName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SurfacingMarkPropertyElementTypes", "SurfaceTreatmentName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1253,39 +1252,39 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "Length");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Length()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "Length");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DX()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "DX");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DX()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "DX");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DY()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "DY");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DY()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ChamferMarkPropertyElementTypes", "DY");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1354,66 +1353,66 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Code()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Code");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Code()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Code");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DSTVCode()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "DSTVCode");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DSTVCode()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "DSTVCode");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ConnectionNumber()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "ConnectionNumber");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ConnectionNumber()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "ConnectionNumber");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType RunningNumber()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "RunningNumber");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType RunningNumber()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "RunningNumber");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Group()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Group");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Group()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "Group");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ConnectionError()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "ConnectionError");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ConnectionError()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ConnectionMarkPropertyElementTypes", "ConnectionError");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1482,30 +1481,30 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DetailName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "DetailName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DetailName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "DetailName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "SourceDrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "SourceDrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1574,30 +1573,30 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SectionName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SectionName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SectionName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SectionName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SourceDrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SourceDrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1666,48 +1665,48 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ViewName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "ViewName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType ViewName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "ViewName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "Scale");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "Scale");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "DrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "DrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "SourceDrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "SourceDrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.ViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1776,48 +1775,48 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DetailName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "DetailName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DetailName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "DetailName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "Scale");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "Scale");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "DrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "DrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "SourceDrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "SourceDrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.DetailViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1886,48 +1885,48 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SectionName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SectionName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SectionName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SectionName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "Scale");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Scale()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "Scale");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "DrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType DrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "DrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SourceDrawingName");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingName()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SourceDrawingName");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType SourceDrawingNameWhenMoved()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.SectionViewLabelMarkPropertyElementTypes", "SourceDrawingNameWhenMoved");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
@@ -1996,57 +1995,57 @@ public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementTy
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Material");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Material()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Material");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Name");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Name()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Name");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Class");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType Class()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "Class");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourNumber()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourNumber");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourNumber()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourNumber");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourType()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourType");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourType()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourType");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourConcreteMixture()
-{
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourConcreteMixture");
-	var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
-	return _result;
-}
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType PourConcreteMixture()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.PourMarkPropertyElementTypes", "PourConcreteMixture");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
 
 
 

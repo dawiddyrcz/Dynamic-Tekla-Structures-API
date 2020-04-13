@@ -14,75 +14,74 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.Hideable Hideable
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Hideable;
                 var value_ = Dynamic.Tekla.Structures.Drawing.Hideable_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.Hideable) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.Hideable_.GetTSObject(value);
                 teklaObject.Hideable = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
+                }
+            }
+        }
+        
+
+        
+
+
+
+        public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetDimensionSet();
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
+				return _result;
             }
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Hideable), ex); 
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
             }
         }
-    }
-        
-
-        
 
 
 
-public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet()
-{
-
-    try
-    {
-        	var result = teklaObject.GetDimensionSet();
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet(
-	System.Boolean Select
-	)
-{
-	
-    try
-    {
-        	var result = teklaObject.GetDimensionSet(Select);
-
-        	var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Drawing.DimensionSetBase GetDimensionSet(
+			System.Boolean Select)
+        {
+            
+            try
+            {
+                var result = teklaObject.GetDimensionSet(Select);
+            
+                var _result = Dynamic.Tekla.Structures.Drawing.DimensionSetBase_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetDimensionSet), ex);
+            }
+        }
 
 
 

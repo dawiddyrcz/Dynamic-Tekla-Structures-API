@@ -14,50 +14,44 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public static System.String PourManagementOptionName
-    {
-        get
+        public static System.String PourManagementOptionName
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresVariables", "PourManagementOptionName");
-            return (System.String) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructuresVariables", "PourManagementOptionName");
+                return (System.String) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
 
 
-public static void Add(
-	System.String key
-	)
-{
-	
-	MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Add", key);
-
-}
+        public static void Add(
+			System.String key)
+        {
+            MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Add", key);
+            
+        }
 
 
 
-public static System.String Get(
-	System.String key
-	)
-{
-	
-	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Get", key);
-	return result;
-}
+        public static System.String Get(
+			System.String key)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "Get", key);
+            return result;
+        }
 
 
 
-public static System.Boolean ContainsVariable(
-	System.String key
-	)
-{
-	
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "ContainsVariable", key);
-	return result;
-}
+        public static System.Boolean ContainsVariable(
+			System.String key)
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresVariables", "ContainsVariable", key);
+            return result;
+        }
 
 
 

@@ -25,163 +25,156 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjects()
-{
-
-    try
-    {
-        	var result = teklaObject.GetAllObjects();
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjects), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(
-	Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum_
-	)
-{
-	var Enum = Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum_);
-    try
-    {
-        	var result = teklaObject.GetAllObjectsWithType(Enum);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjectsWithType), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjects()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetAllObjects();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjects), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(
-	System.Type[] TypeFilter_
-	)
-{
-	var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
-    try
-    {
-        	var result = teklaObject.GetAllObjectsWithType(TypeFilter);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjectsWithType), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(
-	Dynamic.Tekla.Structures.Geometry3d.Point MinPoint_,
-	Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint_
-	)
-{
-	var MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint_);
-	var MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint_);
-    try
-    {
-        	var result = teklaObject.GetObjectsByBoundingBox(MinPoint, MaxPoint);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByBoundingBox), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(
+			Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum_)
+        {
+            var Enum = Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum_);
+            try
+            {
+                var result = teklaObject.GetAllObjectsWithType(Enum);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjectsWithType), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetEnumerator()
-{
-
-    try
-    {
-        	var result = teklaObject.GetEnumerator();
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetEnumerator), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilterName(
-	System.String FilterName
-	)
-{
-	
-    try
-    {
-        	var result = teklaObject.GetObjectsByFilterName(FilterName);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByFilterName), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetAllObjectsWithType(
+			System.Type[] TypeFilter_)
+        {
+            var TypeFilter = TypeConverter.ToTSObjects(TypeFilter_);
+            try
+            {
+                var result = teklaObject.GetAllObjectsWithType(TypeFilter);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAllObjectsWithType), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFilteredObjectsWithType(
-	Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum_,
-	System.String FilterName
-	)
-{
-	var Enum = Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum_);
-	
-    try
-    {
-        	var result = teklaObject.GetFilteredObjectsWithType(Enum, FilterName);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFilteredObjectsWithType), ex);
-    }
-}
-
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(
+			Dynamic.Tekla.Structures.Geometry3d.Point MinPoint_,
+			Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint_)
+        {
+            var MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint_);
+var MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint_);
+            try
+            {
+                var result = teklaObject.GetObjectsByBoundingBox(MinPoint, MaxPoint);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByBoundingBox), ex);
+            }
+        }
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilter(
-	Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression_
-	)
-{
-	var FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression_);
-    try
-    {
-        	var result = teklaObject.GetObjectsByFilter(FilterExpression);
 
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByFilter), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetEnumerator()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetEnumerator();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetEnumerator), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilterName(
+			System.String FilterName)
+        {
+            
+            try
+            {
+                var result = teklaObject.GetObjectsByFilterName(FilterName);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByFilterName), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetFilteredObjectsWithType(
+			Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum Enum_,
+			System.String FilterName)
+        {
+            var Enum = Dynamic.Tekla.Structures.Model.ModelObject.ModelObjectEnum_.GetTSObject(Enum_);
+            try
+            {
+                var result = teklaObject.GetFilteredObjectsWithType(Enum, FilterName);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFilteredObjectsWithType), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByFilter(
+			Dynamic.Tekla.Structures.Filtering.FilterExpression FilterExpression_)
+        {
+            var FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetTSObject(FilterExpression_);
+            try
+            {
+                var result = teklaObject.GetObjectsByFilter(FilterExpression);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByFilter), ex);
+            }
+        }
 
 
 

@@ -14,23 +14,23 @@ namespace Dynamic.Tekla.Structures.Model.Collaboration
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector yDir
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.yDir;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(yDir), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(yDir), ex); 
-            }
+            
         }
-        
-    }
         
 
         

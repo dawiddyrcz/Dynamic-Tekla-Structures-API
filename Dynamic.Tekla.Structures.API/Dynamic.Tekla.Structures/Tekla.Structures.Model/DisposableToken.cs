@@ -14,16 +14,16 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public static Dynamic.Tekla.Structures.Model.DisposableToken None
-    {
-        get
+        public static Dynamic.Tekla.Structures.Model.DisposableToken None
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.DisposableToken", "None");
-            var value_ = Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Model.DisposableToken", "None");
+                var value_ = Dynamic.Tekla.Structures.Model.DisposableToken_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Model.DisposableToken) value_;
-        }
-        
-    }        
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
@@ -41,20 +41,20 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public void Dispose()
-{
-
-    try
-    {
-        	teklaObject.Dispose();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Dispose), ex);
-    }
-}
+        public void Dispose()
+        {
+            
+            try
+            {
+                teklaObject.Dispose();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Dispose), ex);
+            }
+        }
 
 
 

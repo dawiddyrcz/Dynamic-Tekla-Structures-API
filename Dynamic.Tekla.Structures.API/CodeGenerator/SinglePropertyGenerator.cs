@@ -57,11 +57,11 @@ namespace CodeGenerator
             if (hasSet) staticSet = GetStaticSet(propertyOrField, currentType);
 
             return $@"
-    public static {typeFullNameWithDynamic} {propertyOrField.Name}
-    {{
-        {staticGet}
-        {staticSet}
-    }}";
+        public static {typeFullNameWithDynamic} {propertyOrField.Name}
+        {{
+            {staticGet}
+            {staticSet}
+        }}";
         }
 
         private static string GetStaticGet(MemberInfo propertyOrField, Type propertyOrFieldType)
@@ -77,10 +77,10 @@ namespace CodeGenerator
             }
 
             return $@"get
-        {{
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"");
-            {valueConverter}
-        }}";
+            {{
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"");
+                {valueConverter}
+            }}";
         }
 
         private static string GetStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
@@ -91,10 +91,10 @@ namespace CodeGenerator
                 valueConverter = Converters.ToTSObjects(propertyOrFieldType, "value", "var value_");
 
             return $@"set
-        {{
-            {valueConverter}
-            PropertyInvoker.SetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"", value_);
-        }}";
+            {{
+                {valueConverter}
+                PropertyInvoker.SetStaticPropertyOrFieldValue(""$typeFullName"", ""{propertyOrField.Name}"", value_);
+            }}";
         }
 
         private static string NonStaticProperty(MemberInfo propertyOrField, Type currentType, bool hasGet, bool hasSet)
@@ -107,11 +107,11 @@ namespace CodeGenerator
             if (hasSet) nonstaticSet = GetNonStaticSet(propertyOrField, currentType);
 
             return $@"
-    public {typeFullNameWithDynamic} {propertyOrField.Name}
-    {{
-        {nonstaticGet}
-        {nonstaticSet}
-    }}
+        public {typeFullNameWithDynamic} {propertyOrField.Name}
+        {{
+            {nonstaticGet}
+            {nonstaticSet}
+        }}
 ";
         }
 
@@ -133,15 +133,15 @@ namespace CodeGenerator
             }
 
             return $@"get
-        {{
-            try
-            {{{getCode}
-            }}
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {{
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
-            }}
-        }}";
+                try
+                {{{getCode}
+                }}
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {{
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
+                }}
+            }}";
         }
 
         private static string GetNonStaticSet(MemberInfo propertyOrField, Type propertyOrFieldType)
@@ -161,15 +161,15 @@ namespace CodeGenerator
             }
 
             return $@"set
-        {{
-            try
-            {{{setCode}
-            }}
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {{
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
-            }}
-        }}";
+                try
+                {{{setCode}
+                }}
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {{
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof({propertyOrField.Name}), ex); 
+                }}
+            }}";
         }
         
     }

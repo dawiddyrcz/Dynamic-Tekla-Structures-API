@@ -14,57 +14,57 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.PolyLine Shape
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Shape;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.PolyLine_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.PolyLine) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shape), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Shape), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double Diameter
-    {
-        get
+        public System.Double Diameter
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Diameter;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Diameter), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Diameter), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Collections.ArrayList BendingRadiuses
-    {
-        get
+        public System.Collections.ArrayList BendingRadiuses
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.BendingRadiuses;
                 var value_ = ArrayListConverter.FromTSObjects(value);
                 return (System.Collections.ArrayList) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingRadiuses), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BendingRadiuses), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

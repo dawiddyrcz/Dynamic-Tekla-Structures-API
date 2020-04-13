@@ -14,133 +14,131 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public static Dynamic.Tekla.Structures.ICommonTasks CommonTasks
-    {
-        get
+        public static Dynamic.Tekla.Structures.ICommonTasks CommonTasks
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "CommonTasks");
-            var value_ = Dynamic.Tekla.Structures.ICommonTasks_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "CommonTasks");
+                var value_ = Dynamic.Tekla.Structures.ICommonTasks_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.ICommonTasks) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.Configuration Configuration
-    {
-        get
+        public static Dynamic.Tekla.Structures.Configuration Configuration
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Configuration");
-            var value_ = Dynamic.Tekla.Structures.Configuration_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Configuration");
+                var value_ = Dynamic.Tekla.Structures.Configuration_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.Configuration) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IConnection Connection
-    {
-        get
+        public static Dynamic.Tekla.Structures.IConnection Connection
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Connection");
-            var value_ = Dynamic.Tekla.Structures.IConnection_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Connection");
+                var value_ = Dynamic.Tekla.Structures.IConnection_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IConnection) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IDrawing Drawing
-    {
-        get
+        public static Dynamic.Tekla.Structures.IDrawing Drawing
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Drawing");
-            var value_ = Dynamic.Tekla.Structures.IDrawing_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Drawing");
+                var value_ = Dynamic.Tekla.Structures.IDrawing_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IDrawing) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IEnvironment Environment
-    {
-        get
+        public static Dynamic.Tekla.Structures.IEnvironment Environment
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Environment");
-            var value_ = Dynamic.Tekla.Structures.IEnvironment_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Environment");
+                var value_ = Dynamic.Tekla.Structures.IEnvironment_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IEnvironment) value_;
+            }
+            
         }
-        
-    }
-    public static System.Boolean IsRunning
-    {
-        get
+        public static System.Boolean IsRunning
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "IsRunning");
-            return (System.Boolean) value;
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "IsRunning");
+                return (System.Boolean) value;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IMainWindow MainWindow
-    {
-        get
+        public static Dynamic.Tekla.Structures.IMainWindow MainWindow
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "MainWindow");
-            var value_ = Dynamic.Tekla.Structures.IMainWindow_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "MainWindow");
+                var value_ = Dynamic.Tekla.Structures.IMainWindow_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IMainWindow) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IModel Model
-    {
-        get
+        public static Dynamic.Tekla.Structures.IModel Model
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Model");
-            var value_ = Dynamic.Tekla.Structures.IModel_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Model");
+                var value_ = Dynamic.Tekla.Structures.IModel_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IModel) value_;
+            }
+            
         }
-        
-    }
-    public static Dynamic.Tekla.Structures.IRegistry Registry
-    {
-        get
+        public static Dynamic.Tekla.Structures.IRegistry Registry
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Registry");
-            var value_ = Dynamic.Tekla.Structures.IRegistry_.FromTSObject(value);
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Registry");
+                var value_ = Dynamic.Tekla.Structures.IRegistry_.FromTSObject(value);
 	return (Dynamic.Tekla.Structures.IRegistry) value_;
+            }
+            
         }
-        
-    }
-    public static System.String Version
-    {
-        get
+        public static System.String Version
         {
-            var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Version");
-            return (System.String) value;
-        }
-        
-    }        
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.TeklaStructures", "Version");
+                return (System.String) value;
+            }
+            
+        }        
 
         internal dynamic teklaObject;
 
 
 
-public static System.Boolean Connect()
-{
-	var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect");
-	return result;
-}
+        public static System.Boolean Connect()
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Connect");
+            return result;
+        }
 
 
 
-public static void Disconnect()
-{
-	MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Disconnect");
+        public static void Disconnect()
+        {
+            MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "Disconnect");
+            
+        }
 
-}
 
 
-
-public static void ExecuteScript(
-	System.String script
-	)
-{
-	
-	MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "ExecuteScript", script);
-
-}
+        public static void ExecuteScript(
+			System.String script)
+        {
+            MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructures", "ExecuteScript", script);
+            
+        }
 
 
 

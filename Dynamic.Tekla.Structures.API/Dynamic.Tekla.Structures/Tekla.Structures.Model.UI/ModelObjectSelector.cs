@@ -28,85 +28,81 @@ namespace Dynamic.Tekla.Structures.Model.UI
 		}
 
 
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSelectedObjects()
-{
-
-    try
-    {
-        	var result = teklaObject.GetSelectedObjects();
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSelectedObjects), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(
-	Dynamic.Tekla.Structures.Geometry3d.Point MinPoint_,
-	Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint_,
-	Dynamic.Tekla.Structures.Model.UI.View View_
-	)
-{
-	var MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint_);
-	var MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint_);
-	var View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(View_);
-    try
-    {
-        	var result = teklaObject.GetObjectsByBoundingBox(MinPoint, MaxPoint, View);
-
-        	var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByBoundingBox), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetSelectedObjects()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetSelectedObjects();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetSelectedObjects), ex);
+            }
+        }
 
 
 
-public System.Boolean Select(
-	System.Collections.ArrayList ModelObjects_
-	)
-{
-	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Select(ModelObjects);
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetObjectsByBoundingBox(
+			Dynamic.Tekla.Structures.Geometry3d.Point MinPoint_,
+			Dynamic.Tekla.Structures.Geometry3d.Point MaxPoint_,
+			Dynamic.Tekla.Structures.Model.UI.View View_)
+        {
+            var MinPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MinPoint_);
+var MaxPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint_);
+var View = Dynamic.Tekla.Structures.Model.UI.View_.GetTSObject(View_);
+            try
+            {
+                var result = teklaObject.GetObjectsByBoundingBox(MinPoint, MaxPoint, View);
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetObjectsByBoundingBox), ex);
+            }
+        }
 
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
-    }
-}
+
+
+        public System.Boolean Select(
+			System.Collections.ArrayList ModelObjects_)
+        {
+            var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(ModelObjects);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
 
 
 
-public System.Boolean Select(
-	System.Collections.ArrayList ModelObjects_,
-	System.Boolean ShowDimensions
-	)
-{
-	var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
-	
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Select(ModelObjects, ShowDimensions);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
-    }
-}
+        public System.Boolean Select(
+			System.Collections.ArrayList ModelObjects_,
+			System.Boolean ShowDimensions)
+        {
+            var ModelObjects = ArrayListConverter.ToTSObjects(ModelObjects_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(ModelObjects, ShowDimensions);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
 
 
 

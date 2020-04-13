@@ -42,159 +42,153 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
-public System.Double Normalize()
-{
-
-    try
-    {
-        	var result = (System.Double) teklaObject.Normalize();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Normalize), ex);
-    }
-}
-
-
-
-public System.Double Normalize(
-	System.Double NewLength
-	)
-{
-	
-    try
-    {
-        	var result = (System.Double) teklaObject.Normalize(NewLength);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Normalize), ex);
-    }
-}
+        public System.Double Normalize()
+        {
+            
+            try
+            {
+                var result = (System.Double) teklaObject.Normalize();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Normalize), ex);
+            }
+        }
 
 
 
-public System.Double GetLength()
-{
-
-    try
-    {
-        	var result = (System.Double) teklaObject.GetLength();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLength), ex);
-    }
-}
-
-
-
-public System.Double GetAngleBetween(
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector_
-	)
-{
-	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
-    try
-    {
-        	var result = (System.Double) teklaObject.GetAngleBetween(Vector);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAngleBetween), ex);
-    }
-}
+        public System.Double Normalize(
+			System.Double NewLength)
+        {
+            
+            try
+            {
+                var result = (System.Double) teklaObject.Normalize(NewLength);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Normalize), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
-{
-
-    try
-    {
-        	var result = teklaObject.GetNormal();
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetNormal), ex);
-    }
-}
-
-
-
-public System.Double Dot(
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector_
-	)
-{
-	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
-    try
-    {
-        	var result = (System.Double) teklaObject.Dot(Vector);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Dot), ex);
-    }
-}
+        public System.Double GetLength()
+        {
+            
+            try
+            {
+                var result = (System.Double) teklaObject.GetLength();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLength), ex);
+            }
+        }
 
 
 
-public static System.Double Dot(
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector1_,
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector2_
-	)
-{
-	var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
-	var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
-	var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", Vector1, Vector2);
-	return result;
-}
+        public System.Double GetAngleBetween(
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector_)
+        {
+            var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
+            try
+            {
+                var result = (System.Double) teklaObject.GetAngleBetween(Vector);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAngleBetween), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector_
-	)
-{
-	var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
-    try
-    {
-        	var result = teklaObject.Cross(Vector);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Cross), ex);
-    }
-}
+        public Dynamic.Tekla.Structures.Geometry3d.Vector GetNormal()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetNormal();
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetNormal), ex);
+            }
+        }
 
 
 
-public static Dynamic.Tekla.Structures.Geometry3d.Vector Cross(
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector1_,
-	Dynamic.Tekla.Structures.Geometry3d.Vector Vector2_
-	)
-{
-	var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
-	var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
-	var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Cross", Vector1, Vector2);
-	var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
-	return _result;
-}
+        public System.Double Dot(
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector_)
+        {
+            var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
+            try
+            {
+                var result = (System.Double) teklaObject.Dot(Vector);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Dot), ex);
+            }
+        }
+
+
+
+        public static System.Double Dot(
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector1_,
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector2_)
+        {
+            var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
+var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
+            var result = (System.Double) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Dot", Vector1, Vector2);
+            return result;
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Vector Cross(
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector_)
+        {
+            var Vector = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector_);
+            try
+            {
+                var result = teklaObject.Cross(Vector);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Cross), ex);
+            }
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Geometry3d.Vector Cross(
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector1_,
+			Dynamic.Tekla.Structures.Geometry3d.Vector Vector2_)
+        {
+            var Vector1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector1_);
+var Vector2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(Vector2_);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Geometry3d.Vector", "Cross", Vector1, Vector2);
+            var _result = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(result);
+				return _result;
+        }
 
 
 

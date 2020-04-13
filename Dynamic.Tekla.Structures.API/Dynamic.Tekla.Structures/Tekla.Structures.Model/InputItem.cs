@@ -25,38 +25,38 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
-{
+        public Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum GetInputType()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetInputType();
+            
+                var _result = Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInputType), ex);
+            }
+        }
 
-    try
-    {
-        	var result = teklaObject.GetInputType();
-
-        	var _result = Dynamic.Tekla.Structures.Model.InputItem.InputTypeEnum_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInputType), ex);
-    }
-}
 
 
-
-public System.Object GetData()
-{
-
-    try
-    {
-        	var result = (System.Object) teklaObject.GetData();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetData), ex);
-    }
-}
+        public System.Object GetData()
+        {
+            
+            try
+            {
+                var result = (System.Object) teklaObject.GetData();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetData), ex);
+            }
+        }
 
 
 

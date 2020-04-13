@@ -14,92 +14,92 @@ namespace Dynamic.Tekla.Structures.Forming
     {
 
 
-    public Dynamic.Tekla.Structures.Forming.DeformingType Deforming
-    {
-        get
+        public Dynamic.Tekla.Structures.Forming.DeformingType Deforming
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Deforming;
                 var value_ = Dynamic.Tekla.Structures.Forming.DeformingType_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Forming.DeformingType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Deforming), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Deforming), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Forming.DeformingType_.GetTSObject(value);
                 teklaObject.Deforming = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Deforming), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Deforming), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Forming.FoldingType Folding
-    {
-        get
+        public Dynamic.Tekla.Structures.Forming.FoldingType Folding
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Folding;
                 var value_ = Dynamic.Tekla.Structures.Forming.FoldingType_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Forming.FoldingType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folding), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folding), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Forming.FoldingType_.GetTSObject(value);
                 teklaObject.Folding = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folding), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Folding), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Forming.WrappingType Wrapping
-    {
-        get
+        public Dynamic.Tekla.Structures.Forming.WrappingType Wrapping
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Wrapping;
                 var value_ = Dynamic.Tekla.Structures.Forming.WrappingType_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Forming.WrappingType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Wrapping), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Wrapping), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Forming.WrappingType_.GetTSObject(value);
                 teklaObject.Wrapping = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Wrapping), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Wrapping), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -141,20 +141,20 @@ namespace Dynamic.Tekla.Structures.Forming
 		}
 
 
-public System.Object Clone()
-{
-
-    try
-    {
-        	var result = (System.Object) teklaObject.Clone();
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
-    }
-}
+        public System.Object Clone()
+        {
+            
+            try
+            {
+                var result = (System.Object) teklaObject.Clone();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+            }
+        }
 
 
 

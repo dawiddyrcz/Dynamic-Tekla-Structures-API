@@ -14,60 +14,60 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.Boolean IsAutomatic
-    {
-        get
+        public System.Boolean IsAutomatic
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsAutomatic;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.IsAutomatic = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsAutomatic), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Model.Contour Contour
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.Contour Contour
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Contour;
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.Contour) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Model.Contour_.GetTSObject(value);
                 teklaObject.Contour = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Contour), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -87,22 +87,21 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public void AcceptVisitor(
-	Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor_
-	)
-{
-	var visitor = Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor_);
-    try
-    {
-        	teklaObject.AcceptVisitor(visitor);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AcceptVisitor), ex);
-    }
-}
+        public void AcceptVisitor(
+			Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor visitor_)
+        {
+            var visitor = Dynamic.Tekla.Structures.Model.IGeometryNodeVisitor_.GetTSObject(visitor_);
+            try
+            {
+                teklaObject.AcceptVisitor(visitor);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(AcceptVisitor), ex);
+            }
+        }
 
 
 

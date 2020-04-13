@@ -14,60 +14,60 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes Attributes
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes Attributes
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Attributes;
                 var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.ReinforcementBase.ReinforcementSetGroupAttributes_.GetTSObject(value);
                 teklaObject.Attributes = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Attributes), ex); 
+                }
             }
         }
-    }
 
-    public System.Double ReinforcementCustomPosition
-    {
-        get
+        public System.Double ReinforcementCustomPosition
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.ReinforcementCustomPosition;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementCustomPosition), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementCustomPosition), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.ReinforcementCustomPosition = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementCustomPosition), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReinforcementCustomPosition), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -80,21 +80,21 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelIdentifiers()
-{
-
-    try
-    {
-        	var result = teklaObject.GetModelIdentifiers();
-
-        	var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Identifier>(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetModelIdentifiers), ex);
-    }
-}
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Identifier> GetModelIdentifiers()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetModelIdentifiers();
+            
+                var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Identifier>(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetModelIdentifiers), ex);
+            }
+        }
 
 
 

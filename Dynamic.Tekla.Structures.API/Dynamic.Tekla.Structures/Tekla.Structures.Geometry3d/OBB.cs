@@ -14,166 +14,166 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.Point Center
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Point Center
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Center;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Point) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Center), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Center), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(value);
                 teklaObject.Center = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Center), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Center), ex); 
+                }
             }
         }
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector Axis0
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector Axis0
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Axis0;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis0), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis0), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector Axis1
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector Axis1
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Axis1;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis1), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector Axis2
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector Axis2
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Axis2;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.Vector_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Axis2), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Double Extent0
-    {
-        get
+        public System.Double Extent0
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Extent0;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent0), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent0), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Extent0 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent0), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent0), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Extent1
-    {
-        get
+        public System.Double Extent1
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Extent1;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent1), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent1), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Extent1 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent1), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent1), ex); 
+                }
             }
         }
-    }
 
-    public System.Double Extent2
-    {
-        get
+        public System.Double Extent2
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Extent2;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent2), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent2), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.Extent2 = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent2), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Extent2), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -215,438 +215,415 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 		}
 
 
-public void SetAxis(
-	Dynamic.Tekla.Structures.Geometry3d.Vector axis0_,
-	Dynamic.Tekla.Structures.Geometry3d.Vector axis1_,
-	Dynamic.Tekla.Structures.Geometry3d.Vector axis2_
-	)
-{
-	var axis0 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0_);
-	var axis1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1_);
-	var axis2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2_);
-    try
-    {
-        	teklaObject.SetAxis(axis0, axis1, axis2);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAxis), ex);
-    }
-}
-
-
-
-public void SetAxis(
-	Dynamic.Tekla.Structures.Geometry3d.Vector[] axis_
-	)
-{
-	var axis = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(axis_);
-    try
-    {
-        	teklaObject.SetAxis(axis);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAxis), ex);
-    }
-}
-
-
-
-public void SetExtent(
-	System.Double extent0,
-	System.Double extent1,
-	System.Double extent2
-	)
-{
-	
-	
-	
-    try
-    {
-        	teklaObject.SetExtent(extent0, extent1, extent2);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetExtent), ex);
-    }
-}
-
-
-
-public void SetExtent(
-	System.Double[] extent
-	)
-{
-	
-    try
-    {
-        	teklaObject.SetExtent(extent);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetExtent), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point[] ComputeVertices()
-{
-
-    try
-    {
-        	var result = teklaObject.ComputeVertices();
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ComputeVertices), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
-	Dynamic.Tekla.Structures.Geometry3d.Point point_
-	)
-{
-	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
-    try
-    {
-        	var result = teklaObject.ClosestPointTo(point);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = teklaObject.ClosestPointTo(line);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = teklaObject.ClosestPointTo(lineSegment);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
-    }
-}
-
-
-
-public System.Double DistanceTo(
-	Dynamic.Tekla.Structures.Geometry3d.Point point_
-	)
-{
-	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
-    try
-    {
-        	var result = (System.Double) teklaObject.DistanceTo(point);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
-    }
-}
-
-
-
-public System.Double DistanceTo(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = (System.Double) teklaObject.DistanceTo(line);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
-    }
-}
-
-
-
-public System.Double DistanceTo(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = (System.Double) teklaObject.DistanceTo(lineSegment);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = teklaObject.IntersectionPointsWith(line);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionPointsWith), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = teklaObject.IntersectionPointsWith(lineSegment);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionPointsWith), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = teklaObject.IntersectionWith(line);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionWith), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = teklaObject.IntersectionWith(lineSegment);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionWith), ex);
-    }
-}
-
-
-
-public System.Boolean Intersects(
-	Dynamic.Tekla.Structures.Geometry3d.OBB obb_
-	)
-{
-	var obb = Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Intersects(obb);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
-    }
-}
-
-
-
-public System.Boolean Intersects(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Intersects(line);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
-    }
-}
-
-
-
-public System.Boolean Intersects(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Intersects(lineSegment);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
-    }
-}
-
-
-
-public System.Boolean Intersects(
-	Dynamic.Tekla.Structures.Geometry3d.GeometricPlane geometricPlane_
-	)
-{
-	var geometricPlane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Intersects(geometricPlane);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
-	Dynamic.Tekla.Structures.Geometry3d.Line line_
-	)
-{
-	var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
-    try
-    {
-        	var result = teklaObject.ShortestSegmentTo(line);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
-	Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_
-	)
-{
-	var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
-    try
-    {
-        	var result = teklaObject.ShortestSegmentTo(lineSegment);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
-    }
-}
-
-
-
-public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
-	Dynamic.Tekla.Structures.Geometry3d.Point point_
-	)
-{
-	var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
-    try
-    {
-        	var result = teklaObject.ShortestSegmentTo(point);
-
-        	var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
-    }
-}
+        public void SetAxis(
+			Dynamic.Tekla.Structures.Geometry3d.Vector axis0_,
+			Dynamic.Tekla.Structures.Geometry3d.Vector axis1_,
+			Dynamic.Tekla.Structures.Geometry3d.Vector axis2_)
+        {
+            var axis0 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis0_);
+var axis1 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis1_);
+var axis2 = Dynamic.Tekla.Structures.Geometry3d.Vector_.GetTSObject(axis2_);
+            try
+            {
+                teklaObject.SetAxis(axis0, axis1, axis2);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAxis), ex);
+            }
+        }
+
+
+
+        public void SetAxis(
+			Dynamic.Tekla.Structures.Geometry3d.Vector[] axis_)
+        {
+            var axis = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(axis_);
+            try
+            {
+                teklaObject.SetAxis(axis);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetAxis), ex);
+            }
+        }
+
+
+
+        public void SetExtent(
+			System.Double extent0,
+			System.Double extent1,
+			System.Double extent2)
+        {
+
+            try
+            {
+                teklaObject.SetExtent(extent0, extent1, extent2);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetExtent), ex);
+            }
+        }
+
+
+
+        public void SetExtent(
+			System.Double[] extent)
+        {
+            
+            try
+            {
+                teklaObject.SetExtent(extent);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetExtent), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point[] ComputeVertices()
+        {
+            
+            try
+            {
+                var result = teklaObject.ComputeVertices();
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ComputeVertices), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
+			Dynamic.Tekla.Structures.Geometry3d.Point point_)
+        {
+            var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+            try
+            {
+                var result = teklaObject.ClosestPointTo(point);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = teklaObject.ClosestPointTo(line);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point ClosestPointTo(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = teklaObject.ClosestPointTo(lineSegment);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ClosestPointTo), ex);
+            }
+        }
+
+
+
+        public System.Double DistanceTo(
+			Dynamic.Tekla.Structures.Geometry3d.Point point_)
+        {
+            var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+            try
+            {
+                var result = (System.Double) teklaObject.DistanceTo(point);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
+            }
+        }
+
+
+
+        public System.Double DistanceTo(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = (System.Double) teklaObject.DistanceTo(line);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
+            }
+        }
+
+
+
+        public System.Double DistanceTo(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = (System.Double) teklaObject.DistanceTo(lineSegment);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DistanceTo), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = teklaObject.IntersectionPointsWith(line);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionPointsWith), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point[] IntersectionPointsWith(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = teklaObject.IntersectionPointsWith(lineSegment);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionPointsWith), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = teklaObject.IntersectionWith(line);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionWith), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment IntersectionWith(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = teklaObject.IntersectionWith(lineSegment);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IntersectionWith), ex);
+            }
+        }
+
+
+
+        public System.Boolean Intersects(
+			Dynamic.Tekla.Structures.Geometry3d.OBB obb_)
+        {
+            var obb = Dynamic.Tekla.Structures.Geometry3d.OBB_.GetTSObject(obb_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Intersects(obb);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
+            }
+        }
+
+
+
+        public System.Boolean Intersects(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Intersects(line);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
+            }
+        }
+
+
+
+        public System.Boolean Intersects(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Intersects(lineSegment);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
+            }
+        }
+
+
+
+        public System.Boolean Intersects(
+			Dynamic.Tekla.Structures.Geometry3d.GeometricPlane geometricPlane_)
+        {
+            var geometricPlane = Dynamic.Tekla.Structures.Geometry3d.GeometricPlane_.GetTSObject(geometricPlane_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Intersects(geometricPlane);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Intersects), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
+			Dynamic.Tekla.Structures.Geometry3d.Line line_)
+        {
+            var line = Dynamic.Tekla.Structures.Geometry3d.Line_.GetTSObject(line_);
+            try
+            {
+                var result = teklaObject.ShortestSegmentTo(line);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
+			Dynamic.Tekla.Structures.Geometry3d.LineSegment lineSegment_)
+        {
+            var lineSegment = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(lineSegment_);
+            try
+            {
+                var result = teklaObject.ShortestSegmentTo(lineSegment);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment ShortestSegmentTo(
+			Dynamic.Tekla.Structures.Geometry3d.Point point_)
+        {
+            var point = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point_);
+            try
+            {
+                var result = teklaObject.ShortestSegmentTo(point);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShortestSegmentTo), ex);
+            }
+        }
 
 
 

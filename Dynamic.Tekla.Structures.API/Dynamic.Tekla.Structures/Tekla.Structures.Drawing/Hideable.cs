@@ -14,21 +14,21 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public System.Boolean IsHidden
-    {
-        get
+        public System.Boolean IsHidden
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsHidden;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsHidden), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsHidden), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;
@@ -44,71 +44,71 @@ namespace Dynamic.Tekla.Structures.Drawing
 		}
 
 
-public void HideFromDrawingView()
-{
-
-    try
-    {
-        	teklaObject.HideFromDrawingView();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(HideFromDrawingView), ex);
-    }
-}
-
-
-
-public void HideFromDrawing()
-{
-
-    try
-    {
-        	teklaObject.HideFromDrawing();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(HideFromDrawing), ex);
-    }
-}
+        public void HideFromDrawingView()
+        {
+            
+            try
+            {
+                teklaObject.HideFromDrawingView();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(HideFromDrawingView), ex);
+            }
+        }
 
 
 
-public void ShowInDrawingView()
-{
+        public void HideFromDrawing()
+        {
+            
+            try
+            {
+                teklaObject.HideFromDrawing();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(HideFromDrawing), ex);
+            }
+        }
 
-    try
-    {
-        	teklaObject.ShowInDrawingView();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShowInDrawingView), ex);
-    }
-}
 
 
+        public void ShowInDrawingView()
+        {
+            
+            try
+            {
+                teklaObject.ShowInDrawingView();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShowInDrawingView), ex);
+            }
+        }
 
-public void ShowInDrawing()
-{
 
-    try
-    {
-        	teklaObject.ShowInDrawing();
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShowInDrawing), ex);
-    }
-}
+        public void ShowInDrawing()
+        {
+            
+            try
+            {
+                teklaObject.ShowInDrawing();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ShowInDrawing), ex);
+            }
+        }
 
 
 

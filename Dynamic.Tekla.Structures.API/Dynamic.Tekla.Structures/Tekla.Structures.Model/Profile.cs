@@ -14,31 +14,31 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public System.String ProfileString
-    {
-        get
+        public System.String ProfileString
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.ProfileString;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 teklaObject.ProfileString = value;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ProfileString), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;
@@ -54,25 +54,21 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
-public static System.String ParseProfileString(
-	System.String profileString
-	)
-{
-	
-	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", profileString);
-	return result;
-}
+        public static System.String ParseProfileString(
+			System.String profileString)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "ParseProfileString", profileString);
+            return result;
+        }
 
 
 
-public static System.String FormatProfileString(
-	System.String profileString
-	)
-{
-	
-	var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", profileString);
-	return result;
-}
+        public static System.String FormatProfileString(
+			System.String profileString)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Profile", "FormatProfileString", profileString);
+            return result;
+        }
 
 
 

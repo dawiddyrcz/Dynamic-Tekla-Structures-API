@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Geometry3d
     {
 
 
-    public Dynamic.Tekla.Structures.Geometry3d.Vector[] Normals
-    {
-        get
+        public Dynamic.Tekla.Structures.Geometry3d.Vector[] Normals
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Normals;
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Geometry3d.Vector[]) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normals), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normals), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Geometry3d.VectorArray_.GetTSObject(value);
                 teklaObject.Normals = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normals), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Normals), ex); 
+                }
             }
         }
-    }
         
 
         

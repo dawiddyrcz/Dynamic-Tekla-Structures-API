@@ -14,143 +14,132 @@ namespace Dynamic.Tekla.Structures
     {
 
 
-    public Microsoft.Win32.RegistryKey CurrentVersion
-    {
-        get
+        public Microsoft.Win32.RegistryKey CurrentVersion
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.CurrentVersion;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurrentVersion), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurrentVersion), ex); 
-            }
+            
         }
-        
-    }
 
-    public Microsoft.Win32.RegistryKey Root
-    {
-        get
+        public Microsoft.Win32.RegistryKey Root
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Root;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Root), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Root), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;
 
 
 
-public Microsoft.Win32.RegistryKey GetVersion(
-	System.String version
-	)
-{
-	
-    try
-    {
-        	var result = (Microsoft.Win32.RegistryKey) teklaObject.GetVersion(version);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetVersion), ex);
-    }
-}
-
-
-
-public System.Drawing.Rectangle LoadDialogBounds(
-	System.String dialogName
-	)
-{
-	
-    try
-    {
-        	var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadDialogBounds), ex);
-    }
-}
+        public Microsoft.Win32.RegistryKey GetVersion(
+			System.String version)
+        {
+            
+            try
+            {
+                var result = (Microsoft.Win32.RegistryKey) teklaObject.GetVersion(version);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetVersion), ex);
+            }
+        }
 
 
 
-public System.Drawing.Rectangle LoadDialogBounds(
-	System.String dialogName,
-	System.String version
-	)
-{
-	
-	
-    try
-    {
-        	var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName, version);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadDialogBounds), ex);
-    }
-}
+        public System.Drawing.Rectangle LoadDialogBounds(
+			System.String dialogName)
+        {
+            
+            try
+            {
+                var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadDialogBounds), ex);
+            }
+        }
 
 
 
-public void SaveDialogBounds(
-	System.String dialogName,
-	System.Drawing.Rectangle bounds
-	)
-{
-	
-	
-    try
-    {
-        	teklaObject.SaveDialogBounds(dialogName, bounds);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SaveDialogBounds), ex);
-    }
-}
+        public System.Drawing.Rectangle LoadDialogBounds(
+			System.String dialogName,
+			System.String version)
+        {
+            try
+            {
+                var result = (System.Drawing.Rectangle) teklaObject.LoadDialogBounds(dialogName, version);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(LoadDialogBounds), ex);
+            }
+        }
 
 
 
-public void SaveDialogBounds(
-	System.String dialogName,
-	System.String version,
-	System.Drawing.Rectangle bounds
-	)
-{
-	
-	
-	
-    try
-    {
-        	teklaObject.SaveDialogBounds(dialogName, version, bounds);
+        public void SaveDialogBounds(
+			System.String dialogName,
+			System.Drawing.Rectangle bounds)
+        {
+            try
+            {
+                teklaObject.SaveDialogBounds(dialogName, bounds);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SaveDialogBounds), ex);
+            }
+        }
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SaveDialogBounds), ex);
-    }
-}
+
+
+        public void SaveDialogBounds(
+			System.String dialogName,
+			System.String version,
+			System.Drawing.Rectangle bounds)
+        {
+
+            try
+            {
+                teklaObject.SaveDialogBounds(dialogName, version, bounds);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SaveDialogBounds), ex);
+            }
+        }
 
 
 

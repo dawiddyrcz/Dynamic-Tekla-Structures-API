@@ -14,34 +14,34 @@ namespace Dynamic.Tekla.Structures.Drawing
     {
 
 
-    public Dynamic.Tekla.Structures.Drawing.PlacingBase Placing
-    {
-        get
+        public Dynamic.Tekla.Structures.Drawing.PlacingBase Placing
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Placing;
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingBase_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Drawing.PlacingBase) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Drawing.PlacingBase_.GetTSObject(value);
                 teklaObject.Placing = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Placing), ex); 
+                }
             }
         }
-    }
         
 
         internal dynamic teklaObject;

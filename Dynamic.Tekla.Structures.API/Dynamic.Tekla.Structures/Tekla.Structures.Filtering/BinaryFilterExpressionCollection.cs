@@ -14,98 +14,98 @@ namespace Dynamic.Tekla.Structures.Filtering
     {
 
 
-    public System.Boolean IsSynchronized
-    {
-        get
+        public System.Boolean IsSynchronized
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsSynchronized;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsSynchronized), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsSynchronized), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Object SyncRoot
-    {
-        get
+        public System.Object SyncRoot
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.SyncRoot;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SyncRoot), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SyncRoot), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Int32 Count
-    {
-        get
+        public System.Int32 Count
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.Count;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Count), ex); 
-            }
+            
         }
-        
-    }
 
-    public System.Boolean IsReadOnly
-    {
-        get
+        public System.Boolean IsReadOnly
         {
-            try
+            get
             {
+                try
+                {
                 return teklaObject.IsReadOnly;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsReadOnly), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(IsReadOnly), ex); 
-            }
+            
         }
-        
-    }
 
-    public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item
-    {
-        get
+        public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.Item;
                 var value_ = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            set
             {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
-            }
-        }
-        set
-        {
-            try
-            {
+                try
+                {
                 var value_ = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(value);
                 teklaObject.Item = value_;
-            }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Item), ex); 
+                }
             }
         }
-    }
         
 
         
@@ -121,210 +121,201 @@ namespace Dynamic.Tekla.Structures.Filtering
 		}
 
 
-public System.Int32 IndexOf(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_
-	)
-{
-	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
-    try
-    {
-        	var result = (System.Int32) teklaObject.IndexOf(Item);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IndexOf), ex);
-    }
-}
-
-
-
-public void Add(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_
-	)
-{
-	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
-    try
-    {
-        	teklaObject.Add(Item);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Add), ex);
-    }
-}
+        public System.Int32 IndexOf(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_)
+        {
+            var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
+            try
+            {
+                var result = (System.Int32) teklaObject.IndexOf(Item);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IndexOf), ex);
+            }
+        }
 
 
 
-public void Insert(
-	System.Int32 Index,
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_
-	)
-{
-	
-	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
-    try
-    {
-        	teklaObject.Insert(Index, Item);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Insert), ex);
-    }
-}
+        public void Add(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_)
+        {
+            var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
+            try
+            {
+                teklaObject.Add(Item);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Add), ex);
+            }
+        }
 
 
 
-public System.Boolean Remove(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_
-	)
-{
-	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Remove(Item);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Remove), ex);
-    }
-}
-
-
-
-public void RemoveAt(
-	System.Int32 Index
-	)
-{
-	
-    try
-    {
-        	teklaObject.RemoveAt(Index);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveAt), ex);
-    }
-}
+        public void Insert(
+			System.Int32 Index,
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_)
+        {
+var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
+            try
+            {
+                teklaObject.Insert(Index, Item);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Insert), ex);
+            }
+        }
 
 
 
-public void Clear()
-{
-
-    try
-    {
-        	teklaObject.Clear();
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clear), ex);
-    }
-}
-
-
-
-public System.Boolean Contains(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_
-	)
-{
-	var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.Contains(Item);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Contains), ex);
-    }
-}
+        public System.Boolean Remove(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_)
+        {
+            var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Remove(Item);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Remove), ex);
+            }
+        }
 
 
 
-public System.Boolean IsFirst(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem_
-	)
-{
-	var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsFirst(BinaryFilterExpressionItem);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsFirst), ex);
-    }
-}
-
-
-
-public System.Boolean IsLast(
-	Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem_
-	)
-{
-	var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
-    try
-    {
-        	var result = (System.Boolean) teklaObject.IsLast(BinaryFilterExpressionItem);
-
-        	return result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsLast), ex);
-    }
-}
+        public void RemoveAt(
+			System.Int32 Index)
+        {
+            
+            try
+            {
+                teklaObject.RemoveAt(Index);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(RemoveAt), ex);
+            }
+        }
 
 
 
-public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetFirst()
-{
-
-    try
-    {
-        	var result = teklaObject.GetFirst();
-
-        	var _result = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFirst), ex);
-    }
-}
-
+        public void Clear()
+        {
+            
+            try
+            {
+                teklaObject.Clear();
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clear), ex);
+            }
+        }
 
 
-public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetLast()
-{
 
-    try
-    {
-        	var result = teklaObject.GetLast();
+        public System.Boolean Contains(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem Item_)
+        {
+            var Item = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(Item_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.Contains(Item);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Contains), ex);
+            }
+        }
 
-        	var _result = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(result);
-	return _result;
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLast), ex);
-    }
-}
+
+
+        public System.Boolean IsFirst(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem_)
+        {
+            var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsFirst(BinaryFilterExpressionItem);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsFirst), ex);
+            }
+        }
+
+
+
+        public System.Boolean IsLast(
+			Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem BinaryFilterExpressionItem_)
+        {
+            var BinaryFilterExpressionItem = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.GetTSObject(BinaryFilterExpressionItem_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsLast(BinaryFilterExpressionItem);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsLast), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetFirst()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetFirst();
+            
+                var _result = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetFirst), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem GetLast()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetLast();
+            
+                var _result = Dynamic.Tekla.Structures.Filtering.BinaryFilterExpressionItem_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetLast), ex);
+            }
+        }
 
 
 

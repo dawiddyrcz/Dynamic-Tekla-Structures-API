@@ -19,41 +19,39 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
-public void Visit(
-	Dynamic.Tekla.Structures.Model.PolygonNode node_
-	)
-{
-	var node = Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node_);
-    try
-    {
-        	teklaObject.Visit(node);
-
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Visit), ex);
-    }
-}
-
+        public void Visit(
+			Dynamic.Tekla.Structures.Model.PolygonNode node_)
+        {
+            var node = Dynamic.Tekla.Structures.Model.PolygonNode_.GetTSObject(node_);
+            try
+            {
+                teklaObject.Visit(node);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Visit), ex);
+            }
+        }
 
 
-public void Visit(
-	Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node_
-	)
-{
-	var node = Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node_);
-    try
-    {
-        	teklaObject.Visit(node);
 
-        
-    }
-    catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-    {
-        throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Visit), ex);
-    }
-}
+        public void Visit(
+			Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode node_)
+        {
+            var node = Dynamic.Tekla.Structures.Model.CylindricalSurfaceNode_.GetTSObject(node_);
+            try
+            {
+                teklaObject.Visit(node);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Visit), ex);
+            }
+        }
 
 
 

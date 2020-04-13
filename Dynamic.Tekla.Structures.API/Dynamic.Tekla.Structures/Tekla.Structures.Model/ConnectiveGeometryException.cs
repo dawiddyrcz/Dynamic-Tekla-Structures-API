@@ -14,23 +14,23 @@ namespace Dynamic.Tekla.Structures.Model
     {
 
 
-    public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
-    {
-        get
+        public Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus OperationStatus
         {
-            try
+            get
             {
+                try
+                {
                 var value = teklaObject.OperationStatus;
                 var value_ = Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus_.FromTSObject(value);
                 return (Dynamic.Tekla.Structures.Model.BentPlateGeometrySolver.OperationStatus) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperationStatus), ex); 
+                }
             }
-            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
-            {
-                throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OperationStatus), ex); 
-            }
+            
         }
-        
-    }
         
 
         internal dynamic teklaObject;

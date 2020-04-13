@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 namespace Dynamic.Tekla.Structures
 {
+    //TODO add another converter: list of lists
     public static class ListConverter
     {
         //TODO check IList
@@ -72,7 +73,6 @@ namespace Dynamic.Tekla.Structures
 
                         output.Add((T)fromTSObjectMethod.Invoke(null, parameters));
                     }
-                    //TODO list of lists
                     else
                     {
                         output.Add((T)tsObject);

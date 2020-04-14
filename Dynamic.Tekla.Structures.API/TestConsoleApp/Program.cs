@@ -19,12 +19,38 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-             OpenDrawingAndInsertLine();
+            //OpenDrawingAndInsertLine();
+
+           // DateTime? nullDate = null;
+           // DateTime? notNullDate = new DateTime();
+
+            System.Nullable<DateTime> nullDate = new DateTime(2016, 12, 20);
+            nullDate = null;
+            System.Nullable<DateTime> notNullDate = new DateTime(2016,12,20);
+
+            var hasVal1 = nullDate.HasValue;
+            var hasVal2 = notNullDate.HasValue;
+
+            var val1 = nullDate.GetValueOrDefault();
+            var val2 = notNullDate.Value;
+
+            var type = notNullDate.GetType();
+
+
+            var nType = typeof(System.Nullable<>);
+           nType =  nType.MakeGenericType(typeof(DateTime));
+
+            dynamic nDateTimeObject = Activator.CreateInstance(nType);
+
+            //nDateTimeObject.HasValue = true;
+            nDateTimeObject = new DateTime(2020, 01, 01);
 
             Console.WriteLine("end");
             Console.ReadKey();
         }
         
+        //private static void ConvertNullable(dynamic)
+
         private static void OpenDrawingAndInsertLine()
         {
             var dh = new TSD.DrawingHandler();

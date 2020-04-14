@@ -7,10 +7,6 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dynamic.Tekla.Structures
 {
@@ -18,14 +14,68 @@ namespace Dynamic.Tekla.Structures
     {
         public static dynamic ToTSObjects(dynamic input)
         {
-            //TODO method
-            throw new NotImplementedException();
+            var inputGenericType = input.GetValueOrDefault().GetType();
+
+            if (inputGenericType.ToString().StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
+            {
+                var hasValue = input.HasValue;
+                var value = input.GetValueOrDefault();
+
+                var convertedNullableType = typeof(System.Nullable<>);
+                convertedNullableType = convertedNullableType.MakeGenericType(TypeConverter.ToTSObjects(inputGenericType));
+                dynamic convertedNullableObject = Activator.CreateInstance(convertedNullableType);
+
+                if (hasValue)
+                {
+                    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+                    string converterName = inputGenericType.ToString() + "_";
+                    var converterType = assembly.GetType(converterName);
+                    var parameters = new object[] { value };
+                    var getTSObjectMethod = TSActivator.GetMethod("GetTSObject", parameters, converterType);
+
+                    convertedNullableObject = getTSObjectMethod.Invoke(null, parameters);
+                    return convertedNullableObject;
+                }
+                else
+                {
+                    convertedNullableObject = null;
+                    return convertedNullableObject;
+                }
+            }
+            else return input;
         }
 
-        public static dynamic FromTSObject<T>(dynamic input)
+        public static dynamic FromTSObject<T>(dynamic input) where T: struct
         {
-            //TODO method
-            throw new NotImplementedException();
-        }
+            var inputGenericType = input.GetValueOrDefault().GetType();
+
+            if (inputGenericType.ToString().StartsWith("Tekla.Structures.", StringComparison.InvariantCulture))
+            {
+                var hasValue = input.HasValue;
+                var value = input.GetValueOrDefault();
+                
+                var convertedNullableObject = new System.Nullable<T>();
+
+                if (hasValue)
+                {
+                    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+                    string converterName = "Dynamic." + inputGenericType.ToString() + "_";
+                    var converterType = assembly.GetType(converterName);
+                    var parameters = new object[] { value };
+                    var getTSObjectMethod = TSActivator.GetMethod("GetTSObject", parameters, converterType);
+
+                    convertedNullableObject = (System.Nullable<T>)getTSObjectMethod.Invoke(null, parameters);
+                    return convertedNullableObject;
+                }
+                else
+                {
+                    convertedNullableObject = null;
+                    return (System.Nullable<T>)convertedNullableObject;
+                }
+            }
+            return input;
+         }
     }
 }

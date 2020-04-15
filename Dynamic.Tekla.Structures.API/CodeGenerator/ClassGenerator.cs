@@ -49,7 +49,7 @@ namespace CodeGenerator
             {
                 if (
                     !(
-                    type.BaseType.Equals(typeof(System.Object)) /*|| type.BaseType.Equals(typeof(System.MulticastDelegate)) */ //TODO what is the MulticastDelegate
+                    type.BaseType.Equals(typeof(System.Object)) /*|| type.BaseType.Equals(typeof(System.MulticastDelegate)) */ //All delegates was removed
                     )
                     )
                     baseClassText = " : " + GetTypeFullName(type.BaseType);

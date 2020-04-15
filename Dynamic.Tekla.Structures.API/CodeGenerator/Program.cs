@@ -6,10 +6,9 @@
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 */
 
-
-//TODO obejrzeć wszystkie klasy
-
-//TODO exception in Drawing enumerator
+//TODO modelobject enumerator example
+//TODO filtering example
+//TODO macro example
 //TODO add info in license informaing that you have to have Tekla Structures Software
 
 #define OVERRIDE

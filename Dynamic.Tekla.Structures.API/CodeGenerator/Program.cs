@@ -4,12 +4,14 @@
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 * For more details see GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+* 
+* This library connects with the Tekla Structures Software which is protected by copyright.
+* To use this library you have to obtain commercial license for Tekla Structures Software. 
 */
 
 //TODO modelobject enumerator example
 //TODO filtering example
 //TODO macro example
-//TODO add info in license informaing that you have to have Tekla Structures Software
 
 #define OVERRIDE
 

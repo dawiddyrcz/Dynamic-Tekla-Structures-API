@@ -22,6 +22,9 @@ namespace CodeGenerator
         {
             if (!(type.IsClass || type.IsInterface)) return string.Empty;
 
+            if (type.BaseType != null)
+                if (type.BaseType.Equals(typeof(System.MulticastDelegate))) return string.Empty;
+
             string outputText = String.Copy(text);
 
             if (type.IsAbstract)
@@ -46,7 +49,7 @@ namespace CodeGenerator
             {
                 if (
                     !(
-                    type.BaseType.Equals(typeof(System.Object)) || type.BaseType.Equals(typeof(System.MulticastDelegate))  //TODO what is the MulticastDelegate
+                    type.BaseType.Equals(typeof(System.Object)) /*|| type.BaseType.Equals(typeof(System.MulticastDelegate)) */ //TODO what is the MulticastDelegate
                     )
                     )
                     baseClassText = " : " + GetTypeFullName(type.BaseType);

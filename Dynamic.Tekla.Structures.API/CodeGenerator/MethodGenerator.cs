@@ -26,6 +26,7 @@ namespace CodeGenerator
                 if (method.ReturnType.IsInterface) continue;
                 if (method.GetBaseDefinition() != method) continue;
                 if (method.Name.Equals("CopyTo")) continue;
+                if (method.Name.Equals("RegisterLocalizationCallback")) continue;
 
                 if (method.IsGenericMethod)
                     continue;

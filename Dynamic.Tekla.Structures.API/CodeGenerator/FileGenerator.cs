@@ -20,12 +20,6 @@ namespace CodeGenerator
 
         public void SaveToFile(Type type)
         {
-           // return;
-           if (type.Name.Equals("ModificationInfo"))
-            {
-                int a = 1;
-            }
-
             var generator = new TypeGenerator();
             string outputText = String.Copy(text);
 

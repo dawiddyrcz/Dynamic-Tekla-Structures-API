@@ -433,7 +433,6 @@
     <Compile Include="Tekla.Structures.Geometry3d\PolymeshEdgeTypeEnum.cs" />
     <Compile Include="Tekla.Structures.Geometry3d\Projection.cs" />
     <Compile Include="Tekla.Structures.Geometry3d\Vector.cs" />
-    <Compile Include="Tekla.Structures.Model.ClashChecker\ClashChekerEvent.cs" />
     <Compile Include="Tekla.Structures.Model.Collaboration\IFC2X3_ParametricObject_CircleHollowProfile.cs" />
     <Compile Include="Tekla.Structures.Model.Collaboration\IFC2X3_ParametricObject_CircleProfile.cs" />
     <Compile Include="Tekla.Structures.Model.Collaboration\IFC2X3_ParametricObject_CShapeProfile.cs" />
@@ -675,5 +674,6 @@
     <None Include="Dynamic.Tekla.Structures.API.0.1.0.nupkg" />
     <None Include="Dynamic.Tekla.Structures.API.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

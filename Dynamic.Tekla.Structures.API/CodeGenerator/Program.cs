@@ -11,7 +11,6 @@
 
 //TODO exception in Drawing enumerator
 //TODO add info in license informaing that you have to have Tekla Structures Software
-//TODO remove RegisterLocalizationCallback
 
 #define OVERRIDE
 
@@ -83,6 +82,9 @@ namespace CodeGenerator
 
             foreach (var type in GetTypesFromDll())
             {
+                if (type.BaseType != null)
+                    if (type.BaseType.Equals(typeof(System.MulticastDelegate))) continue;
+
                 generator.SaveToFile(type);
             }
         }

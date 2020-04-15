@@ -28,7 +28,7 @@ namespace Dynamic.Tekla.Structures
         /// <exception cref="DynamicAPIException">If Tekla is not running or unknown internal error</exception> 
         public static dynamic CreateInstance(string typeName, object[] args)
         {
-            
+            var convertedArgs = ConvertParameters(args);
             var type = GetTypeFromTypeName(typeName);
             return Activator.CreateInstance(type, args);
         }
@@ -41,14 +41,55 @@ namespace Dynamic.Tekla.Structures
 
             for (int i = 0; i < input.Length; i++)
             {
-                var type = input[i].GetType();
-
+                output[i] = ConvertParameter(input[i]);
             }
 
-            //TODO convert parameters
-            throw new NotImplementedException();
+            return output;
         }
         
+        private static object ConvertParameter(object input)
+        {
+            var type = input.GetType();
+            var typeFullName = type.ToString();
+            object converted = null;
+
+            if (typeFullName.StartsWith("Dynamic.Tekla.Structures.", StringComparison.InvariantCulture))
+            {
+                string converterName = string.Empty;
+
+                if (typeFullName.EndsWith("[]", StringComparison.InvariantCulture))
+                {
+                    converterName = typeFullName.Substring(0, typeFullName.Length - 2) + "Array_";
+                }
+                else
+                {
+                    converterName = typeFullName + "_";
+                }
+
+                var converterType = Assembly.GetExecutingAssembly().GetType(converterName);
+                var parameters = new object[] { input };
+                var fromTSObjectMethod = TSActivator.GetMethod("GetTSObject", parameters, converterType);
+
+                converted = fromTSObjectMethod.Invoke(null, parameters);
+            }
+            else if (typeFullName.StartsWith("System.Collections.ArrayList", StringComparison.InvariantCulture))
+                converted = ArrayListConverter.ToTSObjects((System.Collections.ArrayList)input);
+            else if (typeFullName.StartsWith("System.Collections.Generic.List<", StringComparison.InvariantCulture))
+                converted = ListConverter.ToTSObjects(input);
+            else if (typeFullName.StartsWith("System.Type", StringComparison.InvariantCulture))
+                converted = TypeConverter.ToTSObjects((Type)input);
+            else if (typeFullName.StartsWith("System.Nullable<", StringComparison.InvariantCulture))
+                converted = NullableConverter.ToTSObjects((Type)input);
+            else if (typeFullName.StartsWith("System.Collections.Generic.IEnumerable<", StringComparison.InvariantCulture))
+                converted = IEnumerableConverter.ToTSObjects((Type)input);
+            else
+            {
+                throw new DynamicAPIException(input.GetType().ToString() + " is not implemented in method: " + nameof(ConvertParameter));
+            }
+
+            return converted;
+        }
+
         /// <summary>Gets the method from the type</summary>
         /// <exception cref="DynamicAPINotFoundException">If could not find metod</exception>
         public static MethodInfo GetMethod(string methodName, object[] parameters, Type type)

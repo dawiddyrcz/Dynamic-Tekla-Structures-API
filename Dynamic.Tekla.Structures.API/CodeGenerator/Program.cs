@@ -120,6 +120,7 @@ namespace CodeGenerator
                 && t.Namespace.StartsWith("Tekla.Structures")
                 && !t.Namespace.Contains("Internal")
                 && !t.Name.Equals("Events")
+                && !t.Name.Equals("ClashChekerEvent")
                 );
 
             var tsd = LoadAssembly("Tekla.Structures.Drawing.dll");

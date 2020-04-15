@@ -9,7 +9,6 @@
 * To use this library you have to obtain commercial license for Tekla Structures Software. 
 */
 
-//TODO modelobject enumerator example
 //TODO filtering example
 //TODO macro example
 

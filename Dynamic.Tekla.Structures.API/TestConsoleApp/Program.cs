@@ -8,6 +8,7 @@
 
 using System;
 using System.Threading;
+using System.Reflection;
 using Dynamic.Tekla.Structures.Geometry3d;
 using Dynamic.Tekla.Structures.Model;
 using TSD = Dynamic.Tekla.Structures.Drawing;
@@ -19,18 +20,25 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Start");
             //TODO big problem with assembly loading. When trying to run program without visual studio it cant see tekla
 
-            //var file = @"E:\Program Files\Tekla Structures\2019.1\nt\bin\plugins\Tekla.Structures.Drawing.dll";
-            ////var file = @"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Tekla.Structures.Drawing\v4.0_2019.1.0.0__2f04dbe497b71114\Tekla.Structures.Drawing.dll";
-            //var assembly = Assembly.LoadFrom(file);
-            //var type = assembly.GetType("Tekla.Structures.Drawing.DrawingHandler");
-            //dynamic instance = Activator.CreateInstance(type);
+            var file = @"E:\Program Files\Tekla Structures\2019.1\nt\bin\plugins\Tekla.Structures.Drawing.dll";
+            //var file = @"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Tekla.Structures.Drawing\v4.0_2019.1.0.0__2f04dbe497b71114\Tekla.Structures.Drawing.dll";
 
-            //instance.CloseActiveDrawing(false);
+            var assembly = System.Reflection.Assembly.LoadFrom(file);
+           // var assembly = System.Reflection.Assembly.LoadFile(file);
 
-            //return;
+            var typeee = assembly.GetType("Tekla.Structures.Drawing.DrawingHandler");
+
+            //dynamic instance = Activator.CreateInstance(typeee);
+            dynamic instance = Activator.CreateComInstanceFrom("Tekla.Structures.Drawing.dll", "Tekla.Structures.Drawing.DrawingHandler").Unwrap();
+
+            instance.CloseActiveDrawing(false);
+
+            Console.WriteLine("end");
+            Console.ReadKey();
+            return;
             
 
             //OpenDrawingAndInsertLine();

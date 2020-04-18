@@ -9,10 +9,7 @@
 * To use this library you have to obtain commercial license for Tekla Structures Software. 
 */
 
-//TODO filtering example
-//TODO macro example
-
-#define OVERRIDE
+//#define OVERRIDE
 
 using System;
 using System.Collections.Generic;

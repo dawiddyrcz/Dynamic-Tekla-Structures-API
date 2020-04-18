@@ -87,7 +87,7 @@ namespace Dynamic.Tekla.Structures
                 converted = IEnumerableConverter.ToTSObjects((Type)input);
             else
             {
-                throw new DynamicAPIException(input.GetType().ToString() + " is not implemented in method: " + nameof(ConvertParameter));
+                return input;
             }
 
             return converted;

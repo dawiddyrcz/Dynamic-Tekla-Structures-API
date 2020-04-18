@@ -19,10 +19,24 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
+
+            //TODO big problem with assembly loading. When trying to run program without visual studio it cant see tekla
+
+            //var file = @"E:\Program Files\Tekla Structures\2019.1\nt\bin\plugins\Tekla.Structures.Drawing.dll";
+            ////var file = @"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Tekla.Structures.Drawing\v4.0_2019.1.0.0__2f04dbe497b71114\Tekla.Structures.Drawing.dll";
+            //var assembly = Assembly.LoadFrom(file);
+            //var type = assembly.GetType("Tekla.Structures.Drawing.DrawingHandler");
+            //dynamic instance = Activator.CreateInstance(type);
+
+            //instance.CloseActiveDrawing(false);
+
+            //return;
+            
+
             //OpenDrawingAndInsertLine();
 
-           // DateTime? nullDate = null;
-           // DateTime? notNullDate = new DateTime();
+            // DateTime? nullDate = null;
+            // DateTime? notNullDate = new DateTime();
 
             System.Nullable<DateTime> nullDate = new DateTime(2016, 12, 20);
             nullDate = null;

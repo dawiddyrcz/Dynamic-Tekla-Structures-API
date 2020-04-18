@@ -42,7 +42,7 @@ namespace Examples
                     {
                         examples[value].Run();
                     }
-                    catch(Dynamic.Tekla.Structures.DynamicAPITeklaNotRunningException ex)
+                    catch (Dynamic.Tekla.Structures.DynamicAPITeklaNotRunningException ex)
                     {
                         Debug.WriteLine(ex.Message);
                         Console.WriteLine(ex.Message);

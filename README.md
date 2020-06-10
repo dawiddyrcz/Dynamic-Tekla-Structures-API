@@ -1,7 +1,7 @@
 # Dynamic-Tekla-Structures-API
 `This is alpha version of library. Tests are in progress. There are some not finded bugs.`
 
-#### Update: Something is wrong with Tekla Structures 2019i SP4 and Windows 8. Tekla API does not see running Tekla when run in release mode (or without Visual Studio debuger). ####
+`Update: Something is wrong with Tekla Structures 2019i SP4 and Windows 8. Tekla API does not see running Tekla when run in release mode (or without Visual Studio debuger). `
 
 This is a wrapper of the Tekla Structures API assemblies, created to make version independent applications which connects with Tekla Structures. This library can be used instead of official Tekla Structures API. Library contains most of the types present in official Tekla API but namespaces starts with "Dynamic.Tekla.Structures" instead of "Tekla.Structures". 
 

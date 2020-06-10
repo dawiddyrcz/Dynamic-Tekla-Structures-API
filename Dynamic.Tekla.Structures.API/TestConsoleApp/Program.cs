@@ -20,9 +20,16 @@ namespace TestConsoleApp
         [STAThread]
         static void Main(string[] args)
         {
+
+           
             Console.WriteLine("Start");
             //TODO big problem with assembly loading. When trying to run program without visual studio it cant see tekla
 
+            ShowModelInfo();
+            OpenDrawingAndInsertLine();
+
+            Console.ReadKey();
+            return;
             var file = @"E:\Program Files\Tekla Structures\2019.1\nt\bin\plugins\Tekla.Structures.Drawing.dll";
             //var file = @"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Tekla.Structures.Drawing\v4.0_2019.1.0.0__2f04dbe497b71114\Tekla.Structures.Drawing.dll";
 
@@ -70,7 +77,15 @@ namespace TestConsoleApp
             Console.WriteLine("end");
             Console.ReadKey();
         }
-        
+
+        private static void ShowModelInfo()
+        {
+            var model = new Model();
+            var info = model.GetInfo();
+            Console.WriteLine(info.ModelName);
+            Console.WriteLine(info.ModelPath);
+        }
+
         //private static void ConvertNullable(dynamic)
 
         private static void OpenDrawingAndInsertLine()
@@ -79,11 +94,15 @@ namespace TestConsoleApp
             dh.CloseActiveDrawing(false);
             var drawings = dh.GetDrawings();
 
+            int a = 0;
             while (drawings.MoveNext())
             {
                 var drawing = drawings.Current as TSD.Drawing;
                 Console.WriteLine("Name: {0}, Title1: {1}, Title2: {2}, Title3 {3}", drawing.Name, drawing.Title1, drawing.Title2, drawing.Title3);
 
+                a++;
+                if (a == 5) break;
+                continue;
                 dh.SetActiveDrawing(drawing);
 
                 var p1 = new Point(0, 0, 0);

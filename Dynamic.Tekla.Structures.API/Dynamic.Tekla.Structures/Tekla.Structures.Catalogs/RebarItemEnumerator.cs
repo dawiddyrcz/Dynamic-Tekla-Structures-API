@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -13,7 +13,7 @@
 namespace Dynamic.Tekla.Structures.Catalogs
 {
 
-    public  class RebarItemEnumerator 
+    public  class RebarItemEnumerator  : IEnumerator
     {
 
 
@@ -113,6 +113,20 @@ namespace Dynamic.Tekla.Structures.Catalogs
         public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
 			System.String Grade,
 			System.String Size,
+			System.String Usage,
+			System.String Code)
+        {
+
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Size, Usage, Code);
+            var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Catalogs.RebarItem SelectRebarItem(
+			System.String Grade,
+			System.String Size,
 			System.String Usage)
         {
 
@@ -170,6 +184,57 @@ namespace Dynamic.Tekla.Structures.Catalogs
 
             var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "SelectRebarItem", Grade, Diameter, UseNominalDiameter);
             var _result = Dynamic.Tekla.Structures.Catalogs.RebarItem_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static System.Boolean DeleteRebarItem(
+			Dynamic.Tekla.Structures.Catalogs.RebarItem rebarItem_)
+        {
+            var rebarItem = Dynamic.Tekla.Structures.Catalogs.RebarItem_.GetTSObject(rebarItem_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "DeleteRebarItem", rebarItem);
+            return result;
+        }
+
+
+
+        public static System.Boolean ModifyRebarItem(
+			Dynamic.Tekla.Structures.Catalogs.RebarItem rebarItem_,
+			Dynamic.Tekla.Structures.Catalogs.RebarItem originalRebarItem_)
+        {
+            var rebarItem = Dynamic.Tekla.Structures.Catalogs.RebarItem_.GetTSObject(rebarItem_);
+var originalRebarItem = Dynamic.Tekla.Structures.Catalogs.RebarItem_.GetTSObject(originalRebarItem_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "ModifyRebarItem", rebarItem, originalRebarItem);
+            return result;
+        }
+
+
+
+        public static System.Boolean InsertRebarItem(
+			Dynamic.Tekla.Structures.Catalogs.RebarItem rebarItem_)
+        {
+            var rebarItem = Dynamic.Tekla.Structures.Catalogs.RebarItem_.GetTSObject(rebarItem_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "InsertRebarItem", rebarItem);
+            return result;
+        }
+
+
+
+        public static System.Boolean RebarItemExists(
+			Dynamic.Tekla.Structures.Catalogs.RebarItem rebarItem_)
+        {
+            var rebarItem = Dynamic.Tekla.Structures.Catalogs.RebarItem_.GetTSObject(rebarItem_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "RebarItemExists", rebarItem);
+            return result;
+        }
+
+
+
+        public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Catalogs.RebarHeaderItem> GetRebarHeaderItems()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Catalogs.RebarItemEnumerator", "GetRebarHeaderItems");
+            var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Catalogs.RebarHeaderItem>(result);
 				return _result;
         }
 

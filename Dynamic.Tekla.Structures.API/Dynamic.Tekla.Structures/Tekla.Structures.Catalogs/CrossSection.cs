@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -94,6 +94,32 @@ namespace Dynamic.Tekla.Structures.Catalogs
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Length), ex); 
+                }
+            }
+        }
+
+        public System.Boolean HighAccuracy
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.HighAccuracy;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HighAccuracy), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.HighAccuracy = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HighAccuracy), ex); 
                 }
             }
         }
@@ -206,6 +232,62 @@ namespace Dynamic.Tekla.Structures.Catalogs
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
+
+
+
+        public System.Boolean Select(
+			System.Boolean HighAccuracy,
+			System.Double Location,
+			System.Double Length)
+        {
+
+            try
+            {
+                var result = (System.Boolean) teklaObject.Select(HighAccuracy, Location, Length);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Polycurve GetOuterContour()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetOuterContour();
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Polycurve_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetOuterContour), ex);
+            }
+        }
+
+
+
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Polycurve> GetInnerContours()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetInnerContours();
+            
+                var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Polycurve>(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInnerContours), ex);
             }
         }
 

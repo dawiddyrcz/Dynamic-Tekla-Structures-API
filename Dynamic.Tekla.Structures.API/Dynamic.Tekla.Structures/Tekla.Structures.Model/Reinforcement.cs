@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -438,6 +438,50 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarComplexGeometry> GetRebarComplexGeometries(
+			System.Boolean withHooks,
+			System.Boolean withoutClashes,
+			System.Boolean lengthAdjustments)
+        {
+
+            try
+            {
+                var result = teklaObject.GetRebarComplexGeometries(withHooks, withoutClashes, lengthAdjustments);
+            
+                var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.RebarComplexGeometry>(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarComplexGeometries), ex);
+            }
+        }
+
+
+
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarComplexGeometry> GetRebarComplexGeometries(
+			System.Boolean withHooks,
+			System.Boolean withoutClashes,
+			System.Boolean lengthAdjustments,
+			Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometrySimplificationTypeEnum simplified_)
+        {
+
+var simplified = Dynamic.Tekla.Structures.Model.Reinforcement.RebarGeometrySimplificationTypeEnum_.GetTSObject(simplified_);
+            try
+            {
+                var result = teklaObject.GetRebarComplexGeometries(withHooks, withoutClashes, lengthAdjustments, simplified);
+            
+                var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.RebarComplexGeometry>(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarComplexGeometries), ex);
+            }
+        }
+
+
+
         public System.Boolean IsGeometryValid()
         {
             
@@ -564,6 +608,24 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
+        public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetAssembly();
+            
+                var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
+            }
+        }
+
+
+
 
 
     public enum RebarGeometryOptionEnum
@@ -608,6 +670,51 @@ namespace Dynamic.Tekla.Structures.Model
 				return RebarGeometryOptionEnum.AVOID_CLASH;
 			else if (tsEnumValue.Equals("LENGTH_ADJUSTMENTS", System.StringComparison.InvariantCulture))
 				return RebarGeometryOptionEnum.LENGTH_ADJUSTMENTS;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum RebarGeometrySimplificationTypeEnum
+    {
+			NONE,
+			RATIONALIZED,
+			FABRICATION        
+    }
+
+    internal static class RebarGeometrySimplificationTypeEnum_
+    {
+        public static dynamic GetTSObject(RebarGeometrySimplificationTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Reinforcement.RebarGeometrySimplificationTypeEnum").GetType();
+
+            switch (dynEnum)
+            {
+				case RebarGeometrySimplificationTypeEnum.NONE:
+					return System.Enum.Parse(tsType, "NONE");
+				case RebarGeometrySimplificationTypeEnum.RATIONALIZED:
+					return System.Enum.Parse(tsType, "RATIONALIZED");
+				case RebarGeometrySimplificationTypeEnum.FABRICATION:
+					return System.Enum.Parse(tsType, "FABRICATION");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static RebarGeometrySimplificationTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NONE", System.StringComparison.InvariantCulture))
+				return RebarGeometrySimplificationTypeEnum.NONE;
+			else if (tsEnumValue.Equals("RATIONALIZED", System.StringComparison.InvariantCulture))
+				return RebarGeometrySimplificationTypeEnum.RATIONALIZED;
+			else if (tsEnumValue.Equals("FABRICATION", System.StringComparison.InvariantCulture))
+				return RebarGeometrySimplificationTypeEnum.FABRICATION;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

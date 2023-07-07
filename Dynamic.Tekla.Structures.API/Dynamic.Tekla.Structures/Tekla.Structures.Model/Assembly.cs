@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -86,6 +86,24 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
+        public Dynamic.Tekla.Structures.Model.ModelObject GetMainObject()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetMainObject();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObject_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMainObject), ex);
+            }
+        }
+
+
+
         public Dynamic.Tekla.Structures.Model.ModelObject GetMainPart()
         {
             
@@ -99,6 +117,24 @@ namespace Dynamic.Tekla.Structures.Model
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetMainPart), ex);
+            }
+        }
+
+
+
+        public System.Boolean SetMainObject(
+			Dynamic.Tekla.Structures.Model.ModelObject mainObject_)
+        {
+            var mainObject = Dynamic.Tekla.Structures.Model.ModelObject_.GetTSObject(mainObject_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetMainObject(mainObject);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetMainObject), ex);
             }
         }
 
@@ -302,6 +338,58 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
+        public System.Boolean SetUserDefinedCoordSys(
+			Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem coordinateSystem_)
+        {
+            var coordinateSystem = Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem_.GetTSObject(coordinateSystem_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetUserDefinedCoordSys(coordinateSystem);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetUserDefinedCoordSys), ex);
+            }
+        }
+
+
+
+        public System.Boolean HasUserDefinedCoordSys()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.HasUserDefinedCoordSys();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(HasUserDefinedCoordSys), ex);
+            }
+        }
+
+
+
+        public System.Boolean DeleteUserDefinedCoordSys()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.DeleteUserDefinedCoordSys();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(DeleteUserDefinedCoordSys), ex);
+            }
+        }
+
+
+
         public System.Boolean CompareTo(
 			Dynamic.Tekla.Structures.Model.Assembly AssemblyToCompare_)
         {
@@ -328,7 +416,8 @@ namespace Dynamic.Tekla.Structures.Model
 			PRECAST_ASSEMBLY,
 			IN_SITU_ASSEMBLY,
 			TIMBER_ASSEMBLY,
-			UNKNOWN_ASSEMBLY        
+			UNKNOWN_ASSEMBLY,
+			REBAR_ASSEMBLY        
     }
 
     internal static class AssemblyTypeEnum_
@@ -349,6 +438,8 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "TIMBER_ASSEMBLY");
 				case AssemblyTypeEnum.UNKNOWN_ASSEMBLY:
 					return System.Enum.Parse(tsType, "UNKNOWN_ASSEMBLY");
+				case AssemblyTypeEnum.REBAR_ASSEMBLY:
+					return System.Enum.Parse(tsType, "REBAR_ASSEMBLY");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -369,6 +460,8 @@ namespace Dynamic.Tekla.Structures.Model
 				return AssemblyTypeEnum.TIMBER_ASSEMBLY;
 			else if (tsEnumValue.Equals("UNKNOWN_ASSEMBLY", System.StringComparison.InvariantCulture))
 				return AssemblyTypeEnum.UNKNOWN_ASSEMBLY;
+			else if (tsEnumValue.Equals("REBAR_ASSEMBLY", System.StringComparison.InvariantCulture))
+				return AssemblyTypeEnum.REBAR_ASSEMBLY;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

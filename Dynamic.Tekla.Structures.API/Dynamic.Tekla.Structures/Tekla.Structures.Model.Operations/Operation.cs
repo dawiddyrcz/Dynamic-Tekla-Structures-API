@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -35,6 +35,14 @@ namespace Dynamic.Tekla.Structures.Model.Operations
         public static System.Boolean IsNumberingUpToDateAll()
         {
             var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingUpToDateAll");
+            return result;
+        }
+
+
+
+        public static System.Boolean IsNumberingAllowed()
+        {
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "IsNumberingAllowed");
             return result;
         }
 
@@ -184,6 +192,64 @@ DstvOutput = null;
 
 
 
+        public static System.Boolean CreateIFC4ExportFromSelected(
+			System.String fullPathAndFileName,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum exportViewType_,
+			System.Collections.Generic.IEnumerable<System.String> propertySets,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint locationByValue_,
+			System.String exportLayersAsValue,
+			System.String objectColoring,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportFlags flags_,
+			System.String basePointGuid)
+        {
+var exportViewType = Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum_.GetTSObject(exportViewType_);
+var locationByValue = Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint_.GetTSObject(locationByValue_);
+
+var flags = Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportFlags_.GetTSObject(flags_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateIFC4ExportFromSelected", fullPathAndFileName, exportViewType, propertySets, locationByValue, exportLayersAsValue, objectColoring, flags, basePointGuid);
+            return result;
+        }
+
+
+
+        public static System.Boolean CreateIFC4ExportFromAll(
+			System.String fullPathAndFileName,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum exportViewType_,
+			System.Collections.Generic.IEnumerable<System.String> propertySets,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint locationByValue_,
+			System.String exportLayersAsValue,
+			System.String objectColoring,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportFlags flags_,
+			System.String basePointGuid)
+        {
+var exportViewType = Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum_.GetTSObject(exportViewType_);
+var locationByValue = Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint_.GetTSObject(locationByValue_);
+
+var flags = Dynamic.Tekla.Structures.Model.Operations.Operation.IFCExportFlags_.GetTSObject(flags_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateIFC4ExportFromAll", fullPathAndFileName, exportViewType, propertySets, locationByValue, exportLayersAsValue, objectColoring, flags, basePointGuid);
+            return result;
+        }
+
+
+
+        public static System.Boolean CreateDGNv8Export(
+			System.String FileName,
+			System.String Folder,
+			Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint BasePoint_,
+			System.String BasePointGuid,
+			System.String ObjectColoring,
+			System.String ExportLayersAs,
+			System.Boolean OnlyFromSelectedObjects)
+        {
+var BasePoint = Dynamic.Tekla.Structures.Model.Operations.Operation.ExportBasePoint_.GetTSObject(BasePoint_);
+
+
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "CreateDGNv8Export", FileName, Folder, BasePoint, BasePointGuid, ObjectColoring, ExportLayersAs, OnlyFromSelectedObjects);
+            return result;
+        }
+
+
+
         public static System.Boolean RunMacro(
 			System.String FileName)
         {
@@ -242,6 +308,20 @@ DstvOutput = null;
 			System.String Filename)
         {
             var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SaveSelectedAsWebModel", Filename);
+            return result;
+        }
+
+
+
+        public static System.Boolean ConvertPartToItem(
+			ref Dynamic.Tekla.Structures.Model.Part originalPart_,
+			out Dynamic.Tekla.Structures.Model.Brep newItem_)
+        {
+            var originalPart = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(originalPart_);
+var newItem = Dynamic.Tekla.Structures.Model.Brep_.GetTSObject(null);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "ConvertPartToItem", ref originalPart, ref newItem);
+            originalPart_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(originalPart);
+newItem_ = Dynamic.Tekla.Structures.Model.Brep_.FromTSObject(newItem);
             return result;
         }
 
@@ -353,6 +433,32 @@ var SplitPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SplitPoi
 
 
 
+        public static Dynamic.Tekla.Structures.Model.PolyBeam Split(
+			Dynamic.Tekla.Structures.Model.PolyBeam Object_,
+			Dynamic.Tekla.Structures.Geometry3d.Point SplitPoint_)
+        {
+            var Object = Dynamic.Tekla.Structures.Model.PolyBeam_.GetTSObject(Object_);
+var SplitPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SplitPoint_);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", Object, SplitPoint);
+            var _result = Dynamic.Tekla.Structures.Model.PolyBeam_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Model.LoftedPlate Split(
+			Dynamic.Tekla.Structures.Model.LoftedPlate Object_,
+			Dynamic.Tekla.Structures.Geometry3d.Point SplitPoint_)
+        {
+            var Object = Dynamic.Tekla.Structures.Model.LoftedPlate_.GetTSObject(Object_);
+var SplitPoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(SplitPoint_);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", Object, SplitPoint);
+            var _result = Dynamic.Tekla.Structures.Model.LoftedPlate_.FromTSObject(result);
+				return _result;
+        }
+
+
+
         public static Dynamic.Tekla.Structures.Model.SingleRebar Split(
 			Dynamic.Tekla.Structures.Model.SingleRebar Object_,
 			Dynamic.Tekla.Structures.Geometry3d.Line SplitLine_)
@@ -414,6 +520,17 @@ var SplitPolygon = Dynamic.Tekla.Structures.Model.Polygon_.GetTSObject(SplitPoly
             var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Split", Object, SplitPolygon);
             var _result = Dynamic.Tekla.Structures.Model.ContourPlate_.FromTSObject(result);
 				return _result;
+        }
+
+
+
+        public static System.Boolean SplitSlab(
+			System.Int32 PartId,
+			Dynamic.Tekla.Structures.Geometry3d.FacetedBrep Polymesh_)
+        {
+var Polymesh = Dynamic.Tekla.Structures.Geometry3d.FacetedBrep_.GetTSObject(Polymesh_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SplitSlab", PartId, Polymesh);
+            return result;
         }
 
 
@@ -722,6 +839,37 @@ var objectsToBeAdded = ListConverter.ToTSObjects(objectsToBeAdded_);
 
 
 
+        public static System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> GetHandlePoints(
+			System.String guid)
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "GetHandlePoints", guid);
+            var _result = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Point>(result);
+				return _result;
+        }
+
+
+
+        public static System.Boolean SetHandlePoints(
+			System.String guid,
+			System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> HandlePoints_)
+        {
+var HandlePoints = ListConverter.ToTSObjects(HandlePoints_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "SetHandlePoints", guid, HandlePoints);
+            return result;
+        }
+
+
+
+        public static System.Boolean Highlight(
+			System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.ModelObject> ModelObjects_)
+        {
+            var ModelObjects = ListConverter.ToTSObjects(ModelObjects_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.Operations.Operation", "Highlight", ModelObjects);
+            return result;
+        }
+
+
+
         public static System.Boolean DisplayPrompt(
 			System.String Message)
         {
@@ -852,6 +1000,227 @@ var FilterExpression = Dynamic.Tekla.Structures.Filtering.FilterExpression_.GetT
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
             
+        }
+    }
+
+
+    public enum ShapeMetadataResult
+    {
+			NoResult,
+			OK,
+			DuplicateKeyExist,
+			NoMatchingShape,
+			NoMatchingKey        
+    }
+
+    internal static class ShapeMetadataResult_
+    {
+        public static dynamic GetTSObject(ShapeMetadataResult dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.ShapeMetadataResult").GetType();
+
+            switch (dynEnum)
+            {
+				case ShapeMetadataResult.NoResult:
+					return System.Enum.Parse(tsType, "NoResult");
+				case ShapeMetadataResult.OK:
+					return System.Enum.Parse(tsType, "OK");
+				case ShapeMetadataResult.DuplicateKeyExist:
+					return System.Enum.Parse(tsType, "DuplicateKeyExist");
+				case ShapeMetadataResult.NoMatchingShape:
+					return System.Enum.Parse(tsType, "NoMatchingShape");
+				case ShapeMetadataResult.NoMatchingKey:
+					return System.Enum.Parse(tsType, "NoMatchingKey");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ShapeMetadataResult FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("NoResult", System.StringComparison.InvariantCulture))
+				return ShapeMetadataResult.NoResult;
+			else if (tsEnumValue.Equals("OK", System.StringComparison.InvariantCulture))
+				return ShapeMetadataResult.OK;
+			else if (tsEnumValue.Equals("DuplicateKeyExist", System.StringComparison.InvariantCulture))
+				return ShapeMetadataResult.DuplicateKeyExist;
+			else if (tsEnumValue.Equals("NoMatchingShape", System.StringComparison.InvariantCulture))
+				return ShapeMetadataResult.NoMatchingShape;
+			else if (tsEnumValue.Equals("NoMatchingKey", System.StringComparison.InvariantCulture))
+				return ShapeMetadataResult.NoMatchingKey;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum IFCExportViewTypeEnum
+    {
+			UNDEFINED,
+			REFERENCE_VIEW,
+			DESIGN_TRANSFER_VIEW,
+			PRECAST_VIEW,
+			MEP_REFERENCE_VIEW,
+			MEP_DESIGN_TRANSFER_VIEW,
+			BRIDGE_VIEW        
+    }
+
+    internal static class IFCExportViewTypeEnum_
+    {
+        public static dynamic GetTSObject(IFCExportViewTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum").GetType();
+
+            switch (dynEnum)
+            {
+				case IFCExportViewTypeEnum.UNDEFINED:
+					return System.Enum.Parse(tsType, "UNDEFINED");
+				case IFCExportViewTypeEnum.REFERENCE_VIEW:
+					return System.Enum.Parse(tsType, "REFERENCE_VIEW");
+				case IFCExportViewTypeEnum.DESIGN_TRANSFER_VIEW:
+					return System.Enum.Parse(tsType, "DESIGN_TRANSFER_VIEW");
+				case IFCExportViewTypeEnum.PRECAST_VIEW:
+					return System.Enum.Parse(tsType, "PRECAST_VIEW");
+				case IFCExportViewTypeEnum.MEP_REFERENCE_VIEW:
+					return System.Enum.Parse(tsType, "MEP_REFERENCE_VIEW");
+				case IFCExportViewTypeEnum.MEP_DESIGN_TRANSFER_VIEW:
+					return System.Enum.Parse(tsType, "MEP_DESIGN_TRANSFER_VIEW");
+				case IFCExportViewTypeEnum.BRIDGE_VIEW:
+					return System.Enum.Parse(tsType, "BRIDGE_VIEW");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static IFCExportViewTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("UNDEFINED", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.UNDEFINED;
+			else if (tsEnumValue.Equals("REFERENCE_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.REFERENCE_VIEW;
+			else if (tsEnumValue.Equals("DESIGN_TRANSFER_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.DESIGN_TRANSFER_VIEW;
+			else if (tsEnumValue.Equals("PRECAST_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.PRECAST_VIEW;
+			else if (tsEnumValue.Equals("MEP_REFERENCE_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.MEP_REFERENCE_VIEW;
+			else if (tsEnumValue.Equals("MEP_DESIGN_TRANSFER_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.MEP_DESIGN_TRANSFER_VIEW;
+			else if (tsEnumValue.Equals("BRIDGE_VIEW", System.StringComparison.InvariantCulture))
+				return IFCExportViewTypeEnum.BRIDGE_VIEW;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum ExportBasePoint
+    {
+			GLOBAL,
+			WORK_PLANE,
+			BASE_POINT        
+    }
+
+    internal static class ExportBasePoint_
+    {
+        public static dynamic GetTSObject(ExportBasePoint dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.Operation.ExportBasePoint").GetType();
+
+            switch (dynEnum)
+            {
+				case ExportBasePoint.GLOBAL:
+					return System.Enum.Parse(tsType, "GLOBAL");
+				case ExportBasePoint.WORK_PLANE:
+					return System.Enum.Parse(tsType, "WORK_PLANE");
+				case ExportBasePoint.BASE_POINT:
+					return System.Enum.Parse(tsType, "BASE_POINT");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ExportBasePoint FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("GLOBAL", System.StringComparison.InvariantCulture))
+				return ExportBasePoint.GLOBAL;
+			else if (tsEnumValue.Equals("WORK_PLANE", System.StringComparison.InvariantCulture))
+				return ExportBasePoint.WORK_PLANE;
+			else if (tsEnumValue.Equals("BASE_POINT", System.StringComparison.InvariantCulture))
+				return ExportBasePoint.BASE_POINT;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public struct IFCExportFlags
+    {
+			public System.Boolean IsFlatBeamsAsPlates;
+			public System.Boolean IsLocationFromOrganizer;
+			public System.Boolean IsLocationFromBuildingHierarchy;
+			public System.Boolean IsPoursEnabled;
+			public System.Boolean ExportRebarSetGroupAsIndividualBars;
+			public System.Boolean IsAssembliesEnabled;
+			public System.Boolean IsBoltsEnabled;
+			public System.Boolean IsWeldsEnabled;
+			public System.Boolean IsGridsEnabled;
+			public System.Boolean IsRebarsEnabled;
+			public System.Boolean IsSurfaceTreatmentsAndSurfacesEnabled;
+       
+    }
+
+    internal static class IFCExportFlags_
+    {
+        public static dynamic GetTSObject(IFCExportFlags dynStruct)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Operations.IFCExportFlags");
+			tsType.IsFlatBeamsAsPlates = dynStruct.IsFlatBeamsAsPlates;
+			tsType.IsLocationFromOrganizer = dynStruct.IsLocationFromOrganizer;
+			tsType.IsLocationFromBuildingHierarchy = dynStruct.IsLocationFromBuildingHierarchy;
+			tsType.IsPoursEnabled = dynStruct.IsPoursEnabled;
+			tsType.ExportRebarSetGroupAsIndividualBars = dynStruct.ExportRebarSetGroupAsIndividualBars;
+			tsType.IsAssembliesEnabled = dynStruct.IsAssembliesEnabled;
+			tsType.IsBoltsEnabled = dynStruct.IsBoltsEnabled;
+			tsType.IsWeldsEnabled = dynStruct.IsWeldsEnabled;
+			tsType.IsGridsEnabled = dynStruct.IsGridsEnabled;
+			tsType.IsRebarsEnabled = dynStruct.IsRebarsEnabled;
+			tsType.IsSurfaceTreatmentsAndSurfacesEnabled = dynStruct.IsSurfaceTreatmentsAndSurfacesEnabled;
+
+            return tsType;
+        }
+    
+        public static IFCExportFlags FromTSObject(dynamic tsStruct)
+        {
+            var dynStruct = new IFCExportFlags();
+			dynStruct.IsFlatBeamsAsPlates = tsStruct.IsFlatBeamsAsPlates;
+			dynStruct.IsLocationFromOrganizer = tsStruct.IsLocationFromOrganizer;
+			dynStruct.IsLocationFromBuildingHierarchy = tsStruct.IsLocationFromBuildingHierarchy;
+			dynStruct.IsPoursEnabled = tsStruct.IsPoursEnabled;
+			dynStruct.ExportRebarSetGroupAsIndividualBars = tsStruct.ExportRebarSetGroupAsIndividualBars;
+			dynStruct.IsAssembliesEnabled = tsStruct.IsAssembliesEnabled;
+			dynStruct.IsBoltsEnabled = tsStruct.IsBoltsEnabled;
+			dynStruct.IsWeldsEnabled = tsStruct.IsWeldsEnabled;
+			dynStruct.IsGridsEnabled = tsStruct.IsGridsEnabled;
+			dynStruct.IsRebarsEnabled = tsStruct.IsRebarsEnabled;
+			dynStruct.IsSurfaceTreatmentsAndSurfacesEnabled = tsStruct.IsSurfaceTreatmentsAndSurfacesEnabled;
+ 
+            return dynStruct;
         }
     }
 

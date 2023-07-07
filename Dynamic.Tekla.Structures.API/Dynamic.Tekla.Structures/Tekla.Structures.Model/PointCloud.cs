@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -224,6 +224,110 @@ namespace Dynamic.Tekla.Structures.Model
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Scale), ex); 
+                }
+            }
+        }
+
+        public System.Double OffsetX
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.OffsetX;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetX), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.OffsetX = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetX), ex); 
+                }
+            }
+        }
+
+        public System.Double OffsetY
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.OffsetY;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetY), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.OffsetY = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetY), ex); 
+                }
+            }
+        }
+
+        public System.Double OffsetZ
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.OffsetZ;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetZ), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.OffsetZ = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(OffsetZ), ex); 
+                }
+            }
+        }
+
+        public System.Double RotationZ
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.RotationZ;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationZ), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.RotationZ = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(RotationZ), ex); 
                 }
             }
         }

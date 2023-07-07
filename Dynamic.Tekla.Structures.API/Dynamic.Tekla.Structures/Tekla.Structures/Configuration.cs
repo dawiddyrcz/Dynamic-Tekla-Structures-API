@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -29,7 +29,12 @@ namespace Dynamic.Tekla.Structures
 			Developer,
 			ConstructionManagement,
 			Partner,
-			EPMModeler        
+			EPMModeler,
+			Carbon,
+			Graphite,
+			Diamond,
+			MEP,
+			Trial        
     }
 
     internal static class Configuration_
@@ -70,6 +75,16 @@ namespace Dynamic.Tekla.Structures
 					return System.Enum.Parse(tsType, "Partner");
 				case Configuration.EPMModeler:
 					return System.Enum.Parse(tsType, "EPMModeler");
+				case Configuration.Carbon:
+					return System.Enum.Parse(tsType, "Carbon");
+				case Configuration.Graphite:
+					return System.Enum.Parse(tsType, "Graphite");
+				case Configuration.Diamond:
+					return System.Enum.Parse(tsType, "Diamond");
+				case Configuration.MEP:
+					return System.Enum.Parse(tsType, "MEP");
+				case Configuration.Trial:
+					return System.Enum.Parse(tsType, "Trial");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -110,6 +125,16 @@ namespace Dynamic.Tekla.Structures
 				return Configuration.Partner;
 			else if (tsEnumValue.Equals("EPMModeler", System.StringComparison.InvariantCulture))
 				return Configuration.EPMModeler;
+			else if (tsEnumValue.Equals("Carbon", System.StringComparison.InvariantCulture))
+				return Configuration.Carbon;
+			else if (tsEnumValue.Equals("Graphite", System.StringComparison.InvariantCulture))
+				return Configuration.Graphite;
+			else if (tsEnumValue.Equals("Diamond", System.StringComparison.InvariantCulture))
+				return Configuration.Diamond;
+			else if (tsEnumValue.Equals("MEP", System.StringComparison.InvariantCulture))
+				return Configuration.MEP;
+			else if (tsEnumValue.Equals("Trial", System.StringComparison.InvariantCulture))
+				return Configuration.Trial;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

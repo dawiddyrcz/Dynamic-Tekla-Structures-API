@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -314,7 +314,9 @@ namespace Dynamic.Tekla.Structures.Model
 			DataMissing,
 			DefinitionPointsTooClose,
 			DefinitionPointsCannotBeAligned,
-			ZeroTotalRiseWithMore360Degrees        
+			ZeroTotalRiseWithMore360Degrees,
+			RotationAngleIs0Degrees,
+			InvalidGeometry        
     }
 
     internal static class ErrorStatus_
@@ -333,6 +335,10 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "DefinitionPointsCannotBeAligned");
 				case ErrorStatus.ZeroTotalRiseWithMore360Degrees:
 					return System.Enum.Parse(tsType, "ZeroTotalRiseWithMore360Degrees");
+				case ErrorStatus.RotationAngleIs0Degrees:
+					return System.Enum.Parse(tsType, "RotationAngleIs0Degrees");
+				case ErrorStatus.InvalidGeometry:
+					return System.Enum.Parse(tsType, "InvalidGeometry");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -351,6 +357,10 @@ namespace Dynamic.Tekla.Structures.Model
 				return ErrorStatus.DefinitionPointsCannotBeAligned;
 			else if (tsEnumValue.Equals("ZeroTotalRiseWithMore360Degrees", System.StringComparison.InvariantCulture))
 				return ErrorStatus.ZeroTotalRiseWithMore360Degrees;
+			else if (tsEnumValue.Equals("RotationAngleIs0Degrees", System.StringComparison.InvariantCulture))
+				return ErrorStatus.RotationAngleIs0Degrees;
+			else if (tsEnumValue.Equals("InvalidGeometry", System.StringComparison.InvariantCulture))
+				return ErrorStatus.InvalidGeometry;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -48,6 +48,8 @@ namespace Dynamic.Tekla.Structures
 			SURFACE_TREATMENT,
 			REBAR_SPLICE,
 			ANALYSIS_MODEL,
+			ANALYSIS_PART,
+			ANALYSIS_NODE,
 			EDGE_CHAMFER,
 			TASK,
 			TASK_DEPENDENCY,
@@ -62,7 +64,10 @@ namespace Dynamic.Tekla.Structures
 			BENT_PLATE,
 			HELIX,
 			DB_POUR_UNIT,
-			CONSTRUCTION_POLYCURVE        
+			CONSTRUCTION_POLYCURVE,
+			STOREY,
+			BUILDING_SITE,
+			BUILDING        
     }
 
     internal static class TeklaStructuresDatabaseTypeEnum_
@@ -139,6 +144,10 @@ namespace Dynamic.Tekla.Structures
 					return System.Enum.Parse(tsType, "REBAR_SPLICE");
 				case TeklaStructuresDatabaseTypeEnum.ANALYSIS_MODEL:
 					return System.Enum.Parse(tsType, "ANALYSIS_MODEL");
+				case TeklaStructuresDatabaseTypeEnum.ANALYSIS_PART:
+					return System.Enum.Parse(tsType, "ANALYSIS_PART");
+				case TeklaStructuresDatabaseTypeEnum.ANALYSIS_NODE:
+					return System.Enum.Parse(tsType, "ANALYSIS_NODE");
 				case TeklaStructuresDatabaseTypeEnum.EDGE_CHAMFER:
 					return System.Enum.Parse(tsType, "EDGE_CHAMFER");
 				case TeklaStructuresDatabaseTypeEnum.TASK:
@@ -169,6 +178,12 @@ namespace Dynamic.Tekla.Structures
 					return System.Enum.Parse(tsType, "DB_POUR_UNIT");
 				case TeklaStructuresDatabaseTypeEnum.CONSTRUCTION_POLYCURVE:
 					return System.Enum.Parse(tsType, "CONSTRUCTION_POLYCURVE");
+				case TeklaStructuresDatabaseTypeEnum.STOREY:
+					return System.Enum.Parse(tsType, "STOREY");
+				case TeklaStructuresDatabaseTypeEnum.BUILDING_SITE:
+					return System.Enum.Parse(tsType, "BUILDING_SITE");
+				case TeklaStructuresDatabaseTypeEnum.BUILDING:
+					return System.Enum.Parse(tsType, "BUILDING");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -245,6 +260,10 @@ namespace Dynamic.Tekla.Structures
 				return TeklaStructuresDatabaseTypeEnum.REBAR_SPLICE;
 			else if (tsEnumValue.Equals("ANALYSIS_MODEL", System.StringComparison.InvariantCulture))
 				return TeklaStructuresDatabaseTypeEnum.ANALYSIS_MODEL;
+			else if (tsEnumValue.Equals("ANALYSIS_PART", System.StringComparison.InvariantCulture))
+				return TeklaStructuresDatabaseTypeEnum.ANALYSIS_PART;
+			else if (tsEnumValue.Equals("ANALYSIS_NODE", System.StringComparison.InvariantCulture))
+				return TeklaStructuresDatabaseTypeEnum.ANALYSIS_NODE;
 			else if (tsEnumValue.Equals("EDGE_CHAMFER", System.StringComparison.InvariantCulture))
 				return TeklaStructuresDatabaseTypeEnum.EDGE_CHAMFER;
 			else if (tsEnumValue.Equals("TASK", System.StringComparison.InvariantCulture))
@@ -275,6 +294,12 @@ namespace Dynamic.Tekla.Structures
 				return TeklaStructuresDatabaseTypeEnum.DB_POUR_UNIT;
 			else if (tsEnumValue.Equals("CONSTRUCTION_POLYCURVE", System.StringComparison.InvariantCulture))
 				return TeklaStructuresDatabaseTypeEnum.CONSTRUCTION_POLYCURVE;
+			else if (tsEnumValue.Equals("STOREY", System.StringComparison.InvariantCulture))
+				return TeklaStructuresDatabaseTypeEnum.STOREY;
+			else if (tsEnumValue.Equals("BUILDING_SITE", System.StringComparison.InvariantCulture))
+				return TeklaStructuresDatabaseTypeEnum.BUILDING_SITE;
+			else if (tsEnumValue.Equals("BUILDING", System.StringComparison.InvariantCulture))
+				return TeklaStructuresDatabaseTypeEnum.BUILDING;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

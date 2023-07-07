@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -282,6 +282,58 @@ namespace Dynamic.Tekla.Structures.Drawing
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(EndSymbolType), ex); 
+                }
+            }
+        }
+
+        public System.Boolean CouplersEndAnchorSymbols
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.CouplersEndAnchorSymbols;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CouplersEndAnchorSymbols), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.CouplersEndAnchorSymbols = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CouplersEndAnchorSymbols), ex); 
+                }
+            }
+        }
+
+        public System.Double CouplersScale
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.CouplersScale;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CouplersScale), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.CouplersScale = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CouplersScale), ex); 
                 }
             }
         }

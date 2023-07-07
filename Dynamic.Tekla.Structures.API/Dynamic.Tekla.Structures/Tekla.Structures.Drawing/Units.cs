@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -21,7 +21,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			Meters,
 			FeetAndInches,
 			CentimetersOrMeters,
-			Inches        
+			Inches,
+			Feet        
     }
 
     internal static class Units_
@@ -46,6 +47,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "CentimetersOrMeters");
 				case Units.Inches:
 					return System.Enum.Parse(tsType, "Inches");
+				case Units.Feet:
+					return System.Enum.Parse(tsType, "Feet");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -70,6 +73,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return Units.CentimetersOrMeters;
 			else if (tsEnumValue.Equals("Inches", System.StringComparison.InvariantCulture))
 				return Units.Inches;
+			else if (tsEnumValue.Equals("Feet", System.StringComparison.InvariantCulture))
+				return Units.Feet;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

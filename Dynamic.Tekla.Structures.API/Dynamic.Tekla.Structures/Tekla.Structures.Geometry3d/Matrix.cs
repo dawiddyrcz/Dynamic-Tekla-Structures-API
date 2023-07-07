@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -132,6 +132,14 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(o1);
 			var o2Tek = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(o2);
 			return Dynamic.Tekla.Structures.Geometry3d.Matrix_.FromTSObject(o1Tek * o2Tek);
+		}
+		public static System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Geometry3d.Point> operator *(Dynamic.Tekla.Structures.Geometry3d.Matrix o1, System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Geometry3d.Point> o2)
+		{
+			if (o1 is null) throw new System.ArgumentNullException("o1");
+			if (o2 is null) throw new System.ArgumentNullException("o2");
+			var o1Tek = Dynamic.Tekla.Structures.Geometry3d.Matrix_.GetTSObject(o1);
+			var o2Tek = o2;
+			return o1Tek * o2Tek;
 		}
 
 

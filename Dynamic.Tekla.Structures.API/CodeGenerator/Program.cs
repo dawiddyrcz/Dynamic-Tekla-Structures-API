@@ -97,7 +97,7 @@ namespace CodeGenerator
 
         private static Assembly LoadAssembly(string fileName)
         {
-            string filePath = Path.Combine(GetProjectDirectory(), "API_dll_files_version_2019i", fileName);
+            string filePath = Path.Combine(GetProjectDirectory(), "API_dll_files_version_2023", fileName);
             return Assembly.LoadFile(filePath);
         }
 

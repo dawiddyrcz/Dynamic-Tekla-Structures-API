@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -117,12 +117,15 @@ namespace Dynamic.Tekla.Structures
 			CONFIGURATION_PRECAST_CONCRETE_DETAILING,
 			CONFIGURATION_STEEL_DETAILING,
 			CONFIGURATION_FULL,
-			CONFIGURATION_PRIMARY,
+			CONFIGURATION_STEEL_DETAILING_LIMITED,
 			CONFIGURATION_EDUCATIONAL,
 			CONFIGURATION_DEVELOPER,
-			CONFIGURATION_CONSTRUCTION_VIEWER,
+			CONFIGURATION_CONSTRUCTION_MANAGEMENT,
 			CONFIGURATION_PARTNER,
-			CONFIGURATION_EPM_MODELER        
+			CONFIGURATION_EPM_MODELER,
+			CONFIGURATION_CARBON,
+			CONFIGURATION_GRAPHITE,
+			CONFIGURATION_DIAMOND        
     }
 
     internal static class ProgramConfigurationEnum_
@@ -151,18 +154,24 @@ namespace Dynamic.Tekla.Structures
 					return System.Enum.Parse(tsType, "CONFIGURATION_STEEL_DETAILING");
 				case ProgramConfigurationEnum.CONFIGURATION_FULL:
 					return System.Enum.Parse(tsType, "CONFIGURATION_FULL");
-				case ProgramConfigurationEnum.CONFIGURATION_PRIMARY:
-					return System.Enum.Parse(tsType, "CONFIGURATION_PRIMARY");
+				case ProgramConfigurationEnum.CONFIGURATION_STEEL_DETAILING_LIMITED:
+					return System.Enum.Parse(tsType, "CONFIGURATION_STEEL_DETAILING_LIMITED");
 				case ProgramConfigurationEnum.CONFIGURATION_EDUCATIONAL:
 					return System.Enum.Parse(tsType, "CONFIGURATION_EDUCATIONAL");
 				case ProgramConfigurationEnum.CONFIGURATION_DEVELOPER:
 					return System.Enum.Parse(tsType, "CONFIGURATION_DEVELOPER");
-				case ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_VIEWER:
-					return System.Enum.Parse(tsType, "CONFIGURATION_CONSTRUCTION_VIEWER");
+				case ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_MANAGEMENT:
+					return System.Enum.Parse(tsType, "CONFIGURATION_CONSTRUCTION_MANAGEMENT");
 				case ProgramConfigurationEnum.CONFIGURATION_PARTNER:
 					return System.Enum.Parse(tsType, "CONFIGURATION_PARTNER");
 				case ProgramConfigurationEnum.CONFIGURATION_EPM_MODELER:
 					return System.Enum.Parse(tsType, "CONFIGURATION_EPM_MODELER");
+				case ProgramConfigurationEnum.CONFIGURATION_CARBON:
+					return System.Enum.Parse(tsType, "CONFIGURATION_CARBON");
+				case ProgramConfigurationEnum.CONFIGURATION_GRAPHITE:
+					return System.Enum.Parse(tsType, "CONFIGURATION_GRAPHITE");
+				case ProgramConfigurationEnum.CONFIGURATION_DIAMOND:
+					return System.Enum.Parse(tsType, "CONFIGURATION_DIAMOND");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -191,18 +200,24 @@ namespace Dynamic.Tekla.Structures
 				return ProgramConfigurationEnum.CONFIGURATION_STEEL_DETAILING;
 			else if (tsEnumValue.Equals("CONFIGURATION_FULL", System.StringComparison.InvariantCulture))
 				return ProgramConfigurationEnum.CONFIGURATION_FULL;
-			else if (tsEnumValue.Equals("CONFIGURATION_PRIMARY", System.StringComparison.InvariantCulture))
-				return ProgramConfigurationEnum.CONFIGURATION_PRIMARY;
+			else if (tsEnumValue.Equals("CONFIGURATION_STEEL_DETAILING_LIMITED", System.StringComparison.InvariantCulture))
+				return ProgramConfigurationEnum.CONFIGURATION_STEEL_DETAILING_LIMITED;
 			else if (tsEnumValue.Equals("CONFIGURATION_EDUCATIONAL", System.StringComparison.InvariantCulture))
 				return ProgramConfigurationEnum.CONFIGURATION_EDUCATIONAL;
 			else if (tsEnumValue.Equals("CONFIGURATION_DEVELOPER", System.StringComparison.InvariantCulture))
 				return ProgramConfigurationEnum.CONFIGURATION_DEVELOPER;
-			else if (tsEnumValue.Equals("CONFIGURATION_CONSTRUCTION_VIEWER", System.StringComparison.InvariantCulture))
-				return ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_VIEWER;
+			else if (tsEnumValue.Equals("CONFIGURATION_CONSTRUCTION_MANAGEMENT", System.StringComparison.InvariantCulture))
+				return ProgramConfigurationEnum.CONFIGURATION_CONSTRUCTION_MANAGEMENT;
 			else if (tsEnumValue.Equals("CONFIGURATION_PARTNER", System.StringComparison.InvariantCulture))
 				return ProgramConfigurationEnum.CONFIGURATION_PARTNER;
 			else if (tsEnumValue.Equals("CONFIGURATION_EPM_MODELER", System.StringComparison.InvariantCulture))
 				return ProgramConfigurationEnum.CONFIGURATION_EPM_MODELER;
+			else if (tsEnumValue.Equals("CONFIGURATION_CARBON", System.StringComparison.InvariantCulture))
+				return ProgramConfigurationEnum.CONFIGURATION_CARBON;
+			else if (tsEnumValue.Equals("CONFIGURATION_GRAPHITE", System.StringComparison.InvariantCulture))
+				return ProgramConfigurationEnum.CONFIGURATION_GRAPHITE;
+			else if (tsEnumValue.Equals("CONFIGURATION_DIAMOND", System.StringComparison.InvariantCulture))
+				return ProgramConfigurationEnum.CONFIGURATION_DIAMOND;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

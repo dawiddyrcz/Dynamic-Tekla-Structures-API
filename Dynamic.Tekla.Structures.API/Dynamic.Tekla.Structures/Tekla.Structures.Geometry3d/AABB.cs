@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -94,6 +94,12 @@ namespace Dynamic.Tekla.Structures.Geometry3d
 			args[1] = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(MaxPoint);
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
 		}
+		public AABB(System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Geometry3d.Point> Points)
+		{
+			var args = new object[1];
+			args[0] = Points;
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Geometry3d.AABB", args);
+		}
 		public AABB(Dynamic.Tekla.Structures.Geometry3d.AABB AABB)
 		{
 			var args = new object[1];
@@ -151,6 +157,24 @@ namespace Dynamic.Tekla.Structures.Geometry3d
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCenterPoint), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point[] GetCornerPoints()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetCornerPoints();
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.PointArray_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCornerPoints), ex);
             }
         }
 

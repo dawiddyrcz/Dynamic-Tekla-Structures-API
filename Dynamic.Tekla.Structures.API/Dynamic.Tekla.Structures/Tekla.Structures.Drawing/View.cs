@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -618,7 +618,10 @@ var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(null);
 			DOT_GR_CREATE_3D_VIEW_COMMAND,
 			DOT_GR_CREATE_3D_VIEW_WITH_PLANES_COMMAND,
 			DOT_GR_ROTATE_VIEW,
-			DOT_GR_ADD_OBJECTS_TO_VIEW        
+			DOT_GR_ADD_VIEW_DIMENSIONING_RULE,
+			DOT_GR_ADD_OBJECTS_TO_VIEW,
+			DOT_GR_SET_VIEW_FILTER_RULES,
+			DOT_GR_GET_VIEW_FILTER_RULES        
     }
 
     internal static class ViewCommands_
@@ -651,8 +654,14 @@ var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(null);
 					return System.Enum.Parse(tsType, "DOT_GR_CREATE_3D_VIEW_WITH_PLANES_COMMAND");
 				case ViewCommands.DOT_GR_ROTATE_VIEW:
 					return System.Enum.Parse(tsType, "DOT_GR_ROTATE_VIEW");
+				case ViewCommands.DOT_GR_ADD_VIEW_DIMENSIONING_RULE:
+					return System.Enum.Parse(tsType, "DOT_GR_ADD_VIEW_DIMENSIONING_RULE");
 				case ViewCommands.DOT_GR_ADD_OBJECTS_TO_VIEW:
 					return System.Enum.Parse(tsType, "DOT_GR_ADD_OBJECTS_TO_VIEW");
+				case ViewCommands.DOT_GR_SET_VIEW_FILTER_RULES:
+					return System.Enum.Parse(tsType, "DOT_GR_SET_VIEW_FILTER_RULES");
+				case ViewCommands.DOT_GR_GET_VIEW_FILTER_RULES:
+					return System.Enum.Parse(tsType, "DOT_GR_GET_VIEW_FILTER_RULES");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -685,8 +694,14 @@ var view = Dynamic.Tekla.Structures.Drawing.View_.GetTSObject(null);
 				return ViewCommands.DOT_GR_CREATE_3D_VIEW_WITH_PLANES_COMMAND;
 			else if (tsEnumValue.Equals("DOT_GR_ROTATE_VIEW", System.StringComparison.InvariantCulture))
 				return ViewCommands.DOT_GR_ROTATE_VIEW;
+			else if (tsEnumValue.Equals("DOT_GR_ADD_VIEW_DIMENSIONING_RULE", System.StringComparison.InvariantCulture))
+				return ViewCommands.DOT_GR_ADD_VIEW_DIMENSIONING_RULE;
 			else if (tsEnumValue.Equals("DOT_GR_ADD_OBJECTS_TO_VIEW", System.StringComparison.InvariantCulture))
 				return ViewCommands.DOT_GR_ADD_OBJECTS_TO_VIEW;
+			else if (tsEnumValue.Equals("DOT_GR_SET_VIEW_FILTER_RULES", System.StringComparison.InvariantCulture))
+				return ViewCommands.DOT_GR_SET_VIEW_FILTER_RULES;
+			else if (tsEnumValue.Equals("DOT_GR_GET_VIEW_FILTER_RULES", System.StringComparison.InvariantCulture))
+				return ViewCommands.DOT_GR_GET_VIEW_FILTER_RULES;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

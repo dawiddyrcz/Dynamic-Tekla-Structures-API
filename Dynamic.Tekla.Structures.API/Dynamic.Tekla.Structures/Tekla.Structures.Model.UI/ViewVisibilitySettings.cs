@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -455,6 +455,58 @@ namespace Dynamic.Tekla.Structures.Model.UI
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ReferenceObjectsVisible), ex); 
+                }
+            }
+        }
+
+        public System.Boolean BuildingVisible
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.BuildingVisible;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BuildingVisible), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.BuildingVisible = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BuildingVisible), ex); 
+                }
+            }
+        }
+
+        public System.Boolean BuildingSpaceVisible
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.BuildingSpaceVisible;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BuildingSpaceVisible), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.BuildingSpaceVisible = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BuildingSpaceVisible), ex); 
                 }
             }
         }

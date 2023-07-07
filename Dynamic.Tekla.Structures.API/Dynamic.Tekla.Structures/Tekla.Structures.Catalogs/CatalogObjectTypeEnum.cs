@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -56,6 +56,7 @@ namespace Dynamic.Tekla.Structures.Catalogs
 			GRID_PLANE,
 			STEEL_SPIRAL_BEAM,
 			CONCRETE_SPIRAL_BEAM,
+			POUR_UNIT,
 			STEEL_LOFTED_PLATE,
 			CONCRETE_LOFTED_SLAB        
     }
@@ -150,6 +151,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 					return System.Enum.Parse(tsType, "STEEL_SPIRAL_BEAM");
 				case CatalogObjectTypeEnum.CONCRETE_SPIRAL_BEAM:
 					return System.Enum.Parse(tsType, "CONCRETE_SPIRAL_BEAM");
+				case CatalogObjectTypeEnum.POUR_UNIT:
+					return System.Enum.Parse(tsType, "POUR_UNIT");
 				case CatalogObjectTypeEnum.STEEL_LOFTED_PLATE:
 					return System.Enum.Parse(tsType, "STEEL_LOFTED_PLATE");
 				case CatalogObjectTypeEnum.CONCRETE_LOFTED_SLAB:
@@ -246,6 +249,8 @@ namespace Dynamic.Tekla.Structures.Catalogs
 				return CatalogObjectTypeEnum.STEEL_SPIRAL_BEAM;
 			else if (tsEnumValue.Equals("CONCRETE_SPIRAL_BEAM", System.StringComparison.InvariantCulture))
 				return CatalogObjectTypeEnum.CONCRETE_SPIRAL_BEAM;
+			else if (tsEnumValue.Equals("POUR_UNIT", System.StringComparison.InvariantCulture))
+				return CatalogObjectTypeEnum.POUR_UNIT;
 			else if (tsEnumValue.Equals("STEEL_LOFTED_PLATE", System.StringComparison.InvariantCulture))
 				return CatalogObjectTypeEnum.STEEL_LOFTED_PLATE;
 			else if (tsEnumValue.Equals("CONCRETE_LOFTED_SLAB", System.StringComparison.InvariantCulture))

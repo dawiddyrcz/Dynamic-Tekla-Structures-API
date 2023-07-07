@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -16,6 +16,32 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarPropertyModifier  : Dynamic.Tekla.Structures.Model.BaseRebarModifier
     {
 
+
+        public System.Boolean AffectsWholeBarPlane
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.AffectsWholeBarPlane;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AffectsWholeBarPlane), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.AffectsWholeBarPlane = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(AffectsWholeBarPlane), ex); 
+                }
+            }
+        }
 
         public Dynamic.Tekla.Structures.Model.RebarPropertiesNullable RebarProperties
         {
@@ -71,6 +97,64 @@ namespace Dynamic.Tekla.Structures.Model
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(GroupingType), ex); 
+                }
+            }
+        }
+
+        public Dynamic.Tekla.Structures.Model.RebarSpacing SpacingOverride
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.SpacingOverride;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSpacing) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingOverride), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing_.GetTSObject(value);
+                teklaObject.SpacingOverride = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SpacingOverride), ex); 
+                }
+            }
+        }
+
+        public Dynamic.Tekla.Structures.Model.Part FatherPart
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.FatherPart;
+                var value_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Part) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FatherPart), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
+                teklaObject.FatherPart = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FatherPart), ex); 
                 }
             }
         }

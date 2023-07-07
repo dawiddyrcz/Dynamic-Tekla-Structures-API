@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -66,6 +66,19 @@ namespace Dynamic.Tekla.Structures
 			ref System.Double Value)
         {
             var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOption", VariableName, ref Value);
+            return result;
+        }
+
+
+
+        public static System.Boolean GetAdvancedOptionPaths(
+			System.String advancedOption,
+			out System.Collections.Generic.List<System.String> paths,
+			Dynamic.Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback errorHandler_)
+        {
+paths = null;
+var errorHandler = Dynamic.Tekla.Structures.TeklaStructuresSettings.InvalidPathCallback_.GetTSObject(errorHandler_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresSettings", "GetAdvancedOptionPaths", advancedOption, ref paths, errorHandler);
             return result;
         }
 

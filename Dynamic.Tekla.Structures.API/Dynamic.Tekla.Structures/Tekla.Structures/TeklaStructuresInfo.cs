@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -90,6 +90,14 @@ namespace Dynamic.Tekla.Structures
         public static System.String GetCurrentUser()
         {
             var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetCurrentUser");
+            return result;
+        }
+
+
+
+        public static System.String GetPluginsFolder()
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.TeklaStructuresInfo", "GetPluginsFolder");
             return result;
         }
 

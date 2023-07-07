@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -13,7 +13,7 @@
 namespace Dynamic.Tekla.Structures.Dialog
 {
 
-    public  class StructuresInstallation 
+    public abstract class StructuresInstallation 
     {
 
 
@@ -22,6 +22,15 @@ namespace Dynamic.Tekla.Structures.Dialog
             get
             {
                 var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "BinFolder");
+                return (System.String) value;
+            }
+            
+        }
+        public static System.String EnvBaseFolder
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "EnvBaseFolder");
                 return (System.String) value;
             }
             
@@ -43,19 +52,38 @@ namespace Dynamic.Tekla.Structures.Dialog
                 return (System.String) value;
             }
             
+        }
+        public static System.Collections.Generic.SortedSet<System.String> MessagesFolder
+        {
+            get
+            {
+                var value = PropertyInvoker.GetStaticPropertyOrFieldValue("Tekla.Structures.Dialog.StructuresInstallation", "MessagesFolder");
+                return (System.Collections.Generic.SortedSet<System.String>) value;
+            }
+            
         }        
 
         internal dynamic teklaObject;
 
-		public StructuresInstallation()
-		{
-			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Dialog.StructuresInstallation");
-		}
-		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
-		public StructuresInstallation(dynamic tsObject, System.DateTime nonConflictParameter)
-		{
-			this.teklaObject = tsObject;
-		}
+
+
+        public static System.String GetLocalizationFile(
+			System.String subPath,
+			System.String messageFile)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.StructuresInstallation", "GetLocalizationFile", subPath, messageFile);
+            return result;
+        }
+
+
+
+        public static System.String GetLocalizationFile(
+			System.String messageFile)
+        {
+            var result = (System.String) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Dialog.StructuresInstallation", "GetLocalizationFile", messageFile);
+            return result;
+        }
+
 
 
 

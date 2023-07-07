@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("CodeGenerator")]
-[assembly: AssemblyCopyright("Copyright © Dawid Dyrcz 2020")]
+[assembly: AssemblyCopyright("Copyright © Yury Isachenkov 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

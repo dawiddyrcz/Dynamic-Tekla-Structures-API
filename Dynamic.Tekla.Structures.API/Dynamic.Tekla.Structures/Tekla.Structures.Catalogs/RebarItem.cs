@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -537,6 +537,84 @@ namespace Dynamic.Tekla.Structures.Catalogs
             }
         }
 
+        public System.Double ExtraPointShortening
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.ExtraPointShortening;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraPointShortening), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.ExtraPointShortening = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExtraPointShortening), ex); 
+                }
+            }
+        }
+
+        public System.Double CurveTolerance
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.CurveTolerance;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurveTolerance), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.CurveTolerance = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(CurveTolerance), ex); 
+                }
+            }
+        }
+
+        public System.Double MaxRadiusRequiringBending
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.MaxRadiusRequiringBending;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaxRadiusRequiringBending), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.MaxRadiusRequiringBending = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(MaxRadiusRequiringBending), ex); 
+                }
+            }
+        }
+
         public static System.String MAIN_USAGE
         {
             get
@@ -720,6 +798,60 @@ namespace Dynamic.Tekla.Structures.Catalogs
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Select), ex);
+            }
+        }
+
+
+
+        public System.Boolean Delete()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Delete();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Delete), ex);
+            }
+        }
+
+
+
+        public System.Boolean Insert()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Insert();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Insert), ex);
+            }
+        }
+
+
+
+        public System.Boolean Modify(
+			System.String OriginalGrade,
+			System.String OriginalSize,
+			System.String OriginalUsage)
+        {
+
+            try
+            {
+                var result = (System.Boolean) teklaObject.Modify(OriginalGrade, OriginalSize, OriginalUsage);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Modify), ex);
             }
         }
 

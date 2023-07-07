@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -526,6 +526,30 @@ var integerNames = ArrayListConverter.ToTSObjects(integerNames_);
 
 
 
+        public System.Boolean SetUserProperties(
+			System.Collections.Generic.List<System.String> stringPropertyNames,
+			System.Collections.Generic.List<System.String> stringValues,
+			System.Collections.Generic.List<System.String> doublePropertyNames,
+			System.Collections.Generic.List<System.Double> doubleValues,
+			System.Collections.Generic.List<System.String> intPropertyNames,
+			System.Collections.Generic.List<System.Int32> intValues)
+        {
+
+
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetUserProperties(stringPropertyNames, stringValues, doublePropertyNames, doubleValues, intPropertyNames, intValues);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetUserProperties), ex);
+            }
+        }
+
+
+
         public Dynamic.Tekla.Structures.Geometry3d.CoordinateSystem GetCoordinateSystem()
         {
             
@@ -687,7 +711,11 @@ var integerNames = ArrayListConverter.ToTSObjects(integerNames_);
 			CONTROL_POLYCURVE,
 			RADIAL_GRID,
 			GRID_CYLINDRICAL_SURFACE,
-			LOFTED_PLATE        
+			LOFTED_PLATE,
+			LEG_SURFACE_OBJECT,
+			STOREY,
+			SPACE,
+			BUILDING        
     }
 
     internal static class ModelObjectEnum_
@@ -834,6 +862,14 @@ var integerNames = ArrayListConverter.ToTSObjects(integerNames_);
 					return System.Enum.Parse(tsType, "GRID_CYLINDRICAL_SURFACE");
 				case ModelObjectEnum.LOFTED_PLATE:
 					return System.Enum.Parse(tsType, "LOFTED_PLATE");
+				case ModelObjectEnum.LEG_SURFACE_OBJECT:
+					return System.Enum.Parse(tsType, "LEG_SURFACE_OBJECT");
+				case ModelObjectEnum.STOREY:
+					return System.Enum.Parse(tsType, "STOREY");
+				case ModelObjectEnum.SPACE:
+					return System.Enum.Parse(tsType, "SPACE");
+				case ModelObjectEnum.BUILDING:
+					return System.Enum.Parse(tsType, "BUILDING");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -980,6 +1016,14 @@ var integerNames = ArrayListConverter.ToTSObjects(integerNames_);
 				return ModelObjectEnum.GRID_CYLINDRICAL_SURFACE;
 			else if (tsEnumValue.Equals("LOFTED_PLATE", System.StringComparison.InvariantCulture))
 				return ModelObjectEnum.LOFTED_PLATE;
+			else if (tsEnumValue.Equals("LEG_SURFACE_OBJECT", System.StringComparison.InvariantCulture))
+				return ModelObjectEnum.LEG_SURFACE_OBJECT;
+			else if (tsEnumValue.Equals("STOREY", System.StringComparison.InvariantCulture))
+				return ModelObjectEnum.STOREY;
+			else if (tsEnumValue.Equals("SPACE", System.StringComparison.InvariantCulture))
+				return ModelObjectEnum.SPACE;
+			else if (tsEnumValue.Equals("BUILDING", System.StringComparison.InvariantCulture))
+				return ModelObjectEnum.BUILDING;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

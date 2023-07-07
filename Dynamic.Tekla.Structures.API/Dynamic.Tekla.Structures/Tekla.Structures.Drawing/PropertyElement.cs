@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -337,6 +337,15 @@ namespace Dynamic.Tekla.Structures.Drawing
         public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType CenterToCenterDistance()
         {
             var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "CenterToCenterDistance");
+            var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType HoleDepth()
+        {
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Drawing.PropertyElement.PropertyElementType.BoltMarkPropertyElementTypes", "HoleDepth");
             var _result = Dynamic.Tekla.Structures.Drawing.PropertyElement.PropertyElementType_.FromTSObject(result);
 				return _result;
         }

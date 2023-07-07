@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -177,6 +177,23 @@ var point3 = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(point3_);
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetCutPart), ex);
+            }
+        }
+
+
+
+        public System.Boolean IsValid()
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.IsValid();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(IsValid), ex);
             }
         }
 

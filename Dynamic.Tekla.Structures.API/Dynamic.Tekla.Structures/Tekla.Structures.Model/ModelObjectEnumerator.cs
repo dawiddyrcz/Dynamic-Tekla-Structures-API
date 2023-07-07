@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -13,7 +13,7 @@
 namespace Dynamic.Tekla.Structures.Model
 {
 
-    public  class ModelObjectEnumerator 
+    public  class ModelObjectEnumerator  : IEnumerator
     {
 
 
@@ -162,7 +162,8 @@ namespace Dynamic.Tekla.Structures.Model
 			CREATED_OBJECTS_AFTER_STAMP,
 			MODIFIED_OBJECTS_BY_FILTER_NAME,
 			PHASE_MODIFIED_OBJECTS_AFTER_STAMP,
-			OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP        
+			OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP,
+			BY_MODEL_OBJECT_TYPE        
     }
 
     internal static class EnumeratorTypeEnum_
@@ -219,6 +220,8 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "PHASE_MODIFIED_OBJECTS_AFTER_STAMP");
 				case EnumeratorTypeEnum.OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP:
 					return System.Enum.Parse(tsType, "OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP");
+				case EnumeratorTypeEnum.BY_MODEL_OBJECT_TYPE:
+					return System.Enum.Parse(tsType, "BY_MODEL_OBJECT_TYPE");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -275,6 +278,8 @@ namespace Dynamic.Tekla.Structures.Model
 				return EnumeratorTypeEnum.PHASE_MODIFIED_OBJECTS_AFTER_STAMP;
 			else if (tsEnumValue.Equals("OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP", System.StringComparison.InvariantCulture))
 				return EnumeratorTypeEnum.OBJECTS_WITH_ANY_MODIFICATION_AFTER_STAMP;
+			else if (tsEnumValue.Equals("BY_MODEL_OBJECT_TYPE", System.StringComparison.InvariantCulture))
+				return EnumeratorTypeEnum.BY_MODEL_OBJECT_TYPE;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

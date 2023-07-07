@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -308,6 +308,113 @@ namespace Dynamic.Tekla.Structures.Model
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlottedHoleY), ex); 
+                }
+            }
+        }
+
+        public System.Double SlotOffsetX
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.SlotOffsetX;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlotOffsetX), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.SlotOffsetX = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlotOffsetX), ex); 
+                }
+            }
+        }
+
+        public System.Double SlotOffsetY
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.SlotOffsetY;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlotOffsetY), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.SlotOffsetY = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(SlotOffsetY), ex); 
+                }
+            }
+        }
+
+        public System.Double BlindHoleDepth
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.BlindHoleDepth;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BlindHoleDepth), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.BlindHoleDepth = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BlindHoleDepth), ex); 
+                }
+            }
+        }
+
+        public Dynamic.Tekla.Structures.Model.BoltGroup.BoltPlainHoleTypeEnum PlainHoleType
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.PlainHoleType;
+                var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltPlainHoleTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.BoltGroup.BoltPlainHoleTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlainHoleType), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.BoltGroup.BoltPlainHoleTypeEnum_.GetTSObject(value);
+                teklaObject.PlainHoleType = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(PlainHoleType), ex); 
                 }
             }
         }
@@ -790,6 +897,35 @@ namespace Dynamic.Tekla.Structures.Model
             
         }
 
+        public System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.BoltHoleAttributes> BoltHolesAttributes
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.BoltHolesAttributes;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.BoltHoleAttributes>(value);
+                return (System.Collections.Generic.IList<Dynamic.Tekla.Structures.Model.BoltHoleAttributes>) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltHolesAttributes), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = ListConverter.ToTSObjects(value);
+                teklaObject.BoltHolesAttributes = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BoltHolesAttributes), ex); 
+                }
+            }
+        }
+
         public Dynamic.Tekla.Structures.Geometry3d.Point FirstPosition
         {
             get
@@ -1110,7 +1246,8 @@ namespace Dynamic.Tekla.Structures.Model
     {
 			HOLE_TYPE_OVERSIZED,
 			HOLE_TYPE_SLOTTED,
-			HOLE_TYPE_NO_HOLE        
+			HOLE_TYPE_NO_HOLE,
+			HOLE_TYPE_TAPPED        
     }
 
     internal static class BoltHoleTypeEnum_
@@ -1127,6 +1264,8 @@ namespace Dynamic.Tekla.Structures.Model
 					return System.Enum.Parse(tsType, "HOLE_TYPE_SLOTTED");
 				case BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE:
 					return System.Enum.Parse(tsType, "HOLE_TYPE_NO_HOLE");
+				case BoltHoleTypeEnum.HOLE_TYPE_TAPPED:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_TAPPED");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -1143,6 +1282,48 @@ namespace Dynamic.Tekla.Structures.Model
 				return BoltHoleTypeEnum.HOLE_TYPE_SLOTTED;
 			else if (tsEnumValue.Equals("HOLE_TYPE_NO_HOLE", System.StringComparison.InvariantCulture))
 				return BoltHoleTypeEnum.HOLE_TYPE_NO_HOLE;
+			else if (tsEnumValue.Equals("HOLE_TYPE_TAPPED", System.StringComparison.InvariantCulture))
+				return BoltHoleTypeEnum.HOLE_TYPE_TAPPED;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum BoltPlainHoleTypeEnum
+    {
+			HOLE_TYPE_THROUGH,
+			HOLE_TYPE_BLIND        
+    }
+
+    internal static class BoltPlainHoleTypeEnum_
+    {
+        public static dynamic GetTSObject(BoltPlainHoleTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.BoltPlainHoleTypeEnum").GetType();
+
+            switch (dynEnum)
+            {
+				case BoltPlainHoleTypeEnum.HOLE_TYPE_THROUGH:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_THROUGH");
+				case BoltPlainHoleTypeEnum.HOLE_TYPE_BLIND:
+					return System.Enum.Parse(tsType, "HOLE_TYPE_BLIND");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static BoltPlainHoleTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("HOLE_TYPE_THROUGH", System.StringComparison.InvariantCulture))
+				return BoltPlainHoleTypeEnum.HOLE_TYPE_THROUGH;
+			else if (tsEnumValue.Equals("HOLE_TYPE_BLIND", System.StringComparison.InvariantCulture))
+				return BoltPlainHoleTypeEnum.HOLE_TYPE_BLIND;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
@@ -1188,6 +1369,46 @@ namespace Dynamic.Tekla.Structures.Model
 				return BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN;
 			else if (tsEnumValue.Equals("ROTATE_SLOTS_PARALLEL", System.StringComparison.InvariantCulture))
 				return BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum ErrorStatus
+    {
+			CommonSettingFromDiffPropertiesException,
+			SlottedHoleOffsetsTooBigException        
+    }
+
+    internal static class ErrorStatus_
+    {
+        public static dynamic GetTSObject(ErrorStatus dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.BoltGroup.ErrorStatus").GetType();
+
+            switch (dynEnum)
+            {
+				case ErrorStatus.CommonSettingFromDiffPropertiesException:
+					return System.Enum.Parse(tsType, "CommonSettingFromDiffPropertiesException");
+				case ErrorStatus.SlottedHoleOffsetsTooBigException:
+					return System.Enum.Parse(tsType, "SlottedHoleOffsetsTooBigException");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ErrorStatus FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("CommonSettingFromDiffPropertiesException", System.StringComparison.InvariantCulture))
+				return ErrorStatus.CommonSettingFromDiffPropertiesException;
+			else if (tsEnumValue.Equals("SlottedHoleOffsetsTooBigException", System.StringComparison.InvariantCulture))
+				return ErrorStatus.SlottedHoleOffsetsTooBigException;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

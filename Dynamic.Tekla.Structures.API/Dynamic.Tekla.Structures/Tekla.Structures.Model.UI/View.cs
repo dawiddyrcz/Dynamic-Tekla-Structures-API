@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -252,7 +252,18 @@ namespace Dynamic.Tekla.Structures.Model.UI
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewProjection), ex); 
                 }
             }
-            
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.UI.View.ViewProjectionType_.GetTSObject(value);
+                teklaObject.ViewProjection = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ViewProjection), ex); 
+                }
+            }
         }
 
         public Dynamic.Tekla.Structures.Model.UI.View.DisplayOrientationType DisplayType

@@ -65,6 +65,12 @@ namespace CodeGenerator
             else
                 dfieldDeclaration = "internal dynamic $dfield;";
 
+            if (type.Name.EndsWith("Enumerator"))
+            {
+                baseClassText = " : IEnumerator";
+                
+            }
+
 
             outputText = outputText.Replace("$fieldDeclaration", dfieldDeclaration);
             outputText = outputText.Replace("$dfield", "teklaObject");

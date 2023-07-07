@@ -39,7 +39,7 @@ namespace CodeGenerator
         }
 
 
-        private readonly string text = @"/*Copyright (C) Dawid Dyrcz 2020
+        private readonly string text = @"/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 

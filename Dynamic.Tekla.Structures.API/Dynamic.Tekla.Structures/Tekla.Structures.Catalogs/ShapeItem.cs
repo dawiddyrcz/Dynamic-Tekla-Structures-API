@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -259,6 +259,64 @@ namespace Dynamic.Tekla.Structures.Catalogs
                 }
             }
         }
+
+        public Dynamic.Tekla.Structures.Catalogs.BrepType BrepType
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.BrepType;
+                var value_ = Dynamic.Tekla.Structures.Catalogs.BrepType_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Catalogs.BrepType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BrepType), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Catalogs.BrepType_.GetTSObject(value);
+                teklaObject.BrepType = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BrepType), ex); 
+                }
+            }
+        }
+
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> HandlePoints
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.HandlePoints;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Geometry3d.Point>(value);
+                return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point>) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HandlePoints), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = ListConverter.ToTSObjects(value);
+                teklaObject.HandlePoints = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(HandlePoints), ex); 
+                }
+            }
+        }
         
 
         internal dynamic teklaObject;
@@ -408,6 +466,59 @@ namespace Dynamic.Tekla.Structures.Catalogs
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CleanAndModify), ex);
+            }
+        }
+
+
+
+        public System.Boolean Rename(
+			System.String newName)
+        {
+            
+            try
+            {
+                var result = (System.Boolean) teklaObject.Rename(newName);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Rename), ex);
+            }
+        }
+
+
+
+        public System.Int32 GetInstanceCount()
+        {
+            
+            try
+            {
+                var result = (System.Int32) teklaObject.GetInstanceCount();
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetInstanceCount), ex);
+            }
+        }
+
+
+
+        public System.Boolean SetHandlePoints(
+			System.Collections.Generic.List<Dynamic.Tekla.Structures.Geometry3d.Point> HandlePoints_)
+        {
+            var HandlePoints = ListConverter.ToTSObjects(HandlePoints_);
+            try
+            {
+                var result = (System.Boolean) teklaObject.SetHandlePoints(HandlePoints);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetHandlePoints), ex);
             }
         }
 

@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -61,7 +61,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 			Stick,
 			OutLine,
 			DoubleLineFilledEnds,
-			SingleLineFilledEnds        
+			SingleLineFilledEnds,
+			OutlineIgnoreHoles        
     }
 
     internal static class ReinforcementRepresentationTypes_
@@ -86,6 +87,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 					return System.Enum.Parse(tsType, "DoubleLineFilledEnds");
 				case ReinforcementRepresentationTypes.SingleLineFilledEnds:
 					return System.Enum.Parse(tsType, "SingleLineFilledEnds");
+				case ReinforcementRepresentationTypes.OutlineIgnoreHoles:
+					return System.Enum.Parse(tsType, "OutlineIgnoreHoles");
 
                 default:
                     throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
@@ -110,6 +113,8 @@ namespace Dynamic.Tekla.Structures.Drawing
 				return ReinforcementRepresentationTypes.DoubleLineFilledEnds;
 			else if (tsEnumValue.Equals("SingleLineFilledEnds", System.StringComparison.InvariantCulture))
 				return ReinforcementRepresentationTypes.SingleLineFilledEnds;
+			else if (tsEnumValue.Equals("OutlineIgnoreHoles", System.StringComparison.InvariantCulture))
+				return ReinforcementRepresentationTypes.OutlineIgnoreHoles;
 
             else 
                 throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");

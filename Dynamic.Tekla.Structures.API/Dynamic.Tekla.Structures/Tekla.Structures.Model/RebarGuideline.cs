@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -97,6 +97,32 @@ namespace Dynamic.Tekla.Structures.Model
                 catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
                 {
                     throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Spacing), ex); 
+                }
+            }
+        }
+
+        public System.Boolean FollowEdges
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.FollowEdges;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FollowEdges), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.FollowEdges = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FollowEdges), ex); 
                 }
             }
         }

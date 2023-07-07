@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -52,6 +52,24 @@ namespace Dynamic.Tekla.Structures.Model
             }
             
         }
+
+        public Dynamic.Tekla.Structures.Model.ChangeData.ChangeSourceTypeEnum Source
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.Source;
+                var value_ = Dynamic.Tekla.Structures.Model.ChangeData.ChangeSourceTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.ChangeData.ChangeSourceTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Source), ex); 
+                }
+            }
+            
+        }
         
 
         internal dynamic teklaObject;
@@ -64,6 +82,51 @@ namespace Dynamic.Tekla.Structures.Model
 		}
 
 
+
+
+    public enum ChangeSourceTypeEnum
+    {
+			COMMIT,
+			UNDO_REDO,
+			ROLLBACK        
+    }
+
+    internal static class ChangeSourceTypeEnum_
+    {
+        public static dynamic GetTSObject(ChangeSourceTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.ChangeData.ChangeSourceTypeEnum").GetType();
+
+            switch (dynEnum)
+            {
+				case ChangeSourceTypeEnum.COMMIT:
+					return System.Enum.Parse(tsType, "COMMIT");
+				case ChangeSourceTypeEnum.UNDO_REDO:
+					return System.Enum.Parse(tsType, "UNDO_REDO");
+				case ChangeSourceTypeEnum.ROLLBACK:
+					return System.Enum.Parse(tsType, "ROLLBACK");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ChangeSourceTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("COMMIT", System.StringComparison.InvariantCulture))
+				return ChangeSourceTypeEnum.COMMIT;
+			else if (tsEnumValue.Equals("UNDO_REDO", System.StringComparison.InvariantCulture))
+				return ChangeSourceTypeEnum.UNDO_REDO;
+			else if (tsEnumValue.Equals("ROLLBACK", System.StringComparison.InvariantCulture))
+				return ChangeSourceTypeEnum.ROLLBACK;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
 
 
     public enum ChangeTypeEnum

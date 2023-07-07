@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -56,6 +56,45 @@ namespace Dynamic.Tekla.Structures.Model.UI
             try
             {
                 var result = teklaObject.PickPoint(Prompt);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PickPoint), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint(
+			Dynamic.Tekla.Structures.Geometry3d.Point ReferencePoint_)
+        {
+            var ReferencePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ReferencePoint_);
+            try
+            {
+                var result = teklaObject.PickPoint(ReferencePoint);
+            
+                var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PickPoint), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Geometry3d.Point PickPoint(
+			System.String Prompt,
+			Dynamic.Tekla.Structures.Geometry3d.Point ReferencePoint_)
+        {
+var ReferencePoint = Dynamic.Tekla.Structures.Geometry3d.Point_.GetTSObject(ReferencePoint_);
+            try
+            {
+                var result = teklaObject.PickPoint(Prompt, ReferencePoint);
             
                 var _result = Dynamic.Tekla.Structures.Geometry3d.Point_.FromTSObject(result);
 				return _result;

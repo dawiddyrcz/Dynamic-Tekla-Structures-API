@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -78,6 +78,26 @@ namespace Dynamic.Tekla.Structures.Model
             try
             {
                 var result = (System.Boolean) teklaObject.Save(Comment, User);
+            
+                return result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Save), ex);
+            }
+        }
+
+
+
+        public System.Boolean Save(
+			System.String Comment,
+			System.String User,
+			System.String Reason)
+        {
+
+            try
+            {
+                var result = (System.Boolean) teklaObject.Save(Comment, User, Reason);
             
                 return result;
             }

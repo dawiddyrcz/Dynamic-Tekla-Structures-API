@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -129,6 +129,64 @@ namespace Dynamic.Tekla.Structures.Model
                 }
             }
         }
+
+        public Dynamic.Tekla.Structures.Geometry3d.LineSegment BarOrientation
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.BarOrientation;
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Geometry3d.LineSegment) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BarOrientation), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Geometry3d.LineSegment_.GetTSObject(value);
+                teklaObject.BarOrientation = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(BarOrientation), ex); 
+                }
+            }
+        }
+
+        public Dynamic.Tekla.Structures.Model.Part FatherPart
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.FatherPart;
+                var value_ = Dynamic.Tekla.Structures.Model.Part_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.Part) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FatherPart), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.Part_.GetTSObject(value);
+                teklaObject.FatherPart = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(FatherPart), ex); 
+                }
+            }
+        }
         
 
         
@@ -180,6 +238,24 @@ namespace Dynamic.Tekla.Structures.Model
 
 
 
+        public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetRebarLegSurfaces()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetRebarLegSurfaces();
+            
+                var _result = Dynamic.Tekla.Structures.Model.ModelObjectEnumerator_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetRebarLegSurfaces), ex);
+            }
+        }
+
+
+
         public Dynamic.Tekla.Structures.Model.ModelObjectEnumerator GetReinforcements()
         {
             
@@ -193,6 +269,24 @@ namespace Dynamic.Tekla.Structures.Model
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetReinforcements), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Model.Assembly GetAssembly()
+        {
+            
+            try
+            {
+                var result = teklaObject.GetAssembly();
+            
+                var _result = Dynamic.Tekla.Structures.Model.Assembly_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(GetAssembly), ex);
             }
         }
 

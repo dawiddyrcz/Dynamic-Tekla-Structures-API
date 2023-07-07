@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -16,6 +16,142 @@ namespace Dynamic.Tekla.Structures.Model
     public  class RebarSpacing 
     {
 
+
+        public Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType Type
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.Type;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType_.GetTSObject(value);
+                teklaObject.Type = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(Type), ex); 
+                }
+            }
+        }
+
+        public System.Int32 NumberOfBars
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.NumberOfBars;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfBars), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.NumberOfBars = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(NumberOfBars), ex); 
+                }
+            }
+        }
+
+        public System.Double TargetSpace
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.TargetSpace;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TargetSpace), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.TargetSpace = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(TargetSpace), ex); 
+                }
+            }
+        }
+
+        public System.Double ExactSpace
+        {
+            get
+            {
+                try
+                {
+                return teklaObject.ExactSpace;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExactSpace), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                teklaObject.ExactSpace = value;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExactSpace), ex); 
+                }
+            }
+        }
+
+        public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Element> ExactElements
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.ExactElements;
+                var value_ = ListConverter.FromTSObjects<Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Element>(value);
+                return (System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Element>) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExactElements), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = ListConverter.ToTSObjects(value);
+                teklaObject.ExactElements = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExactElements), ex); 
+                }
+            }
+        }
 
         public System.Collections.Generic.List<Dynamic.Tekla.Structures.Model.RebarSpacingZone> Zones
         {
@@ -208,6 +344,35 @@ namespace Dynamic.Tekla.Structures.Model
             }
         }
 
+        public Dynamic.Tekla.Structures.Model.RebarSpacing.ExcludeTypeEnum ExcludeType
+        {
+            get
+            {
+                try
+                {
+                var value = teklaObject.ExcludeType;
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing.ExcludeTypeEnum_.FromTSObject(value);
+                return (Dynamic.Tekla.Structures.Model.RebarSpacing.ExcludeTypeEnum) value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExcludeType), ex); 
+                }
+            }
+            set
+            {
+                try
+                {
+                var value_ = Dynamic.Tekla.Structures.Model.RebarSpacing.ExcludeTypeEnum_.GetTSObject(value);
+                teklaObject.ExcludeType = value_;
+                }
+                catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+                {
+                    throw DynamicAPINotFoundException.CouldNotFindProperty(nameof(ExcludeType), ex); 
+                }
+            }
+        }
+
         public System.Boolean InheritFromPrimary
         {
             get
@@ -246,6 +411,82 @@ namespace Dynamic.Tekla.Structures.Model
 		{
 			this.teklaObject = tsObject;
 		}
+
+
+        public static Dynamic.Tekla.Structures.Model.RebarSpacing Create(
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset startOffset_,
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset endOffset_,
+			System.Int32 number)
+        {
+            var startOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(startOffset_);
+var endOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(endOffset_);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.RebarSpacing", "Create", startOffset, endOffset, number);
+            var _result = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Model.RebarSpacing Create(
+			Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType type_,
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset startOffset_,
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset endOffset_,
+			System.Double distance)
+        {
+            var type = Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType_.GetTSObject(type_);
+var startOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(startOffset_);
+var endOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(endOffset_);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.RebarSpacing", "Create", type, startOffset, endOffset, distance);
+            var _result = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static Dynamic.Tekla.Structures.Model.RebarSpacing Create(
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset startOffset_,
+			Dynamic.Tekla.Structures.Model.RebarSpacing.Offset endOffset_,
+			System.Collections.Generic.IEnumerable<Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Element> elements_,
+			out Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Validation validation_)
+        {
+            var startOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(startOffset_);
+var endOffset = Dynamic.Tekla.Structures.Model.RebarSpacing.Offset_.GetTSObject(endOffset_);
+var elements = IEnumerableConverter.ToTSObjects(elements_);
+var validation = Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Validation_.GetTSObject(0);
+            var result = MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.RebarSpacing", "Create", startOffset, endOffset, elements, ref validation);
+            validation_ = Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing.Validation_.FromTSObject(validation);
+            var _result = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(result);
+				return _result;
+        }
+
+
+
+        public static System.Boolean IsExactFlexibleType(
+			Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType type_)
+        {
+            var type = Dynamic.Tekla.Structures.Model.RebarSpacing.SpacingType_.GetTSObject(type_);
+            var result = (System.Boolean) MethodInvoker.InvokeStaticMethod("Tekla.Structures.Model.RebarSpacing", "IsExactFlexibleType", type);
+            return result;
+        }
+
+
+
+        public Dynamic.Tekla.Structures.Model.RebarSpacing Clone()
+        {
+            
+            try
+            {
+                var result = teklaObject.Clone();
+            
+                var _result = Dynamic.Tekla.Structures.Model.RebarSpacing_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Clone), ex);
+            }
+        }
+
 
 
 
@@ -288,6 +529,305 @@ namespace Dynamic.Tekla.Structures.Model
             
         }
     }
+
+
+    public enum SpacingType
+    {
+			UNDEFINED,
+			EXACT_SPACINGS,
+			NUMBER_BARS,
+			TARGET,
+			EXACT_FLEXIBLE_FIRST,
+			EXACT_FLEXIBLE_LAST,
+			EXACT_FLEXIBLE_FIRST_AND_LAST,
+			EXACT_FLEXIBLE_MIDDLE        
+    }
+
+    internal static class SpacingType_
+    {
+        public static dynamic GetTSObject(SpacingType dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing.SpacingType").GetType();
+
+            switch (dynEnum)
+            {
+				case SpacingType.UNDEFINED:
+					return System.Enum.Parse(tsType, "UNDEFINED");
+				case SpacingType.EXACT_SPACINGS:
+					return System.Enum.Parse(tsType, "EXACT_SPACINGS");
+				case SpacingType.NUMBER_BARS:
+					return System.Enum.Parse(tsType, "NUMBER_BARS");
+				case SpacingType.TARGET:
+					return System.Enum.Parse(tsType, "TARGET");
+				case SpacingType.EXACT_FLEXIBLE_FIRST:
+					return System.Enum.Parse(tsType, "EXACT_FLEXIBLE_FIRST");
+				case SpacingType.EXACT_FLEXIBLE_LAST:
+					return System.Enum.Parse(tsType, "EXACT_FLEXIBLE_LAST");
+				case SpacingType.EXACT_FLEXIBLE_FIRST_AND_LAST:
+					return System.Enum.Parse(tsType, "EXACT_FLEXIBLE_FIRST_AND_LAST");
+				case SpacingType.EXACT_FLEXIBLE_MIDDLE:
+					return System.Enum.Parse(tsType, "EXACT_FLEXIBLE_MIDDLE");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static SpacingType FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("UNDEFINED", System.StringComparison.InvariantCulture))
+				return SpacingType.UNDEFINED;
+			else if (tsEnumValue.Equals("EXACT_SPACINGS", System.StringComparison.InvariantCulture))
+				return SpacingType.EXACT_SPACINGS;
+			else if (tsEnumValue.Equals("NUMBER_BARS", System.StringComparison.InvariantCulture))
+				return SpacingType.NUMBER_BARS;
+			else if (tsEnumValue.Equals("TARGET", System.StringComparison.InvariantCulture))
+				return SpacingType.TARGET;
+			else if (tsEnumValue.Equals("EXACT_FLEXIBLE_FIRST", System.StringComparison.InvariantCulture))
+				return SpacingType.EXACT_FLEXIBLE_FIRST;
+			else if (tsEnumValue.Equals("EXACT_FLEXIBLE_LAST", System.StringComparison.InvariantCulture))
+				return SpacingType.EXACT_FLEXIBLE_LAST;
+			else if (tsEnumValue.Equals("EXACT_FLEXIBLE_FIRST_AND_LAST", System.StringComparison.InvariantCulture))
+				return SpacingType.EXACT_FLEXIBLE_FIRST_AND_LAST;
+			else if (tsEnumValue.Equals("EXACT_FLEXIBLE_MIDDLE", System.StringComparison.InvariantCulture))
+				return SpacingType.EXACT_FLEXIBLE_MIDDLE;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public enum ExcludeTypeEnum
+    {
+			EXCLUDE_TYPE_NONE,
+			EXCLUDE_TYPE_FIRST,
+			EXCLUDE_TYPE_LAST,
+			EXCLUDE_TYPE_BOTH        
+    }
+
+    internal static class ExcludeTypeEnum_
+    {
+        public static dynamic GetTSObject(ExcludeTypeEnum dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing.ExcludeTypeEnum").GetType();
+
+            switch (dynEnum)
+            {
+				case ExcludeTypeEnum.EXCLUDE_TYPE_NONE:
+					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_NONE");
+				case ExcludeTypeEnum.EXCLUDE_TYPE_FIRST:
+					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_FIRST");
+				case ExcludeTypeEnum.EXCLUDE_TYPE_LAST:
+					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_LAST");
+				case ExcludeTypeEnum.EXCLUDE_TYPE_BOTH:
+					return System.Enum.Parse(tsType, "EXCLUDE_TYPE_BOTH");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static ExcludeTypeEnum FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("EXCLUDE_TYPE_NONE", System.StringComparison.InvariantCulture))
+				return ExcludeTypeEnum.EXCLUDE_TYPE_NONE;
+			else if (tsEnumValue.Equals("EXCLUDE_TYPE_FIRST", System.StringComparison.InvariantCulture))
+				return ExcludeTypeEnum.EXCLUDE_TYPE_FIRST;
+			else if (tsEnumValue.Equals("EXCLUDE_TYPE_LAST", System.StringComparison.InvariantCulture))
+				return ExcludeTypeEnum.EXCLUDE_TYPE_LAST;
+			else if (tsEnumValue.Equals("EXCLUDE_TYPE_BOTH", System.StringComparison.InvariantCulture))
+				return ExcludeTypeEnum.EXCLUDE_TYPE_BOTH;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public struct Offset
+    {
+			public System.Boolean Automatic;
+			public Dynamic.Tekla.Structures.Model.RebarSpacing.OffsetEnum Type;
+			public System.Double Distance;
+       
+    }
+
+    internal static class Offset_
+    {
+        public static dynamic GetTSObject(Offset dynStruct)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Offset");
+			tsType.Automatic = dynStruct.Automatic;
+			tsType.Type = dynStruct.Type;
+			tsType.Distance = dynStruct.Distance;
+
+            return tsType;
+        }
+    
+        public static Offset FromTSObject(dynamic tsStruct)
+        {
+            var dynStruct = new Offset();
+			dynStruct.Automatic = tsStruct.Automatic;
+			dynStruct.Type = tsStruct.Type;
+			dynStruct.Distance = tsStruct.Distance;
+ 
+            return dynStruct;
+        }
+    }
+
+
+    public  class ExactSpacing 
+    {
+
+        
+
+        internal dynamic teklaObject;
+
+		public ExactSpacing()
+		{
+			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing.ExactSpacing");
+		}
+		//This constructor creates wrapper object using teklaObject. DateTime is never used but it is here to avoid conflicts with constructors with one argument
+		public ExactSpacing(dynamic tsObject, System.DateTime nonConflictParameter)
+		{
+			this.teklaObject = tsObject;
+		}
+
+
+
+
+    public enum Validation
+    {
+			VALID,
+			EMPTY,
+			ZERO_ELEMENTS,
+			NEGATIVE_ELEMENTS        
+    }
+
+    internal static class Validation_
+    {
+        public static dynamic GetTSObject(Validation dynEnum)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.RebarSpacing.ExactSpacing.Validation").GetType();
+
+            switch (dynEnum)
+            {
+				case Validation.VALID:
+					return System.Enum.Parse(tsType, "VALID");
+				case Validation.EMPTY:
+					return System.Enum.Parse(tsType, "EMPTY");
+				case Validation.ZERO_ELEMENTS:
+					return System.Enum.Parse(tsType, "ZERO_ELEMENTS");
+				case Validation.NEGATIVE_ELEMENTS:
+					return System.Enum.Parse(tsType, "NEGATIVE_ELEMENTS");
+
+                default:
+                    throw new DynamicAPIException(dynEnum.ToString() + "- enum value is not implemented");
+            }
+        }
+    
+        public static Validation FromTSObject(dynamic tsEnum)
+        {
+            string tsEnumValue = tsEnum.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+            
+			if (tsEnumValue.Equals("VALID", System.StringComparison.InvariantCulture))
+				return Validation.VALID;
+			else if (tsEnumValue.Equals("EMPTY", System.StringComparison.InvariantCulture))
+				return Validation.EMPTY;
+			else if (tsEnumValue.Equals("ZERO_ELEMENTS", System.StringComparison.InvariantCulture))
+				return Validation.ZERO_ELEMENTS;
+			else if (tsEnumValue.Equals("NEGATIVE_ELEMENTS", System.StringComparison.InvariantCulture))
+				return Validation.NEGATIVE_ELEMENTS;
+
+            else 
+                throw new DynamicAPIException(tsEnumValue + "- enum value is not implemented");
+            
+        }
+    }
+
+
+    public struct Element
+    {
+       
+    }
+
+    internal static class Element_
+    {
+        public static dynamic GetTSObject(Element dynStruct)
+        {
+            var tsType = TSActivator.CreateInstance("Tekla.Structures.Model.Element");
+
+            return tsType;
+        }
+    
+        public static Element FromTSObject(dynamic tsStruct)
+        {
+            var dynStruct = new Element();
+ 
+            return dynStruct;
+        }
+    }
+
+
+
+    }
+
+    internal static class ExactSpacing_
+    {
+        public static dynamic GetTSObject(ExactSpacing dynObject)
+        {
+            if (dynObject is null) return null;
+            return dynObject.teklaObject;
+        }
+
+        public static ExactSpacing FromTSObject(dynamic tsObject)
+        {
+            if (tsObject is null) return null;
+            var typeName = "Dynamic." + tsObject.GetType().FullName;
+            var type = System.Reflection.Assembly.GetExecutingAssembly().GetType(typeName);
+            
+            var parameters = new object[2];
+            parameters[0] = tsObject;
+            parameters[1] = new System.DateTime();
+
+            var dynObject = (Dynamic.Tekla.Structures.Model.RebarSpacing.ExactSpacing)System.Activator.CreateInstance(type, parameters);
+            dynObject.teklaObject = tsObject;
+            return dynObject;
+        }
+    }
+
+    internal static class ExactSpacingArray_
+    {
+        public static dynamic GetTSObject(ExactSpacing[] dynArray)
+        {
+            if (dynArray is null) return null;
+            var list = new System.Collections.Generic.List<dynamic>();
+            foreach(var dynItem in dynArray)
+            {
+                list.Add(ExactSpacing_.GetTSObject(dynItem));
+            }
+            return list.ToArray();
+        }
+
+        public static ExactSpacing[] FromTSObject(dynamic[] tsArray)
+        {
+            if (tsArray is null) return null;
+            var list = new System.Collections.Generic.List<ExactSpacing>();
+            foreach(var tsItem in tsArray)
+            {
+                list.Add(ExactSpacing_.FromTSObject(tsItem));
+            }
+            return list.ToArray();
+        }
+    }
+
 
 
 

@@ -1,4 +1,4 @@
-/*Copyright (C) Dawid Dyrcz 2020
+/*Copyright (C) Yury Isachenkov 2023
 * This program is free software. You may use, distribute and modify 
 * this code under the terms of the LGPL3 license. This program is distributed 
 * in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
@@ -35,6 +35,15 @@ namespace Dynamic.Tekla.Structures
 			args[0] = script;
 			this.teklaObject = TSActivator.CreateInstance("Tekla.Structures.MacroBuilder", args);
 		}
+
+
+        public static void WaitForMacroToRun(
+			System.Int32 waitCount)
+        {
+            MethodInvoker.InvokeStaticMethod("Tekla.Structures.MacroBuilder", "WaitForMacroToRun", waitCount);
+            
+        }
+
 
 
         public Dynamic.Tekla.Structures.MacroBuilder Activate(
@@ -317,6 +326,24 @@ namespace Dynamic.Tekla.Structures
 
 
         public void Run(
+			System.Int32 waitCount)
+        {
+            
+            try
+            {
+                teklaObject.Run(waitCount);
+            
+                
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(Run), ex);
+            }
+        }
+
+
+
+        public void Run(
 			Dynamic.Tekla.Structures.IConnection connection_)
         {
             var connection = Dynamic.Tekla.Structures.IConnection_.GetTSObject(connection_);
@@ -413,6 +440,267 @@ namespace Dynamic.Tekla.Structures
             catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(ValueChange), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder CloseWpfView(
+			System.String viewName)
+        {
+            
+            try
+            {
+                var result = teklaObject.CloseWpfView(viewName);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(CloseWpfView), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder SetWpfToggleButtonChecked(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds)
+        {
+            try
+            {
+                var result = teklaObject.SetWpfToggleButtonChecked(viewName, automationIds);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetWpfToggleButtonChecked), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder SetWpfToggleButtonUnChecked(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds)
+        {
+            try
+            {
+                var result = teklaObject.SetWpfToggleButtonUnChecked(viewName, automationIds);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetWpfToggleButtonUnChecked), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfButton(
+			System.String viewName,
+			System.String buttonAid)
+        {
+            try
+            {
+                var result = teklaObject.PushWpfButton(viewName, buttonAid);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfButton(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds)
+        {
+            try
+            {
+                var result = teklaObject.PushWpfButton(viewName, automationIds);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfDataGridColumnHeaderButton(
+			System.String viewName,
+			System.String buttonAid,
+			System.Boolean emulateHoldingShiftKey)
+        {
+
+            try
+            {
+                var result = teklaObject.PushWpfDataGridColumnHeaderButton(viewName, buttonAid, emulateHoldingShiftKey);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfDataGridColumnHeaderButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfDataGridColumnHeaderButton(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds,
+			System.Boolean emulateHoldingShiftKey)
+        {
+
+            try
+            {
+                var result = teklaObject.PushWpfDataGridColumnHeaderButton(viewName, automationIds, emulateHoldingShiftKey);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfDataGridColumnHeaderButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfContextMenuButton(
+			System.String viewName,
+			System.String contextMenuParentAid,
+			System.String buttonAid)
+        {
+
+            try
+            {
+                var result = teklaObject.PushWpfContextMenuButton(viewName, contextMenuParentAid, buttonAid);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfContextMenuButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder PushWpfContextMenuButton(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> contextMenuParentAids,
+			System.Collections.Generic.IEnumerable<System.String> buttonAids)
+        {
+
+            try
+            {
+                var result = teklaObject.PushWpfContextMenuButton(viewName, contextMenuParentAids, buttonAids);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(PushWpfContextMenuButton), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder SelectWpfListViewItemsByName(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds,
+			System.Collections.Generic.IEnumerable<System.String> itemNames)
+        {
+
+            try
+            {
+                var result = teklaObject.SelectWpfListViewItemsByName(viewName, automationIds, itemNames);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectWpfListViewItemsByName), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder SelectWpfDataGridRows(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds,
+			System.Collections.Generic.IEnumerable<System.Int32> indexes)
+        {
+
+            try
+            {
+                var result = teklaObject.SelectWpfDataGridRows(viewName, automationIds, indexes);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SelectWpfDataGridRows), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder SetWpfTextBoxText(
+			System.String viewName,
+			System.Collections.Generic.IEnumerable<System.String> automationIds,
+			System.String text)
+        {
+
+            try
+            {
+                var result = teklaObject.SetWpfTextBoxText(viewName, automationIds, text);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(SetWpfTextBoxText), ex);
+            }
+        }
+
+
+
+        public Dynamic.Tekla.Structures.MacroBuilder WpfCommandRepositoryCommand(
+			System.String command)
+        {
+            
+            try
+            {
+                var result = teklaObject.WpfCommandRepositoryCommand(command);
+            
+                var _result = Dynamic.Tekla.Structures.MacroBuilder_.FromTSObject(result);
+				return _result;
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                throw DynamicAPINotFoundException.CouldNotFindMethod(nameof(WpfCommandRepositoryCommand), ex);
             }
         }
 
